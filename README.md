@@ -1,0 +1,1 @@
+# Neovim for go
