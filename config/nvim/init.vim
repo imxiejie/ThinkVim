@@ -39,8 +39,10 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
-Plug 'othree/html5.vim',{ 'for': 'html' }
-Plug 'posva/vim-vue'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'cnpm install -g tern' }
+Plug 'othree/html5.vim',{ 'for': 'html' } 
+Plug 'pangloss/vim-javascript'
+Plug 'posva/vim-vue',{ 'for': ['html', 'vue']}
 Plug 'hail2u/vim-css3-syntax',{ 'for': 'css' }
 Plug 'ap/vim-css-color'
 
@@ -403,9 +405,11 @@ let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
-
-
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ '...'
+                \ ]
 
 " code search
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -457,6 +461,8 @@ nmap <Leader>s :ALEToggle<CR>
 nmap <Leader>d :ALEDetail<CR>
 let g:ale_linters = {
       \ 'go': ['golint', 'go vet', 'go build'],
+      \'javascript': ['eslint', 'stylelint'], 
+      \'jsx': ['eslint', 'stylelint'], 'less': ['prettier'],
       \ }
 " }}}
 
