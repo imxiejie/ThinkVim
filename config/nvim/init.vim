@@ -177,6 +177,10 @@ highlight Pmenu ctermbg=238 gui=bold
 "Setup SuperTab
 let g:SuperTabRetainCompletionType="context"
 
+let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<c-n>"
+autocmd VimEnter * inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
+
 "缩进线设置
 "let g:indentLine_setColors = 0
 let g:indentLine_char='┆'
@@ -381,11 +385,6 @@ au BufRead,BufNewFile *.skim set filetype=slim
 "for python
 au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " neocomplete like
 set completeopt +=noinsert
@@ -395,6 +394,7 @@ set completeopt =menu,preview
 
 " Run deoplete.nvim automaticallys
 let g:deoplete#enable_at_startup = 1
+
 " deoplete-go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
@@ -417,22 +417,30 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " For startify
-
 let g:startify_custom_header = [
 \ '',
-\ '    __  ___              __ __                         ______     ',
-\ '   /  |/  /____ _ _____ / // /_   ____   _____ ____   / ____/____ ',
-\ '  / /|_/ // __ `// ___// // __ \ / __ \ / ___// __ \ / / __ / __ \',
-\ ' / /  / // /_/ // /   / // /_/ // /_/ // /   / /_/ // /_/ // /_/ /',
-\ '/_/  /_/ \__,_//_/   /_//_.___/ \____//_/    \____/ \____/ \____/ ',                                                                  
+\ ' _     _         _  _           ______                       _        ',
+\ '| |   | |       | || |         |  ___ \                _    (_)       ',
+\ '| |__ | |  ____ | || |  ___    | | _ | |  ____   ____ | |_   _  ____  ',
+\ '|  __)| | / _  )| || | / _ \   | || || | / _  | / ___)|  _) | ||  _ \ ',
+\ '| |   | |( (/ / | || || |_| |  | || || |( ( | || |    | |__ | || | | |',
+\ '|_|   |_| \____)|_||_| \___/   |_||_||_| \_||_||_|     \___)|_||_| |_|',                                                         
 \ '',
 \]
-                             
+let g:startify_custom_footer = [
+            \ '+------------------------------+',
+            \ '|          By Martin           |',
+            \ '+----------------+-------------+',
+            \]                       
 """"""""""""""""color-scheme
 set background=dark
-"colorscheme onedark
-colorscheme space-vim-dark
+colorscheme onedark
+"colorscheme space-vim-dark
+"colorscheme SolarizedDark
 hi Normal ctermfg=252 ctermbg=none
+
+highlight LineNr   ctermbg=none
+
 
 """""""""""""""'Ale语法检查
 " ale-setting {{{
@@ -467,7 +475,7 @@ let g:ale_linters = {
 " }}}
 
 """""Js Vue补全设置
-set hidden
+"set hidden
 let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls'],
     \ }
