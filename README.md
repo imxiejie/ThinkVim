@@ -11,4 +11,6 @@
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/02.png)
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/03.png)
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/04.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/05.png)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/07.png)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/08.png)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/11.jpg)
