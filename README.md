@@ -17,3 +17,4 @@
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/07.png)
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/08.png)
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/11.jpg)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/12.png)
