@@ -180,6 +180,11 @@ let g:SuperTabRetainCompletionType="context"
 let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 autocmd VimEnter * inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
+"修改插入模式移动
+inoremap <S-k> <Up>
+inoremap <S-j> <Down>
+inoremap <S-L> <Right>
+inoremap <S-H> <Left>
 
 "缩进线设置
 "let g:indentLine_setColors = 0
