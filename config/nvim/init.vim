@@ -8,7 +8,8 @@ set splitbelow
 if has('mouse')
         set mouse=a
 endif
-
+set cursorline          "高亮显示光标所在行
+highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 
 " Configuration section of vundle
 filetype off  " required!
@@ -39,7 +40,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'cnpm install -g tern' }
+Plug 'carlitux/deoplete-ternjs', { 'do': 'cnpm install -g tern'}
 Plug 'othree/html5.vim',{ 'for': 'html' } 
 Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue',{ 'for': ['html', 'vue']}
@@ -77,9 +78,7 @@ Plug 'w0rp/ale'
 " }}}
 call plug#end()
 
-" Save
-inoremap <C-s>     <C-o>:update<cr><Esc>
-nnoremap <C-s>     :update<cr>
+
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -181,10 +180,10 @@ let g:SuperTabDefaultCompletionType = "<c-n>"
 let g:SuperTabContextDefaultCompletionType = "<c-n>"
 autocmd VimEnter * inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
 "修改插入模式移动
-inoremap <S-k> <Up>
-inoremap <S-j> <Down>
-inoremap <S-L> <Right>
-inoremap <S-H> <Left>
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
 
 "缩进线设置
 "let g:indentLine_setColors = 0
@@ -280,7 +279,7 @@ let g:EasyMotion_leader_key = ","
 map <leader>g :TagbarToggle<CR>
 autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.cxx call tagbar#autoopen()
 "设置tagbar的窗口宽度
-let g:tagbar_width=20
+let g:tagbar_width=25
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
     \ 'kinds' : [
@@ -497,7 +496,7 @@ let g:DevIconsEnableFolderExtensionPatternMatching = 1
 let g:NERDTreeSyntaxDisableDefaultExtensions = 1
 let g:NERDTreeDisableExactMatchHighlight = 1
 let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['go', 'html', 'css', 'vue']
+"let g:NERDTreeSyntaxEnabledExtensions = ['go', 'html', 'css', 'vue']
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
