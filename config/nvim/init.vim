@@ -5,9 +5,7 @@ set autoread            " 文件在vim之外修改过，自动重新读入
 set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
 set splitbelow
-if has('mouse')
-        set mouse=a
-endif
+
 set cursorline          "高亮显示光标所在行
 highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 
@@ -21,7 +19,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-dark'
 Plug 'mileszs/ack.vim'
-Plug 'mattn/emmet-vim',{ 'for': ['html', 'vue']}
+Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'scrooloose/nerdcommenter'
@@ -40,12 +38,18 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'cnpm install -g tern'}
-Plug 'othree/html5.vim',{ 'for': 'html' } 
-Plug 'pangloss/vim-javascript'
-Plug 'posva/vim-vue',{ 'for': ['html', 'vue']}
+
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript',{'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx',{'for': ['javascript', 'javascript.jsx']}
+Plug 'posva/vim-vue',{ 'for':  'vue'}
 Plug 'hail2u/vim-css3-syntax',{ 'for': 'css' }
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color',{ 'for': 'css' }
+Plug 'sbdchd/neoformat'
+Plug 'epilande/vim-react-snippets'
+Plug 'epilande/vim-es2015-snippets'
 
 "Plug 'Shougo/neosnippet.vim'
 "Plug 'Shougo/neosnippet-snippets'
@@ -57,6 +61,8 @@ Plug 'autozimu/LanguageClient-neovim', {
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'}
+Plug 'ternjs/tern_for_vim'
 
 
 Plug 'neomake/neomake'
@@ -92,6 +98,15 @@ filetype plugin indent on     " required!
 
 "For vim-move
 let g:move_key_modifier = 'C'
+
+"Emmet
+let g:user_emmet_leader_key='<C-g>'
+let g:user_emmet_settings = {
+  \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+  \}
+
 
 "For ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
@@ -414,7 +429,11 @@ let g:deoplete#sources#ternjs#filetypes = [
                 \ 'javascript.jsx',
                 \ '...'
                 \ ]
-
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#docs = 1
+" Use tern_for_vim.
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]
 " code search
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -453,8 +472,8 @@ let g:ale_open_list = 0
 let g:ale_lint_delay = 1000
 let g:ale_set_highlights = 0
 "自定义error和warning图标
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
+let g:ale_sign_error = '😡'
+let g:ale_sign_warning = '😃'
 "在vim自带的状态栏中整合ale
 let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 "显示Linter名称,出错或警告等相关信息
@@ -476,9 +495,13 @@ let g:ale_linters = {
       \'javascript': ['eslint', 'stylelint'], 
       \'jsx': ['eslint', 'stylelint'], 'less': ['prettier'],
       \ }
-" }}}
 
-"""""Js Vue补全设置
+"""""Js Vue React neoformat补全格式化
+let g:used_javascript_libs = 'react'
+let g:neoformat_try_formatprg = 1
+autocmd BufWritePre *.js,*.jsx,*.less,*.css Neoformat
+let g:jsx_ext_required = 0
+let g:neoformat_enabled_javascript=['prettier']
 "set hidden
 let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls'],
