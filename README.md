@@ -10,12 +10,7 @@
 更改了onedark主题 pmenu颜色  
 修改插入模式的光标移动，尽可能的使手不离开主键区，上下左右的键位如果是macbookpro它太小了且位置很不友好，如果是全键盘你的手也需要移动。显然这是不友好的。修改为Ctrl+ H J K L完成插入模式的光标移动（之前的Shift 会引发大小写问题）
 
-## 这里是一些截图
+## 截图
 
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/01.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/02.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/03.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/04.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/07.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/08.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/13.png)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/sceenshot.gif)
+
