@@ -5,7 +5,7 @@ set autoread            " 文件在vim之外修改过，自动重新读入
 set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
 set splitbelow
-
+set autochdir
 set cursorline          "高亮显示光标所在行
 highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
 
@@ -62,7 +62,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'}
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
 
 
 Plug 'neomake/neomake'
@@ -271,7 +271,7 @@ map <leader>n :nohl<CR>
 let NERDTreeQuitOnOpen = 0
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 25 
-map <leader>f :NERDTreeToggle<CR>
+map <leader>f :NERDTreeToggle /Users/marblues/workspace/src<CR>
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 let g:NERDTreeIndicatorMapCustom = {
@@ -493,7 +493,8 @@ nmap <Leader>d :ALEDetail<CR>
 let g:ale_linters = {
       \ 'go': ['golint', 'go vet', 'go build'],
       \'javascript': ['eslint', 'stylelint'], 
-      \'jsx': ['eslint', 'stylelint'], 'less': ['prettier'],
+      \'jsx': ['eslint', 'stylelint'],
+      \'less': ['prettier','stylelint'],
       \ }
 
 """""Js Vue React neoformat补全格式化
