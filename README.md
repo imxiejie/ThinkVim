@@ -103,6 +103,6 @@ module.exports = {
    1.补充  主题`onedark`。这个文件是我修改过的，Pmenu的一些配色。如果你想用和我同样的主题，可以将我的`onedark`主题拷贝到你的插件安装目录下。
 我会慢慢补充一些插件的用法和说明以及我的设置。写的手累
 ## 截图
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/sceenshot.png)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/screenshot.png)
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/sceenshot.gif)
 
