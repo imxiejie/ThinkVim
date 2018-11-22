@@ -1,4 +1,4 @@
-syntax on
+
 set nobackup            " 设置不备份
 set noswapfile          " 禁止生成临时文件
 set autoread            " 文件在vim之外修改过，自动重新读入
@@ -7,7 +7,8 @@ set confirm             " 在处理未保存或只读文件的时候，弹出确
 set splitbelow
 set autochdir
 set cursorline          "高亮显示光标所在行
-highlight CursorLine   cterm=NONE ctermbg=black ctermfg=green guibg=NONE guifg=NONE
+syntax on
+
 
 " Configuration section of vundle
 filetype off  " required!
@@ -18,6 +19,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'joshdick/onedark.vim'
 Plug 'liuchengxu/space-vim-dark'
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'mileszs/ack.vim'
 Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
@@ -28,7 +30,7 @@ Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim' 
 Plug 'vim-scripts/xml.vim'
 Plug 'jiangmiao/auto-pairs'
-Plug 'flazz/vim-colorschemes'
+"Plug 'flazz/vim-colorschemes'
 Plug 'honza/vim-snippets'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
@@ -88,10 +90,7 @@ call plug#end()
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
-"Check syntastic by neomake
-"autocmd BufWritePost * Neomake
-"autocmd BufEnter * Neomake
-"autocmd VimEnter * UpdateRemotePlugins .
+
 
 filetype plugin indent on     " required!
  " End of vundle configuration
@@ -119,26 +118,15 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>r <Plug>(go-run)
-au FileType go nmap <leader>b <Plug>(go-build)
-au FileType go nmap <leader>t <Plug>(go-test)
-au FileType go nmap <leader>c <Plug>(go-coverage)
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap gd <Plug>(go-def-tab)
-autocmd FileType go nmap <Leader>l <Plug>(go-metalinter)
-" :GoDef but opens in a vertical split
-autocmd FileType go nmap <Leader>v <Plug>(go-def-vertical)
-" :GoDef but opens in a horizontal split
-autocmd FileType go nmap <Leader>s <Plug>(go-def-split)
-" :GoAlternate  commands :A, :AV, :AS and :AT
-autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
-
-"inoremap jj <Esc>
+inoremap jj <Esc>
  
 "airline setting
 let g:airline_theme='bubblegum'
@@ -180,13 +168,10 @@ nnoremap  <leader>7 :call utils#tab_buf_switch(7)<cr>
 nnoremap  <leader>8 :call utils#tab_buf_switch(8)<cr>
 " tab or buf 9
 nnoremap  <leader>9 :call utils#tab_buf_switch(9)<cr>
-"Tabline move
-nmap <S-H> :bp<CR>
-nmap <S-L> :bn<CR>
+"Tabline close
 nmap <S-W> :bd<CR>
 
-"improve autocomplete menu color
-highlight Pmenu ctermbg=238 gui=bold
+
 
 "Setup SuperTab
 let g:SuperTabRetainCompletionType="context"
@@ -199,7 +184,8 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-
+"修复ctrl+h执行删除命令
+let g:AutoPairsMapCh=0
 "缩进线设置
 "let g:indentLine_setColors = 0
 let g:indentLine_char='┆'
@@ -288,7 +274,7 @@ let g:NERDTreeIndicatorMapCustom = {
         \ }
 
 " Settings for vim-easymotion
-let g:EasyMotion_leader_key = ","
+let g:EasyMotion_leader_key = "<Space>"
 
 "Settings for TagBar
 map <leader>g :TagbarToggle<CR>
@@ -323,8 +309,9 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-"switch window
-:map <leader>w <C-W>w
+"选择窗口
+noremap <S-h> <C-W><Left>
+noremap <S-l> <C-W><Right>
 
 "set zen coding
  let g:user_zen_settings = {
@@ -390,9 +377,10 @@ nmap w] :vertical resize +3<CR>
 nmap w- :resize -3<CR>
 nmap w= :resize +3<CR>
 
-"scss,sass
+"Scss,sass,go
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
+au BufRead,BufNewFile *.go set filetype=go 
 
 "coffee script
 au BufWritePost *.coffee silent CoffeeMake!
@@ -455,14 +443,7 @@ let g:startify_custom_footer = [
             \ '|          By Martin           |',
             \ '+----------------+-------------+',
             \]                       
-""""""""""""""""color-scheme
-set background=dark
-colorscheme onedark
-"colorscheme space-vim-dark
-"colorscheme SolarizedDark
-hi Normal ctermfg=252 ctermbg=none
 
-highlight LineNr   ctermbg=none
 
 
 """""""""""""""'Ale语法检查
@@ -494,7 +475,7 @@ let g:ale_linters = {
       \ 'go': ['golint', 'go vet', 'go build'],
       \'javascript': ['eslint', 'stylelint'], 
       \'jsx': ['eslint', 'stylelint'],
-      \'less': ['prettier','stylelint'],
+      \'less': ['prettier'],
       \ }
 
 """""Js Vue React neoformat补全格式化
@@ -524,3 +505,13 @@ let g:NERDTreeDisablePatternMatchHighlight = 1
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
+
+""""""""""""""""color-scheme
+set background=dark
+colorscheme hybrid_reverse
+"colorscheme onedark
+"colorscheme hybrid
+"colorscheme SolarizedDark
+"隐藏背景
+"hi Normal ctermfg=252 ctermbg=none
+highlight LineNr   ctermbg=none
