@@ -17,10 +17,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " My Bundles here:
 Plug 'ryanoasis/vim-devicons'
-Plug 'joshdick/onedark.vim'
-Plug 'liuchengxu/space-vim-dark'
 Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'mileszs/ack.vim'
 Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -28,7 +25,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim' 
-Plug 'vim-scripts/xml.vim'
+Plug 'vim-scripts/xml.vim', { 'for': 'xml' }
 Plug 'jiangmiao/auto-pairs'
 "Plug 'flazz/vim-colorschemes'
 Plug 'honza/vim-snippets'
@@ -40,8 +37,10 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
+Plug 'Shougo/denite.nvim'
+Plug 'mileszs/ack.vim'
 
-Plug 'othree/html5.vim'
+Plug 'othree/html5.vim',{'for': ['html', 'javascript.jsx','vue']}
 Plug 'pangloss/vim-javascript',{'for': ['javascript', 'javascript.jsx']}
 Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
@@ -49,22 +48,22 @@ Plug 'mxw/vim-jsx',{'for': ['javascript', 'javascript.jsx']}
 Plug 'posva/vim-vue',{ 'for':  'vue'}
 Plug 'hail2u/vim-css3-syntax',{ 'for': 'css' }
 Plug 'ap/vim-css-color',{ 'for': 'css' }
-Plug 'sbdchd/neoformat'
-Plug 'epilande/vim-react-snippets'
-Plug 'epilande/vim-es2015-snippets'
+Plug 'sbdchd/neoformat',{'for': ['javascript', 'javascript.jsx']}
+Plug 'epilande/vim-react-snippets',{'for': ['javascript', 'javascript.jsx']}
+Plug 'epilande/vim-es2015-snippets',{'for': ['javascript', 'javascript.jsx']}
 
-"Plug 'Shougo/neosnippet.vim'
-"Plug 'Shougo/neosnippet-snippets'
+
 
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
+    \ 'for':'vue',
     \ }
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-go', { 'do': 'make','for':'go'}
 Plug 'zchee/deoplete-jedi'
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern'}
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install'}
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern','for': ['javascript', 'javascript.jsx'] }
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install','for': ['javascript', 'javascript.jsx'] }
 
 
 Plug 'neomake/neomake'
@@ -106,9 +105,9 @@ let g:user_emmet_settings = {
     \  },
   \}
 
-
-"For ack
+"""For ack
 let g:ackprg = 'ag --nogroup --nocolor --column'
+map <c-u> :Ack<space>
 
 "Settings for Golang
 let g:go_fmt_command = "goimports"
@@ -168,8 +167,10 @@ nnoremap  <leader>7 :call utils#tab_buf_switch(7)<cr>
 nnoremap  <leader>8 :call utils#tab_buf_switch(8)<cr>
 " tab or buf 9
 nnoremap  <leader>9 :call utils#tab_buf_switch(9)<cr>
-"Tabline close
-nmap <S-W> :bd<CR>
+"删除当前buffer跳转到上一个
+nmap <S-P> :bp\|bd #<CR>
+"删除当前buffer跳转到下一个
+nmap <S-N> :bn\|bd #<CR>
 
 
 
@@ -515,3 +516,44 @@ colorscheme hybrid_reverse
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
 highlight LineNr   ctermbg=none
+"""""""""""""""""""Deinte
+"设置使用ag与grep
+call denite#custom#var('grep', 'command', ['ag'])
+"当前目录搜索使用ag
+call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
+"其他grep设置
+call denite#custom#var('grep', 'default_opts',['-i', '--vimgrep'])
+call denite#custom#var('grep', 'recursive_opts', [])
+call denite#custom#var('grep', 'pattern_opt', [])
+call denite#custom#var('grep', 'separator', ['--'])
+call denite#custom#var('grep', 'final_opts', [])
+
+"ESC结束
+call denite#custom#map('insert', '<esc>', '<denite:enter_mode:normal>', 'noremap')
+call denite#custom#map('normal', '<esc>', '<denite:quit>', 'noremap')
+"C-N,C-P上下移動
+call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
+"C-J,C-K分屏
+call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
+call denite#custom#map('insert', '<C-k>', '<denite:do_action:vsplit>', 'noremap')
+
+" 以下はdenite起動時に使用するキーマップ
+"buffer列表
+noremap <leader>db :Denite buffer<CR>
+" 文件列表
+noremap <leader>dbn :Denite -buffer-name=file file<CR>
+" 最近使用文件列表
+noremap <leader>dfo :Denite file_old<CR>
+" 当前目录
+noremap <leader>dfr :Denite file_rec<CR>
+"buffer列表
+nnoremap <leader>dbb :<C-u>Denite buffer -buffer-name=file<CR>
+
+"Denite line
+nnoremap  <Leader>dl :<C-u>Denite line<CR>
+nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
+" 指定显示字符
+call denite#custom#option('default', 'prompt', '>')
+" denite的起始位置
+call denite#custom#option('default', 'direction', 'top')
