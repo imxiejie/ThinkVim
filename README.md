@@ -99,9 +99,40 @@ module.exports = {
 经过上面的步骤，如果你已经都是正常的安装了，那么恭喜你可以愉快的编写go和js了，你还要修改的地方就是`Nerdtree`的设置，我在这里`map <leader>f :NERDTreeToggle /Users/marblues/workspace/src<CR>`每次打开NERDtree的目录设置为了我的工作文件夹，你可以修改成你自己的
 ### Step9
 在我的`config/nvim/autoload`文件夹下有个`utils`文件，你需要将这个文件拷贝到你的`autoload`文件夹下，这个文件是一个`airline`的`tabline`的一个函数文件，有了这个文件你可以通过`\+数字`在`buffer`上选择你打开的文件进行跳转。
+### Step10
+对于tagbar这个插件 需要先`brew install ctags`，ag搜索插件需要安装 `brew install the_silver_searcher`配合denite插件使用 搜索神器。然后我们还需要在`~`目录下新建.agignore文件忽略一些文件可以提升检索的速度
+```
+*.css
+*.scss
+*.old
+*.xml
+*.plist
+*.pdf
+*.md
+*.log
+tmp
+old
+.git
+.svn
+zsh-completions
+lib
+libs
+jquery-*.js
+bootstrap*.css
+bootstrap*.js
+jquery.js
+node_modules
+Applications/
+github.com/
+golang.com/
+log/
+logs/
+images/
+```
 ### 其他的说明
    1.补充  主题`onedark`。这个文件是我修改过的，Pmenu的一些配色。如果你想用和我同样的主题，可以将我的`onedark`主题拷贝到你的插件安装目录下。
-我会慢慢补充一些插件的用法和说明以及我的设置。写的手累
+### 最新
+主题切换到了hybrid_reverse 。
 ## 截图
 
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/sceenshot.gif)
