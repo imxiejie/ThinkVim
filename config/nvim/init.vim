@@ -18,6 +18,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 " My Bundles here:
 Plug 'ryanoasis/vim-devicons'
 Plug 'kristijanhusak/vim-hybrid-material'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'w0ng/vim-hybrid'
 Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
@@ -38,20 +40,20 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'SirVer/ultisnips'
 Plug 'Shougo/denite.nvim'
+Plug 'rking/ag.vim'
 Plug 'mileszs/ack.vim'
+
 
 Plug 'othree/html5.vim',{'for': ['html', 'javascript.jsx','vue']}
 Plug 'pangloss/vim-javascript',{'for': ['javascript', 'javascript.jsx']}
-Plug 'othree/yajs.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'maxmellon/vim-jsx-pretty'
+"Plug 'othree/javascript-libraries-syntax.vim',{'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx',{'for': ['javascript', 'javascript.jsx']}
 Plug 'posva/vim-vue',{ 'for':  'vue'}
 Plug 'hail2u/vim-css3-syntax',{ 'for': 'css' }
 Plug 'ap/vim-css-color',{ 'for': 'css' }
 Plug 'sbdchd/neoformat',{'for': ['javascript', 'javascript.jsx']}
 Plug 'epilande/vim-react-snippets',{'for': ['javascript', 'javascript.jsx']}
-Plug 'epilande/vim-es2015-snippets',{'for': ['javascript', 'javascript.jsx']}
-
 
 
 Plug 'autozimu/LanguageClient-neovim', {
@@ -105,9 +107,8 @@ let g:user_emmet_settings = {
     \  },
   \}
 
-"""For ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-map <c-u> :Ack<space>
+
+
 
 "Settings for Golang
 let g:go_fmt_command = "goimports"
@@ -119,7 +120,7 @@ let g:go_highlight_build_constraints = 1
 
 au FileType go nmap <Leader>gi <Plug>(go-info)
 au FileType go nmap <Leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gor <Plug>(go-run)
 au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
@@ -191,6 +192,7 @@ let g:AutoPairsMapCh=0
 "let g:indentLine_setColors = 0
 let g:indentLine_char='┆'
 let g:indentLine_enabled = 1
+let g:indentLine_fileTypeExclude = [ 'startify' ]
 
 
 " 设定文件浏览器目录为当前目录  
@@ -313,23 +315,15 @@ let g:tagbar_type_go = {
 "选择窗口
 noremap <S-h> <C-W><Left>
 noremap <S-l> <C-W><Right>
+"Ag ACK 快捷键
+let g:ackprg = 'ag --nogroup --nocolor --column'
+map <leader>ag :Ag
+let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
+let g:ag_highlight=1
+let g:ag_mapping_message=0
+" 高亮光标所在位置的单词，并使用 Ag 来搜索
+nmap <leader>agw :Ag <C-R>=expand("<cword>")<CR><CR>
 
-"set zen coding
- let g:user_zen_settings = {
-  \  'php' : {
-  \    'extends' : 'html',
-  \    'filters' : 'c',
-  \  },
-  \  'xml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'haml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'erb' : {
-  \    'extends' : 'html',
-  \  },
-  \}
 
 "set CtrlP
 if executable('ag')
@@ -431,17 +425,17 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 " For startify
 let g:startify_custom_header = [
 \ '',
-\ ' _     _         _  _           ______                       _        ',
-\ '| |   | |       | || |         |  ___ \                _    (_)       ',
-\ '| |__ | |  ____ | || |  ___    | | _ | |  ____   ____ | |_   _  ____  ',
-\ '|  __)| | / _  )| || | / _ \   | || || | / _  | / ___)|  _) | ||  _ \ ',
-\ '| |   | |( (/ / | || || |_| |  | || || |( ( | || |    | |__ | || | | |',
-\ '|_|   |_| \____)|_||_| \___/   |_||_||_| \_||_||_|     \___)|_||_| |_|',                                                         
+\ '	 _     _       _ _          ______                    _                 ',
+\ '	| |   | |     | | |        |  ___ \                  | |                ',
+\ '	| |__ | | ____| | | ___    | | _ | | ____ ____   ____| | _   ____ ____  ',
+\ '	|  __)| |/ _  ) | |/ _ \   | || || |/ _  )  _ \ / _  | || \ / _  )    \ ',
+\ '	| |   | ( (/ /| | | |_| |  | || || ( (/ /| | | ( ( | | | | ( (/ /| | | |',
+\ '	|_|   |_|\____)_|_|\___/   |_||_||_|\____)_| |_|\_||_|_| |_|\____)_|_|_|',
 \ '',
 \]
 let g:startify_custom_footer = [
             \ '+------------------------------+',
-            \ '|          By Martin           |',
+            \ '|          Menahem Vim         |',
             \ '+----------------+-------------+',
             \]                       
 
@@ -456,6 +450,8 @@ let g:ale_set_highlights = 0
 "自定义error和warning图标
 let g:ale_sign_error = '😡'
 let g:ale_sign_warning = '😃'
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
 "在vim自带的状态栏中整合ale
 let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 "显示Linter名称,出错或警告等相关信息
@@ -480,7 +476,9 @@ let g:ale_linters = {
       \ }
 
 """""Js Vue React neoformat补全格式化
-let g:used_javascript_libs = 'react'
+"let g:used_javascript_libs = 'react'
+let g:vim_jsx_pretty_enable_jsx_highlight = 0
+let g:vim_jsx_pretty_colorful_config = 1
 let g:neoformat_try_formatprg = 1
 autocmd BufWritePre *.js,*.jsx,*.less,*.css Neoformat
 let g:jsx_ext_required = 0
@@ -509,9 +507,10 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 
 """"""""""""""""color-scheme
 set background=dark
-colorscheme hybrid_reverse
+"colorscheme space-vim-dark
+"colorscheme hybrid_reverse
 "colorscheme onedark
-"colorscheme hybrid
+colorscheme hybrid
 "colorscheme SolarizedDark
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
@@ -519,6 +518,7 @@ highlight LineNr   ctermbg=none
 """""""""""""""""""Deinte
 "设置使用ag与grep
 call denite#custom#var('grep', 'command', ['ag'])
+nnoremap <Leader>pf :call denite#start([{'name': 'grep', 'args': ['', '', '!']}])<cr>
 "当前目录搜索使用ag
 call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 "其他grep设置
@@ -544,16 +544,16 @@ noremap <leader>db :Denite buffer<CR>
 " 文件列表
 noremap <leader>dbn :Denite -buffer-name=file file<CR>
 " 最近使用文件列表
-noremap <leader>dfo :Denite file_old<CR>
+noremap <leader>dfo :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
 " 当前目录
-noremap <leader>dfr :Denite file_rec<CR>
+noremap <leader>dfr :Denite file_rec -default-action=vsplit<CR>
 "buffer列表
 nnoremap <leader>dbb :<C-u>Denite buffer -buffer-name=file<CR>
 
 "Denite line
-nnoremap  <Leader>dl :<C-u>Denite line<CR>
+nnoremap  <Leader>dl :<C-u>Denite line -auto-preview<CR>
 nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
 " 指定显示字符
 call denite#custom#option('default', 'prompt', '>')
 " denite的起始位置
-call denite#custom#option('default', 'direction', 'top')
+call denite#custom#option('default', 'direction',)
