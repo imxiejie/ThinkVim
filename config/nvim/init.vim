@@ -17,8 +17,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " My Bundles here:
 Plug 'ryanoasis/vim-devicons'
-Plug 'kristijanhusak/vim-hybrid-material'
-Plug 'liuchengxu/space-vim-dark'
 Plug 'w0ng/vim-hybrid'
 Plug 'mattn/emmet-vim'
 Plug 'ervandew/supertab'
@@ -42,6 +40,7 @@ Plug 'SirVer/ultisnips'
 Plug 'Shougo/denite.nvim'
 Plug 'rking/ag.vim'
 Plug 'mileszs/ack.vim'
+Plug 'airblade/vim-gitgutter'
 
 
 Plug 'othree/html5.vim',{'for': ['html', 'javascript.jsx','vue']}
@@ -88,6 +87,47 @@ Plug 'w0rp/ale'
 call plug#end()
 
 
+" 设定文件浏览器目录为当前目录  
+set bsdir=buffer  
+" 设置编码  
+set encoding=utf-8  
+set nocompatible
+set laststatus=2
+" 设置文件编码  
+set fenc=utf-8 
+
+"set to use clipboard of system
+set clipboard=unnamed
+
+" 设置文件编码检测类型及支持格式  
+set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  
+
+"显示行号  
+set number
+"Show related row numbers
+set relativenumber
+
+"settings for backspace
+set backspace=2
+set backspace=indent,eol,start
+
+"忽略大小写查找
+set ic
+
+" tab宽度  
+set tabstop=4 
+set cindent shiftwidth=4  
+set autoindent shiftwidth=4
+set expandtab
+
+
+" set 折叠
+set foldmethod=indent
+" 打开文件默认不折叠
+set foldlevelstart=99
+"set my leader
+let mapleader=","
+let g:mapleader=","
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -124,7 +164,10 @@ au FileType go nmap <leader>gor <Plug>(go-run)
 au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
-au FileType go nmap gd <Plug>(go-def-tab)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+au FileType go nmap <Leader>re <Plug>(go-rename)
 
 inoremap jj <Esc>
  
@@ -195,48 +238,7 @@ let g:indentLine_enabled = 1
 let g:indentLine_fileTypeExclude = [ 'startify' ]
 
 
-" 设定文件浏览器目录为当前目录  
-set bsdir=buffer  
-" 设置编码  
-set encoding=utf-8  
-set nocompatible
-set laststatus=2
-" 设置文件编码  
-set fenc=utf-8 
 
-"set to use clipboard of system
-set clipboard=unnamed
-
-" 设置文件编码检测类型及支持格式  
-set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936  
-
-"显示行号  
-set number
-"Show related row numbers
-set relativenumber
-
-"settings for backspace
-set backspace=2
-set backspace=indent,eol,start
-
-"忽略大小写查找
-set ic
-
-" tab宽度  
-set tabstop=4 
-set cindent shiftwidth=4  
-set autoindent shiftwidth=4
-set expandtab
-
-
-" set 折叠
-set foldmethod=indent
-" 打开文件默认不折叠
-set foldlevelstart=99
-
-"set my leader
-let mapleader=","
-let g:mapleader=","
 
 "tabs
 nmap <leader>tn :tabnew<cr>
@@ -260,7 +262,8 @@ map <leader>n :nohl<CR>
 let NERDTreeQuitOnOpen = 0
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 25 
-map <leader>f :NERDTreeToggle /Users/marblues/workspace/src<CR>
+map <leader>t :NERDTreeToggle <CR>
+map <leader>f :NERDTreeFind <CR>
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 let g:NERDTreeIndicatorMapCustom = {
@@ -277,7 +280,7 @@ let g:NERDTreeIndicatorMapCustom = {
         \ }
 
 " Settings for vim-easymotion
-let g:EasyMotion_leader_key = "<Space>"
+"let g:EasyMotion_leader_key = ","
 
 "Settings for TagBar
 map <leader>g :TagbarToggle<CR>
@@ -315,6 +318,9 @@ let g:tagbar_type_go = {
 "选择窗口
 noremap <S-h> <C-W><Left>
 noremap <S-l> <C-W><Right>
+noremap <S-j> <C-W><UP>
+noremap <S-k> <C-W><Down>
+
 "Ag ACK 快捷键
 let g:ackprg = 'ag --nogroup --nocolor --column'
 map <leader>ag :Ag
@@ -392,7 +398,7 @@ au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab sm
 set completeopt +=noinsert
 " deoplete.nvim recommend
 set completeopt +=noselect
-set completeopt =menu,preview
+set completeopt =longest,menu
 
 " Run deoplete.nvim automaticallys
 let g:deoplete#enable_at_startup = 1
@@ -468,7 +474,7 @@ nmap [a <Plug>(ale_previous_wrap)
 nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
-let g:ale_linters = {
+let g:ale_lintetrs = {
       \ 'go': ['golint', 'go vet', 'go build'],
       \'javascript': ['eslint', 'stylelint'], 
       \'jsx': ['eslint', 'stylelint'],
@@ -493,14 +499,13 @@ setlocal iskeyword+=-
 
 """""""""图标设置
 let g:WebDevIconsOS = 'Darwin'
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:DevIconsEnableFoldersOpenClose = 1
-let g:DevIconsEnableFolderExtensionPatternMatching = 1
+"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+"let g:DevIconsEnableFoldersOpenClose = 1
+"let g:DevIconsEnableFolderExtensionPatternMatching = 1
 """""""""""NERDTree高亮
 let g:NERDTreeSyntaxDisableDefaultExtensions = 1
 let g:NERDTreeDisableExactMatchHighlight = 1
 let g:NERDTreeDisablePatternMatchHighlight = 1
-"let g:NERDTreeSyntaxEnabledExtensions = ['go', 'html', 'css', 'vue']
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
@@ -557,3 +562,17 @@ nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
 call denite#custom#option('default', 'prompt', '>')
 " denite的起始位置
 call denite#custom#option('default', 'direction',)
+
+
+"vim-gitgutter
+let g:gitgutter_sign_added = '▎'
+let g:gitgutter_sign_modified = '▎'
+let g:gitgutter_sign_removed = '▏'
+let g:gitgutter_sign_removed_first_line = '▔'
+let g:gitgutter_sign_modified_removed = '▋'
+
+" ---------------------------------------------------------
+highlight! GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
+highlight! GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
+highlight! GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
+highlight! GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
