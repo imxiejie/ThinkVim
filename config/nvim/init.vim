@@ -19,7 +19,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'w0ng/vim-hybrid'
 Plug 'mattn/emmet-vim'
-Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -27,8 +26,6 @@ Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim' 
 Plug 'vim-scripts/xml.vim', { 'for': 'xml' }
 Plug 'jiangmiao/auto-pairs'
-"Plug 'flazz/vim-colorschemes'
-Plug 'honza/vim-snippets'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -36,7 +33,6 @@ Plug 'tpope/vim-repeat'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'SirVer/ultisnips'
 Plug 'Shougo/denite.nvim'
 Plug 'rking/ag.vim'
 Plug 'mileszs/ack.vim'
@@ -46,12 +42,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'othree/html5.vim',{'for': ['html', 'javascript.jsx','vue']}
 Plug 'pangloss/vim-javascript',{'for': ['javascript', 'javascript.jsx']}
 Plug 'maxmellon/vim-jsx-pretty'
-"Plug 'othree/javascript-libraries-syntax.vim',{'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx',{'for': ['javascript', 'javascript.jsx']}
-Plug 'posva/vim-vue',{ 'for':  'vue'}
 Plug 'hail2u/vim-css3-syntax',{ 'for': 'css' }
 Plug 'ap/vim-css-color',{ 'for': 'css' }
-Plug 'sbdchd/neoformat',{'for': ['javascript', 'javascript.jsx']}
+Plug 'sbdchd/neoformat'
 Plug 'epilande/vim-react-snippets',{'for': ['javascript', 'javascript.jsx']}
 
 
@@ -66,7 +60,8 @@ Plug 'zchee/deoplete-jedi'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern','for': ['javascript', 'javascript.jsx'] }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install','for': ['javascript', 'javascript.jsx'] }
 
-
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 Plug 'neomake/neomake'
 Plug 'mhinz/vim-startify'
 Plug 'vim-scripts/wildfire.vim'
@@ -125,9 +120,15 @@ set expandtab
 set foldmethod=indent
 " 打开文件默认不折叠
 set foldlevelstart=99
+
+
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/local/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
 "set my leader
 let mapleader=","
-let g:mapleader=","
+let g:maplocalleader=";"
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -158,16 +159,16 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
-au FileType go nmap <Leader>gi <Plug>(go-info)
-au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>goi <Plug>(go-info)
+au FileType go nmap <Leader>god <Plug>(go-doc)
 au FileType go nmap <leader>gor <Plug>(go-run)
-au FileType go nmap <leader>gb <Plug>(go-build)
-au FileType go nmap <leader>gt <Plug>(go-test)
-au FileType go nmap <leader>gc <Plug>(go-coverage)
-au FileType go nmap <Leader>ds <Plug>(go-def-split)
-au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
-au FileType go nmap <Leader>dt <Plug>(go-def-tab)
-au FileType go nmap <Leader>re <Plug>(go-rename)
+au FileType go nmap <leader>gob <Plug>(go-build)
+au FileType go nmap <leader>got <Plug>(go-test)
+au FileType go nmap <leader>goc <Plug>(go-coverage)
+au FileType go nmap <Leader>dos <Plug>(go-def-split)
+au FileType go nmap <Leader>dov <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dot <Plug>(go-def-tab)
+au FileType go nmap <Leader>rn<Plug>(go-rename)
 
 inoremap jj <Esc>
  
@@ -216,19 +217,11 @@ nmap <S-P> :bp\|bd #<CR>
 "删除当前buffer跳转到下一个
 nmap <S-N> :bn\|bd #<CR>
 
-
-
-"Setup SuperTab
-let g:SuperTabRetainCompletionType="context"
-
-let g:SuperTabDefaultCompletionType = "<c-n>"
-let g:SuperTabContextDefaultCompletionType = "<c-n>"
-autocmd VimEnter * inoremap <expr> <cr> ((pumvisible()) ? (deoplete#close_popup()) : ("\<cr>"))
 "修改插入模式移动
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+"inoremap <C-h> <Left>
+"inoremap <C-j> <Down>
+"inoremap <C-k> <Up>
+"inoremap <C-l> <Right>
 "修复ctrl+h执行删除命令
 let g:AutoPairsMapCh=0
 "缩进线设置
@@ -236,9 +229,6 @@ let g:AutoPairsMapCh=0
 let g:indentLine_char='┆'
 let g:indentLine_enabled = 1
 let g:indentLine_fileTypeExclude = [ 'startify' ]
-
-
-
 
 "tabs
 nmap <leader>tn :tabnew<cr>
@@ -262,7 +252,7 @@ map <leader>n :nohl<CR>
 let NERDTreeQuitOnOpen = 0
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 25 
-map <leader>t :NERDTreeToggle <CR>
+map <leader>e :NERDTreeToggle <CR>
 map <leader>f :NERDTreeFind <CR>
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
@@ -283,8 +273,8 @@ let g:NERDTreeIndicatorMapCustom = {
 "let g:EasyMotion_leader_key = ","
 
 "Settings for TagBar
-map <leader>g :TagbarToggle<CR>
-autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.cxx call tagbar#autoopen()
+map <localleader>g :TagbarToggle<CR>
+autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
 "设置tagbar的窗口宽度
 let g:tagbar_width=25
 let g:tagbar_type_go = {
@@ -372,16 +362,15 @@ vmap    <s-tab>     <gv
 :nmap <leader>l :tabnext<CR>
 
 " settings for resize splitted window
-nmap w[ :vertical resize -3<CR>
-nmap w] :vertical resize +3<CR>
+nmap r[ :vertical resize -3<CR>
+nmap r] :vertical resize +3<CR>
 
-nmap w- :resize -3<CR>
-nmap w= :resize +3<CR>
+nmap r- :resize -3<CR>
+nmap r= :resize +3<CR>
 
 "Scss,sass,go
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
-au BufRead,BufNewFile *.go set filetype=go 
 
 "coffee script
 au BufWritePost *.coffee silent CoffeeMake!
@@ -389,7 +378,8 @@ au BufWritePost *.coffee :CoffeeCompile watch vert
 
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
-
+"for go
+autocmd BufNewFile,BufRead *.go set filetype=go  noexpandtab tabstop=4 shiftwidth=4 
 "for python
 au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
@@ -400,8 +390,17 @@ set completeopt +=noinsert
 set completeopt +=noselect
 set completeopt =longest,menu
 
-" Run deoplete.nvim automaticallys
-let g:deoplete#enable_at_startup = 1
+" deoplete + neosnippet + autopairs changes
+let g:AutoPairsMapCR=0 
+let g:deoplete#auto_complete_start_length = 1 
+let g:deoplete#enable_at_startup = 1 
+let g:deoplete#enable_smart_case = 1 
+imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>") 
+imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
+"call deoplete#custom#set('_', 'converters', ['converter_auto_paren'])
+"inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
 
 " deoplete-go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
@@ -409,10 +408,7 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 "let g:deoplete#sources#go#source_importer = 1
 let g:deoplete#sources#go#use_cache = 1
 let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/'
-" better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
 let g:deoplete#sources#ternjs#filetypes = [
                 \ 'jsx',
                 \ 'javascript.jsx',
@@ -431,17 +427,17 @@ silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 " For startify
 let g:startify_custom_header = [
 \ '',
-\ '	 _     _       _ _          ______                    _                 ',
-\ '	| |   | |     | | |        |  ___ \                  | |                ',
-\ '	| |__ | | ____| | | ___    | | _ | | ____ ____   ____| | _   ____ ____  ',
-\ '	|  __)| |/ _  ) | |/ _ \   | || || |/ _  )  _ \ / _  | || \ / _  )    \ ',
-\ '	| |   | ( (/ /| | | |_| |  | || || ( (/ /| | | ( ( | | | | ( (/ /| | | |',
-\ '	|_|   |_|\____)_|_|\___/   |_||_||_|\____)_| |_|\_||_|_| |_|\____)_|_|_|',
+\ '   ______ _                                         _                             _        ', 
+\ '  / _____) |                                    _  | |                           | |       ',
+\ ' ( (____ | |__   ___  _ _ _    ____  _____    _| |_| |__  _____     ____ ___   __| |_____  ',
+\ '  \____ \|  _ \ / _ \| | | |  |    \| ___ |  (_   _)  _ \| ___ |   / ___) _ \ / _  | ___ | ',
+\ '  _____) ) | | | |_| | | | |  | | | | ____|    | |_| | | | ____|  ( (__| |_| ( (_| | ____| ',
+\ ' (______/|_| |_|\___/ \___/   |_|_|_|_____)     \__)_| |_|_____)   \____)___/ \____|_____) ',
 \ '',
 \]
 let g:startify_custom_footer = [
             \ '+------------------------------+',
-            \ '|          Menahem Vim         |',
+            \ '|        Github:PendragonSaber |',
             \ '+----------------+-------------+',
             \]                       
 
@@ -486,9 +482,10 @@ let g:ale_lintetrs = {
 let g:vim_jsx_pretty_enable_jsx_highlight = 0
 let g:vim_jsx_pretty_colorful_config = 1
 let g:neoformat_try_formatprg = 1
-autocmd BufWritePre *.js,*.jsx,*.less,*.css Neoformat
+autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 let g:jsx_ext_required = 0
 let g:neoformat_enabled_javascript=['prettier']
+let g:neoformat_enabled_html=['js-beautify']
 "set hidden
 let g:LanguageClient_serverCommands = {
     \ 'vue': ['vls'],
@@ -576,3 +573,4 @@ highlight! GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
 highlight! GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
 highlight! GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
 highlight! GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
+
