@@ -1,4 +1,3 @@
-
 set nobackup            " 设置不备份
 set noswapfile          " 禁止生成临时文件
 set autoread            " 文件在vim之外修改过，自动重新读入
@@ -24,16 +23,13 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'majutsushi/tagbar'
 Plug 'kien/ctrlp.vim' 
-Plug 'vim-scripts/xml.vim', { 'for': 'xml' }
 Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
-Plug 'Shougo/denite.nvim'
 Plug 'rking/ag.vim'
 Plug 'mileszs/ack.vim'
 Plug 'airblade/vim-gitgutter'
@@ -47,29 +43,29 @@ Plug 'hail2u/vim-css3-syntax',{ 'for': 'css' }
 Plug 'ap/vim-css-color',{ 'for': 'css' }
 Plug 'sbdchd/neoformat'
 Plug 'epilande/vim-react-snippets',{'for': ['javascript', 'javascript.jsx']}
-
-
 Plug 'autozimu/LanguageClient-neovim', {
     \ 'branch': 'next',
     \ 'do': 'bash install.sh',
     \ 'for':'vue',
     \ }
+
+
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-go', { 'do': 'make','for':'go'}
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi', { 'for':'python' }
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern','for': ['javascript', 'javascript.jsx'] }
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install','for': ['javascript', 'javascript.jsx'] }
-
 Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
-Plug 'neomake/neomake'
+Plug 'Shougo/denite.nvim'
+Plug 'Shougo/neopairs.vim'
+
+
 Plug 'mhinz/vim-startify'
-Plug 'vim-scripts/wildfire.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'yonchu/accelerated-smooth-scroll'
 
 Plug 'matze/vim-move'
-Plug 'pbrisbin/vim-mkdir'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 "Plugins for golang
@@ -90,6 +86,12 @@ set nocompatible
 set laststatus=2
 " 设置文件编码  
 set fenc=utf-8 
+"分割窗口为虚线
+set statusline=-        " hide file name in statusline
+set fillchars=stl:-     " fill active window's statusline with -
+set fillchars+=stlnc:-  " also fill inactive windows
+set fillchars+=vert:\|  " add a bar for vertical splits
+
 
 "set to use clipboard of system
 set clipboard=unnamed
@@ -113,8 +115,7 @@ set ic
 set tabstop=4 
 set cindent shiftwidth=4  
 set autoindent shiftwidth=4
-set expandtab
-
+set expandtab 
 
 " set 折叠
 set foldmethod=indent
@@ -225,9 +226,15 @@ nmap <S-N> :bn\|bd #<CR>
 "修复ctrl+h执行删除命令
 let g:AutoPairsMapCh=0
 "缩进线设置
-"let g:indentLine_setColors = 0
-let g:indentLine_char='┆'
+set list
+"set lcs+=trail:.                                                       "样式一
+"set listchars=tab:\▸\-                                                 "样式二
+"set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲,nbsp:␣    "样式三
+"set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·              "样式四
+set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→                "样式五
 let g:indentLine_enabled = 1
+let g:indentLine_leadingSpaceEnable=1
+let g:indentLine_char='┆'
 let g:indentLine_fileTypeExclude = [ 'startify' ]
 
 "tabs
@@ -236,13 +243,6 @@ nmap <leader>te :tabedit
 nmap <leader>tc :tabclose<cr>
 nmap <leader>tm :tabmove
 
-"For Rust settings
-let g:rustfmt_autosave = 1
-
-"For neomake
-map <leader>m :Neomake<CR>
-let g:neomake_open_list = 2
-let g:neomake_list_height = 7
 
 "Disable highlight
 map <leader>n :nohl<CR>
@@ -362,11 +362,9 @@ vmap    <s-tab>     <gv
 :nmap <leader>l :tabnext<CR>
 
 " settings for resize splitted window
-nmap r[ :vertical resize -3<CR>
-nmap r] :vertical resize +3<CR>
+nmap <C-w>[ :vertical resize -3<CR>
+nmap <C-w>] :vertical resize +3<CR>
 
-nmap r- :resize -3<CR>
-nmap r= :resize +3<CR>
 
 "Scss,sass,go
 au BufRead,BufNewFile *.scss set filetype=scss
@@ -391,16 +389,16 @@ set completeopt +=noselect
 set completeopt =longest,menu
 
 " deoplete + neosnippet + autopairs changes
-let g:AutoPairsMapCR=0 
-let g:deoplete#auto_complete_start_length = 1 
 let g:deoplete#enable_at_startup = 1 
-let g:deoplete#enable_smart_case = 1 
+let g:neopairs#enable = 1
+call deoplete#custom#source('_', 'converters', ['converter_auto_paren'])
 imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>") 
 imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>\<Plug>AutoPairsReturn"
-"call deoplete#custom#set('_', 'converters', ['converter_auto_paren'])
+imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 "inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-
+imap <C-K>     <Plug>(neosnippet_expand_or_jump)
+smap <C-K>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-K>     <Plug>(neosnippet_expand_target)
 
 " deoplete-go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
@@ -425,6 +423,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " For startify
+let g:startify_files_number = 20
 let g:startify_custom_header = [
 \ '',
 \ '   ______ _                                         _                             _        ', 
@@ -436,9 +435,12 @@ let g:startify_custom_header = [
 \ '',
 \]
 let g:startify_custom_footer = [
-            \ '+------------------------------+',
-            \ '|        Github:PendragonSaber |',
-            \ '+----------------+-------------+',
+            \ '+-------------------------------------------+',
+            \ '|            Talk is cheap                  |',
+            \ '|            Show me the code               |',
+            \ '|                                           |',
+            \ '|            Copyright Pendragon            |',
+            \ '+-------------------------------------------+',
             \]                       
 
 
@@ -540,7 +542,6 @@ call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'nor
 call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:do_action:vsplit>', 'noremap')
 
-" 以下はdenite起動時に使用するキーマップ
 "buffer列表
 noremap <leader>db :Denite buffer<CR>
 " 文件列表
