@@ -91,7 +91,8 @@ set statusline=-        " hide file name in statusline
 set fillchars=stl:-     " fill active window's statusline with -
 set fillchars+=stlnc:-  " also fill inactive windows
 set fillchars+=vert:\|  " add a bar for vertical splits
-
+set t_Co=256
+"set termguicolors       " 支持真色彩
 
 "set to use clipboard of system
 set clipboard=unnamed
@@ -123,6 +124,7 @@ set foldmethod=indent
 set foldlevelstart=99
 
 
+
 " Path to python interpreter for neovim
 let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
@@ -134,12 +136,17 @@ let g:maplocalleader=";"
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-
 filetype plugin indent on     " required!
- " End of vundle configuration
+"插入模式下快速回到normal模式并且到新行
+"inoremap ✠  <Esc>o  "仅适用于mac和iterm2 需要在iterm中重新映射✠这个符号
+inoremap <C-L> <Esc>o
+" Write buffer (save)
+noremap <Leader>w :w<CR>
+imap <S-w> <esc>:w<CR>
+imap <S-q> <esc>:wq<CR>
 
 "For vim-move
-let g:move_key_modifier = 'C'
+let g:move_key_modifier = 'S'
 
 "Emmet
 let g:user_emmet_leader_key='<C-g>'
@@ -171,7 +178,6 @@ au FileType go nmap <Leader>dov <Plug>(go-def-vertical)
 au FileType go nmap <Leader>dot <Plug>(go-def-tab)
 au FileType go nmap <Leader>rn<Plug>(go-rename)
 
-inoremap jj <Esc>
  
 "airline setting
 let g:airline_theme='bubblegum'
@@ -217,8 +223,20 @@ nnoremap  <leader>9 :call utils#tab_buf_switch(9)<cr>
 nmap <S-P> :bp\|bd #<CR>
 "删除当前buffer跳转到下一个
 nmap <S-N> :bn\|bd #<CR>
+nmap <S-D> :bd<CR>
 
-"修改插入模式移动
+"选择窗口
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+"智能行移动
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+"插入模式移动
 "inoremap <C-h> <Left>
 "inoremap <C-j> <Down>
 "inoremap <C-k> <Up>
@@ -229,22 +247,21 @@ let g:AutoPairsMapCh=0
 set list
 "set lcs+=trail:.                                                       "样式一
 "set listchars=tab:\▸\-                                                 "样式二
-"set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲,nbsp:␣    "样式三
+"set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲,nbsp:␣   "样式三
 "set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·              "样式四
-set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→                "样式五
+set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→                 "样式五
 let g:indentLine_enabled = 1
 let g:indentLine_leadingSpaceEnable=1
 let g:indentLine_char='┆'
 let g:indentLine_fileTypeExclude = [ 'startify' ]
 
-"tabs
 nmap <leader>tn :tabnew<cr>
 nmap <leader>te :tabedit
 nmap <leader>tc :tabclose<cr>
 nmap <leader>tm :tabmove
 
 
-"Disable highlight
+"取消高亮
 map <leader>n :nohl<CR>
 
 "  映射NERDTree插件
@@ -252,8 +269,8 @@ map <leader>n :nohl<CR>
 let NERDTreeQuitOnOpen = 0
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 25 
-map <leader>e :NERDTreeToggle <CR>
-map <leader>f :NERDTreeFind <CR>
+nmap <leader>e :NERDTreeToggle <CR>
+nmap <leader>f :NERDTreeFind <CR>
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 let g:NERDTreeIndicatorMapCustom = {
@@ -273,7 +290,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "let g:EasyMotion_leader_key = ","
 
 "Settings for TagBar
-map <localleader>g :TagbarToggle<CR>
+nmap <localleader>g :TagbarToggle<CR>
 autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
 "设置tagbar的窗口宽度
 let g:tagbar_width=25
@@ -305,20 +322,14 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-"选择窗口
-noremap <S-h> <C-W><Left>
-noremap <S-l> <C-W><Right>
-noremap <S-j> <C-W><UP>
-noremap <S-k> <C-W><Down>
-
 "Ag ACK 快捷键
 let g:ackprg = 'ag --nogroup --nocolor --column'
-map <leader>ag :Ag
+map <C-A> :Ag
 let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
 let g:ag_highlight=1
 let g:ag_mapping_message=0
 " 高亮光标所在位置的单词，并使用 Ag 来搜索
-nmap <leader>agw :Ag <C-R>=expand("<cword>")<CR><CR>
+nmap <C-A>w :Ag <C-R>=expand("<cword>")<CR><CR>
 
 
 "set CtrlP
@@ -339,9 +350,6 @@ let g:ctrlp_max_height=15
 let g:ctrlp_match_window_reversed=0
 let g:ctrlp_mruf_max=500
 let g:ctrlp_follow_symlinks=1
-"use in  edit
-imap <C-A> <C-C><c-p>
-
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.jpg,*.png,*.gif,*.jpeg,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
@@ -366,7 +374,7 @@ nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
 
 
-"Scss,sass,go
+"Scss,sass
 au BufRead,BufNewFile *.scss set filetype=scss
 au BufRead,BufNewFile *.sass set filetype=scss
 
@@ -377,7 +385,7 @@ au BufWritePost *.coffee :CoffeeCompile watch vert
 "let skim use slim syntax
 au BufRead,BufNewFile *.skim set filetype=slim
 "for go
-autocmd BufNewFile,BufRead *.go set filetype=go  noexpandtab tabstop=4 shiftwidth=4 
+au BufNewFile,BufRead *.go set filetype=go  noexpandtab tabstop=4 shiftwidth=4 
 "for python
 au BufRead,BufNewFile *.py set shiftwidth=4 tabstop=4 softtabstop=4 expandtab smarttab autoindent
 
@@ -388,7 +396,7 @@ set completeopt +=noinsert
 set completeopt +=noselect
 set completeopt =longest,menu
 
-" deoplete + neosnippet + autopairs changes
+" deoplete + neosnippet + neoparis 
 let g:deoplete#enable_at_startup = 1 
 let g:neopairs#enable = 1
 call deoplete#custom#source('_', 'converters', ['converter_auto_paren'])
@@ -396,17 +404,19 @@ imap <expr><TAB> pumvisible() ? "\<C-n>" : (neosnippet#expandable_or_jumpable() 
 imap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 imap <expr><CR> pumvisible() ? deoplete#mappings#close_popup() : "\<CR>"
 "inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
-imap <C-K>     <Plug>(neosnippet_expand_or_jump)
-smap <C-K>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-K>     <Plug>(neosnippet_expand_target)
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>      <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
 
 " deoplete-go settings
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
 let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+"打开此选项会从-source中检索完成localpackage的补全但是会变得很慢 不建议
 "let g:deoplete#sources#go#source_importer = 1
 let g:deoplete#sources#go#use_cache = 1
 let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/'
 
+"deoplete-ternjs setting
 let g:deoplete#sources#ternjs#filetypes = [
                 \ 'jsx',
                 \ 'javascript.jsx',
@@ -420,10 +430,9 @@ let g:tern#arguments = ["--persistent"]
 " code search
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-silent! call repeat#set("\<Plug>MyWonderfulMap", v:count)
 
 " For startify
-let g:startify_files_number = 20
+"let g:startify_files_number = 20
 let g:startify_custom_header = [
 \ '',
 \ '   ______ _                                         _                             _        ', 
@@ -469,7 +478,7 @@ let g:ale_lint_on_enter = 0
 nmap ]a <Plug>(ale_next_wrap)
 nmap [a <Plug>(ale_previous_wrap)
 "<Leader>s触发/关闭语法检查
-nmap <Leader>s :ALEToggle<CR>
+"nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
 let g:ale_lintetrs = {
@@ -498,6 +507,7 @@ setlocal iskeyword+=-
 
 """""""""图标设置
 let g:WebDevIconsOS = 'Darwin'
+"打开下面设置会在nerdtree中添加文件夹图标
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 "let g:DevIconsEnableFoldersOpenClose = 1
 "let g:DevIconsEnableFolderExtensionPatternMatching = 1
@@ -518,11 +528,11 @@ colorscheme hybrid
 "colorscheme SolarizedDark
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
-highlight LineNr   ctermbg=none
+highlight LineNr   ctermbg=none 
 """""""""""""""""""Deinte
 "设置使用ag与grep
 call denite#custom#var('grep', 'command', ['ag'])
-nnoremap <Leader>pf :call denite#start([{'name': 'grep', 'args': ['', '', '!']}])<cr>
+nnoremap <localLeader>p :call denite#start([{'name': 'grep', 'args': ['', '', '!']}])<cr>
 "当前目录搜索使用ag
 call denite#custom#var('file_rec', 'command', ['ag', '--follow', '--nocolor', '--nogroup', '-g', ''])
 "其他grep设置
@@ -543,21 +553,19 @@ call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
 call denite#custom#map('insert', '<C-k>', '<denite:do_action:vsplit>', 'noremap')
 
 "buffer列表
-noremap <leader>db :Denite buffer<CR>
+noremap <localleader>b :Denite buffer<CR>
 " 文件列表
-noremap <leader>dbn :Denite -buffer-name=file file<CR>
+noremap <localleader>bn :Denite -buffer-name=file file<CR>
 " 最近使用文件列表
-noremap <leader>dfo :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
+noremap <localleader>fo :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
 " 当前目录
-noremap <leader>dfr :Denite file_rec -default-action=vsplit<CR>
-"buffer列表
-nnoremap <leader>dbb :<C-u>Denite buffer -buffer-name=file<CR>
+noremap <localleader>fr :Denite file_rec -default-action=vsplit<CR>
 
 "Denite line
-nnoremap  <Leader>dl :<C-u>Denite line -auto-preview<CR>
+nnoremap  <localLeader>dl :<C-u>Denite line -auto-preview<CR>
 nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
 " 指定显示字符
-call denite#custom#option('default', 'prompt', '>')
+call denite#custom#option('default', 'prompt', 'λ')
 " denite的起始位置
 call denite#custom#option('default', 'direction',)
 
@@ -569,9 +577,8 @@ let g:gitgutter_sign_removed = '▏'
 let g:gitgutter_sign_removed_first_line = '▔'
 let g:gitgutter_sign_modified_removed = '▋'
 
-" ---------------------------------------------------------
+" 自定义gitgutter图标颜色
 highlight! GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
 highlight! GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
 highlight! GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
 highlight! GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
-
