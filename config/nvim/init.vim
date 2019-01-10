@@ -79,6 +79,7 @@ set bsdir=buffer
 set encoding=utf-8  
 set nocompatible
 set laststatus=2
+"设置状态栏显示的内容
 " 设置文件编码  
 set fenc=utf-8 
 "分割窗口为虚线
@@ -129,6 +130,9 @@ imap <C-Q> <esc>:wq<CR>
 nmap ls ^
 nmap le $
 
+"取消高亮
+map <leader>n :nohl<CR>
+
 
 " Path to python interpreter for neovim
 let g:python3_host_prog  = '/usr/local/bin/python3'
@@ -144,7 +148,7 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 
 filetype plugin indent on     " required!
 "插入模式下快速回到normal模式并且到新行
-"inoremap ✠  <Esc>o  "仅适用于mac和iterm2 需要在iterm中重新映射✠这个符号
+"inoremap ✠  <Esc>o  "如果想使用ctrl+enter类似其他编辑器换行配置这行仅适用于mac和iterm2 需要在iterm中重新映射✠这个符号
 inoremap <C-O> <Esc>o
 
 
@@ -187,6 +191,7 @@ let g:airline_theme='wombat'
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'tagbar']
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
 let g:airline#extensions#tabline#show_tab_nr = 1
 let g:airline#extensions#tabline#formatter = 'default'
@@ -201,7 +206,8 @@ let g:airline_detect_modified=1
 let g:airline_detect_paste=1
 let g:airline_detect_crypt=1
 let g:airline_highlighting_cache = 1
-let g:airline#extensions#tabline#show_tab_type = 0
+"打开下面这个选项会显示标签类型-->去掉右上角[buffers]
+"let g:airline#extensions#tabline#show_tab_type = 0
 
 " tab or buf 1
 nnoremap <leader>1 :call utils#tab_buf_switch(1)<cr>
@@ -239,11 +245,11 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-"插入模式移动
-"inoremap <C-h> <Left>
-"inoremap <C-j> <Down>
-"inoremap <C-k> <Up>
-"inoremap <C-l> <Right>
+"插入模式移动M=alt
+"inoremap <M-h> <Left>
+"inoremap <M-j> <Down>
+"inoremap <M-k> <Up>
+"inoremap <M-l> <Right>
 "修复ctrl+h执行删除命令
 let g:AutoPairsMapCh=0
 "缩进线设置
@@ -264,8 +270,6 @@ nmap <leader>tc :tabclose<cr>
 nmap <leader>tm :tabmove
 
 
-"取消高亮
-map <leader>n :nohl<CR>
 
 "  映射NERDTree插件
 "let loaded_nerd_tree=1
@@ -326,7 +330,7 @@ let g:tagbar_type_go = {
 \ }
 
 "Ag  快捷键
-map <leader>a :Ag
+nmap <leader>a :Ag
 let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
 let g:ag_highlight=1
 let g:ag_mapping_message=0
@@ -426,11 +430,16 @@ let g:deoplete#sources#ternjs#filetypes = [
                 \ ]
 let g:deoplete#sources#ternjs#types = 1
 let g:deoplete#sources#ternjs#docs = 1
+
+"deoplete-jedi setting
+let g:deoplete#sources#jedi#server_timeout=100
+let g:deoplete#sources#jedi#statement_length=100
+let g:jedi#completions_enabled = 0
+
+
 " Use tern_for_vim.
 let g:tern#command = ["tern"]
 let g:tern#arguments = ["--persistent"]
-" code search
-let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 " For startify
@@ -523,11 +532,7 @@ let g:NERDTreePatternMatchHighlightFullName = 1
 
 """"""""""""""""color-scheme
 set background=dark
-"colorscheme space-vim-dark
-"colorscheme hybrid_reverse
-"colorscheme onedark
 colorscheme hybrid
-"colorscheme SolarizedDark
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
 """""""""""""""""""Deinte
