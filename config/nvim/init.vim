@@ -4,7 +4,6 @@ set autoread            " 文件在vim之外修改过，自动重新读入
 set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
 set splitbelow
-set autochdir
 set cursorline          "高亮显示光标所在行
 syntax on
 
@@ -31,7 +30,6 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'rking/ag.vim'
-Plug 'mileszs/ack.vim'
 Plug 'airblade/vim-gitgutter'
 
 
@@ -65,16 +63,13 @@ Plug 'mhinz/vim-startify'
 Plug 'Yggdroot/indentLine'
 Plug 'yonchu/accelerated-smooth-scroll'
 
-Plug 'matze/vim-move'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 "Plugins for golang
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'w0rp/ale' 
-" JSON {{{
-	Plug 'elzr/vim-json', { 'for': 'json' }
-	let g:vim_json_syntax_conceal = 0
-" }}}
+Plug 'elzr/vim-json', { 'for': 'json' }
+
 call plug#end()
 
 
@@ -91,6 +86,7 @@ set statusline=-        " hide file name in statusline
 set fillchars=stl:-     " fill active window's statusline with -
 set fillchars+=stlnc:-  " also fill inactive windows
 set fillchars+=vert:\|  " add a bar for vertical splits
+
 set t_Co=256
 "set termguicolors       " 支持真色彩
 
@@ -123,6 +119,15 @@ set foldmethod=indent
 " 打开文件默认不折叠
 set foldlevelstart=99
 
+" Write buffer (save)保存
+noremap <Leader>w :w<CR>
+imap <C-S> <esc>:w<CR>
+imap <C-Q> <esc>:wq<CR>
+
+"默认键位的映射
+"定义快捷键到行首非空字符和行尾$
+nmap ls ^
+nmap le $
 
 
 " Path to python interpreter for neovim
@@ -131,6 +136,7 @@ let g:python3_host_prog  = '/usr/local/bin/python3'
 let g:python3_host_skip_check = 1
 "set my leader
 let mapleader=","
+let g:mapleader=","
 let g:maplocalleader=";"
 
 " 打开文件自动定位到最后编辑的位置
@@ -139,14 +145,8 @@ autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "
 filetype plugin indent on     " required!
 "插入模式下快速回到normal模式并且到新行
 "inoremap ✠  <Esc>o  "仅适用于mac和iterm2 需要在iterm中重新映射✠这个符号
-inoremap <C-L> <Esc>o
-" Write buffer (save)
-noremap <Leader>w :w<CR>
-imap <S-w> <esc>:w<CR>
-imap <S-q> <esc>:wq<CR>
+inoremap <C-O> <Esc>o
 
-"For vim-move
-let g:move_key_modifier = 'S'
 
 "Emmet
 let g:user_emmet_leader_key='<C-g>'
@@ -156,7 +156,8 @@ let g:user_emmet_settings = {
     \  },
   \}
 
-
+"for json
+let g:vim_json_syntax_conceal = 0
 
 
 "Settings for Golang
@@ -180,7 +181,8 @@ au FileType go nmap <Leader>rn<Plug>(go-rename)
 
  
 "airline setting
-let g:airline_theme='bubblegum'
+let g:airline_theme='wombat'
+"let g:airline_theme='durant'
 
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'tagbar']
@@ -220,10 +222,11 @@ nnoremap  <leader>8 :call utils#tab_buf_switch(8)<cr>
 " tab or buf 9
 nnoremap  <leader>9 :call utils#tab_buf_switch(9)<cr>
 "删除当前buffer跳转到上一个
-nmap <S-P> :bp\|bd #<CR>
+nnoremap <leader>bp :bp\|bd #<CR>
 "删除当前buffer跳转到下一个
-nmap <S-N> :bn\|bd #<CR>
-nmap <S-D> :bd<CR>
+nnoremap <leader>bn :bn\|bd #<CR>
+"删除buffer
+nnoremap <leader>bd :bd<CR>
 
 "选择窗口
 nnoremap <C-h> <C-w>h
@@ -269,8 +272,8 @@ map <leader>n :nohl<CR>
 let NERDTreeQuitOnOpen = 0
 let NERDChristmasTree=1
 let g:NERDTreeWinSize = 25 
-nmap <leader>e :NERDTreeToggle <CR>
-nmap <leader>f :NERDTreeFind <CR>
+map <leader>e :NERDTreeToggle <CR>
+map <leader>f :NERDTreeFind <CR>
 let g:NERDTreeDirArrowExpandable='▷'
 let g:NERDTreeDirArrowCollapsible='▼'
 let g:NERDTreeIndicatorMapCustom = {
@@ -290,7 +293,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "let g:EasyMotion_leader_key = ","
 
 "Settings for TagBar
-nmap <localleader>g :TagbarToggle<CR>
+map <localleader>g :TagbarToggle<CR>
 autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
 "设置tagbar的窗口宽度
 let g:tagbar_width=25
@@ -322,14 +325,13 @@ let g:tagbar_type_go = {
     \ 'ctagsargs' : '-sort -silent'
 \ }
 
-"Ag ACK 快捷键
-let g:ackprg = 'ag --nogroup --nocolor --column'
-map <C-A> :Ag
+"Ag  快捷键
+map <leader>a :Ag
 let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
 let g:ag_highlight=1
 let g:ag_mapping_message=0
 " 高亮光标所在位置的单词，并使用 Ag 来搜索
-nmap <C-A>w :Ag <C-R>=expand("<cword>")<CR><CR>
+nmap <leader>aw :Ag <C-R>=expand("<cword>")<CR><CR>
 
 
 "set CtrlP
@@ -478,7 +480,7 @@ let g:ale_lint_on_enter = 0
 nmap ]a <Plug>(ale_next_wrap)
 nmap [a <Plug>(ale_previous_wrap)
 "<Leader>s触发/关闭语法检查
-"nmap <Leader>s :ALEToggle<CR>
+nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
 let g:ale_lintetrs = {
@@ -528,7 +530,6 @@ colorscheme hybrid
 "colorscheme SolarizedDark
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
-highlight LineNr   ctermbg=none 
 """""""""""""""""""Deinte
 "设置使用ag与grep
 call denite#custom#var('grep', 'command', ['ag'])
@@ -582,3 +583,4 @@ highlight! GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
 highlight! GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
 highlight! GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
 highlight! GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
+
