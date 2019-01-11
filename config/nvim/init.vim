@@ -120,15 +120,25 @@ set foldmethod=indent
 " 打开文件默认不折叠
 set foldlevelstart=99
 
+"默认键位的映射
+"定义快捷键到行首非空字符和行尾$
+nmap ls ^
+nmap le $
+
+
+
+"set my leader
+let mapleader=","
+let g:mapleader=","
+let g:maplocalleader=";"
+
+
+
 " Write buffer (save)保存
 noremap <Leader>w :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
 
-"默认键位的映射
-"定义快捷键到行首非空字符和行尾$
-nmap ls ^
-nmap le $
 
 "取消高亮
 map <leader>n :nohl<CR>
@@ -138,10 +148,6 @@ map <leader>n :nohl<CR>
 let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
-"set my leader
-let mapleader=","
-let g:mapleader=","
-let g:maplocalleader=";"
 
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
@@ -298,7 +304,7 @@ let g:NERDTreeIndicatorMapCustom = {
 
 "Settings for TagBar
 map <localleader>g :TagbarToggle<CR>
-autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
+"autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
 "设置tagbar的窗口宽度
 let g:tagbar_width=25
 let g:tagbar_type_go = {
