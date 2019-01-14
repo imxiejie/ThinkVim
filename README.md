@@ -20,7 +20,7 @@ git clone https://github.com/imjustfly/nvimrc.git ~/.config/nvim
 :call dein#install()
 ```
 
-## 截图
+## 截图（老版本）
 
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/sceenshot.gif)
 
