@@ -1,0 +1,34 @@
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'othree/html5.vim'
+on_ft = ['html', 'javascript.jsx','vue'] 
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'maxmellon/vim-jsx-pretty'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'mxw/vim-jsx'
+on_ft = ['javascript', 'javascript.jsx']
+
+[[plugins]]
+repo = 'hail2u/vim-css3-syntax'
+on_ft = ['css']
+
+[[plugins]]
+repo = 'ap/vim-css-color'
+on_ft = ['css']
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+
+[[plugins]]
+repo = 'elzr/vim-json'
+on_ft = ['json']
