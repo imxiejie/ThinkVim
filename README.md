@@ -13,7 +13,7 @@ sh ./installer.sh  ~/.config/nvim
 ```
 ### Step3
 ```
-git clone https://github.com/imjustfly/nvimrc.git ~/.config/nvim
+git clone https://github.com/PendragonSaber/mydotfiles.git ~/.config/nvim
 ```
 ### Step4
 ```
