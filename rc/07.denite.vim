@@ -36,3 +36,19 @@ nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
 call denite#custom#option('default', 'prompt', 'λ')
 " denite的起始位置
 call denite#custom#option('default', 'direction',)
+
+" coc seting 
+" Show extension list
+nnoremap <silent> <localLeader>ce  :<C-u>Denite coc-extension<cr>
+" Show symbols of current buffer
+nnoremap <silent> <localLeader>csb  :<C-u>Denite coc-symbols<cr>
+" Search symbols of current workspace
+nnoremap <silent> <localLeader>cw  :<C-u>Denite coc-workspace<cr>
+" Show diagnostics of current workspace
+nnoremap <silent> <localLeader>cd  :<C-u>Denite coc-diagnostic<cr>
+" Show available commands
+nnoremap <silent> <localLeader>cc  :<C-u>Denite coc-command<cr>
+" Show available services
+nnoremap <silent> <localLeader>cs  :<C-u>Denite coc-service<cr>
+" Show links of current buffer
+nnoremap <silent> <localLeader>cl  :<C-u>Denite coc-link<cr>
