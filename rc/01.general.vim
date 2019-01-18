@@ -30,6 +30,10 @@ set autoindent shiftwidth=4
 set expandtab
 set foldmethod=indent    " set 折叠 
 set foldlevelstart=99    " 打开文件默认不折叠
+set hidden
+"set cmdheight=2
+set shortmess=aFc
+set completeopt =longest,menu
 filetype plugin indent on     " required!
 set list
 "set lcs+=trail:.                                                       "样式一

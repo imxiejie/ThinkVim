@@ -1,0 +1,18 @@
+{
+    "coc.preferences.triggerAfterInsertEnter": true,
+    "coc.preferences.timeout": 500,
+    "coc.preferences.noselect": false,
+    "coc.preferences.preferCompleteThanJumpPlaceholder": true,
+    "coc.preferences.snippetIndicator": "",
+    "languageserver": {
+    "golang": {
+      "command": "go-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+      }
+    }
+  }
+}
