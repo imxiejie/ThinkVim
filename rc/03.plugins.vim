@@ -1,4 +1,3 @@
-
 "colorscheme
 set background=dark
 colorscheme hybrid
@@ -10,6 +9,7 @@ let g:indentline_enabled = 1
 let g:indentline_leadingspaceenable=1
 let g:indentline_char='┆'
 let g:indentline_filetypeexclude = [ 'startify' ]
+let g:indentLine_setConceal = 0
 
 "nerdtree
 "let loaded_nerd_tree=1
@@ -111,7 +111,6 @@ let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
 
 " For startify
-"let g:startify_files_number = 20
 let g:startify_custom_header = [
 \ '',
 \ '   ______ _                                         _                             _        ',
