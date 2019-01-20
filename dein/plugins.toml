@@ -8,6 +8,9 @@ repo = 'w0ng/vim-hybrid'
 repo = 'mattn/emmet-vim'
 
 [[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
