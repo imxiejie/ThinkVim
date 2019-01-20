@@ -18,8 +18,8 @@ let nerdchristmastree=1
 let g:nerdtreewinsize = 25
 map <leader>e :NERDTreeToggle <cr>
 map <leader>f :NERDTreeFind <cr>
-let g:nerdtreedirarrowexpandable='▷'
-let g:nerdtreedirarrowcollapsible='▼'
+""let g:nerdtreedirarrowexpandable='▷'
+""let g:nerdtreedirarrowcollapsible='▼'
 let g:nerdtreeindicatormapcustom = {
         \ "modified"  : "✹",
         \ "staged"    : "✚",
@@ -33,6 +33,13 @@ let g:nerdtreeindicatormapcustom = {
         \ "unknown"   : "?"
         \ }
 
+"""""""""""NERDTree高亮
+let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+let g:NERDTreeDisableExactMatchHighlight = 1
+let g:NERDTreeDisablePatternMatchHighlight = 1
+let g:NERDTreeFileExtensionHighlightFullName = 1
+let g:NERDTreeExactMatchHighlightFullName = 1
+let g:NERDTreePatternMatchHighlightFullName = 1
 "ag  快捷键
 nmap <leader>a :ag
 let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
@@ -102,13 +109,6 @@ let g:WebDevIconsOS = 'Darwin'
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 "let g:DevIconsEnableFoldersOpenClose = 1
 "let g:DevIconsEnableFolderExtensionPatternMatching = 1
-"""""""""""NERDTree高亮
-let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreeDisableExactMatchHighlight = 1
-let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
 
 " For startify
 let g:startify_custom_header = [
