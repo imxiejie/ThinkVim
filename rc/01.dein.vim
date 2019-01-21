@@ -3,10 +3,7 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-"set my leader
-let mapleader=","
-let g:mapleader=","
-let g:maplocalleader=";"
+
 
 
 " Required:
@@ -38,3 +35,7 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+"set my leader
+let mapleader=","
+let g:mapleader=","
+let g:maplocalleader=";"
