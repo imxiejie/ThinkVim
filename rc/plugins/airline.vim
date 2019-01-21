@@ -1,6 +1,4 @@
 "airline setting
-let g:airline_theme='wombat'
-"let g:airline_theme='durant'
 
 let g:airline_powerline_fonts = 1
 let g:airline_extensions = ['tabline', 'tagbar']

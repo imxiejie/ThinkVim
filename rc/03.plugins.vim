@@ -11,35 +11,6 @@ let g:indentline_char='┆'
 let g:indentline_filetypeexclude = [ 'startify' ]
 let g:indentLine_setConceal = 0
 
-"nerdtree
-"let loaded_nerd_tree=1
-let nerdtreequitonopen = 0
-let nerdchristmastree=1
-let g:nerdtreewinsize = 25
-map <leader>e :NERDTreeToggle <cr>
-map <leader>f :NERDTreeFind <cr>
-""let g:nerdtreedirarrowexpandable='▷'
-""let g:nerdtreedirarrowcollapsible='▼'
-let g:nerdtreeindicatormapcustom = {
-        \ "modified"  : "✹",
-        \ "staged"    : "✚",
-        \ "untracked" : "✭",
-        \ "renamed"   : "➜",
-        \ "unmerged"  : "═",
-        \ "deleted"   : "✖",
-        \ "dirty"     : "✗",
-        \ "clean"     : "✔︎",
-        \ 'ignored'   : '☒',
-        \ "unknown"   : "?"
-        \ }
-
-"""""""""""NERDTree高亮
-let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreeDisableExactMatchHighlight = 1
-let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeFileExtensionHighlightFullName = 1
-let g:NERDTreeExactMatchHighlightFullName = 1
-let g:NERDTreePatternMatchHighlightFullName = 1
 "ag  快捷键
 nmap <leader>a :ag
 let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
