@@ -3,6 +3,12 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
+"set my leader
+let mapleader=","
+let g:mapleader=","
+let g:maplocalleader=";"
+
+
 " Required:
 set runtimepath+=/Users/pendragon/.config/nvim/repos/github.com/Shougo/dein.vim
 
