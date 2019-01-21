@@ -35,7 +35,4 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-"set my leader
-let mapleader=","
-let g:mapleader=","
-let g:maplocalleader=";"
+
