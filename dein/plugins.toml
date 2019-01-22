@@ -3,14 +3,9 @@ repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
-
-[[plugins]]
-repo = 'mattn/emmet-vim'
-
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-hook_source = '''
-source ~/.config/nvim/rc/plugins/nerdtree.vim
+hook_add = '''
+  set background=dark
+  colorscheme hybrid
 '''
 
 [[plugins]]
@@ -19,14 +14,9 @@ repo = 'scrooloose/nerdcommenter'
 [[plugins]]
 repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-[[plugins]]
-repo = 'majutsushi/tagbar'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -39,9 +29,7 @@ repo = 'tpope/vim-repeat'
 
 [[plugins]]
 repo = 'bling/vim-airline'
-hook_add = '''
-source ~/.config/nvim/rc/plugins/airline.vim
-'''
+hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
@@ -54,21 +42,20 @@ repo = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
+
 
 [[plugins]]
 repo = 'rking/ag.vim'
+hook_add = 'source ~/.config/nvim/rc/plugins/search.vim'
 
 [[plugins]]
 repo = 'sbdchd/neoformat'
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_source = '''
-source ~/.config/nvim/rc/plugins/denite.vim
-'''
+hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
 
 [[plugins]]
 repo = 'mhinz/vim-startify'
+hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -91,9 +78,5 @@ build = 'yarn install'
 
 [[plugins]]
 repo = 'w0rp/ale'
+hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'

@@ -1,3 +1,6 @@
+"set my leader
+let g:mapleader=","
+let g:maplocalleader=';'
 "默认键位的映射
 "定义快捷键到行首非空字符和行尾$
 nmap ls ^
@@ -64,3 +67,5 @@ vmap    <s-tab>     <gv
 nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
 
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"

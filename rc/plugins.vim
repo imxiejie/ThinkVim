@@ -3,12 +3,12 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-"set my leader
-let mapleader=","
-let g:mapleader=","
-let g:maplocalleader=";"
+<<<<<<< HEAD:rc/plugins.vim
+=======
 
 
+
+>>>>>>> 45f2b38031cc6428beea04b166623f2207567179:rc/01.dein.vim
 " Required:
 set runtimepath+=/Users/pendragon/.config/nvim/repos/github.com/Shougo/dein.vim
 
@@ -38,3 +38,8 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+
+<<<<<<< HEAD:rc/plugins.vim
+
+=======
+>>>>>>> 45f2b38031cc6428beea04b166623f2207567179:rc/01.dein.vim
