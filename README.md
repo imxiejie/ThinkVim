@@ -3,7 +3,7 @@
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/1.jpg)
 ## Install
 
-##Update 2019.1.22
+## Update 2019.1.22
 ---------------------------------------------------------------------------------------------------------------
 init.vim的模块化，
 * dein
