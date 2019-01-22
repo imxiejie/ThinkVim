@@ -7,7 +7,7 @@
 
 init.vim的模块
 * dein
-  * plugins.toml        正常价在插件
+  * plugins.toml        正常加载插件
   * plugins-lazy.toml   懒加载插件（基于某些命令或文件格式等加载插件）
 * plugins
   * 插件配置
