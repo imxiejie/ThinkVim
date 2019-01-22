@@ -3,12 +3,6 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-<<<<<<< HEAD:rc/plugins.vim
-=======
-
-
-
->>>>>>> 45f2b38031cc6428beea04b166623f2207567179:rc/01.dein.vim
 " Required:
 set runtimepath+=/Users/pendragon/.config/nvim/repos/github.com/Shougo/dein.vim
 
@@ -39,7 +33,3 @@ endif
 
 "End dein Scripts-------------------------
 
-<<<<<<< HEAD:rc/plugins.vim
-
-=======
->>>>>>> 45f2b38031cc6428beea04b166623f2207567179:rc/01.dein.vim
