@@ -1,3 +1,7 @@
-for f in split(glob('~/.config/nvim/rc/*.vim'), '\n')
-    exe 'source' f
+function! Dot(path)
+  return "~/.config/nvim/" . a:path
+endfunction
+
+for file in split(glob(Dot('rc/*.vim')), '\n')
+    exe 'source' file
 endfor

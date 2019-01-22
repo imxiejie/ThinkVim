@@ -48,3 +48,12 @@ let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
 
+<<<<<<< HEAD:rc/general.vim
+"隐藏背景
+"hi Normal ctermfg=252 ctermbg=none
+=======
+"set my leader
+let mapleader=","
+let g:mapleader=","
+let g:maplocalleader=";"
+>>>>>>> 45f2b38031cc6428beea04b166623f2207567179:rc/02.general.vim

@@ -1,3 +1,33 @@
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+on_cmd = ['NERDTreeToggle','NERDTreeFind']
+hook_add = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+on_cmd = ['TagbarToggle']
+hook_post_source ='source ~/.config/nvim/rc/plugins/tagbar.vim'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_i = 1
+
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+on_i = 1
+
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_i = 1
+hook_source = 'source ~/.config/nvim/rc/plugins/coc.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+on_i = 1
+depends = ['neosnippet']
+hook_source = 'source ~/.config/nvim/rc/plugins/coc.vim'
+
 
 [[plugins]]
 repo = 'othree/html5.vim'
@@ -10,6 +40,10 @@ on_ft = ['javascript', 'javascript.jsx']
 [[plugins]]
 repo = 'maxmellon/vim-jsx-pretty'
 on_ft = ['javascript', 'javascript.jsx']
+hook_add = '''
+let g:vim_jsx_pretty_enable_jsx_highlight = 0
+let g:vim_jsx_pretty_colorful_config = 1
+'''
 
 [[plugins]]
 repo = 'mxw/vim-jsx'
@@ -26,7 +60,12 @@ on_ft = ['css']
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
+hook_post_source = 'source ~/.config/nvim/rc/plugins/vim-go.vim'
 
 [[plugins]]
 repo = 'elzr/vim-json'
 on_ft = ['json']
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+hook_add ='source ~/.config/nvim/rc/plugins/denite.vim'

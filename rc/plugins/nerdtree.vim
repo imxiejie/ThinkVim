@@ -1,6 +1,6 @@
 "nerdtree
-map <leader>e :NERDTreeToggle <cr>
-map <leader>f :NERDTreeFind <cr>
+map <leader>e :NERDTreeToggle <CR>
+map <leader>f :NERDTreeFind <CR>
 
 let nerdtreequitonopen = 0
 let nerdchristmastree=1
