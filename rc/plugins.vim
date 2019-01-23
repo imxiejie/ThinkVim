@@ -14,8 +14,8 @@ if dein#load_state('/Users/pendragon/.cache/dein')
   " Required:
   call dein#add('/Users/pendragon/.config/nvim/repos/github.com/Shougo/dein.vim')
 
-  call dein#load_toml('~/.config/nvim/rc/dein/plugins.toml', {'lazy': 0}) 
-  call dein#load_toml('~/.config/nvim/rc/dein/plugins-lazy.toml', {'lazy': 1})
+  call dein#load_toml('~/.config/nvim/dein/plugins.toml', {'lazy': 0}) 
+  call dein#load_toml('~/.config/nvim/dein/plugins-lazy.toml', {'lazy': 1})
 
   " Required:
   call dein#end()
@@ -32,5 +32,4 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
-
 
