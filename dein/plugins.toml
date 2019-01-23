@@ -1,4 +1,3 @@
-[[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
@@ -9,11 +8,13 @@ hook_add = '''
 '''
 
 [[plugins]]
-repo = 'scrooloose/nerdcommenter'
+repo = 'easymotion/vim-easymotion'
 
 [[plugins]]
-repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+repo = 'jiangmiao/auto-pairs'
 
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
@@ -38,12 +39,8 @@ let g:airline_theme='wombat'
 '''
 
 [[plugins]]
-repo = 'Lokaltog/vim-easymotion'
-
-[[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
-
 
 [[plugins]]
 repo = 'rking/ag.vim'
@@ -56,6 +53,7 @@ hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
 [[plugins]]
 repo = 'mhinz/vim-startify'
 hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
+
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -72,11 +70,18 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-build = 'yarn install'
 
 [[plugins]]
 repo = 'w0rp/ale'
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
+
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = 'yarn install'
+on_event = 'InsertEnter'
+hook_add = '''
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+'''
 

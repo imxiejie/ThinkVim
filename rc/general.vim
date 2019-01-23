@@ -10,7 +10,6 @@ set bsdir=buffer        " 设定文件浏览器目录为当前目录
 set encoding=utf-8      " 设置编码
 set nocompatible
 set laststatus=2
-set fenc=utf-8          " 设置文件编码
 set statusline=-        " hide file name in statusline
 set fillchars=stl:-     " fill active window's statusline with -
 set fillchars+=stlnc:-  " also fill inactive windows
@@ -50,4 +49,3 @@ let g:python3_host_skip_check = 1
 
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
-

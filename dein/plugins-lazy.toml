@@ -1,33 +1,31 @@
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-on_cmd = ['NERDTreeToggle','NERDTreeFind']
+on_map = [['n','<Plug>']]
+hook_source = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
+
+[[plugins]]
+repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+depends = ['nerdtree']
 hook_add = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
 on_cmd = ['TagbarToggle']
-hook_post_source ='source ~/.config/nvim/rc/plugins/tagbar.vim'
+hook_source ='source ~/.config/nvim/rc/plugins/tagbar.vim'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_i = 1
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-on_i = 1
-
-
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-on_i = 1
-hook_source = 'source ~/.config/nvim/rc/plugins/coc.vim'
+on_ft = ['html','css','jsx','javascript','javascript.jsx']
+on_event = 'InsertEnter'
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
-on_i = 1
-depends = ['neosnippet']
-hook_source = 'source ~/.config/nvim/rc/plugins/coc.vim'
-
+on_source ="neosnippet.vim"
+ 
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+on_ft = 'snippet'
+hook_post_source = 'source ~/.config/nvim/rc/plugins/coc.vim'
 
 [[plugins]]
 repo = 'othree/html5.vim'
@@ -65,7 +63,11 @@ hook_post_source = 'source ~/.config/nvim/rc/plugins/vim-go.vim'
 [[plugins]]
 repo = 'elzr/vim-json'
 on_ft = ['json']
+hook_add = 'let g:vim_json_syntax_conceal = 0 '
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add ='source ~/.config/nvim/rc/plugins/denite.vim'
+repo = 'cespare/vim-toml'
+on_ft= ['toml']
+
+
+
