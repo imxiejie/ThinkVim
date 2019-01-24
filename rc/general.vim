@@ -49,3 +49,7 @@ let g:python3_host_skip_check = 1
 
 "隐藏背景
 "hi Normal ctermfg=252 ctermbg=none
+
+for f in split(glob('~/.config/nvim/rc/ftplugin/*.vim'), '\n')
+    exe 'source' f
+endfor
