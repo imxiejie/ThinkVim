@@ -33,7 +33,7 @@ sh ./installer.sh  ~/.config/nvim
 注意：安装成功后会提示安装的脚本记住dein的路径修改02.dein.vim。
 ### Step3
 ```
-git clone https://github.com/PendragonSaber/mydotfiles.git ~/.config/nvim
+git clone https://github.com/PendragonSaber/nvim-config.git ~/.config/nvim
 ```
 ### Step4
 ```
