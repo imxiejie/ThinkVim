@@ -1,25 +1,27 @@
 ## NeoVim-Config 
 
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/1.jpg)
-## Install
 
-## Update 2019.1.22
 
-init.vim的模块
-* dein
+## Feature
+
+
+
+* Modular
+* deinfloder
   * plugins.toml        正常加载插件
   * plugins-lazy.toml   懒加载插件（基于某些命令或文件格式等加载插件）
-* plugins
-  * 插件配置
+* ftpluginfloder
+  * filetype            文件格式
 * general
-  * vim设置
+  * vimsetting          vim设置
 * mappings
-  * 键位映射设置，（注意：leader和mapleader必须加载在插件前）
-* filetype
-  * 文件格式设置
+  * keymap              键位绑定
+* plugins
+  * pluginslist         插件目录
 * autoload
-  * utils.vim --> airlinetabline 函数
-### Step1
+  * utils.vim           airlinetabline 函数
+## Install
 安装neovim，这个就很简单了，如果你是mac，那么直接`brew install neovim`就好了，如果你没有`brew`这个包管理软件，那么你需要先安装`brew`。linux也是差不多的方式，只不过需要替换linux的包管理工具。
 ### Step2
 安装插件管理工具，[dein](https://github.com/Shougo/dein.vim)
