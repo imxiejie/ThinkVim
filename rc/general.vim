@@ -15,7 +15,9 @@ set fillchars=stl:-     " fill active window's statusline with -
 set fillchars+=stlnc:-  " also fill inactive windows
 set fillchars+=vert:\|  " add a bar for vertical splits
 set t_Co=256
-"set termguicolors       " 支持真色彩
+if (has("termguicolors"))
+  set termguicolors
+endif
 set clipboard=unnamed
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set number               "显示行号
@@ -47,9 +49,8 @@ let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
 
-"隐藏背景
-"hi Normal ctermfg=252 ctermbg=none
-
+"hi Normal ctermfg=252 ctermbg=none   "隐藏背景
 for f in split(glob('~/.config/nvim/rc/ftplugin/*.vim'), '\n')
     exe 'source' f
 endfor
+

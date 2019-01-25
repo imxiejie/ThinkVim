@@ -2,11 +2,14 @@
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
+repo = 'kristijanhusak/vim-hybrid-material'
 hook_add = '''
   set background=dark
-  colorscheme hybrid
+  colorscheme hybrid_reverse
 '''
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
