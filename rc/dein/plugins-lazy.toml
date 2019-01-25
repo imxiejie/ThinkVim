@@ -1,8 +1,4 @@
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
-on_mao = [['n','<Plug>']]
-
-[[plugins]]
 repo = 'jiangmiao/auto-pairs'
 on_event = 'InsertEnter'
 
