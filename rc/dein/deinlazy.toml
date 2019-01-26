@@ -1,13 +1,5 @@
 
 [[plugins]]
-repo = 'easymotion/vim-easymotion'
-on_map = [['n', '<Plug>']]
-
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-on_event = 'InsertEnter'
-
-[[plugins]]
 repo = 'scrooloose/nerdtree'
 on_map = [['n','<Plug>']]
 hook_source = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
@@ -26,6 +18,26 @@ hook_source ='source ~/.config/nvim/rc/plugins/tagbar.vim'
 repo = 'mattn/emmet-vim'
 on_ft = ['html','css','jsx','javascript','javascript.jsx']
 on_event = 'InsertEnter'
+hook_add ='''
+    let g:use_emmet_complete_tag = 0
+    let g:user_emmet_install_global = 0
+    let g:user_emmet_install_command = 0
+    let g:user_emmet_mode = 'i'
+    let g:user_emmet_leader_key='<C-g>'
+    let g:user_emmet_settings = {
+        \  'javascript.jsx' : {
+        \      'extends' : 'jsx',
+        \  },
+    \}
+'''
+[[plugins]]
+repo = 'Raimondi/delimitMate'
+on_event = 'InsertEnter'
+hook_source = '''
+    let g:delimitMate_expand_cr = 1
+    let g:delimitMate_excluded_ft = 'html'
+'''
+
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'

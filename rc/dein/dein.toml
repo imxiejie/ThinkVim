@@ -9,6 +9,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
@@ -70,11 +73,9 @@ depends = 'fzf'
 repo = 'w0rp/ale'
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
-
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = 'yarn install'
-on_event = 'InsertEnter'
 hook_add = '''
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
