@@ -1,7 +1,3 @@
-"set my leader
-let g:mapleader=","
-let g:maplocalleader=';'
-
 "默认键位的映射
 "定义快捷键到行首非空字符和行尾$
 nmap ls ^
