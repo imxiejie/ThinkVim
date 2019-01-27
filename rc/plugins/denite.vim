@@ -12,15 +12,14 @@ call denite#custom#var('grep', 'final_opts', [])
 "ESC结束
 call denite#custom#map('insert', '<esc>', '<denite:enter_mode:normal>', 'noremap')
 call denite#custom#map('normal', '<esc>', '<denite:quit>', 'noremap')
-"C-N,C-P上下移動
-call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
-call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
-"C-J,C-K分屏
-call denite#custom#map('insert', '<C-j>', '<denite:do_action:split>', 'noremap')
-call denite#custom#map('insert', '<C-k>', '<denite:do_action:vsplit>', 'noremap')
+"c-n,c-p上下移動
+call denite#custom#map('insert', '<c-n>', '<denite:move_to_next_line>', 'noremap')
+call denite#custom#map('insert', '<c-p>', '<denite:move_to_previous_line>', 'noremap')
+"c-j,c-k分屏
+call denite#custom#map('insert', '<c-j>', '<denite:do_action:split>', 'noremap')
+call denite#custom#map('insert', '<c-k>', '<denite:do_action:vsplit>', 'noremap')
 
 " 指定显示字符
 call denite#custom#option('default', 'prompt', 'λ')
 " denite的起始位置
 call denite#custom#option('default', 'direction',)
-
