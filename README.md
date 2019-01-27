@@ -16,11 +16,13 @@
 
 
 ## Install
-
+1.
 ```
 git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ```
-
+2. input nvim, it will install [dein](https://github.com/Shougo/dein.nvim)
+3. install complete, it will install plugins.
+4. enjoy hacking!
 ## Todo
 所有插件我基本都测试过了，正常使用，如果使用有问题请提issues。
 
