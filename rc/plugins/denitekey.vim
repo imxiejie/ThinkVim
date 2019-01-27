@@ -1,17 +1,15 @@
 
-nnoremap <localLeader>p :call denite#start([{'name': 'grep', 'args': ['', '', '!']}])<cr>
+nnoremap <silent><localLeader>s :call denite#start([{'name': 'grep', 'args': ['', '', '!']}])<cr>
 "buffer列表
-noremap <localleader>b :Denite buffer<CR>
-" 文件列表
-noremap <localleader>bn :Denite -buffer-name=file file<CR>
+nnoremap  <silent><localleader>b :Denite buffer<CR>
 " 最近使用文件列表
-noremap <localleader>fo :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
+nnoremap <silent><localleader>o :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
 " 当前目录
-noremap <localleader>fr :Denite file_rec -default-action=vsplit<CR>
+nnoremap <silent><localleader>r :Denite file_rec -default-action=vsplit<CR>
 
 "Denite line
-nnoremap  <localLeader>dl :<C-u>Denite line -auto-preview<CR>
-nnoremap <silent> <expr><Space>l ":<C-u>DeniteWithCursorWord line<CR>"
+nnoremap  <silent><localLeader>l :<C-u>Denite line -auto-preview<CR>
+nnoremap <silent><localLeader>w :<C-u>DeniteWithCursorWord line<CR>"
 " coc seting 
 " Show extension list
 nnoremap <silent> <localLeader>ce  :<C-u>Denite coc-extension<cr>
