@@ -31,14 +31,10 @@ if has('vim_starting')
 endif
 
 call s:source_rc('dein.vim')
-
-if !has('vim_starting')
   call dein#call_hook('source')
   call dein#call_hook('post_source')
-
   syntax enable
   filetype plugin indent on
-endif
 call s:source_rc('general.vim')
 call s:source_rc('mappings.vim')
 

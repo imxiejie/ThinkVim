@@ -18,9 +18,6 @@ repo = 'scrooloose/nerdcommenter'
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
@@ -37,8 +34,12 @@ let g:airline_theme='wombat'
 '''
 
 [[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
+
 
 [[plugins]]
 repo = 'rking/ag.vim'
@@ -55,6 +56,7 @@ hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
+hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
 
 [[plugins]]
 repo = 'yonchu/accelerated-smooth-scroll'
@@ -79,9 +81,7 @@ build = 'yarn install'
 hook_add = '''
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
+
+source ~/.config/nvim/rc/plugins/allkey.vim
 '''
 
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = 'source ~/.config/nvim/rc/plugins/denitekey.vim'
-hook_source = 'source ~/.config/nvim/rc/plugins/denite.vim'
