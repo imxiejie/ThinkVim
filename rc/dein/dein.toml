@@ -3,10 +3,6 @@ repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'kristijanhusak/vim-hybrid-material'
-hook_add = '''
-  set background=dark
-  colorscheme hybrid_reverse
-'''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'

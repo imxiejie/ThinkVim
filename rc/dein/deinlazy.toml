@@ -43,7 +43,12 @@ repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets']
 on_event = 'InsertCharPre'
 on_ft = 'snippet'
-hook_post_source = 'source ~/.config/nvim/rc/plugins/coc.vim'
+hook_add = '''
+let g:neosnippet#snippets_directory='~/.config/nvim/rc/snippets/'
+'''
+hook_source = '''
+source ~/.config/nvim/rc/plugins/coc.vim
+'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
