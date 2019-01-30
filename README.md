@@ -2,7 +2,7 @@
 
 ![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/1.jpg)
 
-
+## [Switch Chinese](https://github.com/taigacute/nvim-config/blob/master/README-CN.md)
 ## Feature
 
 * Modular
