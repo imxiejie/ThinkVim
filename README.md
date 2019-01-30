@@ -22,6 +22,7 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 2. Then it will automatic install plugins when install complete.
 3. Enjoy hacking!
 ## Plugins
+Did not list all plugins, follow-up plans
 ### [Airline](https://github.com/vim-airline/vim-airline) 
    Integrated git file information, smarter buffer mobile tabline
    ![Airline](https://github.com/taigacute/nvim-config/blob/master/screenshot/airline.png)
@@ -47,8 +48,3 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
    ![Denite](https://github.com/taigacute/nvim-config/blob/master/screenshot/Denite.png)
 ## Todo
 THis is version of complete by coc。 if you want use deoplete，Please create issue for deoplete，I will upload deoplete version！  
-这个版本的补全是使用coc，如果你想使用deoplete版本请提issue，我会上传deoplte版本的配置。
-所有插件我基本都测试过了，正常使用，如果使用有问题请提issues。
-
-
-
