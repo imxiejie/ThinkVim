@@ -1,0 +1,15 @@
+snippet     meth
+abbr        func.()..() { ... }
+alias mh
+options     head
+  func (${1:tname} ${2:Type}) ${3:Mname}(${4}) ${5:int }{
+    ${0:TARGET}
+  }
+
+snippet     func
+abbr        func ...() { ... }
+alias fc
+options     head
+  func ${1:fname}(${2}) ${3:int }{
+    ${0:TARGET}
+  }

@@ -19,7 +19,7 @@ call dein#load_toml('~/.config/nvim/rc/dein/deinlazy.toml', {'lazy' : 1})
 call dein#end()
 call dein#save_state()
 
-if has('vim_starting')&&dein#check_install()
+if dein#check_install()
   " Installation check.
   call dein#install()
 endif
