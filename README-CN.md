@@ -23,7 +23,8 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 3. Enjoy hacking!
 ## 插件
 并不是所有插件清单，后续慢慢补上
-### [Airline](https://github.com/vim-airline/vim-airline) 
+### [Airline](https://github.com/vim-airline/vim-airline) 或者 lightline
+   > 添加了lightline，默认选项为lightline，nvim启动时间为119ms，如果你想使用airline它会牺牲一些时间，它的启动时间是170ms
    集成了文件信息，行数，git的状态栏
    ![Airline](https://github.com/taigacute/nvim-config/blob/master/screenshot/airline.png)
    你可以使用`leader+number`在buffer之间移动
