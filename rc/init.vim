@@ -7,10 +7,10 @@ let g:mapleader = ','
 let g:maplocalleader = ';'
 
 
-" Path to python interpreter for neovim
-let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/local/bin/python3'
 
 
 let $CONFIG = expand('~/.config')

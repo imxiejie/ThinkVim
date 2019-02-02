@@ -20,14 +20,12 @@ repo = 'tpope/vim-surround'
 repo = 'tpope/vim-repeat'
 
 [[plugins]]
-repo = 'bling/vim-airline'
-hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
+repo = 'itchyny/lightline.vim'
+hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline-themes'
-hook_add = '''
-let g:airline_theme='wombat'
-'''
+repo = 'mengelbrecht/lightline-bufferline'
+hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
