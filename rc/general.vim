@@ -10,11 +10,24 @@ set bsdir=buffer        " 设定文件浏览器目录为当前目录
 set encoding=utf-8      " 设置编码
 set nocompatible
 set laststatus=2
+set showtabline=2
 set statusline=-        " hide file name in statusline
-set fillchars=stl:-     " fill active window's statusline with -
+"set fillchars=stl:-     " fill active window's statusline with -
 set fillchars+=stlnc:-  " also fill inactive windows
 set fillchars+=vert:\|  " add a bar for vertical splits
 set clipboard=unnamed
+let g:clipboard = {
+  \ 'name': 'pbcopy',
+  \ 'copy': {
+  \    '+': 'pbcopy',
+  \    '*': 'pbcopy',
+  \  },
+  \ 'paste': {
+  \    '+': 'pbpaste',
+  \    '*': 'pbpaste',
+  \ },
+  \ 'cache_enabled': 0,
+  \ }
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set number               "显示行号
 set relativenumber

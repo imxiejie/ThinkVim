@@ -20,7 +20,7 @@ nnoremap <leader>bp :bp\|bd #<CR>
 "删除当前buffer跳转到下一个
 nnoremap <leader>bn :bn\|bd #<CR>
 "删除buffer
-nnoremap <leader>bd :bd<CR>
+nnoremap <C-x>  :bd<CR>
 
 "选择窗口
 nnoremap <C-h> <C-w>h
