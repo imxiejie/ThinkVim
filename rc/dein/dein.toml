@@ -27,6 +27,14 @@ hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 repo = 'mengelbrecht/lightline-bufferline'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
+#[[plugins]]
+#repo = 'vim-airline/vim-airline'
+#hook_add = 'souce ~/.config/nvim/rc/plugins/vim-airline.vim'
+
+#[[plugins]]
+#repo = 'vim-airline/vim-airline-theme'
+
+
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
