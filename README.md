@@ -23,7 +23,8 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 3. Enjoy hacking!
 ## Plugins
 Did not list all plugins, follow-up plans
-### [Airline](https://github.com/vim-airline/vim-airline) 
+### [Airline](https://github.com/vim-airline/vim-airline) or lightline
+   >If you need a faster startup speed, you may need to use lightline, the default option is lightline. The starting speed is 119ms. If you want to use airline, you may have to sacrifice some time, it is about 170ms.
    Integrated git file information, smarter buffer mobile tabline
    ![Airline](https://github.com/taigacute/nvim-config/blob/master/screenshot/airline.png)
    you can jump between buffers by `leader+number`
