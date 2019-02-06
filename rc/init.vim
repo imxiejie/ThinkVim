@@ -6,6 +6,7 @@ let g:mapleader = ','
 " Use <LocalLeader> in filetype plugin.
 let g:maplocalleader = ';'
 
+
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
 " Path to python interpreter for neovim

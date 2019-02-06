@@ -11,7 +11,7 @@
       "initializationOptions": {
         "gocodeCompletionEnabled": true,
         "diagnosticsEnabled": true,
-        "funcSnippetEnable":false,
+        "funcSnippetEnable":  false,
         "lintTool": "golint"
       }
     }
