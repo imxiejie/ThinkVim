@@ -14,6 +14,7 @@
 * neovim
 * python3 支持
 * node and yarn
+* NerdFont 字体
 ## 安装
 ```
 git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
