@@ -30,6 +30,9 @@ let g:clipboard = {
   \ }
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set number               "显示行号
+set timeout ttimeout
+set timeoutlen=750 ttimeoutlen=0
+set updatetime=100
 set relativenumber
 set backspace=2
 set backspace=indent,eol,start
@@ -40,7 +43,7 @@ set autoindent shiftwidth=4
 set expandtab
 set foldmethod=indent    " set 折叠 
 set foldlevelstart=99    " 打开文件默认不折叠
-"set hidden
+set hidden
 set shortmess=aFc
 set completeopt =longest,menu
 filetype plugin indent on     " required!

@@ -1,8 +1,8 @@
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
-[[plugins]]
-repo = 'kristijanhusak/vim-hybrid-material'
+#[[plugins]]
+#repo = 'kristijanhusak/vim-hybrid-material'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
@@ -28,12 +28,14 @@ repo = 'mengelbrecht/lightline-bufferline'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
 #[[plugins]]
-#repo = 'vim-airline/vim-airline'
-#hook_add = 'souce ~/.config/nvim/rc/plugins/vim-airline.vim'
+#repo = 'bling/vim-airline'
+#hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
 
 #[[plugins]]
-#repo = 'vim-airline/vim-airline-theme'
-
+#repo = 'vim-airline/vim-airline-themes'
+#hook_add = '''
+#let g:airline_theme='wombat'
+#'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -83,7 +85,8 @@ build = 'yarn install'
 hook_add = '''
 let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
-
+let g:coc_status_error_sign = '•'
+let g:coc_status_warning_sign = '•'
 source ~/.config/nvim/rc/plugins/allkey.vim
 '''
 

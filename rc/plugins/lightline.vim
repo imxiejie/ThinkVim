@@ -1,25 +1,49 @@
 let g:lightline = {
-            \ 'colorscheme': 'one',
+            \ 'colorscheme': 'space',
             \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ],
-            \             [ 'fugitive','gitgutter', 'filename','cocstatus' ] ]
+            \   'left': [  ['homemode' ],
+            \             [ 'fugitive','gitgutter'],[ 'filename'],['tagbar','cocstatus' ] ],
+            \   'right':[ ['lineinfo'],
+            \             [ 'percent'],['fileformat','fileencoding']  ]
             \ },
 				\   'component': {
 				\     'lineinfo': ' %3l:%-2v',
 				\   },
             \ 'component_function': {
+            \   'homemode': 'LightlineMode',
             \   'fugitive': 'LightLineFugitive',
             \   'gitgutter': 'LightLineGitGutter',
             \   'readonly': 'LightLineReadonly',
             \   'modified': 'LightLineModified',
-            \   'filename': 'LightLineFilename',
-            \   'cocstatus': 'coc#status',
+            \   'filename': 'LightLineFname',
+            \    'tagbar' : 'LightLineTagbar',
+            \   'cocstatus': 'LightLineCoc',
             \   'filetype': 'LightLineFiletype',
             \   'fileformat': 'LightLineFileformat',
             \ },
             \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2"},
             \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3"}
             \ }
+
+function! LightlineMode() 
+    let nr = s:get_buffer_number() 
+    let nmap = [ '➓ ',  '❶ ',  '❷ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ']
+    let num = nmap[nr]
+    if nr == 0
+        return ''
+    endif
+    return num 
+endfunction
+function! s:get_buffer_number() 
+    let i = 0
+    for nr in filter(range(1, bufnr('$')), 'bufexists(v:val) && buflisted(v:val)') 
+        let i += 1
+        if nr == bufnr('') 
+            return i 
+        endif 
+    endfor 
+    return '' 
+endfunction
 
 function! LightLineModified()
     if &filetype == "help"
@@ -51,6 +75,13 @@ function! LightLineFugitive()
     return ''
 endfunction
 
+function! LightLineCoc() 
+    if empty(get(g:, 'coc_status', '')) && empty(get(b:, 'coc_diagnostic_info', {})) 
+        return ''
+    endif 
+    return trim(coc#status())
+endfunction
+
 function! LightLineGitGutter()
   if ! exists('*GitGutterGetHunkSummary')
         \ || ! get(g:, 'gitgutter_enabled', 0)
@@ -68,10 +99,25 @@ function! LightLineGitGutter()
   return join(ret, ' ')
 endfunction
 
+function! LightLineFname() 
+    let icon = (strlen(&filetype) ? ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') 
+    let filename = LightLineFilename()
+    let ret = [filename,icon]
+    if filename == ''
+        return ''
+    endif
+    return join([filename, icon],'')
+endfunction
+
 function! LightLineFilename()
     return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
-                \ ('' != expand('%:t') ? expand('%:t') : '[No Name]') .
+                \ ('' != expand('%:t') ? expand('%:t') : '') .
                 \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
+endfunction
+
+function! LightLineTagbar() abort
+    let s = tagbar#currenttag("%s", "","f")
+    return s
 endfunction
 
 function! LightLineFiletype()
@@ -79,7 +125,7 @@ function! LightLineFiletype()
 endfunction
 
 function! LightLineFileformat()
-  return winwidth(0) > 70 ? ( WebDevIconsGetFileFormatSymbol()) : ''
+    return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
 let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
