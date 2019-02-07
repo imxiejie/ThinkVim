@@ -1,6 +1,6 @@
 ## NeoVim-Config 
 
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/nvim.png)
+![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/nvim1.png)
 
 ## [Switch Chinese](https://github.com/taigacute/nvim-config/blob/master/README-CN.md)
 ## Feature
