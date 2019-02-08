@@ -1,11 +1,13 @@
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
 #[[plugins]]
 #repo = 'kristijanhusak/vim-hybrid-material'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
+hook_add = '''
+    let g:EasyMotion_prompt = 'Jump to → '
+    let g:EasyMotion_smartcase = 1
+    let g:EasyMotion_use_smartsign_us = 1
+'''
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
@@ -40,9 +42,6 @@ hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
 
 
 [[plugins]]
@@ -52,10 +51,6 @@ hook_add = 'source ~/.config/nvim/rc/plugins/search.vim'
 [[plugins]]
 repo = 'sbdchd/neoformat'
 hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
-
-[[plugins]]
-repo = 'mhinz/vim-startify'
-hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
 
 
 [[plugins]]
@@ -90,3 +85,15 @@ let g:coc_status_warning_sign = '•'
 source ~/.config/nvim/rc/plugins/allkey.vim
 '''
 
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+depends = 'vim-devicons'
+hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
+hook_post_source = '''
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+'''
