@@ -29,3 +29,6 @@ nnoremap <silent> <localleader>ck  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <localleader>cr  :<C-u>CocListResume<CR>
 
+"nerdtree
+map <leader>e :NERDTreeToggle <CR>
+map <leader>f :NERDTreeFind <CR>

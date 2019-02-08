@@ -2,7 +2,7 @@ let g:lightline = {
             \ 'colorscheme': 'space',
             \ 'active': {
             \   'left': [  ['homemode' ],
-            \             [ 'fugitive','gitgutter'],[ 'filename'],['tagbar','cocstatus' ] ],
+            \             [ 'fugitive','gitgutter'],[ 'filename'],['tagbar' ],['cocerror'],['cocwarn'] ],
             \   'right':[ ['lineinfo'],
             \             [ 'percent'],['fileformat','fileencoding']  ]
             \ },
@@ -17,7 +17,8 @@ let g:lightline = {
             \   'modified': 'LightLineModified',
             \   'filename': 'LightLineFname',
             \    'tagbar' : 'LightLineTagbar',
-            \   'cocstatus': 'LightLineCoc',
+            \   'cocerror': 'LightLineCocError',
+            \   'cocwarn' : 'LightLineCocWarn',
             \   'filetype': 'LightLineFiletype',
             \   'fileformat': 'LightLineFileformat',
             \ },
@@ -82,6 +83,37 @@ function! LightLineCoc()
     return trim(coc#status())
 endfunction
 
+function! LightLineCocError()
+	  let info = get(b:, 'coc_diagnostic_info', {})
+      if empty(info) && empty(get(g:,'coc_status','')) 
+          return ''
+      endif
+      return trim(GetCocError())
+endfunction
+
+function! GetCocError()
+      let s:error_sign = get(g:, 'coc_status_error_sign')
+	  let info = get(b:, 'coc_diagnostic_info', {})
+	  let errmsgs = []
+	  if get(info, 'error', 0)
+	    call add(errmsgs, s:error_sign . info['error'])
+	  endif
+	  return join(errmsgs, ' ') . ' ' . get(g:, 'coc_status', '')
+endfunction
+
+function! LightLineCocWarn() abort
+      let s:warning_sign = get(g:, 'coc_status_warning_sign')
+	  let info = get(b:, 'coc_diagnostic_info', {})
+      if empty(info)
+          return '' 
+      endif
+	  let warnmsgs = []
+	  if get(info, 'warning', 0)
+	    call add(warnmsgs, s:warning_sign . info['warning'])
+	  endif
+	  return join(warnmsgs, ' ') . ' ' . get(g:, 'coc_status', '')
+endfunction
+
 function! LightLineGitGutter()
   if ! exists('*GitGutterGetHunkSummary')
         \ || ! get(g:, 'gitgutter_enabled', 0)
@@ -132,6 +164,7 @@ let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
 let g:lightline.component_type   = {'buffers': 'tabsel'}
 let g:lightline#bufferline#show_number  = 2
 let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#filename_modifier = ':t'
 let g:lightline#bufferline#unnamed      = '[No Name]'
 let g:lightline#bufferline#number_map = {

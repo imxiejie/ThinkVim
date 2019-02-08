@@ -4,6 +4,7 @@
     "coc.preferences.noselect": false,
     "coc.preferences.preferCompleteThanJumpPlaceholder": true,
     "coc.preferences.snippetIndicator": "",
+    "coc.preferences.diagnostic.displayByAle": false,
     "languageserver": {
     "golang": {
       "command": "go-langserver",
