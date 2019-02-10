@@ -84,16 +84,11 @@ function! LightLineCoc()
 endfunction
 
 function! LightLineCocError()
-	  let info = get(b:, 'coc_diagnostic_info', {})
-      if empty(info) && empty(get(g:,'coc_status','')) 
-          return ''
-      endif
-      return trim(GetCocError())
-endfunction
-
-function! GetCocError()
       let s:error_sign = get(g:, 'coc_status_error_sign')
 	  let info = get(b:, 'coc_diagnostic_info', {})
+      if empty(info)
+          return ''
+      endif
 	  let errmsgs = []
 	  if get(info, 'error', 0)
 	    call add(errmsgs, s:error_sign . info['error'])
@@ -113,6 +108,8 @@ function! LightLineCocWarn() abort
 	  endif
 	  return join(warnmsgs, ' ') . ' ' . get(g:, 'coc_status', '')
 endfunction
+
+autocmd User CocDiagnosticChange call lightline#update()
 
 function! LightLineGitGutter()
   if ! exists('*GitGutterGetHunkSummary')

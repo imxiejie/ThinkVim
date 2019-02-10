@@ -5,6 +5,8 @@
     "coc.preferences.preferCompleteThanJumpPlaceholder": true,
     "coc.preferences.snippetIndicator": "",
     "coc.preferences.diagnostic.displayByAle": false,
+	"coc.preferences.diagnostic.errorSign": "😡",
+	"coc.preferences.diagnostic.warningSign": "😃",
     "languageserver": {
     "golang": {
       "command": "go-langserver",
@@ -12,7 +14,6 @@
       "initializationOptions": {
         "gocodeCompletionEnabled": true,
         "diagnosticsEnabled": true,
-        "funcSnippetEnable":  false,
         "lintTool": "golint"
       }
     }
