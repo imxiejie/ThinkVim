@@ -29,6 +29,9 @@ hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 repo = 'mengelbrecht/lightline-bufferline'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
+[[plugins]]
+repo = 'taigacute/spaceline.vim'
+
 #[[plugins]]
 #repo = 'bling/vim-airline'
 #hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
@@ -41,8 +44,6 @@ hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
-
 
 [[plugins]]
 repo = 'rking/ag.vim'
@@ -71,21 +72,6 @@ depends = 'fzf'
 
 
 [[plugins]]
-repo = 'w0rp/ale'
-hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-build = 'yarn install'
-hook_add = '''
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
-let g:coc_status_error_sign = '•'
-let g:coc_status_warning_sign = '•'
-source ~/.config/nvim/rc/plugins/allkey.vim
-'''
-
-[[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
@@ -96,4 +82,15 @@ hook_post_source = '''
 function! StartifyEntryFormat()
     return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
+'''
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+build = 'yarn install'
+hook_add = '''
+let g:coc_snippet_next = '<TAB>'
+let g:coc_snippet_prev = '<S-TAB>'
+let g:coc_status_error_sign = '•'
+let g:coc_status_warning_sign = '•'
+source ~/.config/nvim/rc/plugins/allkey.vim
 '''
