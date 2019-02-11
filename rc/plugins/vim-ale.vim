@@ -12,13 +12,6 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 "打开文件时不进行检查
 let g:ale_lint_on_enter = 0
 
-"普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
-nmap ]a <Plug>(ale_next_wrap)
-nmap [a <Plug>(ale_previous_wrap)
-"<Leader>s触发/关闭语法检查
-nmap <Leader>s :ALEToggle<CR>
-"<Leader>d查看错误或警告的详细信息
-nmap <Leader>d :ALEDetail<CR>
 let g:ale_lintetrs = {
       \ 'go': ['golint', 'go vet', 'go build'],
       \'javascript': ['eslint', 'stylelint'],

@@ -1,16 +1,6 @@
 #[[plugins]]
 #repo = 'kristijanhusak/vim-hybrid-material'
 
-[[plugins]]
-repo = 'easymotion/vim-easymotion'
-hook_add = '''
-    let g:EasyMotion_prompt = 'Jump to → '
-    let g:EasyMotion_smartcase = 1
-    let g:EasyMotion_use_smartsign_us = 1
-'''
-
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
@@ -92,5 +82,4 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
-source ~/.config/nvim/rc/plugins/allkey.vim
 '''
