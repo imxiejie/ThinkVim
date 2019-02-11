@@ -1,5 +1,4 @@
 "Settings for TagBar
-map <localleader>g :TagbarToggle<CR>
 "autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
 "设置tagbar的窗口宽度
 let g:tagbar_width=25

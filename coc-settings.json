@@ -5,8 +5,8 @@
     "coc.preferences.preferCompleteThanJumpPlaceholder": true,
     "coc.preferences.snippetIndicator": "",
     "coc.preferences.diagnostic.displayByAle": false,
-	"coc.preferences.diagnostic.errorSign": "😡",
-	"coc.preferences.diagnostic.warningSign": "😃",
+	"coc.preferences.diagnostic.errorSign": "🐉",
+	"coc.preferences.diagnostic.warningSign": "🐬",
     "languageserver": {
     "golang": {
       "command": "go-langserver",
