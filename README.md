@@ -5,6 +5,8 @@
 ## [Switch Chinese](https://github.com/taigacute/nvim-config/blob/master/README-CN.md)
 ## Feature
 
+The fatest plugin config for vim  and more custom!!
+
 * Modular
 * 80% of plugins lazyload
 * convenient management
