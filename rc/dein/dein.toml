@@ -1,6 +1,8 @@
 #[[plugins]]
 #repo = 'kristijanhusak/vim-hybrid-material'
 
+[[plugins]]
+repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'

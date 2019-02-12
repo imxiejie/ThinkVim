@@ -1,6 +1,3 @@
-[[plugins]]
-repo = 'scrooloose/nerdcommenter'
-on_map = [['n','<Plug>']]
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
