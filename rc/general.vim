@@ -46,6 +46,7 @@ set foldlevelstart=99    " 打开文件默认不折叠
 set hidden
 set shortmess=aFc
 set completeopt =longest,menu
+set completeopt-=preview
 filetype plugin indent on     " required!
 "set lcs+=trail:.                                                       "样式一
 "set listchars=tab:\▸\-                                                 "样式二
