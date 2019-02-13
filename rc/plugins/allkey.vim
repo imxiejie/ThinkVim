@@ -31,6 +31,28 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <localleader>ck  :<C-u>CocPrev<CR>
         " Resume latest coc list
         nnoremap <silent> <localleader>cr  :<C-u>CocListResume<CR>
+        " Use `[c` and `]c` for navigate diagnostics
+        nmap <silent> [c <Plug>(coc-diagnostic-prev)
+        nmap <silent> ]c <Plug>(coc-diagnostic-next)
+
+        " Remap for format selected region
+        vmap <leader>cf  <Plug>(coc-format-selected)
+        nmap <leader>cf  <Plug>(coc-format-selected)
+        " Remap keys for gotos
+        nmap <silent> gd <Plug>(coc-definition)
+        nmap <silent> gy <Plug>(coc-type-definition)
+        nmap <silent> gi <Plug>(coc-implementation)
+        nmap <silent> gr <Plug>(coc-references)
+        " Use K for show documentation in preview window
+        nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+        function! s:show_documentation()
+            if &filetype == 'vim'
+                execute 'h '.expand('<cword>')
+            else
+                call CocAction('doHover')
+            endif
+        endfunction
 endif
 
 if dein#tap('nerdtree')
@@ -56,6 +78,6 @@ endif
 if dein#tap('vim-easymotion')
         map <Leader><Leader>w <Plug>(easymotion-w)
 	    map <Leader><Leader>f <Plug>(easymotion-f)
-	    map <Leader><Leader>b <Plug>(easymotion-b) 
+	    map <Leader><Leader>b <Plug>(easymotion-b)
 endif
 
