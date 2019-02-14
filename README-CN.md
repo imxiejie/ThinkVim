@@ -13,6 +13,7 @@
 * lsp语言服务器支持
 * 简单可定制化
 ## 必须
+* macos or linux
 * neovim
 * python3 支持
 * node and yarn
