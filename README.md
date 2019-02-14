@@ -15,6 +15,7 @@ The fatest plugin config for vim  and more custom!!
 * lsp supprot
 * simple customization
 ## Required
+* macos or linux
 * neovim
 * python3 support
 * node and yarn
