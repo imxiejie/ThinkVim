@@ -53,5 +53,5 @@ Did not list all plugins, follow-up plans
 ### [Denite](https://github.com/Shougo/denite.nvim)
    Scalable high performance plugin  
    ![Denite](https://github.com/taigacute/nvim-config/blob/master/screenshot/Denite.png)
-## FAQ
-[Giiter](https://gitter.im/thinkvim/community)
+## Feedback
+  * if you have any question,you can ask me at [Giiter](https://gitter.im/thinkvim/community)
