@@ -51,6 +51,6 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ### [Denite](https://github.com/Shougo/denite.nvim)
    高度配置的搜索插件不局限于搜索配合source可定制更多功能  
    ![Denite](https://github.com/taigacute/nvim-config/blob/master/screenshot/Denite.png)
-## Todo
-这是coc补全版本的nvimconfig，如果你是deoplete的忠实用户，请创建关于deoplete的issue，我会上传deoplete版本的nvimconfig！日常我2个都在使用，deoplete写python，coc写go与react
+## Feedback
+   * 如果你有任何问题，可以在[Gitter](https://gitter.im/thinkvim/community)像我提问或者提issue
 
