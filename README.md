@@ -53,5 +53,5 @@ Did not list all plugins, follow-up plans
 ### [Denite](https://github.com/Shougo/denite.nvim)
    Scalable high performance plugin  
    ![Denite](https://github.com/taigacute/nvim-config/blob/master/screenshot/Denite.png)
-## Todo
-THis is version of complete by coc。 if you want use deoplete，Please create issue for deoplete，I will upload deoplete version！  
+## FAQ
+[Giiter](https://gitter.im/thinkvim/community)
