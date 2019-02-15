@@ -20,6 +20,7 @@ The fatest plugin config for vim  and more custom!!
 * python3 support
 * node and yarn
 * NerdFont
+* ag
 ## Install
 ```
 git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
