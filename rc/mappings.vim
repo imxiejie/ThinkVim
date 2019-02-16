@@ -1,8 +1,4 @@
 "默认键位的映射
-"定义快捷键到行首非空字符和行尾$
-nmap ls ^
-nmap le $
-
 
 " Write buffer (save)保存
 noremap <Leader>w :w<CR>
