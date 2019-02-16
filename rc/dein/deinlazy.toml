@@ -6,6 +6,13 @@ hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
 [[plugins]]
 repo = 'liuchengxu/vim-which-key'
 on_cmd = ['WhichKey', 'WhichKey!']
+hook_add = 'source ~/.config/nvim/rc/plugins/whichkey.vim'
+hook_post_source = '''
+call which_key#register(',', 'g:which_key_map')
+call which_key#register(';', 'g:which_key_localmap')
+call which_key#register('[', 'g:which_key_rsbgmap')
+call which_key#register('[', 'g:which_key_lsbgmap')
+'''
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'

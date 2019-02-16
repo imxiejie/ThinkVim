@@ -32,8 +32,8 @@ if dein#tap('coc.nvim')
         " Resume latest coc list
         nnoremap <silent> <localleader>cr  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
-        nmap <silent> [c <Plug>(coc-diagnostic-prev)
-        nmap <silent> ]c <Plug>(coc-diagnostic-next)
+        nmap <silent> ]c <Plug>(coc-diagnostic-prev)
+        nmap <silent> [c <Plug>(coc-diagnostic-next)
 
         " Remap for format selected region
         vmap <leader>cf  <Plug>(coc-format-selected)
@@ -61,6 +61,19 @@ if dein#tap('nerdtree')
         nnoremap <leader>f :NERDTreeFind <CR>
 endif
 
+if dein#tap('vim-go')
+        autocmd  FileType go
+                    \ | nmap <Leader>goi <Plug>(go-info)
+                    \ | nmap <Leader>god <Plug>(go-doc)
+                    \ | nmap <leader>gor <Plug>(go-run)
+                    \ | nmap <leader>gob <Plug>(go-build)
+                    \ | nmap <leader>got <Plug>(go-test)
+                    \ | nmap <leader>goc <Plug>(go-coverage)
+                    \ | nmap <Leader>gdv <Plug>(go-def-vertical)
+                    \ | nmap <Leader>gr<Plug>(go-rename)
+endif
+
+
 if dein#tap('tagbar')
         nnoremap <localleader>g :TagbarToggle<CR>
 endif
@@ -84,4 +97,7 @@ endif
 if dein#tap('vim-which-key')
 		nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
 		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
+		nnoremap <silent>l              :<c-u>WhichKey  'l'<CR>
+		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
+		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
 endif

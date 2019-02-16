@@ -15,10 +15,8 @@ map <leader>n :nohl<CR>
 "插入模式下快速回到normal模式并且到新行
 inoremap <C-O> <Esc>o
 
-"删除当前buffer跳转到上一个
-nnoremap <leader>bp :bp\|bd #<CR>
-"删除当前buffer跳转到下一个
-nnoremap <leader>bn :bn\|bd #<CR>
+nnoremap <leader>bp :bp<CR>
+nnoremap <leader>bn :bn<CR>
 "删除buffer
 nnoremap <C-x>  :bd<CR>
 
