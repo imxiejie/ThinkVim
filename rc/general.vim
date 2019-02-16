@@ -31,7 +31,7 @@ let g:clipboard = {
 set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set number               "显示行号
 set timeout ttimeout
-set timeoutlen=750 ttimeoutlen=0
+set timeoutlen=500 ttimeoutlen=0
 set updatetime=100
 set relativenumber
 set backspace=2

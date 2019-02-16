@@ -57,18 +57,18 @@ endif
 
 if dein#tap('nerdtree')
     "nerdtree
-        map <leader>e :NERDTreeToggle <CR>
-        map <leader>f :NERDTreeFind <CR>
+        nnoremap <leader>e :NERDTreeToggle <CR>
+        nnoremap <leader>f :NERDTreeFind <CR>
 endif
 
 if dein#tap('tagbar')
-        map <localleader>g :TagbarToggle<CR>
+        nnoremap <localleader>g :TagbarToggle<CR>
 endif
 
 if dein#tap('ale')
         "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
-        nmap ]a <Plug>(ale_next_wrap)
-        nmap [a <Plug>(ale_previous_wrap)
+        nmap [a <Plug>(ale_next_wrap)
+        nmap ]a <Plug>(ale_previous_wrap)
         "<Leader>s触发/关闭语法检查
         nmap <Leader>s :ALEToggle<CR>
         "<Leader>d查看错误或警告的详细信息
@@ -76,8 +76,12 @@ if dein#tap('ale')
 endif
 
 if dein#tap('vim-easymotion')
-        map <Leader><Leader>w <Plug>(easymotion-w)
-	    map <Leader><Leader>f <Plug>(easymotion-f)
-	    map <Leader><Leader>b <Plug>(easymotion-b)
+        nmap <Leader><Leader>w <Plug>(easymotion-w)
+	    nmap <Leader><Leader>f <Plug>(easymotion-f)
+	    nmap <Leader><Leader>b <Plug>(easymotion-b)
 endif
 
+if dein#tap('vim-which-key')
+		nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
+		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
+endif
