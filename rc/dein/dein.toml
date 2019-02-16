@@ -46,9 +46,6 @@ repo = 'sbdchd/neoformat'
 hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
 
 
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
 
 [[plugins]]
 repo = 'yonchu/accelerated-smooth-scroll'

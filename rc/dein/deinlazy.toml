@@ -1,3 +1,11 @@
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_ft = ['py','js','jsx','html','css','go','vim']
+hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
+
+[[plugins]]
+repo = 'liuchengxu/vim-which-key'
+on_cmd = ['WhichKey', 'WhichKey!']
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
