@@ -27,6 +27,7 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ```
 1. Input nvim, it will automatic install [dein](https://github.com/Shougo/dein.nvim)
 2. Then it will automatic install plugins when install complete.
+3. if you want use neosnippet and emmet with coc,you should use `:CocInstall coc-neosnippet` `CocInstall coc-emmet`
 3. Enjoy hacking!
 ## Plugins
 Did not list all plugins, follow-up plans
