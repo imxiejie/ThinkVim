@@ -1,6 +1,6 @@
-## NeoVim-Config 
+## ThinkVim
 
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/1.jpg)
+![images](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png)
 
 
 ## 特性
@@ -24,6 +24,7 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ```
 1. 输入nvim会自动安装 [dein](https://github.com/Shougo/dein.nvim)插件管理
 2. 自动安装插件，出现done代表完成
+3. 让coc结合使用emmet与neosnippet，你需要执行`:CocInstall coc-neosnippet` `:CocInstall coc-emmet`
 3. Enjoy hacking!
 ## 插件
 并不是所有插件清单，后续慢慢补上
