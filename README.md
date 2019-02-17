@@ -1,7 +1,7 @@
 ## ThinkVim 
 
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/thinkvim.png)
-![images](https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/nvim1.png)
+<div align="center"><img style="width:300px;height:100px;box-shadow: 10px 10px 5px #888888;" src="https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/thinkvim.png"/></div>
+
 
 
 ## [Switch Chinese](https://github.com/taigacute/nvim-config/blob/master/README-CN.md)
