@@ -22,24 +22,24 @@ let g:which_key_map = {
       \ 'h' : 'Tabpre',
       \ 'l' : 'Tabnext',
       \ ',' : {
-            \ 'name' : '+Easymotion',
+            \ 'name' : 'Easymotion',
             \ 'w' : 'Easymotion-w',
             \ 'b' : 'Easymotion-b',
             \ 'f' : 'Easymotion-f',
             \ },
       \ 'c' : {
-            \ 'name' : '+NerdCommenter',
+            \ 'name' : 'NerdCommenter',
             \ },
       \ 'b' : {
-            \ 'name' : '+Buffer',
+            \ 'name' : 'Buffer',
             \ 'n'    : 'NextBuffer',
             \ 'p'    : 'PreBuffer',
             \ },
       \ 'g' : {
-            \ 'name' : '+vim-go',
+            \ 'name' : 'vim-go',
             \ 'r'    : 'GoRename',
             \ 'o ': {
-                \ 'name':'+GoTool',
+                \ 'name':'GoTool',
                 \ 'i'   :'GoInfo',
                 \ 'd'   :'GoDoc',
                 \ 'r'   :'GoRun',
@@ -58,7 +58,7 @@ let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
       \ 'b'    : 'DeniteBuferr'     ,
       \ 'c'    : {
-              \ 'name' : '+CocList' ,
+              \ 'name' : 'CocList' ,
               \ 'a'    : 'CocDiagnostics',
               \ 'c'    : 'CocCommands',
               \ 'e'    : 'CocExtensions',
@@ -74,6 +74,7 @@ let g:which_key_localmap ={
       \ 'r'    : 'DeniteFileMru',
       \ 's'    : 'DeniteCode',
       \ 'w'    : 'DeniteCursorWorld',
+      \ 'f'    : 'DefxToggle',
       \ }
 
 let g:which_key_rsbgmap = {

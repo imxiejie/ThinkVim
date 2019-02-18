@@ -42,6 +42,15 @@ let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js',
 '''
 
 [[plugins]]
+repo = 'Shougo/defx.nvim'
+on_cmd = 'Defx'
+hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+on_source = 'defx.nvim'
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
 on_path = ".*"
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
