@@ -49,7 +49,7 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
   - [themes](./config/theme.vim) - Color-scheme and theme setup
 - [colors](~/.config/nvim/colors) - ColorScheme
 
-_Note_ that 95% of the plugins are **[lazy-loaded]**.
+
 
 ## Non Lazy-Loaded Plugins
 Name           | Description
