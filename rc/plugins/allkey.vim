@@ -61,6 +61,11 @@ if dein#tap('nerdtree')
         nnoremap <leader>f :NERDTreeFind <CR>
 endif
 
+if dein#tap('defx.nvim')
+	nnoremap <silent> <localleader>f
+		\ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+endif
+
 if dein#tap('vim-go')
         autocmd  FileType go
                     \ | nmap <Leader>goi <Plug>(go-info)
