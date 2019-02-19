@@ -12,7 +12,7 @@ let g:which_key_map = {
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
       \ 'e' : 'Open-nerdtree' ,
-      \ 'f' : 'Nerdtreefind' ,
+      \ 'f' : 'FzfFileFind' ,
       \ 'a' : 'Open-ag' ,
       \ 'aw': 'Ag-word' ,
       \ 'n' : 'Cancelhighlight',
@@ -22,24 +22,24 @@ let g:which_key_map = {
       \ 'h' : 'Tabpre',
       \ 'l' : 'Tabnext',
       \ ',' : {
-            \ 'name' : 'Easymotion',
+            \ 'name' : '+Easymotion',
             \ 'w' : 'Easymotion-w',
             \ 'b' : 'Easymotion-b',
             \ 'f' : 'Easymotion-f',
             \ },
       \ 'c' : {
-            \ 'name' : 'NerdCommenter',
+            \ 'name' : '+NerdCommenter',
             \ },
       \ 'b' : {
-            \ 'name' : 'Buffer',
+            \ 'name' : '+Buffer',
             \ 'n'    : 'NextBuffer',
             \ 'p'    : 'PreBuffer',
             \ },
       \ 'g' : {
-            \ 'name' : 'vim-go',
+            \ 'name' : '+vim-go',
             \ 'r'    : 'GoRename',
             \ 'o ': {
-                \ 'name':'GoTool',
+                \ 'name':'+GoTool',
                 \ 'i'   :'GoInfo',
                 \ 'd'   :'GoDoc',
                 \ 'r'   :'GoRun',
@@ -48,7 +48,7 @@ let g:which_key_map = {
                 \ 'c'   :'GoCoverage',
                 \ },
              \ 'd':{
-                \ 'name':'GoTool',
+                \ 'name':'+GoTool',
                 \ 'v': 'GodefVertical',
                 \ },
             \ },
@@ -58,7 +58,7 @@ let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
       \ 'b'    : 'DeniteBuferr'     ,
       \ 'c'    : {
-              \ 'name' : 'CocList' ,
+              \ 'name' : '+CocList' ,
               \ 'a'    : 'CocDiagnostics',
               \ 'c'    : 'CocCommands',
               \ 'e'    : 'CocExtensions',
@@ -74,7 +74,7 @@ let g:which_key_localmap ={
       \ 'r'    : 'DeniteFileMru',
       \ 's'    : 'DeniteCode',
       \ 'w'    : 'DeniteCursorWorld',
-      \ 'f'    : 'DefxToggle',
+      \ 'd'    : 'DefxToggle',
       \ }
 
 let g:which_key_rsbgmap = {

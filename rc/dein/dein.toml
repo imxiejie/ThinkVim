@@ -5,9 +5,6 @@
 repo = 'scrooloose/nerdcommenter'
 
 [[plugins]]
-repo = 'ctrlpvim/ctrlp.vim'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
@@ -56,6 +53,7 @@ merged = '0'
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
+hook_add = 'source ~/.config/nvim/rc/plugins/fzf.vim'
 
 
 [[plugins]]

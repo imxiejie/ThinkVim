@@ -55,14 +55,19 @@ if dein#tap('coc.nvim')
         endfunction
 endif
 
+if dein#tap('fzf.vim')
+    nnoremap <silent> <leader>f :call Fzf_dev()<CR>
+endif
+
+
 if dein#tap('nerdtree')
     "nerdtree
         nnoremap <leader>e :NERDTreeToggle <CR>
-        nnoremap <leader>f :NERDTreeFind <CR>
+        "nnoremap <leader>f :NERDTreeFind <CR>
 endif
 
 if dein#tap('defx.nvim')
-	nnoremap <silent> <localleader>f
+	nnoremap <silent> <localleader>d
 		\ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
 endif
 
