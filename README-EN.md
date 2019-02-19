@@ -3,9 +3,7 @@
 <div align="center"><img style="width:300px;height:100px;box-shadow: 10px 10px 5px #888888;" src="https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/thinkvim.png"/></div>
 
 
-
 ## Feature
-
 
 - Modular
 - 80% of plugins lazyload
@@ -54,7 +52,6 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 Name           | Description
 -------------- | ----------------------
 [scrooloose/nerdcommenter] | 
-[ctrlpvim/ctrlp.vim] |  
 [tpope/vim-surround] |  
 [tpope/vim-repeat] | 
 [itchyny/lightline.vim] | 
@@ -89,6 +86,7 @@ Name           | Description
 [Shougo/neosnippet.vim] | 
 [Shougo/neosnippet-snippets] | 
 [Shougo/denite.nvim] | 
+[ctrlpvim/ctrlp.vim] |  
 [w0rp/ale] | 
 [othree/html5.vim] | 
 [pangloss/vim-javascript] | 

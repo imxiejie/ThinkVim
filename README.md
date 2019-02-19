@@ -3,12 +3,9 @@
 
 <div align="center"><img style="width:300px;height:100px;box-shadow: 10px 10px 5px #888888;" src="https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/thinkvim.png"/></div>
 
-
-
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
 ## 特性
-
 
 - 模块化
 - 懒加载百分之80插件
@@ -57,7 +54,6 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 Name           | Description
 -------------- | ----------------------
 [scrooloose/nerdcommenter] | 备注插件
-[ctrlpvim/ctrlp.vim] |  搜索插件
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
 [itchyny/lightline.vim] | 状态栏
@@ -92,6 +88,7 @@ Name           | Description
 [Shougo/neosnippet.vim] | 代码片段
 [Shougo/neosnippet-snippets] | 代码片段
 [Shougo/denite.nvim] | 搜索插件
+[ctrlpvim/ctrlp.vim] |  搜索插件
 [w0rp/ale] | 语法检查
 [othree/html5.vim] | html5插件 
 [pangloss/vim-javascript] |  js插件

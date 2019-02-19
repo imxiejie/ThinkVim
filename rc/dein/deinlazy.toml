@@ -1,4 +1,9 @@
 [[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+on_map = [['n','<Plug>']]
+hook_add = 'source ~/.config/nvim/rc/plugins/search.vim'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 on_ft = ['py','js','jsx','html','css','go','vim']
 hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
