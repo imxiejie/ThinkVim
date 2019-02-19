@@ -102,7 +102,6 @@ endif
 if dein#tap('vim-which-key')
 		nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
 		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
-		nnoremap <silent>l              :<c-u>WhichKey  'l'<CR>
 		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
 		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
 endif

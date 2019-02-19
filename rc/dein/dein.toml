@@ -45,8 +45,6 @@ hook_add = 'source ~/.config/nvim/rc/plugins/search.vim'
 repo = 'sbdchd/neoformat'
 hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
 
-
-
 [[plugins]]
 repo = 'yonchu/accelerated-smooth-scroll'
 
