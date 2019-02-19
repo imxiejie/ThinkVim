@@ -56,7 +56,7 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[scrooloose/nerdcommenter] | 备注插件
+[scrooloose/nerdcommenter] | 注释插件
 [ctrlpvim/ctrlp.vim] |  搜索插件
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
