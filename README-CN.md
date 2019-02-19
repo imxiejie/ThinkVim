@@ -102,7 +102,7 @@ Name           | Description
 [cespare/vim-toml] | toml文件高亮插件
 
 ## 选择你的喜好
-* [Nerdtree](https://github.com/scrooloose/nerdtree) Or Defx(https://github.com/Shougo/defx.nvim)
+* [Nerdtree](https://github.com/scrooloose/nerdtree) Or [Defx](https://github.com/Shougo/defx.nvim)
   * 默认文件管理插件为defx，如果你想使用nerdtree，修改deinlazy.toml，取消nerdtree以及nerdtree-syntax-highlint，注释defx，或者同时使用.
 * [Lightline](https://github.com/itchyny/lightline.vim) Or [Airline](https://github.com/vim-airline/vim-airline)
   * 默认的状态栏插件为lightline，如果你想使用airline，修改deinlazy.toml，取消airline以及vim-airline-theme并注释lightline。  
