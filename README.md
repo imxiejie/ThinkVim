@@ -61,8 +61,8 @@ Name           | Description
 [itchyny/lightline.vim] | 
 [mengelbrecht/lightline-bufferline] | 
 [taigacute/spaceline.vim] |
-[vim-airline/vim-airline] |
-[vim-airline/vim-airline-theme]|
+[vim-airline/vim-airline]（Comment） |
+[vim-airline/vim-airline-theme]（Comment）|
 [tpope/vim-fugitive] | 
 [rking/ag.vim] | 
 [sbdchd/neoformat] | 
@@ -79,8 +79,8 @@ Name           | Description
 [Yggdroot/indentLine] | 
 [liuchengxu/vim-which-key] |
 [easymotion/vim-easymotion] | 
-[scrooloose/nerdtree] | 
-[tiagofumo/vim-nerdtree-syntax-highlight] | 
+[scrooloose/nerdtree]（Comment） | 
+[tiagofumo/vim-nerdtree-syntax-highlight]（Comment） | 
 [Shougo/defx.nvim] | 
 [kristijanhusak/defx-icons] | 
 [airblade/vim-gitgutter] | 
