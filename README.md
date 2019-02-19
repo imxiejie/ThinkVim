@@ -55,15 +55,58 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 Name           | Description
 -------------- | ----------------------
 [scrooloose/nerdcommenter] | 
-[ctrlpvim/ctrlp.vim] | 
-[tpope/vim-surround] | 
+[ctrlpvim/ctrlp.vim] |  
+[tpope/vim-surround] |  
 [tpope/vim-repeat] | 
 [itchyny/lightline.vim] | 
 [mengelbrecht/lightline-bufferline] | 
-[taigacute/spaceline.vim] | 
+[taigacute/spaceline.vim] |
+[tpope/vim-fugitive] | 
+[rking/ag.vim] | 
+[sbdchd/neoformat] | 
+[yonchu/accelerated-smooth-scroll] | 
+[junegunn/fzf] | 
+[junegunn/fzf.vim] | 
+[ryanoasis/vim-devicons] | 
+[mhinz/vim-startify] | 
+[neoclide/coc.nvim] |
 
+## Lazy-Loaded Plugins
+Name           | Description
+-------------- | ----------------------
+[Yggdroot/indentLine] | 
+[liuchengxu/vim-which-key] |
+[easymotion/vim-easymotion] | 
+[scrooloose/nerdtree] | 
+[tiagofumo/vim-nerdtree-syntax-highlight] | 
+[Shougo/defx.nvim] | 
+[kristijanhusak/defx-icons] | 
+[airblade/vim-gitgutter] | 
+[majutsushi/tagbar] | 
+[mattn/emmet-vim] | 
+[Raimondi/delimitMate] | 
+[Shougo/neosnippet.vim] | 
+[Shougo/neosnippet-snippets] | 
+[Shougo/denite.nvim] | 
+[w0rp/ale] | 
+[othree/html5.vim] | 
+[pangloss/vim-javascript] | 
+[maxmellon/vim-jsx-pretty] | 
+[mxw/vim-jsx] | 
+[hail2u/vim-css3-syntax] | 
+[ap/vim-css-color] |
+[fatih/vim-go] | 
+[elzr/vim-json] | 
+[cespare/vim-toml] |
 
+## Choose you favorite
+* Nerdtree Or Defx
+  * the default file tree is defx,if you want use nerdtree,you should edit deinlazy.toml.Uncomment nerdtree and comment defx.
+* Lightline Or Airline
+  * the default statusline is lightline，if you want use airline ,you should edit deinlazy.toml ,Uncomment Airline and comment Lightline
 
-
+## Option
+_**All keyOption in mappings.vim(Vim key) and allkey.vim(Plugins key),you can change your favorite key**_
+  
 ## Feedback
   * if you have any question,you can ask me at [Giiter](https://gitter.im/thinkvim/community)
