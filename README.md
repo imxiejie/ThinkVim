@@ -4,7 +4,7 @@
 
 
 
-## [Switch Chinese](https://github.com/taigacute/nvim-config/blob/master/README-CN.md)
+## [Switch Chinese](https://github.com/taigacute/nvim-config/blob/master/README-CN.md) （选择中文版）
 ## Feature
 
 
