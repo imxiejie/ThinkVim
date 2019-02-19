@@ -61,6 +61,8 @@ Name           | Description
 [itchyny/lightline.vim] | 
 [mengelbrecht/lightline-bufferline] | 
 [taigacute/spaceline.vim] |
+[vim-airline/vim-airline] |
+[vim-airline/vim-airline-theme]|
 [tpope/vim-fugitive] | 
 [rking/ag.vim] | 
 [sbdchd/neoformat] | 
@@ -100,13 +102,20 @@ Name           | Description
 [cespare/vim-toml] |
 
 ## Choose you favorite
-* Nerdtree Or Defx
+* [Nerdtree](https://github.com/scrooloose/nerdtree) Or Defx(https://github.com/Shougo/defx.nvim)
   * the default file tree is defx,if you want use nerdtree,you should edit deinlazy.toml.Uncomment nerdtree and comment defx.
-* Lightline Or Airline
-  * the default statusline is lightline，if you want use airline ,you should edit deinlazy.toml ,Uncomment Airline and comment Lightline
-
+* [Lightline](https://github.com/itchyny/lightline.vim) Or [Airline](https://github.com/vim-airline/vim-airline)
+  * the default statusline is lightline，if you want use airline ,you should edit deinlazy.toml ,Uncomment Airline and comment Lightline  
+  _**NOTE!!Airline is slowly than lightline in start**_  
+  _**NOTE!!Defx performance is better than nerdtree**_
 ## Option
-_**All keyOption in mappings.vim(Vim key) and allkey.vim(Plugins key),you can change your favorite key**_
-  
+All keyOption in mappings.vim(Vim key) and allkey.vim(Plugins key),you can change your favorite key
+## Language Support
+The default support go,js,jsx.you can add your language server in `coc-settings.json`
+## Custom
+* Plugin
+   * You can add any `plugins` you like, set to normal loading and lazy loading according to your requirements. The keystroke settings of the plugin should be in `allkey.vim`.
+* Colors
+   * Put your favorite `colorscheme` in the colors folder and modify `themes/theme.vim`.if you want chage `Pmenu` colors. you shuold  edit Pmenu colors in `theme.vim` 
 ## Feedback
   * if you have any question,you can ask me at [Giiter](https://gitter.im/thinkvim/community)
