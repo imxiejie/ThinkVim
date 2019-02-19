@@ -1,5 +1,5 @@
 ---
-name: Bug Rport
+name: Bug Report
 about: Bug
 
 ---
