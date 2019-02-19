@@ -108,7 +108,7 @@ Name           | Description
   * 默认的状态栏插件为lightline，如果你想使用airline，修改deinlazy.toml，取消airline以及vim-airline-theme并注释lightline。  
   _**NOTE!!Airline 需要更多的启动时间相比lightline**_  
   _**NOTE!!Defx 提供比nerdtree更加优秀的性能**_
-## Option
+## 键位操作
 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位
 ## Language Support
 语言工具支持，在coc.nvim主页查找你的开发语言server，并修改`coc-settings.json`添加你的语言服务器。
