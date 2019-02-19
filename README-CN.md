@@ -54,52 +54,52 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[scrooloose/nerdcommenter] | 
-[ctrlpvim/ctrlp.vim] |  
-[tpope/vim-surround] |  
-[tpope/vim-repeat] | 
-[itchyny/lightline.vim] | 
-[mengelbrecht/lightline-bufferline] | 
-[taigacute/spaceline.vim] |
-[vim-airline/vim-airline] |
-[vim-airline/vim-airline-theme]|
-[tpope/vim-fugitive] | 
-[rking/ag.vim] | 
-[sbdchd/neoformat] | 
-[yonchu/accelerated-smooth-scroll] | 
-[junegunn/fzf] | 
-[junegunn/fzf.vim] | 
-[ryanoasis/vim-devicons] | 
-[mhinz/vim-startify] | 
-[neoclide/coc.nvim] |
+[scrooloose/nerdcommenter] | 备注插件
+[ctrlpvim/ctrlp.vim] |  搜索插件
+[tpope/vim-surround] |  符号成双成对
+[tpope/vim-repeat] | 重复上一次操作
+[itchyny/lightline.vim] | 状态栏
+[mengelbrecht/lightline-bufferline] | 顶部buffer插件
+[taigacute/spaceline.vim] | lightline主题插件自制
+[vim-airline/vim-airline] | 状态栏
+[vim-airline/vim-airline-theme]| airline主题插件
+[tpope/vim-fugitive] | git插件 
+[rking/ag.vim] |  搜索插件
+[sbdchd/neoformat] | 格式化插件
+[yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
+[junegunn/fzf] |  搜索插件
+[junegunn/fzf.vim] | 搜索插件
+[ryanoasis/vim-devicons] |  字体图标
+[mhinz/vim-startify] | 启动画面
+[neoclide/coc.nvim] | 补全插件
 
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
-[Yggdroot/indentLine] | 
-[liuchengxu/vim-which-key] |
-[easymotion/vim-easymotion] | 
-[scrooloose/nerdtree] | 
-[tiagofumo/vim-nerdtree-syntax-highlight] | 
-[Shougo/defx.nvim] | 
-[kristijanhusak/defx-icons] | 
-[airblade/vim-gitgutter] | 
-[majutsushi/tagbar] | 
-[mattn/emmet-vim] | 
-[Raimondi/delimitMate] | 
-[Shougo/neosnippet.vim] | 
-[Shougo/neosnippet-snippets] | 
-[Shougo/denite.nvim] | 
-[w0rp/ale] | 
-[othree/html5.vim] | 
-[pangloss/vim-javascript] | 
-[maxmellon/vim-jsx-pretty] | 
-[mxw/vim-jsx] | 
-[hail2u/vim-css3-syntax] | 
-[ap/vim-css-color] |
-[fatih/vim-go] | 
-[elzr/vim-json] | 
-[cespare/vim-toml] |
+[Yggdroot/indentLine] | 缩进线
+[liuchengxu/vim-which-key] | 键位查找
+[easymotion/vim-easymotion] | 快速移动
+[scrooloose/nerdtree] | 文件管理
+[tiagofumo/vim-nerdtree-syntax-highlight] | nerdtree高亮
+[Shougo/defx.nvim] | 文件管理(更高效)
+[kristijanhusak/defx-icons] | defx图标
+[airblade/vim-gitgutter] | git信息
+[majutsushi/tagbar] | 代码变量函数跳转显示插件
+[mattn/emmet-vim] | 快速生成html插件
+[Raimondi/delimitMate] | 符号补全插件
+[Shougo/neosnippet.vim] | 代码片段
+[Shougo/neosnippet-snippets] | 代码片段
+[Shougo/denite.nvim] | 搜索插件
+[w0rp/ale] | 语法检查
+[othree/html5.vim] | html5插件 
+[pangloss/vim-javascript] |  js插件
+[maxmellon/vim-jsx-pretty] |  react插件
+[mxw/vim-jsx] | react插件
+[hail2u/vim-css3-syntax] | css语法检查
+[ap/vim-css-color] | css颜色显示
+[fatih/vim-go] | go开发必备插件
+[elzr/vim-json] | json插件
+[cespare/vim-toml] | toml文件高亮插件
 
 ## 选择你的喜好
 * [Nerdtree](https://github.com/scrooloose/nerdtree) Or Defx(https://github.com/Shougo/defx.nvim)
