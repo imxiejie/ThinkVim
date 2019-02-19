@@ -1,3 +1,9 @@
+---
+name: Bug Report
+about: Bug
+
+---
+
 # Problems summary
 
 
@@ -21,7 +27,3 @@
 
 
 ## Screenshot (if possible)
-
-
-
-
