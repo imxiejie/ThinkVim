@@ -29,7 +29,7 @@
 git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ```
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
-**_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学 
+**_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
 **_3._** 安装coc中间件，在normal模式输入`:CocInstall coc-neosnippet` `CocInstall coc-emmet`  
 **_4._** Enjoy hacking!
 
@@ -53,7 +53,8 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[scrooloose/nerdcommenter] | 备注插件
+[scrooloose/nerdcommenter] | 注释插件
+[ctrlpvim/ctrlp.vim] |  搜索插件
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
 [itchyny/lightline.vim] | 状态栏
