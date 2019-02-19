@@ -61,8 +61,8 @@ Name           | Description
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
-[vim-airline/vim-airline] | 状态栏
-[vim-airline/vim-airline-theme]| airline主题插件
+[vim-airline/vim-airline]（已注释） | 状态栏
+[vim-airline/vim-airline-theme]（已注释）| airline主题插件
 [tpope/vim-fugitive] | git插件 
 [rking/ag.vim] |  搜索插件
 [sbdchd/neoformat] | 格式化插件
@@ -79,8 +79,8 @@ Name           | Description
 [Yggdroot/indentLine] | 缩进线
 [liuchengxu/vim-which-key] | 键位查找
 [easymotion/vim-easymotion] | 快速移动
-[scrooloose/nerdtree] | 文件管理
-[tiagofumo/vim-nerdtree-syntax-highlight] | nerdtree高亮
+[scrooloose/nerdtree] （已注释）| 文件管理
+[tiagofumo/vim-nerdtree-syntax-highlight]（已注释） | nerdtree高亮
 [Shougo/defx.nvim] | 文件管理(更高效)
 [kristijanhusak/defx-icons] | defx图标
 [airblade/vim-gitgutter] | git信息
