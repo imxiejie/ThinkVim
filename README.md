@@ -24,6 +24,7 @@
 - rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - Universal ctags: [ctags.io](https://ctags.io/)
 - Fuzzy file finders: [fzf](https://github.com/junegunn/fzf), [fzy](https://github.com/jhawthorn/fzy), or [peco](https://github.com/peco/peco)
+- Rouge : `gem install rouge`
 
 ## 安装
 ```
