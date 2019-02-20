@@ -31,7 +31,7 @@ git clone https://github.com/taigacute/nvim-config.git ~/.config/nvim
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
 **_3._** 安装coc中间件，在normal模式输入`:CocInstall coc-neosnippet` `CocInstall coc-emmet`  
-**_4._** Enjoy hacking!
+**_4._** 如果你要使用Defx和Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`
 
 ## 结构
 
