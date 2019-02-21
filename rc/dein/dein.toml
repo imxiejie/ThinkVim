@@ -1,5 +1,7 @@
-#[[plugins]]
-#repo = 'kristijanhusak/vim-hybrid-material'
+[[plugins]]
+repo = 'taigacute/space-vim-theme'
+hook_add = 'let g:space_vim_plugin_hi_groups = 1'
+
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'

@@ -7,6 +7,8 @@ let g:startify_custom_header = [
 \ '                     / /    / _ \| __||/ / __| | __|| |_ \ | || |_ \ | |/ /  ',
 \ '                    / /___ |  __/| |_    \__ \ | |_ | | | || || | | ||   <   ',
 \ '                    \____/  \___| \__|   |___/  \__||_| |_||_||_| |_||_|\_\  ',
+\ '                                                                             ',
+\ '                                 [ ThinkVim   Author:taigacute ]             ',
 \ '',
 \]
 let g:startify_custom_footer = [

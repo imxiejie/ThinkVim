@@ -57,6 +57,7 @@ endif
 
 if dein#tap('fzf.vim')
     nnoremap <silent> <leader>f :call Fzf_dev()<CR>
+    nnoremap <silent> <leader>r :Rg<CR>
 endif
 
 
