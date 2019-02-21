@@ -5,9 +5,7 @@ Hybrid                                                                          
 :----:                                                                                | :----:
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
 
-| thinkvim show |
-|--
-![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/think1.gif)
+
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
 ## 特性
