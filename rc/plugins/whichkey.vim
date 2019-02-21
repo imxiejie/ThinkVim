@@ -13,6 +13,7 @@ let g:which_key_map = {
       \ '0' : 'Buffer-10'      ,
       \ 'e' : 'Open-nerdtree' ,
       \ 'f' : 'FzfFileFind' ,
+      \ 'r' : 'FzfRg' ,
       \ 'a' : 'Open-ag' ,
       \ 'aw': 'Ag-word' ,
       \ 'n' : 'Cancelhighlight',

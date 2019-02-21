@@ -49,7 +49,7 @@ set completeopt =longest,menu
 set completeopt-=preview
 filetype plugin indent on     " required!
 "set lcs+=trail:.                                                       "样式一
-"set listchars=tab:\▸\-                                                 "样式二
+"set listchars=tab:\¦\                                                 "样式二
 "set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲,nbsp:␣   "样式三
 "set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·              "样式四
 set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→                 "样式五
