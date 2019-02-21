@@ -1,7 +1,10 @@
 
 ## ThinkVim 
 
-<div align="center"><img style="width:300px;height:100px;box-shadow: 10px 10px 5px #888888;" src="https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/thinkvim.png"/></div>
+Hybrid                                                                                | taigacute/sapce-vim-theme
+:----:                                                                                | :----:
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
+
 
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
@@ -105,11 +108,11 @@ Name           | Description
 
 ## 选择你的喜好
 * [Nerdtree](https://github.com/scrooloose/nerdtree) Or [Defx](https://github.com/Shougo/defx.nvim)
-  * 默认文件管理插件为defx，如果你想使用nerdtree，修改deinlazy.toml，取消nerdtree以及nerdtree-syntax-highlint，注释defx，或者同时使用.
+  * 默认文件管理插件为defx，如果你想使用nerdtree，修改deinlazy.toml，注释defx，或者同时使用.
 * [Lightline](https://github.com/itchyny/lightline.vim) Or [Airline](https://github.com/vim-airline/vim-airline)
   * 默认的状态栏插件为lightline，如果你想使用airline，修改deinlazy.toml，取消airline以及vim-airline-theme并注释lightline。  
   _**NOTE!!Airline 需要更多的启动时间相比lightline**_  
-  _**NOTE!!Defx 提供比nerdtree更加优秀的性能**_
+  _**NOTE!!Defx与nerdtree同时使用，如果只是用其中一个可以注释掉另一个**_
 ## 键位操作
 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位
 ## Language Support
@@ -118,6 +121,6 @@ Name           | Description
 * 插件
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
-   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.如果你想修改补全框 `Pmenu` colors. 同样修改 Pmenu 的颜色在 `theme.vim` 
+   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已带此主题。
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
