@@ -1,7 +1,7 @@
 
 ## ThinkVim 
 
-Hybrid                                                                                | taigacute/sapce-vim-theme
+Hybrid                                                                                | taigacute/space-vim-theme
 :----:                                                                                | :----:
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
 
