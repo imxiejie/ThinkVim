@@ -1,12 +1,13 @@
 {
-    "coc.preferences.triggerAfterInsertEnter": true,
-    "coc.preferences.timeout": 500,
-    "coc.preferences.noselect": false,
-    "coc.preferences.preferCompleteThanJumpPlaceholder": true,
-    "coc.preferences.snippetIndicator": "",
-    "coc.preferences.diagnostic.displayByAle": false,
-	"coc.preferences.diagnostic.errorSign": "🐉",
-	"coc.preferences.diagnostic.warningSign": "🐬",
+    "suggest.triggerAfterInsertEnter": true,
+    "suggest.timeout": 500,
+    "suggest.noselect": false,
+    "suggest.detailField":"abbr",
+    "suggest.preferCompleteThanJumpPlaceholder": true,
+    "suggest.snippetIndicator": "🌟",
+    "suggest.triggerCompletionWait": 50,
+	"diagnostic.errorSign": "🐉",
+	"diagnostic.warningSign": "🐬",
     "languageserver": {
     "golang": {
       "command": "go-langserver",
