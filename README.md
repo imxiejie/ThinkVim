@@ -16,7 +16,7 @@ Hybrid                                                                          
 - LSP语言服务支持
 
 ## 必要
-* macos or linux
+* macos or linux  (没有在windows上开发过，所以不太清楚再windows版本的neovim是否有问题）
 * neovim
 * python3 support
 * node and yarn
