@@ -1,7 +1,7 @@
 
 ## ThinkVim 
 
-Hybrid                                                                                | taigacute/sapce-vim-theme
+Hybrid                                                                                | taigacute/space-vim-theme
 :----:                                                                                | :----:
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
 
@@ -16,7 +16,7 @@ Hybrid                                                                          
 - LSP语言服务支持
 
 ## 必要
-* macos or linux
+* macos or linux  (没有在windows上开发过，所以不太清楚再windows版本的neovim是否有问题）
 * neovim
 * python3 support
 * node and yarn
@@ -83,8 +83,8 @@ Name           | Description
 [Yggdroot/indentLine] | 缩进线
 [liuchengxu/vim-which-key] | 键位查找
 [easymotion/vim-easymotion] | 快速移动
-[scrooloose/nerdtree] （已注释）| 文件管理
-[tiagofumo/vim-nerdtree-syntax-highlight]（已注释） | nerdtree高亮
+[scrooloose/nerdtree] | 文件管理
+[tiagofumo/vim-nerdtree-syntax-highlight] | nerdtree高亮
 [Shougo/defx.nvim] | 文件管理(更高效)
 [kristijanhusak/defx-icons] | defx图标
 [airblade/vim-gitgutter] | git信息
@@ -114,7 +114,7 @@ Name           | Description
   _**NOTE!!Airline 需要更多的启动时间相比lightline**_  
   _**NOTE!!Defx与nerdtree同时使用，如果只是用其中一个可以注释掉另一个**_
 ## 键位操作
-关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位
+默认leader为`,` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位
 ## Language Support
 语言工具支持，在coc.nvim主页查找你的开发语言server，并修改`coc-settings.json`添加你的语言服务器。
 ## 自定义
@@ -122,5 +122,8 @@ Name           | Description
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
    * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已带此主题。
+## 教程
+   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
+   * 还差一个详细的纯手把手的教程视频。预计2月22日晚上更新
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
