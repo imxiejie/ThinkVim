@@ -41,7 +41,8 @@ function! LightlineMode()
   if nr == 0
     return ''
   endif
-  return num
+  return rerainbow
+  return join(['🌈',num])
 endfunction
 function! s:get_buffer_number()
   let i = 0
