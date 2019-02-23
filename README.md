@@ -149,3 +149,8 @@ Name           | Description
 
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
+## 鸣谢
+站在了巨人的肩膀上，参考了rafi和Shougo的配置，也感谢Shougo一直的指导
+* [rafi](https://github.com/rafi/vim-config)
+* [Shougo](https://github.com/Shougo)
+
