@@ -124,6 +124,6 @@ Name           | Description
    * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已带此主题。
 ## 教程
    * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
-   * 还差一个详细的纯手把手的教程视频。预计2月22日晚上更新
+
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
