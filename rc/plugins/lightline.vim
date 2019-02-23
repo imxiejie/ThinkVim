@@ -36,7 +36,7 @@ let g:lightline = {
 
 function! LightlineMode()
   let nr = s:get_buffer_number()
-  let nmap = [ '',  '❶ ',  '❷ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ','➓ ' ]
+  let nmap = [ '⓿ ',  '❶ ',  '❷ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ','➓ ','⓫ ','⓬ ','⓭ ','⓮ ','⓯ ','⓰ ','⓱ ','⓲ ','⓳ ','⓴ ']
   let num = nmap[nr]
   if nr == 0
     return ''
@@ -164,7 +164,7 @@ let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#filename_modifier = ':t'
 let g:lightline#bufferline#unnamed      = '[No Name]'
 let g:lightline#bufferline#number_map = {
-      \ 0: '➓ ', 1: '❶ ', 2: '❷ ', 3: '❸ ', 4: '❹ ',
+      \ 0: '⓿ ', 1: '❶ ', 2: '❷ ', 3: '❸ ', 4: '❹ ',
       \ 5: '❺ ', 6: '❻ ', 7: '❼ ', 8: '❽ ', 9: '❾ '}
 
 nmap <Leader>1 <Plug>lightline#bufferline#go(1)
