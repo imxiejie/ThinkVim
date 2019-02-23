@@ -5,7 +5,8 @@ Hybrid                                                                          
 :----:                                                                                | :----:
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
 
-
+### Gif
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 ## Update 2019-2-23
 * 在lingtline中添加了emoji，coc添加了emoji，如果你也喜欢需要使用支持emoji的终端，你同样可以去掉这样emoji替换任意你喜欢的符号。
