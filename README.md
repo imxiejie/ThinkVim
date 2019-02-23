@@ -9,6 +9,8 @@ Hybrid                                                                          
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 ## Update 2019-2-23
 * 在lingtline中添加了emoji，coc添加了emoji，如果你也喜欢需要使用支持emoji的终端，你同样可以去掉这样emoji替换任意你喜欢的符号。
+## 我的宗旨
+vim是自由的。它的每一个位置都应该是你喜欢想要的样子。对吗？大而全也许是省心省力的，我相信那也不是你想要的，vim不折腾那还叫vim吗？ThinkVim只是减少了你折腾的时间，帮助你模块化。
 ## FAQ
 ### 1.和 Spacevim，Space-vim 有什么区别？
 * 这个配置只是我自己的配置。与 Spacevim Space-vim 不同，它们可以说是个项目了。我的有很多需要你自己改。我只是提供一个模块的小巧以管理的配置。只是取了个名字，然后我的配置没那么多方便的功能，比如简单的管理想添加什么只需要设置 layer 或者其他 easy 的操作，我的要你自己添加插件配置插件改动文件。大家的触发点不一样。但是都是 vim 的爱好者。
