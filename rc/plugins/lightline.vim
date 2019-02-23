@@ -41,7 +41,6 @@ function! LightlineMode()
   if nr == 0
     return ''
   endif
-  return rerainbow
   return join(['🌈',num])
 endfunction
 function! s:get_buffer_number()
