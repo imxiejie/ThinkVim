@@ -10,8 +10,6 @@ function! s:check_back_space() abort
 endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
 
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
