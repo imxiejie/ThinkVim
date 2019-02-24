@@ -38,8 +38,8 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 - 完全自定义
 - LSP语言服务支持
 
-## 必要
-* macos or linux  (没有在windows上开发过，所以不太清楚再windows版本的neovim是否有问题）
+## 必要环境
+* macos or linux  (windows上需要修改一些变量）
 * neovim
 * python3 support
 * node and yarn
@@ -49,7 +49,6 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 - ag (The Silver Searcher): [ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - Universal ctags: [ctags.io](https://ctags.io/)
-- Fuzzy file finders: [fzf](https://github.com/junegunn/fzf), [fzy](https://github.com/jhawthorn/fzy), or [peco](https://github.com/peco/peco)
 - Rouge : `gem install rouge`
 
 ## 安装
