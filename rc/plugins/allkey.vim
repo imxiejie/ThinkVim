@@ -74,7 +74,7 @@ endif
 
 if dein#tap('vim-go')
         autocmd  FileType go
-                    \ | nmap <Leader>goi <Plug>(go-info)
+                    \   nmap <Leader>goi <Plug>(go-info)
                     \ | nmap <Leader>god <Plug>(go-doc)
                     \ | nmap <leader>gor <Plug>(go-run)
                     \ | nmap <leader>gob <Plug>(go-build)
