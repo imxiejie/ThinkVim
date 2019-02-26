@@ -25,6 +25,12 @@ function! s:source_rc(path, ...) abort
   endtry
 endfunction
 
+"set augroup
+augroup MyAutoCmd
+	autocmd!
+	autocmd CursorHold *? syntax sync minlines=300
+augroup END
+
 
 if has('vim_starting')
   call s:source_rc('init.vim')
