@@ -5,18 +5,41 @@ Hybrid                                                                          
 :----:                                                                                | :----:
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
 
-
+### Gif
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
+## Update 2019-2-23
+* 在lingtline中添加了emoji，coc添加了emoji，如果你也喜欢需要使用支持emoji的终端，你同样可以去掉这样emoji替换任意你喜欢的符号。
+## 我的宗旨
+* vim是自由的。它的每一个位置都应该是你喜欢想要的样子。对吗？大而全也许是省心省力的，我相信那也不是你想要的，vim不折腾那还叫vim吗？ThinkVim只是减少了你折腾的时间，帮助你模块化。
+## FAQ
+### 1.和 Spacevim，Space-vim 有什么区别？
+* 这个配置只是我自己的配置。与 Spacevim Space-vim 不同，它们可以说是个项目了。我的有很多需要你自己改。我只是提供一个模块的小巧以管理的配置。只是取了个名字，然后我的配置没那么多方便的功能，比如简单的管理想添加什么只需要设置 layer 或者其他 easy 的操作，我的要你自己添加插件配置插件改动文件。大家的触发点不一样。但是都是 vim 的爱好者。
+* 我的出发点是我觉得 vim 不折腾就没了意义。追求 vim 是把它打造成自己喜欢的工具。包括它的每一寸肌肤。对吗？？我相信应该有和我一样不愿意使用别人配置的人你们应该能明白的。
+
+### 2.我自己的配置就很好，为什么要看你的配置？
+你的配置你很满意的情况下你完全可以不用看我的配置。如果你想拆分一下变得模块化组件化易于管理摆脱冗长的 init.vim ，你可以参考我的配置或许对你有帮助
+
+### 3.新手能用吗？
+个人觉得对新手比较友好，而且我还在 b 站出了视频如何使用修改成自己的配置。
+
+### 4.看到很多插件和工具我都要用吗?
+不是，其实里面有几个是重复的，我没删掉。因为我觉得你们有自己的喜好和习惯。不用就删掉。喜欢就留着用
+
+### 5.我觉得里面插件的功能不好用或者太老了怎么办？
+你想怎么改就怎么改。它没有那些项目级别那么复杂。我只是留一些基础的或者我觉得好用的还行的我在用的。
+### 6.ag和rg如何选择？
+ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，我推荐用rg看你的喜好与习惯，不用的就删除即可。
 
 ## 特性
-
 - 模块化
 - 懒加载百分之80插件
+- 启动速度快
 - 完全自定义
 - LSP语言服务支持
 
-## 必要
-* macos or linux  (没有在windows上开发过，所以不太清楚再windows版本的neovim是否有问题）
+## 必要环境
+* macos or linux  (windows上需要修改一些变量）
 * neovim
 * python3 support
 * node and yarn
@@ -26,7 +49,6 @@ Hybrid                                                                          
 - ag (The Silver Searcher): [ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - Universal ctags: [ctags.io](https://ctags.io/)
-- Fuzzy file finders: [fzf](https://github.com/junegunn/fzf), [fzy](https://github.com/jhawthorn/fzy), or [peco](https://github.com/peco/peco)
 - Rouge : `gem install rouge`
 
 ## 安装
@@ -127,3 +149,8 @@ Name           | Description
 
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
+## 鸣谢
+站在了巨人的肩膀上，参考了rafi和Shougo的配置，也感谢Shougo一直的指导
+* [rafi](https://github.com/rafi/vim-config)
+* [Shougo](https://github.com/Shougo)
+

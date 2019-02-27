@@ -1,7 +1,12 @@
 ## ThinkVim 
 
-<div align="center"><img style="width:300px;height:100px;box-shadow: 10px 10px 5px #888888;" src="https://github.com/Marlboro-go/Neovim-for-go/blob/master/screenshot/thinkvim.png"/></div>
+Hybrid                                                                                | taigacute/space-vim-theme
+:----:                                                                                | :----:
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
 
+### Gif
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
+## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
 ## Feature
 
@@ -19,8 +24,9 @@
 ### Recommended Tools
 
 - ag (The Silver Searcher): [ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
+- rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - Universal ctags: [ctags.io](https://ctags.io/)
-- Fuzzy file finders: [fzf](https://github.com/junegunn/fzf), [fzy](https://github.com/jhawthorn/fzy), or [peco](https://github.com/peco/peco)
+- Rouge : `gem install rouge`
 
 ## Install
 ```
@@ -75,8 +81,8 @@ Name           | Description
 [Yggdroot/indentLine] | 
 [liuchengxu/vim-which-key] |
 [easymotion/vim-easymotion] | 
-[scrooloose/nerdtree]（Comment） | 
-[tiagofumo/vim-nerdtree-syntax-highlight]（Comment） | 
+[scrooloose/nerdtree] | 
+[tiagofumo/vim-nerdtree-syntax-highlight] | 
 [Shougo/defx.nvim] | 
 [kristijanhusak/defx-icons] | 
 [airblade/vim-gitgutter] | 

@@ -9,9 +9,8 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 inoremap <silent><expr> <c-space> coc#refresh()
-
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<CR>"
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
 
