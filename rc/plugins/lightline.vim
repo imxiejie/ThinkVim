@@ -2,7 +2,7 @@ let g:lightline = {
       \ 'colorscheme': 'space',
       \ 'active': {
       \   'left': [ ['homemode'],
-      \             ['fugitive', 'gitgutter'],['filename'],['tagbar'],['cocerror'],['cocwarn'] ],
+      \             ['fugitive', 'gitgutter'],['filename'],['tagbar'],['cocerror'],['cocwarn']],
       \   'right':[ ['lineinfo'],
       \             ['percent'], ['fileformat','fileencoding'] ],
       \ },

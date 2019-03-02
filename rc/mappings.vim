@@ -27,22 +27,12 @@ nnoremap j gj
 nnoremap k gk
 vnoremap j gj
 vnoremap k gk
-"插入模式移动M=alt
-"inoremap <M-h> <Left>
-"inoremap <M-j> <Down>
-"inoremap <M-k> <Up>
-"inoremap <M-l> <Right>
 
 nmap <leader>tn :tabnew<cr>
 nmap <leader>te :tabedit
 nmap <leader>tc :tabclose<cr>
 nmap <leader>tm :tabmove
 
-" move lines up or down (command - D)
-nmap <D-j> mz:m+<cr>`z
-nmap <D-k> mz:m-2<cr>`z
-vmap <D-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <D-k> :m'<-2<cr>`>my`<mzgv`yo`z
 
 " Tab move lines left or right (c-Ctrl,s-Shift)
 nmap    <c-tab>     v>
@@ -58,5 +48,6 @@ vmap    <s-tab>     <gv
 nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
 
-
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
 

@@ -1,3 +1,4 @@
+
 [[plugins]]
 repo = 'ctrlpvim/ctrlp.vim'
 on_map = [['n','<Plug>']]
@@ -88,7 +89,11 @@ hook_source = '''
     let g:delimitMate_expand_cr = 1
     let g:delimitMate_excluded_ft = 'html'
 '''
- 
+[[plugins]]
+repo = 'luochen1990/rainbow'
+on_ft = ['py','js','jsx','html','css','go','vim','toml']
+hook_source = 'let g:rainbow_active = 1'
+
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
 depends = ['neosnippet-snippets']
@@ -158,3 +163,20 @@ hook_add = 'let g:vim_json_syntax_conceal = 0 '
 repo = 'cespare/vim-toml'
 on_ft= ['toml']
 
+#[[plugins]]
+#repo = 'benekastah/neomake'
+#on_cmd = [ 'Neomake', 'NeomakeFile', 'NeomakeEnable' ]
+#hook_source = 'source ~/.config/nvim/rc/plugins/neomake.vim'
+#hook_add = '''
+    #let g:lint_types = [
+      #\   'python', 'vim', 'go', 'sh',
+      #\  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
+      #\  'markdown', 'html', 'yaml'
+      #\ ]
+    #autocmd MyAutoCmd BufWritePost *
+      #\  if expand('%:p') !~ $VIMPATH
+      #\      && index(g:lint_types, &filetype) > -1
+      #\      && empty(&buftype)
+      #\|   Neomake
+      #\| endif
+#'''

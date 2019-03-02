@@ -73,17 +73,16 @@ if dein#tap('defx.nvim')
 endif
 
 if dein#tap('vim-go')
-        autocmd  FileType go
-                    \   nmap <Leader>goi <Plug>(go-info)
+     autocmd MyAutoCmd FileType go
+                    \  nmap <Leader>gdv <Plug>(go-def-vertical)
+                    \ | nmap <Leader>goi <Plug>(go-info)
                     \ | nmap <Leader>god <Plug>(go-doc)
                     \ | nmap <leader>gor <Plug>(go-run)
                     \ | nmap <leader>gob <Plug>(go-build)
                     \ | nmap <leader>got <Plug>(go-test)
                     \ | nmap <leader>goc <Plug>(go-coverage)
-                    \ | nmap <Leader>gdv <Plug>(go-def-vertical)
                     \ | nmap <Leader>gr<Plug>(go-rename)
 endif
-
 
 if dein#tap('tagbar')
         nnoremap <localleader>g :TagbarToggle<CR>

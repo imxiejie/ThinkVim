@@ -2,6 +2,8 @@ if &compatible
   set nocompatible
 endif
 
+let $VIMPATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
+
 function! s:source_rc(path, ...) abort
   let use_global = get(a:000, 0, !has('vim_starting'))
   let abspath = resolve(expand('~/.config/nvim/rc/' . a:path))
@@ -25,12 +27,10 @@ function! s:source_rc(path, ...) abort
   endtry
 endfunction
 
-"set augroup
 augroup MyAutoCmd
 	autocmd!
 	autocmd CursorHold *? syntax sync minlines=300
 augroup END
-
 
 if has('vim_starting')
   call s:source_rc('init.vim')
