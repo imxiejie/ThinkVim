@@ -49,7 +49,7 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 - ag (The Silver Searcher): [ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - Universal ctags: [ctags.io](https://ctags.io/)
-- Rouge : `gem install rouge`
+- Rouge : `sudo gem install rouge`
 
 ## 安装
 ```
