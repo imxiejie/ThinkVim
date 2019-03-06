@@ -25,7 +25,7 @@ endif
 
 " Files + devicons
 function! Fzf_dev()
-  let l:fzf_files_options = '--preview "rougify {2..-1} | head -'.&lines.'"'
+  let l:fzf_files_options = '--layout=reverse --preview "rougify {2..-1} | head -'.&lines.'"'
 
   function! s:files()
     let l:files = split(system($FZF_DEFAULT_COMMAND), '\n')

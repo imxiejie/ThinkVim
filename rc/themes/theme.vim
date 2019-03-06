@@ -13,6 +13,8 @@ set background=dark
 colorscheme space_vim_theme
 
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
+hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
+
 "hi LineNr ctermbg=NONE guibg=NONE
 "Pmenu Colors
 "hi PMenu guifg=#875fd7 guibg=#262626 guisp=#262626 gui=NONE ctermfg=98 ctermbg=235 cterm=NONE

@@ -1,11 +1,3 @@
-"ag  快捷键
-nmap <leader>a :ag
-let g:ag_prg="ag --vimgrep --smart-case --ignore tags"
-let g:ag_highlight=1
-let g:ag_mapping_message=0
-" 高亮光标所在位置的单词，并使用 ag 来搜索
-nmap <leader>aw :ag <c-r>=expand("<cword>")<cr><cr>
-
 "set CtrlP
 if executable('ag')
   " Use Ag over Grep

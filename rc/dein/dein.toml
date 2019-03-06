@@ -36,9 +36,6 @@ repo = 'taigacute/spaceline.vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'rking/ag.vim'
-hook_add = 'source ~/.config/nvim/rc/plugins/search.vim'
 
 [[plugins]]
 repo = 'sbdchd/neoformat'

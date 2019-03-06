@@ -1,18 +1,21 @@
-imap <expr><TAB>
-\ pumvisible() ? "\<C-n>" :
+imap <silent><expr><TAB>
+\ pumvisible() ? "\<Down>" :
  \ neosnippet#expandable_or_jumpable() ?
  \    "\<Plug>(neosnippet_expand_or_jump)" : 
  \ <SID>check_back_space() ? "\<TAB>":
  \ coc#refresh()
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+
+smap <silent><expr><Tab>
+    \  pumvisible() ? "\<Down>":
+	\  neosnippet#jumpable() ? "\<Plug>(neosnippet_jump)":
+	\  <SID>check_back_space() ? "\<Tab>"
+
 inoremap <silent><expr> <c-space> coc#refresh()
 
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
-imap <expr> <CR> pumvisible() ? "\<c-y>" : "<Plug>delimitMateCR"
-
+imap <expr><S-TAB> pumvisible() ? "\<Up>" : "<Plug>delimitMateS-Tab"
+imap <expr><CR>
+            \ pumvisible() ? "\<c-y>" :
+            \ delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "\<CR>"
 
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
@@ -23,4 +26,7 @@ if has('conceal')
 endif
 
 
-
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
