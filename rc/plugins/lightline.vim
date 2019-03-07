@@ -6,6 +6,10 @@ let g:lightline = {
       \   'right':[ ['lineinfo'],
       \             ['percent'], ['fileformat','fileencoding'] ],
       \ },
+      \ 'inactive': {
+      \   'left': [['homemode'], ['filename']],
+      \   'right':[['lineinfo'], ['percent']],
+      \ },
       \ 'tabline': {
       \   'left': [['buffers']],
       \   'right': [['close']],

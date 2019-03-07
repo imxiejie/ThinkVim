@@ -11,9 +11,12 @@ if !dein#load_state(s:path)
 endif
 
 call dein#begin(s:path, expand('<sfile>'))
+let s:toml_dir = expand($CONFIG.'/nvim/rc/dein')
+let s:toml =s:toml_dir.'/dein.toml'
+let s:lazy_toml = s:toml_dir.'/deinlazy.toml'
 
-call dein#load_toml('~/.config/nvim/rc/dein/dein.toml', {'lazy': 0})
-call dein#load_toml('~/.config/nvim/rc/dein/deinlazy.toml', {'lazy' : 1})
+call dein#load_toml(s:toml, {'lazy': 0})
+call dein#load_toml(s:lazy_toml, {'lazy' : 1})
 
 
 call dein#end()

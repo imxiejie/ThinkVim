@@ -1,8 +1,5 @@
-
 {
     "suggest.triggerAfterInsertEnter": true,
-    "diagnostic.virtualText": true,
-    "diagnostic.virtualTextPrefix": "❯❯ ",
     "suggest.timeout": 500,
     "suggest.noselect": false,
     "suggest.detailField":"abbr",
