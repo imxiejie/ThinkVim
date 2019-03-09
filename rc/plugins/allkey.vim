@@ -46,6 +46,7 @@ if dein#tap('coc.nvim')
         " Use K for show documentation in preview window
         nnoremap <silent> K :call <SID>show_documentation()<CR>
 
+endif
         function! s:show_documentation()
             if &filetype == 'vim'
                 execute 'h '.expand('<cword>')
@@ -53,7 +54,6 @@ if dein#tap('coc.nvim')
                 call CocAction('doHover')
             endif
         endfunction
-endif
 
 if dein#tap('fzf.vim')
     nnoremap <silent> <leader>f :call Fzf_dev()<CR>
