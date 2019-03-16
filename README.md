@@ -82,27 +82,27 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 Name           | Description
 -------------- | ----------------------
 [scrooloose/nerdcommenter] | 注释插件
-[tpope/vim-surround] |  符号成双成对
-[tpope/vim-repeat] | 重复上一次操作
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
 [vim-airline/vim-airline]（已注释） | 状态栏
 [vim-airline/vim-airline-theme]（已注释）| airline主题插件
 [tpope/vim-fugitive] | git插件 
-[rking/ag.vim] |  搜索插件
 [sbdchd/neoformat] | 格式化插件
 [yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
 [junegunn/fzf] |  搜索插件
 [junegunn/fzf.vim] | 搜索插件
 [ryanoasis/vim-devicons] |  字体图标
 [mhinz/vim-startify] | 启动画面
-[neoclide/coc.nvim] | 补全插件
+
 
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
 [Yggdroot/indentLine] | 缩进线
+[tpope/vim-surround] |  符号成双成对
+[tpope/vim-repeat] | 重复上一次操作
+[neoclide/coc.nvim] | 补全插件
 [liuchengxu/vim-which-key] | 键位查找
 [easymotion/vim-easymotion] | 快速移动
 [scrooloose/nerdtree] | 文件管理
@@ -144,16 +144,18 @@ Name           | Description
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
    * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已带此主题。
-## 教程
-   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
 
-## Feedback
-  * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
+## 支持
+
+
 ## Donation
   * 如果对你有帮助，You Can Buy Me a Coffee By WeChat:)  
   ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/wechat.png)
+## 教程
+   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
+## Feedback
+  * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
 ## 鸣谢
-站在了巨人的肩膀上，参考了rafi和Shougo的配置，也感谢Shougo一直的指导
 * [rafi](https://github.com/rafi/vim-config)
 * [Shougo](https://github.com/Shougo)
 
