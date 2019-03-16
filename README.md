@@ -3,7 +3,7 @@
 
 Hybrid                                                                                | taigacute/space-vim-theme
 :----:                                                                                | :----:
-![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/space-thinkvim.png)
 
 ### Gif
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
