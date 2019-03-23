@@ -2,21 +2,28 @@
     "suggest.triggerAfterInsertEnter": true,
     "suggest.timeout": 500,
     "suggest.noselect": false,
+	"suggest.preferCompleteThanJumpPlaceholder": false,
     "suggest.detailField":"abbr",
-    "suggest.preferCompleteThanJumpPlaceholder": true,
     "suggest.snippetIndicator": "🌟",
     "suggest.triggerCompletionWait": 50,
-	"diagnostic.errorSign": "🐉",
-	"diagnostic.warningSign": "🐬",
+	"diagnostic.errorSign": "😡",
+	"diagnostic.warningSign": "🤔",
     "languageserver": {
     "golang": {
-      "command": "go-langserver",
-      "filetypes": ["go"],
-      "initializationOptions": {
-        "gocodeCompletionEnabled": true,
-        "diagnosticsEnabled": true,
-        "lintTool": "golint"
-      }
+      "command": "bingo",
+      "args": ["--diagnostics-style=instant"],
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    },
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      "filetypes": ["vim", "eruby", "markdown"]
     }
   }
 }

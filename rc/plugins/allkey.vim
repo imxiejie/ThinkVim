@@ -7,7 +7,7 @@ if dein#tap('denite.nvim')
         " 最近使用文件列表
         nnoremap <silent><localleader>o :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
         " 当前目录
-        nnoremap <silent><localleader>r :Denite file_rec -default-action=vsplit<CR>
+        "nnoremap <silent><localleader>r :Denite file_rec -default-action=vsplit<CR>
         "Denite line
         nnoremap  <silent><localLeader>l :<C-u>Denite line -auto-preview<CR>
         nnoremap <silent><localLeader>w :<C-u>DeniteWithCursorWord line<CR>"
@@ -45,6 +45,8 @@ if dein#tap('coc.nvim')
         nmap <silent> gr <Plug>(coc-references)
         " Use K for show documentation in preview window
         nnoremap <silent> K :call <SID>show_documentation()<CR>
+        " Use <c-space> for trigger completion.
+        inoremap <silent><expr> <c-space> coc#refresh()
 
 endif
         function! s:show_documentation()
@@ -56,21 +58,21 @@ endif
         endfunction
 
 if dein#tap('fzf.vim')
-    nnoremap <silent> <leader>f :call Fzf_dev()<CR>
-    nnoremap <silent> <leader>r :Rg<CR>
-    nnoremap <silent> <localleader>f :Rg <C-R><C-W><CR>
+        nnoremap <silent> <leader>f :call Fzf_dev()<CR>
+        nnoremap <silent> <leader>r :Rg<CR>
+        nnoremap <silent> <localleader>f :Rg <C-R><C-W><CR>
 endif
 
 
 if dein#tap('nerdtree')
-    "nerdtree
-        nnoremap <leader>e :NERDTreeToggle <CR>
+        "nerdtree
+        nnoremap <silent><leader>e :NERDTreeToggle <CR>
         "nnoremap <leader>f :NERDTreeFind <CR>
 endif
 
 if dein#tap('defx.nvim')
-	nnoremap <silent> <localleader>d
-		\ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+        nnoremap <silent> <localleader>e
+            \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
 endif
 
 if dein#tap('vim-go')
@@ -85,17 +87,39 @@ if dein#tap('vim-go')
                     \ | nmap <Leader>gr<Plug>(go-rename)
 endif
 
+if dein#tap('vim-mundo')
+    nnoremap <silent> <leader>m :MundoToggle<CR>
+endif
+
+
+if dein#tap('vim-quickrun')
+    nnoremap <silent> <localleader>r :QuickRun<CR>
+endif
+
+if dein#tap('dash.vim')
+        nnoremap <silent><localleader>d :Dash<CR>
+endif
+
+if dein#tap('vim-expand-region')
+        xmap v <Plug>(expand_region_expand)
+        xmap V <Plug>(expand_region_shrink)
+endif
+
+if dein#tap('splitjoin.vim')
+        let g:splitjoin_join_mapping = ''
+        let g:splitjoin_split_mapping = ''
+        nmap sj :SplitjoinJoin<CR>
+        nmap sk :SplitjoinSplit<CR>
+endif
+
 if dein#tap('tagbar')
-        nnoremap <localleader>g :TagbarToggle<CR>
+        nnoremap <silent><localleader>g :TagbarToggle<CR>
 endif
 
 if dein#tap('ale')
-        "普通模式下，sp前往上一个错误或警告，sn前往下一个错误或警告
         nmap [a <Plug>(ale_next_wrap)
         nmap ]a <Plug>(ale_previous_wrap)
-        "<Leader>s触发/关闭语法检查
         nmap <Leader>s :ALEToggle<CR>
-        "<Leader>d查看错误或警告的详细信息
         nmap <Leader>d :ALEDetail<CR>
 endif
 
@@ -106,7 +130,7 @@ if dein#tap('vim-easymotion')
 endif
 
 if dein#tap('vim-which-key')
-		nnoremap <silent> <leader>      :<c-u>WhichKey ','<CR>
+		nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
 		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
 		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>

@@ -1,5 +1,11 @@
 "默认键位的映射
 
+inoremap <C-a> <home>
+inoremap <C-e> <end>
+inoremap <c-d> <del>
+inoremap <c-_> <c-k>
+
+
 " Write buffer (save)保存
 noremap <Leader>w :w<CR>
 imap <C-S> <esc>:w<CR>
@@ -11,8 +17,8 @@ map <leader>n :nohl<CR>
 "插入模式下快速回到normal模式并且到新行
 inoremap <C-O> <Esc>o
 
-nnoremap <leader>bp :bp<CR>
-nnoremap <leader>bn :bn<CR>
+nnoremap  ]b :bp<CR>
+nnoremap  [b :bn<CR>
 "删除buffer
 nnoremap <C-x>  :bd<CR>
 
@@ -47,3 +53,4 @@ vmap    <s-tab>     <gv
 " settings for resize splitted window
 nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
+

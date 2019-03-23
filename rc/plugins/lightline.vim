@@ -2,7 +2,7 @@ let g:lightline = {
       \ 'colorscheme': 'space',
       \ 'active': {
       \   'left': [ ['homemode'],
-      \             ['fugitive', 'gitgutter'],['filename'],['tagbar'],['cocerror'],['cocwarn']],
+      \             ['fugitive', 'gitgutter'],['filename'],['cocerror'],['cocwarn']],
       \   'right':[ ['lineinfo'],
       \             ['percent'], ['fileformat','fileencoding'] ],
       \ },
@@ -29,7 +29,6 @@ let g:lightline = {
       \   'readonly': 'LightLineReadonly',
       \   'modified': 'LightLineModified',
       \   'filename': 'LightLineFname',
-      \    'tagbar' : 'LightLineTagbar',
       \   'filetype': 'LightLineFiletype',
       \   'fileformat': 'LightLineFileformat',
       \ },
@@ -41,11 +40,16 @@ let g:lightline = {
 function! LightlineMode()
   let nr = s:get_buffer_number()
   let nmap = [ '⓿ ',  '❶ ',  '❷ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ','➓ ','⓫ ','⓬ ','⓭ ','⓮ ','⓯ ','⓰ ','⓱ ','⓲ ','⓳ ','⓴ ']
-  let num = nmap[nr]
   if nr == 0
     return ''
   endif
-  return join(['🌈',num])
+  let l:number = nr
+  let l:result = ''
+  for i in range(1, strlen(l:number))
+    let l:result = get(nmap, l:number % 10, l:number % 10) . l:result
+    let l:number = l:number / 10
+  endfor
+  return join(['🌈',l:result])
 endfunction
 function! s:get_buffer_number()
   let i = 0
@@ -111,7 +115,7 @@ function! LightLineCocWarn() abort
   if get(info, 'warning', 0)
     call add(warnmsgs, warning_sign . info['warning'])
   endif
-  return trim(join(warnmsgs, ' ') . ' ' . get(g:, 'coc_status', ''))
+ return trim(join(warnmsgs, ' ') . ' ' . get(g:, 'coc_status', ''))
 endfunction
 
 autocmd User CocDiagnosticChange call lightline#update()
@@ -147,11 +151,6 @@ function! LightLineFilename()
   return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
         \ ('' != expand('%:t') ? expand('%:t') : '') .
         \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
-endfunction
-
-function! LightLineTagbar() abort
-  let s = tagbar#currenttag("%s", "","f")
-  return s
 endfunction
 
 function! LightLineFiletype()

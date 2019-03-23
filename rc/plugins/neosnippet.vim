@@ -11,9 +11,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 inoremap <silent><expr> <c-space> coc#refresh()
 
 imap <expr><S-Tab> pumvisible() ? "\<C-p>" : "<Plug>delimitMateS-Tab"
-imap <expr><CR>
-            \ pumvisible() ? "\<c-y>" :
-            \ delimitMate#WithinEmptyPair() ? "\<C-R>=delimitMate#ExpandReturn()\<CR>" : "\<CR>"
+imap <expr> <CR> pumvisible() ? "\<C-y>" : "<Plug>delimitMateCR"
+
 
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 

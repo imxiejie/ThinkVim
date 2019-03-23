@@ -1,8 +1,69 @@
+[[plugins]]
+repo = 'rizzatti/dash.vim'
+on_map = [['n','<Plug>']]
+hook_add = '''
+  let g:dash_map = {
+  \ 'javascript': ['javascript', 'NodeJS'],
+  \ 'html': ['html', 'svg'],
+  \ 'go' : 'Go',
+  \}
+'''
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = ['QuickRun']
+hook_add = '''
+    let g:quickrun_config = {
+    \   "_" : {
+    \       "outputter" : "message",
+    \   },
+    \}
+    let g:quickrun_no_default_key_mappings = 1
+'''
 
 [[plugins]]
-repo = 'ctrlpvim/ctrlp.vim'
+repo = 'tpope/vim-markdown'
+on_ft = 'markdown'
+hook_add = '''
+let g:markdown_fenced_languages = [
+      \ 'html',
+      \ 'bash=sh',
+      \ 'css',
+      \ 'javascript',
+      \ 'js=javascript',
+      \ 'typescript',
+      \ 'go',
+      \]
+'''
+
+[[plugins]]
+repo = 'junegunn/vim-emoji'
+on_ft =['markdown','vim']
+
+[[plugins]]
+repo = 'simnalamburt/vim-mundo'
 on_map = [['n','<Plug>']]
-hook_add = 'source ~/.config/nvim/rc/plugins/search.vim'
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+on_func = 'textobj#user#'
+
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
+on_map = [['v','<C-n>']]
+hook_add = 'source ~/.config/nvim/rc/plugins/vim-mulitiple-cursor.vim'
+
+[[plugins]]
+repo ='terryma/vim-expand-region'
+on_map = [['x','<Plug>']]
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+depends = ['vim-repeat']
+on_map = ['cs','ys']
+
+[[plugins]]
+repo = 'tpope/vim-repeat'
+on_map = '.'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
@@ -14,10 +75,10 @@ repo = 'liuchengxu/vim-which-key'
 on_cmd = ['WhichKey', 'WhichKey!']
 hook_add = 'source ~/.config/nvim/rc/plugins/whichkey.vim'
 hook_post_source = '''
-call which_key#register(',', 'g:which_key_map')
-call which_key#register(';', 'g:which_key_localmap')
-call which_key#register('[', 'g:which_key_rsbgmap')
-call which_key#register('[', 'g:which_key_lsbgmap')
+    call which_key#register('<Space>', 'g:which_key_map')
+    call which_key#register(';', 'g:which_key_localmap')
+    call which_key#register('[', 'g:which_key_rsbgmap')
+    call which_key#register('[', 'g:which_key_lsbgmap')
 '''
 
 [[plugins]]
@@ -35,31 +96,31 @@ hook_source = '''
 repo = 'scrooloose/nerdtree'
 on_map = [['n','<Plug>']]
 depends = ['vim-devicons','vim-nerdtree-syntax-highlight']
-#hook_add = 'source ~/.config/nvim/rc/plugins/allkey.vim'
 hook_source = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
 
 [[plugins]]
 repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
 hook_add = '''
-let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-let g:NERDTreeDisableExactMatchHighlight = 1
-let g:NERDTreeDisablePatternMatchHighlight = 1
-let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
+    let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+    let g:NERDTreeDisableExactMatchHighlight = 1
+    let g:NERDTreeDisablePatternMatchHighlight = 1
+    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
 '''
 
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-on_cmd = 'Defx'
-hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+#[[plugins]]
+#repo = 'Shougo/defx.nvim'
+#on_cmd = 'Defx'
+#hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
 
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
-on_source = 'defx.nvim'
+#[[plugins]]
+#repo = 'kristijanhusak/defx-icons'
+#on_source = 'defx.nvim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 on_path = ".*"
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
+
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
@@ -94,27 +155,31 @@ repo = 'luochen1990/rainbow'
 on_ft = ['py','js','jsx','html','css','go','vim','toml']
 hook_source = 'let g:rainbow_active = 1'
 
-[[plugins]]
-repo = 'Shougo/neosnippet.vim'
-depends = ['neosnippet-snippets']
-on_event = 'InsertCharPre'
-on_ft = 'snippet'
-hook_add = '''
-let g:neosnippet#snippets_directory='~/.config/nvim/rc/snippets/'
-'''
-hook_source = '''
-source ~/.config/nvim/rc/plugins/neosnippet.vim
-'''
+#[[plugins]]
+#repo = 'Shougo/neosnippet.vim'
+#depends = ['neosnippet-snippets']
+#on_event = 'InsertCharPre'
+#on_ft = 'snippet'
+#hook_add = '''
+#let g:neosnippet#snippets_directory='~/.config/nvim/rc/snippets/'
+#'''
+#hook_source = '''
+#source ~/.config/nvim/rc/plugins/neosnippet.vim
+#'''
 
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+#[[plugins]]
+#repo = 'Shougo/neosnippet-snippets'
+
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
 hook_source = 'source ~/.config/nvim/rc/plugins/denite.vim'
-#hook_add = 'source ~/.config/nvim/rc/plugins/allkey.vim'
 
+[[plugins]]
+repo = 'Shougo/echodoc.vim'
+on_event='CompleteDone'
+hook_post_source = 'call echodoc#enable()'
 
 [[plugins]]
 repo = 'w0rp/ale'
@@ -155,6 +220,11 @@ on_ft = ['go']
 hook_source = 'source ~/.config/nvim/rc/plugins/vim-go.vim'
 
 [[plugins]]
+repo = 'AndrewRadev/splitjoin.vim'
+on_map = [['n','<Plug>Splitjoin']]
+
+
+[[plugins]]
 repo = 'elzr/vim-json'
 on_ft = ['json']
 hook_add = 'let g:vim_json_syntax_conceal = 0 '
@@ -163,20 +233,20 @@ hook_add = 'let g:vim_json_syntax_conceal = 0 '
 repo = 'cespare/vim-toml'
 on_ft= ['toml']
 
-[[plugins]]
-repo = 'benekastah/neomake'
-on_cmd = [ 'Neomake', 'NeomakeFile', 'NeomakeEnable' ]
-hook_source = 'source ~/.config/nvim/rc/plugins/neomake.vim'
-hook_add = '''
-    let g:lint_types = [
-      \   'python', 'vim', 'go', 'sh',
-      \  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
-      \  'markdown', 'html', 'yaml'
-      \ ]
-    autocmd MyAutoCmd BufWritePost *
-      \  if expand('%:p') !~ $VIMPATH
-      \      && index(g:lint_types, &filetype) > -1
-      \      && empty(&buftype)
-      \|   Neomake
-      \| endif
-'''
+#[[plugins]]
+#repo = 'benekastah/neomake'
+#on_cmd = [ 'Neomake', 'NeomakeFile', 'NeomakeEnable' ]
+#hook_source = 'source ~/.config/nvim/rc/plugins/neomake.vim'
+#hook_add = '''
+    #let g:lint_types = [
+      #\   'python', 'vim', 'go', 'sh',
+      #\  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
+      #\  'markdown', 'html', 'yaml'
+      #\ ]
+    #autocmd MyAutoCmd BufWritePost *
+      #\  if expand('%:p') !~ $VIMPATH
+      #\      && index(g:lint_types, &filetype) > -1
+      #\      && empty(&buftype)
+      #\|   Neomake
+      #\| endif
+#'''

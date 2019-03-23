@@ -1,16 +1,12 @@
 [[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
 repo = 'taigacute/space-vim-theme'
 hook_add = 'let g:space_vim_plugin_hi_groups = 1'
 
-
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'tpope/vim-repeat'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -35,7 +31,6 @@ repo = 'taigacute/spaceline.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
 
 [[plugins]]
 repo = 'sbdchd/neoformat'
@@ -68,12 +63,11 @@ function! StartifyEntryFormat()
 endfunction
 '''
 
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = 'yarn install'
-hook_add = '''
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
-let g:coc_status_error_sign = '•'
-let g:coc_status_warning_sign = '•'
-'''
+hook_add = 'source ~/.config/nvim/rc/plugins/coc.vim'

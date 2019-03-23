@@ -38,6 +38,7 @@ endif
 
 call s:source_rc('dein.vim')
 call s:source_rc('plugins/allkey.vim')
+
 syntax enable
 filetype plugin indent on
 call dein#call_hook('source')

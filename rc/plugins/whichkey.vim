@@ -1,6 +1,6 @@
 let g:which_key_map =  {}
 let g:which_key_map = {
-      \ 'name' : '+Leaderkey' ,
+      \ 'name' : 'ThinkVimRoot ' ,
       \ '1' : 'Buffer-1'      ,
       \ '2' : 'Buffer-2'      ,
       \ '3' : 'Buffer-3'      ,
@@ -11,9 +11,10 @@ let g:which_key_map = {
       \ '8' : 'Buffer-8'      ,
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
-      \ 'e' : 'Open-nerdtree' ,
+      \ 'e' : 'OpenNerdtree' ,
       \ 'f' : 'FzfFileFind' ,
-      \ 'r' : 'FzfRg' ,
+      \ 'r' : 'FzfRgFind' ,
+      \ 'm' : 'OpenMundo' ,
       \ 'n' : 'Cancelhighlight',
       \ 's' : 'ALEToggle',
       \ 'd' : 'ALEDetail',
@@ -28,11 +29,6 @@ let g:which_key_map = {
             \ },
       \ 'c' : {
             \ 'name' : '+NerdCommenter',
-            \ },
-      \ 'b' : {
-            \ 'name' : '+Buffer',
-            \ 'n'    : 'NextBuffer',
-            \ 'p'    : 'PreBuffer',
             \ },
       \ 'g' : {
             \ 'name' : '+vim-go',
@@ -71,20 +67,23 @@ let g:which_key_localmap ={
       \ 'f'    : 'FzfRgWord',
       \ 'l'    : 'DeniteLine',
       \ 'o'    : 'DeniteFileOld',
-      \ 'r'    : 'DeniteFileMru',
+      \ 'r'    : 'QuickRun',
       \ 's'    : 'DeniteCode',
       \ 'w'    : 'DeniteCursorWorld',
-      \ 'd'    : 'DefxToggle',
+      \ 'e'    : 'DefxToggle',
+      \ 'd'    : 'Dash',
       \ }
 
 let g:which_key_rsbgmap = {
       \ 'name' : '+RightSquarebrackets',
       \ 'a'    : 'AleNextWarp',
       \ 'c'    : 'CocDiagnosticsNext',
+      \ 'b'    : 'NextBuffer',
       \ }
 
 let g:which_key_lsbgmap = {
       \ 'name' : '+LeftSquarebrackets',
       \ 'a'    : 'AlePreWarp',
       \ 'c'    : 'CocDiagnosticsPre',
+      \ 'b'    : 'PreBuffer',
       \ }
