@@ -3,15 +3,12 @@
 
 Hybrid                                                                                | taigacute/space-vim-theme
 :----:                                                                                | :----:
-![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/spaceversion.png)
+![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/space-thinkvim.png)
 
 ### Gif
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
-## Update 2019-2-23
-* 在lingtline中添加了emoji，coc添加了emoji，如果你也喜欢需要使用支持emoji的终端，你同样可以去掉这样emoji替换任意你喜欢的符号。
-## 我的宗旨
-* vim是自由的。它的每一个位置都应该是你喜欢想要的样子。对吗？大而全也许是省心省力的，我相信那也不是你想要的，vim不折腾那还叫vim吗？ThinkVim只是减少了你折腾的时间，帮助你模块化。
+
 ## FAQ
 ### 1.和 Spacevim，Space-vim 有什么区别？
 * 这个配置只是我自己的配置。与 Spacevim Space-vim 不同，它们可以说是个项目了。我的有很多需要你自己改。我只是提供一个模块的小巧以管理的配置。只是取了个名字，然后我的配置没那么多方便的功能，比如简单的管理想添加什么只需要设置 layer 或者其他 easy 的操作，我的要你自己添加插件配置插件改动文件。大家的触发点不一样。但是都是 vim 的爱好者。
@@ -32,8 +29,8 @@ Hybrid                                                                          
 ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，我推荐用rg看你的喜好与习惯，不用的就删除即可。
 
 ## 特性
-- 模块化
-- 懒加载百分之80插件
+- 模块插件配置
+- 懒加载百分之85插件
 - 启动速度快
 - 完全自定义
 - LSP语言服务支持
@@ -82,27 +79,27 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 Name           | Description
 -------------- | ----------------------
 [scrooloose/nerdcommenter] | 注释插件
-[tpope/vim-surround] |  符号成双成对
-[tpope/vim-repeat] | 重复上一次操作
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
 [vim-airline/vim-airline]（已注释） | 状态栏
 [vim-airline/vim-airline-theme]（已注释）| airline主题插件
 [tpope/vim-fugitive] | git插件 
-[rking/ag.vim] |  搜索插件
 [sbdchd/neoformat] | 格式化插件
 [yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
 [junegunn/fzf] |  搜索插件
 [junegunn/fzf.vim] | 搜索插件
 [ryanoasis/vim-devicons] |  字体图标
 [mhinz/vim-startify] | 启动画面
-[neoclide/coc.nvim] | 补全插件
+
 
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
 [Yggdroot/indentLine] | 缩进线
+[tpope/vim-surround] |  符号成双成对
+[tpope/vim-repeat] | 重复上一次操作
+[neoclide/coc.nvim] | 补全插件
 [liuchengxu/vim-which-key] | 键位查找
 [easymotion/vim-easymotion] | 快速移动
 [scrooloose/nerdtree] | 文件管理
@@ -144,16 +141,18 @@ Name           | Description
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
    * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已带此主题。
-## 教程
-   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
 
-## Feedback
-  * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
+## Backers
+
+
 ## Donation
   * 如果对你有帮助，You Can Buy Me a Coffee By WeChat:)  
   ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/wechat.png)
+## 教程
+   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
+## Feedback
+  * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
 ## 鸣谢
-站在了巨人的肩膀上，参考了rafi和Shougo的配置，也感谢Shougo一直的指导
 * [rafi](https://github.com/rafi/vim-config)
 * [Shougo](https://github.com/Shougo)
 
