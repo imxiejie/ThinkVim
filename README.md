@@ -81,7 +81,6 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[scrooloose/nerdcommenter] | 注释插件
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
