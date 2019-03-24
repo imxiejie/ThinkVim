@@ -105,14 +105,12 @@ Name           | Description
 [easymotion/vim-easymotion] | 快速移动
 [scrooloose/nerdtree] | 文件管理
 [tiagofumo/vim-nerdtree-syntax-highlight] | nerdtree高亮
-[Shougo/defx.nvim] | 文件管理(更高效)
+[Shougo/defx.nvim] | 文件管理
 [kristijanhusak/defx-icons] | defx图标
 [airblade/vim-gitgutter] | git信息
 [majutsushi/tagbar] | 代码变量函数跳转显示插件
 [mattn/emmet-vim] | 快速生成html插件
 [Raimondi/delimitMate] | 符号补全插件
-[Shougo/neosnippet.vim] | 代码片段
-[Shougo/neosnippet-snippets] | 代码片段
 [Shougo/denite.nvim] | 搜索插件
 [ctrlpvim/ctrlp.vim] |  搜索插件
 [w0rp/ale] | 语法检查
