@@ -35,8 +35,15 @@ let g:which_key_map = {
             \ 'name' : '+NerdCommenter',
             \ },
       \ 'g' : {
-            \ 'name' : '+vim-go',
+            \ 'name' : '+Go Easygit',
             \ 'r'    : 'GoRename',
+            \ 'd'    : 'Gdiff',
+            \ 'D'    : 'Gdiff',
+            \ 'c'    : 'Gcommit',
+            \ 'b'    : 'Gblame',
+            \ 'B'    : 'Gbrowse',
+            \ 'S'    : 'Gstatus',
+            \ 'p'    : 'Gpush',
             \ 'o ': {
                 \ 'name':'+GoTool',
                 \ 'i'   :'GoInfo',
@@ -45,10 +52,7 @@ let g:which_key_map = {
                 \ 'b'   :'GoBuild',
                 \ 't'   :'GoTest',
                 \ 'c'   :'GoCoverage',
-                \ },
-             \ 'd':{
-                \ 'name':'+GoTool',
-                \ 'v': 'GodefVertical',
+                \ 'v'   :'GoDef',
                 \ },
             \ },
       \ }

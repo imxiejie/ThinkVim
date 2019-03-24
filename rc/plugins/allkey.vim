@@ -80,14 +80,24 @@ endif
 
 if dein#tap('vim-go')
      autocmd MyAutoCmd FileType go
-                    \  nmap <Leader>gdv <Plug>(go-def-vertical)
+                    \  nmap <Leader>gov <Plug>(go-def-vertical)
                     \ | nmap <Leader>goi <Plug>(go-info)
                     \ | nmap <Leader>god <Plug>(go-doc)
                     \ | nmap <leader>gor <Plug>(go-run)
                     \ | nmap <leader>gob <Plug>(go-build)
                     \ | nmap <leader>got <Plug>(go-test)
                     \ | nmap <leader>goc <Plug>(go-coverage)
-                    \ | nmap <Leader>gr<Plug>(go-rename)
+                    \ | nmap <Leader>gr  <Plug>(go-rename)
+endif
+
+if dein#tap('vim-easygit')
+	nnoremap <silent> <leader>gd :Gdiff<CR>
+	nnoremap <silent> <leader>gD :Gdiffoff<CR>
+	nnoremap <silent> <leader>gc :Gcommit<CR>
+	nnoremap <silent> <leader>gb :Gblame<CR>
+	nnoremap <silent> <leader>gB :Gbrowse<CR>
+	nnoremap <silent> <leader>gS :Gstatus<CR>
+	nnoremap <silent> <leader>gp :Gpush<CR>
 endif
 
 if dein#tap('vim-mundo')
@@ -101,6 +111,16 @@ endif
 
 if dein#tap('dash.vim')
         nnoremap <silent><localleader>d :Dash<CR>
+endif
+
+if dein#tap('vim-bookmarks')
+	nmap mc <Plug>BookmarkClear
+	nmap mx <Plug>BookmarkClearAll
+	nmap ma <Plug>BookmarkShowAll
+	nmap mn <Plug>BookmarkNext
+	nmap mp <Plug>BookmarkPrev
+	nmap mm <Plug>BookmarkToggle
+	nmap mi <Plug>BookmarkAnnotate
 endif
 
 if dein#tap('vim-expand-region')

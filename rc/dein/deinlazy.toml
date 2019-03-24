@@ -1,4 +1,18 @@
 [[plugins]]
+repo = 'chemzqm/vim-easygit'
+on_cmd = ['Gcd', 'Glcd', 'Gcommit', 'Gblame', 'Gstatus', 'Gdiff', 'Gbrowse', 'Gstatus', 'Gpush']
+hook_source = 'let g:easygit_enable_command = 1'
+
+[[plugins]]
+repo = 'MattesGroeger/vim-bookmarks'
+on_path = '.*'
+hook_source = '''
+    let g:bookmark_auto_save_file = $TMP.'/bookmarks'
+    let g:bookmark_no_default_key_mappings = 1
+    let g:bookmark_disable_ctrlp = 1
+'''
+
+[[plugins]]
 repo = 'scrooloose/nerdcommenter'
 on_ft =['vim','json','go','html','js','jsx','py','css','less','tmpl','toml','xml','sql']
 
@@ -120,14 +134,6 @@ hook_add = '''
     let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
 '''
 
-#[[plugins]]
-#repo = 'Shougo/defx.nvim'
-#on_cmd = 'Defx'
-#hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
-
-#[[plugins]]
-#repo = 'kristijanhusak/defx-icons'
-#on_source = 'defx.nvim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
@@ -167,22 +173,6 @@ hook_source = '''
 repo = 'luochen1990/rainbow'
 on_ft = ['py','js','jsx','html','css','go','vim','toml']
 hook_source = 'let g:rainbow_active = 1'
-
-#[[plugins]]
-#repo = 'Shougo/neosnippet.vim'
-#depends = ['neosnippet-snippets']
-#on_event = 'InsertCharPre'
-#on_ft = 'snippet'
-#hook_add = '''
-#let g:neosnippet#snippets_directory='~/.config/nvim/rc/snippets/'
-#'''
-#hook_source = '''
-#source ~/.config/nvim/rc/plugins/neosnippet.vim
-#'''
-
-#[[plugins]]
-#repo = 'Shougo/neosnippet-snippets'
-
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
@@ -236,7 +226,6 @@ hook_source = 'source ~/.config/nvim/rc/plugins/vim-go.vim'
 repo = 'AndrewRadev/splitjoin.vim'
 on_map = [['n','<Plug>Splitjoin']]
 
-
 [[plugins]]
 repo = 'elzr/vim-json'
 on_ft = ['json']
@@ -249,6 +238,30 @@ on_ft= ['toml']
 [[plugins]]
 repo = 'vim-scripts/xml.vim'
 on_ft = ['xml']
+
+#[[plugins]]
+#repo = 'Shougo/defx.nvim'
+#on_cmd = 'Defx'
+#hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+
+#[[plugins]]
+#repo = 'kristijanhusak/defx-icons'
+#on_source = 'defx.nvim'
+
+#[[plugins]]
+#repo = 'Shougo/neosnippet.vim'
+#depends = ['neosnippet-snippets']
+#on_event = 'InsertCharPre'
+#on_ft = 'snippet'
+#hook_add = '''
+#let g:neosnippet#snippets_directory='~/.config/nvim/rc/snippets/'
+#'''
+#hook_source = '''
+#source ~/.config/nvim/rc/plugins/neosnippet.vim
+#'''
+
+#[[plugins]]
+#repo = 'Shougo/neosnippet-snippets'
 
 #[[plugins]]
 #repo = 'benekastah/neomake'
