@@ -58,9 +58,12 @@ endif
         endfunction
 
 if dein#tap('fzf.vim')
-        nnoremap <silent> <leader>f :call Fzf_dev()<CR>
-        nnoremap <silent> <leader>r :Rg<CR>
+        nnoremap <silent> <leader>fc :call Fzf_color()<CR>
+        nnoremap <silent> <leader>ff :call Fzf_dev()<CR>
+        nnoremap <silent> <leader>fr :Rg<CR>
         nnoremap <silent> <localleader>f :Rg <C-R><C-W><CR>
+        nnoremap <silent> <leader>fgc  :Commits<CR>
+        nnoremap <silent> <leader>fbc :BCommits<CR>
 endif
 
 

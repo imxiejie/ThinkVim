@@ -1,3 +1,7 @@
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -14,6 +18,9 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+let g:fzf_commits_log_options = '--graph --color=always
+  \ --format="%C(yellow)%h%C(red)%d%C(reset)
+  \ - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)"'
 
 "let $FZF_DEFAULT_COMMAND = 'ag --hidden -l -g ""'
 " ripgrep
@@ -54,4 +61,10 @@ function! Fzf_dev()
         \ 'sink':   function('s:edit_file'),
         \ 'options': '-m ' . l:fzf_files_options,
         \ 'down':    '40%' })
+endfunction
+
+function! Fzf_color()
+     call fzf#run({'source': map(split(globpath(&rtp, 'colors/*.vim')),
+            \               'fnamemodify(v:val, ":t:r")'),
+            \ 'sink': 'colo', 'down': '25%'})
 endfunction

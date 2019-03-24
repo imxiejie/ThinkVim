@@ -12,8 +12,12 @@ let g:which_key_map = {
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
       \ 'e' : 'OpenNerdtree' ,
-      \ 'f' : 'FzfFileFind' ,
-      \ 'r' : 'FzfRgFind' ,
+      \ 'f' : {
+            \ 'name' : '+FzfCommand',
+            \ 'f' : 'FindFile',
+            \ 'r' : 'RgSearch',
+            \ 'c' : 'ColorChange',
+            \ },
       \ 'm' : 'OpenMundo' ,
       \ 'n' : 'Cancelhighlight',
       \ 's' : 'ALEToggle',
@@ -21,7 +25,7 @@ let g:which_key_map = {
       \ 'w' : 'Save',
       \ 'h' : 'Tabpre',
       \ 'l' : 'Tabnext',
-      \ ',' : {
+      \ 'space' : {
             \ 'name' : '+Easymotion',
             \ 'w' : 'Easymotion-w',
             \ 'b' : 'Easymotion-b',
