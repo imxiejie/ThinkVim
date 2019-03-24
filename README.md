@@ -22,6 +22,16 @@ Hybrid                                                                          
 ### 4.ag和rg如何选择？
 ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，我推荐用rg看你的喜好与习惯，不用的就删除即可。
 
+--
+## 更新--> 2019.3.24
+* 添加了许多功能性插件
+* 整体优化
+* 调整一些正常加载插件懒加载  
+
+PluginTotal    | StartupTime
+-------------- | ----------------------
+48 | 90ms
+
 ## 特性
 - 模块插件配置
 - 懒加载百分之90插件
@@ -75,17 +85,15 @@ Name           | Description
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
-[vim-airline/vim-airline]（已注释） | 状态栏
-[vim-airline/vim-airline-theme]（已注释）| airline主题插件
 [tpope/vim-fugitive] | git插件 
-[sbdchd/neoformat] | 格式化插件
-[yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
-[junegunn/fzf] |  搜索插件
+[junegunn/fzf] |  
 [junegunn/fzf.vim] | 搜索插件
 [ryanoasis/vim-devicons] |  字体图标
 [mhinz/vim-startify] | 启动画面
 [neoclide/coc.nvim] | 补全插件
 [hona/vim-snippets] | 代码片段
+[vim-airline/vim-airline]（已注释） | 状态栏
+[vim-airline/vim-airline-theme]（已注释）| airline主题插件
 
 
 ## 懒加载插件
@@ -94,6 +102,10 @@ Name           | Description
 [Yggdroot/indentLine] | 缩进线
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
+[sbdchd/neoformat] | 格式化插件
+[yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
+[chemzqm/vim-easygit] | 更简单的git操作
+[MAttesGroeger/vim-bookmarks] | bookmark插件
 [thinca/quickrun] | 快速输出
 [tpope/vim-markdown] | markdown插件
 [junegunn/vim-emoji] | emoji补全
