@@ -6,9 +6,6 @@ repo = 'taigacute/space-vim-theme'
 hook_add = 'let g:space_vim_plugin_hi_groups = 1'
 
 [[plugins]]
-repo = 'scrooloose/nerdcommenter'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
@@ -32,12 +29,6 @@ repo = 'taigacute/spaceline.vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'sbdchd/neoformat'
-hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
-
-[[plugins]]
-repo = 'yonchu/accelerated-smooth-scroll'
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -62,7 +53,6 @@ function! StartifyEntryFormat()
     return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
 endfunction
 '''
-
 
 [[plugins]]
 repo = 'honza/vim-snippets'

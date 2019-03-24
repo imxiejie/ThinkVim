@@ -1,4 +1,17 @@
 [[plugins]]
+repo = 'scrooloose/nerdcommenter'
+on_ft =['vim','json','go','html','js','jsx','py','css','less','tmpl','toml','xml','sql']
+
+[[plugins]]
+repo = 'sbdchd/neoformat'
+on_cmd = ['Neoformat','Neoformat!']
+hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
+
+[[plugins]]
+repo = 'yonchu/accelerated-smooth-scroll'
+on_map = ['<C-d>','<C-u>','<C-f>','<C-b>']
+
+[[plugins]]
 repo = 'rizzatti/dash.vim'
 on_map = [['n','<Plug>']]
 hook_add = '''
