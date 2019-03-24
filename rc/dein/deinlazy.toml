@@ -233,6 +233,10 @@ hook_add = 'let g:vim_json_syntax_conceal = 0 '
 repo = 'cespare/vim-toml'
 on_ft= ['toml']
 
+[[plugins]]
+repo = 'vim-scripts/xml.vim'
+on_ft = ['xml']
+
 #[[plugins]]
 #repo = 'benekastah/neomake'
 #on_cmd = [ 'Neomake', 'NeomakeFile', 'NeomakeEnable' ]

@@ -1,6 +1,6 @@
 "---------------------------------------------------------------------------
 " Initialize:
-""Use ',' instead of '\'.
+""Use 'Space' instead of '\'.
 " Use <Leader> in global plugin.
 let g:mapleader = "\<Space>"
 " Use <LocalLeader> in filetype plugin.
@@ -9,17 +9,23 @@ let g:maplocalleader = ';'
 
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
+let g:python_host_skip_check = 1
 " Path to python interpreter for neovim
 let g:python3_host_prog  = '/usr/local/bin/python3'
+let g:python_host_prog  = '/usr/local/bin/python'
 
 
 let $CONFIG = expand('~/.config')
-
+let $TMP = expand('~/.tmp/')
 
 if !isdirectory(expand($CONFIG))
   call mkdir(expand($CONFIG), 'p')
 endif
 
+if ! isdirectory(expand($VARPATH))
+	" Create missing dirs i.e. cache/{undo,backup}
+	call mkdir(expand('$TMP/undo'), 'p')
+endif
 
 " Load dein.
 let s:dein_dir = finddir('dein.vim', '.;')
