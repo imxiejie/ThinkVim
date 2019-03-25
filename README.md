@@ -23,10 +23,11 @@ Hybrid                                                                          
 ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，我推荐用rg看你的喜好与习惯，不用的就删除即可。
 
 --
-## 更新--> 2019.3.24
-* 添加了许多功能性插件
+## Change（2019.3.25）
+* 添加了许多功能性插件详见插件列表
 * 整体优化
 * 调整一些正常加载插件懒加载  
+* 启动时间`nvim --startuptime ~/vimstart.log` :
 
 PluginTotal    | StartupTime
 -------------- | ----------------------
