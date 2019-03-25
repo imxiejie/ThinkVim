@@ -11,6 +11,16 @@ let g:which_key_map = {
       \ '8' : 'Buffer-8'      ,
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
+      \ 'b' : {
+            \ 'name' : '+BookMarks',
+            \ 'x' : 'BookmarkClear',
+            \ 'a' : 'BookmarkShowAll',
+            \ 'c' : 'BookmarkClearAll',
+            \ 'n' : 'BookmarkNext',
+            \ 'p' : 'BookmarkPrev',
+            \ 'm' : 'BookmarkToggle',
+            \ 'i' : 'BookmarkAnnotate',
+            \ },
       \ 'e' : 'OpenNerdtree' ,
       \ 'f' : {
             \ 'name' : '+FzfCommand',

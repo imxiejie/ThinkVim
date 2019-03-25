@@ -167,7 +167,6 @@ repo = 'Raimondi/delimitMate'
 on_event = 'InsertEnter'
 hook_source = '''
     let g:delimitMate_expand_cr = 1
-    let g:delimitMate_excluded_ft = 'html'
 '''
 [[plugins]]
 repo = 'luochen1990/rainbow'

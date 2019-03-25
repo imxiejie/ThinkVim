@@ -114,13 +114,13 @@ if dein#tap('dash.vim')
 endif
 
 if dein#tap('vim-bookmarks')
-	nmap mc <Plug>BookmarkClear
-	nmap mx <Plug>BookmarkClearAll
-	nmap ma <Plug>BookmarkShowAll
-	nmap mn <Plug>BookmarkNext
-	nmap mp <Plug>BookmarkPrev
-	nmap mm <Plug>BookmarkToggle
-	nmap mi <Plug>BookmarkAnnotate
+	nmap <leader>bc <Plug>BookmarkClear
+	nmap <leader>bx <Plug>BookmarkClearAll
+	nmap <leader>ba <Plug>BookmarkShowAll
+	nmap <leader>bn <Plug>BookmarkNext
+	nmap <leader>bp <Plug>BookmarkPrev
+	nmap <leader>bm <Plug>BookmarkToggle
+	nmap <leader>bi <Plug>BookmarkAnnotate
 endif
 
 if dein#tap('vim-expand-region')
