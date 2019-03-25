@@ -1,4 +1,12 @@
 [[plugins]]
+repo = 'honza/dockerfile.vim'
+on_ft = 'Dockerfile'
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+on_ft =['vim','json','go','html','js','jsx','py','css','less','tmpl','toml','xml','sql','Dockerfile']
+
+[[plugins]]
 repo = 'chemzqm/vim-easygit'
 on_cmd = ['Gcd', 'Glcd', 'Gcommit', 'Gblame', 'Gstatus', 'Gdiff', 'Gbrowse', 'Gstatus', 'Gpush']
 hook_source = 'let g:easygit_enable_command = 1'

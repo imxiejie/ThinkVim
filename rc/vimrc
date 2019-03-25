@@ -36,11 +36,12 @@ if has('vim_starting')
   call s:source_rc('init.vim')
 endif
 
-call s:source_rc('dein.vim')
+call s:source_rc('deinrc.vim')
 call s:source_rc('plugins/allkey.vim')
 
 syntax enable
 filetype plugin indent on
+
 call dein#call_hook('source')
 call dein#call_hook('post_source')
 

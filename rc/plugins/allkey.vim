@@ -58,7 +58,7 @@ endif
         endfunction
 
 if dein#tap('fzf.vim')
-        nnoremap <silent> <leader>fc :call Fzf_color()<CR>
+        nnoremap <silent> <leader>fc :Colors<CR>
         nnoremap <silent> <leader>ff :call Fzf_dev()<CR>
         nnoremap <silent> <leader>fr :Rg<CR>
         nnoremap <silent> <localleader>f :Rg <C-R><C-W><CR>
@@ -66,6 +66,13 @@ if dein#tap('fzf.vim')
         nnoremap <silent> <leader>fbc :BCommits<CR>
 endif
 
+if dein#tap('vim-easy-align')
+    " Start interactive EasyAlign in visual mode (e.g. vipga)
+    xmap ga <Plug>(EasyAlign)
+
+    " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+    nmap ga <Plug>(EasyAlign)
+endif
 
 if dein#tap('nerdtree')
         "nerdtree
