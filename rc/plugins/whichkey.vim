@@ -35,7 +35,7 @@ let g:which_key_map = {
       \ 'w' : 'Save',
       \ 'h' : 'Tabpre',
       \ 'l' : 'Tabnext',
-      \ 'space' : {
+      \ 'SPC' : {
             \ 'name' : '+Easymotion',
             \ 'w' : 'Easymotion-w',
             \ 'b' : 'Easymotion-b',

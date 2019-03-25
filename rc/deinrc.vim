@@ -24,7 +24,7 @@ if dein#load_state(s:path)
 		echoerr v:exception
 		echomsg 'Error loading ...'
 		echomsg 'Caught: ' v:exception
-		echoerr 'Please run: pip3 install --user PyYAML'
+		echoerr 'error plugin.toml config'
 	endtry
     call dein#end()
     if ! s:is_sudo
