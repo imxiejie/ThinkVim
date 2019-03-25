@@ -30,7 +30,7 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 
 PluginTotal    | StartupTime
 -------------- | ----------------------
-48 | 90ms
+50 | 90ms
 
 ## 特性
 - 模块插件配置
@@ -98,6 +98,8 @@ Name           | Description
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
+[hona/dockerfile.vim] | Dockerfile支持
+[junegunn/vim-easyalign] | 快速对齐
 [Yggdroot/indentLine] | 缩进线
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
