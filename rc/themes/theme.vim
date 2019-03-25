@@ -10,8 +10,8 @@ endif
 
 set background=dark
 "colorscheme hybrid_reverse
-"colorscheme space_vim_theme
-colorscheme PaperColor
+colorscheme space_vim_theme
+"colorscheme PaperColor
 "colorscheme gruvbox
 
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
