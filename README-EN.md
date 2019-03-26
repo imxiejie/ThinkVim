@@ -8,6 +8,11 @@ Hybrid                                                                          
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
+## NOTICE
+
+* The English documentation has not been updated for a long time.
+
+
 ## Feature
 
 - Modular
