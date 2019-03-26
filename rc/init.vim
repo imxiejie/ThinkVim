@@ -22,7 +22,7 @@ if !isdirectory(expand($CONFIG))
   call mkdir(expand($CONFIG), 'p')
 endif
 
-if ! isdirectory(expand($VARPATH))
+if !isdirectory(expand($TMP))
 	" Create missing dirs i.e. cache/{undo,backup}
 	call mkdir(expand('$TMP/undo'), 'p')
 endif
