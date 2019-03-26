@@ -65,7 +65,6 @@ let g:markdown_fenced_languages = [
       \ 'css',
       \ 'javascript',
       \ 'js=javascript',
-      \ 'typescript',
       \ 'go',
       \]
 '''
