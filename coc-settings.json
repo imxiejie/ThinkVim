@@ -8,22 +8,24 @@
     "suggest.triggerCompletionWait": 50,
 	"diagnostic.errorSign": "😡",
 	"diagnostic.warningSign": "🤔",
+    //tslint
+    "tslint.autoFixOnSave": true,
+    "prettier.eslintIntegration": true,
+    "prettier.tslintIntegration": true,
+    "prettier.stylelintIntegration": true,
     "languageserver": {
-    "golang": {
-      "command": "bingo",
-      "args": ["--diagnostics-style=instant"],
-      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-      "filetypes": ["go"]
+     "golang": {
+      "command": "go-langserver",
+      "filetypes": ["go"],
+      "initializationOptions": {
+        "gocodeCompletionEnabled": true,
+        "diagnosticsEnabled": true,
+        "lintTool": "golint"
+      }
     },
     "dockerfile": {
       "command": "docker-langserver",
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
-    },
-    "efm": {
-      "command": "efm-langserver",
-      "args": [],
-      "filetypes": ["vim", "eruby", "markdown"]
     }
-  }
 }
