@@ -4,7 +4,7 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
-let g:coc_global_extensions =['coc-snippets','coc-prettier','coc-emmet','coc-tsserver','coc-tslint-plugin','coc-json','coc-pyls']
+let g:coc_global_extensions =['coc-snippets','coc-prettier','coc-eslint','coc-emmet','coc-tsserver','coc-tslint-plugin','coc-json','coc-python']
 
 augroup MyAutoCmd
   autocmd!
