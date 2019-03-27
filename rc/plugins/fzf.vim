@@ -5,7 +5,7 @@ autocmd  FileType fzf set laststatus=0 noshowmode noruler
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
+  \ 'bg':      ['bg', '#3a3a3a'],
   \ 'hl':      ['fg', 'Comment'],
   \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
   \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
@@ -35,27 +35,29 @@ let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 
 function! FloatingFZF()
   let buf = nvim_create_buf(v:false, v:true)
-  call setbufvar(buf, '&signcolumn', 'no')
+  call setbufvar(buf, 'number', 'no')
 
   let height = float2nr(&lines/2)
-  "let width = float2nr(&columns - (&columns * 2 / 10))
-  let width = &columns
-  let row = float2nr(&lines / 2)
-  let col = float2nr((&columns - width) / 2)
+  let width = float2nr(&columns - (&columns * 2 / 10))
+  "let width = &columns
+  let row = float2nr(&lines / 3)
+  let col = float2nr((&columns - width) / 3)
 
   let opts = {
         \ 'relative': 'editor',
         \ 'row': row,
         \ 'col': col,
         \ 'width': width,
-        \ 'height':height
+        \ 'height':height,
         \ }
-  call  nvim_open_win(buf, v:true, opts)
+  let win =  nvim_open_win(buf, v:true, opts)
+  call setwinvar(win, '&number', 0)
+  call setwinvar(win, '&relativenumber', 0)
 endfunction
 
 " Files + devicons
 function! Fzf_dev()
-  let l:fzf_files_options = '--layout=reverse --preview "rougify {2..-1} | head -'.&lines.'"'
+  let l:fzf_files_options = ' --preview "rougify {2..-1} | head -'.&lines.'"'
 
   function! s:files()
     let l:files = split(system($FZF_DEFAULT_COMMAND), '\n')
@@ -83,11 +85,6 @@ function! Fzf_dev()
         \ 'source': <sid>files(),
         \ 'sink':   function('s:edit_file'),
         \ 'options': '-m ' . l:fzf_files_options,
-        \ 'down':    '40%' })
-endfunction
-
-function! Fzf_color()
-     call fzf#run({'source': map(split(globpath(&rtp, 'colors/*.vim')),
-            \               'fnamemodify(v:val, ":t:r")'),
-            \ 'sink': 'colo', 'down': '25%'})
+        \ 'down':    '40%' ,
+        \ 'window': 'call FloatingFZF()'})
 endfunction
