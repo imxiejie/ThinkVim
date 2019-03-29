@@ -19,8 +19,7 @@ Hybrid                                                                          
 ### 3.新手能用吗？
 个人觉得对新手比较友好，而且我还在 b 站出了视频如何使用修改成自己的配置。
 
-### 4.ag和rg如何选择？
-ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，我推荐用rg看你的喜好与习惯，不用的就删除即可。
+
 
 --
 ## Change（2019.3.25）
@@ -45,11 +44,11 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 * macos or linux  (windows上需要修改一些变量）
 * neovim > 0.4.0
 * python3 support
+  - pip3 install --user pynvim
 * node and yarn
 * NerdFont
 ### 必要工具
 
-- ag (The Silver Searcher): [ggreer/the_silver_searcher](https://github.com/ggreer/the_silver_searcher)
 - rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
 - Universal ctags: [ctags.io](https://ctags.io/)
 - Rouge : `sudo gem install rouge`
