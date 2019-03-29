@@ -25,6 +25,7 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 --
 ## Change（2019.3.25）
 * 添加了许多功能性插件详见插件列表
+* 添加floatwindow到fzf的window
 * 整体优化
 * 调整一些正常加载插件懒加载  
 * 启动时间`nvim --startuptime ~/vimstart.log` :
