@@ -34,6 +34,7 @@ if s:dein_dir != '' || &runtimepath !~ '/dein.vim'
     let s:dein_dir = expand('$CONFIG/nvim')
           \. '/repos/github.com/Shougo/dein.vim'
     if !isdirectory(s:dein_dir)
+      echomsg 'Download dein plugin management wait a moment'
       execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
     endif
   endif
