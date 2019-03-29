@@ -12,6 +12,12 @@ on_cmd = ['Gcd', 'Glcd', 'Gcommit', 'Gblame', 'Gstatus', 'Gdiff', 'Gbrowse', 'Gs
 hook_source = 'let g:easygit_enable_command = 1'
 
 [[plugins]]
+repo = 'chemzqm/todoapp.vim'
+depends = 'denite.nvim'
+on_cmd = ['TodoAdd','TodoImport']
+
+
+[[plugins]]
 repo = 'MattesGroeger/vim-bookmarks'
 on_path = '.*'
 hook_source = '''

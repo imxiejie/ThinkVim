@@ -11,6 +11,8 @@ if dein#tap('denite.nvim')
         "Denite line
         nnoremap  <silent><localLeader>l :<C-u>Denite line -auto-preview<CR>
         nnoremap <silent><localLeader>w :<C-u>DeniteWithCursorWord line<CR>"
+        nnoremap <silent><localLeader>t  :Denite todo<CR>"
+        nnoremap <silent><localLeader>td :Denite todo:done<CR>"
 endif
 
 if dein#tap('coc.nvim')

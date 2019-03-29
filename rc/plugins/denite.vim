@@ -8,6 +8,14 @@ call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', [])
 call denite#custom#var('grep', 'separator', ['--'])
 call denite#custom#var('grep', 'final_opts', [])
+call denite#custom#option('default', {
+        \ 'prompt': '❯❯❯',
+        \ 'statusline': v:false,
+        \ 'highlight_matched_char': 'Underlined',
+        \ 'cursor_shape': v:true,
+        \ 'cursor_wrap': v:true,
+        \ 'split': 'floating',
+        \ })
 
 "ESC结束
 call denite#custom#map('insert', '<esc>', '<denite:enter_mode:normal>', 'noremap')
