@@ -43,7 +43,7 @@ ag和rg都是很棒的grep，我自己用的是rg，thinkvim中有ag也有rg，�
 
 ## 必要环境
 * macos or linux  (windows上需要修改一些变量）
-* neovim
+* neovim > 0.4.0
 * python3 support
 * node and yarn
 * NerdFont
@@ -61,7 +61,7 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
 **_3._** 如果你要使用Defx和Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
-**_For go_** 执行`go get -u github.com/sabing/bingo` 安装go server。默认的coc-settings.json已配置goserver
+**_For go_** 执行`go get -u github.com/sourcegraph/go-langserver` 安装go server。默认的coc-settings.json已配置goserver
 
 ## 结构
 
