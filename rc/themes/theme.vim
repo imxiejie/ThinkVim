@@ -10,12 +10,11 @@ endif
 
 set background=dark
 "colorscheme hybrid_reverse
-"colorscheme space_vim_theme
-colorscheme PaperColor
+colorscheme space_vim_theme
+"colorscheme PaperColor
 "colorscheme gruvbox
 
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
-hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
 
 
 "only for PaperColor and gruvbox Colorscheme if use another colorscheme you should comment this
