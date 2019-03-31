@@ -86,7 +86,6 @@ Name           | Description
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
 [tpope/vim-fugitive] | git插件 
-[junegunn/fzf] |  
 [junegunn/fzf.vim] | 搜索插件
 [ryanoasis/vim-devicons] |  字体图标
 [mhinz/vim-startify] | 启动画面
@@ -113,6 +112,7 @@ Name           | Description
 [junegunn/vim-emoji] | emoji补全
 [simnalamburt/vim-mundo] | 各种修改查看撤销
 [kana/vim-textobj-user] | 文本对象
+['bps/vim-textobj-python'] | pythontextobject
 [terryma/vim-multiple-cursors] | 多光标操作
 [terryma/vim-expand-region] | visual增强
 [liuchengxu/vim-which-key] | 键位查找
