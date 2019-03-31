@@ -112,6 +112,7 @@ Name           | Description
 [junegunn/vim-emoji] | emoji补全
 [simnalamburt/vim-mundo] | 各种修改查看撤销
 [kana/vim-textobj-user] | 文本对象
+['bps/vim-textobj-python'] | pythontextobject
 [terryma/vim-multiple-cursors] | 多光标操作
 [terryma/vim-expand-region] | visual增强
 [liuchengxu/vim-which-key] | 键位查找
