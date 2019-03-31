@@ -86,7 +86,6 @@ Name           | Description
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
 [taigacute/spaceline.vim] | lightline主题插件自制
 [tpope/vim-fugitive] | git插件 
-[junegunn/fzf] |  
 [junegunn/fzf.vim] | 搜索插件
 [ryanoasis/vim-devicons] |  字体图标
 [mhinz/vim-startify] | 启动画面
