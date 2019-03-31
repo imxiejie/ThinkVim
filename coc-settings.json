@@ -2,10 +2,11 @@
     "suggest.triggerAfterInsertEnter": true,
     "suggest.timeout": 500,
     "suggest.noselect": false,
-	"suggest.preferCompleteThanJumpPlaceholder": false,
     "suggest.detailField":"abbr",
     "suggest.snippetIndicator": "🌟",
     "suggest.triggerCompletionWait": 50,
+    "suggest.echodocSupport": true,
+    "coc.preferences.formatOnType": true,
 	"diagnostic.errorSign": "😡",
 	"diagnostic.warningSign": "🤔",
     //tslint
@@ -13,8 +14,14 @@
     "prettier.eslintIntegration": true,
     "prettier.tslintIntegration": true,
     "prettier.stylelintIntegration": true,
+    //python
+    "python.autoComplete.addBrackets": true,
+    // eslint
+    "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
+    "eslint.autoFix": true,
+    "eslint.autoFixOnSave": true,
     "languageserver": {
-     "golang": {
+    "golang": {
       "command": "go-langserver",
       "filetypes": ["go"],
       "initializationOptions": {
@@ -27,6 +34,11 @@
       "command": "docker-langserver",
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
+    },
+    "efm": {
+      "command": "efm-langserver",
+      "args": [],
+      "filetypes": ["vim", "eruby", "markdown"]
     }
-    }
+  }
 }

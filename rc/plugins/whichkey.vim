@@ -47,6 +47,7 @@ let g:which_key_map = {
       \ 'g' : {
             \ 'name' : '+Go Easygit',
             \ 'r'    : 'GoRename',
+            \ 'a'    : 'Gadd',
             \ 'd'    : 'Gdiff',
             \ 'D'    : 'Gdiff',
             \ 'c'    : 'Gcommit',
@@ -97,6 +98,7 @@ let g:which_key_rsbgmap = {
       \ 'a'    : 'AleNextWarp',
       \ 'c'    : 'CocDiagnosticsNext',
       \ 'b'    : 'NextBuffer',
+      \ ']'    : 'Vim-goPrefunction',
       \ }
 
 let g:which_key_lsbgmap = {
@@ -104,4 +106,5 @@ let g:which_key_lsbgmap = {
       \ 'a'    : 'AlePreWarp',
       \ 'c'    : 'CocDiagnosticsPre',
       \ 'b'    : 'PreBuffer',
+      \ '['    : 'Vim-goNextfunction',
       \ }

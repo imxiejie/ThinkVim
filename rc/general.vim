@@ -9,7 +9,7 @@ syntax on
 set bsdir=buffer        " 设定文件浏览器目录为当前目录
 set encoding=utf-8      " 设置编码
 set nocompatible
-set laststatus=2
+set laststatus=0
 set showtabline=2
 set statusline=-        " hide file name in statusline
 "set fillchars=stl:-     " fill active window's statusline with -
@@ -51,12 +51,9 @@ set shortmess=aFc
 set completefunc=emoji#complete
 set completeopt =longest,menu
 set completeopt-=preview
+set list
+set listchars=tab:»·,nbsp:+,trail:·,extends:→,precedes:←
 filetype plugin indent on     " required!
-"set lcs+=trail:.                                                       "样式一
-"set listchars=tab:\¦\                                                 "样式二
-"set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→,eol:↲,nbsp:␣   "样式三
-"set listchars=tab:»\ ,extends:›,precedes:‹,nbsp:·,trail:·              "样式四
-set list listchars=tab:▸\ ,trail:·,precedes:←,extends:→                 "样式五
 " 打开文件自动定位到最后编辑的位置
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 for f in split(glob('~/.config/nvim/rc/ftplugin/*.vim'), '\n')

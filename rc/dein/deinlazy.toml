@@ -13,8 +13,7 @@ hook_source = 'let g:easygit_enable_command = 1'
 
 [[plugins]]
 repo = 'chemzqm/todoapp.vim'
-depends = 'denite.nvim'
-on_cmd = ['TodoAdd','TodoImport']
+on_source = ['denite.nvim']
 
 
 [[plugins]]
@@ -176,14 +175,8 @@ hook_add ='''
     \}
 '''
 [[plugins]]
-repo = 'Raimondi/delimitMate'
-on_event = 'InsertEnter'
-hook_source = '''
-    let g:delimitMate_expand_cr = 1
-'''
-[[plugins]]
 repo = 'luochen1990/rainbow'
-on_ft = ['py','js','jsx','html','css','go','vim','toml']
+on_ft = ['python','js','jsx','html','css','go','vim','toml']
 hook_source = 'let g:rainbow_active = 1'
 
 [[plugins]]
@@ -194,11 +187,13 @@ hook_source = 'source ~/.config/nvim/rc/plugins/denite.vim'
 [[plugins]]
 repo = 'Shougo/echodoc.vim'
 on_event='CompleteDone'
-hook_post_source = 'call echodoc#enable()'
+hook_source = '''
+let g:echodoc#type = 'virtual'
+call echodoc#enable()
+'''
 
 [[plugins]]
 repo = 'w0rp/ale'
-on_ft = ['py']
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
 [[plugins]]
@@ -251,44 +246,3 @@ on_ft= ['toml']
 repo = 'vim-scripts/xml.vim'
 on_ft = ['xml']
 
-#[[plugins]]
-#repo = 'Shougo/defx.nvim'
-#on_cmd = 'Defx'
-#hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
-
-#[[plugins]]
-#repo = 'kristijanhusak/defx-icons'
-#on_source = 'defx.nvim'
-
-#[[plugins]]
-#repo = 'Shougo/neosnippet.vim'
-#depends = ['neosnippet-snippets']
-#on_event = 'InsertCharPre'
-#on_ft = 'snippet'
-#hook_add = '''
-#let g:neosnippet#snippets_directory='~/.config/nvim/rc/snippets/'
-#'''
-#hook_source = '''
-#source ~/.config/nvim/rc/plugins/neosnippet.vim
-#'''
-
-#[[plugins]]
-#repo = 'Shougo/neosnippet-snippets'
-
-#[[plugins]]
-#repo = 'benekastah/neomake'
-#on_cmd = [ 'Neomake', 'NeomakeFile', 'NeomakeEnable' ]
-#hook_source = 'source ~/.config/nvim/rc/plugins/neomake.vim'
-#hook_add = '''
-    #let g:lint_types = [
-      #\   'python', 'vim', 'go', 'sh',
-      #\  'javascript', 'jsx', 'javascript.jsx', 'json', 'css',
-      #\  'markdown', 'html', 'yaml'
-      #\ ]
-    #autocmd MyAutoCmd BufWritePost *
-      #\  if expand('%:p') !~ $VIMPATH
-      #\      && index(g:lint_types, &filetype) > -1
-      #\      && empty(&buftype)
-      #\|   Neomake
-      #\| endif
-#'''
