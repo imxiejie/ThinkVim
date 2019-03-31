@@ -119,14 +119,11 @@ Name           | Description
 [easymotion/vim-easymotion] | 快速移动
 [scrooloose/nerdtree] | 文件管理
 [tiagofumo/vim-nerdtree-syntax-highlight] | nerdtree高亮
-[Shougo/defx.nvim] | 文件管理
-[kristijanhusak/defx-icons] | defx图标
 [airblade/vim-gitgutter] | git信息
 [majutsushi/tagbar] | 代码变量函数跳转显示插件
 [mattn/emmet-vim] | 快速生成html插件
 [Raimondi/delimitMate] | 符号补全插件
 [Shougo/denite.nvim] | 搜索插件
-[ctrlpvim/ctrlp.vim] |  搜索插件
 [w0rp/ale] | 语法检查
 [othree/html5.vim] | html5插件 
 [pangloss/vim-javascript] |  js插件
@@ -139,8 +136,6 @@ Name           | Description
 [cespare/vim-toml] | toml文件高亮插件
 
 ## 选择你的喜好
-* [Nerdtree](https://github.com/scrooloose/nerdtree) Or [Defx](https://github.com/Shougo/defx.nvim)
-  * 默认文件管理插件为defx，如果你想使用nerdtree，修改deinlazy.toml，注释defx，或者同时使用.
 * [Lightline](https://github.com/itchyny/lightline.vim) Or [Airline](https://github.com/vim-airline/vim-airline)
   * 默认的状态栏插件为lightline，如果你想使用airline，修改deinlazy.toml，取消airline以及vim-airline-theme并注释lightline。  
   _**NOTE!!Airline 需要更多的启动时间相比lightline**_  
@@ -153,7 +148,7 @@ Name           | Description
 * 插件
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
-   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已有主题gruvbox hybrid-reverse PaperCOlor 。
+   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已有主题gruvbox hybrid-reverse PaperColor 。
 
 ## Backers
 
