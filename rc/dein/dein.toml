@@ -16,19 +16,8 @@ hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 [[plugins]]
 repo = 'taigacute/spaceline.vim'
 
-#[[plugins]]
-#repo = 'bling/vim-airline'
-#hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
-
-#[[plugins]]
-#repo = 'vim-airline/vim-airline-themes'
-#hook_add = '''
-#let g:airline_theme='wombat'
-#'''
-
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -59,5 +48,16 @@ repo = 'honza/vim-snippets'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-build = 'yarn install'
+merge = 0
+build = 'yarn install --frozen-lockfile'
 hook_add = 'source ~/.config/nvim/rc/plugins/coc.vim'
+
+#[[plugins]]
+#repo = 'bling/vim-airline'
+#hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
+
+#[[plugins]]
+#repo = 'vim-airline/vim-airline-themes'
+#hook_add = '''
+#let g:airline_theme='wombat'
+#'''
