@@ -27,11 +27,10 @@ let g:which_key_map = {
             \ 'f' : 'FindFile',
             \ 'r' : 'RgSearch',
             \ 'c' : 'ColorChange',
+            \ 'w' : 'SearchExpendWord',
             \ },
       \ 'm' : 'OpenMundo' ,
       \ 'n' : 'Cancelhighlight',
-      \ 's' : 'ALEToggle',
-      \ 'd' : 'ALEDetail',
       \ 'w' : 'Save',
       \ 'h' : 'Tabpre',
       \ 'l' : 'Tabnext',
@@ -70,7 +69,6 @@ let g:which_key_map = {
 
 let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
-      \ 'b'    : 'DeniteBuferr'     ,
       \ 'c'    : {
               \ 'name' : '+CocList' ,
               \ 'a'    : 'CocDiagnostics',
@@ -82,15 +80,11 @@ let g:which_key_localmap ={
               \ 'r'    : 'CocResume',
               \ 's'    : 'CocIsymbols',
               \ },
-      \ 'g'    : 'Open-Tagbar',
-      \ 'f'    : 'FzfRgWord',
-      \ 'l'    : 'DeniteLine',
-      \ 'o'    : 'DeniteFileOld',
+      \ 'g'    : 'TagbarToggle',
+      \ 'b'    : 'Bufferlist',
+      \ 't'    : 'TodoApp',
       \ 'r'    : 'QuickRun',
-      \ 's'    : 'DeniteCode',
-      \ 'w'    : 'DeniteCursorWorld',
-      \ 'e'    : 'DefxToggle',
-      \ 'd'    : 'Dash',
+      \ 'd'    : 'TodoDone',
       \ }
 
 let g:which_key_rsbgmap = {
