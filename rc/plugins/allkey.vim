@@ -97,6 +97,10 @@ if dein#tap('vim-easygit')
 	nnoremap <silent> <leader>gp :Gpush<CR>
 endif
 
+if dein#tap('git-messenger.vim')
+    nmap <Leader>gm <Plug>(git-messenger)
+endif
+
 if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
