@@ -15,7 +15,6 @@ hook_source = 'let g:easygit_enable_command = 1'
 repo = 'chemzqm/todoapp.vim'
 on_source = ['denite.nvim']
 
-
 [[plugins]]
 repo = 'MattesGroeger/vim-bookmarks'
 on_path = '.*'
@@ -193,7 +192,6 @@ hook_source = 'source ~/.config/nvim/rc/plugins/denite.vim'
 repo = 'Shougo/echodoc.vim'
 on_event='CompleteDone'
 hook_source = '''
-let g:echodoc#type = 'virtual'
 call echodoc#enable()
 '''
 

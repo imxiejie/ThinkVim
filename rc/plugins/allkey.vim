@@ -1,18 +1,8 @@
 "Plugin key settings
 
 if dein#tap('denite.nvim')
-        nnoremap <silent><localLeader>s :call denite#start([{'name': 'grep', 'args': ['', '', '!']}])<cr>
-        "buffer列表
-        nnoremap  <silent><localleader>b :Denite buffer<CR>
-        " 最近使用文件列表
-        nnoremap <silent><localleader>o :Denite file_old -winheight=10 -vertical-preview -auto-preview<CR>
-        " 当前目录
-        "nnoremap <silent><localleader>r :Denite file_rec -default-action=vsplit<CR>
-        "Denite line
-        nnoremap  <silent><localLeader>l :<C-u>Denite line -auto-preview<CR>
-        nnoremap <silent><localLeader>w :<C-u>DeniteWithCursorWord line<CR>"
         nnoremap <silent><localLeader>t  :Denite todo<CR>"
-        nnoremap <silent><localLeader>td :Denite todo:done<CR>"
+        nnoremap <silent><localLeader>d  :Denite todo:done<CR>"
 endif
 
 if dein#tap('coc.nvim')
@@ -61,9 +51,10 @@ endif
 
 if dein#tap('fzf.vim')
         nnoremap <silent> <leader>fc :Colors<CR>
+        nnoremap <silent> <localleader>b :Buffers<CR>
         nnoremap <silent> <leader>ff :call Fzf_dev()<CR>
         nnoremap <silent> <leader>fr :Rg<CR>
-        nnoremap <silent> <localleader>f :Rg <C-R><C-W><CR>
+        nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
         nnoremap <silent> <leader>fgc  :Commits<CR>
         nnoremap <silent> <leader>fbc :BCommits<CR>
 endif
@@ -82,10 +73,6 @@ if dein#tap('nerdtree')
         "nnoremap <leader>f :NERDTreeFind <CR>
 endif
 
-if dein#tap('defx.nvim')
-        nnoremap <silent> <localleader>e
-            \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-endif
 
 if dein#tap('vim-go')
      autocmd MyAutoCmd FileType go
@@ -120,7 +107,7 @@ if dein#tap('vim-quickrun')
 endif
 
 if dein#tap('dash.vim')
-        nnoremap <silent><localleader>d :Dash<CR>
+        nnoremap <silent><leader>d :Dash<CR>
 endif
 
 if dein#tap('vim-bookmarks')
@@ -152,8 +139,6 @@ endif
 if dein#tap('ale')
         nmap [a <Plug>(ale_next_wrap)
         nmap ]a <Plug>(ale_previous_wrap)
-        nmap <Leader>s :ALEToggle<CR>
-        nmap <Leader>d :ALEDetail<CR>
 endif
 
 if dein#tap('vim-easymotion')
