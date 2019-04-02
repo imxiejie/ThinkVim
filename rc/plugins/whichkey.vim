@@ -54,6 +54,7 @@ let g:which_key_map = {
             \ 'B'    : 'Gbrowse',
             \ 'S'    : 'Gstatus',
             \ 'p'    : 'Gpush',
+            \ 'm'    : 'GitMessenger',
             \ 'o ': {
                 \ 'name':'+GoTool',
                 \ 'i'   :'GoInfo',

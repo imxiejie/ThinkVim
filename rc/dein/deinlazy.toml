@@ -12,6 +12,11 @@ on_cmd = ['Gcd', 'Glcd', 'Gcommit', 'Gblame', 'Gstatus', 'Gdiff', 'Gbrowse', 'Gs
 hook_source = 'let g:easygit_enable_command = 1'
 
 [[plugins]]
+repo = 'rhysd/git-messenger.vim'
+on_cmd = 'GitMessenger'
+on_map = {n = '<Plug>(git-messenger'}
+
+[[plugins]]
 repo = 'chemzqm/todoapp.vim'
 on_source = ['denite.nvim']
 
