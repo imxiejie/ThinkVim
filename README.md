@@ -9,19 +9,7 @@ Hybrid                                                                          
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/231.gif)
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
-## FAQ
-### 1.和 Spacevim，Space-vim 有什么区别？
-* 这个配置只是我自己的配置。与 Spacevim Space-vim 不同，它们可以说是个项目了。我的有很多需要你自己改。我只是提供一个模块的小巧以管理的配置。只是取了个名字，然后我的配置没那么多方便的功能，比如简单的管理想添加什么只需要设置 layer 或者其他 easy 的操作，我的要你自己添加插件配置插件改动文件。大家的触发点不一样。但是都是 vim 的爱好者。
 
-### 2.我自己的配置就很好，为什么要看你的配置？
-你的配置你很满意的情况下你完全可以不用看我的配置。如果你想拆分一下变得模块化组件化易于管理摆脱冗长的 init.vim ，你可以参考我的配置或许对你有帮助
-
-### 3.新手能用吗？
-个人觉得对新手比较友好，而且我还在 b 站出了视频如何使用修改成自己的配置。
-
-
-
---
 ## Change（2019.3.25）
 * 添加了许多功能性插件详见插件列表
 * 添加floatwindow到fzf的window
@@ -39,6 +27,7 @@ Hybrid                                                                          
 - 启动速度快
 - 完全自定义
 - LSP语言服务支持
+  - 默认支持js jsx python 其他语言开发者需要去coc的主页查看语言的server在coc-settins.json中配置即可。
 
 ## 必要环境
 * macos or linux  (windows上需要修改一些变量）
@@ -59,8 +48,8 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ```
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
-**_3._** 如果你要使用Defx和Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
-**_For go_** 执行`go get -u github.com/sourcegraph/go-langserver` 安装go server。默认的coc-settings.json已配置goserver
+**_3._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
+
 
 ## 结构
 
