@@ -94,6 +94,7 @@ Name           | Description
 [sbdchd/neoformat] | 格式化插件
 [yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
 [chemzqm/vim-easygit] | 更简单的git操作
+[rhysd/git-messenger.vim] | git信息查看
 [MAttesGroeger/vim-bookmarks] | bookmark插件
 [thinca/quickrun] | 快速输出
 [tpope/vim-markdown] | markdown插件
