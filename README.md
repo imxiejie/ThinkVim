@@ -6,24 +6,21 @@ Hybrid                                                                          
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/space-thinkvim.png)
 
 
+## MyCustom
+![](https://github.com/taigacute/IMG/blob/master/thinkvim/1322.png)
+
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
-
-## Change（2019.3.25）
-* 添加了许多功能性插件详见插件列表
-* 添加floatwindow到fzf的window
-* 整体优化
-* 调整一些正常加载插件懒加载  
+## 特性
+- 模块插件配置
+- 懒加载百分之90插件
+- 启动速度快
 * 启动时间`nvim --startuptime ~/vimstart.log` :
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
      54 |   80ms
 
-## 特性
-- 模块插件配置
-- 懒加载百分之90插件
-- 启动速度快
 - 完全自定义
 - LSP语言服务支持
   - 默认支持js jsx python 其他语言开发者需要去coc的主页查看语言的server在coc-settins.json中配置即可。
