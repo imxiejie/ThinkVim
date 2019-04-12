@@ -1,4 +1,11 @@
 [[plugins]]
+repo = 'mg979/vim-visual-multi'
+on_ft = ['go','vim','python','html']
+hook_add = '''
+let g:VM_leader = '<Space>' 
+'''
+
+[[plugins]]
 repo = 'honza/dockerfile.vim'
 on_ft = 'Dockerfile'
 
@@ -19,15 +26,6 @@ on_map = {n = '<Plug>(git-messenger'}
 [[plugins]]
 repo = 'chemzqm/todoapp.vim'
 on_source = ['denite.nvim']
-
-[[plugins]]
-repo = 'MattesGroeger/vim-bookmarks'
-on_path = '.*'
-hook_source = '''
-    let g:bookmark_auto_save_file = $TMP.'/bookmarks'
-    let g:bookmark_no_default_key_mappings = 1
-    let g:bookmark_disable_ctrlp = 1
-'''
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
@@ -95,10 +93,6 @@ repo = 'bps/vim-textobj-python'
 depends = 'vim-textobj-user'
 on_map = { ox ='<Plug>'}
 
-[[plugins]]
-repo = 'terryma/vim-multiple-cursors'
-on_map = {v = '<C-n>'}
-hook_add = 'source ~/.config/nvim/rc/plugins/vim-mulitiple-cursor.vim'
 
 [[plugins]]
 repo ='terryma/vim-expand-region'
@@ -202,6 +196,7 @@ call echodoc#enable()
 
 [[plugins]]
 repo = 'w0rp/ale'
+on_ft=['go']
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
 [[plugins]]
@@ -239,7 +234,7 @@ hook_source = 'source ~/.config/nvim/rc/plugins/vim-go.vim'
 
 [[plugins]]
 repo = 'AndrewRadev/splitjoin.vim'
-on_map = { n ='<Plug>Splitjoin'}
+on_cmd = ['SplitjoinJoin','SplitjoinSplit']
 
 [[plugins]]
 repo = 'elzr/vim-json'

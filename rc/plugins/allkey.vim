@@ -36,18 +36,19 @@ if dein#tap('coc.nvim')
         nmap <silent> gi <Plug>(coc-implementation)
         nmap <silent> gr <Plug>(coc-references)
         " Use K for show documentation in preview window
-        nnoremap <silent> K :call <SID>show_documentation()<CR>
-        " Use <c-space> for trigger completion.
+        nnoremap <silent> K :call <sid>show_documentation()<cr>
+        " use <c-space> for trigger completion.
         inoremap <silent><expr> <c-space> coc#refresh()
 
 endif
-        function! s:show_documentation()
-            if &filetype == 'vim'
-                execute 'h '.expand('<cword>')
-            else
-                call CocAction('doHover')
-            endif
-        endfunction
+
+function! s:show_documentation()
+    if &filetype == 'vim'
+        execute 'h '.expand('<cword>')
+    else
+        call CocAction('doHover')
+    endif
+endfunction
 
 if dein#tap('fzf.vim')
         nnoremap <silent> <leader>fc :Colors<CR>
@@ -72,7 +73,6 @@ if dein#tap('nerdtree')
         nnoremap <silent><leader>e :NERDTreeToggle <CR>
         "nnoremap <leader>f :NERDTreeFind <CR>
 endif
-
 
 if dein#tap('vim-go')
      autocmd MyAutoCmd FileType go
@@ -112,16 +112,6 @@ endif
 
 if dein#tap('dash.vim')
         nnoremap <silent><leader>d :Dash<CR>
-endif
-
-if dein#tap('vim-bookmarks')
-	nmap <leader>bc <Plug>BookmarkClear
-	nmap <leader>bx <Plug>BookmarkClearAll
-	nmap <leader>ba <Plug>BookmarkShowAll
-	nmap <leader>bn <Plug>BookmarkNext
-	nmap <leader>bp <Plug>BookmarkPrev
-	nmap <leader>bm <Plug>BookmarkToggle
-	nmap <leader>bi <Plug>BookmarkAnnotate
 endif
 
 if dein#tap('vim-expand-region')
