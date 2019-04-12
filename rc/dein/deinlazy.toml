@@ -1,6 +1,21 @@
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+merged = '0'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+on_cmd =['Colors','Rg','Buffers']
+hook_add = 'source ~/.config/nvim/rc/plugins/fzf.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_path ='.*'
+
+[[plugins]]
 repo = 'mg979/vim-visual-multi'
-on_ft = ['go','vim','python','html']
+on_map = {n='<C-n>'}
 hook_add = '''
 let g:VM_leader = '<Space>' 
 '''
@@ -31,10 +46,10 @@ on_source = ['denite.nvim']
 repo = 'scrooloose/nerdcommenter'
 on_ft =['vim','json','go','html','js','jsx','py','css','less','tmpl','toml','xml','sql']
 
-[[plugins]]
-repo = 'sbdchd/neoformat'
-on_cmd = ['Neoformat','Neoformat!']
-hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
+#[[plugins]]
+#repo = 'sbdchd/neoformat'
+#on_cmd = ['Neoformat','Neoformat!']
+#hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
 
 [[plugins]]
 repo = 'yonchu/accelerated-smooth-scroll'

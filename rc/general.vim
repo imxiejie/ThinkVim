@@ -4,8 +4,6 @@ set autoread            " 文件在vim之外修改过，自动重新读入
 set autowrite           " 设置自动保存
 set confirm             " 在处理未保存或只读文件的时候，弹出确认
 set splitbelow
-set cursorline          "高亮显示光标所在行
-syntax on
 set bsdir=buffer        " 设定文件浏览器目录为当前目录
 set encoding=utf-8      " 设置编码
 set nocompatible
@@ -16,19 +14,24 @@ set statusline=-        " hide file name in statusline
 "set fillchars+=stlnc:-  " also fill inactive windows
 set fillchars+=vert:\|  " add a bar for vertical splits
 set clipboard=unnamed
-let g:clipboard = {
-  \ 'name': 'pbcopy',
-  \ 'copy': {
-  \    '+': 'pbcopy',
-  \    '*': 'pbcopy',
-  \  },
-  \ 'paste': {
-  \    '+': 'pbpaste',
-  \    '*': 'pbpaste',
-  \ },
-  \ 'cache_enabled': 0,
-  \ }
-set fencs=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+if has('mac')
+	let g:clipboard = {
+		\   'name': 'macOS-clipboard',
+		\   'copy': {
+		\      '+': 'pbcopy',
+		\      '*': 'pbcopy',
+		\    },
+		\   'paste': {
+		\      '+': 'pbpaste',
+		\      '*': 'pbpaste',
+		\   },
+		\   'cache_enabled': 0,
+		\ }
+endif
+
+if has('clipboard')
+	set clipboard& clipboard+=unnamedplus
+endif
 set number               "显示行号
 set timeout ttimeout
 set cmdheight=2         " Height of the command line
