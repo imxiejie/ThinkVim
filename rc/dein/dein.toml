@@ -14,23 +14,6 @@ repo = 'mengelbrecht/lightline-bufferline'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
 [[plugins]]
-repo = 'taigacute/spaceline.vim'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'junegunn/fzf'
-build = './install --all'
-merged = '0'
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = 'fzf'
-hook_add = 'source ~/.config/nvim/rc/plugins/fzf.vim'
-
-
-[[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
