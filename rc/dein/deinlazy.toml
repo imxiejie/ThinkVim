@@ -211,7 +211,6 @@ call echodoc#enable()
 
 [[plugins]]
 repo = 'w0rp/ale'
-on_ft=['go']
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
 [[plugins]]

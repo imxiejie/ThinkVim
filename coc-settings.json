@@ -34,23 +34,6 @@
             "filetypes": [
                 "go"
             ]
-        },
-        "dockerfile": {
-            "command": "docker-langserver",
-            "filetypes": [
-                "dockerfile"
-            ],
-            "args": [
-                "--stdio"
-            ]
-        },
-        "efm": {
-            "command": "efm-langserver",
-            "args": [],
-            "filetypes": [
-                "vim",
-                "markdown"
-            ]
         }
     }
 }
