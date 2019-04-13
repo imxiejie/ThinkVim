@@ -47,6 +47,7 @@ call dein#call_hook('post_source')
 
 " Loading configuration modules
 call s:source_rc('general.vim')
+call s:source_rc('filetype.vim')
 call s:source_rc('mappings.vim')
 call s:source_rc('/themes/theme.vim')
 "---------------------------------------------------------------------------

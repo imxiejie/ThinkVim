@@ -17,7 +17,7 @@ on_path ='.*'
 repo = 'mg979/vim-visual-multi'
 on_map = {n='<C-n>'}
 hook_add = '''
-let g:VM_leader = '<Space>' 
+let g:VM_leader = '<Space>'
 '''
 
 [[plugins]]
@@ -46,10 +46,10 @@ on_source = ['denite.nvim']
 repo = 'scrooloose/nerdcommenter'
 on_ft =['vim','json','go','html','js','jsx','py','css','less','tmpl','toml','xml','sql']
 
-#[[plugins]]
-#repo = 'sbdchd/neoformat'
-#on_cmd = ['Neoformat','Neoformat!']
-#hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
+[[plugins]]
+repo = 'sbdchd/neoformat'
+on_cmd = ['Neoformat','Neoformat!']
+hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
 
 [[plugins]]
 repo = 'yonchu/accelerated-smooth-scroll'
@@ -168,8 +168,10 @@ hook_add = '''
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 on_path = ".*"
-hook_add = 'source ~/.config/nvim/rc/plugins/vim-gitgutter.vim'
-
+hook_source='''
+let g:gitgutter_map_keys = 0
+let g:gitgutter_sh = $SHELL
+'''
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
@@ -211,6 +213,7 @@ call echodoc#enable()
 
 [[plugins]]
 repo = 'w0rp/ale'
+on_ft=['go']
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
 [[plugins]]
