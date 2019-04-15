@@ -124,7 +124,7 @@ on_map = '.'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
-on_ft = ['py','js','jsx','html','css','go','vim']
+on_ft = ['python','js','jsx','html','css','vim']
 hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
 
 [[plugins]]
