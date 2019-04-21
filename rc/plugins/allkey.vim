@@ -68,11 +68,11 @@ if dein#tap('vim-easy-align')
     nmap ga <Plug>(EasyAlign)
 endif
 
-if dein#tap('nerdtree')
-        "nerdtree
-        nnoremap <silent><leader>e :NERDTreeToggle <CR>
-        "nnoremap <leader>f :NERDTreeFind <CR>
-endif
+"if dein#tap('nerdtree')
+        ""nerdtree
+        "nnoremap <silent><leader>e :NERDTreeToggle <CR>
+        ""nnoremap <leader>f :NERDTreeFind <CR>
+"endif
 
 if dein#tap('vim-go')
      autocmd MyAutoCmd FileType go
@@ -105,6 +105,14 @@ if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
 
+if dein#tap('defx.nvim')
+        nnoremap <silent> <Leader>e
+                \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+endif
+
+if dein#tap('vim-startify')
+    nnoremap <silent> <leader>s :Startify<CR>
+endif
 
 if dein#tap('vim-quickrun')
     nnoremap <silent> <localleader>r :QuickRun<CR>

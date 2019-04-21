@@ -10,7 +10,7 @@ if has('vim_starting')
 	scriptencoding utf-8
 endif
 set nocompatible
-set laststatus=2
+set laststatus=0
 set showtabline=2
 set statusline=-        " hide file name in statusline
 set fillchars+=vert:\|  " add a bar for vertical splits

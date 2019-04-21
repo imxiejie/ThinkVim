@@ -1,4 +1,13 @@
 [[plugins]]
+repo = 'Shougo/defx.nvim'
+on_cmd = 'Defx'
+hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+on_source = 'defx.nvim'
+
+[[plugins]]
 repo = 'junegunn/fzf'
 build = './install --all'
 merged = '0'
@@ -149,20 +158,20 @@ hook_source = '''
     let g:EasyMotion_use_smartsign_us = 1
 '''
 
-[[plugins]]
-repo = 'scrooloose/nerdtree'
-on_map = { n ='<Plug>'}
-depends = ['vim-devicons','vim-nerdtree-syntax-highlight']
-hook_source = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
+#[[plugins]]
+#repo = 'scrooloose/nerdtree'
+#on_map = { n ='<Plug>'}
+#depends = ['vim-devicons','vim-nerdtree-syntax-highlight']
+#hook_source = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
 
-[[plugins]]
-repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
-hook_add = '''
-    let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-    let g:NERDTreeDisableExactMatchHighlight = 1
-    let g:NERDTreeDisablePatternMatchHighlight = 1
-    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
-'''
+#[[plugins]]
+#repo = 'tiagofumo/vim-nerdtree-syntax-highlight'
+#hook_add = '''
+    #let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+    #let g:NERDTreeDisableExactMatchHighlight = 1
+    #let g:NERDTreeDisablePatternMatchHighlight = 1
+    #let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
+#'''
 
 
 [[plugins]]

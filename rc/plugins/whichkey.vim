@@ -11,7 +11,7 @@ let g:which_key_map = {
       \ '8' : 'Buffer-8'      ,
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
-      \ 'e' : 'OpenNerdtree' ,
+      \ 'e' : 'Defx' ,
       \ 'f' : {
             \ 'name' : '+FzfCommand',
             \ 'f' : 'FindFile',
@@ -23,6 +23,7 @@ let g:which_key_map = {
       \ 'n' : 'Cancelhighlight',
       \ 'w' : 'Save',
       \ 'h' : 'Tabpre',
+      \ 's' : 'Startify',
       \ 'l' : 'Tabnext',
       \ 'SPC' : {
             \ 'name' : '+Easymotion',
