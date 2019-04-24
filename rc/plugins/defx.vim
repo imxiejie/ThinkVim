@@ -32,7 +32,7 @@ function! s:defx_my_settings() abort
     nnoremap <silent><buffer><expr> <CR> <sid>Defx_toggle_tree()
 	nnoremap <silent><buffer><expr> l     defx#do_action('drop')
 	nnoremap <silent><buffer><expr> s    defx#do_action('open', 'botright vsplit')
-	nnoremap <silent><buffer><expr> sv    defx#do_action('open', 'split')
+	nnoremap <silent><buffer><expr> sv    defx#do_action('open', 'topleft split')
 	nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
 	nnoremap <silent><buffer><expr> N     defx#do_action('new_multiple_files')
 	nnoremap <silent><buffer><expr> dd    defx#do_action('remove')
