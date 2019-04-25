@@ -105,6 +105,10 @@ if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
 
+if dein#tap('goyo.vim')
+	nnoremap <Leader>G :Goyo<CR>
+endif
+
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                 \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>

@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'space',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ ['homemode'],
       \             ['fugitive', 'gitgutter'],['filename'],['cocerror'],['cocwarn']],
@@ -49,7 +49,7 @@ function! LightlineMode()
     let l:result = get(nmap, l:number % 10, l:number % 10) . l:result
     let l:number = l:number / 10
   endfor
-  return join(['🌈',l:result])
+  return join(['',l:result])
 endfunction
 function! s:get_buffer_number()
   let i = 0

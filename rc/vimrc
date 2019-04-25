@@ -6,7 +6,7 @@ let $VIMPATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 
 function! s:source_rc(path, ...) abort
   let use_global = get(a:000, 0, !has('vim_starting'))
-  let abspath = resolve(expand('~/.config/nvim/rc/' . a:path))
+  let abspath = resolve(expand($VIMPATH.'/rc/' . a:path))
   if !use_global
     execute 'source' fnameescape(abspath)
     return
@@ -44,6 +44,7 @@ filetype plugin indent on
 
 call dein#call_hook('source')
 call dein#call_hook('post_source')
+"call dein#remote_plugins()
 
 " Loading configuration modules
 call s:source_rc('general.vim')
