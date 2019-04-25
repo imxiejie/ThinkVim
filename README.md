@@ -6,8 +6,6 @@ Hybrid                                                                          
 ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/space-thinkvim.png)
 
 
-## MyCustom
-![](https://github.com/taigacute/IMG/blob/master/thinkvim/1322.png)
 
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
