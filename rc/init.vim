@@ -1,4 +1,3 @@
-"---------------------------------------------------------------------------
 " Initialize:
 ""Use 'Space' instead of '\'.
 " Use <Leader> in global plugin.

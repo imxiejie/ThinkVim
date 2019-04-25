@@ -6,15 +6,13 @@ set confirm             " 在处理未保存或只读文件的时候，弹出确
 set splitbelow
 set bsdir=buffer        " 设定文件浏览器目录为当前目录
 if has('vim_starting')
-	set encoding=utf-8
-	scriptencoding utf-8
+	set encoding=UTF-8
+	scriptencoding UTF-8
 endif
-set nocompatible
-set laststatus=0
+set laststatus=2
 set showtabline=2
 set statusline=-        " hide file name in statusline
 set fillchars+=vert:\|  " add a bar for vertical splits
-set clipboard=unnamed
 if has('mac')
 	let g:clipboard = {
 		\   'name': 'macOS-clipboard',
@@ -33,6 +31,7 @@ endif
 if has('clipboard')
 	set clipboard& clipboard+=unnamedplus
 endif
+set history=2000
 set number               "显示行号
 set timeout ttimeout
 set cmdheight=2         " Height of the command line
@@ -44,7 +43,6 @@ set undodir=~/.tmp/undo
 set relativenumber
 set backspace=2
 set backspace=indent,eol,start
-set ic                   "忽略大小写查找
 set tabstop=4            " tab宽度
 set cindent shiftwidth=4
 set autoindent shiftwidth=4
@@ -56,6 +54,23 @@ set completeopt =longest,menu
 set completeopt-=preview
 set list
 set listchars=tab:»·,nbsp:+,trail:·,extends:→,precedes:←
+
+set ignorecase      " Search ignoring case
+set smartcase       " Keep case when searching with *
+set infercase       " Adjust case in insert completion mode
+set incsearch       " Incremental search
+set hlsearch        " Highlight search results
+set wrapscan        " Searches wrap around the end of the file
+set showmatch       " Jump to matching bracket
+set matchpairs+=<:> " Add HTML brackets to pair matching
+set matchtime=1     " Tenths of a second to show the matching paren
+set cpoptions-=m    " showmatch will wait 0.5s or until a char is typed
+set grepprg=rg\ --vimgrep\ $*
+set wildignore+=*.so,*~,*/.git/*,*/.svn/*,*/.DS_Store,*/tmp/*
+
+if has('conceal')
+	set conceallevel=3 concealcursor=niv
+endif
 
 " FastFold
 " Credits: https://github.com/Shougo/shougo-s-github

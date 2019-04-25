@@ -2,29 +2,27 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'taigacute/space-vim-theme'
-hook_add = 'let g:space_vim_plugin_hi_groups = 1'
+repo = 'lifepillar/vim-gruvbox8'
+hook_add = '''
+let g:gruvbox_filetype_hi_groups = 1
+let g:gruvbox_plugin_hi_groups = 1
+'''
+
+#[[plugins]]
+#repo = 'morhetz/gruvbox'
+#hook_add = '''
+#let g:gruvbox_contrast_dark = 'hard'
+#'''
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+depends = 'vim-devicons'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'mengelbrecht/lightline-bufferline'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'mhinz/vim-startify'
-depends = 'vim-devicons'
-hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
-hook_post_source = '''
-function! StartifyEntryFormat()
-    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-endfunction
-'''
 
 [[plugins]]
 repo = 'honza/vim-snippets'
@@ -34,6 +32,8 @@ repo = 'neoclide/coc.nvim'
 merge = 0
 build = 'yarn install --frozen-lockfile'
 hook_add = 'source ~/.config/nvim/rc/plugins/coc.vim'
+hook_source = '''
+'''
 
 #[[plugins]]
 #repo = 'bling/vim-airline'

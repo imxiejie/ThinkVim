@@ -5,7 +5,7 @@ let nerdchristmastree=1
 let g:nerdtreewinsize = 25
 let g:NERDTreeDirArrowExpandable = '▷'
 let g:NERDTreeDirArrowCollapsible = '▼'
-"let NERDTreeAutoCenter=1
+let NERDTreeAutoCenter=1
 let g:nerdtreeindicatormapcustom = {
         \ "modified"  : "✹",
         \ "staged"    : "✚",
@@ -18,6 +18,3 @@ let g:nerdtreeindicatormapcustom = {
         \ 'ignored'   : '☒',
         \ "unknown"   : "?"
         \ }
-
-
-

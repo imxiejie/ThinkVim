@@ -15,7 +15,7 @@ augroup MyAutoCmd
 augroup end
 
 " Highlight symbol under cursor on CursorHold
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "Use tab for trigger completion with characters ahead and navigate
 inoremap <silent><expr> <TAB>

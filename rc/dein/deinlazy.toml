@@ -1,11 +1,25 @@
 [[plugins]]
-repo = 'Shougo/defx.nvim'
-on_cmd = 'Defx'
-hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+repo = 'junegunn/goyo.vim'
+on_cmd = 'Goyo'
+hook_source ='source ~/.config/nvim/rc/plugins/goyo.vim'
 
 [[plugins]]
-repo = 'kristijanhusak/defx-icons'
-on_source = 'defx.nvim'
+repo = 'junegunn/Limelight.vim'
+on_cmd = 'Limelight'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'mhinz/vim-startify'
+on_cmd = 'Startify'
+depends = 'vim-devicons'
+hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
+hook_post_source = '''
+function! StartifyEntryFormat()
+    return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+endfunction
+'''
 
 [[plugins]]
 repo = 'junegunn/fzf'
@@ -158,6 +172,15 @@ hook_source = '''
     let g:EasyMotion_use_smartsign_us = 1
 '''
 
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+on_cmd = 'Defx'
+hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+on_source = 'defx.nvim'
+
 #[[plugins]]
 #repo = 'scrooloose/nerdtree'
 #on_map = { n ='<Plug>'}
@@ -218,11 +241,11 @@ repo = 'Shougo/echodoc.vim'
 on_event='CompleteDone'
 hook_source = '''
 call echodoc#enable()
+let g:echodoc#type = "virtual"
 '''
 
 [[plugins]]
 repo = 'w0rp/ale'
-on_ft=['go']
 hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
 [[plugins]]

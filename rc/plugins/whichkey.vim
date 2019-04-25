@@ -12,6 +12,7 @@ let g:which_key_map = {
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
       \ 'e' : 'Defx' ,
+      \ 'G' : 'Goyo' ,
       \ 'f' : {
             \ 'name' : '+FzfCommand',
             \ 'f' : 'FindFile',
