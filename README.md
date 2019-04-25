@@ -17,7 +17,7 @@ Hybrid                                                                          
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
-     53 |   65~90ms
+     55 |   50~63ms
 
 - 完全自定义
 - LSP语言服务支持
@@ -66,11 +66,8 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[taigacute/space-vim-theme] | 主题插件
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
-[ryanoasis/vim-devicons] |  字体图标
-[mhinz/vim-startify] | 启动画面
 [neoclide/coc.nvim] | 补全插件
 [hona/vim-snippets] | 代码片段
 
@@ -79,10 +76,14 @@ Name           | Description
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
+[mhinz/vim-startify] | 启动画面
+[ryanoasis/vim-devicons] |  字体图标
 [tpope/vim-fugitive] | git插件 
 [junegunn/fzf.vim] | 搜索插件
 [hona/dockerfile.vim] | Dockerfile支持
 [junegunn/vim-easyalign] | 快速对齐
+[junegunn/goyo.vim] | 关灯写代码
+[junegunn/limelight] | 关灯写代码
 [Yggdroot/indentLine] | 缩进线
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
@@ -133,7 +134,7 @@ Name           | Description
 * 插件
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
-   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已经装了很多主题可以更换
+   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.colors文件夹中已经装了很多主题可以更换
 ## Backers
 
 
