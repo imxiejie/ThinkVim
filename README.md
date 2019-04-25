@@ -38,7 +38,7 @@ Hybrid                                                                          
 
 ## 安装
 ```
-git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
+git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
