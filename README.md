@@ -47,7 +47,12 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 
 ## 结构
-
+- [after](~/.config/nvim/after)
+  - [ftplugin](~/.config/nvim/after/ftplugin)
+    - [go.vim](~/.config/nvim/after/ftplugin/go.vim)  - go文件设置
+- [autoload](~/.config/nvim/autoload)
+  - [lightline](~/.config/nvim/after/autoload/lightline)
+    - [colorscheme](~/.config/nvim/after/autoload/lightline/colorscheme)  - lightline主题文件夹
 - [rc/](~/.config/nvim/rc) - 配置文件目录
   - [dein](~/.config/nvim/rc/dein)  - _**插件安装!**_
     - [dein.toml](~/.config/nvim/rc/dein/dein.toml)     - 正常加载的插件
@@ -58,10 +63,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   - [dein.vim](~/.config/nvim/rc/dein.vim) - Dein 配置
   - [general.vim](~/.config/nvim/rc/general.vim) - Vim基础设置
   - [mappings.vim](~/.config/nvim/rc/mappings.vim) - Vim功能键位绑定
-  - [themes](./config/theme.vim) - 主题颜色
+  - [themes](./config/theme.vim) - 主题颜色设置
 - [colors](~/.config/nvim/colors) - 主题文件
-
-
+- [ftplugin](~/.config/nvim/ftplugin) - 文件格式设置
+- [plugin](~/.config/nvim/plugin) - 一些小功能插件
 
 ## 正常加载插件
 Name           | Description
