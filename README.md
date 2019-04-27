@@ -1,9 +1,8 @@
 
 ## ThinkVim 
 
-Hybrid                                                                                | taigacute/space-vim-theme
-:----:                                                                                | :----:
-![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/space-thinkvim.png)
+![](https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png)
+
 
 
 
