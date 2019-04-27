@@ -1,13 +1,10 @@
 
 ## ThinkVim 
 
-Hybrid                                                                                | taigacute/space-vim-theme
-:----:                                                                                | :----:
-![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/thinkvim.png) | ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/space-thinkvim.png)
+![](https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png)
 
 
-## MyCustom
-![](https://github.com/taigacute/IMG/blob/master/thinkvim/1322.png)
+
 
 ## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
@@ -19,7 +16,7 @@ Hybrid                                                                          
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
-     53 |   65~90ms
+     55 |   50~63ms
 
 - 完全自定义
 - LSP语言服务支持
@@ -40,7 +37,7 @@ Hybrid                                                                          
 
 ## 安装
 ```
-git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
+git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
@@ -49,7 +46,12 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
 
 
 ## 结构
-
+- [after](~/.config/nvim/after)
+  - [ftplugin](~/.config/nvim/after/ftplugin)
+    - [go.vim](~/.config/nvim/after/ftplugin/go.vim)  - go文件设置
+- [autoload](~/.config/nvim/autoload)
+  - [lightline](~/.config/nvim/after/autoload/lightline)
+    - [colorscheme](~/.config/nvim/after/autoload/lightline/colorscheme)  - lightline主题文件夹
 - [rc/](~/.config/nvim/rc) - 配置文件目录
   - [dein](~/.config/nvim/rc/dein)  - _**插件安装!**_
     - [dein.toml](~/.config/nvim/rc/dein/dein.toml)     - 正常加载的插件
@@ -60,19 +62,16 @@ git clone --depth=1 https://github.com/taigacute/nvim-config.git ~/.config/nvim
   - [dein.vim](~/.config/nvim/rc/dein.vim) - Dein 配置
   - [general.vim](~/.config/nvim/rc/general.vim) - Vim基础设置
   - [mappings.vim](~/.config/nvim/rc/mappings.vim) - Vim功能键位绑定
-  - [themes](./config/theme.vim) - 主题颜色
+  - [themes](./config/theme.vim) - 主题颜色设置
 - [colors](~/.config/nvim/colors) - 主题文件
-
-
+- [ftplugin](~/.config/nvim/ftplugin) - 文件格式设置
+- [plugin](~/.config/nvim/plugin) - 一些小功能插件
 
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[taigacute/space-vim-theme] | 主题插件
 [itchyny/lightline.vim] | 状态栏
 [mengelbrecht/lightline-bufferline] | 顶部buffer插件
-[ryanoasis/vim-devicons] |  字体图标
-[mhinz/vim-startify] | 启动画面
 [neoclide/coc.nvim] | 补全插件
 [hona/vim-snippets] | 代码片段
 
@@ -81,10 +80,14 @@ Name           | Description
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
+[mhinz/vim-startify] | 启动画面
+[ryanoasis/vim-devicons] |  字体图标
 [tpope/vim-fugitive] | git插件 
 [junegunn/fzf.vim] | 搜索插件
 [hona/dockerfile.vim] | Dockerfile支持
 [junegunn/vim-easyalign] | 快速对齐
+[junegunn/goyo.vim] | 关灯写代码
+[junegunn/limelight] | 关灯写代码
 [Yggdroot/indentLine] | 缩进线
 [tpope/vim-surround] |  符号成双成对
 [tpope/vim-repeat] | 重复上一次操作
@@ -135,7 +138,7 @@ Name           | Description
 * 插件
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
-   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.默认主题为[taigacute/space-vim-theme](https://github.com/space-vim-theme)，如果你想使用hybrid在theme.vim中修改即可，colors文件夹中已经装了很多主题可以更换
+   * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.colors文件夹中已经装了很多主题可以更换
 ## Backers
 
 
