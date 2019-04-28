@@ -144,7 +144,7 @@ Name           | Description
 
 ## Donation
   * 如果对你有帮助，You Can Buy Me a Coffee By WeChat:)  
-  ![](https://github.com/taigacute/ThinkVim/blob/master/screenshot/wechat.png)
+  ![](https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png)
 ## 教程
    * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
 ## Feedback
