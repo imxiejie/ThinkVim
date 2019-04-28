@@ -143,8 +143,11 @@ Name           | Description
 
 
 ## Donation
-  * 如果对你有帮助，You Can Buy Me a Coffee By WeChat:)  
-  ![](https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png)
+  * 如果对你有帮助，You Can Buy Me a Coffee By WeChat:)
+  <a href="" target="_blank" title="taigacute">
+  <img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="300" height="300" alt="taigacute">
+  </a>
+
 ## 教程
    * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
 ## Feedback
