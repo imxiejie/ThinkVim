@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'space',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ ['homemode'],
       \             ['fugitive', 'gitgutter'],['filename'],['cocerror'],['cocwarn']],
