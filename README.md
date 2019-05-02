@@ -145,7 +145,7 @@ Name           | Description
 * [Defx.nvim](https://github.com/Shougo/defx.nvim)  文件资源管理
   * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
     同样的保留了nerdtree的配置，只不过在deinlazy.toml中注释了nerdtree。你可以根据你的喜欢切换。
-## 键位操作  （更新中....）
+## 键位操作  
 默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位  
 
 Keys           | Mode   | Description
