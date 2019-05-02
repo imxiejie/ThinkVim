@@ -96,7 +96,7 @@ Name           | Description
 [chemzqm/vim-easygit](https://github.com/chemzqm/vim-easygit) | 更简单的git操作
 [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim) | git信息查看
 [thinca/quickrun](https://github.com/thinca/quickrun) | 快速输出
-[tpope/vim-markdown](https://github.com/tpope/vim-markdown | markdown插件
+[tpope/vim-markdown](https://github.com/tpope/vim-markdown) | markdown插件
 [junegunn/vim-emoji](https://github.com/junegunn/vim-emoji) | emoji补全
 [simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo) | 各种修改查看撤销
 [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user) | 文本对象
