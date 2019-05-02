@@ -35,15 +35,14 @@
 - Universal ctags: [ctags.io](https://ctags.io/)
 - Rouge : `sudo gem install rouge`
 
-## 安装
+## 安装  ---下方有B站安装教程
 ```
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
-**_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
-**_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
-**_3._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
-**_4._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
-**_5._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
+**_1._** clone完成后打开你的终端或者GUI，输入nvim后一切都会自动安装耐心等待就可以了。   
+**_2._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
+**_3._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
+**_4._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
 
 
 ## 结构
@@ -329,7 +328,7 @@ iF            | Python | 快速选择函数体内
   </a>
 
 ## 教程
-   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
+   * 你可以在[B站查看使用教程系列](https://space.bilibili.com/321783076/channel/detail?cid=64354)
 ## 答疑
    > 为什么使用dein而不是vim-plug  
    * dein提供更多的钩子函数，懒加载方面做得也比vim-plug好一些。使用确实很困难。需要看一些dein的资料。关于dein褒贬不一，dein添加了一层缓存接管runtime，有人觉得好有人觉得不好。
