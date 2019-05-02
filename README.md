@@ -293,6 +293,17 @@ Keys           | Mode   | Description
  gr        | Defx | 在denite中搜索
  w         | Defx | 增加defx 宽度
  
+* CoC 
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+Tab            | Select | 跳转下一个片段 函数参数跳转
+Tab            | Insert | 补全向下筛选
+Shit + Tab      |Insert | 补全向上筛选
+Ctrl + n       | Insert  |补全向下筛选
+Ctrl + p       | Insert  |补全向上筛选
+`<CR>`         | Insert/Select | 代码片段确认选择 补全确认选择
+
  * TextObject 
 
 Keys           | Mode   | Description
