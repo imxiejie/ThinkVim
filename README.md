@@ -105,8 +105,10 @@ Name           | Description
 [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region) | visual增强
 [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key) | 键位查找
 [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion) | 快速移动
-[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | 文件管理
-[tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) | nerdtree高亮
+[Shougo/defx.nvim](https://github.com/Shougo/defx.nvim) | 文件资源管理
+[kristijanhusak/defx-icons](https://github.com/https://github.com/kristijanhusak/defx-icons) | defx图标
+[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | 文件管理（已注释插件）
+[tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) | nerdtree高亮（已注释插件）
 [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | git信息
 [majutsushi/tagbar](https://github.com/majutsushi/tagbar) | 代码变量函数跳转显示插件
 [mattn/emmet-vim](https://github.com/mattn/emmet-vim) | 快速生成html插件
