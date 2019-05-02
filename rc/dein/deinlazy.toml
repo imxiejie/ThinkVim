@@ -268,13 +268,13 @@ let g:vim_jsx_pretty_colorful_config = 1
 repo = 'mxw/vim-jsx'
 on_ft = ['javascript', 'javascript.jsx']
 
-[[plugins]]
-repo = 'hail2u/vim-css3-syntax'
-on_ft = ['css']
+#[[plugins]]
+#repo = 'hail2u/vim-css3-syntax'
+#on_ft = ['css']
 
-[[plugins]]
-repo = 'ap/vim-css-color'
-on_ft = ['css']
+#[[plugins]]
+#repo = 'ap/vim-css-color'
+#on_ft = ['css']
 
 [[plugins]]
 repo = 'fatih/vim-go'

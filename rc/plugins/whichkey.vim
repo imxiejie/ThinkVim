@@ -36,17 +36,8 @@ let g:which_key_map = {
             \ 'name' : '+NerdCommenter',
             \ },
       \ 'g' : {
-            \ 'name' : '+Go Easygit',
+            \ 'name' : '+Vim-Go',
             \ 'r'    : 'GoRename',
-            \ 'a'    : 'Gadd',
-            \ 'd'    : 'Gdiff',
-            \ 'D'    : 'Gdiff',
-            \ 'c'    : 'Gcommit',
-            \ 'b'    : 'Gblame',
-            \ 'B'    : 'Gbrowse',
-            \ 'S'    : 'Gstatus',
-            \ 'p'    : 'Gpush',
-            \ 'm'    : 'GitMessenger',
             \ 'o ': {
                 \ 'name':'+GoTool',
                 \ 'i'   :'GoInfo',
@@ -73,11 +64,25 @@ let g:which_key_localmap ={
               \ 'r'    : 'CocResume',
               \ 's'    : 'CocIsymbols',
               \ },
-      \ 'g'    : 'TagbarToggle',
       \ 'b'    : 'Bufferlist',
-      \ 't'    : 'TodoApp',
+      \ 't'    : 'Tagbar',
       \ 'r'    : 'QuickRun',
-      \ 'd'    : 'TodoDone',
+      \ 'd'    : {
+                \'name':'+todo',
+                \ 't' : 'todolist',
+                \ 'd' : 'todoDone',
+                \},
+      \ 'g'  :{
+                \'name':'+ Easygit',
+                \ 'a'    : 'Gadd',
+                \ 'd'    : 'Gdiff',
+                \ 'c'    : 'Gcommit',
+                \ 'b'    : 'Gblame',
+                \ 'B'    : 'Gbrowse',
+                \ 'S'    : 'Gstatus',
+                \ 'p'    : 'Gpush',
+                \ 'm'    : 'GitMessenger',
+                \}
       \ }
 
 let g:which_key_rsbgmap = {
