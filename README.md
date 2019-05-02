@@ -321,6 +321,11 @@ iF            | Python | 快速选择函数体内
 
 ## 教程
    * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
+## 答疑
+   > 为什么使用dein而不是vim-plug  
+   * dein提供更多的钩子函数，懒加载方面做得也比vim-plug好一些。使用确实很困难。需要看一些dein的资料。关于dein褒贬不一，dein添加了一层缓存接管runtime，有人觉得好有人觉得不好。
+   > 使用是否方便
+   * 对于新的vimer 建议安装后使用。调整需要学习一些vimscript和dein的使用。
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
 ## 鸣谢
