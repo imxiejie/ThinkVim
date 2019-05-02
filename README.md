@@ -16,7 +16,7 @@
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
-     53 |   50~63ms
+     50 |   50~63ms
 
 - 完全自定义
 - LSP语言服务支持
@@ -114,10 +114,8 @@ Name           | Description
 [mattn/emmet-vim](https://github.com/mattn/emmet-vim) | 快速生成html插件
 [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim) | 搜索插件
 [w0rp/ale](https://github.com/w0rp/ale) | 语法检查
-[othree/html5.vim](https://github.com/othree/html5.vim) | html5插件 
-[pangloss/vim-javascript](https://github.com/pangloss/vim-javascript) |  js插件
-[maxmellon/vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty) |  react插件
-[mxw/vim-jsx](https://github.com/mxw/vim-jsx) | react插件
+[othree/html5.vim](https://github.com/othree/html5.vim) | html5插件
+[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve) | js jsx插件
 [fatih/vim-go](https://github.com/fatih/vim-go)| go开发必备插件
 [elzr/vim-json](https://github.com/elzr/vim-json) | json插件
 [cespare/vim-toml](https://github.com/cespare/vim-toml) | toml文件高亮插件
