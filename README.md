@@ -42,7 +42,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
 **_3._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
-**_4._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
+**_4._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置 
+**_5._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
 
 
 ## 结构
@@ -69,59 +70,72 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## 正常加载插件
 Name           | Description
 -------------- | ----------------------
-[itchyny/lightline.vim] | 状态栏
-[mengelbrecht/lightline-bufferline] | 顶部buffer插件
-[neoclide/coc.nvim] | 补全插件
-[hona/vim-snippets] | 代码片段
+[itchyny/lightline.vim](https://github.com/itchyny/lightline.vim) | 状态栏
+[mengelbrecht/lightline-bufferline](https://github.com/mengelbrecht/lightline-bufferline) | 顶部buffer插件
+[neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | 补全插件
+[hona/vim-snippets](https://github.com/hona/vim-snippets) | 代码片段
 
 
 
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
-[mhinz/vim-startify] | 启动画面
-[ryanoasis/vim-devicons] |  字体图标
-[tpope/vim-fugitive] | git插件 
-[junegunn/fzf.vim] | 搜索插件
-[hona/dockerfile.vim] | Dockerfile支持
-[junegunn/vim-easyalign] | 快速对齐
-[junegunn/goyo.vim] | 关灯写代码
-[junegunn/limelight] | 关灯写代码
-[Yggdroot/indentLine] | 缩进线
-[tpope/vim-surround] |  符号成双成对
-[tpope/vim-repeat] | 重复上一次操作
-[sbdchd/neoformat] | 格式化插件
-[yonchu/accelerated-smooth-scroll] | 平滑滚动插件 
-[chemzqm/vim-easygit] | 更简单的git操作
-[rhysd/git-messenger.vim] | git信息查看
-[thinca/quickrun] | 快速输出
-[tpope/vim-markdown] | markdown插件
-[junegunn/vim-emoji] | emoji补全
-[simnalamburt/vim-mundo] | 各种修改查看撤销
-[kana/vim-textobj-user] | 文本对象
-['bps/vim-textobj-python'] | pythontextobject
-[mg979/vim-visual-multi] | 多光标操作
-[terryma/vim-expand-region] | visual增强
-[liuchengxu/vim-which-key] | 键位查找
-[easymotion/vim-easymotion] | 快速移动
-[scrooloose/nerdtree] | 文件管理
-[tiagofumo/vim-nerdtree-syntax-highlight] | nerdtree高亮
-[airblade/vim-gitgutter] | git信息
-[majutsushi/tagbar] | 代码变量函数跳转显示插件
-[mattn/emmet-vim] | 快速生成html插件
-[Raimondi/delimitMate] | 符号补全插件
-[Shougo/denite.nvim] | 搜索插件
-[w0rp/ale] | 语法检查
-[othree/html5.vim] | html5插件 
-[pangloss/vim-javascript] |  js插件
-[maxmellon/vim-jsx-pretty] |  react插件
-[mxw/vim-jsx] | react插件
-[hail2u/vim-css3-syntax] | css语法检查
-[ap/vim-css-color] | css颜色显示
-[fatih/vim-go] | go开发必备插件
-[elzr/vim-json] | json插件
-[cespare/vim-toml] | toml文件高亮插件
+[mhinz/vim-startify](https://github.com/mhinz/vim-startify) | 启动画面
+[ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) |  字体图标
+[tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) | git插件 
+[junegunn/fzf.vim](https://github.com/junegunn/fzf.vim) | 搜索插件
+[hona/dockerfile.vim](https://github.com/hona/dockerfile.vim) | Dockerfile支持
+[junegunn/vim-easyalign](https://github.com/junegunn/vim-easyalign) | 快速对齐
+[junegunn/goyo.vim](https://github.com/junegunn/goyo.vim) | 关灯写代码
+[junegunn/limelight](https://github.com/junegunn/limelight) | 关灯写代码
+[Yggdroot/indentLine](https://github.com/Yggdroot/indentLine) | 缩进线
+[tpope/vim-surround](https://github.com/tpope/vim-surround) |  符号成双成对
+[tpope/vim-repeat](https://github.com/tpope/vim-repeat) | 重复上一次操作
+[sbdchd/neoformat](https://github.com/sbdchd/neoformat) | 格式化插件
+[yonchu/accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll) | 平滑滚动插件 
+[chemzqm/vim-easygit](https://github.com/chemzqm/vim-easygit) | 更简单的git操作
+[rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim) | git信息查看
+[thinca/quickrun](https://github.com/thinca/quickrun) | 快速输出
+[tpope/vim-markdown](https://github.com/tpope/vim-markdown | markdown插件
+[junegunn/vim-emoji](https://github.com/junegunn/vim-emoji) | emoji补全
+[simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo) | 各种修改查看撤销
+[kana/vim-textobj-user](https://github.com/kana/vim-textobj-user) | 文本对象
+[bps/vim-textobj-python](https://github.com/bps/vim-textobj-python) | pythontextobject
+[mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) | 多光标操作
+[terryma/vim-expand-region](https://github.com/terryma/vim-expand-region) | visual增强
+[liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key) | 键位查找
+[easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion) | 快速移动
+[scrooloose/nerdtree](https://github.com/scrooloose/nerdtree) | 文件管理
+[tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) | nerdtree高亮
+[airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter) | git信息
+[majutsushi/tagbar](https://github.com/majutsushi/tagbar) | 代码变量函数跳转显示插件
+[mattn/emmet-vim](https://github.com/mattn/emmet-vim) | 快速生成html插件
+[Shougo/denite.nvim](https://github.com/Shougo/denite.nvim) | 搜索插件
+[w0rp/ale](https://github.com/w0rp/ale) | 语法检查
+[othree/html5.vim](https://github.com/othree/html5.vim) | html5插件 
+[pangloss/vim-javascript](https://github.com/pangloss/vim-javascript) |  js插件
+[maxmellon/vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty) |  react插件
+[mxw/vim-jsx](https://github.com/mxw/vim-jsx) | react插件
+[fatih/vim-go](https://github.com/fatih/vim-go)| go开发必备插件
+[elzr/vim-json](https://github.com/elzr/vim-json) | json插件
+[cespare/vim-toml](https://github.com/cespare/vim-toml) | toml文件高亮插件
 
+## CoC Extensions
+Name           | Description
+-------------- | ----------------------
+[coc-html](https://github.com/neoclide/coc-html)     | html扩展 
+[coc-emmet](https://github.com/neoclide/coc-emmet)    |  emmet使用
+[coc-css](https://github.com/neoclide/coc-css)     | css扩展 
+[coc-snippets](https://github.com/neoclide/coc-snippets)     | 代码片段 
+[coc-prettier](https://github.com/neoclide/coc-prettier)     | 格式化 
+[coc-eslint](https://github.com/neoclide/coc-eslint)     | eslint检测
+[coc-tsserver](https://github.com/neoclide/coc-tsserver)     | js/ts 语言server
+[coc-pairs](https://github.com/neoclide/coc-pairs)     | 符号补全 
+[coc-json](https://github.com/neoclide/coc-json)     | json server 
+[coc-python](https://github.com/neoclide/coc-python)     | Python server 
+[coc-imselect](https://github.com/neoclide/coc-imselect)     | 选择
+[coc-highlight](https://github.com/neoclide/coc-highlight)     | 高亮，支持显示css颜色代码
+[coc-git](https://github.com/neoclide/coc-git)     | git扩展 
 ## 选择你的喜好
 * [Lightline](https://github.com/itchyny/lightline.vim) Or [Airline](https://github.com/vim-airline/vim-airline)
   * 默认的状态栏插件为lightline，如果你想使用airline，修改deinlazy.toml，取消airline以及vim-airline-theme并注释lightline。  
@@ -129,8 +143,83 @@ Name           | Description
 * 文件管理Defx
   * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
     同样的保留了nerdtree的配置，只不过在deinlazy.toml中注释了nerdtree。你可以根据你的喜欢切换。
-## 键位操作
-默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位
+## 键位操作  （更新中....）
+默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位  
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+Ctrl + w |Insert | 删除光标下整个单词
+Ctrl + h |Insert | 删除映射 `BackSpace`
+Ctrl + d |Insert | 删除光标所在字符
+Ctrl + u |Insert | 当前光标删除到行首
+Ctrl + b |Insert | 向左移动
+Ctrl + f |Insert | 向右移动
+Ctrl + a |Insert | 移到行首
+Ctrl + e |Insert | 移到行尾
+Ctrl + p |Command | 向上移动
+Ctrl + b |Command | 向左移动
+Ctrl + f |Command | 向右移动
+Ctrl + a |Command | 移动到行首
+Ctrl + e |Command | 移动到行尾
+Ctrl + d |Command | 删除光标所在字符
+Ctrl + h |Command |  删除映射 `BackSpace`
+Ctrl + S |Insert  | 保存
+Ctrl + Q |Insert  | 保存并退出
+Ctrl + o |Insert  | 生成新行
+]    + b |Normal  | 上一个buffer
+[    + b |Normal  | 下一个buffer
+Ctrl + x |Normal  | 删除当前buffer
+Y        |Normal  | 复制到行尾
+j        |Normal  | gj
+k        |Normal  | gk
+j        |Visual  | gj
+k        |Visual  | gj
+
+* Window 
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+Ctrl + h | Normal | 移动到左边窗口
+Ctrl + l | Noraml | 移动到右边窗口
+Ctrl + j | Normal | 移动到下边窗口
+Ctrl + k | Normal | 移动到上边窗口
+Ctrl + w [ | Normal | 窗口宽度减3
+Ctrl + w ] | Normal | 窗口宽度加3
+
+* Tab  
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+ `<Leader>` + tb  | Normal | 新建tab
+ `<Leader>` + te  | Normal | 编辑tab
+ `<Leader>` + tc  | Normal | 关闭tab
+ `<Leader>` + tm  | Normal | 移动tab
+
+* LeaderKey  
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+ `<Leader>` + 数字 | Normal | 数字[0-9]选择buffer
+ `<Leader>` + G   | Normal | 打开Goyo
+ `<Leader>` + m   | Normal | 打开mundo
+ `<Leader>` + w   | Normal | 保存
+ `<Leader>` + s   | Normal | 打开Startify
+ `<Leader>` + d   | Normal | 打开Dash
+
+* Defx 文件资源管理  
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+ `<Leader>` + e | Normal | 打开defx
+ N            | Defx | 新建文件
+ K           | Defx | 新建文件夹
+ `<CR>`     | Defx | 打开目录或打开文件
+ dd        | Defx | 删除
+ r         |Defx | 重命名
+ .         | Defx | 显示隐藏文件
+ h         | Defx | 返回上级目录
+ q         | Defx | 退出defx
+ 
 ## Language Support
 语言工具支持，在coc.nvim主页查找你的开发语言server，并修改`coc-settings.json`添加你的语言服务器。
 ## 自定义
