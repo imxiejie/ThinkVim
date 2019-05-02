@@ -176,6 +176,19 @@ j        |Normal  | gj
 k        |Normal  | gk
 j        |Visual  | gj
 k        |Visual  | gj
+[ + a      |Normal  | Ale下一个错误
+] + a      |Normal  | Ale上一个错误
+[ + c      |Normal  | coc下一个错误
+] + c      |Normal  | coc上一个错误
+] + ]      |Normal  | 跳转上一个go函数
+[ + [      |Normal  | 跳转下一个go函数
+ga        | Normal | EasyAlign 快速对其
+ga        | 可视模式 | EasyAlign 快速对其
+v        | 可视模式 | vim-expand-region
+V       | 可视模式 | vim-expand-region
+
+
+
 
 * Window 
 
@@ -207,6 +220,52 @@ Keys           | Mode   | Description
  `<Leader>` + w   | Normal | 保存
  `<Leader>` + s   | Normal | 打开Startify
  `<Leader>` + d   | Normal | 打开Dash
+ `<Leader>` + fc   | Normal | fzf vim主题查看更改
+ `<Leader>` + ff   | Normal | fzf 在当前路径下文件搜索
+ `<Leader>` + fr   | Normal | fzf rg搜索
+ `<Leader>` + fw   | Normal | fzf rg搜索光标下的单词
+ `<Leader>` + fgc   | Normal | fzf gitcommits记录
+ `<Leader>` + fbc   | Normal | fzf gitbcommits记录
+ `<Leader>` + `<Leader>` + w   | Normal | Easymotion 向下跳转
+ `<Leader>` + `<Leader>` + b  | Normal | Easymotion 向上跳转
+ `<Leader>` + `<Leader>` + f   | Normal | Easymotion 搜索跳转
+ `<Leader>` + cc   | Normal | NerdComment 注释
+ `<Leader>` + cu   | Normal | NerdComment 取消注释
+ `<Leader>` + gr   | Normal | vim-go GoRename
+ `<Leader>` + goi   | Normal | vim-go GoInfo
+ `<Leader>` + god   | Normal | vim-go GoDoc
+ `<Leader>` + gor   | Normal | vim-go GoRun
+ `<Leader>` + gob   | Normal | vim-go GoBuild
+ `<Leader>` + got   | Normal | vim-go GoTest
+ `<Leader>` + goc   | Normal | vim-go GoCoverage
+ `<Leader>` + gov   | Normal | vim-go GoDef
+
+* LocalLeaderKey  
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+`<LocalLeader>` + ca   | Normal | CocDiagnostics
+`<LocalLeader>` + cc   | Normal | CocCommands
+`<LocalLeader>` + ce   | Normal | CocExtensions
+`<LocalLeader>` + cj   | Normal | Cocnext
+`<LocalLeader>` + ck   | Normal | CocPrev
+`<LocalLeader>` + co   | Normal | CocOutline
+`<LocalLeader>` + cr   | Normal | CocResume
+`<LocalLeader>` + cs   | Normal | CocIsymbols
+`<LocalLeader>` + b   | Normal | fzf 显示buffer列表
+`<LocalLeader>` + t   | Normal | 打开Tagbar
+`<LocalLeader>` + r   | Normal | QuickRun 快速运行
+`<LocalLeader>` + da   | Normal | TodoAdd 添加
+`<LocalLeader>` + dt   | Normal | 打开todolist列表
+`<LocalLeader>` + dd   | Normal | 打开已完成的todo列表
+`<LocalLeader>` + ga   | Normal | Gadd
+`<LocalLeader>` + gd   | Normal | Gdiff
+`<LocalLeader>` + gc   | Normal | Gcommit
+`<LocalLeader>` + gb   | Normal | Gblame
+`<LocalLeader>` + gB   | Normal | GBrowse
+`<LocalLeader>` + gS   | Normal | GStatus
+`<LocalLeader>` + gp   | Normal | Gpush
+`<LocalLeader>` + gm   | Normal | Gitmessage
 
 * Defx 文件资源管理  
 
@@ -216,11 +275,33 @@ Keys           | Mode   | Description
  N            | Defx | 新建文件
  K           | Defx | 新建文件夹
  `<CR>`     | Defx | 打开目录或打开文件
+ l     | Defx | 打开目录或打开文件
  dd        | Defx | 删除
  r         |Defx | 重命名
  .         | Defx | 显示隐藏文件
  h         | Defx | 返回上级目录
  q         | Defx | 退出defx
+ s         | Defx | 右侧垂直分屏打开文件
+ i         | Defx | 水平打开文件
+ yy        | Defx | 复制文件路径
+ \         | Defx | 显示当前文件所在路径
+ c        | Defx | 复制
+ m         | Defx | 移动
+ p         | Defx | 粘贴
+ `<Space>` | Defx | 多选
+ gf        | Defx | 在denite浮动窗口中显示所在文件夹下所有文件
+ gr        | Defx | 在denite中搜索
+ w         | Defx | 增加defx 宽度
+ 
+ * TextObject 
+
+Keys           | Mode   | Description
+-------------- | -------| ----------------
+vif           | Go | 快速选择函数体内
+vaf           | Go | 快速选择整个函数体
+aF            | Python | 快速选择整个函数体
+iF            | Python | 快速选择函数体内
+ 
  
 ## Language Support
 语言工具支持，在coc.nvim主页查找你的开发语言server，并修改`coc-settings.json`添加你的语言服务器。
