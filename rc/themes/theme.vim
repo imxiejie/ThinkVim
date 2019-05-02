@@ -13,6 +13,11 @@ set background=dark
 "colorscheme space_vim_theme
 "colorscheme PaperColor
 colorscheme gruvbox8_hard
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 83f37a792d1f53a6d2e4283388b24ffe4b680f67
 
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
