@@ -1,8 +1,9 @@
 "Plugin key settings
 
 if dein#tap('denite.nvim')
-        nnoremap <silent><localLeader>dt  :Denite todo<CR>"
-        nnoremap <silent><localLeader>dd  :Denite todo:done<CR>"
+        nnoremap <silent><localLeader>dt  :Denite todo<CR>
+        nnoremap <silent><localLeader>da  :TodoAdd
+        nnoremap <silent><localLeader>dd  :Denite todo:done<CR>
 endif
 
 if dein#tap('coc.nvim')

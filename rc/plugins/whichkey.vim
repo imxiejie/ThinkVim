@@ -66,9 +66,10 @@ let g:which_key_localmap ={
       \ 't'    : 'Tagbar',
       \ 'r'    : 'QuickRun',
       \ 'd'    : {
-                \'name':'+todo',
-                \ 't' : 'todolist',
-                \ 'd' : 'todoDone',
+                \'name':'+Todo',
+                \ 't' : 'Todolist',
+                \ 'a' : 'TodoAdd',
+                \ 'd' : 'TodoDone',
                 \},
       \ 'g'  :{
                 \'name':'+ Easygit',

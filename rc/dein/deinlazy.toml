@@ -63,6 +63,7 @@ on_map = {n = '<Plug>(git-messenger'}
 
 [[plugins]]
 repo = 'chemzqm/todoapp.vim'
+on_cmd = ['TodoAdd','TodoImport']
 on_source = ['denite.nvim']
 
 [[plugins]]
