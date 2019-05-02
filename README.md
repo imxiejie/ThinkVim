@@ -42,7 +42,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 **_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
 **_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
 **_3._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
-**_4._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置 
+**_4._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
 **_5._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
 
 
