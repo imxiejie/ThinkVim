@@ -318,6 +318,8 @@ iF            | Python | 快速选择函数体内
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
    * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.colors文件夹中已经装了很多主题可以更换
+## 建议
+* 如果你有好用实用的插件可以在[issue](https://github.com/taigacute/ThinkVim/issues/7)中提。我会进行考虑。如有必要我会添加对该插件的支持
 ## Backers
 
 
