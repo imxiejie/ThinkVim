@@ -1,5 +1,5 @@
 let g:lightline = {
-      \ 'colorscheme': 'space',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ ['homemode'],
       \             ['fugitive', 'gitgutter'],['filename'],['cocerror'],['cocwarn']],
@@ -12,10 +12,11 @@ let g:lightline = {
       \ },
       \ 'tabline': {
       \   'left': [['buffers']],
-      \   'right': [['close']],
+      \   'right': [['thinkvim']],
       \ },
       \ 'component': {
       \   'lineinfo': ' %3l:%-2v',
+      \   'thinkvim': 'ﴔ ',
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
