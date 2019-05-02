@@ -56,7 +56,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   - [dein](~/.config/nvim/rc/dein)  - _**插件安装!**_
     - [dein.toml](~/.config/nvim/rc/dein/dein.toml)     - 正常加载的插件
     - [deinlazy.toml](~/.config/nvim/rc/dein/deinlazy.toml) - 懒加载插件
-  - [ftplugin](~/.config/nvim/rc/ftplugin) - 文件类型设置
   - [plugins](~/.config/nvim/rc/plugins) - _**插件设置!**_
   - [init.vim](~/.config/nvim/rc/init.vim) - `runtimepath` 初始化
   - [dein.vim](~/.config/nvim/rc/dein.vim) - Dein 配置
