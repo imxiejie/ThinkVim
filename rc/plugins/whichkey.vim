@@ -12,6 +12,7 @@ let g:which_key_map = {
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
       \ 'e' : 'Defx' ,
+      \ 'd' : 'Dash' ,
       \ 'G' : 'Goyo' ,
       \ 'f' : {
             \ 'name' : '+FzfCommand',
@@ -21,11 +22,8 @@ let g:which_key_map = {
             \ 'w' : 'SearchExpendWord',
             \ },
       \ 'm' : 'OpenMundo' ,
-      \ 'n' : 'Cancelhighlight',
       \ 'w' : 'Save',
-      \ 'h' : 'Tabpre',
       \ 's' : 'Startify',
-      \ 'l' : 'Tabnext',
       \ 'SPC' : {
             \ 'name' : '+Easymotion',
             \ 'w' : 'Easymotion-w',
