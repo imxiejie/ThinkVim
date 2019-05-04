@@ -299,7 +299,13 @@ Tab            | Insert | 补全向下筛选
 Shit + Tab      |Insert | 补全向上筛选
 Ctrl + n       | Insert  |补全向下筛选
 Ctrl + p       | Insert  |补全向上筛选
+Ctrl + Space   | Normal  | 强制触发补全
 `<CR>`         | Insert/Select | 代码片段确认选择 补全确认选择
+K              |Normal | 显示方法函数doc
+gd             | Normal | 跳转到定义
+gy             | Normal | 跳转类型定义
+gi             | Normal | 跳转到实现
+gr             | Normal | 跳转到引用
 
  * TextObject 
 
