@@ -44,6 +44,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 **_3._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
 **_4._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
 
+**_Tmux_**  如果你也喜欢图上的tmux状态栏你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)
+
 
 ## 结构
 - [after](~/.config/nvim/after)
