@@ -17,7 +17,10 @@ colorscheme gruvbox8_hard
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
 
-"only for PaperColor and gruvbox Colorscheme if use another colorscheme you should comment this
+"coc highlightstext color
+hi default CocHighlightText  guibg=#725972 ctermbg=96
+
+"Hide tilde
 "hi EndOfBuffer ctermfg=234 ctermbg=NONE guifg=#1c1c1c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 
 "Pmenu Colors
