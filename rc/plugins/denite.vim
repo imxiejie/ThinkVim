@@ -15,6 +15,8 @@ call denite#custom#option('default', {
         \ 'cursor_shape': v:true,
         \ 'cursor_wrap': v:true,
         \ 'split': 'floating',
+        \ 'winwidth': (&columns/4)*3 ,
+        \ 'wincol': &columns/8,
         \ })
 
 "ESC结束

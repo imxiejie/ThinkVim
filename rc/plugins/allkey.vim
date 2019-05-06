@@ -44,11 +44,11 @@ if dein#tap('coc.nvim')
 endif
 
 function! s:show_documentation()
-    if &filetype == 'vim'
-        execute 'h '.expand('<cword>')
-    else
-        call CocAction('doHover')
-    endif
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
 endfunction
 
 if dein#tap('fzf.vim')
@@ -68,11 +68,6 @@ if dein#tap('vim-easy-align')
     nmap ga <Plug>(EasyAlign)
 endif
 
-"if dein#tap('nerdtree')
-        ""nerdtree
-        "nnoremap <silent><leader>e :NERDTreeToggle <CR>
-        ""nnoremap <leader>f :NERDTreeFind <CR>
-"endif
 
 if dein#tap('vim-go')
      autocmd MyAutoCmd FileType go
@@ -103,6 +98,13 @@ endif
 
 if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
+endif
+
+if dein#tap('comfortable-motion.vim')
+    nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
+    nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
+    nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
+    nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
 endif
 
 if dein#tap('goyo.vim')
@@ -166,3 +168,9 @@ if dein#tap('bps/vim-textobj-python')
         xmap iF <Plug>(textobj-python-function-i)
         omap iF <Plug>(textobj-python-function-i)
 endif
+
+"if dein#tap('nerdtree')
+        ""nerdtree
+        "nnoremap <silent><leader>e :NERDTreeToggle <CR>
+        ""nnoremap <leader>f :NERDTreeFind <CR>
+"endif
