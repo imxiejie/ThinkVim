@@ -20,7 +20,6 @@ hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
 "coc highlightstext color
 hi default CocHighlightText  guibg=#725972 ctermbg=96
 
-
 "Hide tilde
 "hi EndOfBuffer ctermfg=234 ctermbg=NONE guifg=#1c1c1c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 

@@ -6,11 +6,11 @@
 
 
 
-## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
+## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
 ## 特性
 - 模块插件配置
-- 懒加载百分之90插件
+- 懒加载百分之95插件
 - 启动速度快
 * 启动时间`nvim --startuptime ~/vimstart.log` :
 
@@ -35,15 +35,16 @@
 - Universal ctags: [ctags.io](https://ctags.io/)
 - Rouge : `sudo gem install rouge`
 
-## 安装
+## 安装  ---下方有B站安装教程
 ```
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
-**_1._** clone完成后打开你的终端或者GUI，输入nvim，会自动安装dein插件管理  
-**_2._** 安装完成后，检测插件是否安装进行安装，由于国内clone较慢建议全局方式科学   
-**_3._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
-**_4._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
-**_5._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
+**_1._** clone完成后打开你的终端或者GUI，输入nvim后一切都会自动安装耐心等待就可以了。   
+**_2._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
+**_3._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
+**_4._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
+
+**_Tmux_**  如果你也喜欢图上的tmux状态栏你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)
 
 
 ## 结构
@@ -300,7 +301,13 @@ Tab            | Insert | 补全向下筛选
 Shit + Tab      |Insert | 补全向上筛选
 Ctrl + n       | Insert  |补全向下筛选
 Ctrl + p       | Insert  |补全向上筛选
+Ctrl + Space   | Normal  | 强制触发补全
 `<CR>`         | Insert/Select | 代码片段确认选择 补全确认选择
+K              |Normal | 显示方法函数doc
+gd             | Normal | 跳转到定义
+gy             | Normal | 跳转类型定义
+gi             | Normal | 跳转到实现
+gr             | Normal | 跳转到引用
 
  * TextObject 
 
@@ -319,6 +326,8 @@ iF            | Python | 快速选择函数体内
    * 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低vim的启动速度也可以避免vim性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
 * 颜色
    * 将你喜欢的 `colorscheme` 放到Colors文件夹中，然后修改 `themes/theme.vim`.colors文件夹中已经装了很多主题可以更换
+## 建议
+* 如果你有好用实用的插件可以在[issue](https://github.com/taigacute/ThinkVim/issues/7)中提。我会进行考虑。如有必要我会添加对该插件的支持
 ## Backers
 
 
@@ -329,7 +338,7 @@ iF            | Python | 快速选择函数体内
   </a>
 
 ## 教程
-   * 你可以在[B站查看使用教程](https://www.bilibili.com/video/av43675350/)
+   * 你可以在[B站查看使用教程系列](https://space.bilibili.com/321783076/channel/detail?cid=64354)
 ## 答疑
    > 为什么使用dein而不是vim-plug  
    * dein提供更多的钩子函数，懒加载方面做得也比vim-plug好一些。使用确实很困难。需要看一些dein的资料。关于dein褒贬不一，dein添加了一层缓存接管runtime，有人觉得好有人觉得不好。
