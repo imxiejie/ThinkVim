@@ -6,7 +6,7 @@
 
 
 
-## [Switch English](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
+## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
 ## 特性
 - 模块插件配置
