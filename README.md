@@ -93,7 +93,7 @@ Name           | Description
 [tpope/vim-surround](https://github.com/tpope/vim-surround) |  符号成双成对
 [tpope/vim-repeat](https://github.com/tpope/vim-repeat) | 重复上一次操作
 [sbdchd/neoformat](https://github.com/sbdchd/neoformat) | 格式化插件
-[yonchu/accelerated-smooth-scroll](https://github.com/yonchu/accelerated-smooth-scroll) | 平滑滚动插件 
+[yuttie/comfortable-motion.vim](https://github.com/yonchu/yuttie/comfortable-motion.vim) | 平滑滚动插件 
 [chemzqm/vim-easygit](https://github.com/chemzqm/vim-easygit) | 更简单的git操作
 [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim) | git信息查看
 [thinca/quickrun](https://github.com/thinca/quickrun) | 快速输出
