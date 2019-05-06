@@ -17,7 +17,11 @@ colorscheme gruvbox8_hard
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
 
-"only for PaperColor and gruvbox Colorscheme if use another colorscheme you should comment this
+"coc highlightstext color
+hi default CocHighlightText  guibg=#725972 ctermbg=96
+
+
+"Hide tilde
 "hi EndOfBuffer ctermfg=234 ctermbg=NONE guifg=#1c1c1c guibg=NONE guisp=NONE cterm=NONE gui=NONE
 
 "Pmenu Colors
@@ -30,19 +34,6 @@ hi PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 ct
 "hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr ctermbg=NONE guibg=NONE
 
-" Plugin: GitGutter
-" ---------------------------------------------------------
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified = '▎'
-let g:gitgutter_sign_removed = '▏'
-let g:gitgutter_sign_removed_first_line = '▔'
-let g:gitgutter_sign_modified_removed = '▋'
-" ---------------------------------------------------------
-highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
-highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
-highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
-highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
-"au TextChangedI * GitGutter
 
 " Plugin: Defx icons and highlights {{{
 " ---------------------------------------------------------
