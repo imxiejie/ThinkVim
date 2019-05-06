@@ -35,7 +35,7 @@ nnoremap  [b :bn<CR>
 "delete buffer
 nnoremap <C-x>  :bd<CR>
 
-"switch windw
+"switch window
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
