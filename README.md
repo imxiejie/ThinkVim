@@ -1,8 +1,8 @@
 
 ## [ThinkVim](https://github.com/taigacute/ThinkVim)
-
-![](https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png)
-
+<div aligh="center">
+<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
+</div>
 
 
 
