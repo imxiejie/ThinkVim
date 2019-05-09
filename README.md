@@ -347,6 +347,7 @@ iF            | Python | 快速选择函数体内
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
 ## 鸣谢
+* [chemzqm](https://github.com/chemzqm)
 * [rafi](https://github.com/rafi/vim-config)
 * [Shougo](https://github.com/Shougo)
 
