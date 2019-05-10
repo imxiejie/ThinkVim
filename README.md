@@ -219,6 +219,7 @@ Keys           | Mode   | Description
  `<Leader>` + w   | Normal | 保存
  `<Leader>` + s   | Normal | 打开Startify
  `<Leader>` + d   | Normal | 打开Dash
+  `<Leader>` + cf   | Normal | coc 格式化
  `<Leader>` + fc   | Normal | fzf vim主题查看更改
  `<Leader>` + ff   | Normal | fzf 在当前路径下文件搜索
  `<Leader>` + fr   | Normal | fzf rg搜索
