@@ -24,7 +24,7 @@
 
 ## 必要环境
 * macos or linux  (windows上需要修改一些变量）
-* neovim > 0.4.0
+* neovim >= 0.4.0（配置使用了一些floatwindow.neovim0.4.0以上的版本才支持)
 * python3 support
   - pip3 install --user pynvim
 * node and yarn
