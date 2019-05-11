@@ -195,7 +195,6 @@ repo = 'airblade/vim-gitgutter'
 on_path = ".*"
 hook_source='''
 let g:gitgutter_map_keys = 0
-let g:gitgutter_sh = $SHELL
 source ~/.config/nvim/rc/plugins/vim-gitgutter.vim
 '''
 

@@ -9,7 +9,7 @@ inoremap <C-a> <Home>
 inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
 
 " command line alias
-cnoremap w!! w !sudo tee % >/dev/null
+"cnoremap w!! w !sudo tee % >/dev/null
 cnoremap <C-p> <Up>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
@@ -35,7 +35,7 @@ nnoremap  [b :bn<CR>
 "delete buffer
 nnoremap <C-x>  :bd<CR>
 
-"switch window
+"switch windw
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 nnoremap <C-j> <C-w>j
@@ -59,3 +59,6 @@ nnoremap Y y$
 " settings for resize splitted window
 nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
+
+" Remove spaces at the end of lines
+nnoremap <silent> ,<Space> :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>

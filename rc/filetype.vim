@@ -10,9 +10,9 @@ augroup MyAutoCmd
     autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 	autocmd FileType yaml.docker-compose setlocal expandtab
     autocmd FileType go let b:coc_pairs_disabled = ['<']
-    "autosave go file can use gopls which can solved the gopls cant work with
-    "nosave buffer
-    autocmd InsertLeave *.go write
+
+    autocmd InsertLeave,TextChanged,FocusLost *.go silent! wall
+    autocmd TextChanged,TextChangedI <buffer> silent w
 
 	" https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
 	autocmd FileType css,javascript,jsx,javascript.jsx
