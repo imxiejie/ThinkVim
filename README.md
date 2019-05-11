@@ -1,8 +1,8 @@
 
 ## [ThinkVim](https://github.com/taigacute/ThinkVim)
-
-![](https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png)
-
+<div aligh="center">
+<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
+</div>
 
 
 
@@ -16,7 +16,7 @@
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
-     50 |   50~63ms
+     51 |   50~63ms
 
 - 完全自定义
 - LSP语言服务支持
@@ -24,7 +24,7 @@
 
 ## 必要环境
 * macos or linux  (windows上需要修改一些变量）
-* neovim > 0.4.0
+* neovim >= 0.4.0（配置使用了一些floatwindow.neovim0.4.0以上的版本才支持)
 * python3 support
   - pip3 install --user pynvim
 * node and yarn
@@ -220,6 +220,7 @@ Keys           | Mode   | Description
  `<Leader>` + w   | Normal | 保存
  `<Leader>` + s   | Normal | 打开Startify
  `<Leader>` + d   | Normal | 打开Dash
+  `<Leader>` + cf   | Normal | coc 格式化
  `<Leader>` + fc   | Normal | fzf vim主题查看更改
  `<Leader>` + ff   | Normal | fzf 在当前路径下文件搜索
  `<Leader>` + fr   | Normal | fzf rg搜索
@@ -348,6 +349,7 @@ iF            | Python | 快速选择函数体内
 ## Feedback
   * 如果你遇到了麻烦可以提issue或者 [Giiter](https://gitter.im/thinkvim/community)
 ## 鸣谢
+* [chemzqm](https://github.com/chemzqm)
 * [rafi](https://github.com/rafi/vim-config)
 * [Shougo](https://github.com/Shougo)
 
