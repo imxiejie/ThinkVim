@@ -1,23 +1,11 @@
 " Defx
 " ----
 call defx#custom#option('_', {
-	\ 'columns': 'mark:indent:icons:filename:type',
+	\ 'columns': 'mark:indent:git:icons:filename',
 	\ 'winwidth': 30,
 	\ 'split': 'vertical',
 	\ 'direction': 'topleft',
 	\ 'show_ignored_files': 0,
-	\ })
-
-call defx#custom#column('filename', {
-	\ 'min_width': 5,
-	\ 'max_width': 25,
-	\ })
-
-call defx#custom#column('mark', {
-	\ 'directory_icon': nr2char(0xe5ff),
-	\ 'readonly_icon': nr2char(0xe0a2),
-	\ 'root_icon': nr2char(0xe5fe),
-	\ 'selected_icon': '✓',
 	\ })
 
 " Close defx if it's the only buffer left in the window
@@ -29,10 +17,11 @@ autocmd MyAutoCmd TabLeave * if &ft == 'defx' | wincmd w | endif
 " Define mappings
 autocmd MyAutoCmd FileType defx do WinEnter | call s:defx_my_settings()
 function! s:defx_my_settings() abort
-    nnoremap <silent><buffer><expr> <CR> <sid>Defx_toggle_tree()
-	nnoremap <silent><buffer><expr> l     <sid>Defx_toggle_tree()
+    nnoremap <silent><buffer><expr> <CR> <sid>defx_toggle_tree()
+	nnoremap <silent><buffer><expr> l     defx#do_action('drop')
 	nnoremap <silent><buffer><expr> s     defx#do_action('open', 'botright vsplit')
 	nnoremap <silent><buffer><expr> i     defx#do_action('open', 'topleft split')
+    nnoremap <silent><buffer><expr> P     defx#do_action('open', 'pedit')
 	nnoremap <silent><buffer><expr> K     defx#do_action('new_directory')
 	nnoremap <silent><buffer><expr> N     defx#do_action('new_multiple_files')
 	nnoremap <silent><buffer><expr> dd    defx#do_action('remove')
@@ -72,7 +61,7 @@ function! s:defx_my_settings() abort
 	nnoremap <silent><buffer><expr>w   defx#do_action('call', 'DefxToggleWidth')
 endfunction
 
-function! s:Defx_toggle_tree() abort
+function! s:defx_toggle_tree() abort
   if defx#is_directory()
     return defx#do_action('open_or_close_tree')
   endif
@@ -128,3 +117,23 @@ function! g:DefxTmuxExplorer(context) abort
 	let l:parent = fnamemodify(l:target, ':h')
 	silent execute '!tmux split-window -p 30 -c '.l:parent.' '.s:explorer
 endfunction
+
+let g:defx_git#indicators = {
+	\ 'Modified'  : '•',
+	\ 'Staged'    : '✚',
+	\ 'Untracked' : 'ᵁ',
+	\ 'Renamed'   : '≫',
+	\ 'Unmerged'  : '≠',
+	\ 'Ignored'   : 'ⁱ',
+	\ 'Deleted'   : '✖',
+	\ 'Unknown'   : '⁇'
+	\ }
+
+highlight Defx_filename_3_Modified  ctermfg=1  guifg=#D370A3
+highlight Defx_filename_3_Staged    ctermfg=10 guifg=#A3D572
+highlight Defx_filename_3_Ignored   ctermfg=8  guifg=#404660
+highlight def link Defx_filename_3_Untracked Comment
+highlight def link Defx_filename_3_Unknown Comment
+highlight def link Defx_filename_3_Renamed Title
+highlight def link Defx_filename_3_Unmerged Label
+" highlight Defx_git_Deleted   ctermfg=13 guifg=#b294bb

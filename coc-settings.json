@@ -4,12 +4,13 @@
     "suggest.noselect": false,
     "suggest.detailField":"abbr",
     "suggest.snippetIndicator": "🌟",
-    "suggest.triggerCompletionWait": 50,
+    "suggest.triggerCompletionWait": 100,
     "suggest.echodocSupport": true,
     "coc.preferences.formatOnType": true,
+    "diagnostic.signOffset": 9999999,
 	"diagnostic.errorSign": "😡",
-    "diagnostic.displayByAle": false,
 	"diagnostic.warningSign": "🤔",
+    "diagnostic.displayByAle": false,
     //tslint
     "tslint.autoFixOnSave": true,
     "prettier.eslintIntegration": true,
@@ -21,19 +22,35 @@
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
+    //golang
     "languageserver": {
         "golang": {
-            "command": "gopls",
-            "args": [],
-            "rootPatterns": [
-                "go.mod",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ],
+            "command": "go-langserver",
             "filetypes": [
                 "go"
-            ]
+            ],
+            "initializationOptions": {
+                "gocodeCompletionEnabled": true,
+                "diagnosticsEnabled": true,
+                "lintTool": "golint"
+            }
+        },
+        "dockerfile": {
+                "command": "docker-langserver",
+                "filetypes": [
+                    "dockerfile"
+                ],
+                "args": [
+                    "--stdio"
+                ]
+            },
+            "efm": {
+                "command": "efm-langserver",
+                "args": [],
+                "filetypes": [
+                    "vim",
+                    "markdown"
+                ]
+            }
         }
-    }
 }
