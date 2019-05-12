@@ -20,7 +20,7 @@
 
 - 完全自定义
 - LSP语言服务支持
-  - 默认支持js jsx python 其他语言开发者需要去[coc的主页查看语言的server](https://github.com/neoclide/coc.nvim/wiki/Language-servers)在coc-settins.json中配置即可。默认的json文件包含的是gopls，go语言开发server。可以根据自己的语言替换。
+  - 默认支持js ts jsx python 
 
 ## 必要环境
 * macos or linux  (windows上需要修改一些变量）
@@ -42,7 +42,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 **_1._** clone完成后打开你的终端或者GUI，输入nvim后一切都会自动安装耐心等待就可以了。   
 **_2._** 如果你要使用Denite等需要python3支持的插件，你需要在normal模式输入`:UpdateRemotePlugins`  
 **_3._** linux下需要修改下python的路径。修改rc/init.vim pytonhost的路径设置   
-**_4._** 默认json中带了go开发的server不写go的删除替换。gopher安装[gopls](https://github.com/saibing/tools)
+**_4._** 其他语言开发者需要去[coc的主页查看语言的server](https://github.com/neoclide/coc.nvim/wiki/Language-servers)在coc-settins.json中的language中添加lsp的source即可。详细的设置可以在上面的coc主页链接找到。
 
 **_Tmux_**  如果你也喜欢图上的tmux状态栏你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)
 
