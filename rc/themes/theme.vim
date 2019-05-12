@@ -13,6 +13,10 @@ set background=dark
 "colorscheme space_vim_theme
 "colorscheme PaperColor
 colorscheme gruvbox8_hard
+"colorscheme gruvbox
+"colorscheme dracula
+"colorscheme  solarized8_flat
+
 
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 
