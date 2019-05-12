@@ -1,5 +1,5 @@
 {
-    "suggest.triggerAfterInsertEnter": true,
+    "suggest.triggerAfterInsertEnter": false,
     "suggest.timeout": 500,
     "suggest.noselect": false,
     "suggest.detailField":"abbr",
@@ -8,49 +8,23 @@
     "suggest.echodocSupport": true,
     "coc.preferences.formatOnType": true,
     "diagnostic.signOffset": 9999999,
-	"diagnostic.errorSign": "😡",
-	"diagnostic.warningSign": "🤔",
+	"diagnostic.errorSign": "●",
+	"diagnostic.warningSign": "●",
     "diagnostic.displayByAle": false,
+    "diagnostic.refreshOnInsertMode": true,
     //tslint
     "tslint.autoFixOnSave": true,
     "prettier.eslintIntegration": true,
     "prettier.tslintIntegration": true,
     "prettier.stylelintIntegration": true,
+    //emmet
+    "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact"},
     //python
     "python.autoComplete.addBrackets": true,
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    //golang
     "languageserver": {
-        "golang": {
-            "command": "go-langserver",
-            "filetypes": [
-                "go"
-            ],
-            "initializationOptions": {
-                "gocodeCompletionEnabled": true,
-                "diagnosticsEnabled": true,
-                "lintTool": "golint"
-            }
-        },
-        "dockerfile": {
-                "command": "docker-langserver",
-                "filetypes": [
-                    "dockerfile"
-                ],
-                "args": [
-                    "--stdio"
-                ]
-            },
-            "efm": {
-                "command": "efm-langserver",
-                "args": [],
-                "filetypes": [
-                    "vim",
-                    "markdown"
-                ]
-            }
-        }
+    }
 }
