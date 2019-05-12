@@ -171,7 +171,7 @@ on_map = '.'
 
 [[plugins]]
 repo = 'Yggdroot/indentLine'
-on_ft = ['python','js','jsx','html','css','vim']
+on_ft = ['python','html','css','vim','javascript','javascript.jsx','vue']
 hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
 
 [[plugins]]
@@ -209,7 +209,6 @@ on_source = 'defx.nvim'
 repo = 'airblade/vim-gitgutter'
 on_path = ".*"
 hook_source='''
-let g:gitgutter_map_keys = 0
 source ~/.config/nvim/rc/plugins/vim-gitgutter.vim
 '''
 
@@ -258,7 +257,7 @@ hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
 
 [[plugins]]
 repo = 'othree/html5.vim'
-on_ft = ['html', 'javascript.jsx','vue'] 
+on_ft = ['html', 'javascript.jsx','vue','javascript']
 
 [[plugins]]
 repo = 'neoclide/vim-jsx-improve'
@@ -316,10 +315,8 @@ on_ft = ['xml']
 #[[plugins]]
 #repo = 'mxw/vim-jsx'
 #on_ft = ['javascript', 'javascript.jsx']
-#[[plugins]]
-#repo = 'hail2u/vim-css3-syntax'
-#on_ft = ['css']
+
 
 #[[plugins]]
-#repo = 'ap/vim-css-color'
+#repo = 'hail2u/vim-css3-syntax'
 #on_ft = ['css']
