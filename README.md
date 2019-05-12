@@ -175,7 +175,7 @@ j        |Normal  | gj
 k        |Normal  | gk
 j        |Visual  | gj
 k        |Visual  | gj
-,   + <Space>        |Normal  | 删除尾部空格
+,   + `Space`        |Normal  | 删除尾部空格
 [ + a      |Normal  | Ale下一个错误
 ] + a      |Normal  | Ale上一个错误
 [ + c      |Normal  | coc下一个错误
