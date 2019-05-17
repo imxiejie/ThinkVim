@@ -46,7 +46,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 **_4._** 其他语言开发者需要去[coc的主页查看语言的server](https://github.com/neoclide/coc.nvim/wiki/Language-servers)在coc-settins.json中的language中添加lsp的source即可。详细的设置可以在上面的coc主页链接找到。
 
 **_Tmux Zsh_**  如果你也喜欢图上的tmux状态栏和zsh主题你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是powerlevel10k异步运行主题。摆脱终端操作git命令很慢的困扰
-
+**_VimTheme_** 是[gruvbox9](https://github.com/taigacute/gruvbox9)
 
 ## 结构
 - [after](~/.config/nvim/after)
