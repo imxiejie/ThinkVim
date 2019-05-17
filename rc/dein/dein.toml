@@ -2,19 +2,6 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
-repo = 'lifepillar/vim-gruvbox8'
-hook_add = '''
-let g:gruvbox_filetype_hi_groups = 1
-let g:gruvbox_plugin_hi_groups = 1
-'''
-
-#[[plugins]]
-#repo = 'morhetz/gruvbox'
-#hook_add = '''
-#let g:gruvbox_contrast_dark = 'hard'
-#'''
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 depends = 'vim-devicons'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
@@ -43,4 +30,10 @@ hook_source = '''
 #repo = 'vim-airline/vim-airline-themes'
 #hook_add = '''
 #let g:airline_theme='wombat'
+#'''
+
+#[[plugins]]
+#repo = 'morhetz/gruvbox'
+#hook_add = '''
+#let g:gruvbox_contrast_dark = 'hard'
 #'''

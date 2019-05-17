@@ -9,10 +9,14 @@ if has('termguicolors')
 endif
 
 set background=dark
+
+let g:gruvbox_filetype_hi_groups = 1
+let g:gruvbox_plugin_hi_groups = 1
+
 "colorscheme hybrid_reverse
 "colorscheme space_vim_theme
 "colorscheme PaperColor
-colorscheme gruvbox8_hard
+colorscheme gruvbox9_hard
 "colorscheme gruvbox
 "colorscheme dracula
 "colorscheme  solarized8_flat
@@ -26,9 +30,12 @@ hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 "coc highlightstext color
 hi default CocHighlightText  guibg=#725972 ctermbg=96
 
+"hi Normal guibg=NONE ctermbg=NONE
+"hi LineNr ctermbg=NONE guibg=NONE
+
 
 "Hide tilde
-"hi EndOfBuffer ctermfg=234 ctermbg=NONE guifg=#1c1c1c guibg=NONE guisp=NONE cterm=NONE gui=NONE
+"hi EndOfBuffer ctermfg=none ctermbg=NONE guifg=#6f6f6f  guibg=NONE guisp=NONE cterm=NONE gui=NONE
 
 "Pmenu Colors
 " ---------------------------------------------------------
@@ -40,4 +47,6 @@ hi PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 ct
 "hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr ctermbg=NONE guibg=NONE
 
-
+map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
