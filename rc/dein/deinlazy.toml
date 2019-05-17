@@ -98,10 +98,6 @@ let g:comfortable_motion_no_default_key_mappings = 1
 let g:comfortable_motion_impulse_multiplier = 1
 '''
 
-#[[plugins]]
-#repo = 'yonchu/accelerated-smooth-scroll'
-#on_map = ['<C-d>','<C-u>','<C-f>','<C-b>']
-
 [[plugins]]
 repo = 'rizzatti/dash.vim'
 on_map = { n ='<Plug>'}
@@ -235,7 +231,7 @@ hook_add ='''
 '''
 [[plugins]]
 repo = 'luochen1990/rainbow'
-on_ft = ['python','js','jsx','html','css','go','vim','toml']
+on_ft = ['python','javascript','javascript.jsx','html','css','go','vim','toml']
 hook_source = 'let g:rainbow_active = 1'
 
 [[plugins]]
