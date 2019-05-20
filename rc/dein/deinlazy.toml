@@ -83,7 +83,7 @@ on_source = ['denite.nvim']
 
 [[plugins]]
 repo = 'scrooloose/nerdcommenter'
-on_ft =['vim','json','go','html','js','jsx','py','css','less','tmpl','toml','xml','sql']
+on_ft =['vim','json','go','html','javascript','javascript.jsx','py','css','less','tmpl','toml','xml','sql']
 
 [[plugins]]
 repo = 'sbdchd/neoformat'
@@ -206,6 +206,13 @@ repo = 'airblade/vim-gitgutter'
 on_path = ".*"
 hook_source='''
 source ~/.config/nvim/rc/plugins/vim-gitgutter.vim
+'''
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+on_cmd =['Vista','Vista!','Vista!!']
+hook_source='''
+source ~/.config/nvim/rc/plugins/vista.vim
 '''
 
 [[plugins]]
