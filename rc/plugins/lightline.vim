@@ -1,10 +1,10 @@
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'gruvbox9',
       \ 'active': {
       \   'left': [ ['homemode'],
       \             ['fugitive', 'gitgutter'],['filename'],['cocerror'],['cocwarn']],
       \   'right':[ ['lineinfo'],
-      \             ['percent'], ['fileformat','fileencoding'] ],
+      \             ['percent'], ['fileformat'],['fileencoding'] ],
       \ },
       \ 'inactive': {
       \   'left': [['homemode'], ['filename']],
@@ -15,7 +15,7 @@ let g:lightline = {
       \   'right': [['thinkvim']],
       \ },
       \ 'component': {
-      \   'lineinfo': ' %3l:%-2v',
+      \   'lineinfo': '%3l:%-2v',
       \   'thinkvim': 'ﴔ ',
       \ },
       \ 'component_expand': {

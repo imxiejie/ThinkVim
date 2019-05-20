@@ -140,6 +140,10 @@ if dein#tap('splitjoin.vim')
         nmap sk :SplitjoinSplit<CR>
 endif
 
+if dein#tap('vista.vim')
+        nnoremap <silent><localleader>v :Vista!!<CR>
+endif
+
 if dein#tap('tagbar')
         nnoremap <silent><localleader>t :TagbarToggle<CR>
 endif

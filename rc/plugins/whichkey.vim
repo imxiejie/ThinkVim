@@ -64,6 +64,7 @@ let g:which_key_localmap ={
               \ },
       \ 'b'    : 'Bufferlist',
       \ 't'    : 'Tagbar',
+      \ 'v'    : 'Vista',
       \ 'r'    : 'QuickRun',
       \ 'd'    : {
                 \'name':'+Todo',
