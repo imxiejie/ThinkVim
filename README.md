@@ -82,7 +82,7 @@ Name           | Description
 ## 懒加载插件
 Name           | Description
 -------------- | ----------------------
-[ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) 提供 ctags/gtags 后台数据库自动更新功能
+[ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) | 提供 ctags/gtags 后台数据库自动更新功能
 [mhinz/vim-startify](https://github.com/mhinz/vim-startify) | 启动画面
 [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) |  字体图标
 [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) | git插件 
