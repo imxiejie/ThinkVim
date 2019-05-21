@@ -1,7 +1,6 @@
 " Defx
-" ----
 call defx#custom#option('_', {
-	\ 'columns': 'mark:indent:git:icons:filename',
+	\ 'columns': 'indent:git:icons:filename',
 	\ 'winwidth': 30,
 	\ 'split': 'vertical',
 	\ 'direction': 'topleft',
@@ -17,8 +16,8 @@ autocmd MyAutoCmd TabLeave * if &ft == 'defx' | wincmd w | endif
 " Define mappings
 autocmd MyAutoCmd FileType defx do WinEnter | call s:defx_my_settings()
 function! s:defx_my_settings() abort
-    nnoremap <silent><buffer><expr> <CR> <sid>defx_toggle_tree()
-	nnoremap <silent><buffer><expr> l     defx#do_action('drop')
+    nnoremap <silent><buffer><expr> <CR>  defx#do_action('drop')
+    nnoremap <silent><buffer><expr> l     <sid>defx_toggle_tree()
 	nnoremap <silent><buffer><expr> s     defx#do_action('open', 'botright vsplit')
 	nnoremap <silent><buffer><expr> i     defx#do_action('open', 'topleft split')
     nnoremap <silent><buffer><expr> P     defx#do_action('open', 'pedit')
@@ -117,23 +116,3 @@ function! g:DefxTmuxExplorer(context) abort
 	let l:parent = fnamemodify(l:target, ':h')
 	silent execute '!tmux split-window -p 30 -c '.l:parent.' '.s:explorer
 endfunction
-
-let g:defx_git#indicators = {
-	\ 'Modified'  : '•',
-	\ 'Staged'    : '✚',
-	\ 'Untracked' : 'ᵁ',
-	\ 'Renamed'   : '≫',
-	\ 'Unmerged'  : '≠',
-	\ 'Ignored'   : 'ⁱ',
-	\ 'Deleted'   : '✖',
-	\ 'Unknown'   : '⁇'
-	\ }
-
-highlight Defx_filename_3_Modified  ctermfg=1  guifg=#D370A3
-highlight Defx_filename_3_Staged    ctermfg=10 guifg=#A3D572
-highlight Defx_filename_3_Ignored   ctermfg=8  guifg=#404660
-highlight def link Defx_filename_3_Untracked Comment
-highlight def link Defx_filename_3_Unknown Comment
-highlight def link Defx_filename_3_Renamed Title
-highlight def link Defx_filename_3_Unmerged Label
-" highlight Defx_git_Deleted   ctermfg=13 guifg=#b294bb
