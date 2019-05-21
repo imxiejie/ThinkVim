@@ -198,6 +198,11 @@ on_cmd = 'Defx'
 hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
 
 [[plugins]]
+repo = 'kristijanhusak/defx-git'
+on_source='defx.nvim'
+hook_source = 'source ~/.config/nvim/rc/plugins/defx-git.vim'
+
+[[plugins]]
 repo = 'kristijanhusak/defx-icons'
 on_source = 'defx.nvim'
 
