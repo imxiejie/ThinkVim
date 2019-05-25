@@ -11,14 +11,15 @@ endif
 set background=dark
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_plugin_hi_groups = 1
-"let g:gruvbox_transp_bg = 1
+let g:gruvbox_transp_bg = 1
+
 "colorscheme hybrid_reverse
 "colorscheme space_vim_theme
 "colorscheme PaperColor
 colorscheme gruvbox9_hard
 "colorscheme gruvbox
 "colorscheme dracula
-"colorscheme  solarized8_flat
+"colorscheme  solarized8
 
 
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
@@ -26,8 +27,9 @@ hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 "Plugin:Neomake
 "hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
 
-"coc highlightstext color
+"coc highlight setting
 hi default CocHighlightText  guibg=#725972 ctermbg=96
+hi CocWarningSign  ctermfg=32 guifg=#0087d7
 
 "hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr ctermbg=NONE guibg=NONE
@@ -46,6 +48,12 @@ hi PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 ct
 "hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr ctermbg=NONE guibg=NONE
 
+"GitGutter Coc-git Highlight
+highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
+highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
+highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
+highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
+" Defx Highlight
 highlight Defx_filename_3_Modified  ctermfg=1  guifg=#D370A3
 highlight Defx_filename_3_Staged    ctermfg=10 guifg=#A3D572
 highlight Defx_filename_3_Ignored   ctermfg=8  guifg=#404660

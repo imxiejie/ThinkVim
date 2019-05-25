@@ -6,14 +6,30 @@
     "suggest.snippetIndicator": "🌟",
     "suggest.triggerCompletionWait": 100,
     "suggest.echodocSupport": true,
-    "coc.preferences.formatOnType": true,
+    //diagnostic
     "diagnostic.signOffset": 9999999,
 	"diagnostic.errorSign": "●",
 	"diagnostic.warningSign": "●",
     "diagnostic.displayByAle": false,
     "diagnostic.refreshOnInsertMode": true,
+    //git
+    "git.enableGutters": true,
+    "git.addedSign.hlGroup": "GitGutterAdd",
+    "git.changedSign.hlGroup": "GitGutterChange",
+    "git.removedSign.hlGroup": "GitGutterDelete",
+    "git.topRemovedSign.hlGroup": "GitGutterDelete",
+    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+    "git.addedSign.text":"▎",
+    "git.changedSign.text":"▎",
+    "git.removedSign.text":"▏",
+    "git.topRemovedSign.text": "▔",
+    "git.changeRemovedSign.text": "▋",
+    //Snippet
+    "coc.preferences.snippetStatusText": "Ⓢ ",
     //tslint
     "tslint.autoFixOnSave": true,
+    //prettier
+    "prettier.statusItemText": "ⓟ ",
     "prettier.eslintIntegration": true,
     "prettier.tslintIntegration": true,
     "prettier.stylelintIntegration": true,
@@ -25,6 +41,31 @@
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
+    //golang
     "languageserver": {
-    }
+            "golang": {
+                "command": "gopls",
+                "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+                "filetypes": [
+                    "go"
+                ]
+            },
+        "dockerfile": {
+                "command": "docker-langserver",
+                "filetypes": [
+                    "dockerfile"
+                ],
+                "args": [
+                    "--stdio"
+                ]
+            },
+            "efm": {
+                "command": "efm-langserver",
+                "args": [],
+                "filetypes": [
+                    "vim",
+                    "markdown"
+                ]
+            }
+        }
 }

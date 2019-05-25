@@ -9,6 +9,7 @@ hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
 [[plugins]]
 repo = 'mengelbrecht/lightline-bufferline'
 hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
+#hook_add='source ~/.config/nvim/rc/plugins/newlightline.vim'
 
 
 [[plugins]]

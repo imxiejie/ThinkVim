@@ -208,7 +208,7 @@ on_source = 'defx.nvim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
-on_path = ".*"
+#on_path = ".*"
 hook_source='''
 source ~/.config/nvim/rc/plugins/vim-gitgutter.vim
 '''

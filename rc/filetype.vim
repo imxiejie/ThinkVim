@@ -7,6 +7,7 @@ augroup MyAutoCmd
 	autocmd WinLeave,InsertEnter * set nocursorline
     autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
     autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
+    autocmd BufNewFile,BufRead *.jsx set filetype=javascript.jsx
     autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 	autocmd FileType yaml.docker-compose setlocal expandtab
     autocmd FileType go let b:coc_pairs_disabled = ['<']
