@@ -8,7 +8,7 @@ let g:lightline = {
       \ },
       \ 'inactive': {
       \   'left': [['homemode'], ['filename']],
-      \   'right':[['lineinfo'], ['percent']],
+      \   'right':[['lineinfo']],
       \ },
       \ 'tabline': {
       \   'left': [['buffers']],
