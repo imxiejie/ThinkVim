@@ -2,9 +2,9 @@ let g:lightline = {
       \ 'colorscheme': 'gruvbox9',
       \ 'active': {
       \   'left': [ ['homemode'],
-      \             ['fugitive', 'gitgutter'],['filename'],['cocerror'],['cocwarn']],
-      \   'right':[ ['lineinfo'],
-      \             ['percent'], ['fileformat'],['fileencoding'] ],
+      \             ['gitinfo'],['filename'],['cocstatus']],
+      \   'right':[
+      \             ['lineinfo'], ['fileformat'],['fileencoding'],['cocerror'],['cocwarn']],
       \ },
       \ 'inactive': {
       \   'left': [['homemode'], ['filename']],
@@ -15,7 +15,6 @@ let g:lightline = {
       \   'right': [['thinkvim']],
       \ },
       \ 'component': {
-      \   'lineinfo': '%3l:%-2v',
       \   'thinkvim': 'ﴔ ',
       \ },
       \ 'component_expand': {
@@ -25,10 +24,11 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'homemode': 'LightlineMode',
-      \   'fugitive': 'LightLineFugitive',
-      \   'gitgutter': 'LightLineGitGutter',
+      \   'gitinfo': 'LightLineGit',
+      \   'cocstatus': 'LightLineCocStatus',
       \   'readonly': 'LightLineReadonly',
       \   'modified': 'LightLineModified',
+      \   'lineinfo': 'LightlineLineinfo',
       \   'filename': 'LightLineFname',
       \   'filetype': 'LightLineFiletype',
       \   'fileformat': 'LightLineFileformat',
@@ -38,7 +38,28 @@ let g:lightline = {
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3"}
       \ }
 
-function! LightlineMode()
+function! s:lightline_is_lean() abort
+  return &ft =~? '\v^tagbar|defx|mundo(diff)?$'
+endfunction
+
+function! s:lightline_is_plain() abort
+  return &bt ==? 'terminal' || &ft =~? '\v^help$'
+endfunction
+
+function! LightlineLineinfo() abort
+  return &ft ==? 'help'             ? ''  :
+  \      &ft ==? 'tagbar'         ? '⚉ ' :
+  \      &ft ==? 'defx'             ? '🖿 ' :
+  \      &ft =~? '\v^mundo(diff)?$' ? '⮌ ' :
+  \      s:lightline_is_lean() || s:lightline_is_plain() ? ' '  :
+  \      printf('%d:%d ☰ %d%%', line('.'), col('.'), 100*line('.')/line('$'))
+endfunction
+
+function! LightlineMode() abort
+  return s:lightline_is_lean() || s:lightline_is_plain() ? toupper(&ft) : Lightlinemode()
+endfunction
+
+function! Lightlinemode()
   let nr = s:get_buffer_number()
   let nmap = [ '⓿ ',  '❶ ',  '❷ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ','➓ ','⓫ ','⓬ ','⓭ ','⓮ ','⓯ ','⓰ ','⓱ ','⓲ ','⓳ ','⓴ ']
   if nr == 0
@@ -85,12 +106,27 @@ function! LightLineReadonly()
   endif
 endfunction
 
-function! LightLineFugitive()
-  if exists("*fugitive#head")
-    let _ = fugitive#head()
-    return strlen(_) ? ''._ : ''
-  endif
-  return ''
+function! LightLineGit()
+    let gitbranch=get(g:, 'coc_git_status', '')
+    let gitcount=get(b:, 'coc_git_status', '')
+    let gitinfo = []
+    if empty(gitbranch)
+	    let gitbranch=""
+    endif
+    if empty(gitcount)
+	    let gitcount=""
+    endif
+    call add(gitinfo,gitbranch)
+    call add(gitinfo,gitcount)
+    return trim(join(gitinfo,''))
+endfunction
+
+function! LightLineCocStatus() abort
+    let status=get(g:, 'coc_status', '')
+    if empty(status)
+        return ""
+    endif
+    return trim(status)
 endfunction
 
 function! LightLineCocError()
@@ -103,7 +139,7 @@ function! LightLineCocError()
   if get(info, 'error', 0)
     call add(errmsgs, error_sign . info['error'])
   endif
-  return trim(join(errmsgs, ' ') . ' ' . get(g:, 'coc_status', ''))
+  return join(errmsgs, ' ')
 endfunction
 
 function! LightLineCocWarn() abort
@@ -116,30 +152,30 @@ function! LightLineCocWarn() abort
   if get(info, 'warning', 0)
     call add(warnmsgs, warning_sign . info['warning'])
   endif
- return trim(join(warnmsgs, ' ') . ' ' . get(g:, 'coc_status', ''))
+ return join(warnmsgs, ' ')
 endfunction
 
 autocmd User CocDiagnosticChange call lightline#update()
 
-function! LightLineGitGutter()
-  if ! exists('*GitGutterGetHunkSummary')
-        \ || ! get(g:, 'gitgutter_enabled', 0)
-        \ || winwidth('.') <= 90
-    return ''
-  endif
-  let symbols = ['+','~','-']
-  let hunks = GitGutterGetHunkSummary()
-  let ret = []
-  for i in [0, 1, 2]
-    if hunks[i] > 0
-      call add(ret, symbols[i] . hunks[i])
-    endif
-  endfor
-  return join(ret, ' ')
-endfunction
+"function! LightLineGitGutter()
+  "if ! exists('*GitGutterGetHunkSummary')
+        "\ || ! get(g:, 'gitgutter_enabled', 0)
+        "\ || winwidth('.') <= 90
+    "return ''
+  "endif
+  "let symbols = ['+','~','-']
+  "let hunks = GitGutterGetHunkSummary()
+  "let ret = []
+  "for i in [0, 1, 2]
+    "if hunks[i] > 0
+      "call add(ret, symbols[i] . hunks[i])
+    "endif
+  "endfor
+  "return join(ret, ' ')
+"endfunction
 
-function! LightLineFname() 
-  let icon = (strlen(&filetype) ? ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') 
+function! LightLineFname()
+  let icon = (strlen(&filetype) ? ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft')
   let filename = LightLineFilename()
   let ret = [filename,icon]
   if filename == ''
