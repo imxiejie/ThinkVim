@@ -154,7 +154,8 @@ Name           | Description
   * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
   
 ## 键位操作  
-默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位  
+* 默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。
+* 键位的修改尽量不要改动太多默认的键位，默认的键位有时很有用也方便他人上手。
 
 Keys           | Mode   | Description
 -------------- | -------| ----------------
