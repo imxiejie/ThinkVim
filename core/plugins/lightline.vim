@@ -123,7 +123,10 @@ function! LightLineReadonly()
   endif
 endfunction
 
-function! LightLineGit()
+function! LightLineGit()abort
+    if &filetype ==? 'defx'
+       return ""
+    endif
     let gitbranch=get(g:, 'coc_git_status', '')
     let gitcount=get(b:, 'coc_git_status', '')
     let gitinfo = []
