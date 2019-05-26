@@ -141,7 +141,7 @@ Name           | Description
 [coc-highlight](https://github.com/neoclide/coc-highlight)     | 高亮，支持显示css颜色代码
 [coc-git](https://github.com/neoclide/coc-git)     | git扩展 
 ## Theme主题
-* 主题为[gruvbox9](https://github.com/taigacute/gruvbox9)，完美支持[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve），因为我添加了新的react高亮语法组到[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),定制的制作了这个主题，如果你是写js，jsx的你会看到和vscode-gruvbox一样的体验。
+* 主题为[gruvbox9](https://github.com/taigacute/gruvbox9)，完美支持[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)，因为我添加了新的react高亮语法组到[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),定制的制作了这个主题，如果你是写js，jsx的你会看到和vscode-gruvbox一样的体验。
 
 ## StatuLine 状态栏
 * [Lightline](https://github.com/itchyny/lightline.vim) 主题也是定做的在[gruvbox9](https://github.com/taigacute/gruvbox9)
