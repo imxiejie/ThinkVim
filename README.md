@@ -4,7 +4,7 @@
 <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
 </div>
 <div align="center">
-<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/thinkvimnew.png">
+<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png">
 </div>
 
 ## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
