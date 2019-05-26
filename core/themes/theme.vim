@@ -11,7 +11,7 @@ endif
 set background=dark
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_plugin_hi_groups = 1
-let g:gruvbox_transp_bg = 1
+"let g:gruvbox_transp_bg = 1
 
 "colorscheme hybrid_reverse
 "colorscheme space_vim_theme
