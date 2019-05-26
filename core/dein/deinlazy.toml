@@ -20,7 +20,7 @@ let g:gutentags_ctags_exclude = [
 [[plugins]]
 repo = 'junegunn/goyo.vim'
 on_cmd = 'Goyo'
-hook_source ='source ~/.config/nvim/rc/plugins/goyo.vim'
+hook_source ='source ~/.config/nvim/core/plugins/goyo.vim'
 
 [[plugins]]
 repo = 'junegunn/Limelight.vim'
@@ -33,7 +33,7 @@ repo = 'ryanoasis/vim-devicons'
 repo = 'mhinz/vim-startify'
 on_cmd = 'Startify'
 depends = 'vim-devicons'
-hook_add ='source ~/.config/nvim/rc/plugins/startify.vim'
+hook_add ='source ~/.config/nvim/core/plugins/startify.vim'
 hook_post_source = '''
 function! StartifyEntryFormat()
     return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
@@ -49,7 +49,7 @@ merged = '0'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 on_cmd =['Colors','Rg','Buffers']
-hook_add = 'source ~/.config/nvim/rc/plugins/fzf.vim'
+hook_add = 'source ~/.config/nvim/core/plugins/fzf.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -92,7 +92,7 @@ on_ft =['vim','json','go','html','javascript','jsx','javascript.jsx','py','css',
 [[plugins]]
 repo = 'sbdchd/neoformat'
 on_cmd = ['Neoformat','Neoformat!']
-hook_add = 'source ~/.config/nvim/rc/plugins/neoformat.vim'
+hook_add = 'source ~/.config/nvim/core/plugins/neoformat.vim'
 
 [[plugins]]
 repo = 'yuttie/comfortable-motion.vim'
@@ -173,12 +173,12 @@ on_map = '.'
 [[plugins]]
 repo = 'Yggdroot/indentLine'
 on_ft = ['python','html','css','vim','javascript','jsx','javascript.jsx','vue']
-hook_add = 'source ~/.config/nvim/rc/plugins/indentline.vim'
+hook_add = 'source ~/.config/nvim/core/plugins/indentline.vim'
 
 [[plugins]]
 repo = 'liuchengxu/vim-which-key'
 on_cmd = ['WhichKey', 'WhichKey!']
-hook_add = 'source ~/.config/nvim/rc/plugins/whichkey.vim'
+hook_add = 'source ~/.config/nvim/core/plugins/whichkey.vim'
 hook_post_source = '''
     call which_key#register('<Space>', 'g:which_key_map')
     call which_key#register(';', 'g:which_key_localmap')
@@ -200,12 +200,12 @@ hook_source = '''
 [[plugins]]
 repo = 'Shougo/defx.nvim'
 on_cmd = 'Defx'
-hook_source = 'source ~/.config/nvim/rc/plugins/defx.vim'
+hook_source = 'source ~/.config/nvim/core/plugins/defx.vim'
 
 [[plugins]]
 repo = 'kristijanhusak/defx-git'
 on_source='defx.nvim'
-hook_source = 'source ~/.config/nvim/rc/plugins/defx-git.vim'
+hook_source = 'source ~/.config/nvim/core/plugins/defx-git.vim'
 
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
@@ -215,20 +215,20 @@ on_source = 'defx.nvim'
 repo = 'airblade/vim-gitgutter'
 #on_path = ".*"
 hook_source='''
-source ~/.config/nvim/rc/plugins/vim-gitgutter.vim
+source ~/.config/nvim/core/plugins/vim-gitgutter.vim
 '''
 
 [[plugins]]
 repo = 'liuchengxu/vista.vim'
 on_cmd =['Vista','Vista!','Vista!!']
 hook_source='''
-source ~/.config/nvim/rc/plugins/vista.vim
+source ~/.config/nvim/core/plugins/vista.vim
 '''
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
 on_cmd = ['TagbarToggle']
-hook_source ='source ~/.config/nvim/rc/plugins/tagbar.vim'
+hook_source ='source ~/.config/nvim/core/plugins/tagbar.vim'
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
@@ -254,7 +254,7 @@ hook_source = 'let g:rainbow_active = 1'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-hook_source = 'source ~/.config/nvim/rc/plugins/denite.vim'
+hook_source = 'source ~/.config/nvim/core/plugins/denite.vim'
 
 [[plugins]]
 repo = 'Shougo/echodoc.vim'
@@ -266,7 +266,7 @@ let g:echodoc#type = "virtual"
 
 [[plugins]]
 repo = 'w0rp/ale'
-hook_add = 'source ~/.config/nvim/rc/plugins/vim-ale.vim'
+hook_add = 'source ~/.config/nvim/core/plugins/vim-ale.vim'
 
 [[plugins]]
 repo = 'othree/html5.vim'
@@ -279,7 +279,7 @@ on_ft = ['javascript','jsx','javascript.jsx']
 [[plugins]]
 repo = 'fatih/vim-go'
 on_ft = ['go']
-hook_source = 'source ~/.config/nvim/rc/plugins/vim-go.vim'
+hook_source = 'source ~/.config/nvim/core/plugins/vim-go.vim'
 
 [[plugins]]
 repo = 'AndrewRadev/splitjoin.vim'
@@ -302,7 +302,7 @@ on_ft = ['xml']
 #repo = 'scrooloose/nerdtree'
 #on_map = { n ='<Plug>'}
 #depends = ['vim-devicons','vim-nerdtree-syntax-highlight']
-#hook_source = 'source ~/.config/nvim/rc/plugins/nerdtree.vim'
+#hook_source = 'source ~/.config/nvim/core/plugins/nerdtree.vim'
 
 #[[plugins]]
 #repo = 'tiagofumo/vim-nerdtree-syntax-highlight'

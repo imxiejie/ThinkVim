@@ -4,11 +4,11 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 depends = 'vim-devicons'
-hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
+hook_add='source ~/.config/nvim/core/plugins/lightline.vim'
 
 [[plugins]]
 repo = 'mengelbrecht/lightline-bufferline'
-hook_add='source ~/.config/nvim/rc/plugins/lightline.vim'
+hook_add='source ~/.config/nvim/core/plugins/lightline.vim'
 #hook_add='source ~/.config/nvim/rc/plugins/newlightline.vim'
 
 
@@ -19,11 +19,11 @@ repo = 'honza/vim-snippets'
 repo = 'neoclide/coc.nvim'
 merge = 0
 build = 'yarn install --frozen-lockfile'
-hook_add = 'source ~/.config/nvim/rc/plugins/coc.vim'
+hook_add = 'source ~/.config/nvim/core/plugins/coc.vim'
 
 #[[plugins]]
 #repo = 'bling/vim-airline'
-#hook_add='source ~/.config/nvim/rc/plugins/vim-airline.vim'
+#hook_add='source ~/.config/nvim/core/plugins/vim-airline.vim'
 
 #[[plugins]]
 #repo = 'vim-airline/vim-airline-themes'

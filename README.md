@@ -55,7 +55,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [autoload](~/.config/nvim/autoload)
   - [lightline](~/.config/nvim/after/autoload/lightline)
     - [colorscheme](~/.config/nvim/after/autoload/lightline/colorscheme)  - lightline主题文件夹
-- [rc/](~/.config/nvim/rc) - 配置文件目录
+- [core/](~/.config/nvim/rc) - 配置文件目录
   - [dein](~/.config/nvim/rc/dein)  - _**插件安装!**_
     - [dein.toml](~/.config/nvim/rc/dein/dein.toml)     - 正常加载的插件
     - [deinlazy.toml](~/.config/nvim/rc/dein/deinlazy.toml) - 懒加载插件
