@@ -1,5 +1,6 @@
 " =============================================================================
 " Author: taigacute
+" Theme : Gruvbox9
 " =============================================================================
 
 " Common colors
@@ -29,8 +30,8 @@ let s:fg4 = [ '#a89984', 246 ]
 
 
 let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, 'tabline':{}, 'terminal':{}}
-  let s:p.normal.left = [ [ s:bg0, s:fg4, 'bold' ], [ s:fg4, s:bg3] ,[s:fg3,s:bg4],[s:bg0,s:bg3],[s:red1,s:bg],[s:blue1,s:bg]]
-  let s:p.normal.right = [ [ s:bg0, s:bg4 ], [ s:bg0, s:fg4 ],[ s:bg0, s:bg4 ] ,[s:red,s:bg1]]
+  let s:p.normal.left = [ [ s:bg0, s:green, 'bold' ], [ s:fg4, s:bg3] ,[s:fg3,s:bg4],[s:bg0,s:bg3],[s:red1,s:bg],[s:blue1,s:bg]]
+  let s:p.normal.right = [ [ s:bg0, s:green ], [ s:bg0, s:fg4 ],[ s:bg0, s:bg4 ] ,[s:red,s:bg1]]
   let s:p.normal.middle = [ [ s:fg4, s:bg1 ] ]
   let s:p.inactive.right = [ [ s:bg4, s:bg1 ], [ s:bg4, s:bg1 ] ]
   let s:p.inactive.left =  [ [ s:bg4, s:bg1 ], [ s:bg4, s:bg1 ] ]
@@ -49,7 +50,7 @@ let s:p = {'normal':{}, 'inactive':{}, 'insert':{}, 'replace':{}, 'visual':{}, '
 
   let s:p.visual.middle = [ [ s:fg4, s:bg1 ] ]
   let s:p.tabline.left = [ [ s:fg4, s:bg1 ] ]
-  let s:p.tabline.tabsel = [ [ s:bg0, s:fg4 ] ]
+  let s:p.tabline.tabsel = [ [ s:bg0, s:green ] ]
   let s:p.tabline.middle = [ [ s:bg0, s:bg0 ] ]
   let s:p.tabline.right = [ [ s:bg0, s:orange ] ]
   let s:p.normal.error = [ [ s:bg0, s:orange ] ]
