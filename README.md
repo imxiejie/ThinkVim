@@ -1,5 +1,5 @@
 
-## [ThinkVim](https://github.com/taigacute/ThinkVim)
+## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 <div align="center">
 <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
 </div>
@@ -140,13 +140,19 @@ Name           | Description
 [coc-imselect](https://github.com/neoclide/coc-imselect)     | 选择
 [coc-highlight](https://github.com/neoclide/coc-highlight)     | 高亮，支持显示css颜色代码
 [coc-git](https://github.com/neoclide/coc-git)     | git扩展 
-## 选择你的喜好
-* [Lightline](https://github.com/itchyny/lightline.vim) Or [Airline](https://github.com/vim-airline/vim-airline)
-  * 默认的状态栏插件为lightline，如果你想使用airline，修改deinlazy.toml，取消airline以及vim-airline-theme并注释lightline。  
+## Theme主题
+* 主题为[gruvbox9](https://github.com/taigacute/gruvbox9)，完美支持[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)，因为我添加了新的react高亮语法组到[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),定制的制作了这个主题，如果你是写js，jsx的你会看到和vscode-gruvbox一样的体验。
+
+## StatuLine 状态栏
+* [Lightline](https://github.com/itchyny/lightline.vim) 主题也是定做的在[gruvbox9](https://github.com/taigacute/gruvbox9)
+  ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/normal.png)
+![](https://github.com/taigacute/IMG/blob/master/gruvbox9/insert.png)
+![](https://github.com/taigacute/IMG/blob/master/gruvbox9/visual.png)
+![](https://github.com/taigacute/IMG/blob/master/gruvbox9/replace.png)  
   _**NOTE!!Airline 需要更多的启动时间相比lightline**_  
-* [Defx.nvim](https://github.com/Shougo/defx.nvim)  文件资源管理
+## [Defx.nvim](https://github.com/Shougo/defx.nvim)  文件资源管理
   * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
-    同样的保留了nerdtree的配置，只不过在deinlazy.toml中注释了nerdtree。你可以根据你的喜欢切换。
+  
 ## 键位操作  
 默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。根据你的习惯修改任意你喜欢的键位  
 
