@@ -2,7 +2,7 @@
 "autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
 if executable('jsctags')
     let g:tagbar_type_javascript = { 'ctagsbin': 'jsctags' }
-endif<Paste>
+endif
 let g:tagbar_width=25
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
