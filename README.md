@@ -17,7 +17,7 @@
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
-     53 |   50~63ms
+     54 |   50~63ms
 
 - 完全自定义
 - LSP语言服务支持
@@ -84,6 +84,7 @@ Name           | Description
 -------------- | ----------------------
 [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) | 提供 ctags/gtags 后台数据库自动更新功能
 [mhinz/vim-startify](https://github.com/mhinz/vim-startify) | 启动画面
+[t9md/vim-choosewin](https://github.com/t9md/vim-choosewin) | 多开窗口跳转的便利插件
 [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons) |  字体图标
 [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive) | git插件 
 [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim) | 搜索插件
