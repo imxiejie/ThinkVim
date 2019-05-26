@@ -100,6 +100,12 @@ if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
 endif
 
+if dein#tap('vim-choosewin')
+	nmap -         <Plug>(choosewin)
+	nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
+endif
+
+
 if dein#tap('comfortable-motion.vim')
     nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
     nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>

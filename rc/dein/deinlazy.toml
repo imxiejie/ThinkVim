@@ -1,4 +1,8 @@
 [[plugins]]
+repo = 't9md/vim-choosewin'
+on_map= {n='<Plug>'}
+
+[[plugins]]
 repo = 'ludovicchabant/vim-gutentags'
 if = "executable('ctags')"
 on_path = ".*"
