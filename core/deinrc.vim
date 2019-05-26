@@ -11,7 +11,7 @@ let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 let $CACHE = expand('~/.cache')
 let s:path = expand('$CACHE/dein')
 
-let s:toml_dir = expand($CONFIG.'/nvim/rc/dein')
+let s:toml_dir = expand($CONFIG.'/nvim/core/dein')
 let s:toml =s:toml_dir.'/dein.toml'
 let s:lazy_toml = s:toml_dir.'/deinlazy.toml'
 

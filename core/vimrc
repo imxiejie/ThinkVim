@@ -10,7 +10,7 @@ let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 
 function! s:source_rc(path, ...) abort
   let use_global = get(a:000, 0, !has('vim_starting'))
-  let abspath = resolve(expand($VIMPATH.'/rc/' . a:path))
+  let abspath = resolve(expand($VIMPATH.'/core/' . a:path))
   if !use_global
     execute 'source' fnameescape(abspath)
     return
