@@ -1,6 +1,8 @@
 "Settings for TagBar
 "autocmd BufReadPost *.cpp,*.c,*.h,*.go,*.cc,*.py call tagbar#autoopen()
-"设置tagbar的窗口宽度
+if executable('jsctags')
+    let g:tagbar_type_javascript = { 'ctagsbin': 'jsctags' }
+endif<Paste>
 let g:tagbar_width=25
 let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
