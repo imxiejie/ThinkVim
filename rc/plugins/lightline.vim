@@ -4,11 +4,11 @@ let g:lightline = {
       \   'left': [ ['homemode'],
       \             ['gitinfo'],['filename'],['cocstatus']],
       \   'right':[
-      \             ['lineinfo'], ['fileformat'],['fileencoding'],['cocerror'],['cocwarn']],
+      \             ['lineinfo'], ['fileformat'],['fileencoding'],['cocerror'],['cocwarn'],['cocfix']],
       \ },
       \ 'inactive': {
       \   'left': [['homemode'], ['filename']],
-      \   'right':[['lineinfo'], ['percent']],
+      \   'right':[['lineinfo']],
       \ },
       \ 'tabline': {
       \   'left': [['buffers']],
@@ -26,6 +26,7 @@ let g:lightline = {
       \   'homemode': 'LightlineMode',
       \   'gitinfo': 'LightLineGit',
       \   'cocstatus': 'LightLineCocStatus',
+      \   'cocfix': 'LightlineCocFixes',
       \   'readonly': 'LightLineReadonly',
       \   'modified': 'LightLineModified',
       \   'lineinfo': 'LightlineLineinfo',
@@ -37,20 +38,21 @@ let g:lightline = {
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2"},
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3"}
       \ }
-
 function! s:lightline_is_lean() abort
-  return &ft =~? '\v^tagbar|defx|mundo(diff)?$'
+  return &filetype =~? '\v^vim-plug|defx|mundo(diff)?$'
 endfunction
 
 function! s:lightline_is_plain() abort
-  return &bt ==? 'terminal' || &ft =~? '\v^help$'
+  return &buftype ==? 'terminal' || &filetype =~? '\v^help|denite|tagbar$'
 endfunction
 
+
 function! LightlineLineinfo() abort
-  return &ft ==? 'help'             ? ''  :
-  \      &ft ==? 'tagbar'         ? '⚉ ' :
-  \      &ft ==? 'defx'             ? '🖿 ' :
-  \      &ft =~? '\v^mundo(diff)?$' ? '⮌ ' :
+  return &filetype ==? 'help'             ? ''  :
+  \      &filetype ==? 'defx'             ? ' ' :
+  \      &filetype ==? 'denite'           ? ' ' :
+  \      &filetype ==? 'tagbar'           ? ' ' :
+  \      &filetype =~? '\v^mundo(diff)?$' ? ' ' :
   \      s:lightline_is_lean() || s:lightline_is_plain() ? ' '  :
   \      printf('%d:%d ☰ %d%%', line('.'), col('.'), 100*line('.')/line('$'))
 endfunction
@@ -61,7 +63,7 @@ endfunction
 
 function! Lightlinemode()
   let nr = s:get_buffer_number()
-  let nmap = [ '⓿ ',  '❶ ',  '❷ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ','➓ ','⓫ ','⓬ ','⓭ ','⓮ ','⓯ ','⓰ ','⓱ ','⓲ ','⓳ ','⓴ ']
+  let nmap = [ '⓿ ',  '❶ ',  '➋ ',  '❸ ', '❹ ','❺ ',  '❻ ',  '❼ ',  '❽ ',  '❾ ','➓ ','⓫ ','⓬ ','⓭ ','⓮ ','⓯ ','⓰ ','⓱ ','⓲ ','⓳ ','⓴ ']
   if nr == 0
     return ''
   endif
@@ -71,7 +73,7 @@ function! Lightlinemode()
     let l:result = get(nmap, l:number % 10, l:number % 10) . l:result
     let l:number = l:number / 10
   endfor
-  return join(['',l:result])
+  return join(['❐',l:result])
 endfunction
 function! s:get_buffer_number()
   let i = 0
@@ -155,7 +157,56 @@ function! LightLineCocWarn() abort
  return join(warnmsgs, ' ')
 endfunction
 
-autocmd User CocDiagnosticChange call lightline#update()
+function! LightlineCocFixes() abort
+  let b:coc_line_fixes = get(get(b:, 'coc_quickfixes', {}), line('.'), 0)
+  return b:coc_line_fixes > 0 ? printf('%d ', b:coc_line_fixes) : ''
+endfunction
+
+" Diagnostic's feedback {{{
+function! CocUpdateQuickFixes(error, actions) abort
+  let coc_quickfixes = {}
+  try
+    for action in a:actions
+      if action.kind ==? 'quickfix'
+        for change in action.edit.documentChanges
+          for edit in change.edits
+            let start_line = edit.range.start.line + 1
+            let end_line = edit.range.end.line + 1
+            let coc_quickfixes[start_line] = get(coc_quickfixes, start_line, 0) + 1
+            if start_line != end_line
+              let coc_quickfixes[end_line] = get(coc_quickfixes, end_line, 0) + 1
+            endif
+          endfor
+        endfor
+      endif
+    endfor
+  catch
+  endtry
+  if coc_quickfixes != get(b:, 'coc_quickfixes', {})
+    let b:coc_quickfixes = coc_quickfixes
+    call lightline#update()
+  endif
+endfunction
+
+autocmd  User CocDiagnosticChange
+\   call lightline#update()
+\|  call CocActionAsync('quickfixes', function('CocUpdateQuickFixes'))
+
+function! s:coc_fix_on_cursor_moved() abort
+  let current_line = line('.')
+  if current_line != get(b:, 'last_line', 0)
+    let b:last_line = current_line
+    if has_key(get(b:, 'coc_quickfixes', {}), current_line)
+      call lightline#update()
+    else
+      if get(b:, 'coc_line_fixes', 0) > 0
+        call lightline#update()
+      endif
+    endif
+  endif
+endfunction
+
+autocmd  CursorMoved * call s:coc_fix_on_cursor_moved()
 
 "function! LightLineGitGutter()
   "if ! exists('*GitGutterGetHunkSummary')

@@ -41,31 +41,6 @@
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    //golang
     "languageserver": {
-            "golang": {
-                "command": "gopls",
-                "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
-                "filetypes": [
-                    "go"
-                ]
-            },
-        "dockerfile": {
-                "command": "docker-langserver",
-                "filetypes": [
-                    "dockerfile"
-                ],
-                "args": [
-                    "--stdio"
-                ]
-            },
-            "efm": {
-                "command": "efm-langserver",
-                "args": [],
-                "filetypes": [
-                    "vim",
-                    "markdown"
-                ]
-            }
         }
 }
