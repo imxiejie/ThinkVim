@@ -49,7 +49,7 @@ endfunction
 
 function! LightlineLineinfo() abort
   return &filetype ==? 'help'             ? ''  :
-  \      &filetype ==? 'defx'             ? ' ' :
+  \      &filetype ==? 'defx'             ? ' ' :
   \      &filetype ==? 'denite'           ? ' ' :
   \      &filetype ==? 'tagbar'           ? ' ' :
   \      &filetype =~? '\v^mundo(diff)?$' ? ' ' :
