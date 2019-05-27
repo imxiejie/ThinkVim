@@ -10,15 +10,17 @@
 ## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md) 
 
 ## 特性
-- 模块插件配置
-- 懒加载百分之95插件
-- 启动速度快
-* 启动时间`nvim --startuptime ~/vimstart.log` :
+* 模块插件配置
+* 懒加载百分之95插件
+* 启动速度快
+  - `nvim --startuptime ~/vimstart.log` 
+  - `nvim -u NORC  --startuptime ~/vimstart.log`  
+  
 
   PluginTotal    | StartupTime
   -------------- | ----------------------
      55 |   35~50ms
-
+     0  |   28ms
 - 完全自定义
 - LSP语言服务支持
   - 默认支持js ts jsx python 
