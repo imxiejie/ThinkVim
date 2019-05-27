@@ -17,10 +17,10 @@
   - `nvim -u NORC  --startuptime ~/vimstart.log`  
   
 
-  PluginTotal    | StartupTime
-  -------------- | ----------------------
-     55 |   35~50ms
-     0  |   28ms
+     PluginTotal    | StartupTime
+     -------------- | ----------------------
+      55 |   35~50ms
+       0  |   28ms
 - 完全自定义
 - LSP语言服务支持
   - 默认支持js ts jsx python 
