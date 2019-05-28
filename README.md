@@ -162,7 +162,7 @@ Name           | Description
    coc-snippet  | `Ⓢ`
    go文件        | `Ⓖ`
 ## 文件资源管理[Defx.nvim](https://github.com/Shougo/defx.nvim)  
-  * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
+  * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。
 ## Startify
   * Startify只能设置header和footer居中，中间文件列表区域是没办法控制的。所以你需要调整下对于你的屏幕的尺寸，在`core/plugins/startify.vim`修改`let g:startify_padding_left = 40` 这个数字调整适合你屏幕的数字
 ## 键位操作  
