@@ -47,7 +47,7 @@ function! s:defx_my_settings() abort
 
 	nnoremap <silent><buffer><expr> S  defx#do_action('toggle_sort', 'Time')
 	nnoremap <silent><buffer><expr> C
-		\ defx#do_action('toggle_columns', 'mark:filename:type:size:time')
+		\ defx#do_action('toggle_columns', 'indent:mark:filename:type:size:time')
 
 	" Plugins
 	nnoremap <silent><buffer><expr> <Tab> winnr('$') != 1 ?

@@ -33,7 +33,7 @@ repo = 'ryanoasis/vim-devicons'
 repo = 'mhinz/vim-startify'
 on_cmd = 'Startify'
 depends = 'vim-devicons'
-hook_add ='source ~/.config/nvim/core/plugins/startify.vim'
+hook_source ='source ~/.config/nvim/core/plugins/startify.vim'
 hook_post_source = '''
 function! StartifyEntryFormat()
     return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
