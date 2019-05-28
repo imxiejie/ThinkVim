@@ -13,7 +13,6 @@ augroup MyAutoCmd
     autocmd FileType go let b:coc_pairs_disabled = ['<']
 
     autocmd InsertLeave,TextChanged,FocusLost *.go silent! wall
-    autocmd TextChanged,TextChangedI <buffer> silent w
 
 	" https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
 	autocmd FileType css,javascript,jsx,javascript.jsx
