@@ -142,10 +142,10 @@ Name           | Description
 [coc-imselect](https://github.com/neoclide/coc-imselect)     | 选择
 [coc-highlight](https://github.com/neoclide/coc-highlight)     | 高亮，支持显示css颜色代码
 [coc-git](https://github.com/neoclide/coc-git)     | git扩展 
-## Theme主题
+## 主题ColorScheme
 * 主题为[gruvbox9](https://github.com/taigacute/gruvbox9)，完美支持[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)，因为我添加了新的react高亮语法组到[neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),定制的制作了这个主题，如果你是写js，jsx的你会看到和vscode-gruvbox一样的体验。
 
-## StatuLine 状态栏
+## 状态栏Statusline
 * [Lightline](https://github.com/itchyny/lightline.vim) 主题也是定做的在[gruvbox9](https://github.com/taigacute/gruvbox9)
   ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/normal.png)
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/insert.png)
@@ -153,9 +153,10 @@ Name           | Description
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/replace.png)  
 * 当使用coc-prettier,coc-tsserver,coc-snippet， 会在statusline上显示对应的图标 Ⓢ Ⓣ Ⓟ.
 ![](https://github.com/taigacute/IMG/blob/master/thinkvim/statusbar.png)
-## [Defx.nvim](https://github.com/Shougo/defx.nvim)  文件资源管理
+## 文件资源管理[Defx.nvim](https://github.com/Shougo/defx.nvim)  
   * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
-  
+## Startify
+  * Startify只能设置header和footer居中，中间文件列表区域是没办法控制的。所以你需要调整下对于你的屏幕的尺寸，在`core/plugins/startify.vim`修改`let g:startify_padding_left = 40` 这个数字调整适合你屏幕的数字
 ## 键位操作  
 * 默认leader为`SPACE` localleader`;` 关于键位的设置在mapping.vim，插件的键位设置在allkey.vim。
 * 键位的修改尽量不要改动太多默认的键位，默认的键位有时很有用也方便他人上手。
