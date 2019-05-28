@@ -151,7 +151,8 @@ Name           | Description
   ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/normal.png)
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/insert.png)
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/visual.png)
-![](https://github.com/taigacute/IMG/blob/master/gruvbox9/replace.png)  
+![](https://github.com/taigacute/IMG/blob/master/gruvbox9/replace.png) 
+* 当文件处于编辑状态时，lightline会显示一根笔的符号，保存后会消失。
 * 当使用coc-prettier,coc-tsserver,coc-snippet， 会在statusline上显示对应的图标.
 ![](https://github.com/taigacute/IMG/blob/master/thinkvim/statusbar.png)  
 
