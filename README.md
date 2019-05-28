@@ -151,7 +151,8 @@ Name           | Description
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/insert.png)
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/visual.png)
 ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/replace.png)  
-  _**NOTE!!Airline 需要更多的启动时间相比lightline**_  
+* 当使用coc-prettier,coc-tsserver,coc-snippet， 会在statusline上显示对应的图标 Ⓢ Ⓣ Ⓟ.
+![](https://github.com/taigacute/IMG/blob/master/thinkvim/statusbar.png)
 ## [Defx.nvim](https://github.com/Shougo/defx.nvim)  文件资源管理
   * 抛弃了nerdtree，在多文件打开速度上defx秒杀nerdtree。而且defx提供更多特性，还可以配合denite使用。defx快捷键的设置在allkey.vim
   
