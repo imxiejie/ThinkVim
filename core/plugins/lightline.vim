@@ -4,7 +4,7 @@ let g:lightline = {
       \   'left': [ ['homemode'],
       \             ['gitinfo'],['filename_active'],['cocstatus']],
       \   'right':[
-      \             ['lineinfo'], ['fileformat'],['fileencoding'],['cocerror'],['cocwarn'],['cocfix']],
+      \             ['lineinfo'], ['fileformat'],['filencode'],['cocerror'],['cocwarn'],['cocfix']],
       \ },
       \ 'inactive': {
       \   'left': [['homemode'], ['filename_active']],
@@ -25,8 +25,9 @@ let g:lightline = {
       \ 'component_function': {
       \   'homemode': 'LightlineMode',
       \   'gitinfo': 'LightLineGit',
-      \   'cocstatus': 'LightLineCocStatus',
+      \   'cocstatus': 'CocStatusBar',
       \   'cocfix': 'LightlineCocFixes',
+      \   'filencode': 'FileEncoding',
       \   'readonly': 'LightLineReadonly',
       \   'filename_active'  : 'LightlineFilenameActive',
       \   'lineinfo': 'LightlineLineinfo',
@@ -145,13 +146,18 @@ function! LightLineGit()abort
     return trim(join(gitinfo,''))
 endfunction
 
-function! LightLineCocStatus() abort
+function! CocStatusBar() abort
     let status=get(g:, 'coc_status', '')
     if empty(status)
         return ""
     endif
     let regstatus=substitute(status,"TSC","Ⓣ ","")
     let statusbar= split(regstatus)
+    let bar=[]
+    if &filetype ==? "go"
+        let gobar ="Ⓖ "
+        call add(statusbar,gobar)
+    endif
     return join(statusbar," ")
 endfunction
 
@@ -247,6 +253,12 @@ function! LightLineFilename()
   return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
         \ ('' != expand('%:t') ? expand('%:t') : '')
 endfunction
+function! FileEncoding()
+    if &filetype==?'defx'
+        return ""
+    endif
+   return (&fenc!=#""?&fenc:&enc)
+endfunction
 
 function! LightLineFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
@@ -275,20 +287,3 @@ nmap <Leader>7 <Plug>lightline#bufferline#go(7)
 nmap <Leader>8 <Plug>lightline#bufferline#go(8)
 nmap <Leader>9 <Plug>lightline#bufferline#go(9)
 nmap <Leader>0 <Plug>lightline#bufferline#go(10)
-
-"function! LightLineGitGutter()
-  "if ! exists('*GitGutterGetHunkSummary')
-        "\ || ! get(g:, 'gitgutter_enabled', 0)
-        "\ || winwidth('.') <= 90
-    "return ''
-  "endif
-  "let symbols = ['+','~','-']
-  "let hunks = GitGutterGetHunkSummary()
-  "let ret = []
-  "for i in [0, 1, 2]
-    "if hunks[i] > 0
-      "call add(ret, symbols[i] . hunks[i])
-    "endif
-  "endfor
-  "return join(ret, ' ')
-"endfunction
