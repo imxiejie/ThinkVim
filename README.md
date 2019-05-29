@@ -45,8 +45,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 **_1._** clone完成后打开你的终端或者GUI，输入nvim后一切都会自动安装耐心等待就可以了。    
 **_2._** linux下需要修改下python的路径。修改[core/init.vim python host](https://github.com/taigacute/ThinkVim/blob/master/core/init.vim#L13)的路径设置   
 
+**_Tmux Zsh_**  如果你也喜欢图上的tmux状态栏和zsh主题你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是powerlevel10k异步运行主题。摆脱终端操作git命令很慢的困扰  
+**_VimTheme_** [gruvbox9](https://github.com/taigacute/gruvbox9)
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+  - 以下内容来自于coc主页。更多关于coc详细的配置参考[Coc主页](https://github.com/neoclide/coc.nvim)
   - 以下为coc支持的languageServer，点进去有每个languageServer的配置，复制到coc-settings.json里的language中即可。
 
   - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
@@ -61,10 +64,18 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
     - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
     - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
     - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
+## CocExtensions
+ - 以下为没安装的扩展，有一些扩展我已经安装了，你可以在下面的安装列表中查看。
+ - **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
+- **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+- **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
+- **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`,
+  use [solargraph](http://solargraph.org/).
+- **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use
+  [Rust Language Server](https://github.com/rust-lang/rls)
+- **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
 
 
-**_Tmux Zsh_**  如果你也喜欢图上的tmux状态栏和zsh主题你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是powerlevel10k异步运行主题。摆脱终端操作git命令很慢的困扰  
-**_VimTheme_** 是[gruvbox9](https://github.com/taigacute/gruvbox9)
 
 ## 结构
 - [after](~/.config/nvim/after)
