@@ -43,7 +43,7 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 **_1._** clone完成后打开你的终端或者GUI，输入nvim后一切都会自动安装耐心等待就可以了。    
-**_2._** linux下需要修改下python的路径。修改core/init.vim python host的路径设置   
+**_2._** linux下需要修改下python的路径。修改[core/init.vim python host](https://github.com/taigacute/ThinkVim/blob/master/core/init.vim#L13)的路径设置   
 **_3._** 其他语言开发者需要去[coc的主页查看语言的server](https://github.com/neoclide/coc.nvim/wiki/Language-servers)在coc-settins.json中的language中添加lsp的source即可。详细的设置可以在上面的coc主页链接找到。
 
 **_Tmux Zsh_**  如果你也喜欢图上的tmux状态栏和zsh主题你可以在我的[dotfile中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是powerlevel10k异步运行主题。摆脱终端操作git命令很慢的困扰  
