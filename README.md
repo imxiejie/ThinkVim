@@ -44,9 +44,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 **_1._** clone完成后打开你的终端或者GUI，输入nvim后一切都会自动安装耐心等待就可以了。    
 **_2._** linux下需要修改下python的路径。修改[core/init.vim python host](https://github.com/taigacute/ThinkVim/blob/master/core/init.vim#L13)的路径设置   
-**_3._** 其他语言开发者需要去[coc的主页查看语言的server](https://github.com/neoclide/coc.nvim/wiki/Language-servers)在coc-settins.json中的language中添加lsp的source即可。
+
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+  - 以下为coc支持的languageServer，点进去有每个languageServer的配置，复制到coc-settings.json里的language中即可。
 
   - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
   - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
