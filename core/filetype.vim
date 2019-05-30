@@ -1,5 +1,5 @@
 " Reload vim config automatically
-execute 'autocmd MyAutoCmd BufWritePost '.$VIMPATH.'/rc/*,vimrc nested'
+execute 'autocmd MyAutoCmd BufWritePost '.$VIMPATH.'/core/*,vimrc nested'
 	\ .' source $MYVIMRC | redraw | silent doautocmd ColorScheme'
 
 augroup MyAutoCmd

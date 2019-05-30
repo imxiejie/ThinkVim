@@ -22,7 +22,6 @@ if !isdirectory(expand($CONFIG))
 endif
 
 if !isdirectory(expand($TMP))
-	" Create missing dirs i.e. cache/{undo,backup}
 	call mkdir(expand('$TMP/undo'), 'p')
 endif
 
@@ -47,6 +46,11 @@ set packpath=
 
 "---------------------------------------------------------------------------
 " Disable default plugins
+
+" Disable menu.vim
+if has('gui_running')
+   set guioptions=Mc
+endi
 
 
 let g:loaded_2html_plugin      = 1
