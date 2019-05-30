@@ -14,7 +14,7 @@ set showtabline=2
 set statusline=-        " hide file name in statusline
 set fillchars+=vert:\|  " add a bar for vertical splits
 if get(g:,'gruvbox_transp_bg',1)
-   set fcs=eob:\           " hide ~
+ set fcs=eob:\           " hide ~
 endif
 if has('mac')
 	let g:clipboard = {

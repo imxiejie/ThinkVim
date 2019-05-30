@@ -1,6 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 depends = 'vim-devicons'

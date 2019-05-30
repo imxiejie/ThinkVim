@@ -1,10 +1,10 @@
 " Name:         Gruvbox 9 Hard
 " Description:  Retro groove color scheme originally designed by morhetz
 " Author:       morhetz <morhetz@gmail.com>
-" Maintainer:   Lifepillar <lifepillar@lifepillar.me>
-" Website:      https://github.com/lifepillar/vim-gruvbox8/
+" Maintainer:   taigacute 
+" Website:      https://github.com/taigacute/vim-gruvbox9/
 " License:      Vim License (see `:help license`)
-" Last Updated: Fri May 17 17:16:22 2019
+" Last Updated: Tue May 28 11:41:22 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -266,7 +266,7 @@ if &background ==# 'dark'
     hi StartifySlash ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifySection ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifySpecial ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi StartifyHeader ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi StartifyHeader ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifyFooter ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi SyntasticError ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fb4934 cterm=NONE,underline gui=NONE,undercurl
     hi SyntasticWarning ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fabd2f cterm=NONE,underline gui=NONE,undercurl
@@ -898,7 +898,7 @@ if get(g:, "gruvbox_plugin_hi_groups", 0)
   hi StartifySlash ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifySection ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifySpecial ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi StartifyHeader ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi StartifyHeader ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifyFooter ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SyntasticError ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#9d0006 cterm=NONE,underline gui=NONE,undercurl
   hi SyntasticWarning ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#b57614 cterm=NONE,underline gui=NONE,undercurl
@@ -1481,7 +1481,7 @@ finish
 " StartifySlash                    grey   none
 " StartifySection                  yellow none
 " StartifySpecial                  bg2    none
-" StartifyHeader                   orange none
+" StartifyHeader                   yellow none
 " StartifyFooter                   bg2    none
 " SyntasticError                   none   none    t=underline g=undercurl s=red
 " SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
@@ -2046,7 +2046,7 @@ finish
 " StartifySlash                    grey   none
 " StartifySection                  yellow none
 " StartifySpecial                  bg2    none
-" StartifyHeader                   orange none
+" StartifyHeader                   yellow none
 " StartifyFooter                   bg2    none
 " SyntasticError                   none   none    t=underline g=undercurl s=red
 " SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
