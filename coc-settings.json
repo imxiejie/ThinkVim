@@ -14,6 +14,9 @@
     "diagnostic.refreshOnInsertMode": true,
     //git
     "git.enableGutters": true,
+    "git.addGlameToBufferVar": true,
+    "git.addGlameToVirtualText": true,
+    "git.virtualTextPrefix": " ❯❯❯ ",
     "git.addedSign.hlGroup": "GitGutterAdd",
     "git.changedSign.hlGroup": "GitGutterChange",
     "git.removedSign.hlGroup": "GitGutterDelete",
@@ -29,6 +32,7 @@
     //tslint
     "tslint.autoFixOnSave": true,
     //prettier
+    "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
     "prettier.statusItemText": "ⓟ ",
     "prettier.eslintIntegration": true,
     "prettier.tslintIntegration": true,
@@ -41,6 +45,7 @@
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
+    //golang
     "languageserver": {
         }
 }

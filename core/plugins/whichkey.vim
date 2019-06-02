@@ -12,6 +12,7 @@ let g:which_key_map = {
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
       \ 'e' : 'Defx' ,
+      \ '-' : 'ChooseWin' ,
       \ 'd' : 'Dash' ,
       \ 'G' : 'Goyo' ,
       \ 'f' : {
@@ -61,6 +62,7 @@ let g:which_key_localmap ={
               \ 'o'    : 'CocOutLine',
               \ 'r'    : 'CocResume',
               \ 's'    : 'CocIsymbols',
+              \ 'g'    : 'CocGitstatus',
               \ },
       \ 'b'    : 'Bufferlist',
       \ 't'    : 'Tagbar',
@@ -73,15 +75,17 @@ let g:which_key_localmap ={
                 \ 'd' : 'TodoDone',
                 \},
       \ 'g'  :{
-                \'name':'+ Easygit',
+                \'name':'+ GitOperation',
                 \ 'a'    : 'Gadd',
                 \ 'd'    : 'Gdiff',
                 \ 'c'    : 'Gcommit',
                 \ 'b'    : 'Gblame',
                 \ 'B'    : 'Gbrowse',
                 \ 'S'    : 'Gstatus',
+                \ 's'    : 'gitstatus',
                 \ 'p'    : 'Gpush',
-                \ 'm'    : 'GitMessenger',
+                \ 'l'    : 'GitLogAll',
+                \ 'h'    : 'GitBranch',
                 \}
       \ }
 

@@ -186,12 +186,10 @@ function! LightLineCocWarn() abort
   endif
  return join(warnmsgs, ' ')
 endfunction
-
 function! LightlineCocFixes() abort
   let b:coc_line_fixes = get(get(b:, 'coc_quickfixes', {}), line('.'), 0)
   return b:coc_line_fixes > 0 ? printf('%d ', b:coc_line_fixes) : ''
 endfunction
-
 " Diagnostic's feedback {{{
 function! CocUpdateQuickFixes(error, actions) abort
   let coc_quickfixes = {}
@@ -218,25 +216,9 @@ function! CocUpdateQuickFixes(error, actions) abort
   endif
 endfunction
 
-autocmd  User CocDiagnosticChange
+autocmd  MyAutoCmd User CocDiagnosticChange
 \   call lightline#update()
 \|  call CocActionAsync('quickfixes', function('CocUpdateQuickFixes'))
-
-function! s:coc_fix_on_cursor_moved() abort
-  let current_line = line('.')
-  if current_line != get(b:, 'last_line', 0)
-    let b:last_line = current_line
-    if has_key(get(b:, 'coc_quickfixes', {}), current_line)
-      call lightline#update()
-    else
-      if get(b:, 'coc_line_fixes', 0) > 0
-        call lightline#update()
-      endif
-    endif
-  endif
-endfunction
-
-autocmd  CursorMoved * call s:coc_fix_on_cursor_moved()
 
 
 function! LightLineFname()

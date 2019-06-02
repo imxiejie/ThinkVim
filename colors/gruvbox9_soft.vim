@@ -4,7 +4,7 @@
 " Maintainer:   taigacute 
 " Website:      https://github.com/taigacute/vim-gruvbox9/
 " License:      Vim License (see `:help license`)
-" Last Updated: Tue May 28 11:41:40 2019
+" Last Updated: Sat Jun  1 22:23:14 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -99,7 +99,7 @@ if &background ==# 'dark'
   hi Label ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Macro ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Number ctermfg=175 ctermbg=NONE guifg=#d3869b guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi! link Operator Normal
+  hi Operator ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi PreCondit ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi PreProc ctermfg=107 ctermbg=NONE guifg=#8ec07c guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi Repeat ctermfg=203 ctermbg=NONE guifg=#fb4934 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -731,7 +731,7 @@ hi Keyword ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NO
 hi Label ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Macro ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Number ctermfg=126 ctermbg=NONE guifg=#8f3f71 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-hi! link Operator Normal
+hi Operator ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi PreCondit ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi PreProc ctermfg=29 ctermbg=NONE guifg=#427b58 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 hi Repeat ctermfg=124 ctermbg=NONE guifg=#9d0006 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1382,7 +1382,7 @@ finish
 " Label                            red    none
 " Macro                            aqua   none
 " Number                           purple none
-" Operator                      -> Normal
+" Operator                         aqua   none
 " PreCondit                        aqua   none
 " PreProc                          aqua   none
 " Repeat                           red    none
@@ -1947,7 +1947,7 @@ finish
 " Label                            red    none
 " Macro                            aqua   none
 " Number                           purple none
-" Operator                      -> Normal
+" Operator                         aqua   none
 " PreCondit                        aqua   none
 " PreProc                          aqua   none
 " Repeat                           red    none
