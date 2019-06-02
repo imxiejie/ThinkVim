@@ -4,7 +4,38 @@ if dein#tap('denite.nvim')
         nnoremap <silent><localLeader>dt  :Denite todo<CR>
         nnoremap <silent><localLeader>da  :TodoAdd
         nnoremap <silent><localLeader>dd  :Denite todo:done<CR>
+        nnoremap <silent><LocalLeader>n :<C-u>Denite dein<CR>
+
+        noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
+        noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
+        noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
+        noremap za :<C-u>Denite -expand file/rec<CR>
+
+        nnoremap <silent> <LocalLeader>gl :<C-u>Denite gitlog:all<CR>
+        nnoremap <silent> <LocalLeader>gs :<C-u>Denite gitstatus<CR>
+	    nnoremap <silent> <LocalLeader>gh :<C-u>Denite gitbranch<CR>
 endif
+function! s:my_denite_outline(filetype) abort
+  execute 'Denite' a:filetype ==# 'go' ? "decls:'%:p'" : 'outline'
+endfunction
+function! s:my_denite_decls(filetype) abort
+  if a:filetype ==# 'go'
+    Denite decls
+  else
+    call denite#util#print_error('decls does not support filetypes except go')
+  endif
+endfunction
+function! s:my_denite_file_rec_goroot() abort
+  if !executable('go')
+    call denite#util#print_error('`go` executable not found')
+    return
+  endif
+  let out = system('go env | grep ''^GOROOT='' | cut -d\" -f2')
+  let goroot = substitute(out, '\n', '', '')
+  call denite#start(
+        \ [{'name': 'file/rec', 'args': [goroot]}],
+        \ {'input': '.go'})
+endfunction
 
 if dein#tap('coc.nvim')
         " Using CocList
@@ -40,6 +71,16 @@ if dein#tap('coc.nvim')
         nnoremap <silent> K :call <sid>show_documentation()<cr>
         " use <c-space> for trigger completion.
         inoremap <silent><expr> <c-space> coc#refresh()
+        nmap [g <Plug>(coc-git-prevchunk)
+        nmap ]g <Plug>(coc-git-nextchunk)
+        " show chunk diff at current position
+        nmap gs <Plug>(coc-git-chunkinfo)
+        " show commit ad current position
+        nmap gc <Plug>(coc-git-commit)
+        nnoremap <silent> <localleader>cg  :<C-u>CocList --normal gstatus<CR>
+        " float window scroll
+		nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
+		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
 
 endif
 
@@ -57,8 +98,6 @@ if dein#tap('fzf.vim')
         nnoremap <silent> <leader>ff :call Fzf_dev()<CR>
         nnoremap <silent> <leader>fr :Rg<CR>
         nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
-        nnoremap <silent> <leader>fgc  :Commits<CR>
-        nnoremap <silent> <leader>fbc :BCommits<CR>
 endif
 
 if dein#tap('vim-easy-align')
@@ -82,9 +121,7 @@ if dein#tap('vim-go')
 endif
 
 if dein#tap('vim-easygit')
-	nnoremap <silent> <localleader>ga :Gadd<CR>
 	nnoremap <silent> <localleader>gd :Gdiff<CR>
-	nnoremap <silent> <localleader>gD :Gdiffoff<CR>
 	nnoremap <silent> <localleader>gc :Gcommit<CR>
 	nnoremap <silent> <localleader>gb :Gblame<CR>
 	nnoremap <silent> <localleader>gB :Gbrowse<CR>
@@ -92,9 +129,6 @@ if dein#tap('vim-easygit')
 	nnoremap <silent> <localleader>gp :Gpush<CR>
 endif
 
-if dein#tap('git-messenger.vim')
-    nmap <localleader>gm  <Plug>(git-messenger)
-endif
 
 if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
@@ -120,6 +154,8 @@ endif
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                 \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+        "nnoremap <silent> <LocalLeader>a
+				"\ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
 endif
 
 if dein#tap('vim-startify')

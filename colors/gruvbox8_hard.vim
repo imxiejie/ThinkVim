@@ -1,14 +1,14 @@
-" Name:         Gruvbox 9 Hard
+" Name:         Gruvbox 8 Hard
 " Description:  Retro groove color scheme originally designed by morhetz
 " Author:       morhetz <morhetz@gmail.com>
-" Maintainer:   taigacute 
-" Website:      https://github.com/taigacute/vim-gruvbox9/
+" Maintainer:   Lifepillar <lifepillar@lifepillar.me>
+" Website:      https://github.com/lifepillar/vim-gruvbox8/
 " License:      Vim License (see `:help license`)
-" Last Updated: Sat Jun  1 22:22:06 2019
+" Last Updated: Sat May 18 11:17:24 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
-  echoerr '[Gruvbox 9 Hard] There are not enough colors.'
+  echoerr '[Gruvbox 8 Hard] There are not enough colors.'
   finish
 endif
 
@@ -17,7 +17,7 @@ if exists('syntax_on')
   syntax reset
 endif
 
-let g:colors_name = 'gruvbox9_hard'
+let g:colors_name = 'gruvbox8_hard'
 
 if &background ==# 'dark'
   let g:terminal_ansi_colors = [
@@ -266,7 +266,7 @@ if &background ==# 'dark'
     hi StartifySlash ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifySection ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifySpecial ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi StartifyHeader ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi StartifyHeader ctermfg=208 ctermbg=NONE guifg=#fe8019 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifyFooter ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi SyntasticError ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fb4934 cterm=NONE,underline gui=NONE,undercurl
     hi SyntasticWarning ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fabd2f cterm=NONE,underline gui=NONE,undercurl
@@ -503,7 +503,6 @@ if &background ==# 'dark'
     hi jsxRegion ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsxTagName ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsxComponentName ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
-    hi jsxEndComponentName ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsxEscapeJsAttributes ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsxEscapeJsContent ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi jsxAttrib ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -898,7 +897,7 @@ if get(g:, "gruvbox_plugin_hi_groups", 0)
   hi StartifySlash ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifySection ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifySpecial ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi StartifyHeader ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi StartifyHeader ctermfg=124 ctermbg=NONE guifg=#af3a03 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifyFooter ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi SyntasticError ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#9d0006 cterm=NONE,underline gui=NONE,undercurl
   hi SyntasticWarning ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#b57614 cterm=NONE,underline gui=NONE,undercurl
@@ -1135,7 +1134,6 @@ if get(g:, "gruvbox_filetype_hi_groups", 0)
   hi jsxRegion ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsxTagName ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsxComponentName ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
-  hi jsxEndComponentName ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsxEscapeJsAttributes ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsxEscapeJsContent ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi jsxAttrib ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -1481,7 +1479,7 @@ finish
 " StartifySlash                    grey   none
 " StartifySection                  yellow none
 " StartifySpecial                  bg2    none
-" StartifyHeader                   yellow none
+" StartifyHeader                   orange none
 " StartifyFooter                   bg2    none
 " SyntasticError                   none   none    t=underline g=undercurl s=red
 " SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
@@ -1679,9 +1677,9 @@ finish
 " jsOperator                       aqua none
 " jsSpreadOperator                 green none
 " jsSpreadExpression               blue  none
-" jsClassKeyword                   red   none 
+" jsClassKeyword                   red   none
 " jsClassProperty                  green none
-" jsExtendsKeyword                 red   none          
+" jsExtendsKeyword                 red   none
 " jsExportDefault                  orange none bold
 " jsTemplateBraces                 aqua   none
 " jsGlobalNodeObjects              fg1   none
@@ -1691,7 +1689,7 @@ finish
 " jsFuncBlock                      blue  none
 " jsParens                         fg3    none
 " jsNull                           purple none
-" jsUndefined                      purple none 
+" jsUndefined                      purple none
 " jsClassDefinition                yellow none
 " jsFunctionKey                    green none
 " jsBracket                        red none
@@ -1710,8 +1708,7 @@ finish
 " jsxRegion                        blue none
 " jsxTagName                       blue   none
 " jsxComponentName                 yellow none
-" jsxEndComponentName              yellow none
-" jsxEscapeJsAttributes            blue none 
+" jsxEscapeJsAttributes            blue none
 " jsxEscapeJsContent               blue none
 " jsxAttrib                        yellow none
 " jsxAttributeBraces               fg1    none
@@ -1723,7 +1720,7 @@ finish
 " jsxCloseString                   blue   none
 " jsxIfOperator                    aqua   none
 " jsxElseOperator                  aqua   none
-" jsxDot                           fg1    none 
+" jsxDot                           fg1    none
 " jsxNamespace                     blue   none
 " jsxPunct                         aqua   none
 " typeScriptReserved               aqua   none
@@ -2046,7 +2043,7 @@ finish
 " StartifySlash                    grey   none
 " StartifySection                  yellow none
 " StartifySpecial                  bg2    none
-" StartifyHeader                   yellow none
+" StartifyHeader                   orange none
 " StartifyFooter                   bg2    none
 " SyntasticError                   none   none    t=underline g=undercurl s=red
 " SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
@@ -2244,9 +2241,9 @@ finish
 " jsOperator                       aqua none
 " jsSpreadOperator                 green none
 " jsSpreadExpression               blue  none
-" jsClassKeyword                   red   none 
+" jsClassKeyword                   red   none
 " jsClassProperty                  green none
-" jsExtendsKeyword                 red   none          
+" jsExtendsKeyword                 red   none
 " jsExportDefault                  orange none bold
 " jsTemplateBraces                 aqua   none
 " jsGlobalNodeObjects              fg1   none
@@ -2256,7 +2253,7 @@ finish
 " jsFuncBlock                      blue  none
 " jsParens                         fg3    none
 " jsNull                           purple none
-" jsUndefined                      purple none 
+" jsUndefined                      purple none
 " jsClassDefinition                yellow none
 " jsFunctionKey                    green none
 " jsBracket                        red none
@@ -2275,8 +2272,7 @@ finish
 " jsxRegion                        blue none
 " jsxTagName                       blue   none
 " jsxComponentName                 yellow none
-" jsxEndComponentName              yellow none
-" jsxEscapeJsAttributes            blue none 
+" jsxEscapeJsAttributes            blue none
 " jsxEscapeJsContent               blue none
 " jsxAttrib                        yellow none
 " jsxAttributeBraces               fg1    none
@@ -2288,7 +2284,7 @@ finish
 " jsxCloseString                   blue   none
 " jsxIfOperator                    aqua   none
 " jsxElseOperator                  aqua   none
-" jsxDot                           fg1    none 
+" jsxDot                           fg1    none
 " jsxNamespace                     blue   none
 " jsxPunct                         aqua   none
 " typeScriptReserved               aqua   none

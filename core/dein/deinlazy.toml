@@ -76,9 +76,9 @@ on_cmd = ['Gcd', 'Glcd', 'Gcommit', 'Gblame', 'Gstatus', 'Gdiff', 'Gbrowse', 'Gs
 hook_source = 'let g:easygit_enable_command = 1'
 
 [[plugins]]
-repo = 'rhysd/git-messenger.vim'
-on_cmd = 'GitMessenger'
-on_map = {n = '<Plug>(git-messenger'}
+repo = 'chemzqm/denite-git'
+on_source = 'denite.nvim'
+
 
 [[plugins]]
 repo = 'chemzqm/todoapp.vim'
@@ -333,3 +333,8 @@ on_ft = ['xml']
 #[[plugins]]
 #repo = 'hail2u/vim-css3-syntax'
 #on_ft = ['css']
+
+#[[plugins]]
+#repo = 'rhysd/git-messenger.vim'
+#on_cmd = 'GitMessenger'
+#on_map = {n = '<Plug>(git-messenger'}
