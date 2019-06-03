@@ -49,7 +49,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
 **_1._** clone 完成后打开你的终端或者 GUI，输入 nvim 后一切都会自动安装耐心等待就可以了。
-**_2._** linux 下需要修改下 python 的路径。修改[core/init.vim python host](https://github.com/taigacute/ThinkVim/blob/master/core/init.vim#L13)的路径设置
 
 **_Tmux Zsh_** 如果你也喜欢图上的 tmux 状态栏和 zsh 主题你可以在我的[dotfile 中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是 powerlevel10k 异步运行主题。摆脱终端操作 git 命令很慢的困扰
 **_VimTheme_** [gruvbox9](https://github.com/taigacute/gruvbox9)
