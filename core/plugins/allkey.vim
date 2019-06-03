@@ -2,17 +2,13 @@
 
 if dein#tap('denite.nvim')
         nnoremap <silent><localLeader>dt  :Denite todo<CR>
-        nnoremap <silent><localLeader>da  :TodoAdd
-        nnoremap <silent><localLeader>dd  :Denite todo:done<CR>
-        nnoremap <silent><LocalLeader>` :<C-u>Denite menu<CR>
+        nnoremap <silent><LocalLeader>m :<C-u>Denite menu<CR>
 
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
         noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
-        noremap za :<C-u>Denite -expand file/rec<CR>
 
         nnoremap <silent> <LocalLeader>gl :<C-u>Denite gitlog:all<CR>
-        nnoremap <silent> <LocalLeader>gs :<C-u>Denite gitstatus<CR>
 	    nnoremap <silent> <LocalLeader>gh :<C-u>Denite gitbranch<CR>
 endif
 function! s:my_denite_outline(filetype) abort

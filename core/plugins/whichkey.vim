@@ -68,11 +68,10 @@ let g:which_key_localmap ={
       \ 't'    : 'Tagbar',
       \ 'v'    : 'Vista',
       \ 'r'    : 'QuickRun',
+      \ 'm'    : 'DeniteMenu',
       \ 'd'    : {
                 \'name':'+Todo',
-                \ 't' : 'Todolist',
                 \ 'a' : 'TodoAdd',
-                \ 'd' : 'TodoDone',
                 \},
       \ 'g'  :{
                 \'name':'+ GitOperation',
@@ -82,7 +81,6 @@ let g:which_key_localmap ={
                 \ 'b'    : 'Gblame',
                 \ 'B'    : 'Gbrowse',
                 \ 'S'    : 'Gstatus',
-                \ 's'    : 'gitstatus',
                 \ 'p'    : 'Gpush',
                 \ 'l'    : 'GitLogAll',
                 \ 'h'    : 'GitBranch',
