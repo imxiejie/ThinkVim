@@ -1,4 +1,10 @@
 [[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add='''
+let g:webdevicons_enable_denite = 1
+'''
+
+[[plugins]]
 repo = 't9md/vim-choosewin'
 on_map= {n='<Plug>'}
 
@@ -26,8 +32,6 @@ hook_source ='source ~/.config/nvim/core/plugins/goyo.vim'
 repo = 'junegunn/Limelight.vim'
 on_cmd = 'Limelight'
 
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
 
 [[plugins]]
 repo = 'mhinz/vim-startify'
@@ -254,7 +258,11 @@ hook_source = 'let g:rainbow_active = 1'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-hook_source = 'source ~/.config/nvim/core/plugins/denite.vim'
+depends='vim-devicons'
+hook_source = '''
+source ~/.config/nvim/core/plugins/denite.vim
+source ~/.config/nvim/core/plugins/denite_menu.vim
+'''
 
 [[plugins]]
 repo = 'Shougo/echodoc.vim'

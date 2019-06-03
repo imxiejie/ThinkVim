@@ -28,8 +28,12 @@ function! s:denite_detect_size() abort
   augroup END
   call s:denite_detect_size()
 
-call denite#custom#option('list', {})
-call denite#custom#option('mpc', { 'mode': 'normal', 'winheight': 20 })
+
+call denite#custom#option('search', { 'start_filter': 0, 'no_empty': 1 })
+call denite#custom#option('list', { 'start_filter': 0 })
+call denite#custom#option('jump', { 'start_filter': 0 })
+call denite#custom#option('git', { 'start_filter': 0 })
+call denite#custom#option('mpc', { 'winheight': 20 })
 
 " MATCHERS
 " Default is 'matcher/fuzzy'
@@ -94,15 +98,39 @@ endif
 
 
 " KEY MAPPINGS
-  autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>   denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> <C-a>   denite#do_map('do_action', 'my_file_rec')
-  nnoremap <silent><buffer><expr> d      denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p      denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q      denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i      denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr><Space> denite#do_map('toggle_select').'j'
-   nnoremap <silent><buffer><expr> <Tab>   denite#do_map('choose_action')
+
+autocmd FileType denite call s:denite_settings()
+function! s:denite_settings() abort
+	highlight! link CursorLine Visual
+	nnoremap <silent><buffer><expr> <CR> denite#do_map('do_action')
+	nnoremap <silent><buffer><expr> i    denite#do_map('open_filter_buffer')
+	nnoremap <silent><buffer><expr> d    denite#do_map('do_action', 'delete')
+	nnoremap <silent><buffer><expr> p    denite#do_map('do_action', 'preview')
+	nnoremap <silent><buffer><expr> st   denite#do_map('do_action', 'tabopen')
+	nnoremap <silent><buffer><expr> s   denite#do_map('do_action', 'vsplit')
+	nnoremap <silent><buffer><expr> i    denite#do_map('do_action', 'split')
+	nnoremap <silent><buffer><expr> '    denite#do_map('quick_move')
+	nnoremap <silent><buffer><expr> q    denite#do_map('quit')
+	nnoremap <silent><buffer><expr> r    denite#do_map('redraw')
+	nnoremap <silent><buffer><expr> yy   denite#do_map('do_action', 'yank')
+	nnoremap <silent><buffer><expr> <Esc>   denite#do_map('quit')
+	nnoremap <silent><buffer><expr> <C-u>   denite#do_map('restore_sources')
+	nnoremap <silent><buffer><expr> <C-f>   denite#do_map('do_action', 'defx')
+	nnoremap <silent><buffer><expr> <C-x>   denite#do_map('choose_action')
+	nnoremap <silent><buffer><expr><nowait> <Space> denite#do_map('toggle_select').'j'
 endfunction
+
+autocmd FileType denite-filter call s:denite_filter_settings()
+function! s:denite_filter_settings() abort
+	nnoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
+	" inoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
+	nnoremap <silent><buffer><expr> q      denite#do_map('quit')
+	inoremap <silent><buffer><expr> <C-c>  denite#do_map('quit')
+	nnoremap <silent><buffer><expr> <C-c>  denite#do_map('quit')
+	inoremap <silent><buffer>       kk     <Esc><C-w>p
+	nnoremap <silent><buffer>       kk     <C-w>p
+	inoremap <silent><buffer>       jj     <Esc><C-w>p
+	nnoremap <silent><buffer>       jj     <C-w>p
+endfunction
+
 " vim: set ts=3 sw=2 tw=80 noet :

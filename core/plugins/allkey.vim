@@ -4,7 +4,7 @@ if dein#tap('denite.nvim')
         nnoremap <silent><localLeader>dt  :Denite todo<CR>
         nnoremap <silent><localLeader>da  :TodoAdd
         nnoremap <silent><localLeader>dd  :Denite todo:done<CR>
-        nnoremap <silent><LocalLeader>n :<C-u>Denite dein<CR>
+        nnoremap <silent><LocalLeader>` :<C-u>Denite menu<CR>
 
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
