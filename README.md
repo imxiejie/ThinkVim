@@ -404,6 +404,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## Donation
 
 - 如果对你有帮助，You Can Buy Me a Coffee By WeChat:)
+
   <a href="" target="_blank" title="taigacute">
   <img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="300" height="300" alt="taigacute">
   </a>
