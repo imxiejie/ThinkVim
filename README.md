@@ -20,7 +20,7 @@
 
      PluginTotal    | StartupTime
      -------------- | ----------------------
-      55 |   35~50ms
+      54 |   35~50ms
        0  |   28ms
 
 - 完全自定义
@@ -48,7 +48,7 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
-**_1._** clone 完成后打开你的终端或者 GUI，输入 nvim 后一切都会自动安装耐心等待就可以了。
+**_1._** clone 完成后打开你的终端，输入 nvim 后一切都会自动安装耐心等待就可以了。
 
 **_Tmux Zsh_** 如果你也喜欢图上的 tmux 状态栏和 zsh 主题你可以在我的[dotfile 中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是 powerlevel10k 异步运行主题。摆脱终端操作 git 命令很慢的困扰
 **_VimTheme_** [gruvbox9](https://github.com/taigacute/gruvbox9)
@@ -105,7 +105,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [ftplugin](~/.config/nvim/ftplugin) - 文件格式设置
 - [plugin](~/.config/nvim/plugin) - 一些小功能插件
 
-## 正常加载插件
+## LoadPlugins
 
 | Name                                                                                      | Description      |
 | ----------------------------------------------------------------------------------------- | ---------------- |
@@ -114,51 +114,50 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline)                 | 补全插件         |
 | [hona/vim-snippets](https://github.com/hona/vim-snippets)                                 | 代码片段         |
 
-## 懒加载插件
+## LazyLoadPlugins
 
-| Name                                                                                                  | Description                             |
-| ----------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)                       | 提供 ctags/gtags 后台数据库自动更新功能 |
-| [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                                           | 启动画面                                |
-| [t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)                                           | 多开窗口跳转的便利插件                  |
-| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                                   | 字体图标                                |
-| [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                                           | git 插件                                |
-| [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)                                               | 搜索插件                                |
-| [hona/dockerfile.vim](https://github.com/hona/dockerfile.vim)                                         | Dockerfile 支持                         |
-| [junegunn/vim-easyalign](https://github.com/junegunn/vim-easyalign)                                   | 快速对齐                                |
-| [junegunn/goyo.vim](https://github.com/junegunn/goyo.vim)                                             | 关灯写代码                              |
-| [junegunn/limelight](https://github.com/junegunn/limelight)                                           | 关灯写代码                              |
-| [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                                         | 缩进线                                  |
-| [tpope/vim-surround](https://github.com/tpope/vim-surround)                                           | 符号成双成对                            |
-| [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                                               | 重复上一次操作                          |
-| [sbdchd/neoformat](https://github.com/sbdchd/neoformat)                                               | 格式化插件                              |
-| [yuttie/comfortable-motion.vim](https://github.com/yonchu/yuttie/comfortable-motion.vim)              | 平滑滚动插件                            |
-| [chemzqm/vim-easygit](https://github.com/chemzqm/vim-easygit)                                         | 更简单的 git 操作                       |
-| [rhysd/git-messenger.vim](https://github.com/rhysd/git-messenger.vim)                                 | git 信息查看                            |
-| [thinca/quickrun](https://github.com/thinca/quickrun)                                                 | 快速输出                                |
-| [tpope/vim-markdown](https://github.com/tpope/vim-markdown)                                           | markdown 插件                           |
-| [junegunn/vim-emoji](https://github.com/junegunn/vim-emoji)                                           | emoji 补全                              |
-| [simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo)                                   | 各种修改查看撤销                        |
-| [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user)                                     | 文本对象                                |
-| [bps/vim-textobj-python](https://github.com/bps/vim-textobj-python)                                   | pythontextobject                        |
-| [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)                                   | 多光标操作                              |
-| [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region)                             | visual 增强                             |
-| [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)                               | 键位查找                                |
-| [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)                             | 快速移动                                |
-| [Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)                                               | 文件资源管理                            |
-| [kristijanhusak/defx-icons](https://github.com/https://github.com/kristijanhusak/defx-icons)          | defx 图标                               |
-| [scrooloose/nerdtree](https://github.com/scrooloose/nerdtree)                                         | 文件管理（已注释插件）                  |
-| [tiagofumo/vim-nerdtree-syntax-highlight](https://github.com/tiagofumo/vim-nerdtree-syntax-highlight) | nerdtree 高亮（已注释插件）             |
-| [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)                                   | git 信息                                |
-| [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                                             | 代码变量函数跳转显示插件                |
-| [mattn/emmet-vim](https://github.com/mattn/emmet-vim)                                                 | 快速生成 html 插件                      |
-| [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim)                                           | 搜索插件                                |
-| [w0rp/ale](https://github.com/w0rp/ale)                                                               | 语法检查                                |
-| [othree/html5.vim](https://github.com/othree/html5.vim)                                               | html5 插件                              |
-| [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)                               | js jsx 插件                             |
-| [fatih/vim-go](https://github.com/fatih/vim-go)                                                       | go 开发必备插件                         |
-| [elzr/vim-json](https://github.com/elzr/vim-json)                                                     | json 插件                               |
-| [cespare/vim-toml](https://github.com/cespare/vim-toml)                                               | toml 文件高亮插件                       |
+| Name                                                                                         | Description                             |
+| -------------------------------------------------------------------------------------------- | --------------------------------------- |
+| [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)              | 提供 ctags/gtags 后台数据库自动更新功能 |
+| [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                                  | 启动画面                                |
+| [t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)                                  | 多开窗口跳转的便利插件                  |
+| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                          | 字体图标                                |
+| [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                                  | git 插件                                |
+| [junegunn/fzf.vim](https://github.com/junegunn/fzf.vim)                                      | 搜索插件                                |
+| [hona/dockerfile.vim](https://github.com/hona/dockerfile.vim)                                | Dockerfile 支持                         |
+| [junegunn/vim-easyalign](https://github.com/junegunn/vim-easyalign)                          | 快速对齐                                |
+| [junegunn/goyo.vim](https://github.com/junegunn/goyo.vim)                                    | 关灯写代码                              |
+| [junegunn/limelight](https://github.com/junegunn/limelight)                                  | 关灯写代码                              |
+| [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                                | 缩进线                                  |
+| [tpope/vim-surround](https://github.com/tpope/vim-surround)                                  | 符号成双成对                            |
+| [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                                      | 重复上一次操作                          |
+| [sbdchd/neoformat](https://github.com/sbdchd/neoformat)                                      | 格式化插件                              |
+| [yuttie/comfortable-motion.vim](https://github.com/yonchu/yuttie/comfortable-motion.vim)     | 平滑滚动插件                            |
+| [chemzqm/vim-easygit](https://github.com/chemzqm/vim-easygit)                                | 更简单的 git 操作                       |
+| [chemzqm/denite-git](https://github.com/chemzqm/denite-git)                                  | denite 的 gitsource                     |
+| [thinca/quickrun](https://github.com/thinca/quickrun)                                        | 快速输出                                |
+| [tpope/vim-markdown](https://github.com/tpope/vim-markdown)                                  | markdown 插件                           |
+| [junegunn/vim-emoji](https://github.com/junegunn/vim-emoji)                                  | emoji 补全                              |
+| [simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo)                          | 各种修改查看撤销                        |
+| [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user)                            | 文本对象                                |
+| [bps/vim-textobj-python](https://github.com/bps/vim-textobj-python)                          | pythontextobject                        |
+| [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)                          | 多光标操作                              |
+| [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region)                    | visual 增强                             |
+| [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)                      | 键位查找                                |
+| [easymotion/vim-easymotion](https://github.com/easymotion/vim-easymotion)                    | 快速移动                                |
+| [Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)                                      | 文件资源管理                            |
+| [kristijanhusak/defx-icons](https://github.com/https://github.com/kristijanhusak/defx-icons) | defx 图标                               |
+| [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)                          | git 信息                                |
+| [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                                    | 代码变量函数跳转显示插件                |
+| [liuchengxu/visita.vim](https://github.com/liuchengxu/visita.vim)                            | 支持 lsp 的代码导航                     |
+| [mattn/emmet-vim](https://github.com/mattn/emmet-vim)                                        | 快速生成 html 插件                      |
+| [Shougo/denite.nvim](https://github.com/Shougo/denite.nvim)                                  | 搜索插件                                |
+| [w0rp/ale](https://github.com/w0rp/ale)                                                      | 语法检查                                |
+| [othree/html5.vim](https://github.com/othree/html5.vim)                                      | html5 插件                              |
+| [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)                      | js jsx 插件                             |
+| [fatih/vim-go](https://github.com/fatih/vim-go)                                              | go 开发必备插件                         |
+| [elzr/vim-json](https://github.com/elzr/vim-json)                                            | json 插件                               |
+| [cespare/vim-toml](https://github.com/cespare/vim-toml)                                      | toml 文件高亮插件                       |
 
 ## CoC Extensions
 
@@ -167,9 +166,13 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [coc-html](https://github.com/neoclide/coc-html)           | html 扩展                   |
 | [coc-emmet](https://github.com/neoclide/coc-emmet)         | emmet 使用                  |
 | [coc-css](https://github.com/neoclide/coc-css)             | css 扩展                    |
+| [coc-imselect](https://github.com/neoclide/coc-imselect)   | 输入增强                    |
+| [coc-emoji](https://github.com/neoclide/coc-emoji)         | emoji 补全                  |
+| [coc-lists](https://github.com/neoclide/coc-lists)         | coclists                    |
 | [coc-snippets](https://github.com/neoclide/coc-snippets)   | 代码片段                    |
 | [coc-prettier](https://github.com/neoclide/coc-prettier)   | 格式化                      |
 | [coc-eslint](https://github.com/neoclide/coc-eslint)       | eslint 检测                 |
+| [coc-stylelint](https://github.com/neoclide/coc-stylelint) | stylelint 检测              |
 | [coc-tsserver](https://github.com/neoclide/coc-tsserver)   | js/ts 语言 server           |
 | [coc-pairs](https://github.com/neoclide/coc-pairs)         | 符号补全                    |
 | [coc-json](https://github.com/neoclide/coc-json)           | json server                 |
@@ -256,14 +259,18 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Window
 
-| Keys       | Mode   | Description    |
-| ---------- | ------ | -------------- |
-| Ctrl + h   | Normal | 移动到左边窗口 |
-| Ctrl + l   | Noraml | 移动到右边窗口 |
-| Ctrl + j   | Normal | 移动到下边窗口 |
-| Ctrl + k   | Normal | 移动到上边窗口 |
-| Ctrl + w [ | Normal | 窗口宽度减 3   |
-| Ctrl + w ] | Normal | 窗口宽度加 3   |
+| Keys       | Mode   | Description      |
+| ---------- | ------ | ---------------- |
+| Ctrl + h   | Normal | 移动到左边窗口   |
+| Ctrl + l   | Noraml | 移动到右边窗口   |
+| Ctrl + j   | Normal | 移动到下边窗口   |
+| Ctrl + k   | Normal | 移动到上边窗口   |
+| Ctrl + w [ | Normal | 窗口宽度减 3     |
+| Ctrl + w ] | Normal | 窗口宽度加 3     |
+| Ctrl + f   | Normal | 窗口向下滚动整屏 |
+| Ctrl + b   | Normal | 窗口向上滚动整屏 |
+| Ctrl + d   | Normal | 窗口向下滚动半屏 |
+| Ctrl + u   | Normal | 窗口向上滚动半屏 |
 
 - Tab
 
@@ -307,30 +314,35 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - LocalLeaderKey
 
-| Keys                 | Mode   | Description            |
-| -------------------- | ------ | ---------------------- |
-| `<LocalLeader>` + ca | Normal | CocDiagnostics         |
-| `<LocalLeader>` + cc | Normal | CocCommands            |
-| `<LocalLeader>` + ce | Normal | CocExtensions          |
-| `<LocalLeader>` + cj | Normal | Cocnext                |
-| `<LocalLeader>` + ck | Normal | CocPrev                |
-| `<LocalLeader>` + co | Normal | CocOutline             |
-| `<LocalLeader>` + cr | Normal | CocResume              |
-| `<LocalLeader>` + cs | Normal | CocIsymbols            |
-| `<LocalLeader>` + b  | Normal | fzf 显示 buffer 列表   |
-| `<LocalLeader>` + t  | Normal | 打开 Tagbar            |
-| `<LocalLeader>` + r  | Normal | QuickRun 快速运行      |
-| `<LocalLeader>` + da | Normal | TodoAdd 添加           |
-| `<LocalLeader>` + dt | Normal | 打开 todolist 列表     |
-| `<LocalLeader>` + dd | Normal | 打开已完成的 todo 列表 |
-| `<LocalLeader>` + ga | Normal | Gadd                   |
-| `<LocalLeader>` + gd | Normal | Gdiff                  |
-| `<LocalLeader>` + gc | Normal | Gcommit                |
-| `<LocalLeader>` + gb | Normal | Gblame                 |
-| `<LocalLeader>` + gB | Normal | GBrowse                |
-| `<LocalLeader>` + gS | Normal | GStatus                |
-| `<LocalLeader>` + gp | Normal | Gpush                  |
-| `<LocalLeader>` + gm | Normal | Gitmessage             |
+| Keys                 | Mode   | Description                |
+| -------------------- | ------ | -------------------------- |
+| `<LocalLeader>` + ca | Normal | CocDiagnostics             |
+| `<LocalLeader>` + cc | Normal | CocCommands                |
+| `<LocalLeader>` + ce | Normal | CocExtensions              |
+| `<LocalLeader>` + cj | Normal | Cocnext                    |
+| `<LocalLeader>` + ck | Normal | CocPrev                    |
+| `<LocalLeader>` + co | Normal | CocOutline                 |
+| `<LocalLeader>` + cr | Normal | CocResume                  |
+| `<LocalLeader>` + cs | Normal | CocIsymbols                |
+| `<LocalLeader>` + b  | Normal | fzf 显示 buffer 列表       |
+| `<LocalLeader>` + t  | Normal | 打开 Tagbar                |
+| `<LocalLeader>` + r  | Normal | QuickRun 快速运行          |
+| `<LocalLeader>` + da | Normal | TodoAdd 添加               |
+| `<LocalLeader>` + ga | Normal | Gadd                       |
+| `<LocalLeader>` + gd | Normal | Gdiff                      |
+| `<LocalLeader>` + gc | Normal | Gcommit                    |
+| `<LocalLeader>` + gb | Normal | Gblame                     |
+| `<LocalLeader>` + gB | Normal | GBrowse                    |
+| `<LocalLeader>` + gS | Normal | GStatus                    |
+| `<LocalLeader>` + gp | Normal | Gpush                      |
+| `<LocalLeader>` + gl | Normal | Denite 显示所有 git log    |
+| `<LocalLeader>` + gh | Normal | Denite 显示所有 git branch |
+
+- Denite.Menu
+
+| Keys                | Mode   | Description      |
+| ------------------- | ------ | ---------------- |
+| `<LocalLeader>` + m | Normal | 打开 Denite Menu |
 
 - Defx 文件资源管理
 
@@ -374,6 +386,17 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | gy           | Normal        | 跳转类型定义                  |
 | gi           | Normal        | 跳转到实现                    |
 | gr           | Normal        | 跳转到引用                    |
+| `[` + g      | Normal        | coc-git-prechunk              |
+| `]` + g      | Normal        | coc-git-nextchunk             |
+| gs           | Normal        | git chunkinfo                 |
+| gc           | Normal        | git commit                    |
+
+- Feature For Go
+
+| Keys | Mode   | Description            |
+| ---- | ------ | ---------------------- |
+| zl   | Normal | 使用 Denite 的 Outline |
+| zT   | Normal | 使用 Denite 的 Goroot  |
 
 - TextObject
 
