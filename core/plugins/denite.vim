@@ -98,7 +98,6 @@ endif
 
 
 " KEY MAPPINGS
-
 autocmd FileType denite call s:denite_settings()
 function! s:denite_settings() abort
 	highlight! link CursorLine Visual
@@ -107,8 +106,8 @@ function! s:denite_settings() abort
 	nnoremap <silent><buffer><expr> d    denite#do_map('do_action', 'delete')
 	nnoremap <silent><buffer><expr> p    denite#do_map('do_action', 'preview')
 	nnoremap <silent><buffer><expr> st   denite#do_map('do_action', 'tabopen')
-	nnoremap <silent><buffer><expr> s   denite#do_map('do_action', 'vsplit')
-	nnoremap <silent><buffer><expr> i    denite#do_map('do_action', 'split')
+	nnoremap <silent><buffer><expr> sg   denite#do_map('do_action', 'vsplit')
+	nnoremap <silent><buffer><expr> sv   denite#do_map('do_action', 'split')
 	nnoremap <silent><buffer><expr> '    denite#do_map('quick_move')
 	nnoremap <silent><buffer><expr> q    denite#do_map('quit')
 	nnoremap <silent><buffer><expr> r    denite#do_map('redraw')
@@ -125,7 +124,8 @@ function! s:denite_filter_settings() abort
 	nnoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
 	" inoremap <silent><buffer><expr> <Esc>  denite#do_map('quit')
 	nnoremap <silent><buffer><expr> q      denite#do_map('quit')
-	inoremap <silent><buffer><expr> <C-c>  denite#do_map('quit')
+	imap <silent><buffer> <C-c> <Plug>(denite_filter_quit)
+	"inoremap <silent><buffer><expr> <C-c>  denite#do_map('quit')
 	nnoremap <silent><buffer><expr> <C-c>  denite#do_map('quit')
 	inoremap <silent><buffer>       kk     <Esc><C-w>p
 	nnoremap <silent><buffer>       kk     <C-w>p

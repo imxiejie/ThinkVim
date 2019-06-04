@@ -153,12 +153,16 @@ function! CocStatusBar() abort
     endif
     let regstatus=substitute(status,"TSC","Ⓣ ","")
     let statusbar= split(regstatus)
-    let bar=[]
     if &filetype ==? "go"
         let gobar ="Ⓖ "
         call add(statusbar,gobar)
     endif
-    return join(statusbar," ")
+    "return join(statusbar," ")
+    let s = join(statusbar," ")
+    if empty(s)
+        return ""
+    endif
+     return join(['❖',s])
 endfunction
 
 function! LightLineCocError()

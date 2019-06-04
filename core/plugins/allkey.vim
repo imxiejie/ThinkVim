@@ -1,7 +1,7 @@
 "Plugin key settings
 
 if dein#tap('denite.nvim')
-        nnoremap <silent><localLeader>dt  :Denite todo<CR>
+        nnoremap <silent><localLeader>da  :TodoAdd 
         nnoremap <silent><LocalLeader>m :<C-u>Denite menu<CR>
 
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
