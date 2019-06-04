@@ -48,7 +48,8 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
-**_1._** clone 完成后打开你的终端，输入 nvim 后一切都会自动安装耐心等待就可以了。
+**_1._** clone 完成后打开你的终端，输入 nvim 后一切都会自动安装耐心等待就可以了。  
+
 **_2._** 你可以在[B 站查看安装和使用的系列教程](https://space.bilibili.com/321783076)
 
 **_Tmux Zsh_** 如果你也喜欢图上的 tmux 状态栏和 zsh 主题你可以在我的[dotfile 中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是 powerlevel10k 异步运行主题。摆脱终端操作 git 命令很慢的困扰
