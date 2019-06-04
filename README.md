@@ -259,18 +259,18 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Window
 
-| Keys       | Mode   | Description      |
-| ---------- | ------ | ---------------- |
-| Ctrl + h   | Normal | 移动到左边窗口   |
-| Ctrl + l   | Noraml | 移动到右边窗口   |
-| Ctrl + j   | Normal | 移动到下边窗口   |
-| Ctrl + k   | Normal | 移动到上边窗口   |
-| Ctrl + w [ | Normal | 窗口宽度减 3     |
-| Ctrl + w ] | Normal | 窗口宽度加 3     |
-| Ctrl + f   | Normal | 窗口向下滚动整屏 |
-| Ctrl + b   | Normal | 窗口向上滚动整屏 |
-| Ctrl + d   | Normal | 窗口向下滚动半屏 |
-| Ctrl + u   | Normal | 窗口向上滚动半屏 |
+| Keys       | Mode   | Description                  |
+| ---------- | ------ | ---------------------------- |
+| Ctrl + h   | Normal | 移动到左边窗口               |
+| Ctrl + l   | Noraml | 移动到右边窗口               |
+| Ctrl + j   | Normal | 移动到下边窗口               |
+| Ctrl + k   | Normal | 移动到上边窗口               |
+| Ctrl + w [ | Normal | 窗口宽度减 3                 |
+| Ctrl + w ] | Normal | 窗口宽度加 3                 |
+| Ctrl + f   | Normal | 窗口向下滚动整屏包括浮动窗口 |
+| Ctrl + b   | Normal | 窗口向上滚动整屏包括浮动窗口 |
+| Ctrl + d   | Normal | 窗口向下滚动半屏             |
+| Ctrl + u   | Normal | 窗口向上滚动半屏             |
 
 - Tab
 
