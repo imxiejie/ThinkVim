@@ -3,9 +3,10 @@
 <div align="center">
 <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
 </div>
-<div align="center">
-<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png">
-</div>
+## 二次元赛高
+| ACG                                                                                      | 狂赌之渊      |
+| ----------------------------------------------------------------------------------------- | ---------------- |
+|<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png">   | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png">           |
 
 ## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md)
 
@@ -425,20 +426,9 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | aF   | Python | 快速选择整个函数体 |
 | iF   | Python | 快速选择函数体内   |
 
-## Language Support
+## 教程
 
-语言工具支持，在 coc.nvim 主页查找你的开发语言 server，并修改`coc-settings.json`添加你的语言服务器。
-
-## 自定义
-
-- 插件
-  - 你可以添加任何你喜欢的插件,根据需求功能确定为正常加载或者懒加载，我更建议设置懒加载不会降低 vim 的启动速度也可以避免 vim 性能损耗卡顿，注意插件的键位设置应该在 `allkey.vim`.
-- 颜色
-  - 将你喜欢的 `colorscheme` 放到 Colors 文件夹中，然后修改 `themes/theme.vim`.colors 文件夹中已经装了很多主题可以更换
-
-## 建议
-
-- 如果你有好用实用的插件可以在[issue](https://github.com/taigacute/ThinkVim/issues/7)中提。我会进行考虑。如有必要我会添加对该插件的支持
+- 你可以在[B 站查看使用教程系列](https://space.bilibili.com/321783076/channel/detail?cid=64354)
 
 ## Backers
 
@@ -449,18 +439,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   <a href="" target="_blank" title="taigacute">
   <img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="300" height="300" alt="taigacute">
   </a>
-
-## 教程
-
-- 你可以在[B 站查看使用教程系列](https://space.bilibili.com/321783076/channel/detail?cid=64354)
-
-## 答疑
-
-> 为什么使用 dein 而不是 vim-plug
-
-- dein 提供更多的钩子函数，懒加载方面做得也比 vim-plug 好一些。使用确实很困难。需要看一些 dein 的资料。关于 dein 褒贬不一，dein 添加了一层缓存接管 runtime，有人觉得好有人觉得不好。
-  > 使用是否方便
-- 对于新的 vimer 建议安装后使用。调整需要学习一些 vimscript 和 dein 的使用。
 
 ## Feedback
 
