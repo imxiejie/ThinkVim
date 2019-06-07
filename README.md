@@ -11,25 +11,18 @@
 
 ## 特性
 
+- 快速的启动时间
 - 模块插件配置
-- 懒加载百分之 95 插件
-- 启动速度快
-  - `nvim --startuptime ~/vimstart.log`
-  - `nvim -u NORC --startuptime ~/vimstart.log`
-
-
-     PluginTotal    | StartupTime
-     -------------- | ----------------------
-      54 |   35~50ms
-       0  |   28ms
-
+- 简单易用易修改
+- 懒加载百分之 95 插件使用 dein
+- 以 coc 为工作核心,denite 辅助
+- 基于 coc 支持 lsp 的语言补全
 - 完全自定义
-- LSP 语言服务支持
-  - 默认支持 js ts jsx python
+- 舒适的配色方案 gruvbox9
 
 ## 必要环境
 
-- macos or linux (windows 上需要修改一些变量）
+- macos or linux
 - neovim >= 0.4.0（配置使用了一些 floatwindow.neovim0.4.0 以上的版本才支持)
 - python3 support
   - pip3 install --user pynvim
@@ -48,7 +41,7 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
-**_1._** clone 完成后打开你的终端，输入 nvim 后一切都会自动安装耐心等待就可以了。  
+**_1._** clone 完成后打开你的终端，输入 nvim 后一切都会自动安装耐心等待就可以了。
 
 **_2._** 你可以在[B 站查看安装和使用的系列教程](https://space.bilibili.com/321783076)
 
@@ -58,20 +51,33 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 
 - 以下内容来自于 coc 主页。更多关于 coc 详细的配置参考[Coc 主页](https://github.com/neoclide/coc.nvim)
-- 以下为 coc 支持的 languageServer，点进去有每个 languageServer 的配置，复制到 coc-settings.json 里的 language 中即可。
+- 以下为 coc 支持的 languageServer，参照[coc 的 wiki 安装方式](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 
 - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
 - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
   - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
-  - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
-  - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
-  - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
-  - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
-  - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
-  - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
-  - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
-  - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
+    - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
+    - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
+    - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
+    - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
+    - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
+    - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
+    - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
+    - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
+    - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
+    - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
+    - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
+    - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
+    - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
+    - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
+    - [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
+    - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
+    - [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+    - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
+    - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+    - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
+    - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
 
 ## CocExtensions
 
@@ -79,11 +85,15 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
 - **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
 - **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-- **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`,
-  use [solargraph](http://solargraph.org/).
-- **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use
-  [Rust Language Server](https://github.com/rust-lang/rls)
+- **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
+- **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
 - **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
+- **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
+- **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+- **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
+- **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
+- **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+- **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
 
 ## 结构
 
@@ -122,6 +132,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | -------------------------------------------------------------------------------------------- | --------------------------------------- |
 | [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)              | 提供 ctags/gtags 后台数据库自动更新功能 |
 | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                                  | 启动画面                                |
+| [tyru/caw.vim](https://github.com/tyru/caw.vim)                                              | 注释插件                                |
 | [t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)                                  | 多开窗口跳转的便利插件                  |
 | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                          | 字体图标                                |
 | [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)                                  | git 插件                                |
@@ -217,47 +228,51 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## 键位操作
 
 - 默认 leader 为`SPACE` localleader`;` 关于键位的设置在 mapping.vim，插件的键位设置在 allkey.vim。
+- 部分键位按照 emacs 键位
 - 键位的修改尽量不要改动太多默认的键位，默认的键位有时很有用也方便他人上手。
 
-| Keys        | Mode     | Description          |
-| ----------- | -------- | -------------------- |
-| Ctrl + w    | Insert   | 删除光标下整个单词   |
-| Ctrl + h    | Insert   | 删除映射 `BackSpace` |
-| Ctrl + d    | Insert   | 删除光标所在字符     |
-| Ctrl + u    | Insert   | 当前光标删除到行首   |
-| Ctrl + b    | Insert   | 向左移动             |
-| Ctrl + f    | Insert   | 向右移动             |
-| Ctrl + a    | Insert   | 移到行首             |
-| Ctrl + e    | Insert   | 移到行尾             |
-| Ctrl + p    | Command  | 向上移动             |
-| Ctrl + b    | Command  | 向左移动             |
-| Ctrl + f    | Command  | 向右移动             |
-| Ctrl + a    | Command  | 移动到行首           |
-| Ctrl + e    | Command  | 移动到行尾           |
-| Ctrl + d    | Command  | 删除光标所在字符     |
-| Ctrl + h    | Command  | 删除映射 `BackSpace` |
-| Ctrl + S    | Insert   | 保存                 |
-| Ctrl + Q    | Insert   | 保存并退出           |
-| Ctrl + o    | Insert   | 生成新行             |
-| ] + b       | Normal   | 上一个 buffer        |
-| [ + b       | Normal   | 下一个 buffer        |
-| Ctrl + x    | Normal   | 删除当前 buffer      |
-| Y           | Normal   | 复制到行尾           |
-| j           | Normal   | gj                   |
-| k           | Normal   | gk                   |
-| j           | Visual   | gj                   |
-| k           | Visual   | gj                   |
-| , + `Space` | Normal   | 删除尾部空格         |
-| [ + a       | Normal   | Ale 下一个错误       |
-| ] + a       | Normal   | Ale 上一个错误       |
-| [ + c       | Normal   | coc 下一个错误       |
-| ] + c       | Normal   | coc 上一个错误       |
-| ] + ]       | Normal   | 跳转上一个 go 函数   |
-| [ + [       | Normal   | 跳转下一个 go 函数   |
-| ga          | Normal   | EasyAlign 快速对其   |
-| ga          | 可视模式 | EasyAlign 快速对其   |
-| v           | 可视模式 | vim-expand-region    |
-| V           | 可视模式 | vim-expand-region    |
+| Keys        | Mode    | Description          |
+| ----------- | ------- | -------------------- |
+| Ctrl + w    | Insert  | 删除光标下整个单词   |
+| Ctrl + h    | Insert  | 删除映射 `BackSpace` |
+| Ctrl + d    | Insert  | 删除光标所在字符     |
+| Ctrl + u    | Insert  | 当前光标删除到行首   |
+| Ctrl + b    | Insert  | 向左移动             |
+| Ctrl + f    | Insert  | 向右移动             |
+| Ctrl + a    | Insert  | 移到行首             |
+| Ctrl + e    | Insert  | 移到行尾             |
+| Ctrl + p    | Command | 向上移动             |
+| Ctrl + b    | Command | 向左移动             |
+| Ctrl + f    | Command | 向右移动             |
+| Ctrl + a    | Command | 移动到行首           |
+| Ctrl + e    | Command | 移动到行尾           |
+| Ctrl + d    | Command | 删除光标所在字符     |
+| Ctrl + h    | Command | 删除映射 `BackSpace` |
+| Ctrl + S    | Insert  | 保存                 |
+| Ctrl + Q    | Insert  | 保存并退出           |
+| Ctrl + o    | Insert  | 生成新行             |
+| ] + b       | Normal  | 上一个 buffer        |
+| [ + b       | Normal  | 下一个 buffer        |
+| Ctrl + x    | Normal  | 删除当前 buffer      |
+| Y           | Normal  | 复制到行尾           |
+| j           | Normal  | gj                   |
+| k           | Normal  | gk                   |
+| j           | Visual  | gj                   |
+| k           | Visual  | gj                   |
+| -           | Visual  | 选择窗口             |
+| , + `Space` | Normal  | 删除尾部空格         |
+| [ + a       | Normal  | Ale 下一个错误       |
+| ] + a       | Normal  | Ale 上一个错误       |
+| [ + c       | Normal  | coc 下一个错误       |
+| ] + c       | Normal  | coc 上一个错误       |
+| ] + ]       | Normal  | 跳转上一个 go 函数   |
+| [ + [       | Normal  | 跳转下一个 go 函数   |
+| gc          | Normal  | caw.vim 快速注释     |
+| gcc         | Normal  | caw.vim 取消注释     |
+| ga          | Normal  | EasyAlign 快速对其   |
+| ga          | Visual  | EasyAlign 快速对其   |
+| v           | Visual  | vim-expand-region    |
+| V           | Visual  | vim-expand-region    |
 
 - Window
 
@@ -288,9 +303,18 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | Keys                        | Mode   | Description              |
 | --------------------------- | ------ | ------------------------ |
 | `<Leader>` + 数字           | Normal | 数字[0-9]选择 buffer     |
+| `<Leader>` + ca             | Normal | CocDiagnostics           |
+| `<Leader>` + cc             | Normal | CocCommands              |
+| `<Leader>` + ce             | Normal | CocExtensions            |
+| `<Leader>` + cj             | Normal | Cocnext                  |
+| `<Leader>` + ck             | Normal | CocPrev                  |
+| `<Leader>` + co             | Normal | CocOutline               |
+| `<Leader>` + cr             | Normal | CocResume                |
+| `<Leader>` + cs             | Normal | CocIsymbols              |
 | `<Leader>` + G              | Normal | 打开 Goyo                |
 | `<Leader>` + m              | Normal | 打开 mundo               |
 | `<Leader>` + w              | Normal | 保存                     |
+| `<Leader>` + -              | Normal | ChooseWin 选择窗口       |
 | `<Leader>` + s              | Normal | 打开 Startify            |
 | `<Leader>` + d              | Normal | 打开 Dash                |
 | `<Leader>` + cf             | Normal | coc 格式化               |
@@ -318,17 +342,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 | Keys                 | Mode   | Description                |
 | -------------------- | ------ | -------------------------- |
-| `<LocalLeader>` + ca | Normal | CocDiagnostics             |
-| `<LocalLeader>` + cc | Normal | CocCommands                |
-| `<LocalLeader>` + ce | Normal | CocExtensions              |
-| `<LocalLeader>` + cj | Normal | Cocnext                    |
-| `<LocalLeader>` + ck | Normal | CocPrev                    |
-| `<LocalLeader>` + co | Normal | CocOutline                 |
-| `<LocalLeader>` + cr | Normal | CocResume                  |
-| `<LocalLeader>` + cs | Normal | CocIsymbols                |
 | `<LocalLeader>` + b  | Normal | fzf 显示 buffer 列表       |
 | `<LocalLeader>` + t  | Normal | 打开 Tagbar                |
 | `<LocalLeader>` + r  | Normal | QuickRun 快速运行          |
+| `<LocalLeader>` + v  | Normal | 打开 Vista                 |
 | `<LocalLeader>` + da | Normal | TodoAdd 添加               |
 | `<LocalLeader>` + ga | Normal | Gadd                       |
 | `<LocalLeader>` + gd | Normal | Gdiff                      |
@@ -391,7 +408,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `[` + g      | Normal        | coc-git-prechunk              |
 | `]` + g      | Normal        | coc-git-nextchunk             |
 | gs           | Normal        | git chunkinfo                 |
-| gc           | Normal        | git commit                    |
 
 - Feature For Go
 
