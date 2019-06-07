@@ -1,7 +1,7 @@
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
 <div align="center">
-<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
+<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png" width="500" height="400">
 </div>  
 
 ## 二次元赛高  
