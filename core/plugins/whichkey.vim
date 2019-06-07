@@ -11,6 +11,10 @@ let g:which_key_map = {
       \ '8' : 'Buffer-8'      ,
       \ '9' : 'Buffer-9'      ,
       \ '0' : 'Buffer-10'      ,
+      \ 'a' : {
+            \ 'name' : '+CocCodeAction',
+            \ 'c' : 'CodeAction',
+            \ },
       \ 'e' : 'Defx' ,
       \ '-' : 'ChooseWin' ,
       \ 'd' : 'Dash' ,
@@ -31,8 +35,24 @@ let g:which_key_map = {
             \ 'b' : 'Easymotion-b',
             \ 'f' : 'Easymotion-f',
             \ },
-      \ 'c' : {
-            \ 'name' : '+NerdCommenter',
+      \ 'c'    : {
+              \ 'name' : '+CocList' ,
+              \ 'a'    : 'CocCodeActionSelected',
+              \ 'd'    : 'CocDiagnostics',
+              \ 'c'    : 'CocCommands',
+              \ 'e'    : 'CocExtensions',
+              \ 'j'    : 'CocNext',
+              \ 'k'    : 'CocPrev',
+              \ 'o'    : 'CocOutLine',
+              \ 'r'    : 'CocResume',
+              \ 'n'    : 'CocRename',
+              \ 's'    : 'CocIsymbols',
+              \ 'g'    : 'CocGitstatus',
+              \ 'f'    : 'CocFormat',
+              \ },
+      \ 'q' : {
+            \ 'name' : '+CocQuickFix',
+            \ 'f' : 'CocFixCurrent',
             \ },
       \ 'g' : {
             \ 'name' : '+Vim-Go',
@@ -52,18 +72,6 @@ let g:which_key_map = {
 
 let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
-      \ 'c'    : {
-              \ 'name' : '+CocList' ,
-              \ 'a'    : 'CocDiagnostics',
-              \ 'c'    : 'CocCommands',
-              \ 'e'    : 'CocExtensions',
-              \ 'j'    : 'CocNext',
-              \ 'k'    : 'CocPrev',
-              \ 'o'    : 'CocOutLine',
-              \ 'r'    : 'CocResume',
-              \ 's'    : 'CocIsymbols',
-              \ 'g'    : 'CocGitstatus',
-              \ },
       \ 'b'    : 'Bufferlist',
       \ 't'    : 'Tagbar',
       \ 'v'    : 'Vista',
@@ -92,6 +100,7 @@ let g:which_key_rsbgmap = {
       \ 'a'    : 'AleNextWarp',
       \ 'c'    : 'CocDiagnosticsNext',
       \ 'b'    : 'NextBuffer',
+      \ 'g'    : 'CocGitNextChunk',
       \ ']'    : 'Vim-goPrefunction',
       \ }
 
@@ -100,5 +109,6 @@ let g:which_key_lsbgmap = {
       \ 'a'    : 'AlePreWarp',
       \ 'c'    : 'CocDiagnosticsPre',
       \ 'b'    : 'PreBuffer',
+      \ 'g'    : 'CocGitPrevChunk',
       \ '['    : 'Vim-goNextfunction',
       \ }

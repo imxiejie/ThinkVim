@@ -36,28 +36,36 @@ endfunction
 if dein#tap('coc.nvim')
         " Using CocList
         " Show all diagnostics
-        nnoremap <silent> <localleader>ca  :<C-u>CocList diagnostics<cr>
+        nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
         " Manage extensions
-        nnoremap <silent> <localleader>ce  :<C-u>CocList extensions<cr>
+        nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
         " Show commands
-        nnoremap <silent> <localleader>cc  :<C-u>CocList commands<cr>
+        nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
         " Find symbol of current document
-        nnoremap <silent> <localleader>co  :<C-u>CocList outline<cr>
+        nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
         " Search workspace symbols
-        nnoremap <silent> <localleader>cs  :<C-u>CocList -I symbols<cr>
+        nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
         " Do default action for next item.
-        nnoremap <silent> <localleader>cj  :<C-u>CocNext<CR>
+        nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
         " Do default action for previous item.
-        nnoremap <silent> <localleader>ck  :<C-u>CocPrev<CR>
+        nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
         " Resume latest coc list
-        nnoremap <silent> <localleader>cr  :<C-u>CocListResume<CR>
+        nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
         nmap <silent> ]c <Plug>(coc-diagnostic-prev)
         nmap <silent> [c <Plug>(coc-diagnostic-next)
-
+        " Remap for rename current word
+        nmap <leader>cn <Plug>(coc-rename)
         " Remap for format selected region
         vmap <leader>cf  <Plug>(coc-format-selected)
         nmap <leader>cf  <Plug>(coc-format-selected)
+        " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
+        xmap <leader>ca  <Plug>(coc-codeaction-selected)
+        nmap <leader>ca  <Plug>(coc-codeaction-selected)
+        " Remap for do codeAction of current line
+        nmap <leader>ac  <Plug>(coc-codeaction)
+        " Fix autofix problem of current line
+        nmap <leader>qf  <Plug>(coc-fix-current)
         " Remap keys for gotos
         nmap <silent> gd <Plug>(coc-definition)
         nmap <silent> gy <Plug>(coc-type-definition)
@@ -71,9 +79,7 @@ if dein#tap('coc.nvim')
         nmap ]g <Plug>(coc-git-nextchunk)
         " show chunk diff at current position
         nmap gs <Plug>(coc-git-chunkinfo)
-        " show commit ad current position
-        nmap gc <Plug>(coc-git-commit)
-        nnoremap <silent> <localleader>cg  :<C-u>CocList --normal gstatus<CR>
+        nnoremap <silent> <leader>cg  :<C-u>CocList --normal gstatus<CR>
         " float window scroll
 		nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
@@ -133,6 +139,24 @@ endif
 if dein#tap('vim-choosewin')
 	nmap -         <Plug>(choosewin)
 	nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
+endif
+
+if dein#tap('caw.vim')
+    function! InitCaw() abort
+    if !&l:modifiable
+      silent! nunmap <buffer> gc
+      silent! xunmap <buffer> gc
+      silent! nunmap <buffer> gcc
+      silent! xunmap <buffer> gcc
+    else
+      nmap <buffer> gc <Plug>(caw:prefix)
+      xmap <buffer> gc <Plug>(caw:prefix)
+      nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+      xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+    endif
+  endfunction
+  autocmd MyAutoCmd FileType * call InitCaw()
+  call InitCaw()
 endif
 
 

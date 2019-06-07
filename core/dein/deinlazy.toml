@@ -90,8 +90,8 @@ on_cmd = ['TodoAdd','TodoImport']
 on_source = ['denite.nvim']
 
 [[plugins]]
-repo = 'scrooloose/nerdcommenter'
-on_ft =['vim','json','go','html','javascript','jsx','javascript.jsx','py','css','less','tmpl','toml','xml','sql']
+repo='tyru/caw.vim'
+on_map = {nx='<Plug>'}
 
 [[plugins]]
 repo = 'sbdchd/neoformat'
