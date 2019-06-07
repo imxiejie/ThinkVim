@@ -2,6 +2,7 @@
 inoremap <C-w> <C-[>diwa
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
+inoremap <C-k>  <ESC>d$
 inoremap <C-u> <C-G>u<C-U>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
@@ -23,9 +24,6 @@ cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 noremap <Leader>w :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
-
-"disable highlight search
-"map <leader>n :nohl<CR>
 
 "insert a newline
 inoremap <C-O> <Esc>o

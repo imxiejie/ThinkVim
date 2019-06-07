@@ -21,18 +21,3 @@ merge = 0
 build = 'yarn install --frozen-lockfile'
 hook_add = 'source ~/.config/nvim/core/plugins/coc.vim'
 
-#[[plugins]]
-#repo = 'bling/vim-airline'
-#hook_add='source ~/.config/nvim/core/plugins/vim-airline.vim'
-
-#[[plugins]]
-#repo = 'vim-airline/vim-airline-themes'
-#hook_add = '''
-#let g:airline_theme='wombat'
-#'''
-
-#[[plugins]]
-#repo = 'morhetz/gruvbox'
-#hook_add = '''
-#let g:gruvbox_contrast_dark = 'hard'
-#'''
