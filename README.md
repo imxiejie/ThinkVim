@@ -1,12 +1,14 @@
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
 <div align="center">
-<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png">
-</div>
-## 二次元赛高
-| ACG                                                                                      | 狂赌之渊      |
-| ----------------------------------------------------------------------------------------- | ---------------- |
-|<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png">   | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png">           |
+<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png" width="500" height="400">
+</div>  
+
+## 二次元赛高  
+
+| ACG                                                                         | 狂赌之渊      |
+| -------------------------------------------------------------------- | ---------------- |
+|<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300">   | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png" width="480" height="300">     |
 
 ## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md)
 
