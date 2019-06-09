@@ -233,6 +233,22 @@ if dein#tap('vim-which-key')
 		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
 endif
 
+if dein#tap('vim-operator-surround')
+        map <silent>sa <Plug>(operator-surround-append)
+        map <silent>sd <Plug>(operator-surround-delete)
+        map <silent>sr <Plug>(operator-surround-replace)
+        nmap <silent>saa <Plug>(operator-surround-append)<Plug>(textobj-multiblock-i)
+        nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+        nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+endif
+
+if dein#tap('vim-textobj-multiblock')
+	omap <silent> ab <Plug>(textobj-multiblock-a)
+	omap <silent> ib <Plug>(textobj-multiblock-i)
+	xmap <silent> ab <Plug>(textobj-multiblock-a)
+	xmap <silent> ib <Plug>(textobj-multiblock-i)
+endif
+
 if dein#tap('bps/vim-textobj-python')
         xmap aF <Plug>(textobj-python-function-a)
         omap aF <Plug>(textobj-python-function-a)

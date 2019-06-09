@@ -156,23 +156,8 @@ repo = 'simnalamburt/vim-mundo'
 on_map = { n = '<Plug>'}
 
 [[plugins]]
-repo = 'kana/vim-textobj-user'
-on_func = 'textobj#user#'
-
-[[plugins]]
-repo = 'bps/vim-textobj-python'
-depends = 'vim-textobj-user'
-on_map = { ox ='<Plug>'}
-
-
-[[plugins]]
 repo ='terryma/vim-expand-region'
 on_map = { x = '<Plug>'}
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-depends = ['vim-repeat']
-on_map = ['cs','ys']
 
 [[plugins]]
 repo = 'tpope/vim-repeat'
@@ -310,3 +295,27 @@ on_ft= ['toml']
 repo = 'vim-scripts/xml.vim'
 on_ft = ['xml']
 
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+on_func = 'textobj#user#'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = ['vim-operator-user', 'vim-textobj-multiblock']
+on_map = {vnx = '<Plug>'}
+
+[[plugins]]
+repo = 'osyo-manga/vim-textobj-multiblock'
+depends = 'vim-textobj-user'
+on_map = {ox='<Plug>'}
+hook_add= '''
+    let g:textobj_multiblock_no_default_key_mappings = 1
+'''
+
+[[plugins]]
+repo = 'bps/vim-textobj-python'
+depends = 'vim-textobj-user'
+on_map = { ox ='<Plug>'}

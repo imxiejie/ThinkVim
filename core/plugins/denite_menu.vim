@@ -49,13 +49,15 @@ let s:menus.config.file_candidates = [
 
 let s:menus.thinkvim = {'description': '💎 ThinkVim Configuration files'}
 let s:menus.thinkvim.file_candidates = [
-  \   ['🐠 General settings: vimrc                   🔹', $VIMPATH.'/core/vimrc'],
-  \   ['🐠 Initial settings: init.vim                🔹', $VIMPATH.'/core/init.vim'],
-  \   ['🐠 File Types: vimrc.filetype                🔹', $VIMPATH.'/core/filetype.vim'],
-  \   ['🐠 Installed Plugins: dein.toml              🔹', $VIMPATH.'/core/dein/dein.toml'],
-  \   ['🐠 Installed LazyLoadPlugins: deinlazy.toml  🔹', $VIMPATH.'/core/dein/deinlazy.toml'],
-  \   ['🐠 Global Key mappings: mappings             🔹', $VIMPATH.'/core/mappings.vim'],
-  \   ['🐠 Global Key Pluginmappings: Pluginmappings 🔹', $VIMPATH.'/core/plugins/allkey.vim'],
+  \   ['🐠 MainVimrc          settings: vimrc               🔹', $VIMPATH.'/core/vimrc'],
+  \   ['🐠 Initial            settings: init.vim            🔹', $VIMPATH.'/core/init.vim'],
+  \   ['🐠 General            settings: general.vim         🔹', $VIMPATH.'/core/general.vim'],
+  \   ['🐠 DeinConfig         settings: deinrc.vim          🔹', $VIMPATH.'/core/deinrc.vim'],
+  \   ['🐠 FileTypes          settings: filetype.vim        🔹', $VIMPATH.'/core/filetype.vim'],
+  \   ['🐠 Installed       LoadPlugins: dein.toml           🔹', $VIMPATH.'/core/dein/dein.toml'],
+  \   ['🐠 Installed   LazyLoadPlugins: deinlazy.toml       🔹', $VIMPATH.'/core/dein/deinlazy.toml'],
+  \   ['🐠 Global   Key    Vimmappings: mappings.vim        🔹', $VIMPATH.'/core/mappings.vim'],
+  \   ['🐠 Global   Key Pluginmappings: Pluginmappings      🔹', $VIMPATH.'/core/plugins/allkey.vim'],
   \ ]
 
 call denite#custom#var('menu', 'menus', s:menus)
