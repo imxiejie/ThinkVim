@@ -141,6 +141,11 @@ if dein#tap('vim-choosewin')
 	nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
 endif
 
+if dein#tap('accelerated-jk')
+	nmap <silent>j <Plug>(accelerated_jk_gj)
+	nmap <silent>k <Plug>(accelerated_jk_gk)
+endif
+
 if dein#tap('caw.vim')
     function! InitCaw() abort
     if !&l:modifiable

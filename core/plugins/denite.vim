@@ -16,11 +16,11 @@ function! s:denite_detect_size() abort
     let s:denite_winwidth = &columns > 240 ? &columns / 2 : 120
     let s:denite_wincol = &columns > s:denite_winwidth ? (&columns - s:denite_winwidth) / 2 : 0
     call denite#custom#option('_', {
-          \ 'wincol': s:denite_wincol,
-          \ 'winheight': s:denite_winheight,
-          \ 'winrow': s:denite_winrow,
-          \ 'winwidth': s:denite_winwidth,
-          \ })
+         \ 'wincol': s:denite_wincol,
+         \ 'winheight': s:denite_winheight,
+         \ 'winrow': s:denite_winrow,
+         \ 'winwidth': s:denite_winwidth,
+         \ })
   endfunction
    augroup denite-detect-size
     autocmd!
@@ -35,6 +35,8 @@ call denite#custom#option('jump', { 'start_filter': 0 })
 call denite#custom#option('git', { 'start_filter': 0 })
 call denite#custom#option('mpc', { 'winheight': 20 })
 
+call denite#custom#source('file/rec,file_mru,file/old,buffer,directory/rec,directory_mru', 'converters', ['devicons_denite_converter'])
+
 " MATCHERS
 " Default is 'matcher/fuzzy'
 call denite#custom#source('tag', 'matchers', ['matcher/substring'])
@@ -42,7 +44,7 @@ call denite#custom#source('tag', 'matchers', ['matcher/substring'])
 
 if has('nvim') && &runtimepath =~# '\/cpsm'
 	call denite#custom#source(
-		\ 'buffer,file_mru,file_old,file/rec,grep,mpc,line,neoyank',
+		\ 'buffer,file_mru,file/old,file/rec,grep,mpc,line,neoyank',
 		\ 'matchers', ['matcher/cpsm', 'matcher/fuzzy'])
 endif
 
@@ -53,7 +55,7 @@ call denite#custom#source('z', 'sorters', ['sorter_z'])
 " CONVERTERS
 " Default is none
 call denite#custom#source(
-	\ 'buffer,file_mru,file_old',
+	\ 'buffer,file_mru,file/old',
 	\ 'converters', ['converter_relative_word'])
 
 " FIND and GREP COMMANDS
