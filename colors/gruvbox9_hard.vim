@@ -4,7 +4,7 @@
 " Maintainer:   taigacute 
 " Website:      https://github.com/taigacute/vim-gruvbox9/
 " License:      Vim License (see `:help license`)
-" Last Updated: Sat Jun  1 22:22:06 2019
+" Last Updated: Sun Jun  9 11:51:03 2019
 
 if !(has('termguicolors') && &termguicolors) && !has('gui_running')
       \ && (!exists('&t_Co') || &t_Co < 256)
@@ -268,6 +268,10 @@ if &background ==# 'dark'
     hi StartifySpecial ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifyHeader ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
     hi StartifyFooter ctermfg=239 ctermbg=NONE guifg=#504945 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi deniteSeelectedLine ctermfg=214 ctermbg=NONE guifg=#fabd2f guibg=NONE guisp=NONE cterm=NONE gui=NONE
+    hi deniteMatchedChar ctermfg=142 ctermbg=NONE guifg=#b8bb26 guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+    hi deniteMatchedRange ctermfg=109 ctermbg=NONE guifg=#83a598 guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
+    hi deniteMode ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
     hi SyntasticError ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fb4934 cterm=NONE,underline gui=NONE,undercurl
     hi SyntasticWarning ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#fabd2f cterm=NONE,underline gui=NONE,undercurl
     hi SyntasticErrorSign ctermfg=203 ctermbg=237 guifg=#fb4934 guibg=#3c3836 guisp=NONE cterm=NONE gui=NONE
@@ -900,6 +904,10 @@ if get(g:, "gruvbox_plugin_hi_groups", 0)
   hi StartifySpecial ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifyHeader ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
   hi StartifyFooter ctermfg=187 ctermbg=NONE guifg=#d5c4a1 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi deniteSeelectedLine ctermfg=172 ctermbg=NONE guifg=#b57614 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+  hi deniteMatchedChar ctermfg=100 ctermbg=NONE guifg=#79740e guibg=NONE guisp=NONE cterm=NONE,bold gui=NONE,bold
+  hi deniteMatchedRange ctermfg=23 ctermbg=NONE guifg=#076678 guibg=NONE guisp=NONE cterm=NONE,underline gui=NONE,underline
+  hi deniteMode ctermfg=102 ctermbg=NONE guifg=#928374 guibg=NONE guisp=NONE cterm=NONE gui=NONE,italic
   hi SyntasticError ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#9d0006 cterm=NONE,underline gui=NONE,undercurl
   hi SyntasticWarning ctermfg=NONE ctermbg=NONE guifg=NONE guibg=NONE guisp=#b57614 cterm=NONE,underline gui=NONE,undercurl
   hi SyntasticErrorSign ctermfg=124 ctermbg=187 guifg=#9d0006 guibg=#ebdbb2 guisp=NONE cterm=NONE gui=NONE
@@ -1483,6 +1491,10 @@ finish
 " StartifySpecial                  bg2    none
 " StartifyHeader                   yellow none
 " StartifyFooter                   bg2    none
+" deniteSeelectedLine             yellow none
+" deniteMatchedChar               green  none    bold 
+" deniteMatchedRange              blue   none    underline
+" deniteMode                      grey   none    g=italic
 " SyntasticError                   none   none    t=underline g=undercurl s=red
 " SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
 " SyntasticErrorSign               red    bg1
@@ -2048,6 +2060,10 @@ finish
 " StartifySpecial                  bg2    none
 " StartifyHeader                   yellow none
 " StartifyFooter                   bg2    none
+" deniteSeelectedLine             yellow none
+" deniteMatchedChar               green  none    bold 
+" deniteMatchedRange              blue   none    underline
+" deniteMode                      grey   none    g=italic
 " SyntasticError                   none   none    t=underline g=undercurl s=red
 " SyntasticWarning                 none   none    t=underline g=undercurl s=yellow
 " SyntasticErrorSign               red    bg1
