@@ -374,7 +374,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | N              | Defx   | 新建文件                                     |
 | K              | Defx   | 新建文件夹                                   |
 | `<CR>`         | Defx   | 打开目录或打开文件                           |
-| l              | Defx   | 打开目录或打开文件                           |
+| `l`              | Defx   | 打开目录或打开文件                           |
 | dd             | Defx   | 删除                                         |
 | r              | Defx   | 重命名                                       |
 | .              | Defx   | 显示隐藏文件                                 |
