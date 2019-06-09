@@ -261,9 +261,9 @@ call echodoc#enable()
 let g:echodoc#type = "virtual"
 '''
 
-[[plugins]]
-repo = 'w0rp/ale'
-hook_add = 'source ~/.config/nvim/core/plugins/vim-ale.vim'
+# [[plugins]]
+# repo = 'w0rp/ale'
+# hook_add = 'source ~/.config/nvim/core/plugins/vim-ale.vim'
 
 [[plugins]]
 repo = 'othree/html5.vim'
