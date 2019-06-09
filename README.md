@@ -238,48 +238,54 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - 部分键位按照 emacs 键位
 - 键位的修改尽量不要改动太多默认的键位，默认的键位有时很有用也方便他人上手。
 
-| Keys        | Mode    | Description          |
-| ----------- | ------- | -------------------- |
-| Ctrl + w    | Insert  | 删除光标下整个单词   |
-| Ctrl + h    | Insert  | 删除映射 `BackSpace` |
-| Ctrl + d    | Insert  | 删除光标所在字符     |
-| Ctrl + u    | Insert  | 当前光标删除到行首   |
-| Ctrl + b    | Insert  | 向左移动             |
-| Ctrl + f    | Insert  | 向右移动             |
-| Ctrl + a    | Insert  | 移到行首             |
-| Ctrl + e    | Insert  | 移到行尾             |
-| Ctrl + p    | Command | 向上移动             |
-| Ctrl + b    | Command | 向左移动             |
-| Ctrl + f    | Command | 向右移动             |
-| Ctrl + a    | Command | 移动到行首           |
-| Ctrl + e    | Command | 移动到行尾           |
-| Ctrl + d    | Command | 删除光标所在字符     |
-| Ctrl + h    | Command | 删除映射 `BackSpace` |
-| Ctrl + S    | Insert  | 保存                 |
-| Ctrl + Q    | Insert  | 保存并退出           |
-| Ctrl + o    | Insert  | 生成新行             |
-| ] + b       | Normal  | 上一个 buffer        |
-| [ + b       | Normal  | 下一个 buffer        |
-| Ctrl + x    | Normal  | 删除当前 buffer      |
-| Y           | Normal  | 复制到行尾           |
-| j           | Normal  | gj                   |
-| k           | Normal  | gk                   |
-| j           | Visual  | gj                   |
-| k           | Visual  | gj                   |
-| -           | Visual  | 选择窗口             |
-| , + `Space` | Normal  | 删除尾部空格         |
-| [ + a       | Normal  | Ale 下一个错误       |
-| ] + a       | Normal  | Ale 上一个错误       |
-| [ + c       | Normal  | coc 下一个错误       |
-| ] + c       | Normal  | coc 上一个错误       |
-| ] + ]       | Normal  | 跳转上一个 go 函数   |
-| [ + [       | Normal  | 跳转下一个 go 函数   |
-| gc          | Normal  | caw.vim 快速注释     |
-| gcc         | Normal  | caw.vim 取消注释     |
-| ga          | Normal  | EasyAlign 快速对其   |
-| ga          | Visual  | EasyAlign 快速对其   |
-| v           | Visual  | vim-expand-region    |
-| V           | Visual  | vim-expand-region    |
+| Keys        | Mode    | Description                               |
+| ----------- | ------- | ----------------------------------------- |
+| Ctrl + w    | Insert  | 删除光标下整个单词                        |
+| Ctrl + h    | Insert  | 删除映射 `BackSpace`                      |
+| Ctrl + d    | Insert  | 删除光标所在字符                          |
+| Ctrl + u    | Insert  | 当前光标删除到行首                        |
+| Ctrl + b    | Insert  | 向左移动                                  |
+| Ctrl + f    | Insert  | 向右移动                                  |
+| Ctrl + a    | Insert  | 移到行首                                  |
+| Ctrl + e    | Insert  | 移到行尾                                  |
+| Ctrl + p    | Command | 向上移动                                  |
+| Ctrl + b    | Command | 向左移动                                  |
+| Ctrl + f    | Command | 向右移动                                  |
+| Ctrl + a    | Command | 移动到行首                                |
+| Ctrl + e    | Command | 移动到行尾                                |
+| Ctrl + d    | Command | 删除光标所在字符                          |
+| Ctrl + h    | Command | 删除映射 `BackSpace`                      |
+| Ctrl + S    | Insert  | 保存                                      |
+| Ctrl + Q    | Insert  | 保存并退出                                |
+| Ctrl + o    | Insert  | 生成新行                                  |
+| ] + b       | Normal  | 上一个 buffer                             |
+| [ + b       | Normal  | 下一个 buffer                             |
+| Ctrl + x    | Normal  | 删除当前 buffer                           |
+| Y           | Normal  | 复制到行尾                                |
+| j           | Normal  | gj                                        |
+| k           | Normal  | gk                                        |
+| j           | Visual  | gj                                        |
+| k           | Visual  | gj                                        |
+| -           | Visual  | 选择窗口                                  |
+| , + `Space` | Normal  | 删除尾部空格                              |
+| [ + a       | Normal  | Ale 下一个错误                            |
+| ] + a       | Normal  | Ale 上一个错误                            |
+| [ + c       | Normal  | coc 下一个错误                            |
+| ] + c       | Normal  | coc 上一个错误                            |
+| ] + ]       | Normal  | 跳转上一个 go 函数                        |
+| [ + [       | Normal  | 跳转下一个 go 函数                        |
+| gc          | Normal  | caw.vim 快速注释                          |
+| gcc         | Normal  | caw.vim 取消注释                          |
+| ga          | Normal  | EasyAlign 快速对其                        |
+| ga          | Visual  | EasyAlign 快速对其                        |
+| sa          | Normal  | 文本对象环绕增加 prefix                   |
+| sd          | Normal  | 文本对象环绕删除 prefix                   |
+| sr          | Normal  | 文本对象环绕修改 prefix                   |
+| saa         | Normal  | 文本对象环绕增加配合 textobj-multiblock-i |
+| sdd         | Normal  | 文本对象环绕删除配合 textobj-multiblock-a |
+| srr         | Normal  | 文本对象环绕修改配合 textobj-multiblock-a |
+| v           | Visual  | vim-expand-region                         |
+| V           | Visual  | vim-expand-region                         |
 
 - Window
 
