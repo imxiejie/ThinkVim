@@ -2,13 +2,13 @@
 
 <div align="center">
 <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png" width="500" height="400">
-</div>  
+</div>
 
-## 二次元赛高  
+## 二次元赛高
 
-| ACG                                                                         | 狂赌之渊      |
-| -------------------------------------------------------------------- | ---------------- |
-|<img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300">   | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png" width="480" height="300">     |
+| ACG                                                                                                              | 狂赌之渊                                                                                                       |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png" width="480" height="300"> |
 
 ## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md)
 
@@ -145,7 +145,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [junegunn/goyo.vim](https://github.com/junegunn/goyo.vim)                                    | 关灯写代码                              |
 | [junegunn/limelight](https://github.com/junegunn/limelight)                                  | 关灯写代码                              |
 | [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                                | 缩进线                                  |
-| [tpope/vim-surround](https://github.com/tpope/vim-surround)                                  | 符号成双成对                            |
 | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                                      | 重复上一次操作                          |
 | [sbdchd/neoformat](https://github.com/sbdchd/neoformat)                                      | 格式化插件                              |
 | [yuttie/comfortable-motion.vim](https://github.com/yonchu/yuttie/comfortable-motion.vim)     | 平滑滚动插件                            |
@@ -156,6 +155,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [junegunn/vim-emoji](https://github.com/junegunn/vim-emoji)                                  | emoji 补全                              |
 | [simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo)                          | 各种修改查看撤销                        |
 | [kana/vim-textobj-user](https://github.com/kana/vim-textobj-user)                            | 文本对象                                |
+| [kana/vim-operator-user](https://github.com/kana/vim-operator-user)                          | 定义自己的操作符                        |
+| [osyo-manga/vim-textobj-multiblock](https://github.com/osyo-manga/vim-textobj-multiblock)    | 处理括号对象                            |
+| [rhysd/vim-operator-surround](https://github.com/rhysd/vim-operator-surround)                | 文本对象环绕操作                        |
+| [rhysd/accelerated-jk](https://github.com/rhysd/accelerated-jk)                              | 加速 jk 移动                            |
 | [bps/vim-textobj-python](https://github.com/bps/vim-textobj-python)                          | pythontextobject                        |
 | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)                          | 多光标操作                              |
 | [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region)                    | visual 增强                             |
@@ -174,6 +177,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [fatih/vim-go](https://github.com/fatih/vim-go)                                              | go 开发必备插件                         |
 | [elzr/vim-json](https://github.com/elzr/vim-json)                                            | json 插件                               |
 | [cespare/vim-toml](https://github.com/cespare/vim-toml)                                      | toml 文件高亮插件                       |
+| [vim-scripts/xml.vim](https://github.com/vim-scripts/xml.vim)                                | xml 文件高亮插件                        |
 
 ## CoC Extensions
 
@@ -374,7 +378,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | N              | Defx   | 新建文件                                     |
 | K              | Defx   | 新建文件夹                                   |
 | `<CR>`         | Defx   | 打开目录或打开文件                           |
-| `l`              | Defx   | 打开目录或打开文件                           |
+| `l`            | Defx   | 打开目录或打开文件                           |
 | dd             | Defx   | 删除                                         |
 | r              | Defx   | 重命名                                       |
 | .              | Defx   | 显示隐藏文件                                 |

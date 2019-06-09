@@ -15,10 +15,6 @@ augroup MyAutoCmd
 
     autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 
-	autocmd BufNewFile,BufRead *.toml,Gopkg.lock,Cargo.lock,*/.cargo/config,*/.cargo/credentials,Pipfile setf tomlutocmd FileType yaml.docker-compose setlocal expandtab
-
-    autocmd BufNewFile,BufRead *.toml,Gopkg.lock,Cargo.lock,*/.cargo/config,*/.cargo/credentials,Pipfile setf toml
-
     " Go (Google)
     autocmd BufNewFile,BufRead *.go			setf go
 
