@@ -21,7 +21,11 @@
 - Fully customizable
 - Comfortable theme gruvbox9
 
+<<<<<<< HEAD
+
 ## Required Env
+
+> > > > > > > 845820370a604a7c8a576550ae3c5b3df843aa43
 
 - macos or linux
 - neovim >= 0.4.0（cause i used floatwindow,this feature support by neovim 0.4.0 above)
