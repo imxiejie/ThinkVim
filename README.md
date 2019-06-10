@@ -95,7 +95,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
 - **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
 
-## 结构
+## Structure
 
 - [after](~/.config/nvim/after)
   - [ftplugin](~/.config/nvim/after/ftplugin)
@@ -231,7 +231,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 ## Operate key
 
-- Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `~/core/nvim/plugins/allkey.vim`
+- Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `core/plugins/allkey.vim`
 - Insertkey like emacs
 - Note that some keymaps are missing in the lists ，I will take time to find it out and fix the lists
 
