@@ -10,6 +10,8 @@
 | ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png" width="480" height="300"> |
 
+## [中文](README-CN.md)
+
 ## Feature
 
 - Fatest StartupTime(40-60ms)
