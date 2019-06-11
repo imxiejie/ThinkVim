@@ -331,6 +331,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<Leader>` + fc             | Normal | fzf chage vim colorscheme     |
 | `<Leader>` + ff             | Normal | fzf find files                |
 | `<Leader>` + fr             | Normal | fzf rg search                 |
+| `<Leader>` + b              | Normal | fzf find buffer               |
 | `<Leader>` + fw             | Normal | fzf rg search the cursor word |
 | `<Leader>` + fgc            | Normal | fzf gitcommits                |
 | `<Leader>` + fbc            | Normal | fzf gitbcommits               |
@@ -350,7 +351,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 | Keys                 | Mode   | Description             |
 | -------------------- | ------ | ----------------------- |
-| `<LocalLeader>` + b  | Normal | fzf find buffer         |
 | `<LocalLeader>` + t  | Normal | Open Tagbar             |
 | `<LocalLeader>` + r  | Normal | QuickRun                |
 | `<LocalLeader>` + v  | Normal | Open Vista              |
