@@ -43,8 +43,8 @@ let s:menus.todoapp.command_candidates = [
 
 let s:menus.config = { 'description': '🔧 Zsh Tmux Configuration' }
 let s:menus.config.file_candidates = [
-  \   ['🐠 Zsh Configurationfile            🔸', '~/.zshrc '],
-  \   ['🐠 Tmux Configurationfile           🔸', '~/.tmux.conf '],
+  \   ['🐠 Zsh Configurationfile            🔸', '~/.zshrc'],
+  \   ['🐠 Tmux Configurationfile           🔸', '~/.tmux.conf'],
   \ ]
 
 let s:menus.thinkvim = {'description': '💎 ThinkVim Configuration files'}
