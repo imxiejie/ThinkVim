@@ -56,7 +56,8 @@ function! LightlineLineinfo() abort
   \      &filetype ==? 'vista_kind'       ? ' ' :
   \      &filetype =~? '\v^mundo(diff)?$' ? ' ' :
   \      s:lightline_is_lean() || s:lightline_is_plain() ? ' '  :
-  \      printf('%d:%d ☰ %d%%', line('.'), col('.'), 100*line('.')/line('$'))
+  \      printf('☰ %d:%d %d%%', line('.'), col('.'), 100*line('.')/line('$'))
+
 endfunction
 
 function! LightlineMode() abort
