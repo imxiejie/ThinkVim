@@ -454,7 +454,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 ## Feedback
 
-- 如果你遇到了麻烦可以提 issue 或者 [Giiter](https://gitter.im/thinkvim/community)
+- 如果你遇到了麻烦可以提 issue 或者 [Gitter](https://gitter.im/thinkvim/community)
 
 ## 鸣谢
 
