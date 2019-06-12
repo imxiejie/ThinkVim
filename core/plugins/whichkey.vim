@@ -21,8 +21,9 @@ let g:which_key_map = {
       \ 'G' : 'Goyo' ,
       \ 'f' : {
             \ 'name' : '+FzfCommand',
+            \ 'b'    : 'Bufferlist',
             \ 'f' : 'FindFile',
-            \ 'r' : 'RgSearch',
+            \ 'r' : 'RgSearch',            
             \ 'c' : 'ColorChange',
             \ 'w' : 'SearchExpendWord',
             \ },
@@ -72,7 +73,6 @@ let g:which_key_map = {
 
 let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
-      \ 'b'    : 'Bufferlist',
       \ 't'    : 'Tagbar',
       \ 'v'    : 'Vista',
       \ 'r'    : 'QuickRun',
