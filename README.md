@@ -52,7 +52,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - [More about Coc](https://github.com/neoclide/coc.nvim)
 - The list is the lsp which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-
+- ThinkVim support javascript typescript python.you dont need to install js ts python server.
 - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
 - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
