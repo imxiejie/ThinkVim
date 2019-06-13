@@ -21,7 +21,9 @@ let g:gruvbox_transp_bg = 1
 "colorscheme  solarized8
 colorscheme  gruvbox9_hard
 
+" Vim Colors
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
+hi VertSplit  ctermfg=Black  guifg=Black
 "hi SignColumn ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 
 "Pmenu Colors
