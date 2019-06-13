@@ -2,10 +2,11 @@ let s:menus = {}
 
 let s:menus.dein = { 'description': '⚔️  Plugin management' }
 let s:menus.dein.command_candidates = [
-  \   ['🐬 Dein: Plugins update 🔸', 'call dein#update()'],
-  \   ['🐬 Dein: Plugins List   🔸', 'Denite dein'],
-  \   ['🐬 Dein: Update log     🔸', 'echo dein#get_updates_log()'],
-  \   ['🐬 Dein: Log            🔸', 'echo dein#get_log()'],
+  \   ['🐬 Dein: Plugins update       🔸', 'call dein#update()'],
+  \   ['🐬 Dein: Plugins List         🔸', 'Denite dein'],
+  \   ['🐬 Dein: RecacheRuntimePath   🔸', 'call dein#recache_runtimepath()'],
+  \   ['🐬 Dein: Update log           🔸', 'echo dein#get_updates_log()'],
+  \   ['🐬 Dein: Log                  🔸', 'echo dein#get_log()'],
   \ ]
 
 let s:menus.project = { 'description': '🛠  Project & Structure' }

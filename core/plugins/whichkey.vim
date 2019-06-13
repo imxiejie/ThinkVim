@@ -23,7 +23,7 @@ let g:which_key_map = {
             \ 'name' : '+FzfCommand',
             \ 'b'    : 'Bufferlist',
             \ 'f' : 'FindFile',
-            \ 'r' : 'RgSearch',            
+            \ 'r' : 'RgSearch',
             \ 'c' : 'ColorChange',
             \ 'w' : 'SearchExpendWord',
             \ },
