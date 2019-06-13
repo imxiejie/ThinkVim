@@ -312,7 +312,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 | Keys                        | Mode   | Description                   |
 | --------------------------- | ------ | ----------------------------- |
-| `<Leader>` + number           | Normal | number[0-9] choose buffer     |
+| `<Leader>` + number         | Normal | number[0-9] choose buffer     |
 | `<Leader>` + ca             | Normal | CocDiagnostics                |
 | `<Leader>` + cc             | Normal | CocCommands                   |
 | `<Leader>` + ce             | Normal | CocExtensions                 |
