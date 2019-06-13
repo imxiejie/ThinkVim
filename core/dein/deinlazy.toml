@@ -205,6 +205,13 @@ repo = 'kristijanhusak/defx-icons'
 on_source = 'defx.nvim'
 
 [[plugins]]
+repo = 'airblade/vim-rooter'
+on_path='.*'
+hook_souce = '''
+let g:rooter_patterns = ['.root', 'package.json', '.git/','go.mod']
+'''
+
+[[plugins]]
 repo = 'airblade/vim-gitgutter'
 #on_path = ".*"
 hook_source='''
