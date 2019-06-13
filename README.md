@@ -164,6 +164,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)                                      | Dark powered file explorer implementation           |
 | [kristijanhusak/defx-icons](https://github.com/https://github.com/kristijanhusak/defx-icons) | Filetype icons for Defx                             |
 | [airblade/vim-gitgutter](https://github.com/airblade/vim-gitgutter)                          | Git status implementation for Defx                  |
+| [airblade/vim-rooter](https://github.com/airblade/vim-rooter)                                | Changes Vim working directory to project root       |
 | [majutsushi/tagbar](https://github.com/majutsushi/tagbar)                                    | Displays tags in a window, ordered by scope         |
 | [liuchengxu/vista.vim](https://github.com/liuchengxu/vista.vim)                              | Viewer & Finder for LSP symbols and tags            |
 | [mattn/emmet-vim](https://github.com/mattn/emmet-vim)                                        | coc-emmet instead                                   |
