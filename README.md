@@ -241,7 +241,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `core/plugins/allkey.vim`
 - Insertkey like emacs
-- Note that some keymaps are missing in the lists ，I will take time to find it out and fix the lists
+- if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but  in `allkey.vim` ,you can create
+  a isse. Welcome PR.
 
 | Keys        | Mode    | Description                             |
 | ----------- | ------- | --------------------------------------- |
