@@ -271,7 +271,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | k           | Normal  | gk                                      |
 | j           | Visual  | gj                                      |
 | k           | Visual  | gj                                      |
-| -           | Visual  | ChooseWin                               |
+| -           | Noraml  | ChooseWin                               |
 | , + `Space` | Normal  | Delete trailing spaces                  |
 | [ + a       | Normal  | Ale next                                |
 | ] + a       | Normal  | Ale pre                                 |
