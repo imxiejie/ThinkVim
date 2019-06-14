@@ -444,8 +444,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## Backers
 Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!  
 
-<a href="https://github.com/taigacute" target="_blank" title="taigacute">
-  <img src="https://github.com/dewoller?size=64" width="64" height="64" alt="taigacute">
+<a href="https://github.com/dewoller" target="_blank" title="dewoller">
+  <img src="https://github.com/dewoller.png?size=64" width="64" height="64" alt="dewoller">
 </a>
 
 ## Thanks
