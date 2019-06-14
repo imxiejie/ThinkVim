@@ -440,6 +440,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | vaf  | Go     | textobject  |
 | aF   | Python | textobject  |
 | iF   | Python | textobject  |
+## Backers
+Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!
 
 ## Thanks
 
