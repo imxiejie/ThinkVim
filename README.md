@@ -14,14 +14,14 @@
 
 ## Feature
 
-- Fatest StartupTime(40-60ms)
-- Modular Plugin Config
-- Easy to use Easy to hack
-- 95% plugins lazyload with dein
-- Centerd on Coc.nvim, Denite auxiliary
-- Autocompletion by lsp which coc.nvim support
-- Fully customizable
-- Comfortable theme gruvbox9
+- 🚀Fatest StartupTime(Plugins Total:61 40-60ms)
+- 💎Modular Plugin Config
+- ⚒ Easy to use Easy to hack
+- 🌟95% plugins lazyload with dein
+- ⚡️Centerd on Coc.nvim, Denite auxiliary
+- 🎱Autocompletion by lsp which coc.nvim support
+- ⚔️ Fully customizable
+- 🌈Comfortable theme gruvbox9
 
 ## Required Env
 
@@ -47,6 +47,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
 **_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
+**_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 
