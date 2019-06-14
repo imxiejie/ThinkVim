@@ -372,11 +372,34 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<LocalLeader>` + gl | Normal | Denite show all git log |
 | `<LocalLeader>` + gh | Normal | Denite show git branch  |
 
-- Denite.Menu
+- Denite
 
-| Keys                | Mode   | Description |
-| ------------------- | ------ | ----------- |
-| `<LocalLeader>` + m | Normal | Denite Menu |
+| Keys                | Mode                 | Description        |
+| ------------------- | -------------------- | ------------------ |
+| `<LocalLeader>` + m | Normal               | Denite Menu        |
+| <CR>                | Denite               | Doaction           |
+| i                   | Denite               | Open filter buffer |
+| d                   | Denite               | Delete             |
+| p                   | Denite               | Preview            |
+| st                  | Denite               | tabopen            |
+| sg                  | Denite               | Vsplit             |
+| sv                  | Denite               | Split              |
+| `'`                 | Denite               | QuickMove          |
+| q                   | Denite               | Quit               |
+| r                   | Denite               | RedRaw             |
+| yy                  | Denite               | Yank               |
+| `<Esc>`             | Denite               | Quit               |
+| `<C-u>`             | Denite               | Restore Source     |
+| `<C-f>`             | Denite               | call Defx          |
+| `<C-x>`             | Denite               | Choose Action      |
+| `<Space>`           | Denite               | Toggle Select      |
+| `<Esc>`             | Denite Filter        | Quit               |
+| q                   | Denite Filter        | Quit               |
+| `<C-c>`             | Denite Filter        | Quit filter        |
+| `<kk>`              | Denite Filter insert | move window        |
+| `<kk>`              | Denite Filter normal | move window        |
+| `<jj>`              | Denite Filter insert | move window        |
+| `<jj>`              | Denite Filter normal | move window        |
 
 - Defx
 
