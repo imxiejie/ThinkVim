@@ -172,6 +172,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [w0rp/ale](https://github.com/w0rp/ale)                                                      | Check syntax in Vim asynchronously and fix files    |
 | [othree/html5.vim](https://github.com/othree/html5.vim)                                      | HTML5 omnicomplete and syntax Worked with coc-html  |
 | [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)                      | js jsx                                              |
+| [vim-python/python-syntax](https://github.com/vim-python/python-syntax)                      | Enhanced version of the original Python syntax      |
+| [Vimjas/vim-python-pep8-index](https://github.com/Vimjas/vim-python-pep8-index)              | A nicer Python indentation style                    |
+| [vim-scripts/python_match.vx](https://github.com/vim-scripts/python_match)                   | Extend the % motion for Python files                |
+| [tmhedberg/SimpylFold](https://github.com/tmhedberg/SimpylFold)                              | No-BS Python code folding                           |
 | [fatih/vim-go](https://github.com/fatih/vim-go)                                              | go development                                      |
 | [elzr/vim-json](https://github.com/elzr/vim-json)                                            | json                                                |
 | [cespare/vim-toml](https://github.com/cespare/vim-toml)                                      | toml                                                |

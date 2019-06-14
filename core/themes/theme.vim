@@ -13,37 +13,33 @@ set background=dark
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_plugin_hi_groups = 1
 let g:gruvbox_transp_bg = 1
-"colorscheme hybrid_reverse
+" colorscheme hybrid_reverse
 "colorscheme space_vim_theme
-"colorscheme PaperColor
+" colorscheme PaperColor
 "colorscheme gruvbox8
 "colorscheme dracula
 "colorscheme  solarized8
 colorscheme  gruvbox9_hard
 
 " Vim Colors
+" ---------------------------------------------------------
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 hi VertSplit  ctermfg=Black  guifg=Black
+"hi Normal guibg=NONE ctermbg=NONE
+"hi LineNr ctermbg=NONE guibg=NONE
 "hi SignColumn ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+highlight! link pythonSpaceError  NONE
+highlight! link pythonIndentError NONE
 
 "Pmenu Colors
 " ---------------------------------------------------------
-"hi PMenu guifg=#875fd7 guibg=#262626 guisp=#262626 gui=NONE ctermfg=98 ctermbg=235 cterm=NONE
-"hi PMenuSel guifg=#d0d0d0 guibg=#875fd7 guisp=#875fd7 gui=NONE ctermfg=252 ctermbg=98 cterm=NONE
 hi PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 cterm=NONE gui=NONE
-"hi PMenuSbar guifg=#e2e4e5 guibg=#262626 guisp=#262626 gui=NONE ctermfg=254 ctermbg=235 cterm=NONE
-"hi PMenuThumb guifg=#875fd7 guibg=#875fd7 guisp=#875fd7 gui=NONE ctermfg=98 ctermbg=98 cterm=NONE
-"hi Normal guibg=NONE ctermbg=NONE
-"hi LineNr ctermbg=NONE guibg=NONE
 
 "coc highlight setting
 " ---------------------------------------------------------
 hi default CocHighlightText  guibg=#725972 ctermbg=96
 hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
 
-"Plugin:Neomake
-" ---------------------------------------------------------
-"hi NeomakeVirtualtextError ctermfg=124 guifg=#af0000 guibg=NONE ctermbg=NONE
 
 "GitGutter Coc-git Highlight
 " ---------------------------------------------------------
@@ -62,27 +58,6 @@ highlight def link Defx_filename_3_Unknown Comment
 highlight def link Defx_filename_3_Renamed Title
 highlight def link Defx_filename_3_Unmerged Label
 " highlight Defx_git_Deleted   ctermfg=13 guifg=#b294bb
-
-
-" Plugin: vim-choosewin {{{
-" ---------------------------------------------------------
-let g:choosewin_label = 'SDFJKLZXCV'
-let g:choosewin_overlay_enable = 1
-let g:choosewin_statusline_replace = 1
-let g:choosewin_overlay_clear_multibyte = 0
-let g:choosewin_blink_on_land = 0
-
-let g:choosewin_color_label = {
-	\ 'cterm': [ 236, 2 ], 'gui': [ '#555555', '#000000' ] }
-let g:choosewin_color_label_current = {
-	\ 'cterm': [ 234, 220 ], 'gui': [ '#333333', '#000000' ] }
-let g:choosewin_color_other = {
-	\ 'cterm': [ 235, 235 ], 'gui': [ '#333333' ] }
-let g:choosewin_color_overlay = {
-	\ 'cterm': [ 2, 10 ], 'gui': [ '#88A2A4' ] }
-let g:choosewin_color_overlay_current = {
-	\ 'cterm': [ 72, 64 ], 'gui': [ '#7BB292' ] }
-" }}}
 
 
 "GetColorSynatxGroup
