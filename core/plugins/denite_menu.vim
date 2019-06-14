@@ -55,6 +55,7 @@ let s:menus.thinkvim.file_candidates = [
   \   ['🐠 General            settings: general.vim         🔹', $VIMPATH.'/core/general.vim'],
   \   ['🐠 DeinConfig         settings: deinrc.vim          🔹', $VIMPATH.'/core/deinrc.vim'],
   \   ['🐠 FileTypes          settings: filetype.vim        🔹', $VIMPATH.'/core/filetype.vim'],
+  \   ['🐠 ColorScheme        settings: theme.vim           🔹', $VIMPATH.'/core/themes/theme.vim'],
   \   ['🐠 Installed       LoadPlugins: dein.toml           🔹', $VIMPATH.'/core/dein/dein.toml'],
   \   ['🐠 Installed   LazyLoadPlugins: deinlazy.toml       🔹', $VIMPATH.'/core/dein/deinlazy.toml'],
   \   ['🐠 Global   Key    Vimmappings: mappings.vim        🔹', $VIMPATH.'/core/mappings.vim'],
