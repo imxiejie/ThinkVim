@@ -14,7 +14,7 @@
 
 ## Feature
 
-- 🚀Fatest StartupTime(Plugins Total:62 40-60ms)
+- 🚀Fatest StartupTime(Plugins Total:63 40-60ms)
 - 💎Modular Plugin Config
 - ⚒ Easy to use Easy to hack
 - 🌟95% plugins lazyload with dein
@@ -46,7 +46,8 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
-**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
+**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.  
+
 **_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
@@ -240,7 +241,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `core/plugins/allkey.vim`
 - Insertkey like emacs
-- Note that some keymaps are missing in the lists ，I will take time to find it out and fix the lists
+- if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but  in `allkey.vim` ,you can create
+  a isse. Welcome PR.
 
 | Keys        | Mode    | Description                             |
 | ----------- | ------- | --------------------------------------- |
@@ -270,7 +272,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | k           | Normal  | gk                                      |
 | j           | Visual  | gj                                      |
 | k           | Visual  | gj                                      |
-| -           | Visual  | ChooseWin                               |
+| -           | Noraml  | ChooseWin                               |
 | , + `Space` | Normal  | Delete trailing spaces                  |
 | [ + a       | Normal  | Ale next                                |
 | ] + a       | Normal  | Ale pre                                 |
@@ -462,6 +464,12 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | vaf  | Go     | textobject  |
 | aF   | Python | textobject  |
 | iF   | Python | textobject  |
+## Backers
+Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!  
+
+<a href="https://github.com/dewoller" target="_blank" title="dewoller">
+  <img src="https://github.com/dewoller.png?size=64" width="64" height="64" alt="dewoller">
+</a>
 
 ## Thanks
 
