@@ -46,7 +46,8 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
-**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
+**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.  
+
 **_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
 ## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
