@@ -46,7 +46,7 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
-**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.  
+**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
 
 **_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
@@ -241,7 +241,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `core/plugins/allkey.vim`
 - Insertkey like emacs
-- if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but  in `allkey.vim` ,you can create
+- if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but in `allkey.vim` ,you can create
   a isse. Welcome PR.
 
 | Keys        | Mode    | Description                             |
@@ -319,42 +319,43 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - LeaderKey
 
-| Keys                        | Mode   | Description                   |
-| --------------------------- | ------ | ----------------------------- |
-| `<Leader>` + number         | Normal | number[0-9] choose buffer     |
-| `<Leader>` + ca             | Normal | CocDiagnostics                |
-| `<Leader>` + cc             | Normal | CocCommands                   |
-| `<Leader>` + ce             | Normal | CocExtensions                 |
-| `<Leader>` + cj             | Normal | Cocnext                       |
-| `<Leader>` + ck             | Normal | CocPrev                       |
-| `<Leader>` + co             | Normal | CocOutline                    |
-| `<Leader>` + cr             | Normal | CocResume                     |
-| `<Leader>` + cs             | Normal | CocIsymbols                   |
-| `<Leader>` + G              | Normal | open Goyo                     |
-| `<Leader>` + m              | Normal | open mundo                    |
-| `<Leader>` + w              | Normal | save file                     |
-| `<Leader>` + -              | Normal | ChooseWin                     |
-| `<Leader>` + s              | Normal | open Startify                 |
-| `<Leader>` + d              | Normal | open Dash                     |
-| `<Leader>` + cf             | Normal | coc Format                    |
-| `<Leader>` + fc             | Normal | fzf chage vim colorscheme     |
-| `<Leader>` + ff             | Normal | fzf find files                |
-| `<Leader>` + fr             | Normal | fzf rg search                 |
-| `<Leader>` + b              | Normal | fzf find buffer               |
-| `<Leader>` + fw             | Normal | fzf rg search the cursor word |
-| `<Leader>` + fgc            | Normal | fzf gitcommits                |
-| `<Leader>` + fbc            | Normal | fzf gitbcommits               |
-| `<Leader>` + `<Leader>` + w | Normal | Easymotion jump to donw       |
-| `<Leader>` + `<Leader>` + b | Normal | Easymotion jump to up         |
-| `<Leader>` + `<Leader>` + f | Normal | Easymotion search for jump    |
-| `<Leader>` + gr             | Normal | vim-go GoRename               |
-| `<Leader>` + goi            | Normal | vim-go GoInfo                 |
-| `<Leader>` + god            | Normal | vim-go GoDoc                  |
-| `<Leader>` + gor            | Normal | vim-go GoRun                  |
-| `<Leader>` + gob            | Normal | vim-go GoBuild                |
-| `<Leader>` + got            | Normal | vim-go GoTest                 |
-| `<Leader>` + goc            | Normal | vim-go GoCoverage             |
-| `<Leader>` + gov            | Normal | vim-go GoDef                  |
+| Keys                        | Mode   | Description                           |
+| --------------------------- | ------ | ------------------------------------- |
+| `<Leader>` + number         | Normal | number[0-9] choose buffer             |
+| `<Leader>` + ca             | Normal | CocDiagnostics                        |
+| `<Leader>` + cc             | Normal | CocCommands                           |
+| `<Leader>` + ce             | Normal | CocExtensions                         |
+| `<Leader>` + cj             | Normal | Cocnext                               |
+| `<Leader>` + ck             | Normal | CocPrev                               |
+| `<Leader>` + co             | Normal | CocOutline                            |
+| `<Leader>` + cr             | Normal | CocResume                             |
+| `<Leader>` + cs             | Normal | CocIsymbols                           |
+| `<Leader>` + G              | Normal | open Goyo                             |
+| `<Leader>` + m              | Normal | open mundo                            |
+| `<Leader>` + w              | Normal | save file                             |
+| `<Leader>` + -              | Normal | ChooseWin                             |
+| `<Leader>` + s              | Normal | open Startify                         |
+| `<Leader>` + d              | Normal | open Dash                             |
+| `<Leader>` + p              | Normal | Edit the file which in plugins folder |
+| `<Leader>` + cf             | Normal | coc Format                            |
+| `<Leader>` + fc             | Normal | fzf chage vim colorscheme             |
+| `<Leader>` + ff             | Normal | fzf find files                        |
+| `<Leader>` + fr             | Normal | fzf rg search                         |
+| `<Leader>` + b              | Normal | fzf find buffer                       |
+| `<Leader>` + fw             | Normal | fzf rg search the cursor word         |
+| `<Leader>` + fgc            | Normal | fzf gitcommits                        |
+| `<Leader>` + fbc            | Normal | fzf gitbcommits                       |
+| `<Leader>` + `<Leader>` + w | Normal | Easymotion jump to donw               |
+| `<Leader>` + `<Leader>` + b | Normal | Easymotion jump to up                 |
+| `<Leader>` + `<Leader>` + f | Normal | Easymotion search for jump            |
+| `<Leader>` + gr             | Normal | vim-go GoRename                       |
+| `<Leader>` + goi            | Normal | vim-go GoInfo                         |
+| `<Leader>` + god            | Normal | vim-go GoDoc                          |
+| `<Leader>` + gor            | Normal | vim-go GoRun                          |
+| `<Leader>` + gob            | Normal | vim-go GoBuild                        |
+| `<Leader>` + got            | Normal | vim-go GoTest                         |
+| `<Leader>` + goc            | Normal | vim-go GoCoverage                     |
+| `<Leader>` + gov            | Normal | vim-go GoDef                          |
 
 - LocalLeaderKey
 
@@ -464,8 +465,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | vaf  | Go     | textobject  |
 | aF   | Python | textobject  |
 | iF   | Python | textobject  |
+
 ## Backers
-Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!  
+
+Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!
 
 <a href="https://github.com/dewoller" target="_blank" title="dewoller">
   <img src="https://github.com/dewoller.png?size=64" width="64" height="64" alt="dewoller">
