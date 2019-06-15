@@ -98,3 +98,17 @@ if dein#load_state(s:path)
        call dein#install()
     endif
 endif
+
+let s:plugin_setting_dirname = expand('$VIMPATH/core/plugins/')
+
+function! s:edit_plugin_setting(plugin_name)
+  if !isdirectory(s:plugin_setting_dirname)
+    call mkdir(s:plugin_setting_dirname)
+  endif
+  execute 'edit' s:plugin_setting_dirname . '/' . a:plugin_name . '.vim'
+endfunction
+
+command! -nargs=1
+  \ EditPluginSetting
+  \ call s:edit_plugin_setting(<q-args>)
+
