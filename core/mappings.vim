@@ -2,7 +2,7 @@
 inoremap <C-w> <C-[>diwa
 inoremap <C-h> <BS>
 inoremap <C-d> <Del>
-inoremap <C-k>  <ESC>d$
+inoremap <C-k>  <ESC>d$a
 inoremap <C-u> <C-G>u<C-U>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
