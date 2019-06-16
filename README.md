@@ -206,7 +206,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [coc-git](https://github.com/neoclide/coc-git)             | git extension                                  |
 | [coc-post](https://github.com/iamcco/coc-post)             | easy to use like postman                       |
 
-## Custom
+## Custom ‼️
 
 - if you need some plugins which not in Thinkvim ,you can add them into the `local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
 - i think split the user plugins and thinkvim plugins in two files is good. this way cant break the thinkvim and easy to use.if you dont like `local_plugins.yaml` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local_plugins.yaml` unless you have vimscript skill and you grasp this config
