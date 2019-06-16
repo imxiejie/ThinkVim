@@ -208,8 +208,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 ## Custom ‼️
 
-- if you need some plugins which not in Thinkvim ,you can add them into the `local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
-- i think split the user plugins and thinkvim plugins in two files is good. this way cant break the thinkvim and easy to use.if you dont like `local_plugins.yaml` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local_plugins.yaml` unless you have vimscript skill and you grasp this config
+- if you need some plugins which not in Thinkvim ,you can add them into the `local/local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
+- i think split the user plugins and thinkvim plugins in two files is good. this way cant break the thinkvim and easy to use.if you dont like `local` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local` unless you have vimscript skill and you grasp this config
 - if plugins config very long you can touch a file which named as plugin name in plugins folder
 
 ## ColorScheme
