@@ -15,6 +15,8 @@ augroup MyAutoCmd
 
     autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 
+     autocmd FileType json syntax match Comment +\/\/.\+$+
+
     " Go (Google)
     autocmd FileType go let b:coc_pairs_disabled = ['<']
 
