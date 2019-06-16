@@ -10,7 +10,8 @@ let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 
 let $CACHE = expand('~/.cache')
 let s:path = expand('$CACHE/dein')
-let s:plugins_path = expand('$VIMPATH/core/plugins.yaml')
+let s:plugins_path = expand('$VIMPATH/core/dein/plugins.yaml')
+let s:user_plugins_path = expand('$VIMPATH/core/dein/local_plugins.yaml')
 
 function! s:dein_check_ruby() abort
 	call system("ruby -e 'require \"json\"; require \"yaml\"'")
@@ -78,11 +79,24 @@ function! s:source_file(path, ...) abort
 	endtry
 endfunction
 
+function! s:check_file_notnull(filename)abort
+       let  content = readfile(a:filename)
+       if empty(content)
+           return 0
+       endif
+       return 1
+endfunction
+
 
 if dein#load_state(s:path)
      call dein#begin(s:path, [expand('<sfile>'), s:plugins_path])
        try
             call s:dein_load_yaml(s:plugins_path)
+                if filereadable(s:user_plugins_path)
+		            if s:check_file_notnull(s:user_plugins_path)
+	                  call s:dein_load_yaml(s:user_plugins_path)
+	                endif
+	            endif
         catch /.*/
             echoerr v:exception
             echomsg 'Error loading config/plugins.yaml...'
