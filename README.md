@@ -107,8 +107,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
     - [colorscheme](~/.config/nvim/after/autoload/lightline/colorscheme) - lightline colorscheme
 - [core/](~/.config/nvim/rc) - core config file
   - [dein](~/.config/nvim/rc/dein) - _**Plugins list!**_
-    - [dein.toml](~/.config/nvim/rc/dein/dein.toml) - Normal Load Plugins
-    - [deinlazy.toml](~/.config/nvim/rc/dein/deinlazy.toml) - LazyLoad Plugins
+    - [plugins.yaml](~/.config/nvim/rc/dein/plugins.yaml) - ThinkVim plugins
+    - [local_plugins.yaml](~/.config/nvim/rc/dein/local_plugins.yaml) - your plugins
   - [plugins](~/.config/nvim/rc/plugins) - _**Plugins Config!**_
   - [init.vim](~/.config/nvim/rc/init.vim) - `runtimepath`
   - [dein.vim](~/.config/nvim/rc/dein.vim) - Dein Config
@@ -205,6 +205,12 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [coc-highlight](https://github.com/neoclide/coc-highlight) | Highlight the cursors word, Show the css color |
 | [coc-git](https://github.com/neoclide/coc-git)             | git extension                                  |
 | [coc-post](https://github.com/iamcco/coc-post)             | easy to use like postman                       |
+
+## Custom
+
+- if you need some plugins which not in Thinkvim ,you can add them into the `local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
+- i think split the user plugins and thinkvim plugins in two files is good. this way cant break the thinkvim and easy to use.
+- if plugins config very long you can touch a file which named as plugin name in plugins folder
 
 ## ColorScheme
 
