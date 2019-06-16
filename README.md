@@ -108,7 +108,9 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [core/](~/.config/nvim/rc) - core config file
   - [dein](~/.config/nvim/rc/dein) - _**Plugins list!**_
     - [plugins.yaml](~/.config/nvim/rc/dein/plugins.yaml) - ThinkVim plugins
-    - [local_plugins.yaml](~/.config/nvim/rc/dein/local_plugins.yaml) - your plugins
+  - [local](/local) - your custom settings
+    - [local_plugins.yaml](/local/local_plugins.yaml) - your plugins
+    - [local_settings.vim](/local/local_settings.vim) - your vim settings
   - [plugins](~/.config/nvim/rc/plugins) - _**Plugins Config!**_
   - [init.vim](~/.config/nvim/rc/init.vim) - `runtimepath`
   - [dein.vim](~/.config/nvim/rc/dein.vim) - Dein Config
@@ -209,8 +211,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## Custom ‼️
 
 - if you need some plugins which not in Thinkvim ,you can add them into the `local/local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
-- i think split the user plugins and thinkvim plugins in two files is good. this way cant break the thinkvim and easy to use.if you dont like `local` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local` unless you have vimscript skill and you grasp this config
-- if plugins config very long you can touch a file which named as plugin name in plugins folder
+- i think split the user plugins and thinkvim plugins in two files looks like good. this way cant break the thinkvim and easy to use.if you dont like `local` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local` unless you have vimscript skill and you grasp this config
 
 ## ColorScheme
 
