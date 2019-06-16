@@ -30,6 +30,7 @@ let g:which_key_map = {
       \ 'm' : 'OpenMundo' ,
       \ 'w' : 'Save',
       \ 's' : 'Startify',
+      \ 'p' : 'EditPluginsConfig',
       \ 'SPC' : {
             \ 'name' : '+Easymotion',
             \ 'w' : 'Easymotion-w',
