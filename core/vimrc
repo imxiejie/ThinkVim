@@ -4,6 +4,7 @@ endif
 
 let $VIMPATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 let $VARPATH = expand(($XDG_CACHE_HOME ? $XDG_CACHE_HOME : '~/.cache').'/vim')
+let s:user_settings_path = expand('$VIMPATH/core/local/local_settings.vim')
 
 " Constants
 let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
@@ -55,6 +56,33 @@ call s:source_rc('filetype.vim')
 call s:source_rc('mappings.vim')
 call s:source_rc('/themes/theme.vim')
 "---------------------------------------------------------------------------
+if s:is_sudo
+	set noswapfile
+	set nobackup
+	set nowritebackup
+	set noundofile
+	if has('nvim')
+		set shada="NONE"
+	else
+		set viminfo="NONE"
+	endif
+endif
+
+
+function! s:check_custom_settings(filename)abort
+       let  content = readfile(a:filename)
+       if empty(content)
+           return 0
+       endif
+       return 1
+endfunction
+
+" Load user custom local settings
+if filereadable(s:user_settings_path)
+	if s:check_custom_settings(s:user_settings_path)
+		call s:source_file('/local/local_settings.vim')
+	endif
+endif
 
 set secure
 

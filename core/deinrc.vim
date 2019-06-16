@@ -11,7 +11,7 @@ let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 let $CACHE = expand('~/.cache')
 let s:path = expand('$CACHE/dein')
 let s:plugins_path = expand('$VIMPATH/core/dein/plugins.yaml')
-let s:user_plugins_path = expand('$VIMPATH/core/dein/local_plugins.yaml')
+let s:user_plugins_path = expand('$VIMPATH/core/local/local_plugins.yaml')
 
 function! s:dein_check_ruby() abort
 	call system("ruby -e 'require \"json\"; require \"yaml\"'")

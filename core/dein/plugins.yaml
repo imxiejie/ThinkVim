@@ -264,8 +264,9 @@
         call echodoc#enable()
         let g:echodoc#type = "virtual"
 
-- repo: w0rp/ale
-  hook_add: source ~/.config/nvim/core/plugins/vim-ale.vim
+# - repo: w0rp/ale
+#   hook_add: source ~/.config/nvim/core/plugins/vim-ale.vim
+
 # }}}
 
 # TextObjectOperator{{{
