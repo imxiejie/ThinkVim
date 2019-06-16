@@ -48,6 +48,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 **_2._** 你可以在[B 站查看安装和使用的系列教程](https://space.bilibili.com/321783076)
 
+- 当看到 vim 的 commandline 出现了 coc extensions installed success ，恭喜你安装就成功了
+
 **_Tmux Zsh_** 如果你也喜欢图上的 tmux 状态栏和 zsh 主题你可以在我的[dotfile 中找到](https://github.com/taigacute/dotfiles/blob/master/.tmux.conf)，主题使用的是 powerlevel10k 异步运行主题。摆脱终端操作 git 命令很慢的困扰
 **_VimTheme_** [gruvbox9](https://github.com/taigacute/gruvbox9)
 
@@ -121,6 +123,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [plugin](~/.config/nvim/plugin) - 一些小功能插件
 
 ## LoadPlugins
+
+- 插件列表以英文为准，很多插件中文上没添加，太麻烦了，欢迎 PR 补充
 
 | Name                                                                                      | Description      |
 | ----------------------------------------------------------------------------------------- | ---------------- |
@@ -201,6 +205,10 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [coc-highlight](https://github.com/neoclide/coc-highlight) | 高亮，支持显示 css 颜色代码 |
 | [coc-git](https://github.com/neoclide/coc-git)             | git 扩展                    |
 | [coc-post](https://github.com/iamcco/coc-post)             | 类似 postman                |
+
+## 自定义
+
+- 不在使用 toml 文件。使用 yaml 文件管理插件。添加了 local_plugins.yaml 用来安装一些你自己需要的插件，和 thinkvim 的分开。如果不喜欢可以删除 local_plugins.yaml 没什么影响。不过推荐你用 local_plugins.yaml 来管理你自己需要的插件，除非你读懂了这个配置并且有一些 vimscript 技能，使用 plugins.yaml 来管理你的插件。
 
 ## 主题 ColorScheme
 
