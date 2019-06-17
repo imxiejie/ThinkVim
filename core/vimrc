@@ -80,7 +80,7 @@ endfunction
 " Load user custom local settings
 if filereadable(s:user_settings_path)
 	if s:check_custom_settings(s:user_settings_path)
-		call s:source_file('/local/local_settings.vim')
+		call s:source_rc('/local/local_settings.vim')
 	endif
 endif
 
