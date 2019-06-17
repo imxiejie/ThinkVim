@@ -4,12 +4,14 @@ nnoremap <silent> <F2> :<C-u>vnew<CR>
 
 nnoremap <silent> <F3> :<C-u>new<CR>
 
-nnoremap <silent> <F4> :<C-u>vnew \| terminal<CR>
-
 if dein#tap('defx.nvim')
-        nnoremap <silent> <F5>
+        nnoremap <silent> <F4>
                 \ :<C-u>Defx -search=`expand('%:p')` `getcwd()`<CR>
 endif
+
+nnoremap <silent> <F5> :<C-u>vnew \| terminal<CR>
+
+nnoremap <silent> h<F5> :<C-u>new \| terminal<CR>
 
 nnoremap <silent> <F7> :<C-u>res +5<CR>
 
