@@ -60,7 +60,7 @@ endfunction
 
 function! s:source_file(path, ...) abort
 	let use_global = get(a:000, 0, ! has('vim_starting'))
-	let abspath = resolve(expand($VIMPATH.'/config/'.a:path))
+	let abspath = resolve(expand($VIMPATH.'/core/'.a:path))
 	if ! use_global
 		execute 'source' fnameescape(abspath)
 		return
