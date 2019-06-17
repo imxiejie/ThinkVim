@@ -78,10 +78,6 @@ let g:which_key_localmap ={
       \ 'v'    : 'Vista',
       \ 'r'    : 'QuickRun',
       \ 'm'    : 'DeniteMenu',
-      \ 'd'    : {
-                \'name':'+Todo',
-                \ 'a' : 'TodoAdd',
-                \},
       \ 'g'  :{
                 \'name':'+ GitOperation',
                 \ 'a'    : 'Gadd',
