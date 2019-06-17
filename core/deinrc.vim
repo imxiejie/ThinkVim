@@ -58,27 +58,6 @@ endpython
 	unlet g:denite_plugins
 endfunction
 
-function! s:source_file(path, ...) abort
-	let use_global = get(a:000, 0, ! has('vim_starting'))
-	let abspath = resolve(expand($VIMPATH.'/core/'.a:path))
-	if ! use_global
-		execute 'source' fnameescape(abspath)
-		return
-	endif
-
-	let content = map(readfile(abspath),
-		\ "substitute(v:val, '^\\W*\\zsset\\ze\\W', 'setglobal', '')")
-	let tempfile = tempname()
-	try
-		call writefile(content, tempfile)
-		execute printf('source %s', fnameescape(tempfile))
-	finally
-		if filereadable(tempfile)
-			call delete(tempfile)
-		endif
-	endtry
-endfunction
-
 function! s:check_file_notnull(filename)abort
        let  content = readfile(a:filename)
        if empty(content)
