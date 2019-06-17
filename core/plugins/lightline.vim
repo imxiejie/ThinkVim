@@ -162,6 +162,9 @@ function! CocStatusBar() abort
     if empty(s)
         return ""
     endif
+    if &filetype ==? 'defx'
+        return ""
+    endif
      return join(['❖',s])
 endfunction
 
