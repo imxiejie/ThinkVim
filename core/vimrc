@@ -9,7 +9,7 @@ let s:user_settings_path = expand('$VIMPATH/core/local/local_settings.vim')
 " Constants
 let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 
-function! s:source_rc(path, ...) abort
+function! s:source_file(path, ...) abort
   let use_global = get(a:000, 0, !has('vim_starting'))
   let abspath = resolve(expand($VIMPATH.'/core/' . a:path))
   if !use_global
@@ -38,11 +38,11 @@ augroup MyAutoCmd
 augroup END
 
 if has('vim_starting')
-  call s:source_rc('init.vim')
+  call s:source_file('init.vim')
 endif
 
-call s:source_rc('deinrc.vim')
-call s:source_rc('plugins/allkey.vim')
+call s:source_file('deinrc.vim')
+call s:source_file('plugins/allkey.vim')
 
 syntax enable
 filetype plugin indent on
@@ -51,10 +51,10 @@ call dein#call_hook('source')
 call dein#call_hook('post_source')
 
 " Loading configuration modules
-call s:source_rc('general.vim')
-call s:source_rc('filetype.vim')
-call s:source_rc('mappings.vim')
-call s:source_rc('/themes/theme.vim')
+call s:source_file('general.vim')
+call s:source_file('filetype.vim')
+call s:source_file('mappings.vim')
+call s:source_file('/themes/theme.vim')
 "---------------------------------------------------------------------------
 if s:is_sudo
 	set noswapfile
@@ -80,7 +80,7 @@ endfunction
 " Load user custom local settings
 if filereadable(s:user_settings_path)
 	if s:check_custom_settings(s:user_settings_path)
-		call s:source_rc('/local/local_settings.vim')
+		call s:source_file('/local/local_settings.vim')
 	endif
 endif
 
