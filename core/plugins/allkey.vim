@@ -178,8 +178,6 @@ endif
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                 \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-        nnoremap <silent> <Leader><F5>
-                \ :<C-u>Defx -search=`expand('%:p')` `getcwd()`<CR>
         "nnoremap <silent> <LocalLeader>a
 				"\ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
 endif

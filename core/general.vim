@@ -4,7 +4,6 @@ set autoread
 set autowrite
 set confirm
 set splitbelow
-set splitright
 set bsdir=buffer
 if has('vim_starting')
 	set encoding=UTF-8
