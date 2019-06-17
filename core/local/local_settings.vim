@@ -11,7 +11,7 @@ endif
 
 nnoremap <silent> <F5> :<C-u>vnew \| terminal<CR>
 
-nnoremap <silent> h<F5> :<C-u>new \| terminal<CR>
+nnoremap <silent> <leader>h<F5> :<C-u>new \| terminal<CR>
 
 nnoremap <silent> <F7> :<C-u>res +5<CR>
 
