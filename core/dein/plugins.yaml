@@ -162,7 +162,7 @@
     let g:NERDTreeSyntaxDisableDefaultExtensions = 1
     let g:NERDTreeDisableExactMatchHighlight = 1
     let g:NERDTreeDisablePatternMatchHighlight = 1
-    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
+    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md','c','cpp','java','php','groovy']
 
 - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
 # }}}

@@ -4,9 +4,9 @@ nnoremap <silent> <F2> :<C-u>vnew<CR>
 
 nnoremap <silent> <F3> :<C-u>new<CR>
 
-if dein#tap('defx.nvim')
+if dein#tap('nerdtree')
         nnoremap <silent> <F4>
-                \ :<C-u>Defx -search=`expand('%:p')` `getcwd()`<CR>
+                \ :<C-u>NERDTreeFind<CR>
 endif
 
 nnoremap <silent> <F5> :<C-u>vnew \| terminal<CR>
