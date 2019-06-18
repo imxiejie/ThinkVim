@@ -9,9 +9,9 @@ if dein#tap('nerdtree')
                 \ :<C-u>NERDTreeFind<CR>
 endif
 
-nnoremap <silent> <F5> :<C-u>vnew \| terminal<CR>
+nnoremap <silent> <F5> :<C-u>new \| terminal<CR>
 
-nnoremap <silent> <leader>h<F5> :<C-u>new \| terminal<CR>
+nnoremap <silent> <leader>v<F5> :<C-u>vnew \| terminal<CR>
 
 nnoremap <silent> <M-k> :<C-u>res +5<CR>
 
