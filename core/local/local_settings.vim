@@ -21,6 +21,12 @@ nnoremap <silent> <M-h> :<C-u>vertical resize +5<CR>
 
 nnoremap <silent> <M-l> :<C-u>vertical resize -5<CR>
 
+if dein#tap('vim-operator-surround')
+        nmap <silent>saa <Plug>(operator-surround-append)<Plug>(textobj-multiblock-i)
+        nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+        nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+endif
+
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
     \ 'kinds'     : [
