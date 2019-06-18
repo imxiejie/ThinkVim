@@ -48,7 +48,6 @@ vnoremap k gk
 "tabline operation
 nmap <leader>tn :tabnew<cr>
 nmap <leader>te :tabedit
-nmap <leader>tc :tabclose<cr>
 nmap <leader>tm :tabmove
 
 "yank to end
