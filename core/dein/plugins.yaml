@@ -155,7 +155,7 @@
 - repo: scrooloose/nerdtree
   on_map: { n: <Plug> }
   trusted: 1
-  hook_post_source: source ~/config/core/plugins/nerdtree.vim
+  hook_post_source: source ~/.config/core/plugins/nerdtree.vim
 
 - repo: tiagofumo/vim-nerdtree-syntax-highlight
   hook_add: |
