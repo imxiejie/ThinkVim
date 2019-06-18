@@ -4,9 +4,8 @@ let g:dein#install_progress_type = 'echo'
 let g:dein#enable_notification = 1
 let g:dein#install_progress_type = 'title'
 let g:dein#install_log_filename = '~/.tmp/dein.log'
+let g:dein#auto_recache = 1
 
-" Constants
-let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
 
 let $CACHE = expand('~/.cache')
 let s:path = expand('$CACHE/dein')
@@ -58,6 +57,7 @@ endpython
 	unlet g:denite_plugins
 endfunction
 
+
 function! s:check_file_notnull(filename)abort
        let  content = readfile(a:filename)
        if empty(content)
@@ -83,9 +83,7 @@ if dein#load_state(s:path)
             echoerr 'Please run: pip3 install --user PyYAML'
         endtry
     call dein#end()
-    if ! s:is_sudo
-       call dein#save_state()
-    endif
+    call dein#save_state()
     if dein#check_install()
          " Installation check.
        call dein#install()
