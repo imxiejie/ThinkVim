@@ -32,9 +32,9 @@
 
 - { repo: chemzqm/denite-git, on_source: denite.nvim }
 
-# - repo: chemzqm/todoapp.vim
-#  on_cmd: [TodoAdd,TodoImport]
-#  on_source: denite.nvim
+- repo: chemzqm/todoapp.vim
+  on_cmd: [TodoAdd,TodoImport]
+  on_source: denite.nvim
 
 - repo: raghur/fruzzy
   on_source: denite.nvim
@@ -140,7 +140,7 @@
 
 # }}}
 
-# Defx{{{
+# File manager{{{
 - repo: Shougo/defx.nvim
   on_cmd: Defx
   hook_source: source ~/.config/nvim/core/plugins/defx.vim
@@ -152,6 +152,19 @@
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
 
+- repo: scrooloose/nerdtree
+  on_map: { n: <Plug> }
+  trusted: 1
+  hook_post_source: source ~/config/core/plugins/nerdtree.vim
+
+- repo: tiagofumo/vim-nerdtree-syntax-highlight
+  hook_add: |
+    let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+    let g:NERDTreeDisableExactMatchHighlight = 1
+    let g:NERDTreeDisablePatternMatchHighlight = 1
+    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
+
+- { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
 # }}}
 
 # Search Plugins{{{
