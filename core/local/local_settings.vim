@@ -13,13 +13,13 @@ nnoremap <silent> <F5> :<C-u>vnew \| terminal<CR>
 
 nnoremap <silent> <leader>h<F5> :<C-u>new \| terminal<CR>
 
-nnoremap <silent> <F7> :<C-u>res +5<CR>
+nnoremap <silent> <M-k> :<C-u>res +5<CR>
 
-nnoremap <silent> <F8> :<C-u>res -5<CR>
+nnoremap <silent> <M-j> :<C-u>res -5<CR>
 
-nnoremap <silent> <F9> :<C-u>vertical resize +5<CR>
+nnoremap <silent> <M-h> :<C-u>vertical resize +5<CR>
 
-nnoremap <silent> <F10> :<C-u>vertical resize -5<CR>
+nnoremap <silent> <M-l> :<C-u>vertical resize -5<CR>
 
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
