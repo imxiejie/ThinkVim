@@ -321,7 +321,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | --------------- | ------ | ----------- |
 | `<Leader>` + tn | Normal | create tab  |
 | `<Leader>` + te | Normal | edit tab    |
-| `<Leader>` + tc | Normal | close tab   |
 | `<Leader>` + tm | Normal | move tab    |
 
 - LeaderKey
