@@ -121,7 +121,16 @@ if dein#tap('vim-go')
                     \ | nmap <Leader>gr  <Plug>(go-rename)
 endif
 
-if dein#tap('vim-easygit')
+" if dein#tap('vim-easygit')
+" 	nnoremap <silent> <localleader>gd :Gdiff<CR>
+" 	nnoremap <silent> <localleader>gc :Gcommit<CR>
+" 	nnoremap <silent> <localleader>gb :Gblame<CR>
+" 	nnoremap <silent> <localleader>gB :Gbrowse<CR>
+" 	nnoremap <silent> <localleader>gS :Gstatus<CR>
+" 	nnoremap <silent> <localleader>gp :Gpush<CR>
+" endif
+
+if dein#tap('vim-fugitive')
 	nnoremap <silent> <localleader>gd :Gdiff<CR>
 	nnoremap <silent> <localleader>gc :Gcommit<CR>
 	nnoremap <silent> <localleader>gb :Gblame<CR>
@@ -129,7 +138,6 @@ if dein#tap('vim-easygit')
 	nnoremap <silent> <localleader>gS :Gstatus<CR>
 	nnoremap <silent> <localleader>gp :Gpush<CR>
 endif
-
 
 if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
