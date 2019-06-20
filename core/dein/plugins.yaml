@@ -32,9 +32,9 @@
 
 - { repo: chemzqm/denite-git, on_source: denite.nvim }
 
-- repo: chemzqm/todoapp.vim
-  on_cmd: [TodoAdd,TodoImport]
-  on_source: denite.nvim
+#- repo: chemzqm/todoapp.vim
+#  on_cmd: [TodoAdd,TodoImport]
+#  on_source: denite.nvim
 
 - repo: raghur/fruzzy
   on_source: denite.nvim
