@@ -21,6 +21,8 @@ nnoremap <silent> <M-h> :<C-u>vertical resize +5<CR>
 
 nnoremap <silent> <M-l> :<C-u>vertical resize -5<CR>
 
+nnoremap <silent> <F12> :<C-u>Denite outline<CR>
+
 call dein#add('tpope/vim-surround', {
         \ 'lazy': 1,
         \ 'depends' : 'vim-repeat',
