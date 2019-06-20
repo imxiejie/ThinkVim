@@ -38,6 +38,7 @@
   hook_post_update: call fruzzy#install()
 
 # }}}
+
 # Interface{{{
 - repo: ryanoasis/vim-devicons
   hook_add: let g:webdevicons_enable_denite = 1
@@ -46,7 +47,7 @@
 
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
-  hook_add: source ~/.config/nvim/core/plugins/vim-choosewin.vim
+  hook_source: source ~/.config/nvim/core/plugins/vim-choosewin.vim
 
 - repo: ludovicchabant/vim-gutentags
   if: executable('ctags')
@@ -104,22 +105,17 @@
             \}
         let g:quickrun_no_default_key_mappings = 1
 
-- repo: simnalamburt/vim-mundo
-  on_map: { n: <Plug> }
+- {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
 
-- repo: terryma/vim-expand-region
-  on_map: { x: <Plug> }
-
-- repo: tpope/vim-repeat
-  on_map: .*
+- {repo: tpope/vim-repeat , on_map: .* }
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [Whichkey, Whichkey!]
-  hook_add: source ~/.config/nvim/core/plugins/whichkey.vim
+  hook_source: source ~/.config/nvim/core/plugins/whichkey.vim
   hook_post_source: |
         call which_key#register('<Space>', 'g:which_key_map')
         call which_key#register(';', 'g:which_key_localmap')
-        call which_key#register('[', 'g:which_key_rsbgmap')
+        call which_key#register(']', 'g:which_key_rsbgmap')
         call which_key#register('[', 'g:which_key_lsbgmap')
 
 - repo: easymotion/vim-easymotion
@@ -130,6 +126,7 @@
         let g:EasyMotion_keys = 'fjdkswbeoavn'
         let g:EasyMotion_smartcase = 1
         let g:EasyMotion_use_smartsign_us = 1
+
 - repo: airblade/vim-rooter
   on_path: .*
   hook_source: let g:rooter_patterns = ['.root', 'package.json', '.git/','go.mod']
@@ -183,21 +180,28 @@
   hook_source: let g:easygit_enable_command = 1
 
 
+# use coc-git instead of vim-gitgutter
 # - repo: airblade/vim-gitgutter
 #   on_path: .*
 #   hook_source: source ~/.config/nvim/core/plugins/vim-gitgutter.vim
 
 # }}}
 
-# FileType{{{
+# Language{{{
 
 - { repo: honza/dockerfile.vim, on_ft: Dockerfile }
 - { repo: junegunn/vim-emoji, on_ft: [markdown,vim] }
+
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
 - { repo: tmhedberg/SimpylFold, on_ft: python }
 - { repo: vim-scripts/python_match.vim, on_ft: python }
+- repo: vim-python/python-syntax
+  on_ft: python
+  hook_add: let g:python_highlight_all = 1
+
 - { repo: othree/html5.vim, on_ft: [html, javascript.jsx,vue,javascript] }
 - { repo: neoclide/vim-jsx-improve, on_ft: [javascript,jsx,javascript.jsx]}
+
 - { repo: cespare/vim-toml, on_ft: toml }
 - { repo: vim-scripts/xml.vim, on_ft: xml}
 - { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]}
@@ -209,10 +213,6 @@
 - repo: fatih/vim-go
   on_ft: go
   hook_source: source ~/.config/nvim/core/plugins/vim-go.vim
-
-- repo: vim-python/python-syntax
-  on_ft: python
-  hook_add: let g:python_highlight_all = 1
 
 - repo: tpope/vim-markdown
   on_ft: markdown
@@ -229,8 +229,7 @@
 # }}}
 
 # Coding{{{
-- repo: tyru/caw.vim
-  on_map: { nx: <Plug> }
+- { repo: tyru/caw.vim, on_map: { nx: <Plug> }}
 
 - repo: sbdchd/neoformat
   on_cmd: [Neoformat,Neoformat!]
@@ -238,7 +237,7 @@
 
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
-  hook_add: source ~/.config/nvim/core/plugins/indentline.vim
+  hook_source: source ~/.config/nvim/core/plugins/indentline.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
@@ -279,13 +278,14 @@
 # }}}
 
 # TextObjectOperator{{{
-- { repo: AndrewRadev/splitjoin.vim, on_cmd: [SplitjoinJoin,SplitjoinSplit] }
+- { repo: AndrewRadev/splitjoin.vim, on_map: { n: <Plug>Splitjoin }}
+- { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
 - { repo: kana/vim-textobj-user, on_func: textobj#user# }
 - { repo: kana/vim-operator-user, lazy: 1 }
 
 - repo: kana/vim-operator-replace
   depends: vim-operator-user
-  on_map: { n: <Plug> }
+  on_map: { vnx: <Plug> }
 
 - repo: rhysd/vim-operator-surround
   depends: [vim-operator-user, vim-textobj-multiblock]
