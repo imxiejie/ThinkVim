@@ -175,10 +175,9 @@
 # Git Plugins{{{
 - { repo: tpope/vim-fugitive, on_path: .* }
 
-- repo: chemzqm/vim-easygit
-  on_cmd: [Gcd, Glcd, commit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
-  hook_source: let g:easygit_enable_command = 1
-
+#- repo: chemzqm/vim-easygit
+  #on_cmd: [Gcd, Glcd, commit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
+  #hook_source: let g:easygit_enable_command = 1
 
 # use coc-git instead of vim-gitgutter
 # - repo: airblade/vim-gitgutter
