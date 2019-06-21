@@ -26,6 +26,7 @@ let g:which_key_map = {
             \ 'r' : 'RgSearch',
             \ 'c' : 'ColorChange',
             \ 'w' : 'SearchExpendWord',
+            \ 'v' : 'Vista Finder',
             \ },
       \ 'm' : 'OpenMundo' ,
       \ 'w' : 'Save',
