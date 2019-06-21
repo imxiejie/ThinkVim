@@ -283,6 +283,9 @@
 - { repo: kana/vim-textobj-user, on_func: textobj#user# }
 - { repo: kana/vim-operator-user, lazy: 1 }
 
+- repo: kana/vim-smartchr
+  on_event: InsertCharPre
+
 - repo: kana/vim-operator-replace
   depends: vim-operator-user
   on_map: { vnx: <Plug> }
