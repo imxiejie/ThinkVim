@@ -246,6 +246,13 @@ if dein#tap('vim-which-key')
 		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
 endif
 
+if dein#tap('vim-smartchr')
+    augroup MyAutoCmd
+        autocmd FileType go inoremap <buffer><expr> ;
+            \ smartchr#loop(':=',';')
+    augroup end
+endif
+
 if dein#tap('vim-operator-surround')
         map <silent>sa <Plug>(operator-surround-append)
         map <silent>sd <Plug>(operator-surround-delete)
