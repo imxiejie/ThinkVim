@@ -171,6 +171,11 @@ if dein#tap('comfortable-motion.vim')
     nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
 endif
 
+if dein#tap('python_match.vim')
+	nmap <buffer> {{ [%
+	nmap <buffer> }} ]%
+endif
+
 if dein#tap('goyo.vim')
 	nnoremap <Leader>G :Goyo<CR>
 endif
@@ -243,6 +248,11 @@ if dein#tap('vim-smartchr')
         autocmd FileType go inoremap <buffer><expr> ;
             \ smartchr#loop(':=',';')
     augroup end
+endif
+
+if dein#tap('vim-niceblock')
+	xmap I  <Plug>(niceblock-I)
+	xmap A  <Plug>(niceblock-A)
 endif
 
 if dein#tap('vim-operator-surround')
