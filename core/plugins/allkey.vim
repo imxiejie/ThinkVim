@@ -57,8 +57,8 @@ if dein#tap('coc.nvim')
         " Remap for rename current word
         nmap <leader>cn <Plug>(coc-rename)
         " Remap for format selected region
-        vmap <leader>cf  <Plug>(coc-format-selected)
-        nmap <leader>cf  <Plug>(coc-format-selected)
+        vmap <leader>cf  <Plug>(coc-format-selected)<CR>
+        nmap <leader>cf  <Plug>(coc-format-selected)<CR>
         " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
         xmap <leader>ca  <Plug>(coc-codeaction-selected)
         nmap <leader>ca  <Plug>(coc-codeaction-selected)

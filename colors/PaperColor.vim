@@ -165,7 +165,7 @@ fun! s:register_default_theme()
         \       'statusline_inactive_bg' : ['#3a3a3a', '237'],
         \       'todo_fg' : ['#ff8700', '208'],
         \       'todo_bg' : ['#1c1c1c', '234'],
-        \       'error_fg' : ['#af005f', '125'],
+        \       'error_fg' : ['#bcbcbc', '125'],
         \       'error_bg' : ['#5f0000', '52'],
         \       'matchparen_bg' : ['#4e4e4e', '239'],
         \       'matchparen_fg' : ['#c6c6c6', '251'],

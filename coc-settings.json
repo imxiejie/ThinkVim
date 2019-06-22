@@ -60,10 +60,10 @@
     //tslint
     "tslint.autoFixOnSave": true,
     //prettier
-    "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
+    // "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
     "prettier.statusItemText": "ⓟ ",
     "prettier.eslintIntegration": true,
-    "prettier.tslintIntegration": true,
+    "prettier.tslintIntegration": false,
     "prettier.stylelintIntegration": true,
     //emmet
     "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact"},
@@ -74,5 +74,7 @@
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
     "languageserver": {
-        }
+    },
+    "java.jdt.ls.vmargs": "-javaagent:./libs/lombok-1.18.4.jar -Xbootclasspath/a:./libs/lombok-1.18.4.jar"
+
 }

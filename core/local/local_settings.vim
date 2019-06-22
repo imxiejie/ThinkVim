@@ -1,5 +1,7 @@
 set splitright
 
+colorscheme PaperColor
+
 nnoremap <silent> <F2> :<C-u>vnew<CR>
 
 nnoremap <silent> <F3> :<C-u>new<CR>
@@ -22,6 +24,12 @@ nnoremap <silent> <M-h> :<C-u>vertical resize +5<CR>
 nnoremap <silent> <M-l> :<C-u>vertical resize -5<CR>
 
 nnoremap <silent> <F12> :<C-u>Denite outline<CR>
+
+nnoremap oo o<ESC>
+
+nnoremap OO O<ESC>
+
+imap jj <ESC>
 
 call dein#add('tpope/vim-surround', {
         \ 'lazy': 1,
