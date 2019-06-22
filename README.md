@@ -403,8 +403,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | d                   | Denite               | Delete             |
 | p                   | Denite               | Preview            |
 | st                  | Denite               | tabopen            |
-| sg                  | Denite               | Vsplit             |
-| sv                  | Denite               | Split              |
+| sv                  | Denite               | Vsplit             |
+| si                  | Denite               | Split              |
 | `'`                 | Denite               | QuickMove          |
 | q                   | Denite               | Quit               |
 | r                   | Denite               | RedRaw             |
