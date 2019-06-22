@@ -282,6 +282,7 @@
 - { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
 - { repo: kana/vim-textobj-user, on_func: textobj#user# }
 - { repo: kana/vim-operator-user, lazy: 1 }
+- { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
 
 - repo: kana/vim-smartchr
   on_event: InsertCharPre
