@@ -105,7 +105,7 @@ function! s:denite_settings() abort
 	nnoremap <silent><buffer><expr> p    denite#do_map('do_action', 'preview')
 	nnoremap <silent><buffer><expr> st   denite#do_map('do_action', 'tabopen')
 	nnoremap <silent><buffer><expr> sv   denite#do_map('do_action', 'vsplit')
-	nnoremap <silent><buffer><expr> sg   denite#do_map('do_action', 'split')
+	nnoremap <silent><buffer><expr> si   denite#do_map('do_action', 'split')
 	nnoremap <silent><buffer><expr> '    denite#do_map('quick_move')
 	nnoremap <silent><buffer><expr> q    denite#do_map('quit')
 	nnoremap <silent><buffer><expr> r    denite#do_map('redraw')
