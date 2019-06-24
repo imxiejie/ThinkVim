@@ -266,6 +266,18 @@ if dein#tap('vim-niceblock')
 	xmap A  <Plug>(niceblock-A)
 endif
 
+if dein#tap('vim-sandwich')
+     nmap <silent> sa <Plug>(operator-sandwich-add)
+     xmap <silent> sa <Plug>(operator-sandwich-add)
+     omap <silent> sa <Plug>(operator-sandwich-g@)
+     nmap <silent> sd <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+     xmap <silent> sd <Plug>(operator-sandwich-delete)
+     nmap <silent> sr <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-query-a)
+     xmap <silent> sr <Plug>(operator-sandwich-replace)
+     nmap <silent> sdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+     nmap <silent> srb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+endif
+
 if dein#tap('vim-operator-replace')
 	xmap p <Plug>(operator-replace)
 endif

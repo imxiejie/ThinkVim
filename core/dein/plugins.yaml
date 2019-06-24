@@ -291,7 +291,7 @@
   on_map: { vnx: <Plug> }
 
 - repo: machakann/vim-sandwich
-  on_ft: [vue,html,go,python,javascript,javascript.jsx,jsx,vim]
+  on_map: { vnx: [<Plug>(operator-sandwich-,<Plug>(textobj-sandwich-]}
 
 - repo: osyo-manga/vim-textobj-multiblock
   depends: vim-textobj-user
