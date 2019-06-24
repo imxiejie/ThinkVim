@@ -168,7 +168,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [rhysd/vim-operator-surround](https://github.com/rhysd/vim-operator-surround)                         | Operator to enclose text objects                    |
 | [kana/vim-operator-replace](https://github.com/kana/vim-operator-replace)                             | Operator to replace text with register content      |
 | [rhysd/accelerated-jk](https://github.com/rhysd/accelerated-jk)                                       | Up/down movement acceleration                       |
-| [bps/vim-textobj-python](https://github.com/bps/vim-textobj-python)                                   | pythontextobject                                    |
 | [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi)                                   | Multiple cursors project                            |
 | [terryma/vim-expand-region](https://github.com/terryma/vim-expand-region)                             | Visually select increasingly larger regions of text |
 | [liuchengxu/vim-which-key](https://github.com/liuchengxu/vim-which-key)                               | Find the key                                        |

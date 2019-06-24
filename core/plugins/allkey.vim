@@ -83,6 +83,9 @@ if dein#tap('coc.nvim')
         " float window scroll
 		nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+        nmap <silent> <TAB> <Plug>(coc-range-select)
+        xmap <silent> <TAB> <Plug>(coc-range-select)
+        xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 endif
 
 function! s:show_documentation()
@@ -282,16 +285,3 @@ if dein#tap('vim-textobj-multiblock')
 	xmap <silent> ab <Plug>(textobj-multiblock-a)
 	xmap <silent> ib <Plug>(textobj-multiblock-i)
 endif
-
-if dein#tap('bps/vim-textobj-python')
-        xmap aF <Plug>(textobj-python-function-a)
-        omap aF <Plug>(textobj-python-function-a)
-        xmap iF <Plug>(textobj-python-function-i)
-        omap iF <Plug>(textobj-python-function-i)
-endif
-
-"if dein#tap('nerdtree')
-        ""nerdtree
-        "nnoremap <silent><leader>e :NERDTreeToggle <CR>
-        ""nnoremap <leader>f :NERDTreeFind <CR>
-"endif
