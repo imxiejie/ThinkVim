@@ -300,7 +300,4 @@
   on_map: { ox: <Plug> }
   hook_add:  let g:textobj_multiblock_no_default_key_mappings = 1
 
-- repo: bps/vim-textobj-python
-  depends: vim-textobj-user
-  on_map: { ox: <Plug> }
 # }}}
