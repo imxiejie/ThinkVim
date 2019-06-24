@@ -290,9 +290,8 @@
   depends: vim-operator-user
   on_map: { vnx: <Plug> }
 
-- repo: rhysd/vim-operator-surround
-  depends: [vim-operator-user, vim-textobj-multiblock]
-  on_map:  { vnx : <Plug> }
+- repo: machakann/vim-sandwich
+  on_ft: [vue,html,go,python,javascript,javascript.jsx,jsx,vim]
 
 - repo: osyo-manga/vim-textobj-multiblock
   depends: vim-textobj-user
