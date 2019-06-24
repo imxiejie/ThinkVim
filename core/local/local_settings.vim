@@ -31,10 +31,6 @@ nnoremap OO O<ESC>
 
 imap jj <ESC>
 
-call dein#add('tpope/vim-surround', {
-        \ 'lazy': 1,
-        \ 'depends' : 'vim-repeat',
-        \ 'on_map': {'n' : ['cs', 'ds', 'ys']}})
 nnoremap <silent> <M-k> :<C-u>res +5<CR>
 
 nnoremap <silent> <M-j> :<C-u>res -5<CR>
@@ -42,6 +38,11 @@ nnoremap <silent> <M-j> :<C-u>res -5<CR>
 nnoremap <silent> <M-h> :<C-u>vertical resize +5<CR>
 
 nnoremap <silent> <M-l> :<C-u>vertical resize -5<CR>
+
+call dein#add('tpope/vim-surround', {
+        \ 'lazy': 1,
+        \ 'depends' : 'vim-repeat',
+        \ 'on_map': {'n' : ['cs', 'ds', 'ys']}})
 
 let g:tagbar_type_groovy = {
     \ 'ctagstype' : 'groovy',
