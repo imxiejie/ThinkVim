@@ -51,6 +51,7 @@ endfunction
 function! LightlineLineinfo() abort
   return &filetype ==? 'help'             ? ''  :
   \      &filetype ==? 'defx'             ? ' ' :
+  \      &filetype ==? 'nerdtree'         ? ' ' :
   \      &filetype ==? 'denite'           ? ' ' :
   \      &filetype ==? 'tagbar'           ? ' ' :
   \      &filetype ==? 'vista_kind'       ? ' ' :
