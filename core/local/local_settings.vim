@@ -1,6 +1,8 @@
 set splitright
 
-colorscheme PaperColor
+" colorscheme PaperColor
+
+colorscheme onedark
 
 nnoremap <silent> <F2> :<C-u>vnew<CR>
 
@@ -51,3 +53,9 @@ let g:tagbar_type_groovy = {
         \ 'f:fields:1'
     \ ]
 \ }
+
+let g:lightline = {
+  \ 'colorscheme': 'onedark',
+\ }
+
+let g:airline_theme='onedark'
