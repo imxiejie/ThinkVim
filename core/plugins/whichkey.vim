@@ -32,12 +32,6 @@ let g:which_key_map = {
       \ 'w' : 'Save',
       \ 's' : 'Startify',
       \ 'p' : 'EditPluginsConfig',
-      \ 'SPC' : {
-            \ 'name' : '+Easymotion',
-            \ 'w' : 'Easymotion-w',
-            \ 'b' : 'Easymotion-b',
-            \ 'f' : 'Easymotion-f',
-            \ },
       \ 'c'    : {
               \ 'name' : '+CocList' ,
               \ 'a'    : 'CocCodeActionSelected',
@@ -71,6 +65,12 @@ let g:which_key_map = {
                 \ 'v'   :'GoDef',
                 \ },
             \ },
+      \ }
+let g:which_key_map[' '] = {
+      \ 'name' : '+Easymotion ' ,
+      \ 'b' : ['<plug>(easymotion-b)' , 'beginning of word backward'],
+      \ 'f' : ['<plug>(easymotion-f)' , 'find {char} to the left'],
+      \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
       \ }
 
 let g:which_key_localmap ={
