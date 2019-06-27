@@ -5,9 +5,9 @@
 - repo: Shougo/dein.vim
 - repo: itchyny/lightline.vim
   depends: vim-devicons
-  hook_add: source ~/.config/nvim/core/plugins/lightline.vim
+  hook_add: source $XDG_CONFIG_HOME/nvim/core/plugins/lightline.vim
 - repo: mengelbrecht/lightline-bufferline
-  hook_add: source ~/.config/nvim/core/plugins/lightline.vim
+  hook_add: source $XDG_CONFIG_HOME/nvim/core/plugins/lightline.vim
 - repo: honza/vim-snippets
 #}}}
 
@@ -15,7 +15,7 @@
 - repo: neoclide/coc.nvim
   merge: 0
   rev: release
-  hook_add: source ~/.config/nvim/core/plugins/coc.vim
+  hook_add: source $XDG_CONFIG_HOME/nvim/core/plugins/coc.vim
 # }}}
 
 
@@ -27,8 +27,8 @@
   on_cmd: Denite
   depends: vim-devicons
   hook_source: |
-        source ~/.config/nvim/core/plugins/denite.vim
-        source ~/.config/nvim/core/plugins/denite_menu.vim
+        source $XDG_CONFIG_HOME/nvim/core/plugins/denite.vim
+        source $XDG_CONFIG_HOME/nvim/core/plugins/denite_menu.vim
 
 - { repo: chemzqm/denite-git, on_source: denite.nvim }
 
@@ -47,16 +47,16 @@
 
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
-  hook_source: source ~/.config/nvim/core/plugins/vim-choosewin.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/vim-choosewin.vim
 
 - repo: ludovicchabant/vim-gutentags
   if: executable('ctags')
   on_path: .*
-  hook_source: source ~/.config/nvim/core/plugins/vim-gutentags.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/vim-gutentags.vim
 
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
-  hook_source: source ~/.config/nvim/core/plugins/goyo.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/goyo.vim
 
 - repo: junegunn/Limelight.vim
   on_cmd: Limelight
@@ -64,7 +64,7 @@
 - repo: mhinz/vim-startify
   on_cmd: Startify
   depends: vim-devicons
-  hook_source: source ~/.config/nvim/core/plugins/startify.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/startify.vim
   hook_post_source: |
       function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
@@ -111,7 +111,7 @@
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [Whichkey, Whichkey!]
-  hook_source: source ~/.config/nvim/core/plugins/whichkey.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/whichkey.vim
   hook_post_source: |
         call which_key#register('<Space>', 'g:which_key_map')
         call which_key#register(';', 'g:which_key_localmap')
@@ -132,11 +132,11 @@
 # File manager{{{
 - repo: Shougo/defx.nvim
   on_cmd: Defx
-  hook_source: source ~/.config/nvim/core/plugins/defx.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/defx.vim
 
 - repo: kristijanhusak/defx-git
   on_source: defx.nvim
-  hook_source: source ~/.config/nvim/core/plugins/defx-git.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/defx-git.vim
 
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
@@ -144,7 +144,7 @@
 - repo: scrooloose/nerdtree
   on_map: { n: <Plug> }
   trusted: 1
-  hook_post_source: source ~/.config/nvim/core/plugins/nerdtree.vim
+  hook_post_source: source $XDG_CONFIG_HOME/nvim/core/plugins/nerdtree.vim
 
 - repo: tiagofumo/vim-nerdtree-syntax-highlight
   hook_add: |
@@ -164,7 +164,7 @@
 - repo: junegunn/fzf.vim
   depends: fzf
   on_cmd: [Colors,Rg,Buffers]
-  hook_add: source ~/.config/nvim/core/plugins/fzf.vim
+  hook_add: source $XDG_CONFIG_HOME/nvim/core/plugins/fzf.vim
 
 # }}}
 
@@ -179,7 +179,7 @@
 # use coc-git instead of vim-gitgutter
 # - repo: airblade/vim-gitgutter
 #   on_path: .*
-#   hook_source: source ~/.config/nvim/core/plugins/vim-gitgutter.vim
+#   hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/vim-gitgutter.vim
 
 # }}}
 
@@ -208,7 +208,7 @@
 
 - repo: fatih/vim-go
   on_ft: go
-  hook_source: source ~/.config/nvim/core/plugins/vim-go.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/vim-go.vim
 
 - repo: tpope/vim-markdown
   on_ft: markdown
@@ -229,19 +229,19 @@
 
 - repo: sbdchd/neoformat
   on_cmd: [Neoformat,Neoformat!]
-  hook_source: source ~/.config/nvim/core/plugins/neoformat.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/neoformat.vim
 
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
-  hook_source: source ~/.config/nvim/core/plugins/indentline.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/indentline.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
-  hook_source: source ~/.config/nvim/core/plugins/vista.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/vista.vim
 
 - repo: majutsushi/tagbar
   on_cmd: TagbarToggle
-  hook_source: source ~/.config/nvim/core/plugins/tagbar.vim
+  hook_source: source $XDG_CONFIG_HOME/nvim/core/plugins/tagbar.vim
 
 - repo: mattn/emmet-vim
   on_ft: [html,css,jsx,javascript,javascript.jsx]
@@ -269,7 +269,7 @@
         let g:echodoc#type = "virtual"
 
 # - repo: w0rp/ale
-#   hook_add: source ~/.config/nvim/core/plugins/vim-ale.vim
+#   hook_add: source $XDG_CONFIG_HOME/nvim/core/plugins/vim-ale.vim
 
 # }}}
 
