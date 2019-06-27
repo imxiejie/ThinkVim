@@ -1,6 +1,8 @@
 set splitright
 
-colorscheme PaperColor
+" colorscheme PaperColor
+
+colorscheme onedark
 
 nnoremap <silent> <F2> :<C-u>vnew<CR>
 
@@ -50,4 +52,46 @@ let g:tagbar_type_groovy = {
         \ 'm:methods',
         \ 'f:fields:1'
     \ ]
+\ }
+
+let g:lightline = {
+      \ 'colorscheme': 'onedark',
+      \ 'active': {
+      \   'left': [ ['homemode'],
+      \             ['gitinfo'],['filename_active'],['cocstatus']],
+      \   'right':[
+      \             ['lineinfo'], ['fileformat'],['filencode'],['cocerror'],['cocwarn'],['cocfix']],
+      \ },
+      \ 'inactive': {
+      \   'left': [['homemode'], ['filename_active']],
+      \   'right':[['lineinfo']],
+      \ },
+      \ 'tabline': {
+      \   'left': [['buffers']],
+      \   'right': [['thinkvim']],
+      \ },
+      \ 'component': {
+      \   'thinkvim': 'ﴔ ',
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers',
+      \   'cocerror': 'LightLineCocError',
+      \   'cocwarn' : 'LightLineCocWarn',
+      \ },
+      \ 'component_function': {
+      \   'homemode': 'LightlineMode',
+      \   'gitinfo': 'LightLineGit',
+      \   'cocstatus': 'CocStatusBar',
+      \   'cocfix': 'LightlineCocFixes',
+      \   'filencode': 'FileEncoding',
+      \   'readonly': 'LightLineReadonly',
+      \   'filename_active'  : 'LightlineFilenameActive',
+      \   'lineinfo': 'LightlineLineinfo',
+      \   'filename': 'LightLineFname',
+      \   'filetype': 'LightLineFiletype',
+      \   'fileformat': 'LightLineFileformat',
+      \ },
+      \ 'component_type': {'buffers': 'tabsel'},
+      \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2"},
+      \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3"}
 \ }
