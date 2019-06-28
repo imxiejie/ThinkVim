@@ -179,6 +179,7 @@
   on_cmd: [Gcd, Glcd, commit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
   hook_source: let g:easygit_enable_command = 1
 
+
 # use coc-git instead of vim-gitgutter
 # - repo: airblade/vim-gitgutter
 #   on_path: .*

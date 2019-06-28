@@ -276,6 +276,15 @@ if dein#tap('vim-sandwich')
      xmap <silent> sr <Plug>(operator-sandwich-replace)
      nmap <silent> sdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
      nmap <silent> srb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
+     omap ib <Plug>(textobj-sandwich-auto-i)
+    xmap ib <Plug>(textobj-sandwich-auto-i)
+    omap ab <Plug>(textobj-sandwich-auto-a)
+    xmap ab <Plug>(textobj-sandwich-auto-a)
+
+    omap is <Plug>(textobj-sandwich-query-i)
+    xmap is <Plug>(textobj-sandwich-query-i)
+    omap as <Plug>(textobj-sandwich-query-a)
+    xmap as <Plug>(textobj-sandwich-query-a)
 endif
 
 if dein#tap('vim-operator-replace')
