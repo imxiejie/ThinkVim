@@ -490,6 +490,12 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
 <a href="https://github.com/dewoller" target="_blank" title="dewoller">
   <img src="https://github.com/dewoller.png?size=64" width="64" height="64" alt="dewoller">
 </a>
+<a href="https://github.com/ballon" target="_blank" title="ballon">
+  <img src="https://github.com/ballon.png?size=64" width="64" height="64" alt="ballon">
+</a>
+<a href="https://github.com/gabriel-pena" target="_blank" title="gabriel-pena">
+  <img src="https://github.com/gabriel-pena.png?size=64" width="64" height="64" alt="gabriel-pena">
+</a>
 
 ## Thanks
 
