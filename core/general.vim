@@ -46,10 +46,17 @@ set undodir=~/.tmp/undo
 set relativenumber
 set backspace=2
 set backspace=indent,eol,start
-set tabstop=4
-set cindent shiftwidth=4
-set autoindent shiftwidth=4
+" Tabs and Indents {{{
+" ----------------
 set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set smarttab
+set autoindent
+set smartindent
+set shiftround
+" }}}
 set hidden
 set shortmess=aFc
 set signcolumn=yes
