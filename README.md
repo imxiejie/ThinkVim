@@ -53,6 +53,8 @@
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
+- Note: If your system sets \$XDG_CONFIG_HOME, use that instead of ~/.config in the code above. Nvim follows the XDG base-directories convention.
+
 **_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
 
 **_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
