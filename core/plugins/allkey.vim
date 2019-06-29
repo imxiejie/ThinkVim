@@ -113,15 +113,12 @@ endif
 
 
 if dein#tap('vim-go')
-     autocmd MyAutoCmd FileType go
-                    \  nmap <Leader>gov <Plug>(go-def-vertical)
-                    \ | nmap <Leader>goi <Plug>(go-info)
-                    \ | nmap <Leader>god <Plug>(go-doc)
-                    \ | nmap <leader>gor <Plug>(go-run)
-                    \ | nmap <leader>gob <Plug>(go-build)
-                    \ | nmap <leader>got <Plug>(go-test)
-                    \ | nmap <leader>goc <Plug>(go-coverage)
-                    \ | nmap <Leader>gr  <Plug>(go-rename)
+	 nnoremap <silent> <leader>gi :GoImpl<CR>
+	 nnoremap <silent> <Leader>gd :GoDescribe<CR>
+	 nnoremap <silent> <Leader>gc :GoCallees<CR>
+	 nnoremap <silent> <Leader>gC :GoCallers<CR>
+	 nnoremap <silent> <Leader>gs :GoCallstack<CR>
+	 nnoremap <silent> <Leader>gr :GoRun<CR>
 endif
 
 if dein#tap('vim-easygit')

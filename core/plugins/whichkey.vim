@@ -59,17 +59,11 @@ let g:which_key_map = {
             \ },
       \ 'g' : {
             \ 'name' : '+golang-toolkit',
-            \ 'r'    : 'go Rename',
-            \ 'o ': {
-                \ 'name':'+go-tool',
-                \ 'i'   :'go Info',
-                \ 'd'   :'go Doc',
-                \ 'r'   :'go Run',
-                \ 'b'   :'go Build',
-                \ 't'   :'go Test',
-                \ 'c'   :'go Coverage',
-                \ 'v'   :'go Def',
-                \ },
+            \ 'r'    : 'go run',
+            \ 'd'    : 'go describe',
+            \ 'c'    : 'go callees',
+            \ 'C'    : 'go callers',
+            \ 's'    : 'go callstack',
             \ },
       \ }
 let g:which_key_map[' '] = {
