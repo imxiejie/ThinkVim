@@ -118,7 +118,6 @@ if dein#tap('vim-go')
 	 nnoremap <silent> <Leader>gc :GoCallees<CR>
 	 nnoremap <silent> <Leader>gC :GoCallers<CR>
 	 nnoremap <silent> <Leader>gs :GoCallstack<CR>
-	 nnoremap <silent> <Leader>gr :GoRun<CR>
 endif
 
 if dein#tap('vim-easygit')
