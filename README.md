@@ -248,6 +248,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   | coc-snippet  | `Ⓢ`  |
   | go file      | `Ⓖ`  |
 
+- BreakChange ‼️
+  - thinkvim has own statusline and tabline 🎉
+  - ![img](https://github.com/taigacute/IMG/blob/master/thinkvim/newline.png)
+  - if you want use lightline ,you can uncomment `lightline` in `dein/plugins.yaml`
+
 ## [Defx.nvim](https://github.com/Shougo/defx.nvim)
 
 - Defx provide more features,The defx is very fatest than nerdtree when you open multifiles.
