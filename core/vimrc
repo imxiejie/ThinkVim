@@ -20,8 +20,7 @@ function! s:source_file(path, ...) abort
   " substitute all 'set' to 'setglobal'
   let content = map(readfile(abspath),
         \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
-  " create tempfile and source the tempfile
-  let tempfile = tempname()
+  " create tempfile and source the tempfile let tempfile = tempname()
   try
     call writefile(content, tempfile)
     execute 'source' fnameescape(tempfile)
@@ -55,6 +54,7 @@ call s:source_file('general.vim')
 call s:source_file('filetype.vim')
 call s:source_file('mappings.vim')
 call s:source_file('/themes/theme.vim')
+call s:source_file('/modline/statusline.vim')
 "---------------------------------------------------------------------------
 if s:is_sudo
 	set noswapfile
