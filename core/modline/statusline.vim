@@ -297,11 +297,11 @@ set statusline+=\
 
 hi User1 ctermbg=237 ctermfg=172 guibg=#3c3836 guifg=#d78700
 hi User2 ctermbg=237 ctermfg=172 guibg=#3c3836 guifg=#d78700
-hi User3 ctermbg=237 ctermfg=100 guibg=#3c3836 guifg=#878700
-hi User4 ctermbg=237 ctermfg=32 guibg=#3c3836 guifg=#0087d7
+hi User3 ctermbg=237 ctermfg=188 guibg=#3c3836 guifg=#d7d7d7
+hi User4 ctermbg=237 ctermfg=142 guibg=#3c3836 guifg=#b8bb26
 hi User5 ctermbg=237 ctermfg=130 guibg=#3c3836 guifg=#af5f00
 hi User6 ctermbg=237 ctermfg=124 guibg=#3c3836 guifg=#cc241d
-hi User7 ctermbg=237 ctermfg=130 guibg=#3c3836 guifg=#0087d7
+hi User7 ctermbg=237 ctermfg=166 guibg=#3c3836 guifg=#d75f00
 hi User8 ctermbg=237 ctermfg=167 guibg=#3c3836 guifg=#d75f5f
 hi User9 ctermbg=237 ctermfg=96 guibg=#3c3836 guifg=#875f87
 
