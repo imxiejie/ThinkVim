@@ -257,7 +257,7 @@ endfunction
 
 set laststatus=2
 set statusline=
-set statusline+=%1*
+set statusline+=%#Seperate#
 set statusline+=\
 set statusline+=%2*
 set statusline+=%{VimacslineMode()}
@@ -285,14 +285,12 @@ set statusline+=\
 set statusline+=%9*
 set statusline+=%{CocStatusBar()}
 set statusline+=%=
-set statusline+=%13*
-set statusline+=%{FileEncoding()}
+set statusline+=%#StatusEncod#%{FileEncoding()}
 set statusline+=\ 
-set statusline+=%14*
-set statusline+=%{VimacsLineFileformat()}
-set statusline+=%15*
+set statusline+=%#StatusFileFormat#%{VimacsLineFileformat()}
 set statusline+=\ 
-set statusline+=%{VimacsLineinfo()}
+set statusline+=%#StatusLineinfo#%{VimacsLineinfo()}
+set statusline+=%#EndSeperate#
 set statusline+=\
 
 hi Seperate ctermbg=237 ctermfg=265 guibg=#3c3836 guifg=#bd93f9
@@ -312,10 +310,12 @@ hi EndSeperate ctermbg=237 ctermfg=265 guibg=#3c3836 guifg=#bd93f9
 augroup Stautsline
   autocmd!
   autocmd VimEnter,WinEnter,BufEnter * call VimacsLineGit()
+  autocmd User CocStatusChange  * call HeartErrorSymbol()
   autocmd  User CocDiagnosticChange
     \   call VimacsLineCocWarn()
     \|  call VimacsLineCocError()
     \|  call HeartErrorSymbol()
     \|  call CocActionAsync('quickfixes', function('CocUpdateQuickFixes'))
 augroup END
+
 
