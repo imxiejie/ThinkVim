@@ -295,7 +295,7 @@ set statusline+=\
 set statusline+=%{VimacsLineinfo()}
 set statusline+=\
 
-hi User1 ctermbg=237 ctermfg=172 guibg=#3c3836 guifg=#d78700
+hi Seperate ctermbg=237 ctermfg=265 guibg=#3c3836 guifg=#bd93f9
 hi User2 ctermbg=237 ctermfg=172 guibg=#3c3836 guifg=#d78700
 hi User3 ctermbg=237 ctermfg=188 guibg=#3c3836 guifg=#d7d7d7
 hi User4 ctermbg=237 ctermfg=142 guibg=#3c3836 guifg=#b8bb26
@@ -304,6 +304,10 @@ hi User6 ctermbg=237 ctermfg=124 guibg=#3c3836 guifg=#cc241d
 hi User7 ctermbg=237 ctermfg=166 guibg=#3c3836 guifg=#d75f00
 hi User8 ctermbg=237 ctermfg=167 guibg=#3c3836 guifg=#d75f5f
 hi User9 ctermbg=237 ctermfg=96 guibg=#3c3836 guifg=#875f87
+hi StatusEncod ctermbg=237 ctermfg=225 guibg=#3c3836 guifg=#6272a4
+hi StatusFileFormat ctermbg=237 ctermfg=225 guibg=#3c3836 guifg=#6272a4
+hi StatusLineinfo ctermbg=237 ctermfg=225 guibg=#3c3836 guifg=#6272a4
+hi EndSeperate ctermbg=237 ctermfg=265 guibg=#3c3836 guifg=#bd93f9
 
 augroup Stautsline
   autocmd!
