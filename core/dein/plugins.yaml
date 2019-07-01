@@ -5,11 +5,11 @@
 - repo: Shougo/dein.vim
 - repo: honza/vim-snippets
 
-# - repo: itchyny/lightline.vim
-#   depends: vim-devicons
-#   hook_add: source $VIMPATH/core/plugins/lightline.vim
-# - repo: mengelbrecht/lightline-bufferline
-#   hook_add: source $VIMPATH/core/plugins/lightline.vim
+- repo: itchyny/lightline.vim
+  depends: vim-devicons
+  hook_add: source $VIMPATH/core/plugins/lightline.vim
+- repo: mengelbrecht/lightline-bufferline
+  hook_add: source $VIMPATH/core/plugins/lightline.vim
 #}}}
 
 # Core Plugins{{{
