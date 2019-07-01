@@ -251,7 +251,15 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - BreakChange ‼️
   - thinkvim has own statusline and tabline 🎉
   - ![img](https://github.com/taigacute/IMG/blob/master/thinkvim/newline.png)
-  - if you want use lightline ,you can uncomment `lightline` in `dein/plugins.yaml`
+  - if you want use lightline ,you can add lightline in your `local_plugins.yaml`
+
+```
+- repo: itchyny/lightline.vim
+  depends: vim-devicons
+  hook_add: source $VIMPATH/core/plugins/lightline.vim
+- repo: mengelbrecht/lightline-bufferline
+  hook_add: source $VIMPATH/core/plugins/lightline.vim
+```
 
 ## [Defx.nvim](https://github.com/Shougo/defx.nvim)
 
