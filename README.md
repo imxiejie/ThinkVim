@@ -250,7 +250,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - BreakChange ‼️
   - thinkvim has own statusline and tabline 🎉
-  - ![img](https://github.com/taigacute/IMG/blob/master/thinkvim/newline.png)
+  - ![img](https://github.com/taigacute/IMG/blob/master/thinkvim/thinkvimline.png)
   - if you want use lightline ,you can add lightline in your `local_plugins.yaml`
 
 ```
