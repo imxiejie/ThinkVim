@@ -257,6 +257,7 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   | go file      | `Ⓖ`  |
 
 - [spaceline](https://github.com/taigacute/spaceline.vim)
+
   ![image](https://github.com/taigacute/IMG/blob/master/spaceline/error.png)
 
 ## [Defx.nvim](https://github.com/Shougo/defx.nvim)
