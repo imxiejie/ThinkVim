@@ -6,9 +6,9 @@
 
 ## Commic Custom
 
-| ACG                                                                                                              | 狂赌之渊                                                                                                       |
-| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/kuangdushenyuan.png" width="480" height="300"> |
+| ACG                                                                                                              | Spaceline                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
 
 ## [中文](README-CN.md)
 
@@ -49,8 +49,16 @@
 
 **_1._**
 
+- install master branch
+
 ```
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
+```
+
+- Notice!! I made a new statusline call [spaceline.vim](https://github.com/taigacute/spaceline.vim),if you want use spaceline version,install dev branch
+
+```
+git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
 - Note: If your system sets \$XDG_CONFIG_HOME, use that instead of ~/.config in the code above. Nvim follows the XDG base-directories convention.
@@ -247,6 +255,9 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   | coc-tsserver | `Ⓣ`  |
   | coc-snippet  | `Ⓢ`  |
   | go file      | `Ⓖ`  |
+
+- [spaceline](https://github.com/taigacute/spaceline.vim)
+  ![image](https://github.com/taigacute/IMG/blob/master/spaceline/error.png)
 
 ## [Defx.nvim](https://github.com/Shougo/defx.nvim)
 
