@@ -71,46 +71,47 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
    <details><summary><code>CoC support</code>👈 Click</summary><br><pre>
 
-  - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
-  - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
-  - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
-  - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
-  - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
-  - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
-  - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
-  - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
-  - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
-  - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
-  - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
-  - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
-  - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
-  - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
-  - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
-  - [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
-  - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
-  - [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-  - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
-  - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-  - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
-  - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
+  [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
+  [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
+  [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
+  [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
+  [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
+  [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
+  [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
+  [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
+  [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
+  [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
+  [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
+  [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
+  [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
+  [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
+  [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
+  [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
+  [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
+  [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+  [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
+  [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+  [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
+  [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
 
     </pre></details>
 
 - CocExtensions
+
   - The list is coc extensions which ThinkVim didnt installed,you can found the list that i installed coc extensions under the doc
     <details><summary><code>CoC Extensions Which ThinkVim not installed</code>👈 Click</summary><br><pre>
-    - **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
-    - **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
-    - **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-    - **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
-    - **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
-    - **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
-    - **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
-    - **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
-    - **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
-    - **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
-    - **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
-    - **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
+     [coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
+     [coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+     [coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
+     [coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
+     [coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
+     [coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
+     [coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
+     [coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+     [coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
+     [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
+     [coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+     [coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
     </pre></details>
 
 ## Structure
@@ -235,69 +236,16 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 </pre></details>
 
-## Custom ‼️
+## Config
 
-- if you need some plugins which not in Thinkvim ,you can add them into the `local/local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
-- i think split the user plugins and thinkvim plugins in two files looks like good. this way cant break the thinkvim and easy to use.if you dont like `local` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local` unless you have vimscript skill and you grasp this config
-
-## ColorScheme
-
-- The theme is [gruvbox9](https://github.com/taigacute/gruvbox9)，Works fine with [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)，I create a new syntax group which provide the highlight of `jsxEndComponentName` in [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),if you wirte js/jsx, you will find the color very similar like vscode-gruvbox
-- The Color of other Languages are same as gruvbox,maybe some little change.
-
-## Spaceline
-
-- spaceline provide separator groups, include `arrow` `curve` `slant`.the default group is `arrow`
-
-```viml
-let g:spaceline_seperate_style= 'arrow'
-```
-
-- normal mode
-
-  | group   | ScreenShot                                                                        |
-  | ------- | --------------------------------------------------------------------------------- |
-  | `none`  | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/none-normal.png)  |
-  | `arrow` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/arrow-normal.png) |
-  | `curve` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/curve-normal.png) |
-  | `slant` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/slant-normal.png) |
-
-- synataxcheck mode
-
-  | group   | ScreenShot                                                                 |
-  | ------- | -------------------------------------------------------------------------- |
-  | `none`  | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/none.png)  |
-  | `arrow` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/arrow.png) |
-  | `curve` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/curve.png) |
-  | `slant` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/slant.png) |
-
-- you can custom every symbol in spaceline. there are some very useful settings.first you should set the `g:seperate_mode` to 1
-
-```viml
-
-let g:spaceline_seperate_mode = 0
-```
-
-- then set any seperate by these settings
-
-```viml
-        let g:spaceline_homemode_right = ''
-        let g:spaceline_filename_left  = ''
-        let g:spaceline_filesize_right = ''
-        let g:spaceline_gitinfo_left   = ''
-        let g:spaceline_gitinfo_right  = ''
-        let g:spaceline_cocexts_right  = ''
-        let g:spaceline_lineformat_right = ''
-        let g:spaceline_seperate_endseperate = ''
-        let g:spaceline_seperate_emptyseperate = ''
-```
-
-## [Defx.nvim](https://github.com/Shougo/defx.nvim)
-
-- Defx provide more features,The defx is very fatest than nerdtree when you open multifiles.
-
-## Startify
-
+- Custom ‼️
+  - if you need some plugins which not in Thinkvim ,you can add them into the `local/local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
+  - i think split the user plugins and thinkvim plugins in two files looks like good. this way cant break the thinkvim and easy to use.if you dont like `local` you can delete it .it doesnt effect thinkvim. but my advice is you can use `local` unless you have vimscript skill and you grasp this config
+- ColorScheme
+  - The theme is [gruvbox9](https://github.com/taigacute/gruvbox9)，Works fine with [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)，I create a new syntax group which provide the highlight of `jsxEndComponentName` in [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),if you wirte js/jsx, you will find the color very similar like vscode-gruvbox
+  - The Color of other Languages are same as gruvbox,maybe some little change.
+- Spaceline
+  - check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 - Startify can only set the header and footer centerd，you can edit the`core/plugins/startify.vim`,changed this number`let g:startify_padding_left = 40` until the file area centerd on your screen
 
 ## Keymap
@@ -545,6 +493,8 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
 <a href="https://github.com/gabriel-pena" target="_blank" title="gabriel-pena">
   <img src="https://github.com/gabriel-pena.png?size=64" width="64" height="64" alt="gabriel-pena">
 </a>
+
+<img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="240"  height="100">
 
 ## Thanks
 
