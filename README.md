@@ -99,20 +99,23 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - CocExtensions
 
   - The list is coc extensions which ThinkVim didnt installed,you can found the list that i installed coc extensions under the doc
-    <details><summary><code>CoC Extensions Which ThinkVim not installed</code>👈 Click</summary><br><pre>
-     [coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
-     [coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
-     [coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-     [coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
-     [coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
-     [coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
-     [coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
-     [coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
-     [coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
-     [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
-     [coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
-     [coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
-    </pre></details>
+
+ <details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
+
+    [coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`
+    [coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`
+    [coc-java](https://github.com/neoclide/coc-java)** for `java`
+    [coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`
+    [coc-rls](https://github.com/neoclide/coc-rls)** for `rust`
+    [coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
+    [coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
+    [coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+    [coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
+    [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
+    [coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+    [coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
+
+</pre></details>
 
 ## Structure
 
