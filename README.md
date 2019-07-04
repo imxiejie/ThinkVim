@@ -101,6 +101,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   - The list is coc extensions which ThinkVim didnt installed,you can found the list that i installed coc extensions under the doc
 
  <details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
+
     [coc-vetur](https://github.com/neoclide/coc-vetur) for `vue`
     [coc-phpls](https://github.com/marlonfan/coc-phpls) for `php`
     [coc-java](https://github.com/neoclide/coc-java) for `java`
@@ -113,11 +114,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
     [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss) for `tailwindcss`.
     [coc-angular](https://github.com/iamcco/coc-angular) for `angular`.
     [coc-vimlsp](https://github.com/iamcco/coc-vimlsp) for `viml`.
+
 </pre></details>
 
 ## Structure
 
-- [after](~/.config/nvim/after)
 - [autoload](~/.config/nvim/autoload)
   - [spaceline](~/.config/nvim/after/autoload/spaceline)
     - [spaceline](~/.config/nvim/after/autoload/lightline/sapceline) - spaceline function
@@ -211,7 +212,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
  </pre></details>
 
-## CoC Extensions
+- Installed CoC Extensions
 
 <details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
 
@@ -495,7 +496,7 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
   <img src="https://github.com/gabriel-pena.png?size=64" width="64" height="64" alt="gabriel-pena">
 </a>
 
-<img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="240"  height="100">
+<img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" >
 
 ## Thanks
 
