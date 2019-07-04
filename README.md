@@ -62,16 +62,14 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## Completion
 
 - Completion use LanguageServerProtocol by CoC.nvim.
+- Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+- [More about Coc](https://github.com/neoclide/coc.nvim)
+- ThinkVim support javascript typescript python.you dont need to install js ts python server(python you need jedi or Mpls).
+- [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
+- [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 - Checkout the languageserverprotocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 
    <details><summary><code>CoC support</code>👈 Click</summary><br><pre>
-   <!-- Required -->
-     - Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)?
-     - [More about Coc](https://github.com/neoclide/coc.nvim)
-     - The list is the lsp which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-     - ThinkVim support javascript typescript python.you dont need to install js ts python server.
-     - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
-     - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
   - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
   - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
@@ -95,6 +93,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
   - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
   - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
   - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
+
     </pre></details>
 
 - CocExtensions
