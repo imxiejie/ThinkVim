@@ -44,7 +44,7 @@ function! s:lightline_is_lean() abort
 endfunction
 
 function! s:lightline_is_plain() abort
-  return &buftype ==? 'terminal' || &filetype =~? '\v^help|denite|defx|vista_kind|tagbar$'
+  return &buftype ==? 'terminal' || &filetype =~? '\v^help|denite|defx|vista_kind|vista|tagbar$'
 endfunction
 
 
@@ -54,6 +54,7 @@ function! LightlineLineinfo() abort
   \      &filetype ==? 'denite'           ? ' ' :
   \      &filetype ==? 'tagbar'           ? ' ' :
   \      &filetype ==? 'vista_kind'       ? ' ' :
+  \      &filetype ==? 'vista'            ? ' ' :
   \      &filetype =~? '\v^mundo(diff)?$' ? ' ' :
   \      s:lightline_is_lean() || s:lightline_is_plain() ? ' '  :
   \      printf('☰ %d:%d %d%%', line('.'), col('.'), 100*line('.')/line('$'))
@@ -102,6 +103,9 @@ function! LightlineFilenameActive() abort
     return get(g:lightline, 'fname', '')
   endif
   if &filetype ==? 'vista_kind'
+    return get(g:lightline, 'VISTA', '')
+  endif
+  if &filetype ==? 'vista'
     return get(g:lightline, 'VISTA', '')
   endif
   if empty(expand('%:t'))
@@ -163,6 +167,9 @@ function! CocStatusBar() abort
         return ""
     endif
     if &filetype ==? 'defx'
+        return ""
+    endif
+    if &filetype ==? 'vista'
         return ""
     endif
      return join(['❖',s])

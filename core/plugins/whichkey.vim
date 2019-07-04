@@ -59,15 +59,15 @@ let g:which_key_map = {
             \ },
       \ 'g' : {
             \ 'name' : '+golang-toolkit',
+            \ 'i'    : 'go impl',
             \ 'd'    : 'go describe',
             \ 'c'    : 'go callees',
             \ 'C'    : 'go callers',
             \ 's'    : 'go callstack',
-            \ 'i'    : 'go impl',
             \ },
       \ }
 let g:which_key_map[' '] = {
-      \ 'name' : '+Easymotion ' ,
+      \ 'name' : '+easymotion-jumpto-word ' ,
       \ 'b' : ['<plug>(easymotion-b)' , 'beginning of word backward'],
       \ 'f' : ['<plug>(easymotion-f)' , 'find {char} to the left'],
       \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
@@ -76,7 +76,6 @@ let g:which_key_map[' '] = {
 let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
       \ 't'    : 'open tagbar show outlien',
-      \ 'e'    : 'open nerdtree',
       \ 'v'    : 'open vista show outline',
       \ 'r'    : 'quick run',
       \ 'm'    : 'toolkit Menu',

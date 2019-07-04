@@ -5,18 +5,19 @@
 - repo: Shougo/dein.vim
 - repo: honza/vim-snippets
 
-- repo: itchyny/lightline.vim
-  depends: vim-devicons
-  hook_add: source $VIMPATH/core/plugins/lightline.vim
-- repo: mengelbrecht/lightline-bufferline
-  hook_add: source $VIMPATH/core/plugins/lightline.vim
+# - repo: itchyny/lightline.vim
+#   depends: vim-devicons
+#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
+# - repo: mengelbrecht/lightline-bufferline
+#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
+
 #}}}
 
 # Core Plugins{{{
 - repo: neoclide/coc.nvim
   merge: 0
   rev: release
-  hook_add: source $VIMPATH/core/plugins/coc.vim
+  hook_add: source  $VIMPATH/core/plugins/coc.vim
 # }}}
 
 
@@ -53,11 +54,11 @@
 - repo: ludovicchabant/vim-gutentags
   if: executable('ctags')
   on_path: .*
-  hook_source: source $VIMPATH/core/plugins/vim-gutentags.vim
+  hook_source: source  $VIMPATH/core/plugins/vim-gutentags.vim
 
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
-  hook_source: source $VIMPATH/core/plugins/goyo.vim
+  hook_source: source  $VIMPATH/core/plugins/goyo.vim
 
 - repo: junegunn/Limelight.vim
   on_cmd: Limelight
@@ -142,19 +143,6 @@
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
 
-- repo: scrooloose/nerdtree
-  on_map: { n: <Plug> }
-  trusted: 1
-  hook_post_source: source  $VIMPATH/core/plugins/nerdtree.vim
-
-- repo: tiagofumo/vim-nerdtree-syntax-highlight
-  hook_add: |
-    let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-    let g:NERDTreeDisableExactMatchHighlight = 1
-    let g:NERDTreeDisablePatternMatchHighlight = 1
-    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md']
-
-- { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
 # }}}
 
 # Search Plugins{{{
@@ -165,12 +153,13 @@
 - repo: junegunn/fzf.vim
   depends: fzf
   on_cmd: [Colors,Rg,Buffers]
-  hook_add: source $VIMPATH/core/plugins/fzf.vim
+  hook_add: source  $VIMPATH/core/plugins/fzf.vim
 
 # }}}
 
 # Git Plugins{{{
-- { repo: tpope/vim-fugitive, on_path: .* }
+
+- { repo: tyru/caw.vim, on_map: { nx: <Plug> }}
 
 - repo: chemzqm/vim-easygit
   on_cmd: [Gcd, Glcd, commit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
@@ -180,7 +169,7 @@
 # use coc-git instead of vim-gitgutter
 # - repo: airblade/vim-gitgutter
 #   on_path: .*
-#   hook_source: source  $VIMPATH/core/plugins/vim-gitgutter.vim
+#   hook_source: source ~/.config/nvim/core/plugins/vim-gitgutter.vim
 
 # }}}
 
@@ -225,7 +214,8 @@
 # }}}
 
 # Coding{{{
-- { repo: tyru/caw.vim, on_map: { nx: <Plug> }}
+- repo: tyru/caw.vim
+  on_map: { nx: <Plug> }
 
 - repo: sbdchd/neoformat
   on_cmd: [Neoformat,Neoformat!]
@@ -233,7 +223,7 @@
 
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
-  hook_source: source  $VIMPATH/core/plugins/indentline.vim
+  hook_source: source $VIMPATH/core/plugins/indentline.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
@@ -269,7 +259,7 @@
         let g:echodoc#type = "virtual"
 
 # - repo: w0rp/ale
-#   hook_add: source  $VIMPATH/core/plugins/vim-ale.vim
+#   hook_add: source ~/.config/nvim/core/plugins/vim-ale.vim
 
 # }}}
 
@@ -295,4 +285,10 @@
   on_map: { ox: <Plug> }
   hook_add:  let g:textobj_multiblock_no_default_key_mappings = 1
 
+# }}}
+
+# CommentPLuins too old, or find much better plugins{{{
+# - repo: rhysd/vim-operator-surround
+#   depends: [vim-operator-user, vim-textobj-multiblock]
+#   on_map:  { vnx : <Plug> }
 # }}}
