@@ -63,16 +63,38 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Completion use LanguageServerProtocol by CoC.nvim.
 - Checkout the languageserverprotocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-  <details><summary><code>CoC support</code>👈 Click</summary><br><pre>
-  <!-- Required -->
-- Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)?
-- [More about Coc](https://github.com/neoclide/coc.nvim)
-- The list is the lsp which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-- ThinkVim support javascript typescript python.you dont need to install js ts python server.
-- [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
-- [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
-  - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart) - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c) - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust) - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go) - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php) - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile) - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash) - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua) - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml) - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript) - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow) - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell) - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown) - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir) - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python) - [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby) - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala) - [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex) - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm) - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex) - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure) - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
+   <details><summary><code>CoC support</code>👈 Click</summary><br><pre>
+   <!-- Required -->
+     - Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)?
+     - [More about Coc](https://github.com/neoclide/coc.nvim)
+     - The list is the lsp which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+     - ThinkVim support javascript typescript python.you dont need to install js ts python server.
+     - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
+     - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
+
+  - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
+  - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
+  - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
+  - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
+  - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
+  - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
+  - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
+  - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
+  - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
+  - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
+  - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
+  - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
+  - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
+  - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
+  - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
+  - [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
+  - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
+  - [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+  - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
+  - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+  - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
+  - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
     </pre></details>
 
 - CocExtensions
@@ -114,16 +136,18 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [ftplugin](~/.config/nvim/ftplugin) - filetypePlugin
 - [plugin](~/.config/nvim/plugin) - Some easy plugin
 
-## LoadPlugins
+- LoadPlugins
 
 <details><summary><code>Normal Load Plugins</code>👈 Click</summary><br><pre>
+
 | Name                                                                      | Description     |
 | ------------------------------------------------------------------------- | --------------- |
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
 | [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
+
 </pre></details>
 
-## LazyLoadPlugins
+- LazyLoadPlugins
 
 <details><summary><code>Lazy Load Plugins</code>👈 Click</summary><br><pre>
 
