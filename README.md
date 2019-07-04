@@ -460,27 +460,27 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 </pre></details>
 
-<details><summary><code>CoC</code>👈 Click</summary><br><pre>
+    <details><summary><code>CoC</code>👈 Click</summary><br><pre>
 
-| Keys         | Mode          | Description               |
-| ------------ | ------------- | ------------------------- |
-| Tab          | Select        | Jump                      |
-| Tab          | Insert        | completion donw           |
-| Shit + Tab   | Insert        | completion up             |
-| Ctrl + n     | Insert        | completion down           |
-| Ctrl + p     | Insert        | completion up             |
-| Ctrl + Space | Normal        | Forced trigger completion |
-| `<CR>`       | Insert/Select | Confirm                   |
-| K            | Normal        | Show the function doc     |
-| gd           | Normal        | jump to defined           |
-| gy           | Normal        | coc-type-definition       |
-| gi           | Normal        | coc-implementation        |
-| gr           | Normal        | coc-references            |
-| `[` + g      | Normal        | coc-git-prechunk          |
-| `]` + g      | Normal        | coc-git-nextchunk         |
-| gs           | Normal        | git chunkinfo             |
+    | Keys         | Mode          | Description               |
+    | ------------ | ------------- | ------------------------- |
+    | Tab          | Select        | Jump                      |
+    | Tab          | Insert        | completion donw           |
+    | Shit + Tab   | Insert        | completion up             |
+    | Ctrl + n     | Insert        | completion down           |
+    | Ctrl + p     | Insert        | completion up             |
+    | Ctrl + Space | Normal        | Forced trigger completion |
+    | `<CR>`       | Insert/Select | Confirm                   |
+    | K            | Normal        | Show the function doc     |
+    | gd           | Normal        | jump to defined           |
+    | gy           | Normal        | coc-type-definition       |
+    | gi           | Normal        | coc-implementation        |
+    | gr           | Normal        | coc-references            |
+    | `[` + g      | Normal        | coc-git-prechunk          |
+    | `]` + g      | Normal        | coc-git-nextchunk         |
+    | gs           | Normal        | git chunkinfo             |
 
-</pre></details>
+    </pre></details>
 
 ## Backers
 
@@ -496,7 +496,7 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
   <img src="https://github.com/gabriel-pena.png?size=64" width="64" height="64" alt="gabriel-pena">
 </a>
 
-<img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" >
+<img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="50%"  height="50%">
 
 ## Thanks
 
