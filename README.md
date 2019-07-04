@@ -69,39 +69,41 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 - Checkout the languageserverprotocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 
-   <details><summary><code>CoC support</code>👈 Click</summary><br><pre>
+<details><summary><code>CoC support</code>👈 Click</summary>
+<p>
 
-  [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
-  [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
-  [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
-  [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
-  [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
-  [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
-  [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
-  [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
-  [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
-  [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
-  [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
-  [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
-  [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
-  [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
-  [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
-  [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
-  [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
-  [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-  [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
-  [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-  [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
-  [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
+[Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
+[C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
+[Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
+[Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
+[PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
+[Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
+[Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
+[Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
+[OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
+[PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
+[Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
+[Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
+[vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
+[Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
+[Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
+[Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
+[Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
+[Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+[Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
+[Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
+[clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
+[julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
 
-    </pre></details>
+  </p>
+  </details>
 
 - CocExtensions
 
   - The list is coc extensions which ThinkVim didnt installed,you can found the list that i installed coc extensions under the doc
 
- <details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
-
+<details><summary><code>CoC Extensions</code>👈 Click</summary>
+<p>
 [coc-vetur](https://github.com/neoclide/coc-vetur) for `vue`
 [coc-phpls](https://github.com/marlonfan/coc-phpls) for `php`
 [coc-java](https://github.com/neoclide/coc-java) for `java`
@@ -114,8 +116,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss) for `tailwindcss`.
 [coc-angular](https://github.com/iamcco/coc-angular) for `angular`.
 [coc-vimlsp](https://github.com/iamcco/coc-vimlsp) for `viml`.
-
-</pre></details>
+</p>
+</details>
 
 ## Structure
 
@@ -138,20 +140,19 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - [ftplugin](~/.config/nvim/ftplugin) - filetypePlugin
 - [plugin](~/.config/nvim/plugin) - Some easy plugin
 
-- LoadPlugins
-
-<details><summary><code>Normal Load Plugins</code>👈 Click</summary><br><pre>
+<details><summary><code>Normal Load Plugins</code>👈 Click</summary>
+<p>
 
 | Name                                                                      | Description     |
 | ------------------------------------------------------------------------- | --------------- |
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
 | [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
 
-</pre></details>
+</p>
+</details>
 
-- LazyLoadPlugins
-
-<details><summary><code>Lazy Load Plugins</code>👈 Click</summary><br><pre>
+<details><summary><code>Lazy Load Plugins</code>👈 Click</summary>
+<p>
 
 | Name                                                                                                  | Description                                                                        |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -210,11 +211,13 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [cespare/vim-toml](https://github.com/cespare/vim-toml)                                               | toml                                                                               |
 | [vim-scripts/xml.vim](https://github.com/vim-scripts/xml.vim)                                         | xml                                                                                |
 
- </pre></details>
+ </p>
+ </details>
 
 - Installed CoC Extensions
 
-<details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
+<details><summary><code>CoC Extensions</code>👈 Click</summary>
+<p>
 
 | Name                                                       | Description                                    |
 | ---------------------------------------------------------- | ---------------------------------------------- |
@@ -236,7 +239,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [coc-git](https://github.com/neoclide/coc-git)             | git extension                                  |
 | [coc-post](https://github.com/iamcco/coc-post)             | easy to use like postman                       |
 
-</pre></details>
+</p>
+</details>
 
 ## Config
 
@@ -257,7 +261,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but in `allkey.vim` ,you can create
   a isse. Welcome PR.
 
-<details><summary><code>Operation</code>👈 Click</summary><br><pre>
+<details><summary><code>Operation</code>👈 Click</summary>
+<p>
 
 | Keys        | Mode    | Description                             |
 | ----------- | ------- | --------------------------------------- |
@@ -309,9 +314,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | zl          | Normal  | Denite Outline for golang               |
 | zT          | Normal  | Denite Goroot for golang                |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>Window</code>👈 Click</summary><br><pre>
+<details><summary><code>Window</code>👈 Click</summary>
+<p>
 
 | Keys       | Mode   | Description                       |
 | ---------- | ------ | --------------------------------- |
@@ -326,9 +333,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | Ctrl + d   | Normal | Window scrolls down half a screen |
 | Ctrl + u   | Normal | Window scrolls up half a screen   |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>Tab</code>👈 Click</summary><br><pre>
+<details><summary><code>Tab</code>👈 Click</summary>
+<p>
 
 | Keys            | Mode   | Description |
 | --------------- | ------ | ----------- |
@@ -336,9 +345,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<Leader>` + te | Normal | edit tab    |
 | `<Leader>` + tm | Normal | move tab    |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>LeaderKey</code>👈 Click</summary><br><pre>
+<details><summary><code>LeaderKey</code>👈 Click</summary>
+<p>
 
 | Keys                        | Mode   | Description                           |
 | --------------------------- | ------ | ------------------------------------- |
@@ -379,9 +390,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<Leader>` + goc            | Normal | vim-go GoCoverage                     |
 | `<Leader>` + gov            | Normal | vim-go GoDef                          |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>LocalLeaderKey</code>👈 Click</summary><br><pre>
+<details><summary><code>LocalLeaderKey</code>👈 Click</summary>
+<p>
 
 | Keys                 | Mode   | Description             |
 | -------------------- | ------ | ----------------------- |
@@ -399,9 +412,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<LocalLeader>` + gl | Normal | Denite show all git log |
 | `<LocalLeader>` + gh | Normal | Denite show git branch  |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>Denite</code>👈 Click</summary><br><pre>
+<details><summary><code>Denite</code>👈 Click</summary>
+<p>
 
 | Keys                | Mode                 | Description        |
 | ------------------- | -------------------- | ------------------ |
@@ -430,9 +445,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<jj>`              | Denite Filter insert | move window        |
 | `<jj>`              | Denite Filter normal | move window        |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>Defx</code>👈 Click</summary><br><pre>
+<details><summary><code>Defx</code>👈 Click</summary>
+<p>
 
 | Keys           | Mode   | Description                    |
 | -------------- | ------ | ------------------------------ |
@@ -458,9 +475,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | gr             | Defx   | search in denite               |
 | w              | Defx   | increase the width             |
 
-</pre></details>
+</p>
+</details>
 
-<details><summary><code>CoC</code>👈 Click</summary><br><pre>
+<details><summary><code>CoC</code>👈 Click</summary>
+<p>
 
 | Keys         | Mode          | Description               |
 | ------------ | ------------- | ------------------------- |
@@ -480,7 +499,8 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `]` + g      | Normal        | coc-git-nextchunk         |
 | gs           | Normal        | git chunkinfo             |
 
-</pre></details>
+</p>
+</details>
 
 ## Backers
 
