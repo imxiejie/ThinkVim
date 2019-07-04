@@ -117,13 +117,11 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## LoadPlugins
 
 <details><summary><code>Normal Load Plugins</code>👈 Click</summary><br><pre>
-
 | Name                                                                      | Description     |
 | ------------------------------------------------------------------------- | --------------- |
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
 | [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
-
- </pre></details>
+</pre></details>
 
 ## LazyLoadPlugins
 
@@ -191,6 +189,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ## CoC Extensions
 
 <details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
+
 | Name                                                       | Description                                    |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | [coc-html](https://github.com/neoclide/coc-html)           | html extensins                                 |
