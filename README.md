@@ -104,6 +104,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 <details><summary><code>CoC Extensions</code>👈 Click</summary>
 <p>
+
 [coc-vetur](https://github.com/neoclide/coc-vetur) for `vue`
 [coc-phpls](https://github.com/marlonfan/coc-phpls) for `php`
 [coc-java](https://github.com/neoclide/coc-java) for `java`
@@ -116,6 +117,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 [coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss) for `tailwindcss`.
 [coc-angular](https://github.com/iamcco/coc-angular) for `angular`.
 [coc-vimlsp](https://github.com/iamcco/coc-vimlsp) for `viml`.
+
 </p>
 </details>
 
