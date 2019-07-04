@@ -7,11 +7,11 @@ call defx#custom#option('_', {
 	\ 'show_ignored_files': 0,
 	\ })
 
-" Close defx if it's the only buffer left in the window
-autocmd MyAutoCmd WinEnter * if &ft == 'defx' && winnr('$') == 1 | q | endif
-
-" Move focus to the next window if current buffer is defx
-autocmd MyAutoCmd TabLeave * if &ft == 'defx' | wincmd w | endif
+" " Close defx if it's the only buffer left in the window
+" autocmd MyAutoCmd WinEnter * if &ft == 'defx' && winnr('$') == 1 | q | endif
+"
+" " Move focus to the next window if current buffer is defx
+ autocmd MyAutoCmd TabLeave * if &ft == 'defx' | wincmd w | endif
 
 " Define mappings
 autocmd MyAutoCmd FileType defx do WinEnter | call s:defx_my_settings()

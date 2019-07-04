@@ -13,6 +13,7 @@ set background=dark
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_plugin_hi_groups = 1
 let g:gruvbox_transp_bg = 1
+let g:gruvbox_italicize_strings = 0
 " colorscheme hybrid_reverse
 "colorscheme space_vim_theme
 " colorscheme PaperColor
@@ -59,6 +60,9 @@ highlight def link Defx_filename_3_Renamed Title
 highlight def link Defx_filename_3_Unmerged Label
 " highlight Defx_git_Deleted   ctermfg=13 guifg=#b294bb
 
+" buftabline highlight
+" ---------------------------------------------------------
+highlight BufTabLineCurrent ctermbg=96 guibg=#5d4d7a
 
 "GetColorSynatxGroup
 " ---------------------------------------------------------

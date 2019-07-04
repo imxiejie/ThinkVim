@@ -1,4 +1,4 @@
-"Plugin key settings
+" Plugin key settings
 
 if dein#tap('denite.nvim')
         nnoremap <silent><localLeader>da  :TodoAdd 
@@ -83,9 +83,6 @@ if dein#tap('coc.nvim')
         " float window scroll
 		nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
-        nmap <silent> <TAB> <Plug>(coc-range-select)
-        xmap <silent> <TAB> <Plug>(coc-range-select)
-        xmap <silent> <S-TAB> <Plug>(coc-range-select-backword)
 endif
 
 function! s:show_documentation()
@@ -145,21 +142,21 @@ if dein#tap('accelerated-jk')
 endif
 
 if dein#tap('caw.vim')
-    function! InitCaw() abort
-    if !&l:modifiable
-      silent! nunmap <buffer> gc
-      silent! xunmap <buffer> gc
-      silent! nunmap <buffer> gcc
-      silent! xunmap <buffer> gcc
-    else
-      nmap <buffer> gc <Plug>(caw:prefix)
-      xmap <buffer> gc <Plug>(caw:prefix)
-      nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
-      xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
-    endif
-  endfunction
-  autocmd MyAutoCmd FileType * call InitCaw()
-  call InitCaw()
+	function! InitCaw() abort
+		if !&l:modifiable
+			silent! nunmap <buffer> gc
+			silent! xunmap <buffer> gc
+			silent! nunmap <buffer> gcc
+			silent! xunmap <buffer> gcc
+		else
+			nmap <buffer> gc <Plug>(caw:prefix)
+			xmap <buffer> gc <Plug>(caw:prefix)
+			nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+			xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+		endif
+	endfunction
+	autocmd MyAutoCmd FileType * call InitCaw()
+	call InitCaw()
 endif
 
 
@@ -217,7 +214,7 @@ endif
 
 if dein#tap('vista.vim')
         nnoremap <silent><localleader>v :Vista!!<CR>
-        nnoremap <silent><leader>fv :Vista finder coc<CR>
+        nnoremap <silent><leader>fv     :Vista finder coc<CR>
 endif
 
 if dein#tap('tagbar')
@@ -243,9 +240,12 @@ if dein#tap('vim-which-key')
 endif
 
 if dein#tap('vim-smartchr')
+    inoremap <expr> , smartchr#one_of(', ', ',')
     augroup MyAutoCmd
         autocmd FileType go inoremap <buffer><expr> ;
             \ smartchr#loop(':=',';')
+        autocmd FileType go inoremap <buffer> <expr> .
+          \ smartchr#loop('.', '->', '<-','...')
     augroup end
 endif
 
@@ -265,14 +265,13 @@ if dein#tap('vim-sandwich')
      nmap <silent> sdb <Plug>(operator-sandwich-delete)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
      nmap <silent> srb <Plug>(operator-sandwich-replace)<Plug>(operator-sandwich-release-count)<Plug>(textobj-sandwich-auto-a)
      omap ib <Plug>(textobj-sandwich-auto-i)
-    xmap ib <Plug>(textobj-sandwich-auto-i)
-    omap ab <Plug>(textobj-sandwich-auto-a)
-    xmap ab <Plug>(textobj-sandwich-auto-a)
-
-    omap is <Plug>(textobj-sandwich-query-i)
-    xmap is <Plug>(textobj-sandwich-query-i)
-    omap as <Plug>(textobj-sandwich-query-a)
-    xmap as <Plug>(textobj-sandwich-query-a)
+     xmap ib <Plug>(textobj-sandwich-auto-i)
+     omap ab <Plug>(textobj-sandwich-auto-a)
+     xmap ab <Plug>(textobj-sandwich-auto-a)
+     omap is <Plug>(textobj-sandwich-query-i)
+     xmap is <Plug>(textobj-sandwich-query-i)
+     omap as <Plug>(textobj-sandwich-query-a)
+     xmap as <Plug>(textobj-sandwich-query-a)
 endif
 
 if dein#tap('vim-operator-replace')
@@ -285,3 +284,13 @@ if dein#tap('vim-textobj-multiblock')
 	xmap <silent> ab <Plug>(textobj-multiblock-a)
 	xmap <silent> ib <Plug>(textobj-multiblock-i)
 endif
+
+
+" if dein#tap('vim-operator-surround')
+"         map <silent>sa <Plug>(operator-surround-append)
+"         map <silent>sd <Plug>(operator-surround-delete)
+"         map <silent>sr <Plug>(operator-surround-replace)
+"         nmap <silent>saa <Plug>(operator-surround-append)<Plug>(textobj-multiblock-i)
+"         nmap <silent>sdd <Plug>(operator-surround-delete)<Plug>(textobj-multiblock-a)
+"         nmap <silent>srr <Plug>(operator-surround-replace)<Plug>(textobj-multiblock-a)
+" endif

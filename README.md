@@ -6,15 +6,15 @@
 
 ## Commic Custom
 
-| ACG                                                                                                              | Spaceline                                                                                                 |
-| ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox9thinkvim.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
+| ACG                                                                                                       | Spaceline                                                                                                 |
+| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/vim-space.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
 
 ## [中文](README-CN.md)
 
 ## Feature
 
-- 🚀Fatest StartupTime(Plugins Total:63 40-60ms)
+- 🚀Fatest StartupTime(Plugins Total:58 40-60ms)
 - 💎Modular Plugin Config
 - ⚒ Easy to use Easy to hack
 - 🌟95% plugins lazyload with dein
@@ -49,16 +49,8 @@
 
 **_1._**
 
-- install master branch
-
 ```
 git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
-```
-
-- Notice!! I made a new statusline call [spaceline.vim](https://github.com/taigacute/spaceline.vim),if you want use spaceline version,install dev branch
-
-```
-git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 ```
 
 - Note: If your system sets \$XDG_CONFIG_HOME, use that instead of ~/.config in the code above. Nvim follows the XDG base-directories convention.
@@ -67,61 +59,45 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 **_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
-## [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+## Completion
 
+- Completion use LanguageServerProtocol by CoC.nvim.
+- Checkout the languageserverprotocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+  <details><summary><code>CoC support</code>👈 Click</summary><br><pre>
+  <!-- Required -->
+- Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)?
 - [More about Coc](https://github.com/neoclide/coc.nvim)
 - The list is the lsp which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 - ThinkVim support javascript typescript python.you dont need to install js ts python server.
 - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
 - [Register custom language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 
-  - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
-    - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
-    - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
-    - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
-    - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
-    - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
-    - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
-    - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
-    - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
-    - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
-    - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
-    - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
-    - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
-    - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
-    - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
-    - [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby)
-    - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
-    - [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-    - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
-    - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-    - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
-    - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
+  - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart) - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c) - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust) - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go) - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php) - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile) - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash) - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua) - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml) - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript) - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow) - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell) - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown) - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir) - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python) - [Ruby](https://github.com/neoclide/coc.vim/wiki/Language-servers#ruby) - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala) - [Latext](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex) - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm) - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex) - [clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure) - [julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
+    </pre></details>
 
-## CocExtensions
-
-- The list is coc extensions which i didnt installed,you can found the list that i installed coc extensions under the doc
-- **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
-- **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
-- **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-- **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
-- **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
-- **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
-- **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
-- **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
-- **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
-- **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
-- **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
-- **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
+- CocExtensions
+  - The list is coc extensions which ThinkVim didnt installed,you can found the list that i installed coc extensions under the doc
+    <details><summary><code>CoC Extensions Which ThinkVim not installed</code>👈 Click</summary><br><pre>
+    - **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
+    - **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
+    - **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
+    - **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`, use [solargraph](http://solargraph.org/).
+    - **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use [Rust Language Server](https://github.com/rust-lang/rls)
+    - **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
+    - **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights
+    - **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
+    - **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
+    - **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
+    - **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
+    - **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
+    </pre></details>
 
 ## Structure
 
 - [after](~/.config/nvim/after)
-  - [ftplugin](~/.config/nvim/after/ftplugin)
-    - [go.vim](~/.config/nvim/after/ftplugin/go.vim) - go file
 - [autoload](~/.config/nvim/autoload)
-  - [lightline](~/.config/nvim/after/autoload/lightline)
-    - [colorscheme](~/.config/nvim/after/autoload/lightline/colorscheme) - lightline colorscheme
+  - [spaceline](~/.config/nvim/after/autoload/spaceline)
+    - [spaceline](~/.config/nvim/after/autoload/lightline/sapceline) - spaceline function
 - [core/](~/.config/nvim/rc) - core config file
   - [dein](~/.config/nvim/rc/dein) - _**Plugins list!**_
     - [plugins.yaml](~/.config/nvim/rc/dein/plugins.yaml) - ThinkVim plugins
@@ -140,14 +116,18 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 ## LoadPlugins
 
-| Name                                                                                      | Description     |
-| ----------------------------------------------------------------------------------------- | --------------- |
-| [itchyny/lightline.vim](https://github.com/itchyny/lightline.vim)                         | Statusline      |
-| [mengelbrecht/lightline-bufferline](https://github.com/mengelbrecht/lightline-bufferline) | Tabline         |
-| [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline)                 | Autocompletaion |
-| [hona/vim-snippets](https://github.com/hona/vim-snippets)                                 | Snippets        |
+<details><summary><code>Normal Load Plugins</code>👈 Click</summary><br><pre>
+
+| Name                                                                      | Description     |
+| ------------------------------------------------------------------------- | --------------- |
+| [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
+| [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
+
+ </pre></details>
 
 ## LazyLoadPlugins
+
+<details><summary><code>Lazy Load Plugins</code>👈 Click</summary><br><pre>
 
 | Name                                                                                                  | Description                                                                        |
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -206,8 +186,11 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [cespare/vim-toml](https://github.com/cespare/vim-toml)                                               | toml                                                                               |
 | [vim-scripts/xml.vim](https://github.com/vim-scripts/xml.vim)                                         | xml                                                                                |
 
+ </pre></details>
+
 ## CoC Extensions
 
+<details><summary><code>CoC Extensions</code>👈 Click</summary><br><pre>
 | Name                                                       | Description                                    |
 | ---------------------------------------------------------- | ---------------------------------------------- |
 | [coc-html](https://github.com/neoclide/coc-html)           | html extensins                                 |
@@ -228,6 +211,8 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | [coc-git](https://github.com/neoclide/coc-git)             | git extension                                  |
 | [coc-post](https://github.com/iamcco/coc-post)             | easy to use like postman                       |
 
+</pre></details>
+
 ## Custom ‼️
 
 - if you need some plugins which not in Thinkvim ,you can add them into the `local/local_plugins.yaml`, the `plugins.yaml`is thinkvim plugins file.
@@ -238,27 +223,52 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 - The theme is [gruvbox9](https://github.com/taigacute/gruvbox9)，Works fine with [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve)，I create a new syntax group which provide the highlight of `jsxEndComponentName` in [neoclide/vim-jsx-improve](https://github.com/neoclide/vim-jsx-improve),if you wirte js/jsx, you will find the color very similar like vscode-gruvbox
 - The Color of other Languages are same as gruvbox,maybe some little change.
 
-## Statusline
+## Spaceline
 
-- [Lightline](https://github.com/itchyny/lightline.vim) Theme[gruvbox9](https://github.com/taigacute/gruvbox9)
-  ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/normal.png)
-  ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/insert.png)
-  ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/visual.png)
-  ![](https://github.com/taigacute/IMG/blob/master/gruvbox9/replace.png)
-- When the file is editing, you will found a pen in statusline .
-- When used `coc-prettier`,`coc-tsserver`,`coc-snippet`， the statsuline will show the icon.
-  ![](https://github.com/taigacute/IMG/blob/master/thinkvim/statusbar.png)
+- spaceline provide separator groups, include `arrow` `curve` `slant`.the default group is `arrow`
 
-  | extension    | icon |
-  | ------------ | ---- |
-  | coc-prettier | `Ⓟ`  |
-  | coc-tsserver | `Ⓣ`  |
-  | coc-snippet  | `Ⓢ`  |
-  | go file      | `Ⓖ`  |
+```viml
+let g:spaceline_seperate_style= 'arrow'
+```
 
-- [spaceline](https://github.com/taigacute/spaceline.vim)
+- normal mode
 
-  ![image](https://github.com/taigacute/IMG/blob/master/spaceline/error.png)
+  | group   | ScreenShot                                                                        |
+  | ------- | --------------------------------------------------------------------------------- |
+  | `none`  | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/none-normal.png)  |
+  | `arrow` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/arrow-normal.png) |
+  | `curve` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/curve-normal.png) |
+  | `slant` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/slant-normal.png) |
+
+- synataxcheck mode
+
+  | group   | ScreenShot                                                                 |
+  | ------- | -------------------------------------------------------------------------- |
+  | `none`  | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/none.png)  |
+  | `arrow` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/arrow.png) |
+  | `curve` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/curve.png) |
+  | `slant` | ![image](https://github.com/taigacute/IMG/blob/master/spaceline/slant.png) |
+
+- you can custom every symbol in spaceline. there are some very useful settings.first you should set the `g:seperate_mode` to 1
+
+```viml
+
+let g:spaceline_seperate_mode = 0
+```
+
+- then set any seperate by these settings
+
+```viml
+        let g:spaceline_homemode_right = ''
+        let g:spaceline_filename_left  = ''
+        let g:spaceline_filesize_right = ''
+        let g:spaceline_gitinfo_left   = ''
+        let g:spaceline_gitinfo_right  = ''
+        let g:spaceline_cocexts_right  = ''
+        let g:spaceline_lineformat_right = ''
+        let g:spaceline_seperate_endseperate = ''
+        let g:spaceline_seperate_emptyseperate = ''
+```
 
 ## [Defx.nvim](https://github.com/Shougo/defx.nvim)
 
@@ -268,12 +278,14 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 - Startify can only set the header and footer centerd，you can edit the`core/plugins/startify.vim`,changed this number`let g:startify_padding_left = 40` until the file area centerd on your screen
 
-## Operate key
+## Keymap
 
 - Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `core/plugins/allkey.vim`
 - Insertkey like emacs
 - if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but in `allkey.vim` ,you can create
   a isse. Welcome PR.
+
+<details><summary><code>Operation</code>👈 Click</summary><br><pre>
 
 | Keys        | Mode    | Description                             |
 | ----------- | ------- | --------------------------------------- |
@@ -315,16 +327,19 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | gcc         | Normal  | caw.vim uncomment                       |
 | ga          | Normal  | EasyAlign                               |
 | ga          | Visual  | EasyAlign                               |
-| sa          | Normal  | operatore-surround prefix               |
-| sd          | Normal  | operatore-surround prefix               |
-| sr          | Normal  | operatore-surround prefix               |
-| saa         | Normal  | operatore-surround textobj-multiblock-i |
-| sdd         | Normal  | operatore-surround textobj-multiblock-a |
-| srr         | Normal  | operatore-surround textobj-multiblock-a |
+| sa          | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| sd          | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| sr          | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| sdb         | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| srb         | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
 | v           | Visual  | vim-expand-region                       |
 | V           | Visual  | vim-expand-region                       |
+| zl          | Normal  | Denite Outline for golang               |
+| zT          | Normal  | Denite Goroot for golang                |
 
-- Window
+</pre></details>
+
+<details><summary><code>Window</code>👈 Click</summary><br><pre>
 
 | Keys       | Mode   | Description                       |
 | ---------- | ------ | --------------------------------- |
@@ -339,7 +354,9 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | Ctrl + d   | Normal | Window scrolls down half a screen |
 | Ctrl + u   | Normal | Window scrolls up half a screen   |
 
-- Tab
+</pre></details>
+
+<details><summary><code>Tab</code>👈 Click</summary><br><pre>
 
 | Keys            | Mode   | Description |
 | --------------- | ------ | ----------- |
@@ -347,7 +364,9 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<Leader>` + te | Normal | edit tab    |
 | `<Leader>` + tm | Normal | move tab    |
 
-- LeaderKey
+</pre></details>
+
+<details><summary><code>LeaderKey</code>👈 Click</summary><br><pre>
 
 | Keys                        | Mode   | Description                           |
 | --------------------------- | ------ | ------------------------------------- |
@@ -388,7 +407,9 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<Leader>` + goc            | Normal | vim-go GoCoverage                     |
 | `<Leader>` + gov            | Normal | vim-go GoDef                          |
 
-- LocalLeaderKey
+</pre></details>
+
+<details><summary><code>LocalLeaderKey</code>👈 Click</summary><br><pre>
 
 | Keys                 | Mode   | Description             |
 | -------------------- | ------ | ----------------------- |
@@ -406,7 +427,9 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<LocalLeader>` + gl | Normal | Denite show all git log |
 | `<LocalLeader>` + gh | Normal | Denite show git branch  |
 
-- Denite
+</pre></details>
+
+<details><summary><code>Denite</code>👈 Click</summary><br><pre>
 
 | Keys                | Mode                 | Description        |
 | ------------------- | -------------------- | ------------------ |
@@ -435,7 +458,9 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `<jj>`              | Denite Filter insert | move window        |
 | `<jj>`              | Denite Filter normal | move window        |
 
-- Defx
+</pre></details>
+
+<details><summary><code>Defx</code>👈 Click</summary><br><pre>
 
 | Keys           | Mode   | Description                    |
 | -------------- | ------ | ------------------------------ |
@@ -461,7 +486,9 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | gr             | Defx   | search in denite               |
 | w              | Defx   | increase the width             |
 
-- CoC
+</pre></details>
+
+<details><summary><code>CoC</code>👈 Click</summary><br><pre>
 
 | Keys         | Mode          | Description               |
 | ------------ | ------------- | ------------------------- |
@@ -481,21 +508,7 @@ git clone -b -dev https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 | `]` + g      | Normal        | coc-git-nextchunk         |
 | gs           | Normal        | git chunkinfo             |
 
-- Feature For Go
-
-| Keys | Mode   | Description    |
-| ---- | ------ | -------------- |
-| zl   | Normal | Denite Outline |
-| zT   | Normal | Denite Goroot  |
-
-- TextObject
-
-| Keys | Mode   | Description |
-| ---- | ------ | ----------- |
-| vif  | Go     | textobject  |
-| vaf  | Go     | textobject  |
-| aF   | Python | textobject  |
-| iF   | Python | textobject  |
+</pre></details>
 
 ## Backers
 

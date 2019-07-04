@@ -12,6 +12,9 @@ let s:path = expand('$CACHE/dein')
 let s:plugins_path = expand('$VIMPATH/core/dein/plugins.yaml')
 let s:user_plugins_path = expand('$VIMPATH/core/local/local_plugins.yaml')
 
+" Constants
+let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
+
 function! s:dein_check_ruby() abort
 	call system("ruby -e 'require \"json\"; require \"yaml\"'")
 	return (v:shell_error == 0) ? 1 : 0
@@ -83,7 +86,9 @@ if dein#load_state(s:path)
             echoerr 'Please run: pip3 install --user PyYAML'
         endtry
     call dein#end()
-    call dein#save_state()
+    if ! s:is_sudo
+		call dein#save_state()
+	endif
     if dein#check_install()
          " Installation check.
        call dein#install()
