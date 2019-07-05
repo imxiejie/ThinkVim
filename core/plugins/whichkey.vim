@@ -79,10 +79,6 @@ let g:which_key_localmap ={
       \ 'v'    : 'open vista show outline',
       \ 'r'    : 'quick run',
       \ 'm'    : 'toolkit Menu',
-      \ 'd'    : {
-                \'name':'+todo-app',
-                \ 'a' : 'todo add',
-                \},
       \ 'g'  :{
                 \'name':'+ git-operate',
                 \ 'a'    : 'Gadd',

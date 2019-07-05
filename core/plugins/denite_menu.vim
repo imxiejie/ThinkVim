@@ -35,13 +35,6 @@ let s:menus.tools.command_candidates = [
   \   ['🐠 File explorer      🔹', 'Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>'],
   \ ]
 
-let s:menus.todoapp = { 'description': '🗓  Todo List' }
-let s:menus.todoapp.command_candidates = [
-  \   ['📝 TodoAdd            🔸', 'TodoAdd '],
-  \   ['📝 TodoList           🔸', 'Denite todo'],
-  \   ['📝 TodoDone           🔸', 'Denite todo:done'],
-  \ ]
-
 let s:menus.config = { 'description': '🔧 Zsh Tmux Configuration' }
 let s:menus.config.file_candidates = [
   \   ['🐠 Zsh Configurationfile            🔸', '~/.zshrc'],
