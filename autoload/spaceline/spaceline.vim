@@ -1,3 +1,4 @@
+let s:symbol = get(g:, 'spaceline_line_symbol', 1)
 function! spaceline#spaceline#VimacsLineGit()
     if &filetype ==? 'defx'
        return ""
@@ -26,6 +27,16 @@ function! s:vimacsline_is_plain() abort
 endfunction
 
 function! spaceline#spaceline#VimacsLineinfo() abort
+    if s:symbol ==1
+            return &filetype ==? 'help'             ? ''  :
+        \      &filetype ==? 'defx'             ? ' ' :
+        \      &filetype ==? 'denite'           ? ' ' :
+        \      &filetype ==? 'tagbar'           ? ' ' :
+        \      &filetype ==? 'vista_kind'       ? ' ' :
+        \      &filetype =~? '\v^mundo(diff)?$' ? ' ' :
+        \      s:vimacsline_is_lean() || s:vimacsline_is_plain() ? ' '  :
+        \      printf(' %d:%d %d%%', line('.'), col('.'), 100*line('.')/line('$'))
+    endif
     return &filetype ==? 'help'             ? ''  :
   \      &filetype ==? 'defx'             ? ' ' :
   \      &filetype ==? 'denite'           ? ' ' :
@@ -42,6 +53,9 @@ function! spaceline#spaceline#Filesize()abort
   endif
   if &filetype ==? 'defx'
       return ''
+  endif
+  if s:symbol == 1
+    return Fsize(@%)
   endif
     return "ﴬ".Fsize(@%)
 endfunction
@@ -79,6 +93,9 @@ function! Vimacslinemode()
     let l:result = get(nmap, l:number % 10, l:number % 10) . l:result
     let l:number = l:number / 10
   endfor
+  if s:symbol == 1
+  return l:result
+  endif
   return join(['ﮭ',l:result])
 endfunction
 
@@ -190,6 +207,9 @@ endfunction
 
 function! VimacsLineFname()
   let icon = (strlen(&filetype) ? ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft')
+  if s:symbol == 1
+      let icon= ''
+  endif
   let filename = VimacsLineFilename()
   let ret = [filename,icon]
   if filename == ''
@@ -206,6 +226,9 @@ function! spaceline#spaceline#FileEncoding()
         return ""
     endif
      let l:encod = (&fenc!=#""?&fenc:&enc)
+     if s:symbol == 1
+     return ' '.l:encod
+     endif
      return "".' '.l:encod
 endfunction
 
@@ -213,12 +236,18 @@ function! spaceline#spaceline#VimacsLineFiletype()
     if &filetype==? 'defx'
         return ""
     endif
+    if s:symbol == 1
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' : 'no ft') : ''
+    endif
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
 
 function! spaceline#spaceline#VimacsLineFileformat()
     if &filetype==? 'defx'
         return ""
+    endif
+    if s:symbol == 1
+  return winwidth(0) > 70 ? (' '.&fileformat . ' ' ) : ''
     endif
   return winwidth(0) > 70 ? (WebDevIconsGetFileFormatSymbol().' '.&fileformat . ' ' ) : ''
 endfunction
