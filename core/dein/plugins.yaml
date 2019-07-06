@@ -10,7 +10,7 @@
 # Core Plugins{{{
 - repo: neoclide/coc.nvim
   merge: 0
-  build: yarn install --frozen-lockfile
+  rev: release
   hook_add: source  $VIMPATH/core/plugins/coc.vim
 # }}}
 
