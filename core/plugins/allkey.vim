@@ -1,6 +1,7 @@
-" Plugin key settings
+"Plugin key settings
 
 if dein#tap('denite.nvim')
+        nnoremap <silent><localLeader>da  :TodoAdd 
         nnoremap <silent><LocalLeader>m :<C-u>Denite menu<CR>
 
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
@@ -272,6 +273,7 @@ if dein#tap('vim-sandwich')
      omap as <Plug>(textobj-sandwich-query-a)
      xmap as <Plug>(textobj-sandwich-query-a)
 endif
+
 
 if dein#tap('vim-operator-replace')
 	xmap p <Plug>(operator-replace)

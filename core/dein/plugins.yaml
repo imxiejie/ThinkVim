@@ -5,18 +5,12 @@
 - repo: Shougo/dein.vim
 - repo: honza/vim-snippets
 
-# - repo: itchyny/lightline.vim
-#   depends: vim-devicons
-#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
-# - repo: mengelbrecht/lightline-bufferline
-#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
-
 #}}}
 
 # Core Plugins{{{
 - repo: neoclide/coc.nvim
   merge: 0
-  rev: release
+  build: yarn install --frozen-lockfile
   hook_add: source  $VIMPATH/core/plugins/coc.vim
 # }}}
 
@@ -126,6 +120,7 @@
         let g:EasyMotion_keys = 'fjdkswbeoavn'
         let g:EasyMotion_smartcase = 1
         let g:EasyMotion_use_smartsign_us = 1
+
 
 # }}}
 
@@ -289,4 +284,9 @@
 # - repo: rhysd/vim-operator-surround
 #   depends: [vim-operator-user, vim-textobj-multiblock]
 #   on_map:  { vnx : <Plug> }
+# - repo: itchyny/lightline.vim
+#   depends: vim-devicons
+#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
+# - repo: mengelbrecht/lightline-bufferline
+#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
 # }}}

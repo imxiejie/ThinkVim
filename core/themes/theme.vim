@@ -10,17 +10,16 @@ endif
 
 set background=dark
 
+" Colorscheme settings
+" ---------------------------------------------------------
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_plugin_hi_groups = 1
 let g:gruvbox_transp_bg = 1
 let g:gruvbox_italicize_strings = 0
-" colorscheme hybrid_reverse
-"colorscheme space_vim_theme
-" colorscheme PaperColor
-"colorscheme gruvbox8
-"colorscheme dracula
-"colorscheme  solarized8
 colorscheme  gruvbox9_hard
+
+let g:space_vim_transp_bg = 1
+" colorscheme space_vim_theme
 
 " Vim Colors
 " ---------------------------------------------------------

@@ -5,5 +5,5 @@ let g:vista_executive_for = {
   \ 'go': 'ctags',
   \ 'javascript': 'coc',
   \ 'javascript.jsx': 'coc',
-  \ 'python': 'coc',
+  \ 'python': 'ctags',
   \ }
