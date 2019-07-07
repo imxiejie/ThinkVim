@@ -175,31 +175,6 @@ function! s:SlantInActiveStatusLine()
     let s:statusline.=s:EndSeperate
     return s:statusline
 endfunction
-
-function! s:SlantColor()
-    hi HomeMode ctermbg=214 ctermfg=black guibg=#fabd2f guifg=black
-    hi HomeModeRight ctermbg=black ctermfg=214 guibg=black guifg=#fabd2f
-    hi FileName ctermbg=black ctermfg=188 guibg=black guifg=#d7d7d7
-    hi FileNameRight ctermbg=black ctermfg=261 guibg=black guifg=#5d4d7a
-    hi Filesize ctermbg=261 ctermfg=188 guibg=#5d4d7a guifg=#d7d7d7
-    hi FileSizeRight ctermbg=black ctermfg=261 guibg=black guifg=#5d4d7a
-    hi HeartSymbol ctermbg=black ctermfg=130 guibg=black guifg=#af5f00
-    hi CocError ctermbg=black ctermfg=124 guibg=black guifg=#cc241d
-    hi CocWarn ctermbg=black ctermfg=32 guibg=black guifg=#0087d7
-    hi GitLeft ctermbg=black ctermfg=261 guibg=black guifg=#5d4d7a
-    hi GitInfo ctermbg=261 ctermfg=188 guibg=#5d4d7a guifg=#d7d7d7
-    hi Gitright ctermbg=237 ctermfg=261 guibg=#3c3836 guifg=#5d4d7a
-    hi CocBar ctermbg=237 ctermfg=225 guibg=#3c3836 guifg=#6272a4
-    hi LineInfoLeft ctermbg=237 ctermfg=261 guibg=#3c3836 guifg=#5d4d7a
-    hi StatusEncod ctermbg=261 ctermfg=188 guibg=#5d4d7a guifg=#d7d7d7
-    hi StatusFileFormat ctermbg=261 ctermfg=188 guibg=#5d4d7a guifg=#d7d7d7
-    hi LineFormatRight ctermbg=261 ctermfg=261 guibg=black guifg=#5d4d7a
-    hi StatusLineinfo ctermbg=237 ctermfg=225 guibg=black guifg=#6272a4
-    hi EndSeperate ctermbg=214 ctermfg=55 guibg=#fabd2f guifg=#5f00af
-    hi VimMode ctermbg=black ctermfg=148 guibg=black guifg=#afd700
-    hi emptySeperate1 ctermbg=237 ctermfg=black guibg=#3c3836 guifg=black
-endfunction
-
 function! s:ActiveStatusLine()
     if &filetype ==? 'defx' || &filetype==?'vista'
         let s:statusline=""
@@ -317,7 +292,7 @@ function! s:SetStatusline()
     endif
     if s:seperate_style == 'slant'
         let &l:statusline=s:SlantActiveStatusLine()
-        call s:SlantColor()
+        call s:Spaceline_Color(s:spaceline_colorscheme)
         return
     endif
     let &l:statusline=s:ActiveStatusLine()
@@ -332,7 +307,8 @@ function! s:SetInActiveStatusLine()
     endif
     if s:seperate_style == 'slant'
         let &l:statusline=s:SlantInActiveStatusLine()
-        call s:SlantColor()
+        call s:Spaceline_Color(s:spaceline_colorscheme)
+        return
     endif
     let &l:statusline=s:InActiveStatusLine()
     call s:Spaceline_Color(s:spaceline_colorscheme)
