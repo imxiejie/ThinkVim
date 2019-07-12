@@ -518,6 +518,9 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
   <img src="https://github.com/gabriel-pena.png?size=64" width="64" height="64" alt="gabriel-pena">
 </a>
 
+<a href="https://github.com/gstormlee" target="_blank" title="gstormlee">
+  <img src="https://github.com/gstormlee.png?size=64" width="64" height="64" alt="gstormlee">
+</a>
 <img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="50%"  height="50%">
 
 ## Thanks
