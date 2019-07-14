@@ -12,6 +12,8 @@
 
 ## [English Version](https://github.com/taigacute/nvim-config/blob/master/README-EN.md)
 
+-----有段时间没更新中文的了以英文为主吧有空更新下中文-------------
+
 ## 特性
 
 - 快速的启动时间
