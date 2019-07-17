@@ -2,11 +2,9 @@
 
 if dein#tap('denite.nvim')
         nnoremap <silent><LocalLeader>m :<C-u>Denite menu<CR>
-
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
         noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
-
         nnoremap <silent> <LocalLeader>gl :<C-u>Denite gitlog:all<CR>
 	    nnoremap <silent> <LocalLeader>gh :<C-u>Denite gitbranch<CR>
 endif
@@ -178,13 +176,8 @@ endif
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                 \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-        "nnoremap <silent> <LocalLeader>a
-				"\ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
-endif
-
-if dein#tap('nerdtree')
-        "nerdtree
-        nnoremap <silent><localleader>e :NERDTreeToggle <CR>
+        nnoremap <silent> <Leader>F
+				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
 endif
 
 if dein#tap('vim-startify')

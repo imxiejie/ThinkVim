@@ -4,6 +4,7 @@
 # StartUp Plugins{{{
 - repo: Shougo/dein.vim
 - repo: honza/vim-snippets
+- repo: taigacute/spaceline.vim
 
 #}}}
 

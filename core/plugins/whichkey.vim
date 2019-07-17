@@ -19,6 +19,7 @@ let g:which_key_map = {
       \ '-' : 'choose window by {prompt char}' ,
       \ 'd' : 'search cursor word on Dash.app' ,
       \ 'G' : 'distraction free writing' ,
+      \ 'F' : 'find current file' ,
       \ 'f' : {
             \ 'name' : '+search {files cursorword word outline}',
             \ 'b' : 'buffer list',
