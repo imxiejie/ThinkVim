@@ -135,8 +135,6 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
  </p>
  </details>
 
-- Installed CoC Extensions
-
 <details><summary><code>CoC Extensions</code>👈 Click</summary>
 <p>
 

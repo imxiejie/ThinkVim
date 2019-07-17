@@ -32,9 +32,9 @@ I suggest that most of plugins should lazyload by dein ,There has two ways to in
   hook_source: source  $VIMPATH/core/plugins/vim-choosewin.vim
 ```
 
-    - `repo` means github repo
-    - `on_map` is a dein lazyload feature,that mean the plugin will loading when you trigger `on_map` key,
-    - `hook_source` is executed before plugins are sourced
+- repo means github repo
+- on_map is a dein lazyload feature,that mean the plugin will loading when you trigger `on_map` key,
+- hook_source is executed before plugins are sourced
 
 Dein is hard to use for some vim begginers，you can check the `core/dein/plugins.yaml` for use.
 more useage about [Dein](https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt).
