@@ -99,6 +99,7 @@ if dein#tap('nerdtree')
         nnoremap <silent> <localleader>f :NERDTreeFind<CR>
 endif
 ```
+- if you edit the plugins.yaml ,it doesnt work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`, or use thinkvim menu `;+m` trigger menu,then choose dein,and choose `ReacheRuntimePath`
 
 ## How to install or change colorscheme
 
