@@ -1,10 +1,11 @@
+" reference code from https://github.com/oblitum
 let g:lightline = {
       \ 'colorscheme': 'gruvbox9',
       \ 'active': {
       \   'left': [ ['homemode'],
       \             ['gitinfo'],['filename_active'],['cocstatus']],
       \   'right':[
-      \             ['lineinfo'], ['fileformat'],['filencode'],['cocerror'],['cocwarn'],['cocfix']],
+      \             ['lineinfo'], ['fileformat'],['filencode'],['cocerror'],['cocwarn']],
       \ },
       \ 'inactive': {
       \   'left': [['homemode'], ['filename_active']],
@@ -26,7 +27,6 @@ let g:lightline = {
       \   'homemode': 'LightlineMode',
       \   'gitinfo': 'LightLineGit',
       \   'cocstatus': 'CocStatusBar',
-      \   'cocfix': 'LightlineCocFixes',
       \   'filencode': 'FileEncoding',
       \   'readonly': 'LightLineReadonly',
       \   'filename_active'  : 'LightlineFilenameActive',
@@ -200,39 +200,8 @@ function! LightLineCocWarn() abort
   endif
  return join(warnmsgs, ' ')
 endfunction
-function! LightlineCocFixes() abort
-  let b:coc_line_fixes = get(get(b:, 'coc_quickfixes', {}), line('.'), 0)
-  return b:coc_line_fixes > 0 ? printf('%d ', b:coc_line_fixes) : ''
-endfunction
-" Diagnostic's feedback {{{
-function! CocUpdateQuickFixes(error, actions) abort
-  let coc_quickfixes = {}
-  try
-    for action in a:actions
-      if action.kind ==? 'quickfix'
-        for change in action.edit.documentChanges
-          for edit in change.edits
-            let start_line = edit.range.start.line + 1
-            let end_line = edit.range.end.line + 1
-            let coc_quickfixes[start_line] = get(coc_quickfixes, start_line, 0) + 1
-            if start_line != end_line
-              let coc_quickfixes[end_line] = get(coc_quickfixes, end_line, 0) + 1
-            endif
-          endfor
-        endfor
-      endif
-    endfor
-  catch
-  endtry
-  if coc_quickfixes != get(b:, 'coc_quickfixes', {})
-    let b:coc_quickfixes = coc_quickfixes
-    call lightline#update()
-  endif
-endfunction
 
-autocmd  MyAutoCmd User CocDiagnosticChange
-\   call lightline#update()
-\|  call CocActionAsync('quickfixes', function('CocUpdateQuickFixes'))
+autocmd  MyAutoCmd User CocDiagnosticChange   call lightline#update()
 
 
 function! LightLineFname()
