@@ -170,6 +170,9 @@ check the [tutorial](/tutorial/tutorial.md) to know more about ThinkVim
 
 Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!
 
+<a href="https://github.com/emeentag" target="_blank" title="emeentag">
+  <img src="https://github.com/emeentag.png?size=64" width="64" height="64" alt="emeentag">
+</a>
 <a href="https://github.com/dewoller" target="_blank" title="dewoller">
   <img src="https://github.com/dewoller.png?size=64" width="64" height="64" alt="dewoller">
 </a>
