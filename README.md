@@ -66,6 +66,7 @@ git clone --depth=1 https://github.com/taigacute/ThinkVim.git ~/.config/nvim
 
 | Name                                                                      | Description     |
 | ------------------------------------------------------------------------- | --------------- |
+| [taigacute/spaceline.vim](https://github.com/taigacute/spaceline.vim)     | spaceline       |
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
 | [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
 
