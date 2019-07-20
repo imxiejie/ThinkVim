@@ -184,11 +184,6 @@ if dein#tap('defx.nvim')
 				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
 endif
 
-if dein#tap('nerdtree')
-        "nerdtree
-        nnoremap <silent><localleader>e :NERDTreeToggle <CR>
-endif
-
 if dein#tap('vim-startify')
     nnoremap <silent> <leader>s :Startify<CR>
 endif
