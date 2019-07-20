@@ -51,12 +51,6 @@
   on_path: .*
   hook_source: source  $VIMPATH/core/plugins/vim-gutentags.vim
 
-- repo: junegunn/goyo.vim
-  on_cmd: Goyo
-  hook_source: source  $VIMPATH/core/plugins/goyo.vim
-
-- repo: junegunn/Limelight.vim
-  on_cmd: Limelight
 
 - repo: mhinz/vim-startify
   on_cmd: Startify
@@ -260,6 +254,21 @@
 
 # }}}
 
+# Writing{{{
+- repo: iamcco/markdown-preview.nvim
+  on_ft: [markdown,pandoc.markdown,rmd]
+  build: cd app & yarn install
+  hook_source: |
+      let g:mkdp_auto_start = 1
+
+- repo: junegunn/goyo.vim
+  on_cmd: Goyo
+  hook_source: source  $VIMPATH/core/plugins/goyo.vim
+
+- repo: junegunn/Limelight.vim
+  on_cmd: Limelight
+#}}}
+
 # TextObjectOperator{{{
 - { repo: AndrewRadev/splitjoin.vim, on_map: { n: <Plug>Splitjoin }}
 - { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
@@ -288,9 +297,3 @@
 # - repo: rhysd/vim-operator-surround
 #   depends: [vim-operator-user, vim-textobj-multiblock]
 #   on_map:  { vnx : <Plug> }
-# - repo: itchyny/lightline.vim
-#   depends: vim-devicons
-#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
-# - repo: mengelbrecht/lightline-bufferline
-#   hook_add: source  $VIMPATH/core/plugins/lightline.vim
-# }}}
