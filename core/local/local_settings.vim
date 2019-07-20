@@ -1,6 +1,0 @@
-" let g:spaceline_seperate_style = 'slant-fade'
-let g:spaceline_seperate_style = 'slant'
-" let g:spaceline_seperate_style = 'arrow-fade'
-" let g:spaceline_seperate_style = 'arrow'
-" let g:spaceline_seperate_style = 'curve'
-" let g:spaceline_colorscheme='solarized_dark'
