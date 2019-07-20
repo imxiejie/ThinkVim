@@ -121,11 +121,15 @@ if dein#tap('vim-easygit')
 	nnoremap <silent> <localleader>gb :Gblame<CR>
 	nnoremap <silent> <localleader>gB :Gbrowse<CR>
 	nnoremap <silent> <localleader>gS :Gstatus<CR>
-	nnoremap <silent> <localleader>gp :Gpush<CR>
+	" nnoremap <silent> <localleader>gp :Gpush<CR>
 endif
 
 if dein#tap('vimagit')
 	nnoremap <silent> mg :Magit<CR>
+endif
+
+if dein#tap('gina.vim')
+	nnoremap <silent><LocalLeader>gp :Gina push<CR>
 endif
 
 if dein#tap('vim-mundo')

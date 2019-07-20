@@ -87,7 +87,7 @@ let g:which_key_localmap ={
                 \ 'b'    : 'Gblame',
                 \ 'B'    : 'Gbrowse',
                 \ 'S'    : 'Gstatus',
-                \ 'p'    : 'Gpush',
+                \ 'p'    : 'git push',
                 \ 'l'    : 'GitLogAll',
                 \ 'h'    : 'GitBranch',
                 \}
