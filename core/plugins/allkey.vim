@@ -5,6 +5,7 @@ if dein#tap('denite.nvim')
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
         noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
+
         nnoremap <silent> <LocalLeader>gl :<C-u>Denite gitlog:all<CR>
 	    nnoremap <silent> <LocalLeader>gh :<C-u>Denite gitbranch<CR>
 endif
@@ -123,6 +124,9 @@ if dein#tap('vim-easygit')
 	nnoremap <silent> <localleader>gp :Gpush<CR>
 endif
 
+if dein#tap('vimagit')
+	nnoremap <silent> mg :Magit<CR>
+endif
 
 if dein#tap('vim-mundo')
     nnoremap <silent> <leader>m :MundoToggle<CR>
@@ -176,8 +180,13 @@ endif
 if dein#tap('defx.nvim')
         nnoremap <silent> <Leader>e
                 \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-        nnoremap <silent> <Leader>F
+         nnoremap <silent> <Leader>F
 				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
+endif
+
+if dein#tap('nerdtree')
+        "nerdtree
+        nnoremap <silent><localleader>e :NERDTreeToggle <CR>
 endif
 
 if dein#tap('vim-startify')
@@ -237,7 +246,7 @@ if dein#tap('vim-smartchr')
         autocmd FileType go inoremap <buffer><expr> ;
             \ smartchr#loop(':=',';')
         autocmd FileType go inoremap <buffer> <expr> .
-          \ smartchr#loop('.', '->', '<-','...')
+          \ smartchr#loop('.', '<-', '->','...')
     augroup end
 endif
 

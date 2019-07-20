@@ -14,11 +14,12 @@ set background=dark
 " ---------------------------------------------------------
 let g:gruvbox_filetype_hi_groups = 1
 let g:gruvbox_plugin_hi_groups = 1
-let g:gruvbox_transp_bg = 1
+" let g:gruvbox_transp_bg = 1
 let g:gruvbox_italicize_strings = 0
 colorscheme  gruvbox9_hard
+" colorscheme  solarized8_flat
 
-let g:space_vim_transp_bg = 1
+" let g:space_vim_transp_bg = 1
 " colorscheme space_vim_theme
 
 " Vim Colors
@@ -27,9 +28,10 @@ hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
 hi VertSplit  ctermfg=Black  guifg=Black
 "hi Normal guibg=NONE ctermbg=NONE
 "hi LineNr ctermbg=NONE guibg=NONE
-"hi SignColumn ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
+hi SignColumn ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
 highlight! link pythonSpaceError  NONE
 highlight! link pythonIndentError NONE
+" highlight NormalFloat cterm=NONE ctermfg=14 ctermbg=0 gui=NONE guifg=#93a1a1 guibg=#002931
 
 "Pmenu Colors
 " ---------------------------------------------------------
