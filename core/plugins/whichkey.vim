@@ -82,7 +82,6 @@ let g:which_key_localmap ={
       \ 'm'    : 'toolkit Menu',
       \ 'g'  :{
                 \'name':'+ git-operate',
-                \ 'a'    : 'Gadd',
                 \ 'd'    : 'Gdiff',
                 \ 'c'    : 'Gcommit',
                 \ 'b'    : 'Gblame',
@@ -102,6 +101,7 @@ let g:which_key_rsbgmap = {
       \ 'g'    : 'coc gitnextchunk',
       \ ']'    : 'jump prefunction-golang',
       \ }
+
 
 let g:which_key_lsbgmap = {
       \ 'name' : '+LeftSquarebrackets',

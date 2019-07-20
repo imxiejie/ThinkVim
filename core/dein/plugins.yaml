@@ -27,6 +27,8 @@
         source  $VIMPATH/core/plugins/denite.vim
         source  $VIMPATH/core/plugins/denite_menu.vim
 
+- { repo: chemzqm/denite-git, on_source: denite.nvim }
+
 - repo: raghur/fruzzy
   on_source: denite.nvim
   hook_source: let g:fruzzy#sortonempty = 0
@@ -122,7 +124,6 @@
         let g:EasyMotion_smartcase = 1
         let g:EasyMotion_use_smartsign_us = 1
 
-
 # }}}
 
 # File manager{{{
@@ -147,16 +148,18 @@
 - repo: junegunn/fzf.vim
   depends: fzf
   on_cmd: [Colors,Rg,Buffers]
-  hook_add: source  $VIMPATH/core/plugins/fzf.vim
+  on_func: Fzf_dev
+  hook_source: source  $VIMPATH/core/plugins/fzf.vim
 
 # }}}
 
 # Git Plugins{{{
+- { repo: jreybert/vimagit, on_cmd: Magit }
 
-- { repo: tyru/caw.vim, on_map: { nx: <Plug> }}
+- { repo: lambdalisue/gina.vim, on_cmd: Gina }
 
 - repo: chemzqm/vim-easygit
-  on_cmd: [Gcd, Glcd, commit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
+  on_cmd: [Gcd, Glcd, Gcommit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
   hook_source: let g:easygit_enable_command = 1
 
 

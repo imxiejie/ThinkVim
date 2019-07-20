@@ -1,5 +1,5 @@
 " For startify
-let g:startify_padding_left = 50
+let g:startify_padding_left = 30
 let s:header = [
       \ '',
       \ '   __         _    _        _    _      _         _    ',
