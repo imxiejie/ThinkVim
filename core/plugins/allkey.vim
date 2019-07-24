@@ -124,7 +124,7 @@ if dein#tap('vim-easygit')
 	" nnoremap <silent> <localleader>gp :Gpush<CR>
 endif
 
-if dein#tap('vimagit')
+if dein#tap('magit.vim')
 	nnoremap <silent> mg :Magit<CR>
 endif
 

@@ -148,7 +148,7 @@
 # }}}
 
 # Git Plugins{{{
-- { repo: jreybert/vimagit, on_cmd: Magit }
+- { repo: taigacute/magit.vim, on_cmd: Magit }
 
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
 
