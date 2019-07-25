@@ -99,6 +99,7 @@ if dein#tap('nerdtree')
         nnoremap <silent> <localleader>f :NERDTreeFind<CR>
 endif
 ```
+
 - if you edit the plugins.yaml ,it doesnt work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`, or use thinkvim menu `;+m` trigger menu,then choose dein,and choose `ReacheRuntimePath`
 
 ## How to install or change colorscheme
@@ -334,14 +335,14 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 | `<Leader>` + `<Leader>` + w | Normal | Easymotion jump to donw               |
 | `<Leader>` + `<Leader>` + b | Normal | Easymotion jump to up                 |
 | `<Leader>` + `<Leader>` + f | Normal | Easymotion search for jump            |
-| `<Leader>` + gr             | Normal | vim-go GoRename                       |
-| `<Leader>` + goi            | Normal | vim-go GoInfo                         |
-| `<Leader>` + god            | Normal | vim-go GoDoc                          |
-| `<Leader>` + gor            | Normal | vim-go GoRun                          |
-| `<Leader>` + gob            | Normal | vim-go GoBuild                        |
-| `<Leader>` + got            | Normal | vim-go GoTest                         |
-| `<Leader>` + goc            | Normal | vim-go GoCoverage                     |
-| `<Leader>` + gov            | Normal | vim-go GoDef                          |
+| `<Leader>` + gd             | Normal | Gdiff                                 |
+| `<Leader>` + gc             | Normal | Gcommit                               |
+| `<Leader>` + gb             | Normal | Gblame                                |
+| `<Leader>` + gB             | Normal | GBrowse                               |
+| `<Leader>` + gS             | Normal | GStatus                               |
+| `<Leader>` + gp             | Normal | Git push                              |
+| `<Leader>` + gl             | Normal | Denite show all git log               |
+| `<Leader>` + gh             | Normal | Denite show git branch                |
 
 </p>
 </details>
@@ -349,21 +350,16 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>LocalLeaderKey</code>👈 Click</summary>
 <p>
 
-| Keys                 | Mode   | Description             |
-| -------------------- | ------ | ----------------------- |
-| `<LocalLeader>` + t  | Normal | Open Tagbar             |
-| `<LocalLeader>` + r  | Normal | QuickRun                |
-| `<LocalLeader>` + v  | Normal | Open Vista              |
-| `<LocalLeader>` + da | Normal | TodoAdd Add todo        |
-| `<LocalLeader>` + ga | Normal | Gadd                    |
-| `<LocalLeader>` + gd | Normal | Gdiff                   |
-| `<LocalLeader>` + gc | Normal | Gcommit                 |
-| `<LocalLeader>` + gb | Normal | Gblame                  |
-| `<LocalLeader>` + gB | Normal | GBrowse                 |
-| `<LocalLeader>` + gS | Normal | GStatus                 |
-| `<LocalLeader>` + gp | Normal | Gpush                   |
-| `<LocalLeader>` + gl | Normal | Denite show all git log |
-| `<LocalLeader>` + gh | Normal | Denite show git branch  |
+| Keys                 | Mode   | Description        |
+| -------------------- | ------ | ------------------ |
+| `<LocalLeader>` + t  | Normal | Open Tagbar        |
+| `<LocalLeader>` + r  | Normal | QuickRun           |
+| `<LocalLeader>` + v  | Normal | Open Vista         |
+| `<LocalLeader>` + gi | Normal | vim-go GoImpl      |
+| `<LocalLeader>` + gd | Normal | vim-go GoDescribe  |
+| `<LocalLeader>` + gc | Normal | vim-go GoCallees   |
+| `<LocalLeader>` + gC | Normal | vim-go GoCallers   |
+| `<LocalLeader>` + gs | Normal | vim-go GoCallstack |
 
 </p>
 </details>
