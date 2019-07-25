@@ -33,6 +33,17 @@ let g:which_key_map = {
       \ 'w' : 'save file',
       \ 's' : 'open startify screen',
       \ 'p' : 'edit pluginsconfig {filename}',
+      \ 'g'  :{
+                \'name':'+git-operate',
+                \ 'd'    : 'Gdiff',
+                \ 'c'    : 'Gcommit',
+                \ 'b'    : 'Gblame',
+                \ 'B'    : 'Gbrowse',
+                \ 'S'    : 'Gstatus',
+                \ 'p'    : 'git push',
+                \ 'l'    : 'GitLogAll',
+                \ 'h'    : 'GitBranch',
+                \},
       \ 'c'    : {
               \ 'name' : '+coc list' ,
               \ 'a'    : 'coc CodeActionSelected',
@@ -58,14 +69,6 @@ let g:which_key_map = {
             \ 'e' : 'edit tab',
             \ 'm' : 'move tab',
             \ },
-      \ 'g' : {
-            \ 'name' : '+golang-toolkit',
-            \ 'i'    : 'go impl',
-            \ 'd'    : 'go describe',
-            \ 'c'    : 'go callees',
-            \ 'C'    : 'go callers',
-            \ 's'    : 'go callstack',
-            \ },
       \ }
 let g:which_key_map[' '] = {
       \ 'name' : '+easymotion-jumpto-word ' ,
@@ -80,17 +83,14 @@ let g:which_key_localmap ={
       \ 'v'    : 'open vista show outline',
       \ 'r'    : 'quick run',
       \ 'm'    : 'toolkit Menu',
-      \ 'g'  :{
-                \'name':'+ git-operate',
-                \ 'd'    : 'Gdiff',
-                \ 'c'    : 'Gcommit',
-                \ 'b'    : 'Gblame',
-                \ 'B'    : 'Gbrowse',
-                \ 'S'    : 'Gstatus',
-                \ 'p'    : 'git push',
-                \ 'l'    : 'GitLogAll',
-                \ 'h'    : 'GitBranch',
-                \}
+      \ 'g' : {
+            \ 'name' : '+golang-toolkit',
+            \ 'i'    : 'go impl',
+            \ 'd'    : 'go describe',
+            \ 'c'    : 'go callees',
+            \ 'C'    : 'go callers',
+            \ 's'    : 'go callstack',
+            \ },
       \ }
 
 let g:which_key_rsbgmap = {
