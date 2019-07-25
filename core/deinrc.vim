@@ -10,7 +10,7 @@ let g:dein#auto_recache = 1
 let $CACHE = expand('~/.cache')
 let s:path = expand('$CACHE/dein')
 let s:plugins_path = expand('$VIMPATH/core/dein/plugins.yaml')
-let s:user_plugins_path = expand('$VIMPATH/core/local/local_plugins.yaml')
+let s:user_plugins_path = expand('~/.thinkvim.d/local_plugins.yaml')
 
 " Constants
 let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
