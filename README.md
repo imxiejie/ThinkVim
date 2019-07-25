@@ -10,7 +10,7 @@
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/vim-space.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
 
-## [中文](README-CN.md)
+## [中文年久失修](README-CN.md)
 
 ## Feature
 
