@@ -20,6 +20,10 @@ The structure of Thinkvim ‼️
 - [ftplugin](~/.config/nvim/ftplugin) - filetypePlugin
 - [plugin](~/.config/nvim/plugin) - Some easy plugin
 
+## User Custom
+
+User custom folder `~/.thinkvim.d`,notice the folder must be in your root path `~`,in this folder you should touch two files `local_plugins.yaml` and `local_settings.vim`
+
 ## How to Install plugins?
 
 I suggest that most of plugins should lazyload by dein ,There has two ways to install plugins.

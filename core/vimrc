@@ -4,7 +4,7 @@ endif
 
 let $VIMPATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 let $VARPATH = expand(($XDG_CACHE_HOME ? $XDG_CACHE_HOME : '~/.cache').'/vim')
-let s:user_settings_path = expand('$VIMPATH/core/local/local_settings.vim')
+let s:user_settings_path = expand('~/.thinkvim.d/local_settings.vim')
 
 " Constants
 let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
@@ -78,10 +78,32 @@ function! s:check_custom_settings(filename)abort
        return 1
 endfunction
 
+function! s:source_custom(path, ...) abort
+  let use_global = get(a:000, 0, !has('vim_starting'))
+  let abspath = resolve(expand('~/.thinkvim.d' . a:path))
+  if !use_global
+    execute 'source' fnameescape(abspath)
+    return
+  endif
+
+  " substitute all 'set' to 'setglobal'
+  let content = map(readfile(abspath),
+        \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
+  " create tempfile and source the tempfile
+  let tempfile = tempname()
+  try
+    call writefile(content, tempfile)
+    execute 'source' fnameescape(tempfile)
+  finally
+    if filereadable(tempfile)
+      call delete(tempfile)
+    endif
+  endtry
+endfunction
 " Load user custom local settings
 if filereadable(s:user_settings_path)
 	if s:check_custom_settings(s:user_settings_path)
-		call s:source_file('/local/local_settings.vim')
+		call s:source_custom('/local_settings.vim')
 	endif
 endif
 
