@@ -37,8 +37,9 @@ highlight! link pythonIndentError NONE
 " ---------------------------------------------------------
 hi PMenuSel ctermfg=252 ctermbg=106 guifg=#d0d0d0 guibg=#859900 guisp=#859900 cterm=NONE gui=NONE
 
-"coc highlight setting
+"coc setting
 " ---------------------------------------------------------
+hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 hi default CocHighlightText  guibg=#725972 ctermbg=96
 hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
 
