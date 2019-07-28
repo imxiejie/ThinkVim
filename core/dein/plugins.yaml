@@ -61,11 +61,6 @@
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
       endfunction
 
-
-- repo: mg979/vim-visual-multi
-  on_map: { n: <C-n> }
-  hook_add: let g:VM_leader = '<Space>'
-
 - repo: junegunn/vim-easy-align
   on_ft: [vim,json,go,html,js,jsx,py,css,less,tmpl,toml,xml,sql,Dockerfile]
 
