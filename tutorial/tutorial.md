@@ -79,7 +79,6 @@ let g:which_key_map.F='test'
 Here are some plugins that are not installed in Thinkvim, but retain their configuration,If you want to use them, you can install them in `local_plugins.yaml`,like `nerdtree`
 
 ```yaml
-// nerdtree
 - repo: scrooloose/nerdtree
   on_map: { n: <Plug> }
   trusted: 1
@@ -91,7 +90,6 @@ Here are some plugins that are not installed in Thinkvim, but retain their confi
     let g:NERDTreeDisablePatternMatchHighlight = 1
     let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md','c','cpp','java','php','groovy']
 - { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
-
 ```
 
 - local_settings.vim
