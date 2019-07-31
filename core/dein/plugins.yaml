@@ -208,7 +208,7 @@
   hook_source: source  $VIMPATH/core/plugins/neoformat.vim
 
 - repo: Yggdroot/indentLine
-  on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
+  on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue,cpp,c]
   hook_source: source $VIMPATH/core/plugins/indentline.vim
 
 - repo: liuchengxu/vista.vim
