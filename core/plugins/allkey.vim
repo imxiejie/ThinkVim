@@ -85,8 +85,8 @@ if dein#tap('coc.nvim')
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
         " multiple cursors session
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
-        nmap <silent> <C-d> <Plug>(coc-cursors-word)
-        xmap <silent> <C-d> <Plug>(coc-cursors-range)
+        nmap <silent> <C-m> <Plug>(coc-cursors-word)
+        xmap <silent> <C-m> <Plug>(coc-cursors-range)
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
 
@@ -174,7 +174,7 @@ endif
 
 
 if dein#tap('comfortable-motion.vim')
-    " nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
+    nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
     nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
     nnoremap <silent> <C-f> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 4)<CR>
     nnoremap <silent> <C-b> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -4)<CR>
