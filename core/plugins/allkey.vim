@@ -216,7 +216,7 @@ if dein#tap('defx.nvim')
     if !isdirectory(l:path) || &filetype ==? 'defx'
         return
     endif
-    let l:args = '-winwidth=35 -direction=topleft'
+    let l:args = '-winwidth=30 -direction=topleft'
     if has_key(l:opts, 'split')
         let l:args .= ' -split=vertical'
     endif
