@@ -330,7 +330,7 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 | `<Leader>` + ff             | Normal | fzf find files                        |
 | `<Leader>` + fr             | Normal | fzf rg search                         |
 | `<Leader>` + fv             | Normal | fzf Vista Finder                      |
-| `<Leader>` + b              | Normal | fzf find buffer                       |
+| `<Leader>` + fb             | Normal | fzf find buffer                       |
 | `<Leader>` + fw             | Normal | fzf rg search the cursor word         |
 | `<Leader>` + fgc            | Normal | fzf gitcommits                        |
 | `<Leader>` + fbc            | Normal | fzf gitbcommits                       |
