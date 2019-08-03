@@ -190,46 +190,10 @@ if dein#tap('goyo.vim')
 endif
 
 if dein#tap('defx.nvim')
-    "     nnoremap <silent> <Leader>e
-    "            \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-    "      nnoremap <silent> <Leader>F
-				"\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
-    " code from https://github.com/kristijanhusak/neovim-config
-    nnoremap <silent><Leader>e :call <sid>defx_open({ 'split': v:true })<CR>
-    nnoremap <silent><Leader>F :call <sid>defx_open({ 'split': v:true, 'find_current_file': v:true })<CR>
-    function s:get_project_root() abort
-        let l:git_root = ''
-        let l:path = expand('%:p:h')
-        let l:cmd = systemlist('cd '.l:path.' && git rev-parse --show-toplevel')
-        if !v:shell_error && !empty(l:cmd)
-            let l:git_root = fnamemodify(l:cmd[0], ':p:h')
-        endif
-        if !empty(l:git_root)
-            return l:git_root
-        endif
-    return getcwd()
-    endfunction
-    function! s:defx_open(...) abort
-    let l:opts = get(a:, 1, {})
-    let l:path = get(l:opts, 'dir', s:get_project_root())
-
-    if !isdirectory(l:path) || &filetype ==? 'defx'
-        return
-    endif
-    let l:args = '-winwidth=30 -direction=topleft'
-    if has_key(l:opts, 'split')
-        let l:args .= ' -split=vertical'
-    endif
-    if has_key(l:opts, 'find_current_file')
-        if &filetype ==? 'defx'
-        return
-        endif
-        call execute(printf('Defx %s -search=%s %s', l:args, expand('%:p'), l:path))
-    else
-        call execute(printf('Defx -toggle %s %s', l:args, l:path))
-    endif
-    return execute("norm!\<C-w>=")
-    endfunction
+        nnoremap <silent> <Leader>e
+               \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+         nnoremap <silent> <Leader>F
+				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
 endif
 
 
