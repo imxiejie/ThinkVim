@@ -1,4 +1,3 @@
-
 if &compatible
 	" vint: -ProhibitSetNoCompatible
 	set nocompatible
