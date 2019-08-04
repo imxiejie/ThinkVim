@@ -83,46 +83,55 @@ if has('conceal')
 	set conceallevel=3 concealcursor=niv
 endif
 
-" FastFold
-" Credits: https://github.com/Shougo/shougo-s-github
-autocmd MyAutoCmd TextChangedI,TextChanged *
-	\ if &l:foldenable && &l:foldmethod !=# 'manual' |
-	\   let b:foldmethod_save = &l:foldmethod |
-	\   let &l:foldmethod = 'manual' |
-	\ endif
+" Vim Directories {{{
+" ---------------
+set undofile swapfile nobackup
+set directory=$DATA_PATH/swap//,$DATA_PATH,~/tmp,/var/tmp,/tmp
+set undodir=$DATA_PATH/undo//,$DATA_PATH,~/tmp,/var/tmp,/tmp
+set backupdir=$DATA_PATH/backup/,$DATA_PATH,~/tmp,/var/tmp,/tmp
+set viewdir=$DATA_PATH/view/
+set nospell spellfile=$VIM_PATH/spell/en.utf-8.add
 
-autocmd MyAutoCmd BufWritePost *
-	\ if &l:foldmethod ==# 'manual' && exists('b:foldmethod_save') |
-	\   let &l:foldmethod = b:foldmethod_save |
-	\   execute 'normal! zx' |
-	\ endif
+" History saving
+set history=1000
+if has('nvim')
+	set shada='300,<50,@100,s10,h
+else
+	set viminfo='300,<10,@50,h,n$DATA_PATH/viminfo
+endif
+
+" If sudo, disable vim swap/backup/undo/shada/viminfo writing
+if $SUDO_USER !=# '' && $USER !=# $SUDO_USER
+		\ && $HOME !=# expand('~'.$USER)
+		\ && $HOME ==# expand('~'.$SUDO_USER)
+
+	set noswapfile
+	set nobackup
+	set nowritebackup
+	set noundofile
+	if has('nvim')
+		set shada="NONE"
+	else
+		set viminfo="NONE"
+	endif
+endif
+
+" Secure sensitive information, disable backup files in temp directories
+if exists('&backupskip')
+	set backupskip+=/tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*
+	set backupskip+=.vault.vim
+endif
+
+" Disable swap/undo/viminfo/shada files in temp directories or shm
+augroup user_secure
+	autocmd!
+	silent! autocmd BufNewFile,BufReadPre
+		\ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim
+		\ setlocal noswapfile noundofile nobackup nowritebackup viminfo= shada=
+augroup END
 
 if has('folding')
 	set foldenable
 	set foldmethod=syntax
 	set foldlevelstart=99
-	set foldtext=FoldText()
 endif
-
-" Improved Vim fold-text
-" See: http://www.gregsexton.org/2011/03/improving-the-text-displayed-in-a-fold/
-function! FoldText()
-	" Get first non-blank line
-	let fs = v:foldstart
-	while getline(fs) =~? '^\s*$' | let fs = nextnonblank(fs + 1)
-	endwhile
-	if fs > v:foldend
-		let line = getline(v:foldstart)
-	else
-		let line = substitute(getline(fs), '\t', repeat(' ', &tabstop), 'g')
-	endif
-
-	let w = winwidth(0) - &foldcolumn - (&number ? 8 : 0)
-	let foldSize = 1 + v:foldend - v:foldstart
-	let foldSizeStr = ' ' . foldSize . ' lines '
-	let foldLevelStr = repeat('+--', v:foldlevel)
-	let lineCount = line('$')
-	let foldPercentage = printf('[%.1f', (foldSize*1.0)/lineCount*100) . '%] '
-	let expansionString = repeat('.', w - strwidth(foldSizeStr.line.foldLevelStr.foldPercentage))
-	return line . expansionString . foldSizeStr . foldPercentage . foldLevelStr
-endfunction

@@ -1,74 +1,86 @@
+" https://github.com/rafi/vim-config
+" Maintainer: Rafael Bodill
+
+" Runtime and Plugins
+" ---
+
 if &compatible
-  set nocompatible
+	" vint: -ProhibitSetNoCompatible
+	set nocompatible
+	" vint: +ProhibitSetNoCompatible
 endif
 
-let $VIMPATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
-let $VARPATH = expand(($XDG_CACHE_HOME ? $XDG_CACHE_HOME : '~/.cache').'/vim')
+" Set main configuration directory as parent directory
+let $VIM_PATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 let s:user_settings_path = expand('~/.thinkvim.d/local_settings.vim')
 
-" Constants
-let s:is_sudo = $SUDO_USER !=# '' && $USER !=# $SUDO_USER
+" Regular Vim doesn't add custom configuration directories, if you use one
+if &runtimepath !~# $VIM_PATH
+	set runtimepath^=$VIM_PATH
+endif
 
-function! s:source_file(path, ...) abort
-  let use_global = get(a:000, 0, !has('vim_starting'))
-  let abspath = resolve(expand($VIMPATH.'/core/' . a:path))
-  if !use_global
-    execute 'source' fnameescape(abspath)
-    return
-  endif
-
-  " substitute all 'set' to 'setglobal'
-  let content = map(readfile(abspath),
-        \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
-  " create tempfile and source the tempfile
-  let tempfile = tempname()
-  try
-    call writefile(content, tempfile)
-    execute 'source' fnameescape(tempfile)
-  finally
-    if filereadable(tempfile)
-      call delete(tempfile)
-    endif
-  endtry
-endfunction
+let $DATA_PATH = g:etc#cache_path
 
 augroup MyAutoCmd
 	autocmd!
 	autocmd CursorHold *? syntax sync minlines=300
 augroup END
 
+
+" Disable vim distribution plugins
+let g:loaded_getscript = 1
+let g:loaded_getscriptPlugin = 1
+let g:loaded_gzip = 1
+let g:loaded_logiPat = 1
+let g:loaded_matchit = 1
+let g:loaded_matchparen = 1
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+let g:loaded_rrhelper = 1
+let g:loaded_shada_plugin = 1
+let g:loaded_tar = 1
+let g:loaded_tarPlugin = 1
+let g:loaded_tutor_mode_plugin = 1
+let g:loaded_2html_plugin = 1
+let g:loaded_vimball = 1
+let g:loaded_vimballPlugin = 1
+let g:loaded_zip = 1
+let g:loaded_zipPlugin = 1
+
+" Initialize base requirements
 if has('vim_starting')
-  call s:source_file('init.vim')
+	" Global Mappings "{{{
+	" Use spacebar as leader and ; as secondary-leader
+	" Required before loading plugins!
+	let g:mapleader="\<Space>"
+	let g:maplocalleader=';'
+
+	" Release keymappings prefixes, evict entirely for use of plug-ins.
+	nnoremap <Space>  <Nop>
+	xnoremap <Space>  <Nop>
+	nnoremap ,        <Nop>
+	xnoremap ,        <Nop>
+	nnoremap ;        <Nop>
+	xnoremap ;        <Nop>
+	nnoremap m        <Nop>
+	xnoremap m        <Nop>
+
+
+	" Ensure data directories
+	call etc#util#ensure_directory([
+		\   g:etc#cache_path . '/undo',
+		\   g:etc#cache_path . '/backup',
+		\   g:etc#cache_path . '/session',
+		\   g:etc#vim_path . '/spell'
+		\ ])
+
 endif
 
-call s:source_file('deinrc.vim')
-call s:source_file('plugins/allkey.vim')
-
-filetype plugin indent on
-syntax enable
-
-call dein#call_hook('source')
-call dein#call_hook('post_source')
-
-" Loading configuration modules
-call s:source_file('general.vim')
-call s:source_file('filetype.vim')
-call s:source_file('mappings.vim')
-call s:source_file('/themes/theme.vim')
-" call s:source_file('/modeline/statusline.vim')
-"---------------------------------------------------------------------------
-if s:is_sudo
-	set noswapfile
-	set nobackup
-	set nowritebackup
-	set noundofile
-	if has('nvim')
-		set shada="NONE"
-	else
-		set viminfo="NONE"
-	endif
-endif
-
+call etc#init()
+call etc#util#source_file('core/plugins/allkey.vim')
+call etc#util#source_file('core/general.vim')
+call etc#util#source_file('core/filetype.vim')
+call etc#util#source_file('core/mappings.vim')
+call etc#util#source_file('core/themes/theme.vim')
 
 function! s:check_custom_settings(filename)abort
        let  content = readfile(a:filename)
@@ -107,7 +119,7 @@ if filereadable(s:user_settings_path)
 	endif
 endif
 
+
 set secure
 
-" vim: foldmethod=marker
 " vim: set ts=2 sw=2 tw=80 noet :

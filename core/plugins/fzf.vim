@@ -1,6 +1,11 @@
 "autocmd! FileType fzf
 "autocmd  FileType fzf set laststatus=0 noshowmode noruler
   "\| autocmd BufLeave <buffer> set laststatus=0 showmode ruler
+  "
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
@@ -81,10 +86,10 @@ function! Fzf_dev()
     execute 'silent e' l:file_path
   endfunction
 
-  call fzf#run({
+  call fzf#run(fzf#wrap({
         \ 'source': <sid>files(),
         \ 'sink':   function('s:edit_file'),
         \ 'options': '-m ' . l:fzf_files_options,
         \ 'down':    '40%' ,
-        \ 'window': 'call FloatingFZF()'})
+        \ 'window': 'call FloatingFZF()'}))
 endfunction
