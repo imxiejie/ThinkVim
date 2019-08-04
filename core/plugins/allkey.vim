@@ -85,8 +85,9 @@ if dein#tap('coc.nvim')
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
         " multiple cursors session
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
-        nmap <silent> <C-m> <Plug>(coc-cursors-word)
-        xmap <silent> <C-m> <Plug>(coc-cursors-range)
+        nmap <silent> <C-d> <Plug>(coc-cursors-word)
+        xmap <silent> <C-d> <Plug>(coc-cursors-range)
+        nnoremap <silent> <leader>cm ::CocSearch -w 
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
 
@@ -283,6 +284,23 @@ if dein#tap('vim-sandwich')
      xmap as <Plug>(textobj-sandwich-query-a)
 endif
 
+if dein#tap('actionmenu.nvim')
+    nmap <silent> <LocalLeader>s :call ActionMenuCodeActions()<CR>
+    let s:code_actions = []
+
+func! ActionMenuCodeActions() abort
+  let s:code_actions = CocAction('codeActions')
+  let l:menu_items = map(copy(s:code_actions), { index, item -> item['title'] })
+  call actionmenu#open(l:menu_items, 'ActionMenuCodeActionsCallback')
+endfunc
+
+func! ActionMenuCodeActionsCallback(index, item) abort
+  if a:index >= 0
+    let l:selected_code_action = s:code_actions[a:index]
+    let l:response = CocAction('doCodeAction', l:selected_code_action)
+  endif
+endfunc
+endif
 
 if dein#tap('vim-operator-replace')
 	xmap p <Plug>(operator-replace)

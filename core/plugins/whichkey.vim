@@ -33,6 +33,7 @@ let g:which_key_map = {
       \ 'w' : 'save file',
       \ 's' : 'open startify screen',
       \ 'p' : 'edit pluginsconfig {filename}',
+      \ 'x' : 'coc cursors operate',
       \ 'g'  :{
                 \'name':'+git-operate',
                 \ 'd'    : 'Gdiff',
@@ -58,6 +59,7 @@ let g:which_key_map = {
               \ 's'    : 'coc Isymbols',
               \ 'g'    : 'coc Gitstatus',
               \ 'f'    : 'coc Format',
+              \ 'm'    : 'coc search word to multiple cursors',
               \ },
       \ 'q' : {
             \ 'name' : '+coc-quickfix',
