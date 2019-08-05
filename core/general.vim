@@ -38,6 +38,7 @@ set history=2000
 set number
 set timeout ttimeout
 set cmdheight=2         " Height of the command line
+set colorcolumn=80      " Highlight the 80th character limit
 set timeoutlen=500
 set ttimeoutlen=10
 set updatetime=100
