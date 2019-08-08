@@ -3,6 +3,7 @@ augroup MyAutoCmd
 
     	" Reload vim config automatically
 	autocmd BufWritePost $VIM_PATH/core/* nested source $MYVIMRC | redraw
+
 	autocmd WinEnter,InsertLeave * set cursorline
 
 	autocmd WinLeave,InsertEnter * set nocursorline
