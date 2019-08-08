@@ -85,18 +85,18 @@ if dein#tap('coc.nvim')
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
         " multiple cursors session
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
-        nmap <silent> <C-d> <Plug>(coc-cursors-word)
-        xmap <silent> <C-d> <Plug>(coc-cursors-range)
+        nmap <silent> <C-m> <Plug>(coc-cursors-word)
+        xmap <silent> <C-m> <Plug>(coc-cursors-range)
         nnoremap <silent> <leader>cm ::CocSearch -w 
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
 
         function! s:show_documentation()
-        if (index(['vim','help'], &filetype) >= 0)
-            execute 'h '.expand('<cword>')
-        else
-            call CocAction('doHover')
-        endif
+            if (index(['vim','help'], &filetype) >= 0)
+                execute 'h '.expand('<cword>')
+            else
+                call CocAction('doHover')
+            endif
         endfunction
 endif
 

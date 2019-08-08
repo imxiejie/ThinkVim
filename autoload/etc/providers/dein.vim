@@ -68,7 +68,7 @@ function! etc#providers#dein#_init(config_paths) abort
 
 	" Trigger source events, only when vim is starting
 	if has('vim_starting')
-        	syntax enable
+	    syntax enable
     else
 		call dein#call_hook('source')
 		call dein#call_hook('post_source')
