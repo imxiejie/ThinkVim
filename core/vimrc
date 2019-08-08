@@ -58,6 +58,15 @@ if has('vim_starting')
 	nnoremap m        <Nop>
 	xnoremap m        <Nop>
 
+	if ! has('nvim') && has('pythonx')
+		if has('python3')
+			set pyxversion=3
+		elseif has('python')
+			set pyxversion=2
+		endif
+	endif
+
+
 
 	" Ensure data directories
 	call etc#util#ensure_directory([
