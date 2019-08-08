@@ -15,11 +15,10 @@ endif
 
 let $DATA_PATH = g:etc#cache_path
 
+" Set augroup
 augroup MyAutoCmd
 	autocmd!
-	autocmd CursorHold *? syntax sync minlines=300
 augroup END
-
 
 " Disable vim distribution plugins
 let g:loaded_getscript = 1
