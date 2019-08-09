@@ -5,6 +5,8 @@
 "
 " Dein plugin-manager initialization
 
+let g:listormap=[]
+
 function! etc#providers#dein#_init(config_paths) abort
 	" Use dein as a plugin manager and intialize all plugins
 	let g:dein#auto_recache = 1
