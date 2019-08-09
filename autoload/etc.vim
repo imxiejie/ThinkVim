@@ -6,7 +6,6 @@ let g:etc#vim_path =
 	\   exists('*stdpath') ? stdpath('config') :
 	\   ! empty($MYVIMRC) ? fnamemodify(expand($MYVIMRC), ':h') :
 	\   ! empty($VIMCONFIG) ? expand($VIMCONFIG) :
-	\   ! empty($THINKVIM) ? expand($THINKVIM) :
 	\   ! empty($VIMCONFIG) ? expand($VIMCONFIG) :
 	\   ! empty($VIM_PATH) ? expand($VIM_PATH) :
 	\   expand('$HOME/.vim')
