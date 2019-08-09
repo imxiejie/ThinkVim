@@ -34,7 +34,9 @@ function! etc#init() abort
 		\ )
     let l:local_paths=expand($HOME.'/.thinkvim.d/local_plugins.yaml')
 	call filter(l:config_paths, 'filereadable(v:val)')
-    call add(l:config_paths,l:local_paths)
+    if filereadable(l:local_paths)
+        call add(l:config_paths,l:local_paths)
+    endif
 	call etc#providers#{g:etc#package_manager}#_init(l:config_paths)
 endfunction
 
