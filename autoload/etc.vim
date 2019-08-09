@@ -1,9 +1,12 @@
 let g:etc#package_manager = get(g:, 'etc#package_manager', 'dein')
 
+
 let g:etc#vim_path =
 	\ get(g:, 'etc#vimpath',
 	\   exists('*stdpath') ? stdpath('config') :
 	\   ! empty($MYVIMRC) ? fnamemodify(expand($MYVIMRC), ':h') :
+	\   ! empty($VIMCONFIG) ? expand($VIMCONFIG) :
+	\   ! empty($THINKVIM) ? expand($THINKVIM) :
 	\   ! empty($VIMCONFIG) ? expand($VIMCONFIG) :
 	\   ! empty($VIM_PATH) ? expand($VIM_PATH) :
 	\   expand('$HOME/.vim')
@@ -18,7 +21,6 @@ let g:etc#config_paths = get(g:, 'etc#config_paths', [
 	\ 'vimrc.yaml',
 	\ 'vimrc.json',
 	\ 'core/dein/plugins.yaml',
-	\ '~/.thinkvim.d/local_plugins.yaml',
 	\ ])
 
 
@@ -31,17 +33,19 @@ function! etc#init() abort
 		\   copy(g:etc#config_paths),
 		\   'g:etc#vim_path ."/". v:val'
 		\ )
+    let l:local_paths=expand($HOME.'/.thinkvim.d/local_plugins.yaml')
 	call filter(l:config_paths, 'filereadable(v:val)')
+    call add(l:config_paths,l:local_paths)
 	call etc#providers#{g:etc#package_manager}#_init(l:config_paths)
 endfunction
 
 function! etc#_parse_config_files(config_paths) abort
 	try
+        let l:plugins_list=[]
 		for l:cfg_file in a:config_paths
-			if filereadable(l:cfg_file)
-				return etc#util#load_config(l:cfg_file)
-			endif
+				call extend(l:plugins_list, etc#util#load_config(l:cfg_file))
 		endfor
+        return l:plugins_list
 	catch /.*/
 		echoerr v:exception
 		echomsg 'Error parsing user configuration file(s).'
