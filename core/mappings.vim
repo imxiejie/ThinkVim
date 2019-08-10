@@ -25,6 +25,10 @@ noremap <Leader>w :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
 
+"buffer
+nnoremap <leader>bc :BufOnly<CR>
+nnoremap <Leader>bo :BufOnly 
+
 "insert a newline
 inoremap <C-O> <Esc>o
 
