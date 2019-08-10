@@ -22,6 +22,13 @@ let g:etc#config_paths = get(g:, 'etc#config_paths', [
 	\ 'core/dein/plugins.yaml',
 	\ ])
 
+function! s:check_custom_settings(filename)abort
+       let  content = readfile(a:filename)
+       if empty(content)
+           return v:false
+       endif
+       return v:true
+endfunction
 
 function! etc#init() abort
 	if empty(g:etc#package_manager) || g:etc#package_manager ==# 'none'
