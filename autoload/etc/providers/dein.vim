@@ -49,11 +49,7 @@ function! etc#providers#dein#_init(config_paths) abort
 			call dein#local(g:etc#vim_path.'/dev', {'frozen': 1, 'merged': 0})
 		endif
 		call dein#end()
-
-		" Save cached state for faster startups
-		if ! g:dein#_is_sudo
-			call dein#save_state()
-		endif
+		call dein#save_state()
 
 		" Update or install plugins if a change detected
 		if dein#check_install()
