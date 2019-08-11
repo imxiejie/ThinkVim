@@ -169,7 +169,7 @@ if dein#tap('caw.vim')
 			xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
 		endif
 	endfunction
-	autocmd MyAutoCmd FileType * call InitCaw()
+	autocmd FileType * call InitCaw()
 	call InitCaw()
 endif
 
