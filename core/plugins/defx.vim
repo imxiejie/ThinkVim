@@ -14,7 +14,7 @@ call defx#custom#option('_', {
 augroup user_plugin_defx
 	autocmd!
 
-	autocmd DirChanged * call s:defx_refresh_cwd(v:event)
+	" autocmd DirChanged * call s:defx_refresh_cwd(v:event)
 
 	" Delete defx if it's the only buffer left in the window
 	" autocmd WinEnter * if &filetype == 'defx' && winnr('$') == 1 | bd | endif
