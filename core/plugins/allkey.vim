@@ -85,8 +85,8 @@ if dein#tap('coc.nvim')
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
         " multiple cursors session
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
-        nmap <silent> <C-d> <Plug>(coc-cursors-word)
-        xmap <silent> <C-d> <Plug>(coc-cursors-range)
+        nmap <silent> <C-m> <Plug>(coc-cursors-word)
+        xmap <silent> <C-m> <Plug>(coc-cursors-range)
         nnoremap <silent> <leader>cm ::CocSearch -w 
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
@@ -158,19 +158,11 @@ endif
 if dein#tap('caw.vim')
     function! InitCaw() abort
 		if ! &l:modifiable
-			silent! nunmap <buffer> <Leader>V
-			silent! xunmap <buffer> <Leader>V
-			silent! nunmap <buffer> <Leader>v
-			silent! xunmap <buffer> <Leader>v
 			silent! nunmap <buffer> gc
 			silent! xunmap <buffer> gc
 			silent! nunmap <buffer> gcc
 			silent! xunmap <buffer> gcc
 		else
-			xmap <buffer> <Leader>V <Plug>(caw:wrap:toggle)
-			nmap <buffer> <Leader>V <Plug>(caw:wrap:toggle)
-			xmap <buffer> <Leader>v <Plug>(caw:hatpos:toggle)
-			nmap <buffer> <Leader>v <Plug>(caw:hatpos:toggle)
 			nmap <buffer> gc <Plug>(caw:prefix)
 			xmap <buffer> gc <Plug>(caw:prefix)
 			nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
