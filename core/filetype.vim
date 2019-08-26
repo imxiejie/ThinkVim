@@ -1,4 +1,3 @@
-
 augroup MyAutoCmd
 
     	" Reload vim config automatically
@@ -16,7 +15,7 @@ augroup MyAutoCmd
 
     autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 
-     autocmd FileType json syntax match Comment +\/\/.\+$+
+    autocmd FileType json syntax match Comment +\/\/.\+$+
 
     " Go (Google)
     autocmd FileType go let b:coc_pairs_disabled = ['<']
@@ -29,3 +28,6 @@ augroup MyAutoCmd
 	" https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
 	autocmd FileType css,javascript,jsx,javascript.jsx setlocal backupcopy=yes
 augroup END
+
+
+

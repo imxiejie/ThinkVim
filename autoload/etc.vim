@@ -15,11 +15,11 @@ let g:etc#cache_path =
 	\ expand(($XDG_CACHE_HOME ? $XDG_CACHE_HOME : '~/.cache').'/vim')
 
 let g:etc#config_paths = get(g:, 'etc#config_paths', [
+	\ 'core/dein/plugins.yaml',
 	\ 'usr/vimrc.yaml',
 	\ 'usr/vimrc.json',
 	\ 'vimrc.yaml',
 	\ 'vimrc.json',
-	\ 'core/dein/plugins.yaml',
 	\ ])
 
 function! s:check_custom_settings(filename)abort

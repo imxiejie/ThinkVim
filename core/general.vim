@@ -1,3 +1,7 @@
+" Enable true color
+if has('termguicolors')
+	set termguicolors
+endif
 set nobackup
 set noswapfile
 set autoread
