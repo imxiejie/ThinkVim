@@ -1,3 +1,5 @@
+" Disable hlsearch when you are done searching
+" Credits: https://github.com/romainl/vim-cool
 
 let s:save_cpo = &cpoptions
 set cpoptions&vim

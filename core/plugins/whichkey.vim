@@ -18,7 +18,7 @@ let g:which_key_map = {
       \ 'b' : {
             \ 'name' : '+buffer',
             \ 'c' : 'keep current buffer',
-            \ 'o' : 'kill {numbers or name} buffer',
+            \ 'o' : 'keep input buffer',
             \ },
       \ 'e' : 'open file explorer' ,
       \ '-' : 'choose window by {prompt char}' ,
