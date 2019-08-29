@@ -56,6 +56,12 @@ if dein#tap('vim-choosewin')
 endif
 ```
 
+- If you want to disable some of the plugins I use, you can overwrite them, e.g.:
+
+```
+- { repo: tryu/caw.vim, if: 0 }
+```
+
 - Your plugin shortcuts should also be based on this format. used `if dein#tap('pluginname')`
 - Notice ‼️ the lazyload feature of dein will not loading the default config of plugins, so you should config the keymap of lazyload plugins
 
