@@ -12,7 +12,7 @@
 
 ## Feature
 
-- 🚀Fatest StartupTime(Plugins Total:62 40-60ms)
+- 🚀Fastest StartupTime(Plugins Total:62 40-60ms)
 - 💎Modular Plugin Config
 - ⚒ Easy to use Easy to hack
 - 🌟95% plugins lazyload with dein
