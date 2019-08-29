@@ -251,12 +251,10 @@ endif
 
 if dein#tap('vim-smartchr')
     inoremap <expr> , smartchr#one_of(',', ',')
-    augroup MyAutoCmd
-        autocmd FileType go inoremap <buffer><expr> ;
+    autocmd FileType go inoremap <buffer><expr> ;
             \ smartchr#loop(':=',';')
-        autocmd FileType go inoremap <buffer> <expr> .
+    autocmd FileType go inoremap <buffer> <expr> .
           \ smartchr#loop('.', '<-', '->','...')
-    augroup end
 endif
 
 if dein#tap('vim-niceblock')
