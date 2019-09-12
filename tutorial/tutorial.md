@@ -4,18 +4,16 @@
 
 The structure of Thinkvim ‼️
 
+- [autoload/](~/.config/nvim/rc) - autoload config about dein and theme
 - [core/](~/.config/nvim/rc) - core config file
   - [dein](~/.config/nvim/rc/dein) - _**Plugins list!**_
     - [plugins.yaml](~/.config/nvim/rc/dein/plugins.yaml) - ThinkVim Installed plugins
-  - [local](/local) - your custom settings
-    - [local_plugins.yaml](/local/local_plugins.yaml) - your plugins
-    - [local_settings.vim](/local/local_settings.vim) - your vim settings
   - [plugins](~/.config/nvim/rc/plugins) - _**Plugins Config!**_
   - [init.vim](~/.config/nvim/rc/init.vim) - `runtimepath`
-  - [dein.vim](~/.config/nvim/rc/dein.vim) - Dein Config
+  - [color.vim](~/.config/nvim/rc/color.vim) - thinkvim custom color
   - [general.vim](~/.config/nvim/rc/general.vim) - Vim settings
+  - [filetype.vim](~/.config/nvim/rc/general.vim) - filetype settings
   - [mappings.vim](~/.config/nvim/rc/mappings.vim) - Vim keymap
-  - [themes](./config/theme.vim) - Colors
 - [colors](~/.config/nvim/colors) - Colorscheme
 - [ftplugin](~/.config/nvim/ftplugin) - filetypePlugin
 - [plugin](~/.config/nvim/plugin) - Some easy plugin
