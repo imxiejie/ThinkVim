@@ -112,19 +112,9 @@ endif
 
 ## How to install or change colorscheme
 
-its very easy,you can add the colorscheme file into the colors folder,then add this into your `local_settings.vim`
-example:
+- ThinkVim provide a easy way to change colorscheme, use this keymap `Leader+fc` then thinkvim will write the colorscheme that your choose into cache file,ThinkVim will read this file to load colorscheme when next startup
 
-```viml
-colorscheme gruvbox9
-```
-
-you can also install the colorscheme in `plugins.yaml`
-example:
-
-```yaml
-- repo: taigacute/gruvbox9
-```
+- Add your favorite coloscheme file into colors folder
 
 ## How to use the spaceline
 
