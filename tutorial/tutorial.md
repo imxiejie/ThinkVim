@@ -412,10 +412,10 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 | <kbd>s</kbd>                     | Defx   | Open in rightwindow vs         |
 | <kbd>i</kbd>                     | Defx   | Open file sp                   |
 | <kbd>y</kbd> + <kbd>y</kbd>      | Defx   | copy the path of file          |
-| <kbd>\<kbd>                      | Defx   | show the path of file          |
-| <kbd>c<kbd>                      | Defx   | copy                           |
-| <kbd>m<kbd>                      | Defx   | move                           |
-| <kbd>p<kbd>                      | Defx   | paste                          |
+| <kbd>\</kbd>                      | Defx   | show the path of file          |
+| <kbd>c</kbd>                      | Defx   | copy                           |
+| <kbd>m</kbd>                      | Defx   | move                           |
+| <kbd>p</kbd>                      | Defx   | paste                          |
 | <kbd>Space</kbd>                 | Defx   | multi                          |
 | <kbd>g</kbd> + <kbd>f</kbd>      | Defx   | open in denite                 |
 | <kbd>g</kbd> + <kbd>r</kbd>      | Defx   | search in denite               |
