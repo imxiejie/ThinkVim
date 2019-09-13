@@ -1,5 +1,4 @@
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 # ThinkVim Tutorial
 
 ## Structure
@@ -333,14 +332,14 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 | <kbd>Leader</kbd> + <kbd>Leader</kbd> + <kbd>w</kbd>           | Normal | Easymotion jump to donw               |
 | <kbd>Leader</kbd> + <kbd>Leader</kbd> + <kbd>b</kbd>           | Normal | Easymotion jump to up                 |
 | <kbd>Leader</kbd> + <kbd>Leader</kbd> + <kbd>f</kbd>           | Normal | Easymotion search for jump            |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>d</kbd>                   | Normal | Gdiff                                 |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>c</kbd>                   | Normal | Gcommit                               |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>b</kbd>                   | Normal | Gblame                                |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>B</kbd>                   | Normal | GBrowse                               |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>S</kbd>                   | Normal | GStatus                               |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>p</kbd>                   | Normal | Git push                              |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>l</kbd>                   | Normal | Denite show all git log               |
-| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>h</kbd>                   | Normal | Denite show git branch                |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>d</kbd>                | Normal | Gdiff                                 |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>c</kbd>                | Normal | Gcommit                               |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>b</kbd>                | Normal | Gblame                                |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>B</kbd>                | Normal | GBrowse                               |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>S</kbd>                | Normal | GStatus                               |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>p</kbd>                | Normal | Git push                              |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>l</kbd>                | Normal | Denite show all git log               |
+| <kbd>Leader</kbd> + <kbd>g</kbd> + <kbd>h</kbd>                | Normal | Denite show git branch                |
 
 </p>
 </details>
@@ -378,7 +377,7 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 | <kbd>'</kbd>                          | Denite               | QuickMove          |
 | <kbd>q</kbd>                          | Denite               | Quit               |
 | <kbd>r</kbd>                          | Denite               | RedRaw             |
-| <kbd>y</kbd><kbd>y</kbd>              | Denite               | Yank               |
+| <kbd>y</kbd> + <kbd>y</kbd>           | Denite               | Yank               |
 | <kbd>Esc</kbd>                        | Denite               | Quit               |
 | <kbd>Ctrl</kbd> + <kbd>u</kbd>        | Denite               | Restore Source     |
 | <kbd>Ctrl</kbd> + <kbd>f</kbd>        | Denite               | call Defx          |
@@ -405,7 +404,7 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 | <kbd>K</kbd>                     | Defx   | touch new folder               |
 | `<CR>`                           | Defx   | open file or folder            |
 | `l`                              | Defx   | open file or folder            |
-| <kbd>d</kbd> + <kbd>d</kbd>      | Defx   | delete                         |
+| <kbd>d</kbd> + <kbd>d</kbd>      | Defx   | delete ([Send2Trash](https://github.com/neoclide/coc.nvim/wiki/Language-servers) required)                         |
 | <kbd>r</kbd>                     | Defx   | rename                         |
 | <kbd>.</kbd>                     | Defx   | show ignore files              |
 | <kbd>h</kbd>                     | Defx   | Return to the parent directory |
