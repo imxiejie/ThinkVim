@@ -1,3 +1,5 @@
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
 # ThinkVim Tutorial
 
 ## Structure
@@ -26,7 +28,7 @@ User custom folder `~/.thinkvim.d`,notice the folder must be in your root path `
 
 I suggest that most of plugins should lazyload by dein ,There has two ways to install plugins.
 
-- if you are a vim begginer or you want to follow master branch,you should use `local_plugins.yaml`. like you want use choosewin plugin,you can installed it in `local_plugins.yaml`(notice thinkvim has installed ,just for exmaple)
+- if you are a vim begginer or you want to follow master branch,you should use `local_plugins.yaml`. like you want use choosewin plugin,you can installed it in `local_plugins.yaml`(notice thinkvim has installed ,just for example)
 
 ```yaml
 - repo: t9md/vim-choosewin
@@ -41,9 +43,9 @@ I suggest that most of plugins should lazyload by dein ,There has two ways to in
 Dein is hard to use for some vim begginers，you can check the `core/dein/plugins.yaml` for use.
 more useage about [Dein](https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt).
 
-- if you have vimscript skill and not a vim begginer, want change this config to your own config ,you can edit the `core/dein/plugins.yaml`.
+- if you have vimscript skill and not a vim beginner, want change this config to your own config ,you can edit the `core/dein/plugins.yaml`.
 
-the keymap of plugins you should config it in `local_settings.vim`,th same as intalled plugins,if you want follow master branch use `local_settings.vim`,if you want change to your own config you can edit the `core/plugins/allkey.vim`.
+the keymap of plugins you should config it in `local_settings.vim`,th same as installed plugins,if you want follow master branch use `local_settings.vim`,if you want change to your own config you can edit the `core/plugins/allkey.vim`.
 
 example:
 
@@ -106,7 +108,7 @@ if dein#tap('nerdtree')
 endif
 ```
 
-- if you edit the plugins.yaml ,it doesnt work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`, or use thinkvim menu `;+m` trigger menu,then choose dein,and choose `ReacheRuntimePath`
+- if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`, or use thinkvim menu `;+m` trigger menu,then choose dein,and choose `ReacheRuntimePath`
 
 ## How to install or change colorscheme
 
@@ -120,17 +122,17 @@ check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
 ## How to set the Startify
 
-Startify can only set the header and footer centerd，set this `let g:startify_padding_left = 40` into your `local_settings.vim`,change the value until the file area centerd on your screen
+Startify can only set the header and footer centered，set this `let g:startify_padding_left = 40` into your `local_settings.vim`,change the value until the file area centered on your screen
 
 ## How to config completion
 
 - Completion use LanguageServerProtocol by CoC.nvim.
 - Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-- ThinkVim support javascript typescript python.you dont need to install js ts python server(python you need jedi or Mpls).
+- ThinkVim support javascript typescript python.you don't need to install js ts python server(python you need jedi or Mpls).
 - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
 - [Register language servers in coc-settings.json](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
-- Checkout the languageserverprotocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-- the coc has some language support by coc-extensins,just installed that coc-extensins.
+- Checkout the language server protocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
+- the coc has some language support by coc-extensions,just installed that coc-extensions.
 
   - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
   - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
@@ -155,7 +157,7 @@ Startify can only set the header and footer centerd，set this `let g:startify_p
   - [Clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
   - [Julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
 
-[More about Coc](https://github.com/neoclide/coc.nvim)❤️ , thinkvim is centerd on coc with coc-extensins,so you should learn more about coc and coc-extensions
+[More about Coc](https://github.com/neoclide/coc.nvim)❤️ , thinkvim is centered on coc with coc-extensions,so you should learn more about coc and coc-extensions
 
 ### Coc Extensions
 
@@ -208,61 +210,61 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 
 - Default leader `SPACE` localleader`;` ,The vim keymap in `mappings.vim`,Plugins keymap in `core/plugins/allkey.vim`
 - Insertkey like emacs
-- if you find the keymap doesnt work , Or the keymap doesnt show in this keylist but in `allkey.vim` ,you can create
-  a isse. Welcome PR.
+- if you find the keymap doesn't work , Or the keymap doesn't show in this keylist but in `allkey.vim` ,you can create
+  a issue. Welcome PR.
 
 <details><summary><code>Operation</code>👈 Click</summary>
 <p>
 
-| Keys        | Mode    | Description                             |
-| ----------- | ------- | --------------------------------------- |
-| Ctrl + w    | Insert  | delete the whole word                   |
-| Ctrl + h    | Insert  | delete `BackSpace`                      |
-| Ctrl + d    | Insert  | delete a single char                    |
-| Ctrl + u    | Insert  | delete to the beginning of the line     |
-| Ctrl + b    | Insert  | move left                               |
-| Ctrl + f    | Insert  | move rght                               |
-| Ctrl + a    | Insert  | move the head of line                   |
-| Ctrl + e    | Insert  | move the end of line                    |
-| Ctrl + p    | Command | move up                                 |
-| Ctrl + b    | Command | move left                               |
-| Ctrl + f    | Command | move right                              |
-| Ctrl + a    | Command | move the head of line                   |
-| Ctrl + e    | Command | move the end of line                    |
-| Ctrl + d    | Command | move the cursors char                   |
-| Ctrl + h    | Command | delete `BackSpace`                      |
-| Ctrl + S    | Insert  | save                                    |
-| Ctrl + Q    | Insert  | save and exit                           |
-| Ctrl + o    | Insert  | create a new line                       |
-| ] + b       | Normal  | pre buffer                              |
-| [ + b       | Normal  | next buffer                             |
-| Ctrl + x    | Normal  | delte buffer                            |
-| Y           | Normal  | copy utils the end                      |
-| j           | Normal  | gj                                      |
-| k           | Normal  | gk                                      |
-| j           | Visual  | gj                                      |
-| k           | Visual  | gj                                      |
-| -           | Noraml  | ChooseWin                               |
-| , + `Space` | Normal  | Delete trailing spaces                  |
-| [ + a       | Normal  | Ale next                                |
-| ] + a       | Normal  | Ale pre                                 |
-| [ + c       | Normal  | coc next                                |
-| ] + c       | Normal  | coc prev                                |
-| ] + ]       | Normal  | jump to prev go func                    |
-| [ + [       | Normal  | jump to next go func                    |
-| gc          | Normal  | caw.vim comment                         |
-| gcc         | Normal  | caw.vim uncomment                       |
-| ga          | Normal  | EasyAlign                               |
-| ga          | Visual  | EasyAlign                               |
-| sa          | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
-| sd          | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
-| sr          | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
-| sdb         | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
-| srb         | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
-| v           | Visual  | vim-expand-region                       |
-| V           | Visual  | vim-expand-region                       |
-| zl          | Normal  | Denite Outline for golang               |
-| zT          | Normal  | Denite Goroot for golang                |
+| Keys                                       | Mode    | Description                             |
+| ------------------------------------------ | ------- | --------------------------------------- |
+| <kbd>Ctrl</kbd> + <kbd>w</kbd>             | Insert  | delete the whole word                   |
+| <kbd>Ctrl</kbd> + <kbd>h</kbd>             | Insert  | delete `BackSpace`                      |
+| <kbd>Ctrl</kbd> + <kbd>d</kbd>             | Insert  | delete a single char                    |
+| <kbd>Ctrl</kbd> + <kbd>u</kbd>             | Insert  | delete to the beginning of the line     |
+| <kbd>Ctrl</kbd> + <kbd>b</kbd>             | Insert  | move left                               |
+| <kbd>Ctrl</kbd> + <kbd>f</kbd>             | Insert  | move right                              |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd>             | Insert  | move the head of line                   |
+| <kbd>Ctrl</kbd> + <kbd>e</kbd>             | Insert  | move the end of line                    |
+| <kbd>Ctrl</kbd> + <kbd>p</kbd>             | Command | move up                                 |
+| <kbd>Ctrl</kbd> + <kbd>b</kbd>             | Command | move left                               |
+| <kbd>Ctrl</kbd> + <kbd>f</kbd>             | Command | move right                              |
+| <kbd>Ctrl</kbd> + <kbd>a</kbd>             | Command | move the head of line                   |
+| <kbd>Ctrl</kbd> + <kbd>e</kbd>             | Command | move the end of line                    |
+| <kbd>Ctrl</kbd> + <kbd>d</kbd>             | Command | move the cursors char                   |
+| <kbd>Ctrl</kbd> + <kbd>h</kbd>             | Command | delete `BackSpace`                      |
+| <kbd>Ctrl</kbd> + <kbd>S</kbd>             | Insert  | save                                    |
+| <kbd>Ctrl</kbd> + <kbd>Q</kbd>             | Insert  | save and exit                           |
+| <kbd>Ctrl</kbd> + <kbd>o</kbd>             | Insert  | create a new line                       |
+| <kbd>]</kbd> + <kbd>b</kbd>                | Normal  | pre buffer                              |
+| <kbd>[</kbd> + <kbd>b</kbd>                | Normal  | next buffer                             |
+| <kbd>Ctrl</kbd> + <kbd>x</kbd>             | Normal  | delete buffer                           |
+| <kbd>Y</kbd>                               | Normal  | copy utils the end                      |
+| <kbd>j</kbd>                               | Normal  | gj                                      |
+| <kbd>k</kbd>                               | Normal  | gk                                      |
+| <kbd>j</kbd>                               | Visual  | gj                                      |
+| <kbd>k</kbd>                               | Visual  | gj                                      |
+| <kbd>-</kbd>                               | Normal  | ChooseWin                               |
+| <kbd>,</kbd> + <kbd>Space</kbd>            | Normal  | Delete trailing spaces                  |
+| <kbd>[</kbd> + <kbd>a </kbd>               | Normal  | Ale next                                |
+| <kbd>]</kbd> + <kbd>a </kbd>               | Normal  | Ale pre                                 |
+| <kbd>[</kbd> + <kbd>c </kbd>               | Normal  | coc next                                |
+| <kbd>]</kbd> + <kbd>c </kbd>               | Normal  | coc prev                                |
+| <kbd>]</kbd> + <kbd>] </kbd>               | Normal  | jump to prev go func                    |
+| <kbd>[</kbd> + <kbd>[ </kbd>               | Normal  | jump to next go func                    |
+| <kbd>g</kbd> + <kbd>c</kbd>                | Normal  | caw.vim comment                         |
+| <kbd>g</kbd> + <kbd>c</kbd> + <kbd>c</kbd> | Normal  | caw.vim uncomment                       |
+| <kbd>g</kbd> + <kbd>a</kbd>                | Normal  | EasyAlign                               |
+| <kbd>g</kbd> + <kbd>a</kbd>                | Visual  | EasyAlign                               |
+| <kbd>s</kbd> + <kbd>a</kbd>                | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| <kbd>s</kbd> + <kbd>d</kbd>                | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| <kbd>s</kbd> + <kbd>r</kbd>                | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| <kbd>s</kbd> + <kbd>d</kbd> + <kbd>b</kbd> | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| <kbd>s</kbd> + <kbd>r</kbd> + <kbd>b</kbd> | Normal  | vim-sandwich prefix +{iw/is/ip}+{i/f/t} |
+| <kbd>v</kbd>                               | Visual  | vim-expand-region                       |
+| <kbd>V</kbd>                               | Visual  | vim-expand-region                       |
+| <kbd>z</kbd> + <kbd>l</kbd>                | Normal  | Denite Outline for golang               |
+| <kbd>z</kbd> + <kbd>T</kbd>                | Normal  | Denite Goroot for golang                |
 
 </p>
 </details>
@@ -270,18 +272,18 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>Window</code>👈 Click</summary>
 <p>
 
-| Keys       | Mode   | Description                       |
-| ---------- | ------ | --------------------------------- |
-| Ctrl + h   | Normal | move to left window               |
-| Ctrl + l   | Noraml | move to right window              |
-| Ctrl + j   | Normal | move to down window               |
-| Ctrl + k   | Normal | move to up window                 |
-| Ctrl + w [ | Normal | the width of window reduce 3      |
-| Ctrl + w ] | Normal | the width of window increase 3    |
-| Ctrl + f   | Normal | Window scrolling down             |
-| Ctrl + b   | Normal | Window scrolling up               |
-| Ctrl + d   | Normal | Window scrolls down half a screen |
-| Ctrl + u   | Normal | Window scrolls up half a screen   |
+| Keys                                          | Mode   | Description                       |
+| --------------------------------------------- | ------ | --------------------------------- |
+| <kbd>Ctrl</kbd> + <kbd>h</kbd>                | Normal | move to left window               |
+| <kbd>Ctrl</kbd> + <kbd>l</kbd>                | Normal | move to right window              |
+| <kbd>Ctrl</kbd> + <kbd>j</kbd>                | Normal | move to down window               |
+| <kbd>Ctrl</kbd> + <kbd>k</kbd>                | Normal | move to up window                 |
+| <kbd>Ctrl</kbd> + <kbd>w</kbd> + <kbd>[</kbd> | Normal | the width of window reduce 3      |
+| <kbd>Ctrl</kbd> + <kbd>w</kbd> + <kbd>]</kbd> | Normal | the width of window increase 3    |
+| <kbd>Ctrl</kbd> + <kbd>f</kbd>                | Normal | Window scrolling down             |
+| <kbd>Ctrl</kbd> + <kbd>b</kbd>                | Normal | Window scrolling up               |
+| <kbd>Ctrl</kbd> + <kbd>d</kbd>                | Normal | Window scrolls down half a screen |
+| <kbd>Ctrl</kbd> + <kbd>u</kbd>                | Normal | Window scrolls up half a screen   |
 
 </p>
 </details>
@@ -289,11 +291,11 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>Tab</code>👈 Click</summary>
 <p>
 
-| Keys            | Mode   | Description |
-| --------------- | ------ | ----------- |
-| `<Leader>` + tn | Normal | create tab  |
-| `<Leader>` + te | Normal | edit tab    |
-| `<Leader>` + tm | Normal | move tab    |
+| Keys                                            | Mode   | Description |
+| ----------------------------------------------- | ------ | ----------- |
+| <kbd>Leader</kbd> + <kbd>t</kbd> + <kbd>n</kbd> | Normal | create tab  |
+| <kbd>Leader</kbd> + <kbd>t</kbd> + <kbd>e</kbd> | Normal | edit tab    |
+| <kbd>Leader</kbd> + <kbd>t</kbd> + <kbd>m</kbd> | Normal | move tab    |
 
 </p>
 </details>
@@ -301,44 +303,44 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>LeaderKey</code>👈 Click</summary>
 <p>
 
-| Keys                        | Mode   | Description                           |
-| --------------------------- | ------ | ------------------------------------- |
-| `<Leader>` + number         | Normal | number[0-9] choose buffer             |
-| `<Leader>` + ca             | Normal | CocDiagnostics                        |
-| `<Leader>` + cc             | Normal | CocCommands                           |
-| `<Leader>` + ce             | Normal | CocExtensions                         |
-| `<Leader>` + cj             | Normal | Cocnext                               |
-| `<Leader>` + ck             | Normal | CocPrev                               |
-| `<Leader>` + co             | Normal | CocOutline                            |
-| `<Leader>` + cr             | Normal | CocResume                             |
-| `<Leader>` + cs             | Normal | CocIsymbols                           |
-| `<Leader>` + G              | Normal | open Goyo                             |
-| `<Leader>` + m              | Normal | open mundo                            |
-| `<Leader>` + w              | Normal | save file                             |
-| `<Leader>` + -              | Normal | ChooseWin                             |
-| `<Leader>` + s              | Normal | open Startify                         |
-| `<Leader>` + d              | Normal | open Dash                             |
-| `<Leader>` + p              | Normal | Edit the file which in plugins folder |
-| `<Leader>` + cf             | Normal | coc Format                            |
-| `<Leader>` + fc             | Normal | fzf chage vim colorscheme             |
-| `<Leader>` + ff             | Normal | fzf find files                        |
-| `<Leader>` + fr             | Normal | fzf rg search                         |
-| `<Leader>` + fv             | Normal | fzf Vista Finder                      |
-| `<Leader>` + fb             | Normal | fzf find buffer                       |
-| `<Leader>` + fw             | Normal | fzf rg search the cursor word         |
-| `<Leader>` + fgc            | Normal | fzf gitcommits                        |
-| `<Leader>` + fbc            | Normal | fzf gitbcommits                       |
-| `<Leader>` + `<Leader>` + w | Normal | Easymotion jump to donw               |
-| `<Leader>` + `<Leader>` + b | Normal | Easymotion jump to up                 |
-| `<Leader>` + `<Leader>` + f | Normal | Easymotion search for jump            |
-| `<Leader>` + gd             | Normal | Gdiff                                 |
-| `<Leader>` + gc             | Normal | Gcommit                               |
-| `<Leader>` + gb             | Normal | Gblame                                |
-| `<Leader>` + gB             | Normal | GBrowse                               |
-| `<Leader>` + gS             | Normal | GStatus                               |
-| `<Leader>` + gp             | Normal | Git push                              |
-| `<Leader>` + gl             | Normal | Denite show all git log               |
-| `<Leader>` + gh             | Normal | Denite show git branch                |
+| Keys                                                           | Mode   | Description                           |
+| -------------------------------------------------------------- | ------ | ------------------------------------- |
+| <kbd>Leader</kbd> + <kbd>number</kbd>                          | Normal | number[0-9] choose buffer             |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>a</kbd>                | Normal | CocDiagnostics                        |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>c</kbd>                | Normal | CocCommands                           |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>e</kbd>                | Normal | CocExtensions                         |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>j</kbd>                | Normal | Cocnext                               |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>k</kbd>                | Normal | CocPrev                               |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>o</kbd>                | Normal | CocOutline                            |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>r</kbd>                | Normal | CocResume                             |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>s</kbd>                | Normal | CocIsymbols                           |
+| <kbd>Leader</kbd> + <kbd>G</kbd>                               | Normal | open Goyo                             |
+| <kbd>Leader</kbd> + <kbd>m</kbd>                               | Normal | open mundo                            |
+| <kbd>Leader</kbd> + <kbd>w</kbd>                               | Normal | save file                             |
+| <kbd>Leader</kbd> + <kbd>-</kbd>                               | Normal | ChooseWin                             |
+| <kbd>Leader</kbd> + <kbd>s</kbd>                               | Normal | open Startify                         |
+| <kbd>Leader</kbd> + <kbd>d</kbd>                               | Normal | open Dash                             |
+| <kbd>Leader</kbd> + <kbd>p</kbd>                               | Normal | Edit the file which in plugins folder |
+| <kbd>Leader</kbd> + <kbd>c</kbd> + <kbd>f</kbd>                | Normal | coc Format                            |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>c</kbd>                | Normal | fzf chage vim colorscheme             |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>f</kbd>                | Normal | fzf find files                        |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>r</kbd>                | Normal | fzf rg search                         |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>v</kbd>                | Normal | fzf Vista Finder                      |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>b</kbd>                | Normal | fzf find buffer                       |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>w</kbd>                | Normal | fzf rg search the cursor word         |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>g</kbd> + <kbd>c</kbd> | Normal | fzf gitcommits                        |
+| <kbd>Leader</kbd> + <kbd>f</kbd> + <kbd>b</kbd> + <kbd>c</kbd> | Normal | fzf gitbcommits                       |
+| <kbd>Leader</kbd> + <kbd>Leader</kbd> + <kbd>w</kbd>           | Normal | Easymotion jump to donw               |
+| <kbd>Leader</kbd> + <kbd>Leader</kbd> + <kbd>b</kbd>           | Normal | Easymotion jump to up                 |
+| <kbd>Leader</kbd> + <kbd>Leader</kbd> + <kbd>f</kbd>           | Normal | Easymotion search for jump            |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>d</kbd>                   | Normal | Gdiff                                 |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>c</kbd>                   | Normal | Gcommit                               |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>b</kbd>                   | Normal | Gblame                                |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>B</kbd>                   | Normal | GBrowse                               |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>S</kbd>                   | Normal | GStatus                               |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>p</kbd>                   | Normal | Git push                              |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>l</kbd>                   | Normal | Denite show all git log               |
+| <kbd>Leader</kbd> + <kbd>g</kbd><kbd>h</kbd>                   | Normal | Denite show git branch                |
 
 </p>
 </details>
@@ -346,16 +348,16 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>LocalLeaderKey</code>👈 Click</summary>
 <p>
 
-| Keys                 | Mode   | Description        |
-| -------------------- | ------ | ------------------ |
-| `<LocalLeader>` + t  | Normal | Open Tagbar        |
-| `<LocalLeader>` + r  | Normal | QuickRun           |
-| `<LocalLeader>` + v  | Normal | Open Vista         |
-| `<LocalLeader>` + gi | Normal | vim-go GoImpl      |
-| `<LocalLeader>` + gd | Normal | vim-go GoDescribe  |
-| `<LocalLeader>` + gc | Normal | vim-go GoCallees   |
-| `<LocalLeader>` + gC | Normal | vim-go GoCallers   |
-| `<LocalLeader>` + gs | Normal | vim-go GoCallstack |
+| Keys                                              | Mode   | Description        |
+| ------------------------------------------------- | ------ | ------------------ |
+| <kbd>LocalLeader</kbd> + <kbd>t</kbd>             | Normal | Open Tagbar        |
+| <kbd>LocalLeader</kbd> + <kbd>r</kbd>             | Normal | QuickRun           |
+| <kbd>LocalLeader</kbd> + <kbd>v</kbd>             | Normal | Open Vista         |
+| <kbd>LocalLeader</kbd> + <kbd>g</kbd><kbd>i</kbd> | Normal | vim-go GoImpl      |
+| <kbd>LocalLeader</kbd> + <kbd>g</kbd><kbd>d</kbd> | Normal | vim-go GoDescribe  |
+| <kbd>LocalLeader</kbd> + <kbd>g</kbd><kbd>c</kbd> | Normal | vim-go GoCallees   |
+| <kbd>LocalLeader</kbd> + <kbd>g</kbd><kbd>C</kbd> | Normal | vim-go GoCallers   |
+| <kbd>LocalLeader</kbd> + <kbd>g</kbd><kbd>s</kbd> | Normal | vim-go GoCallstack |
 
 </p>
 </details>
@@ -363,32 +365,32 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>Denite</code>👈 Click</summary>
 <p>
 
-| Keys                | Mode                 | Description        |
-| ------------------- | -------------------- | ------------------ |
-| `<LocalLeader>` + m | Normal               | Denite Menu        |
-| <CR>                | Denite               | Doaction           |
-| i                   | Denite               | Open filter buffer |
-| d                   | Denite               | Delete             |
-| p                   | Denite               | Preview            |
-| st                  | Denite               | tabopen            |
-| sv                  | Denite               | Vsplit             |
-| si                  | Denite               | Split              |
-| `'`                 | Denite               | QuickMove          |
-| q                   | Denite               | Quit               |
-| r                   | Denite               | RedRaw             |
-| yy                  | Denite               | Yank               |
-| `<Esc>`             | Denite               | Quit               |
-| `<C-u>`             | Denite               | Restore Source     |
-| `<C-f>`             | Denite               | call Defx          |
-| `<C-x>`             | Denite               | Choose Action      |
-| `<Space>`           | Denite               | Toggle Select      |
-| `<Esc>`             | Denite Filter        | Quit               |
-| q                   | Denite Filter        | Quit               |
-| `<C-c>`             | Denite Filter        | Quit filter        |
-| `<kk>`              | Denite Filter insert | move window        |
-| `<kk>`              | Denite Filter normal | move window        |
-| `<jj>`              | Denite Filter insert | move window        |
-| `<jj>`              | Denite Filter normal | move window        |
+| Keys                                  | Mode                 | Description        |
+| ------------------------------------- | -------------------- | ------------------ |
+| <kbd>LocalLeader</kbd> + <kbd>m</kbd> | Normal               | Denite Menu        |
+| `<CR>`                                | Denite               | Doaction           |
+| <kbd>i</kbd>                          | Denite               | Open filter buffer |
+| <kbd>d</kbd>                          | Denite               | Delete             |
+| <kbd>p</kbd>                          | Denite               | Preview            |
+| <kbd>s</kbd> + <kbd>t</kbd>           | Denite               | tabopen            |
+| <kbd>s</kbd> + <kbd>v</kbd>           | Denite               | Vsplit             |
+| <kbd>s</kbd> + <kbd>i</kbd>           | Denite               | Split              |
+| <kbd>'</kbd>                          | Denite               | QuickMove          |
+| <kbd>q</kbd>                          | Denite               | Quit               |
+| <kbd>r</kbd>                          | Denite               | RedRaw             |
+| <kbd>y</kbd><kbd>y</kbd>              | Denite               | Yank               |
+| <kbd>Esc</kbd>                        | Denite               | Quit               |
+| <kbd>Ctrl</kbd> + <kbd>u</kbd>        | Denite               | Restore Source     |
+| <kbd>Ctrl</kbd> + <kbd>f</kbd>        | Denite               | call Defx          |
+| <kbd>Ctrl</kbd> + <kbd>x</kbd>        | Denite               | Choose Action      |
+| <kbd>Space</kbd>                      | Denite               | Toggle Select      |
+| <kbd>Esc</kbd>                        | Denite Filter        | Quit               |
+| <kbd>q</kbd>                          | Denite Filter        | Quit               |
+| <kbd>Ctrl</kbd> + <kbd>c</kbd>        | Denite Filter        | Quit filter        |
+| <kbd>k</kbd> + <kbd>k</kbd>           | Denite Filter insert | move window        |
+| <kbd>k</kbd> + <kbd>k</kbd>           | Denite Filter normal | move window        |
+| <kbd>j</kbd> + <kbd>j</kbd>           | Denite Filter insert | move window        |
+| <kbd>j</kbd> + <kbd>j</kbd>           | Denite Filter normal | move window        |
 
 </p>
 </details>
@@ -396,29 +398,29 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>Defx</code>👈 Click</summary>
 <p>
 
-| Keys           | Mode   | Description                    |
-| -------------- | ------ | ------------------------------ |
-| `<Leader>` + e | Normal | open defx                      |
-| N              | Defx   | touch new file                 |
-| K              | Defx   | touch new folder               |
-| `<CR>`         | Defx   | open file or folder            |
-| `l`            | Defx   | open file or folder            |
-| dd             | Defx   | delete                         |
-| r              | Defx   | rename                         |
-| .              | Defx   | show ignore files              |
-| h              | Defx   | Return to the parent directory |
-| q              | Defx   | exit defx                      |
-| s              | Defx   | Open in rightwindow vs         |
-| i              | Defx   | Open file sp                   |
-| yy             | Defx   | copy the path of file          |
-| \              | Defx   | show the path of file          |
-| c              | Defx   | copy                           |
-| m              | Defx   | move                           |
-| p              | Defx   | paste                          |
-| `<Space>`      | Defx   | multi                          |
-| gf             | Defx   | open in denite                 |
-| gr             | Defx   | search in denite               |
-| w              | Defx   | increase the width             |
+| Keys                             | Mode   | Description                    |
+| -------------------------------- | ------ | ------------------------------ |
+| <kbd>Leader</kbd> + <kbd>e</kbd> | Normal | open defx                      |
+| <kbd>N</kbd>                     | Defx   | touch new file                 |
+| <kbd>K</kbd>                     | Defx   | touch new folder               |
+| `<CR>`                           | Defx   | open file or folder            |
+| `l`                              | Defx   | open file or folder            |
+| <kbd>d</kbd> + <kbd>d</kbd>      | Defx   | delete                         |
+| <kbd>r</kbd>                     | Defx   | rename                         |
+| <kbd>.</kbd>                     | Defx   | show ignore files              |
+| <kbd>h</kbd>                     | Defx   | Return to the parent directory |
+| <kbd>q</kbd>                     | Defx   | exit defx                      |
+| <kbd>s</kbd>                     | Defx   | Open in rightwindow vs         |
+| <kbd>i</kbd>                     | Defx   | Open file sp                   |
+| <kbd>y</kbd> + <kbd>y</kbd>      | Defx   | copy the path of file          |
+| <kbd>\<kbd>                      | Defx   | show the path of file          |
+| <kbd>c<kbd>                      | Defx   | copy                           |
+| <kbd>m<kbd>                      | Defx   | move                           |
+| <kbd>p<kbd>                      | Defx   | paste                          |
+| <kbd>Space</kbd>                 | Defx   | multi                          |
+| <kbd>g</kbd> + <kbd>f</kbd>      | Defx   | open in denite                 |
+| <kbd>g</kbd> + <kbd>r</kbd>      | Defx   | search in denite               |
+| <kbd>w</kbd>                     | Defx   | increase the width             |
 
 </p>
 </details>
@@ -426,22 +428,22 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>CoC</code>👈 Click</summary>
 <p>
 
-| Keys         | Mode          | Description               |
-| ------------ | ------------- | ------------------------- |
-| Tab          | Select        | Jump                      |
-| Tab          | Insert        | completion donw           |
-| Shit + Tab   | Insert        | completion up             |
-| Ctrl + n     | Insert        | completion down           |
-| Ctrl + p     | Insert        | completion up             |
-| Ctrl + Space | Normal        | Forced trigger completion |
-| `<CR>`       | Insert/Select | Confirm                   |
-| K            | Normal        | Show the function doc     |
-| gd           | Normal        | jump to defined           |
-| gy           | Normal        | coc-type-definition       |
-| gi           | Normal        | coc-implementation        |
-| gr           | Normal        | coc-references            |
-| `[` + g      | Normal        | coc-git-prechunk          |
-| `]` + g      | Normal        | coc-git-nextchunk         |
+| Keys                               | Mode          | Description               |
+| ---------------------------------- | ------------- | ------------------------- |
+| <kbd>Tab</kbd>                     | Select        | Jump                      |
+| <kbd>Tab</kbd>                     | Insert        | completion donw           |
+| <kbd>Shit</kbd> + <kbd>Tab</kbd>   | Insert        | completion up             |
+| <kbd>Ctrl</kbd> + <kbd>n</kbd>     | Insert        | completion down           |
+| <kbd>Ctrl</kbd> + <kbd>p</kbd>     | Insert        | completion up             |
+| <kbd>Ctrl</kbd> + <kbd>Space</kbd> | Normal        | Forced trigger completion |
+| `<CR>`                             | Insert/Select | Confirm                   |
+| <kbd>K</kbd>                       | Normal        | Show the function doc     |
+| <kbd>g</kbd> + <kbd>d</kbd>        | Normal        | jump to defined           |
+| <kbd>g</kbd> + <kbd>y</kbd>        | Normal        | coc-type-definition       |
+| <kbd>g</kbd> + <kbd>i</kbd>        | Normal        | coc-implementation        |
+| <kbd>g</kbd> + <kbd>r</kbd>        | Normal        | coc-references            |
+| <kbd>[</kbd> + <kbd>g</kbd>        | Normal        | coc-git-prechunk          |
+| <kbd>]</kbd> + <kbd>g</kbd>        | Normal        | coc-git-nextchunk         |
 
 </p>
 </details>
