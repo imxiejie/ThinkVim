@@ -21,7 +21,8 @@ augroup MyAutoCmd
     " Go (Google)
     autocmd FileType go let b:coc_pairs_disabled = ['<']
 
-    " set filetypes as typescript.tsx
+    " set filetypes as typescript && tsx
+    autocmd BufNewFile,BufRead *.ts  set filetype=typescript
     autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
     " HTML (.gohtml and .tpl for server side)
