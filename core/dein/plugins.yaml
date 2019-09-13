@@ -150,8 +150,8 @@
 - { repo: honza/dockerfile.vim, on_ft: Dockerfile }
 - { repo: junegunn/vim-emoji, on_ft: [markdown,vim] }
 
-- { repo: leafgarland/typescript-vim , on_ft:[typescript.tsx,typescript] }
-- { repo: peitalin/vim-jsx-typescript , on_ft: typescript.tsx}
+- { repo: leafgarland/typescript-vim, on_ft: [typescript.tsx,typescript] }
+- { repo: peitalin/vim-jsx-typescript, on_ft: [typescript.tsx]}
 
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
 - { repo: tmhedberg/SimpylFold, on_ft: python }
