@@ -6,7 +6,7 @@ default: install
 
 install:
 	@mkdir -vp "$(XDG_CACHE_HOME)/vim/"{backup,session,swap,tags,undo}; \
-	$(nvim) -V1 -es -i NONE -N -u config/init.vim -c "try | call dein#update() | finally | echomsg '' | qall! | endtry"
+	$(nvim) -V1 -es -i NONE -N -u core/vimrc -c "try | call dein#update() | finally | echomsg '' | qall! | endtry"
 
 update:
 	@git pull --ff --ff-only; \
