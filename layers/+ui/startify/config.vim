@@ -1,3 +1,4 @@
+
 " For startify
 let g:startify_padding_left = 30
 let s:header = [

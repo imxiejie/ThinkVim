@@ -49,6 +49,7 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
         " Resume latest coc list
         nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
+        nnoremap <silent> <leader>s
         " Use `[c` and `]c` for navigate diagnostics
         nmap <silent> ]c <Plug>(coc-diagnostic-prev)
         nmap <silent> [c <Plug>(coc-diagnostic-next)
@@ -85,9 +86,10 @@ if dein#tap('coc.nvim')
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
         " multiple cursors session
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
-        nmap <silent> <C-m> <Plug>(coc-cursors-word)
-        xmap <silent> <C-m> <Plug>(coc-cursors-range)
+        nmap <silent> <C-d> <Plug>(coc-cursors-word)
+        xmap <silent> <C-d> <Plug>(coc-cursors-range)
         nnoremap <silent> <leader>cm ::CocSearch -w 
+        nnoremap <silent> <leader>cw ::CocSearch  
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
 

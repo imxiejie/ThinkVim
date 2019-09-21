@@ -43,7 +43,7 @@ highlight def link Defx_filename_3_Unmerged Label
 " ---------------------------------------------------------
 highlight BufTabLineCurrent ctermbg=96 guibg=#5d4d7a
 
-" buftabline highlight
+" magit highlight
 " ---------------------------------------------------------
 highlight  gitInfoRepotitle    guibg=NONE guisp=NONE gui=bold cterm=bold
 highlight  gitInfoHeadtitle   guibg=NONE guisp=NONE gui=bold cterm=bold
@@ -83,7 +83,6 @@ hi ReactLifeCycleMethods ctermfg=204 guifg=#D19A66
 
 " yellow
 hi tsxAttrib guifg=#F8BD7F cterm=italic
-
 "GetColorSynatxGroup
 " ---------------------------------------------------------
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
