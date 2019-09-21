@@ -195,7 +195,7 @@
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
-  hook_source: source  $VIM_PATH/+tools/vista/config.vim
+  hook_source: source  $VIM_PATH/layers/+tools/vista/config.vim
 
 
 - repo: mattn/emmet-vim
