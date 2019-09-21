@@ -16,9 +16,9 @@ endif
 let $DATA_PATH = g:etc#cache_path
 
 
-" Set augroup
 augroup MyAutoCmd
 	autocmd!
+	autocmd CursorHold *? syntax sync minlines=300
 augroup END
 
 " Disable vim distribution plugins
@@ -29,8 +29,8 @@ let g:loaded_logiPat = 1
 let g:loaded_matchit = 1
 let g:loaded_matchparen = 1
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
-let g:loaded_rrhelper = 1
-let g:loaded_shada_plugin = 1
+let g:loaded_rrhelper = 1  " ?
+let g:loaded_shada_plugin = 1  " ?
 let g:loaded_tar = 1
 let g:loaded_tarPlugin = 1
 let g:loaded_tutor_mode_plugin = 1
@@ -55,8 +55,7 @@ if has('vim_starting')
 	xnoremap ,        <Nop>
 	nnoremap ;        <Nop>
 	xnoremap ;        <Nop>
-	nnoremap m        <Nop>
-	xnoremap m        <Nop>
+
    if ! has('nvim') && has('pythonx')
 		if has('python3')
 			set pyxversion=3
@@ -77,7 +76,7 @@ if has('vim_starting')
 endif
 
 call etc#init()
-call etc#util#source_file('core/plugins/allkey.vim')
+call etc#util#source_file('layers/+thinkvim/config.vim')
 call etc#util#source_file('core/general.vim')
 call etc#util#source_file('core/filetype.vim')
 call etc#util#source_file('core/mappings.vim')

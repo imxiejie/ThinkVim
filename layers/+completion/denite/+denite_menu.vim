@@ -44,11 +44,12 @@ let s:menus.config.file_candidates = [
 let s:menus.thinkvim = {'description': '💎 ThinkVim Configuration files'}
 let s:menus.thinkvim.file_candidates = [
   \   ['🐠 MainVimrc          settings: vimrc               🔹', $VIMPATH.'/core/vimrc'],
+  \   ['🐠 Initial            settings: init.vim            🔹', $VIMPATH.'/core/init.vim'],
   \   ['🐠 General            settings: general.vim         🔹', $VIMPATH.'/core/general.vim'],
+  \   ['🐠 DeinConfig         settings: deinrc.vim          🔹', $VIMPATH.'/core/deinrc.vim'],
   \   ['🐠 FileTypes          settings: filetype.vim        🔹', $VIMPATH.'/core/filetype.vim'],
   \   ['🐠 Installed       LoadPlugins: plugins.yaml        🔹', $VIMPATH.'/core/dein/plugins.yaml'],
-  \   ['🐠 User           LocalPlugins: local_plugins.yaml  🔹', '~/.thinkvim.d/local_plugins.yaml'],
-  \   ['🐠 User           LocalSettings: local_settings.vim 🔹', '~/.thinkvim.d/local_settings.vim'],
+  \   ['🐠 Installed      LocalPlugins: local_plugins.yaml  🔹', $VIMPATH.'/core/dein/local_plugins.yaml'],
   \   ['🐠 Global   Key    Vimmappings: mappings.vim        🔹', $VIMPATH.'/core/mappings.vim'],
   \   ['🐠 Global   Key Pluginmappings: Pluginmappings      🔹', $VIMPATH.'/core/plugins/allkey.vim'],
   \ ]

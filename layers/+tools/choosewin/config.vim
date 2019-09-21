@@ -1,3 +1,4 @@
+
 " Plugin: vim-choosewin
 " ---------------------------------------------------------
 let g:choosewin_label = 'SDFJKLZXCV'
