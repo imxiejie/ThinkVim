@@ -2,7 +2,7 @@
     "suggest.triggerAfterInsertEnter": false,
     "suggest.timeout": 500,
     "suggest.noselect": false,
-    "suggest.detailField":"preview",
+    "suggest.detailField":"abbr",
     "suggest.snippetIndicator": "🌟",
     "suggest.triggerCompletionWait": 100,
     "suggest.echodocSupport": true,
@@ -30,8 +30,7 @@
         "file": "\uf723",
         "folder": "\uf114",
         "snippet": "\ue60b",
-        "typeParameter": "\uf728",
-        "default": "\uf29c"
+        "typeParameter": "\uf728", "default": "\uf29c"
     },
     //diagnostic
     "diagnostic.signOffset": 9999999,
@@ -57,8 +56,9 @@
     "git.changeRemovedSign.text": "▋",
     //Snippet
     "coc.preferences.snippetStatusText": "Ⓢ ",
-    //tslint
-    "tslint.autoFixOnSave": true,
+    //CocList
+    "list.source.files.defaultOptions": ["--auto-preview"],
+    "list.source.outline.defaultOptions": ["--auto-preview"],
     //prettier
     "coc.preferences.formatOnSaveFiletypes": ["css","markdown"],
     "prettier.statusItemText": "ⓟ ",
@@ -67,12 +67,16 @@
     "prettier.stylelintIntegration": true,
     //emmet
     "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact"},
-    //python
-    "python.autoComplete.addBrackets": true,
+    //imselect
+    "imselect.enableStatusItem": false,
+    //multiple curssors
+    "cursors.nextKey": "<C-n>",
+    "cursors.previousKey": "<C-p>",
+    "cursors.cancelKey": "<esc>",
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    "languageserver": {
-        }
+    //golang
+    "languageserver": { }
 }

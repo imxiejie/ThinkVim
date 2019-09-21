@@ -6,14 +6,14 @@
 - repo: honza/vim-snippets
 - repo: taigacute/spaceline.vim
 - repo: bagrat/vim-buffet
-  hook_add: source $VIM_PATH/core/plugins/buffet.vim
+  hook_add: source $VIM_PATH/layers/+ui/buffet/config.vim
 #}}}
 
 # Core Plugins{{{
 - repo: neoclide/coc.nvim
   merge: 0
   rev: release
-  hook_add: source  $VIM_PATH/core/plugins/coc.vim
+  hook_add: source  $VIM_PATH/layers/+completion/coc/config.vim
 # }}}
 
 
@@ -25,10 +25,8 @@
   on_cmd: Denite
   depends: vim-devicons
   hook_source: |
-        source  $VIM_PATH/core/plugins/denite.vim
-        source  $VIM_PATH/core/plugins/denite_menu.vim
-- { repo: chemzqm/denite-git, on_source: denite.nvim }
-
+        source  $VIM_PATH/layers/+completion/denite/config.vim
+        source  $VIM_PATH/layers/+completion/denite/+denite_menu.vim
 # }}}
 
 # Interface{{{
@@ -39,7 +37,7 @@
 
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
-  hook_source: source  $VIM_PATH/core/plugins/vim-choosewin.vim
+  hook_source: source  $VIM_PATH/+tools/plugins/choosewin/config.vim
 
 - repo: kizza/actionmenu.nvim
   on_path: .*
@@ -47,7 +45,7 @@
 - repo: mhinz/vim-startify
   on_cmd: Startify
   depends: vim-devicons
-  hook_source: source  $VIM_PATH/core/plugins/startify.vim
+  hook_source: source  $VIM_PATH/layers/+ui/startify/config.vim
   hook_post_source: |
       function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
@@ -85,7 +83,7 @@
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [Whichkey, Whichkey!]
-  hook_source: source  $VIM_PATH/core/plugins/whichkey.vim
+  hook_source: source  $VIM_PATH/+layers/+tools/whichkey/config.vim
   hook_post_source: |
         call which_key#register('<Space>', 'g:which_key_map')
         call which_key#register(';', 'g:which_key_localmap')
@@ -104,11 +102,11 @@
 # File manager{{{
 - repo: Shougo/defx.nvim
   on_cmd: Defx
-  hook_source: source  $VIM_PATH/core/plugins/defx.vim
+  hook_source: source  $VIM_PATH/layers/+ui/defx/config.vim
 
 - repo: kristijanhusak/defx-git
   on_source: defx.nvim
-  hook_source: source  $VIM_PATH/core/plugins/defx-git.vim
+  hook_source: source  $VIM_PATH/layers/+ui/defx/+defx-git.vim
 
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
@@ -124,7 +122,7 @@
   depends: fzf
   on_cmd: [Colors,Rg,Buffers]
   on_func: Fzf_dev
-  hook_source: source  $VIM_PATH/core/plugins/fzf.vim
+  hook_source: source  $VIM_PATH/layers/+completion/fzf/config.vim
 
 # }}}
 
@@ -138,10 +136,6 @@
   hook_source: let g:easygit_enable_command = 1
 
 
-# use coc-git instead of vim-gitgutter
-# - repo: airblade/vim-gitgutter
-#   on_path: .*
-#   hook_source: source ~/.config/nvim/core/plugins/vim-gitgutter.vim
 
 # }}}
 
@@ -172,7 +166,7 @@
 
 - repo: fatih/vim-go
   on_ft: go
-  hook_source: source  $VIM_PATH/core/plugins/vim-go.vim
+  hook_source: source  $VIM_PATH/layers/+lang/go/config.vim
 
 - repo: tpope/vim-markdown
   on_ft: markdown
@@ -193,19 +187,16 @@
 
 - repo: sbdchd/neoformat
   on_cmd: [Neoformat,Neoformat!]
-  hook_source: source  $VIM_PATH/core/plugins/neoformat.vim
+  hook_source: source  $VIM_PATH/+tools/neoformat/config.vim
 
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
-  hook_source: source $VIM_PATH/core/plugins/indentline.vim
+  hook_source: source $VIM_PATH/layers/+ui/indentline/config.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
-  hook_source: source  $VIM_PATH/core/plugins/vista.vim
+  hook_source: source  $VIM_PATH/+tools/vista/config.vim
 
-- repo: majutsushi/tagbar
-  on_cmd: TagbarToggle
-  hook_source: source  $VIM_PATH/core/plugins/tagbar.vim
 
 - repo: mattn/emmet-vim
   on_ft: [html,css,jsx,javascript,javascript.jsx]
@@ -243,7 +234,7 @@
       let g:mkdp_auto_start = 1
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
-  hook_source: source  $VIM_PATH/core/plugins/goyo.vim
+  hook_source: source  $VIM_PATH/layers/+tools/goyo/config.vim
 
 - repo: junegunn/Limelight.vim
   on_cmd: Limelight
@@ -277,3 +268,8 @@
 # - repo: rhysd/vim-operator-surround
 #   depends: [vim-operator-user, vim-textobj-multiblock]
 #   on_map:  { vnx : <Plug> }
+# use coc-git instead of vim-gitgutter
+# - repo: airblade/vim-gitgutter
+#   on_path: .*
+#   hook_source: source ~/.config/nvim/core/plugins/vim-gitgutter.vim
+
