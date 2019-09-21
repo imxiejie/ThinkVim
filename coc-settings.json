@@ -73,6 +73,12 @@
     "cursors.nextKey": "<C-n>",
     "cursors.previousKey": "<C-p>",
     "cursors.cancelKey": "<esc>",
+    // coc-explorer
+    "explorer.icon.expanded": "▾",
+    "explorer.icon.shrinked": "▸",
+    "explorer.icon.enableNerdfont": true,
+    //python
+    "python.autoComplete.addBrackets": true,
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
