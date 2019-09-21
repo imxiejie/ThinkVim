@@ -1,11 +1,13 @@
+
+" Use dein as a plugin manager and intialize all plugins
+let g:dein#auto_recache = 1
+let g:dein#install_max_processes = 16
+let g:dein#install_progress_type = 'echo'
+let g:dein#enable_notification = 1
+let g:dein#install_log_filename = g:etc#cache_path . '/dein.log'
+
 function! etc#providers#dein#_init(config_paths) abort
 
-    " Use dein as a plugin manager and intialize all plugins
-    let g:dein#auto_recache = 1
-    let g:dein#install_max_processes = 16
-    let g:dein#install_progress_type = 'echo'
-    let g:dein#enable_notification = 1
-    let g:dein#install_log_filename = g:etc#cache_path . '/dein.log'
 	" Add dein to vim's runtimepath
 	let l:cache_path = g:etc#cache_path . '/dein'
 	if &runtimepath !~# '/dein.vim'

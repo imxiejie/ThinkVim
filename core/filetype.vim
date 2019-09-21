@@ -33,6 +33,3 @@ augroup MyAutoCmd
 	" https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
 	autocmd FileType css,javascript,jsx,javascript.jsx setlocal backupcopy=yes
 augroup END
-
-
-

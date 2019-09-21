@@ -1,3 +1,4 @@
+
 let g:buffet_tab_icon = "\uf00a"
 function! g:BuffetSetCustomColors()
     hi! BuffetCurrentBuffer cterm=NONE ctermbg=106 ctermfg=8 guibg=#b8bb26 guifg=#000000
