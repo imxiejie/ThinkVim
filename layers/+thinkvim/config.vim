@@ -93,6 +93,11 @@ if dein#tap('coc.nvim')
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
 
+        noremap <silent> <leader>j :execute 'CocCommand explorer' .
+            \ ' --toggle' .
+            \ ' --sources=buffer+,file+' .
+            \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
+
         function! s:show_documentation()
             if (index(['vim','help'], &filetype) >= 0)
                 execute 'h '.expand('<cword>')
