@@ -49,7 +49,6 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
         " Resume latest coc list
         nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
-        nnoremap <silent> <leader>s
         " Use `[c` and `]c` for navigate diagnostics
         nmap <silent> ]c <Plug>(coc-diagnostic-prev)
         nmap <silent> [c <Plug>(coc-diagnostic-next)
@@ -92,12 +91,7 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <leader>cw ::CocSearch  
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
-
-        noremap <silent> <leader>j :execute 'CocCommand explorer' .
-            \ ' --toggle' .
-            \ ' --sources=buffer+,file+' .
-            \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
-
+        nnoremap <silent><leader>j :CocCommand explorer<CR>
         function! s:show_documentation()
             if (index(['vim','help'], &filetype) >= 0)
                 execute 'h '.expand('<cword>')
