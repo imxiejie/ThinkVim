@@ -86,7 +86,6 @@ let g:which_key_map[' '] = {
 
 let g:which_key_localmap ={
       \ 'name' : '+LocalLeaderKey'  ,
-      \ 't'    : 'open tagbar show outlien',
       \ 'v'    : 'open vista show outline',
       \ 'r'    : 'quick run',
       \ 'm'    : 'toolkit Menu',
