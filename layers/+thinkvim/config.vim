@@ -228,10 +228,6 @@ if dein#tap('vista.vim')
         nnoremap <silent><leader>fv     :Vista finder coc<CR>
 endif
 
-if dein#tap('tagbar')
-        nnoremap <silent><localleader>t :TagbarToggle<CR>
-endif
-
 if dein#tap('ale')
         nmap [a <Plug>(ale_next_wrap)
         nmap ]a <Plug>(ale_previous_wrap)
