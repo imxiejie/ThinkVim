@@ -394,6 +394,19 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 </p>
 </details>
 
+<details><summary><code>Fzf</code>👈 Click</summary>
+<p>
+
+| Keys                                            | Mode   | Description |
+| ----------------------------------------------- | ------ | ----------- |
+| <kbd>C-X</kbd>                                  | Normal |  tab split  |
+| <kbd>C-v</kbd>                                  | Normal |  split      |
+| <kbd>C-t</kbd>                                  | Normal |  vsplit     |
+| <kbd>C-d</kbd>                                  | Normal |  pagedown   |
+| <kbd>C-u</kbd>                                  | Normal |  pageup     |
+</p>
+</details>
+
 <details><summary><code>Defx</code>👈 Click</summary>
 <p>
 
