@@ -37,7 +37,7 @@
 
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
-  hook_source: source  $VIM_PATH/+tools/plugins/choosewin/config.vim
+  hook_source: source  $VIM_PATH/layers/+tools/choosewin/config.vim
 
 - repo: kizza/actionmenu.nvim
   on_path: .*
@@ -187,7 +187,7 @@
 
 - repo: sbdchd/neoformat
   on_cmd: [Neoformat,Neoformat!]
-  hook_source: source  $VIM_PATH/+tools/neoformat/config.vim
+  hook_source: source  $VIM_PATH/layers/+tools/neoformat/config.vim
 
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
