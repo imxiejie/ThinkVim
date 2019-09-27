@@ -36,6 +36,7 @@ let g:which_key_map = {
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'w' : 'save file',
+      \ 'j' : 'open coc-explorer',
       \ 's' : 'open startify screen',
       \ 'p' : 'edit pluginsconfig {filename}',
       \ 'x' : 'coc cursors operate',
