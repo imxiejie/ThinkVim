@@ -41,7 +41,7 @@
     sudo apt-get install libjansson-dev
     # then compile and install ctags
     ```
-- Rouge : `sudo gem install rouge`
+- bat : [install bat](https://github.com/sharkdp/bat)
 
 ## Install
 
