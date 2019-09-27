@@ -91,7 +91,6 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <leader>cw ::CocSearch  
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
-        nnoremap <silent><leader>j :CocCommand explorer<CR>
         function! s:show_documentation()
             if (index(['vim','help'], &filetype) >= 0)
                 execute 'h '.expand('<cword>')
@@ -99,6 +98,11 @@ if dein#tap('coc.nvim')
                 call CocAction('doHover')
             endif
         endfunction
+        " coc-explorer
+        noremap <silent> <leader>j :execute 'CocCommand explorer' .
+            \ ' --toggle' .
+            \ ' --sources=buffer+,file+' .
+            \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
 endif
 
 if dein#tap('fzf.vim')
