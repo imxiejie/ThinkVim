@@ -4,9 +4,9 @@
 <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/gruvbox.png" width="500" height="400">
 </div>
 
-## Commic Custom
 
-| ACG                                                                                                       | Spaceline                                                                                                 |
+
+|                                                                                                       |                                                                                                |
 | --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | <img src="https://github.com/taigacute/IMG/blob/master/thinkvim/vim-space.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
 
