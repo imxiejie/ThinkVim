@@ -43,7 +43,7 @@
     ```
 - bat : [install bat](https://github.com/sharkdp/bat)
 
-## Install
+## Installation
 
 **_1._**
 
