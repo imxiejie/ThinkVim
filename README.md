@@ -67,7 +67,7 @@
 | ------------------------------------------------------------------------- | --------------- |
 | [taigacute/spaceline.vim](https://github.com/taigacute/spaceline.vim)     | spaceline       |
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
-| [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
+
 
 </p>
 </details>
@@ -79,6 +79,7 @@
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)                       | Provide ctags/gtags                                                                |
 | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                                           | Startify                                                                           |
+| [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
 | [tyru/caw.vim](https://github.com/tyru/caw.vim)                                                       | Comment Plugins                                                                    |
 | [t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)                                           | Easy to jump window                                                                |
 | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                                   | Provide the Icons                                                                  |
