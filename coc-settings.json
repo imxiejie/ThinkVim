@@ -80,8 +80,6 @@
     "explorer.keyMappings": {
         "l" : "expandOrShrink"
     },
-    //python
-    "python.autoComplete.addBrackets": true,
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
