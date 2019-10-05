@@ -69,8 +69,8 @@ if dein#tap('coc.nvim')
         nmap <silent> gy <Plug>(coc-type-definition)
         nmap <silent> gi <Plug>(coc-implementation)
         nmap <silent> gr <Plug>(coc-references)
-        " Use K for show documentation in preview window
-        nnoremap <silent> K :call <sid>show_documentation()<cr>
+        " Use K for show documentation in float window
+        nnoremap <silent> K :call CocActionAsync('doHover')<CR>
         " use <c-space> for trigger completion.
         inoremap <silent><expr> <c-space> coc#refresh()
         nmap [g <Plug>(coc-git-prevchunk)
@@ -83,21 +83,24 @@ if dein#tap('coc.nvim')
         " float window scroll
 		nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
-        " multiple cursors session
+        " multiple cursors
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
-        nmap <silent> <C-d> <Plug>(coc-cursors-word)
+        nmap <expr> <silent> <C-m> <SID>select_current_word()
         xmap <silent> <C-d> <Plug>(coc-cursors-range)
+        " use normal command like `<leader>xi(`
+        nmap <leader>x  <Plug>(coc-cursors-operator)
+
+        function! s:select_current_word()
+            if !get(g:, 'coc_cursors_activated', 0)
+                return "\<Plug>(coc-cursors-word)"
+            endif
+            return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+        endfunc
+
         nnoremap <silent> <leader>cm ::CocSearch -w 
         nnoremap <silent> <leader>cw ::CocSearch  
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
-        function! s:show_documentation()
-            if (index(['vim','help'], &filetype) >= 0)
-                execute 'h '.expand('<cword>')
-            else
-                call CocAction('doHover')
-            endif
-        endfunction
         " coc-explorer
         noremap <silent> <leader>j :execute 'CocCommand explorer' .
             \ ' --toggle' .

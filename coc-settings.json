@@ -84,6 +84,6 @@
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
-    //golang
-    "languageserver": { }
+    // add your languageServer into this list
+    "languageserver": {}
 }
