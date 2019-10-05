@@ -73,6 +73,8 @@
     "cursors.nextKey": "<C-n>",
     "cursors.previousKey": "<C-p>",
     "cursors.cancelKey": "<esc>",
+    //sessions
+    "session.directory": "~/.cache/vim/session",
     // coc-explorer
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
