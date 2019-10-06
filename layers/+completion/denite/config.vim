@@ -7,7 +7,7 @@ call denite#custom#option('_', {
 		\ 'matchers': 'matcher/fruzzy',
 		\ 'prompt': 'λ ',
 		\ 'split': 'floating',
-		\ 'start_filter': v:true,
+		\ 'start_filter': v:false,
 		\ 'statusline': v:false,
 		\ })
 function! s:denite_detect_size() abort
