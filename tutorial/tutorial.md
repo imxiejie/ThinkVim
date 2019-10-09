@@ -1,4 +1,3 @@
-
 # ThinkVim Tutorial
 
 ## Structure
@@ -9,13 +8,13 @@ The structure of Thinkvim ‼️
 - [core/](~/.config/nvim/rc) - core config file
   - [dein](~/.config/nvim/rc/dein) - _**Plugins list!**_
     - [plugins.yaml](~/.config/nvim/rc/dein/plugins.yaml) - ThinkVim Installed plugins
-  - [plugins](~/.config/nvim/rc/plugins) - _**Plugins Config!**_
   - [init.vim](~/.config/nvim/rc/init.vim) - `runtimepath`
   - [color.vim](~/.config/nvim/rc/color.vim) - thinkvim custom color
   - [general.vim](~/.config/nvim/rc/general.vim) - Vim settings
   - [filetype.vim](~/.config/nvim/rc/general.vim) - filetype settings
   - [mappings.vim](~/.config/nvim/rc/mappings.vim) - Vim keymap
 - [colors](~/.config/nvim/colors) - Colorscheme
+- [layers](~/.config/nvim/layers) - _**Plugins Config!**_
 - [ftplugin](~/.config/nvim/ftplugin) - filetypePlugin
 - [plugin](~/.config/nvim/plugin) - Some easy plugin
 
@@ -32,7 +31,7 @@ I suggest that most of plugins should lazyload by dein ,There has two ways to in
 ```yaml
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
-  hook_source: source  $VIMPATH/core/plugins/vim-choosewin.vim
+  hook_source: source  $VIM_PATH/core/layers/tools/choosewin/config.vim
 ```
 
 - repo means github repo
@@ -79,32 +78,6 @@ if dein#tap('defx.nvim')
                 \ :<C-u>Defx -search=`expand('%:p')` `getcwd()`<CR>
 endif
 let g:which_key_map.F='test'
-```
-
-Here are some plugins that are not installed in Thinkvim, but retain their configuration,If you want to use them, you can install them in `local_plugins.yaml`,like `nerdtree`
-
-```yaml
-- repo: scrooloose/nerdtree
-  on_map: { n: <Plug> }
-  trusted: 1
-  hook_post_source: source  $VIMPATH/core/plugins/nerdtree.vim
-- repo: tiagofumo/vim-nerdtree-syntax-highlight
-  hook_add: |
-    let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-    let g:NERDTreeDisableExactMatchHighlight = 1
-    let g:NERDTreeDisablePatternMatchHighlight = 1
-    let g:NERDTreeSyntaxEnabledExtensions = ['go', 'py', 'html', 'css', 'jsx', 'js', 'vim','json','md','c','cpp','java','php','groovy']
-- { repo: Xuyuanp/nerdtree-git-plugin, on_source: nerdtree }
-```
-
-- local_settings.vim
-
-```viml
-if dein#tap('nerdtree')
-        "nerdtree
-        nnoremap <silent><localleader>e :NERDTreeToggle <CR>
-        nnoremap <silent> <localleader>f :NERDTreeFind<CR>
-endif
 ```
 
 - if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`, or use thinkvim menu `;+m` trigger menu,then choose dein,and choose `ReacheRuntimePath`
@@ -397,42 +370,43 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 <details><summary><code>Fzf</code>👈 Click</summary>
 <p>
 
-| Keys                                            | Mode   | Description |
-| ----------------------------------------------- | ------ | ----------- |
-| <kbd>C-X</kbd>                                  | Normal |  tab split  |
-| <kbd>C-v</kbd>                                  | Normal |  split      |
-| <kbd>C-t</kbd>                                  | Normal |  vsplit     |
-| <kbd>C-d</kbd>                                  | Normal |  pagedown   |
-| <kbd>C-u</kbd>                                  | Normal |  pageup     |
+| Keys           | Mode   | Description |
+| -------------- | ------ | ----------- |
+| <kbd>C-X</kbd> | Normal | tab split   |
+| <kbd>C-v</kbd> | Normal | split       |
+| <kbd>C-t</kbd> | Normal | vsplit      |
+| <kbd>C-d</kbd> | Normal | pagedown    |
+| <kbd>C-u</kbd> | Normal | pageup      |
+
 </p>
 </details>
 
 <details><summary><code>Defx</code>👈 Click</summary>
 <p>
 
-| Keys                             | Mode   | Description                    |
-| -------------------------------- | ------ | ------------------------------ |
-| <kbd>Leader</kbd> + <kbd>e</kbd> | Normal | open defx                      |
-| <kbd>N</kbd>                     | Defx   | touch new file                 |
-| <kbd>K</kbd>                     | Defx   | touch new folder               |
-| `<CR>`                           | Defx   | open file or folder            |
-| `l`                              | Defx   | open file or folder            |
-| <kbd>d</kbd> + <kbd>d</kbd>      | Defx   | delete ([Send2Trash](https://github.com/neoclide/coc.nvim/wiki/Language-servers) required)                         |
-| <kbd>r</kbd>                     | Defx   | rename                         |
-| <kbd>.</kbd>                     | Defx   | show ignore files              |
-| <kbd>h</kbd>                     | Defx   | Return to the parent directory |
-| <kbd>q</kbd>                     | Defx   | exit defx                      |
-| <kbd>s</kbd>                     | Defx   | Open in rightwindow vs         |
-| <kbd>i</kbd>                     | Defx   | Open file sp                   |
-| <kbd>y</kbd> + <kbd>y</kbd>      | Defx   | copy the path of file          |
-| <kbd>\</kbd>                      | Defx   | show the path of file          |
-| <kbd>c</kbd>                      | Defx   | copy                           |
-| <kbd>m</kbd>                      | Defx   | move                           |
-| <kbd>p</kbd>                      | Defx   | paste                          |
-| <kbd>Space</kbd>                 | Defx   | multi                          |
-| <kbd>g</kbd> + <kbd>f</kbd>      | Defx   | open in denite                 |
-| <kbd>g</kbd> + <kbd>r</kbd>      | Defx   | search in denite               |
-| <kbd>w</kbd>                     | Defx   | increase the width             |
+| Keys                             | Mode   | Description                                                                                |
+| -------------------------------- | ------ | ------------------------------------------------------------------------------------------ |
+| <kbd>Leader</kbd> + <kbd>e</kbd> | Normal | open defx                                                                                  |
+| <kbd>N</kbd>                     | Defx   | touch new file                                                                             |
+| <kbd>K</kbd>                     | Defx   | touch new folder                                                                           |
+| `<CR>`                           | Defx   | open file or folder                                                                        |
+| `l`                              | Defx   | open file or folder                                                                        |
+| <kbd>d</kbd> + <kbd>d</kbd>      | Defx   | delete ([Send2Trash](https://github.com/neoclide/coc.nvim/wiki/Language-servers) required) |
+| <kbd>r</kbd>                     | Defx   | rename                                                                                     |
+| <kbd>.</kbd>                     | Defx   | show ignore files                                                                          |
+| <kbd>h</kbd>                     | Defx   | Return to the parent directory                                                             |
+| <kbd>q</kbd>                     | Defx   | exit defx                                                                                  |
+| <kbd>s</kbd>                     | Defx   | Open in rightwindow vs                                                                     |
+| <kbd>i</kbd>                     | Defx   | Open file sp                                                                               |
+| <kbd>y</kbd> + <kbd>y</kbd>      | Defx   | copy the path of file                                                                      |
+| <kbd>\</kbd>                     | Defx   | show the path of file                                                                      |
+| <kbd>c</kbd>                     | Defx   | copy                                                                                       |
+| <kbd>m</kbd>                     | Defx   | move                                                                                       |
+| <kbd>p</kbd>                     | Defx   | paste                                                                                      |
+| <kbd>Space</kbd>                 | Defx   | multi                                                                                      |
+| <kbd>g</kbd> + <kbd>f</kbd>      | Defx   | open in denite                                                                             |
+| <kbd>g</kbd> + <kbd>r</kbd>      | Defx   | search in denite                                                                           |
+| <kbd>w</kbd>                     | Defx   | increase the width                                                                         |
 
 </p>
 </details>
