@@ -13,8 +13,9 @@
   merge: 0
   rev: release
   hook_add: source  $VIM_PATH/layers/+completion/coc/config.vim
+
 - repo: honza/vim-snippets
-  on_ft: [vim,go,javascript.jsx,javascript,js,jsx,typescript,tsx,ts,python,html,css,cpp,rust,php,c]
+  depends : coc.nvim
 # }}}
 
 
