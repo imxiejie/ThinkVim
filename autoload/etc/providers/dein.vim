@@ -1,28 +1,30 @@
 
-" Use dein as a plugin manager and intialize all plugins
-let g:dein#auto_recache = 1
-let g:dein#install_max_processes = 16
-let g:dein#install_progress_type = 'echo'
-let g:dein#enable_notification = 1
-let g:dein#install_log_filename = g:etc#cache_path . '/dein.log'
-
 function! etc#providers#dein#_init(config_paths) abort
+	let l:cache_path = $DATA_PATH . '/dein'
 
-	" Add dein to vim's runtimepath
-	let l:cache_path = g:etc#cache_path . '/dein'
-	if &runtimepath !~# '/dein.vim'
-		let s:dein_dir = l:cache_path . '/repos/github.com/Shougo/dein.vim'
-		" Clone dein if first-time setup
-		if ! isdirectory(s:dein_dir)
-			execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
-			if v:shell_error
-				call etc#util#error('dein installation has failed!')
-				finish
+	if has('vim_starting')
+		" Use dein as a plugin manager
+		let g:dein#auto_recache = 1
+		let g:dein#install_max_processes = 16
+		let g:dein#install_progress_type = 'echo'
+		let g:dein#enable_notification = 1
+		let g:dein#install_log_filename = $DATA_PATH . '/dein.log'
+
+		" Add dein to vim's runtimepath
+		if &runtimepath !~# '/dein.vim'
+			let s:dein_dir = l:cache_path . '/repos/github.com/Shougo/dein.vim'
+			" Clone dein if first-time setup
+			if ! isdirectory(s:dein_dir)
+				execute '!git clone https://github.com/Shougo/dein.vim' s:dein_dir
+				if v:shell_error
+					call s:error('dein installation has failed! is git installed?')
+					finish
+				endif
 			endif
-		endif
 
-		execute 'set runtimepath+='.substitute(
-			\ fnamemodify(s:dein_dir, ':p') , '/$', '', '')
+			execute 'set runtimepath+='.substitute(
+				\ fnamemodify(s:dein_dir, ':p') , '/$', '', '')
+		endif
 	endif
 
 	" Initialize dein.vim (package manager)
