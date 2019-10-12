@@ -118,3 +118,8 @@ let g:which_key_lsbgmap = {
       \ 'g'    : 'coc gitprevchunk',
       \ '['    : 'jump nextfunction-golang',
       \ }
+
+let s:current_colorscheme = get(g:,"colors_name","")
+if  s:current_colorscheme == "base16-default-dark"
+    highlight WhichKeySeperator guibg=NONE ctermbg=NONE guifg=#a1b56c ctermfg=02
+endif
