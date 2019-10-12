@@ -40,7 +40,7 @@
 - repo: ludovicchabant/vim-gutentags
   if: executable('ctags')
   on_path: .*
-  hook_add: source  $VIM_PATH/layers/+tools/vim-gutentags/config.vim
+  hook_source: source  $VIM_PATH/layers/+tools/vim-gutentags/config.vim
 
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
