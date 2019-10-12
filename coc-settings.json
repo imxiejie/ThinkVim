@@ -78,6 +78,7 @@
     // coc-explorer
     "explorer.icon.expanded": "▾",
     "explorer.icon.shrinked": "▸",
+    "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
     "explorer.keyMappings": {
         "l" : "expandOrShrink"
@@ -87,5 +88,15 @@
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
     // add your languageServer into this list
-    "languageserver": {}
+    "languageserver": {
+        "golang": {
+            "command": "gopls",
+            "rootPatterns": [
+                "go.mod"
+            ],
+            "filetypes": [
+                "go"
+            ]
+        }
+    }
 }
