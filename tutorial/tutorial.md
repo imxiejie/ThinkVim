@@ -98,9 +98,17 @@ Startify can only set the header and footer centered，set this `let g:startify_
 
 ## How to config completion
 
+
 - Completion use LanguageServerProtocol by CoC.nvim.
+- ThinkVim has provide the python,go,javascript,typescript support.
+   - For python thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
+   - For go  used the gopls,you need install the gopls 
+   ```
+   go get golang.org/x/tools/gopls@latest
+   ```
+   - For javascript/typescript used the coc-tsserver.
+
 - Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-- ThinkVim support javascript typescript python.you don't need to install js ts python server(python you need jedi or Mpls).
 - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
 - [Register language servers in coc-settings.json](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
 - Checkout the language server protocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
