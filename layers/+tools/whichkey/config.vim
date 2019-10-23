@@ -17,6 +17,7 @@ let g:which_key_map = {
             \ },
       \ 'b' : {
             \ 'name' : '+buffer',
+            \ 'b' : 'buffer list',
             \ 'c' : 'keep current buffer',
             \ 'o' : 'keep input buffer',
             \ },
@@ -27,7 +28,6 @@ let g:which_key_map = {
       \ 'F' : 'find current file' ,
       \ 'f' : {
             \ 'name' : '+search {files cursorword word outline}',
-            \ 'b' : 'buffer list',
             \ 'f' : 'find file',
             \ 'r' : 'search {word}',
             \ 'c' : 'change colorscheme',
