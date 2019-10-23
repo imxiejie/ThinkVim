@@ -87,6 +87,8 @@
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
     "eslint.autoFixOnSave": true,
+    // python
+    "python.jediEnabled": false,
     // add your languageServer into this list
     "languageserver": {
         "golang": {
