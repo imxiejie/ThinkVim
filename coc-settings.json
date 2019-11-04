@@ -84,6 +84,12 @@
         "h" : "gotoParent",
         "l" : "expandOrShrink"
     },
+    // golang
+    "go.goplsOptions": {
+        "usePlaceholders": true,
+        "completeUnimported": true,
+        "deepCompletion": true
+    },
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
@@ -91,15 +97,5 @@
     // python
     "python.jediEnabled": false,
     // add your languageServer into this list
-    "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.mod"
-            ],
-            "filetypes": [
-                "go"
-            ]
-        }
-    }
+    "languageserver": {}
 }
