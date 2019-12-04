@@ -1,6 +1,7 @@
-augroup MyAutoCmd
 
-    	" Reload vim config automatically
+augroup user_plugin_filetype "{{{
+    autocmd!
+    " Reload vim config automatically
     autocmd BufWritePost $VIM_PATH/{*.vim,*.yaml,vimrc} nested
 		\ source $MYVIMRC | redraw
 
@@ -16,14 +17,12 @@ augroup MyAutoCmd
 
     autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
 
+    autocmd FileType javascript,javascriptreact set shiftwidth=2
+
     autocmd FileType json syntax match Comment +\/\/.\+$+
 
     " Go (Google)
     autocmd FileType go let b:coc_pairs_disabled = ['<']
-
-    " set filetypes as typescript && tsx
-    autocmd BufNewFile,BufRead *.ts  set filetype=typescript
-    autocmd BufNewFile,BufRead *.tsx set filetype=typescript.tsx
 
     " HTML (.gohtml and .tpl for server side)
     autocmd BufNewFile,BufRead *.html,*.htm,*.gohtml,*.tpl  setf html
@@ -31,5 +30,6 @@ augroup MyAutoCmd
      autocmd User VimagitEnterCommit startinsert
 
 	" https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
-	autocmd FileType css,javascript,jsx,javascript.jsx setlocal backupcopy=yes
-augroup END
+	autocmd FileType css,javascript,javascriptreact setlocal backupcopy=yes
+
+augroup END "}}}
