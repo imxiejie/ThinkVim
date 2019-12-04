@@ -77,7 +77,7 @@
     "session.directory": "~/.cache/vim/session",
     // coc-explorer
     "explorer.icon.expanded": "▾",
-    "explorer.icon.shrinked": "▸",
+    "explorer.icon.collapsed": "▸",
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
     "explorer.keyMappings": {
