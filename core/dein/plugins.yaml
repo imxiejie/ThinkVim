@@ -69,7 +69,7 @@
   hook_add: |
       let g:dash_map = {
         \ 'javascript': ['javascript', 'NodeJS'],
-        \ 'javascript.jsx': ['react'],
+        \ 'javascriptreact': ['react'],
         \ 'html': ['html', 'svg'],
         \ 'go' : 'Go',
         \}
@@ -149,8 +149,8 @@
 - { repo: honza/dockerfile.vim, on_ft: Dockerfile }
 - { repo: junegunn/vim-emoji, on_ft: [markdown,vim] }
 
-- { repo: leafgarland/typescript-vim, on_ft: [typescript.tsx,typescript] }
-- { repo: peitalin/vim-jsx-typescript, on_ft: [typescript.tsx]}
+- { repo: leafgarland/typescript-vim, on_ft: [typescriptreact,typescript] }
+- { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
 
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
 - { repo: tmhedberg/SimpylFold, on_ft: python }
@@ -159,7 +159,7 @@
   on_ft: python
   hook_add: let g:python_highlight_all = 1
 
-- { repo: neoclide/vim-jsx-improve, on_ft: [javascript,jsx,javascript.jsx]}
+- { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
 
 - { repo: cespare/vim-toml, on_ft: toml }
 - { repo: vim-scripts/xml.vim, on_ft: xml}
@@ -181,7 +181,8 @@
           \ 'bash=sh',
           \ 'css',
           \ 'javascript',
-          \ 'js=javascript',
+          \ 'jsx=javascriptreact',
+          \ 'tsx=typescriptreact',
           \ 'go',
           \]
 # }}}
@@ -195,30 +196,24 @@
   hook_source: source  $VIM_PATH/layers/+tools/neoformat/config.vim
 
 - repo: Yggdroot/indentLine
-  on_ft: [python,html,css,vim,javascript,jsx,javascript.jsx,vue]
+  on_ft: [python,html,css,vim,javascript,javascriptreact,vue]
   hook_source: source $VIM_PATH/layers/+ui/indentline/config.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
   hook_source: source  $VIM_PATH/layers/+tools/vista/config.vim
 
-
 - repo: mattn/emmet-vim
-  on_ft: [html,css,jsx,javascript,javascript.jsx]
   on_event: InsertEnter
-  hook_add: |
-        let g:use_emmet_complete_tag = 0
-        let g:user_emmet_install_global = 0
-        let g:user_emmet_install_command = 0
-        let g:user_emmet_mode = 'i'
-        let g:user_emmet_leader_key='<C-g>'
-        let g:user_emmet_settings = {
-            \  'javascript.jsx' : {
-            \      'extends' : 'jsx',
-            \  },
-        \}
+  on_ft: [ html, css, javascript, javascriptreact ]
+  hook_source: |
+    let g:user_emmet_complete_tag = 0
+    let g:user_emmet_install_global = 0
+    let g:user_emmet_install_command = 0
+    let g:user_emmet_mode = 'i'
+
 - repo: luochen1990/rainbow
-  on_ft: [python,javascript,jsx,javascript.jsx,html,css,go,vim,toml]
+  on_ft: [python,javascript,javascriptreact,html,css,go,vim,toml]
   hook_source: let g:rainbow_active = 1
 
 - repo: Shougo/echodoc.vim
