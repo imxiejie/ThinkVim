@@ -84,12 +84,6 @@
         "h" : "gotoParent",
         "l" : "expandOrShrink"
     },
-    // golang
-    "go.goplsOptions": {
-        "usePlaceholders": true,
-        "completeUnimported": true,
-        "deepCompletion": true
-    },
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,
