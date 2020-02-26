@@ -47,6 +47,7 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
         " Do default action for previous item.
         nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
+        nnoremap <silent> <leader>ff  :<C-u>CocList files<CR>
         " Resume latest coc list
         nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
@@ -111,7 +112,6 @@ endif
 if dein#tap('fzf.vim')
         nnoremap <silent> <leader>fc :Colors<CR>
         nnoremap <silent> <leader>bb :Buffers<CR>
-        nnoremap <silent> <leader>ff :call Fzf_dev()<CR>
         nnoremap <silent> <leader>fr :Rg<CR>
         nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
 endif
