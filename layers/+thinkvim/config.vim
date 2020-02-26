@@ -47,7 +47,6 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
         " Do default action for previous item.
         nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
-        nnoremap <silent> <leader>ff  :<C-u>CocList files<CR>
         " Resume latest coc list
         nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
@@ -109,11 +108,16 @@ if dein#tap('coc.nvim')
             \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
 endif
 
-if dein#tap('fzf.vim')
+if dein#tap('fzf-preview.vim')
         nnoremap <silent> <leader>fc :Colors<CR>
-        nnoremap <silent> <leader>bb :Buffers<CR>
-        nnoremap <silent> <leader>fr :Rg<CR>
-        nnoremap <silent> <leader>fw :Rg <C-R><C-W><CR>
+        nnoremap <silent> <leader>bb :<C-u>FzfPreviewBuffers<CR>
+        nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers<CR>
+        nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
+        nnoremap <silent> <leader>fr :<C-u>FzfPreviewProjectGrep
+        nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
+        nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
+        nnoremap <silent> <leader>fp :<C-u>FzfPreviewProjectFiles<CR>
+        nnoremap <silent> <leader>fP :<C-u>FzfPreviewFromResources project_mru git<CR>
 endif
 
 if dein#tap('vim-easy-align')
