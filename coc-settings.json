@@ -91,5 +91,11 @@
     // python
     "python.jediEnabled": false,
     // add your languageServer into this list
-    "languageserver": {}
+    "languageserver": {
+      "golang": {
+          "command": "gopls",
+          "rootPatterns": ["go.mod"],
+          "filetypes": ["go"]
+    }
+    }
 }
