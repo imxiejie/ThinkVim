@@ -88,7 +88,7 @@
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [Whichkey, Whichkey!]
-  hook_source: source  $VIM_PATH/layers/+tools/whichkey/config.vim
+  hook_add: source  $VIM_PATH/layers/+tools/whichkey/config.vim
   hook_post_source: |
         call which_key#register('<Space>', 'g:which_key_map')
         call which_key#register(';', 'g:which_key_localmap')
