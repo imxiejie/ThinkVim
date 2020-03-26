@@ -32,6 +32,12 @@ if dein#tap('denite.nvim')
 endif
 
 if dein#tap('coc.nvim')
+       " Remap for do codeAction of selected region
+        function! s:cocActionsOpenFromSelected(type) abort
+            execute 'CocCommand actions.open ' . a:type
+        endfunction
+        xmap <silent> <leader>ca :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+        nmap <silent> <leader>ca :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
         " Using CocList
         " Show all diagnostics
         nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
@@ -58,8 +64,8 @@ if dein#tap('coc.nvim')
         vmap <leader>cf  <Plug>(coc-format-selected)
         nmap <leader>cf  <Plug>(coc-format-selected)
         " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-        xmap <leader>ca  <Plug>(coc-codeaction-selected)
-        nmap <leader>ca  <Plug>(coc-codeaction-selected)
+        " xmap <leader>ca  <Plug>(coc-codeaction-selected)
+        " nmap <leader>ca  <Plug>(coc-codeaction-selected)
         " Remap for do codeAction of current line
         nmap <leader>ac  <Plug>(coc-codeaction)
         " Fix autofix problem of current line
