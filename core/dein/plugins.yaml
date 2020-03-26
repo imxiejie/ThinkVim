@@ -118,6 +118,12 @@
 
 # }}}
 
+# Terminal {{{
+- repo: voldikss/vim-floaterm
+  on_cmd: [FloatermNew,FloatermToggle,FloatermPrev,FloatermNext,FloatermSend]
+  hook_source: source  $VIM_PATH/layers/+tools/floaterm/config.vim
+# }}}
+
 # Search Plugins{{{
 - repo: junegunn/fzf
   build: './install --all'

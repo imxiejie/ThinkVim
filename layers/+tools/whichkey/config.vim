@@ -36,6 +36,10 @@ let g:which_key_map = {
             \ 'p' : 'find on a project',
             \ 'P' : 'find on a git project',
             \ },
+      \ 'o' : {
+            \ 'name' : 'open {terminal}',
+            \ 't' : 'open a temrinal',
+            \ },
       \ 'm' : 'open mundotree' ,
       \ 'w' : 'save file',
       \ 'j' : 'open coc-explorer',
