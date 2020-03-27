@@ -5,7 +5,7 @@
 - repo: Shougo/dein.vim
 - repo: taigacute/spaceline.vim
 - repo: bagrat/vim-buffet
-  hook_add: source $VIM_PATH/layers/+ui/buffet/config.vim
+  hook_add: source $VIM_PATH/modules/module-buffet.vim
 - repo: sgur/vim-editorconfig
 #}}}
 
@@ -13,7 +13,7 @@
 - repo: neoclide/coc.nvim
   merge: 0
   rev: release
-  hook_add: source  $VIM_PATH/layers/+completion/coc/config.vim
+  hook_add: source  $VIM_PATH/modules/module-coc.vim
 
 - repo: honza/vim-snippets
   depends : coc.nvim
@@ -28,8 +28,8 @@
   on_cmd: Denite
   depends: vim-devicons
   hook_source: |
-        source  $VIM_PATH/layers/+completion/denite/config.vim
-        source  $VIM_PATH/layers/+completion/denite/+denite_menu.vim
+        source  $VIM_PATH/modules/module-denite.vim
+        source  $VIM_PATH/modules/module-denite-menu.vim
 # }}}
 
 # Interface{{{
@@ -41,17 +41,17 @@
 - repo: ludovicchabant/vim-gutentags
   if: executable('ctags')
   on_path: .*
-  hook_source: source  $VIM_PATH/layers/+tools/vim-gutentags/config.vim
+  hook_source: source  $VIM_PATH/modules/module-gutentags.vim
 
 - repo: t9md/vim-choosewin
   on_map: { n: <Plug> }
-  hook_source: source  $VIM_PATH/layers/+tools/choosewin/config.vim
+  hook_source: source  $VIM_PATH/modules/module-choosewin.vim
 
 
 - repo: mhinz/vim-startify
   on_cmd: Startify
   depends: vim-devicons
-  hook_source: source  $VIM_PATH/layers/+ui/startify/config.vim
+  hook_source: source  $VIM_PATH/modules/module-startify.vim
   hook_post_source: |
       function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
@@ -89,7 +89,7 @@
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [Whichkey, Whichkey!]
-  hook_add: source  $VIM_PATH/layers/+tools/whichkey/config.vim
+  hook_add: source  $VIM_PATH/modules/module-whichkey.vim
   hook_post_source: |
         call which_key#register('<Space>', 'g:which_key_map')
         call which_key#register(';', 'g:which_key_localmap')
@@ -108,11 +108,11 @@
 # File manager{{{
 - repo: Shougo/defx.nvim
   on_cmd: Defx
-  hook_source: source  $VIM_PATH/layers/+ui/defx/config.vim
+  hook_source: source  $VIM_PATH/modules/module-defx.vim
 
 - repo: kristijanhusak/defx-git
   on_source: defx.nvim
-  hook_source: source  $VIM_PATH/layers/+ui/defx/+defx-git.vim
+  hook_source: source  $VIM_PATH/modules/module-defxgit.vim
 
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
@@ -122,7 +122,7 @@
 # Terminal {{{
 - repo: voldikss/vim-floaterm
   on_cmd: [FloatermNew,FloatermToggle,FloatermPrev,FloatermNext,FloatermSend]
-  hook_source: source  $VIM_PATH/layers/+tools/floaterm/config.vim
+  hook_source: source  $VIM_PATH/modules/module-floaterm.vim
 # }}}
 
 # Search Plugins{{{
@@ -134,12 +134,12 @@
   depends: fzf
   on_cmd: [Colors,Rg,Buffers]
   on_func: Fzf_dev
-  hook_source: source  $VIM_PATH/layers/+completion/fzf/config.vim
+  hook_source: source  $VIM_PATH/modules/module-fzf.vim
 
 - repo: yuki-ycino/fzf-preview.vim
   depends: fzf
   on_cmd: [FzfPreviewProjectFiles,FzfPreviewDirectoryFile,FzfPreviewBuffers,FzfPreviewMruFiles,FzfPreviewAllBuffers,FzfPreviewProjectGrep,FzfPreviewMruFiles,FzfPreviewFromResources]
-  hook_source: source  $VIM_PATH/layers/+completion/fzf/config.vim
+  hook_source: source  $VIM_PATH/modules/module-fzf.vim
 
 # }}}
 
@@ -182,7 +182,7 @@
 
 - repo: fatih/vim-go
   on_ft: go
-  hook_source: source  $VIM_PATH/layers/+lang/go/config.vim
+  hook_source: source  $VIM_PATH/modules/lang-go.vim
 
 # Markdown related
 - repo: plasticboy/vim-markdown
@@ -218,11 +218,11 @@
 
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,vim,javascript,javascriptreact,vue]
-  hook_source: source $VIM_PATH/layers/+ui/indentline/config.vim
+  hook_source: source $VIM_PATH/modules/module-indentline.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
-  hook_add: source  $VIM_PATH/layers/+tools/vista/config.vim
+  hook_add: source  $VIM_PATH/modules/module-vista.vim
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
@@ -255,7 +255,7 @@
       let g:mkdp_auto_start = 1
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
-  hook_source: source  $VIM_PATH/layers/+tools/goyo/config.vim
+  hook_source: source  $VIM_PATH/modules/module-goyo.vim
 
 - repo: junegunn/Limelight.vim
   on_cmd: Limelight

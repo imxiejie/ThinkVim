@@ -88,7 +88,7 @@ if has('vim_starting')
 endif
 
 call etc#init()
-call etc#util#source_file('layers/+thinkvim/config.vim')
+call etc#util#source_file('keybinds/config.vim')
 call etc#util#source_file('core/general.vim')
 call etc#util#source_file('core/filetype.vim')
 call etc#util#source_file('core/mappings.vim')
