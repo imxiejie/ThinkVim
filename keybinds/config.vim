@@ -146,8 +146,8 @@ if dein#tap('vim-go')
 endif
 
 
-if dein#tap('magit.vim')
-	nnoremap <silent> mg :Magit<CR>
+if dein#tap('vimagit')
+	nnoremap <silent> <Leader>gg :Magit<CR>
 endif
 
 if dein#tap('gina.vim')
