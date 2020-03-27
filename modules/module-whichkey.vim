@@ -24,6 +24,10 @@ let g:which_key_map = {
       \ 'e' : 'open file explorer' ,
       \ '-' : 'choose window by {prompt char}' ,
       \ 'd' : 'search cursor word on Dash.app' ,
+      \ 'g' : {
+            \ 'name' : 'version control',
+            \ 'g' : 'Magit status',
+            \ },
       \ 'G' : 'distraction free writing' ,
       \ 'F' : 'find current file' ,
       \ 'f' : {
