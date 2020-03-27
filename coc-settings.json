@@ -34,8 +34,8 @@
     },
     //diagnostic
     "diagnostic.signOffset": 9999999,
-	"diagnostic.errorSign": "●",
-	"diagnostic.warningSign": "●",
+	  "diagnostic.errorSign": "●",
+	  "diagnostic.warningSign": "●",
     "diagnostic.displayByAle": false,
     "diagnostic.refreshOnInsertMode": true,
     //git
@@ -80,10 +80,10 @@
     "explorer.icon.collapsed": "▸",
     "explorer.width": 30,
     "explorer.icon.enableNerdfont": true,
-    "explorer.keyMappings": {
-        "h" : "gotoParent",
-        "l" : "expandOrShrink"
-    },
+    "explorer.quitOnOpen": true,
+    "explorer.floating.width": -20,
+    "explorer.floating.height": -10,
+    "explorer.openAction.strategy": "sourceWindow",
     // eslint
     "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
     "eslint.autoFix": true,

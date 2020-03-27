@@ -87,8 +87,8 @@ if dein#tap('coc.nvim')
         nmap gm <Plug>(coc-git-commit)
         nnoremap <silent> <leader>cg  :<C-u>CocList --normal gstatus<CR>
         " float window scroll
-		nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
-		nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+				nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
+				nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
         " multiple cursors
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
         nmap <expr> <silent> <C-m> <SID>select_current_word()
@@ -103,16 +103,18 @@ if dein#tap('coc.nvim')
             endif
             return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
         endfunc
+				" Use `:Format` for format current buffer
+        command! -nargs=0 Format :call CocAction('format')
 
-        nnoremap <silent> <leader>cm ::CocSearch -w 
-        nnoremap <silent> <leader>cw ::CocSearch  
+        nnoremap <silent> <leader>cm ::CocSearch -w
+        nnoremap <silent> <leader>cw ::CocSearch
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
         " coc-explorer
         noremap <silent> <leader>j :execute 'CocCommand explorer' .
             \ ' --toggle' .
-            \ ' --sources=buffer+,file+' .
-            \ ' --file-columns=git,selection,icon,clip,indent,filename,size ' . expand('%:p:h')<CR>
+            \ ' --position=floating' .
+            \ ' --sources=file+'<CR>
 endif
 
 if dein#tap('fzf-preview.vim')
@@ -120,7 +122,7 @@ if dein#tap('fzf-preview.vim')
         nnoremap <silent> <leader>bb :<C-u>FzfPreviewBuffers<CR>
         nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers<CR>
         nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
-        nnoremap <silent> <leader>fr :<C-u>FzfPreviewProjectGrep 
+        nnoremap <silent> <leader>fr :<C-u>FzfPreviewProjectGrep
         nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
         nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
         nnoremap <silent> <leader>fp :<C-u>FzfPreviewProjectFiles<CR>
@@ -143,14 +145,6 @@ if dein#tap('vim-go')
 	 nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
 endif
 
-if dein#tap('vim-easygit')
-	nnoremap <silent> <Leader>gd :Gdiff<CR>
-	nnoremap <silent> <Leader>gc :Gcommit<CR>
-	nnoremap <silent> <Leader>gb :Gblame<CR>
-	nnoremap <silent> <Leader>gB :Gbrowse<CR>
-	nnoremap <silent> <Leader>gS :Gstatus<CR>
-	" nnoremap <silent> <localleader>gp :Gpush<CR>
-endif
 
 if dein#tap('magit.vim')
 	nnoremap <silent> mg :Magit<CR>
@@ -174,6 +168,11 @@ if dein#tap('accelerated-jk')
 	nmap <silent>k <Plug>(accelerated_jk_gk)
 endif
 
+if dein#tap('dsf.vim')
+	nmap dsf <Plug>DsfDelete
+	nmap csf <Plug>DsfChange
+endif
+
 if dein#tap('caw.vim')
     function! InitCaw() abort
 		if ! &l:modifiable
@@ -192,7 +191,6 @@ if dein#tap('caw.vim')
 	call InitCaw()
 endif
 
-
 if dein#tap('comfortable-motion.vim')
     nnoremap <silent> <C-d> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * 2)<CR>
     nnoremap <silent> <C-u> :call comfortable_motion#flick(g:comfortable_motion_impulse_multiplier * winheight(0) * -2)<CR>
@@ -210,12 +208,23 @@ if dein#tap('goyo.vim')
 endif
 
 if dein#tap('defx.nvim')
-        nnoremap <silent> <Leader>e
-               \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
-         nnoremap <silent> <Leader>F
-				\ :<C-u>Defx -resume -toggle -search=`expand('%:p')` `getcwd()`<CR>
+	nnoremap <silent> <Leader>e
+		\ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
+	nnoremap <silent> <Leader>F
+		\ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
 endif
 
+if dein#tap('committia.vim')
+	let g:committia_hooks = {}
+	function! g:committia_hooks.edit_open(info)
+		imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
+		imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
+
+		setlocal winminheight=1 winheight=1
+		resize 10
+		startinsert
+	endfunction
+endif
 
 if dein#tap('vim-startify')
     nnoremap <silent> <leader>s :Startify<CR>
@@ -272,11 +281,6 @@ if dein#tap('vim-smartchr')
           \ smartchr#loop('.', '<-', '->','...')
 endif
 
-if dein#tap('vim-niceblock')
-	xmap I  <Plug>(niceblock-I)
-	xmap A  <Plug>(niceblock-A)
-endif
-
 if dein#tap('vim-sandwich')
      nmap <silent> sa <Plug>(operator-sandwich-add)
      xmap <silent> sa <Plug>(operator-sandwich-add)
@@ -307,3 +311,12 @@ if dein#tap('vim-textobj-multiblock')
 	xmap <silent> ab <Plug>(textobj-multiblock-a)
 	xmap <silent> ib <Plug>(textobj-multiblock-i)
 endif
+
+if dein#tap('vim-textobj-function')
+	omap <silent> af <Plug>(textobj-function-a)
+	omap <silent> if <Plug>(textobj-function-i)
+	xmap <silent> af <Plug>(textobj-function-a)
+	xmap <silent> if <Plug>(textobj-function-i)
+endif
+
+" vim: set ts=2 sw=2 tw=80 noet :
