@@ -15,8 +15,6 @@ augroup user_plugin_filetype "{{{
 
     autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
 
-    autocmd BufWritePre *.js,*.jsx,*.less,*.css,*.html Neoformat
-
     autocmd FileType javascript,javascriptreact set shiftwidth=2
 
     autocmd FileType json syntax match Comment +\/\/.\+$+
