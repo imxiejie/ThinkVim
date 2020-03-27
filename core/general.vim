@@ -39,6 +39,9 @@ if has('clipboard')
 	set clipboard& clipboard+=unnamedplus
 endif
 set history=2000
+set synmaxcol=2500  " Don't syntax highlight long lines
+set path+=**                 " Directories to search when using gf and friends
+set isfname-==               " Remove =, detects filename in var=/foo/bar
 set number
 set timeout ttimeout
 set cmdheight=2         " Height of the command line
@@ -128,7 +131,7 @@ if exists('&backupskip')
 endif
 
 " Disable swap/undo/viminfo/shada files in temp directories or shm
-augroup MyAutoCmd
+augroup user_events
 	autocmd!
 	silent! autocmd BufNewFile,BufReadPre
 		\ /tmp/*,$TMPDIR/*,$TMP/*,$TEMP/*,*/shm/*,/private/var/*,.vault.vim

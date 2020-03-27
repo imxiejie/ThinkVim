@@ -6,6 +6,7 @@
 - repo: taigacute/spaceline.vim
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/layers/+ui/buffet/config.vim
+- repo: sgur/vim-editorconfig
 #}}}
 
 # Core Plugins{{{
@@ -143,14 +144,13 @@
 # }}}
 
 # Git Plugins{{{
-- { repo: taigacute/magit.vim, on_cmd: Magit }
+- { repo: jreybert/vimagit, on_cmd: Magit }
+
+- repo: rhysd/committia.vim
+  on_path: [ COMMIT_EDITMSG, MERGE_MSG ]
+  hook_source: let g:committia_min_window_width = 7
 
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
-
-- repo: chemzqm/vim-easygit
-  on_cmd: [Gcd, Glcd, Gcommit, Gblame, Gstatus, Gdiff, Gbrowse, Gstatus, Gpush]
-  hook_source: let g:easygit_enable_command = 1
-
 
 
 # }}}
@@ -226,7 +226,7 @@
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
-  hook_source: source  $VIM_PATH/layers/+tools/vista/config.vim
+  hook_add: source  $VIM_PATH/layers/+tools/vista/config.vim
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
@@ -270,7 +270,10 @@
 - { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
 - { repo: kana/vim-textobj-user, on_func: textobj#user# }
 - { repo: kana/vim-operator-user, lazy: 1 }
-- { repo: kana/vim-niceblock, on_map: { x: <Plug> }}
+
+- repo: AndrewRadev/dsf.vim
+  on_map: { n: <Plug>Dsf }
+  hook_add: let g:dsf_no_mappings = 1
 
 - repo: kana/vim-smartchr
   on_event: InsertCharPre
@@ -287,14 +290,11 @@
   on_map: { ox: <Plug> }
   hook_add:  let g:textobj_multiblock_no_default_key_mappings = 1
 
+- repo: kana/vim-textobj-function
+  on_map: { ox: <Plug> }
+  hook_add: let g:textobj_function_no_default_key_mappings = 1
+
 # }}}
 
-# CommentPLuins too old, or find much better plugins{{{
-# - repo: rhysd/vim-operator-surround
-#   depends: [vim-operator-user, vim-textobj-multiblock]
-#   on_map:  { vnx : <Plug> }
-# use coc-git instead of vim-gitgutter
-# - repo: airblade/vim-gitgutter
-#   on_path: .*
-#   hook_source: source ~/.config/nvim/core/plugins/vim-gitgutter.vim
+#  vim: set ts=2 sw=2 tw=80 et :
 
