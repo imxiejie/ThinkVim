@@ -49,7 +49,7 @@
 
 ```
 1. git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
-2. make or open nvim
+2. open nvim
 ```
 
 - Note: If your system sets \$XDG_CONFIG_HOME, use that instead of ~/.config in the code above. Nvim follows the XDG base-directories convention.
