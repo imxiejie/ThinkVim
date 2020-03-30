@@ -33,6 +33,13 @@
         source  $VIM_PATH/modules/module-denite.vim
         source  $VIM_PATH/modules/module-denite-menu.vim
 # }}}
+#
+- repo: Shougo/neomru.vim
+  on_source: [denite.vim,fzf-preview.vim]
+  hook_add: |
+    let g:neomru#directory_mru_path = $DATA_PATH . '/mru/dir'
+    let g:neomru#file_mru_path = $DATA_PATH . '/mru/file'
+    let g:unite_source_file_mru_limit = 5000
 
 # Interface{{{
 - repo: ryanoasis/vim-devicons
