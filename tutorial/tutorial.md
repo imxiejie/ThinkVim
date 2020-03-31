@@ -94,7 +94,7 @@ check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
 ## How to set the Startify
 
-Startify can only set the header and footer centered，set this `let g:startify_padding_left = 40` into your `custom.vim`,change the value until the file area centered on your screen
+Startify can only set the header and footer centered，set this `let g:startify_padding_left = {number}` into your `custom.vim`,change the value until the file area centered on your screen
 
 ## How to config completion
 
