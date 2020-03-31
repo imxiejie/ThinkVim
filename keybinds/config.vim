@@ -151,8 +151,8 @@ if dein#tap('vim-fugitive')
 	nnoremap <silent> <leader>gd :Gdiffsplit<CR>
 	nnoremap <silent> <leader>gc :Git commit<CR>
 	nnoremap <silent> <leader>gb :Git blame<CR>
-	nnoremap <silent> <leader>gF :Gfetch<CR>
-	nnoremap <silent> <leader>gS :Git<CR>
+	nnoremap <silent> <leader>gf :Gfetch<CR>
+	nnoremap <silent> <leader>gs :Git<CR>
 endif
 
 if dein#tap('gina.vim')
