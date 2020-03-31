@@ -7,6 +7,16 @@
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/modules/module-buffet.vim
 - repo: sgur/vim-editorconfig
+- repo: ryanoasis/vim-devicons
+
+- repo: mhinz/vim-startify
+  # on_cmd: Startify
+  # depends: vim-devicons
+  hook_add: source  $VIM_PATH/modules/module-startify.vim
+  hook_post_source: |
+      function! StartifyEntryFormat()
+        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+      endfunction
 #}}}
 
 # Core Plugins{{{
@@ -23,24 +33,7 @@
 # Lazy Loading
 # ==========================================
 
-# Denite{{{
-- repo: Shougo/denite.nvim
-  on_cmd: Denite
-  depends: vim-devicons
-  hook_source: |
-        source  $VIM_PATH/modules/module-denite.vim
-
-- repo: Shougo/neomru.vim
-  on_source: [denite.vim,fzf-preview.vim]
-  hook_add: |
-    let g:neomru#directory_mru_path = $DATA_PATH . '/mru/dir'
-    let g:neomru#file_mru_path = $DATA_PATH . '/mru/file'
-    let g:unite_source_file_mru_limit = 5000
-# }}}
-
 # Interface{{{
-- repo: ryanoasis/vim-devicons
-  hook_add: let g:webdevicons_enable_denite = 1
 
 - { repo: rhysd/accelerated-jk, on_map: { n: <Plug> } }
 
@@ -54,14 +47,6 @@
   hook_source: source  $VIM_PATH/modules/module-choosewin.vim
 
 
-- repo: mhinz/vim-startify
-  on_cmd: Startify
-  depends: vim-devicons
-  hook_source: source  $VIM_PATH/modules/module-startify.vim
-  hook_post_source: |
-      function! StartifyEntryFormat()
-        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-      endfunction
 - repo: junegunn/vim-easy-align
   on_ft: [vim,json,go,html,js,jsx,py,css,less,tmpl,toml,xml,sql,Dockerfile]
 
@@ -144,6 +129,13 @@
 - repo: junegunn/fzf
   build: './install --all'
   merged: 0
+
+- repo: Shougo/neomru.vim
+  on_source: fzf-preview.vim
+  hook_add: |
+    let g:neomru#directory_mru_path = $DATA_PATH . '/mru/dir'
+    let g:neomru#file_mru_path = $DATA_PATH . '/mru/file'
+    let g:unite_source_file_mru_limit = 5000
 
 - repo: junegunn/fzf.vim
   depends: fzf
