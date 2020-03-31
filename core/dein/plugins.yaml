@@ -156,6 +156,18 @@
   on_path: [ COMMIT_EDITMSG, MERGE_MSG ]
   hook_source: let g:committia_min_window_width = 7
 
+- repo: tpope/vim-fugitive
+  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit ]
+  hook_source:
+    augroup user_fugitive_plugin
+      autocmd!
+      autocmd FileType fugitiveblame normal A
+    augroup END
+
+- repo: junegunn/gv.vim
+  depends: vim-fugitive
+  on_cmd: GV
+
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
 
 
