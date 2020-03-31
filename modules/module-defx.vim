@@ -1,12 +1,35 @@
-" Defx
+" :h defx
+" ---
+" Problems? https://github.com/Shougo/defx.nvim/issues
+
 call defx#custom#option('_', {
-	\ 'columns': 'indent:git:icons:filename',
+	\ 'resume': 1,
 	\ 'winwidth': 30,
 	\ 'split': 'vertical',
 	\ 'direction': 'topleft',
 	\ 'show_ignored_files': 0,
+	\ 'columns': 'indent:git:icons:filename',
+	\ 'root_marker': ' ',
 	\ })
 
+call defx#custom#column('git', {
+	\   'indicators': {
+	\     'Modified'  : '•',
+	\     'Staged'    : '✚',
+	\     'Untracked' : 'ᵁ',
+	\     'Renamed'   : '≫',
+	\     'Unmerged'  : '≠',
+	\     'Ignored'   : 'ⁱ',
+	\     'Deleted'   : '✖',
+	\     'Unknown'   : '⁇'
+	\   }
+	\ })
+
+call defx#custom#column('mark', { 'readonly_icon': '', 'selected_icon': '' })
+
+
+" Internal use
+let s:original_width = get(get(defx#custom#_get().option, '_'), 'winwidth')
 
 " Events
 " ---
@@ -14,67 +37,27 @@ call defx#custom#option('_', {
 augroup user_plugin_defx
 	autocmd!
 
-	" autocmd DirChanged * call s:defx_refresh_cwd(v:event)
+	" Define defx window mappings
+	autocmd FileType defx call <SID>defx_mappings()
 
 	" Delete defx if it's the only buffer left in the window
-	" autocmd WinEnter * if &filetype == 'defx' && winnr('$') == 1 | bd | endif
+	autocmd WinEnter * if &filetype == 'defx' && winnr('$') == 1 | bdel | endif
 
 	" Move focus to the next window if current buffer is defx
 	autocmd TabLeave * if &filetype == 'defx' | wincmd w | endif
 
-	autocmd TabClosed * call s:defx_close_tab(expand('<afile>'))
-
-	" Define defx window mappings
-	autocmd FileType defx call s:defx_mappings()
+	" autocmd WinEnter * if &filetype ==# 'defx'
+	"	\ |   silent! highlight! link CursorLine TabLineSel
+	"	\ | endif
+	"
+	" autocmd WinLeave * if &filetype ==# 'defx'
+	"	\ |   silent! highlight! link CursorLine NONE
+	"	\ | endif
 
 augroup END
 
 " Internal functions
 " ---
-
-function! s:defx_close_tab(tabnr)
-	" When a tab is closed, find and delete any associated defx buffers
-	for l:nr in range(1, bufnr('$'))
-		let l:defx = getbufvar(l:nr, 'defx')
-		if empty(l:defx)
-			continue
-		endif
-		let l:context = get(l:defx, 'context', {})
-		if get(l:context, 'buffer_name', '') ==# 'tab' . a:tabnr
-			silent! execute 'bdelete '.l:nr
-			break
-		endif
-	endfor
-endfunction
-
-function! s:defx_toggle_tree() abort
-	" Open current file, or toggle directory expand/collapse
-	if defx#is_directory()
-		return defx#do_action('open_or_close_tree')
-	endif
-	return defx#do_action('multi', ['drop'])
-endfunction
-
-function! s:defx_refresh_cwd(event)
-	" Automatically refresh opened Defx windows when changing working-directory
-	let l:cwd = get(a:event, 'cwd', '')
-	let l:scope = get(a:event, 'scope', '')   " global, tab, window
-	let l:is_opened = bufwinnr('defx') > -1
-	if ! l:is_opened || empty(l:cwd) || empty(l:scope)
-		return
-	endif
-
-	" Abort if Defx is already on the cwd triggered (new files trigger this)
-	let l:paths = get(getbufvar('defx', 'defx', {}), 'paths', [])
-	if index(l:paths, l:cwd) >= 0
-		return
-	endif
-
-	let l:tab = tabpagenr()
-	call execute(printf('Defx -buffer-name=tab%s %s', l:tab, l:cwd))
-	wincmd p
-endfunction
-
 function! s:jump_dirty(dir) abort
 	" Jump to the next position with defx-git dirty symbols
 	let l:icons = get(g:, 'defx_git_indicators', {})
@@ -86,9 +69,18 @@ function! s:jump_dirty(dir) abort
 	endif
 endfunction
 
+function! s:defx_toggle_tree() abort
+	" Open current file, or toggle directory expand/collapse
+	if defx#is_directory()
+		return defx#do_action('open_or_close_tree')
+	endif
+	return defx#do_action('multi', ['drop'])
+endfunction
+
 function! s:defx_mappings() abort
 	" Defx window keyboard mappings
-	setlocal signcolumn=no
+	setlocal signcolumn=no expandtab
+
 
 	nnoremap <silent><buffer><expr> <CR>  defx#do_action('drop')
 	nnoremap <silent><buffer><expr> l     <SID>defx_toggle_tree()
@@ -109,35 +101,52 @@ function! s:defx_mappings() abort
 	nnoremap <silent><buffer><expr> <Tab> winnr('$') != 1 ?
 		\ ':<C-u>wincmd w<CR>' :
 		\ ':<C-u>Defx -buffer-name=temp -split=vertical<CR>'
+	" Defx's buffer management
+	nnoremap <silent><buffer><expr> q      defx#do_action('quit')
+	nnoremap <silent><buffer><expr> se     defx#do_action('save_session')
+	nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
+	nnoremap <silent><buffer><expr> <C-g>  defx#do_action('print')
 
-	nnoremap <silent><buffer>       [g :<C-u>call <SID>jump_dirty(-1)<CR>
-	nnoremap <silent><buffer>       ]g :<C-u>call <SID>jump_dirty(1)<CR>
-
-	nnoremap <silent><buffer><expr><nowait> \  defx#do_action('cd', getcwd())
-	nnoremap <silent><buffer><expr><nowait> &  defx#do_action('cd', getcwd())
+	" File/dir management
 	nnoremap <silent><buffer><expr><nowait> c  defx#do_action('copy')
 	nnoremap <silent><buffer><expr><nowait> m  defx#do_action('move')
 	nnoremap <silent><buffer><expr><nowait> p  defx#do_action('paste')
+	nnoremap <silent><buffer><expr><nowait> r  defx#do_action('rename')
+	nnoremap <silent><buffer><expr> dd defx#do_action('remove_trash')
+	nnoremap <silent><buffer><expr> K  defx#do_action('new_directory')
+	nnoremap <silent><buffer><expr> N  defx#do_action('new_multiple_files')
 
+	" Jump
+	nnoremap <silent><buffer>  [g :<C-u>call <SID>jump_dirty(-1)<CR>
+	nnoremap <silent><buffer>  ]g :<C-u>call <SID>jump_dirty(1)<CR>
+
+	" Change directory
+	nnoremap <silent><buffer><expr><nowait> \  defx#do_action('cd', getcwd())
+	nnoremap <silent><buffer><expr><nowait> &  defx#do_action('cd', getcwd())
+	nnoremap <silent><buffer><expr> <BS>  defx#async_action('cd', ['..'])
+	nnoremap <silent><buffer><expr> ~     defx#async_action('cd')
+	nnoremap <silent><buffer><expr> u   defx#do_action('cd', ['..'])
+	nnoremap <silent><buffer><expr> 2u  defx#do_action('cd', ['../..'])
+	nnoremap <silent><buffer><expr> 3u  defx#do_action('cd', ['../../..'])
+	nnoremap <silent><buffer><expr> 4u  defx#do_action('cd', ['../../../..'])
+
+	" Selection
+	nnoremap <silent><buffer><expr> *  defx#do_action('toggle_select_all')
 	nnoremap <silent><buffer><expr><nowait> <Space>
 		\ defx#do_action('toggle_select') . 'j'
-
-	nnoremap <silent><buffer><expr> '      defx#do_action('toggle_select') . 'j'
-	nnoremap <silent><buffer><expr> *      defx#do_action('toggle_select_all')
-	nnoremap <silent><buffer><expr> <C-r>  defx#do_action('redraw')
-	nnoremap <silent><buffer><expr> <C-g>  defx#do_action('print')
 
 	nnoremap <silent><buffer><expr> S  defx#do_action('toggle_sort', 'Time')
 	nnoremap <silent><buffer><expr> C
 		\ defx#do_action('toggle_columns', 'indent:mark:filename:type:size:time')
 
 	" Tools
-	nnoremap <silent><buffer><expr> gx  defx#async_action('execute_system')
+	nnoremap <silent><buffer><expr> w   defx#do_action('call', '<SID>toggle_width')
 	nnoremap <silent><buffer><expr> gd  defx#async_action('multi', ['drop', ['call', '<SID>git_diff']])
-	nnoremap <silent><buffer><expr> gl  defx#async_action('call', '<SID>explorer')
 	nnoremap <silent><buffer><expr> gr  defx#do_action('call', '<SID>grep')
 	nnoremap <silent><buffer><expr> gf  defx#do_action('call', '<SID>find_files')
-	nnoremap <silent><buffer><expr> w   defx#async_action('call', '<SID>toggle_width')
+	if exists('$TMUX')
+		nnoremap <silent><buffer><expr> gl  defx#async_action('call', '<SID>explorer')
+	endif
 endfunction
 
 " TOOLS
@@ -166,14 +175,12 @@ endfunction
 function! s:toggle_width(context) abort
 	" Toggle between defx window width and longest line
 	let l:max = 0
-	let l:original = a:context['winwidth']
 	for l:line in range(1, line('$'))
 		let l:len = len(getline(l:line))
-		if l:len > l:max
-			let l:max = l:len
-		endif
+		let l:max = max([l:len, l:max])
 	endfor
-	execute 'vertical resize ' . (l:max == winwidth('.') ? l:original : l:max)
+	let l:new = l:max == winwidth(0) ? s:original_width : l:max
+	call defx#call_action('resize', l:new)
 endfunction
 
 function! s:explorer(context) abort
@@ -202,3 +209,4 @@ function! s:find_file_explorer() abort
 	return s:file_explorer
 endfunction
 
+" vim: set ts=2 sw=2 tw=80 noet :

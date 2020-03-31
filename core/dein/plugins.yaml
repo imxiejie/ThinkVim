@@ -127,6 +127,10 @@
 
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
+  hook_add: |
+    let g:defx_icons_column_length = 1
+    let g:defx_icons_mark_icon = ''
+
 
 # }}}
 
