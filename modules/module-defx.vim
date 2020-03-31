@@ -142,8 +142,6 @@ function! s:defx_mappings() abort
 	" Tools
 	nnoremap <silent><buffer><expr> w   defx#do_action('call', '<SID>toggle_width')
 	nnoremap <silent><buffer><expr> gd  defx#async_action('multi', ['drop', ['call', '<SID>git_diff']])
-	nnoremap <silent><buffer><expr> gr  defx#do_action('call', '<SID>grep')
-	nnoremap <silent><buffer><expr> gf  defx#do_action('call', '<SID>find_files')
 	if exists('$TMUX')
 		nnoremap <silent><buffer><expr> gl  defx#async_action('call', '<SID>explorer')
 	endif
