@@ -43,8 +43,8 @@ let g:fzf_preview_floating_window_winblend = 15
 
 " Commands used for fzf preview.
 " The file name selected by fzf becomes {}
-let g:fzf_preview_command = 'head -100 {-1}'                       " Not installed bat
-" let g:fzf_preview_command = 'bat --color=always --style=grid {-1}' " Installed bat
+"let g:fzf_preview_command = 'head -100 {-1}'                       " Not installed bat
+let g:fzf_preview_command = 'bat --color=always --style=grid {-1}' " Installed bat
 
 " g:fzf_binary_preview_command is executed if this command succeeds, and g:fzf_preview_command is executed if it fails
 let g:fzf_preview_if_binary_command = '[[ "$(file --mime {})" =~ binary ]]'
