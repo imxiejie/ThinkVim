@@ -165,7 +165,6 @@
 ## Tutorial
 
 - check the [tutorial](/tutorial/tutorial.md) to know more about ThinkVim
-- check the [wiki gitworkflow](https://github.com/taigacute/ThinkVim/wiki/Git-WorkFlow)
 
 ## Backers
 
