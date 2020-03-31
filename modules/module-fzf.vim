@@ -94,9 +94,6 @@ let g:fzf_preview_filelist_postprocess_command = ''
 " let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" ls -U --color'      " Use dircolors
 " let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" exa --color=always' " Use exa
 
-" Use vim-devicons
-let g:fzf_preview_use_dev_icons = 0
-
 " devicons character width
 let g:fzf_preview_dev_icon_prefix_length = 2
 
