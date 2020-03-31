@@ -118,7 +118,18 @@
 
 - repo: kristijanhusak/defx-git
   on_source: defx.nvim
-  hook_source: source  $VIM_PATH/modules/module-defxgit.vim
+  hook_source: |
+    let g:defx_git#indicators = {
+      \ 'Modified'  : '•',
+      \ 'Staged'    : '✚',
+      \ 'Untracked' : 'ᵁ',
+      \ 'Renamed'   : '≫',
+      \ 'Unmerged'  : '≠',
+      \ 'Ignored'   : 'ⁱ',
+      \ 'Deleted'   : '✖',
+      \ 'Unknown'   : '⁇'
+      \ }
+
 
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
