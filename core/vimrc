@@ -13,7 +13,7 @@ let $VIM_PATH =
 	\   ! empty($VIM_PATH) ? expand($VIM_PATH) :
 	\   fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 	\ )
-let s:user_settings_path = expand('~/.thicustom.vim')
+let s:user_settings_path = expand('~/.thinkvim.d/custom.vim')
 
 " Regular Vim doesn't add custom configuration directories, if you use one
 if &runtimepath !~# $VIM_PATH
