@@ -13,7 +13,7 @@ let $VIM_PATH =
 	\   ! empty($VIM_PATH) ? expand($VIM_PATH) :
 	\   fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 	\ )
-let s:user_settings_path = expand('~/.thinkvim.d/local_settings.vim')
+let s:user_settings_path = expand('~/.thicustom.vim')
 
 " Regular Vim doesn't add custom configuration directories, if you use one
 if &runtimepath !~# $VIM_PATH
@@ -127,7 +127,7 @@ endfunction
 " Load user custom local settings
 if filereadable(s:user_settings_path)
 	if s:check_custom_settings(s:user_settings_path)
-		call s:source_custom('/local_settings.vim')
+		call s:source_custom('/custom.vim')
 	endif
 endif
 

@@ -14,19 +14,19 @@ The structure of Thinkvim ‼️
   - [filetype.vim](~/.config/nvim/rc/general.vim) - filetype settings
   - [mappings.vim](~/.config/nvim/rc/mappings.vim) - Vim keymap
 - [colors](~/.config/nvim/colors) - Colorscheme
-- [layers](~/.config/nvim/layers) - _**Plugins Config!**_
+- [modules](~/.config/nvim/modules) - _**Plugins Config!**_
 - [ftplugin](~/.config/nvim/ftplugin) - filetypePlugin
 - [plugin](~/.config/nvim/plugin) - Some easy plugin
 
 ## User Custom
 
-User custom folder `~/.thinkvim.d`,notice the folder must be in your root path `~`,in this folder you should touch two files `local_plugins.yaml` and `local_settings.vim`
+User custom folder `~/.thinkvim.d`,notice the folder must be in your root path `~`,in this folder you should touch two files `plugins.yaml` and `custom.vim`
 
 ## How to Install plugins?
 
 I suggest that most of plugins should lazyload by dein ,There has two ways to install plugins.
 
-- if you are a vim begginer or you want to follow master branch,you should use `local_plugins.yaml`. like you want use choosewin plugin,you can installed it in `local_plugins.yaml`(notice thinkvim has installed ,just for example)
+- if you are a vim begginer or you want to follow master branch,you should use `plugins.yaml`. like you want use choosewin plugin,you can installed it in `plugins.yaml`(notice thinkvim has installed ,just for example)
 
 ```yaml
 - repo: t9md/vim-choosewin
@@ -43,7 +43,7 @@ more useage about [Dein](https://github.com/Shougo/dein.vim/blob/master/doc/dein
 
 - if you have vimscript skill and not a vim beginner, want change this config to your own config ,you can edit the `core/dein/plugins.yaml`.
 
-the keymap of plugins you should config it in `local_settings.vim`,th same as installed plugins,if you want follow master branch use `local_settings.vim`,if you want change to your own config you can edit the `core/plugins/allkey.vim`.
+the keymap of plugins you should config it in `custom.vim`,th same as installed plugins,if you want follow master branch use `custom.vim`,if you want change to your own config you can edit the `core/plugins/allkey.vim`.
 
 example:
 
@@ -63,7 +63,7 @@ endif
 - Your plugin shortcuts should also be based on this format. used `if dein#tap('pluginname')`
 - Notice ‼️ the lazyload feature of dein will not loading the default config of plugins, so you should config the keymap of lazyload plugins
 
-register the `local_settings` keymap to `whichkey`, there are two settings map.
+register the `custom` keymap to `whichkey`, there are two settings map.
 
 ```viml
 let g:which_key_map   for leaderkey
@@ -94,19 +94,21 @@ check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
 ## How to set the Startify
 
-Startify can only set the header and footer centered，set this `let g:startify_padding_left = 40` into your `local_settings.vim`,change the value until the file area centered on your screen
+Startify can only set the header and footer centered，set this `let g:startify_padding_left = 40` into your `custom.vim`,change the value until the file area centered on your screen
 
 ## How to config completion
 
-
 - Completion use LanguageServerProtocol by CoC.nvim.
 - ThinkVim has provide the python,go,javascript,typescript support.
-   - For python thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
-   - For go  used the gopls,you need install the gopls 
-   ```
-   go get golang.org/x/tools/gopls@latest
-   ```
-   - For javascript/typescript used the coc-tsserver.
+
+  - For python thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
+  - For go used the gopls,you need install the gopls
+
+  ```
+  go get golang.org/x/tools/gopls@latest
+  ```
+
+  - For javascript/typescript used the coc-tsserver.
 
 - Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
 - [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
