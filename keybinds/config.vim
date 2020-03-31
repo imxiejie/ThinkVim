@@ -240,10 +240,6 @@ if dein#tap('vim-quickrun')
     nnoremap <silent> <leader>r :QuickRun<CR>
 endif
 
-if dein#tap('dash.vim')
-        nnoremap <silent><localleader>d :Dash<CR>
-endif
-
 if dein#tap('vim-expand-region')
         xmap v <Plug>(expand_region_expand)
         xmap V <Plug>(expand_region_shrink)

@@ -1,6 +1,9 @@
 let g:which_key_map =  {}
+let g:which_key_localmap =  {
+  \ 'name' : "Thinkvim LocalLeader"
+  \ }
 let g:which_key_map = {
-      \ 'name' : '+ThinkVim root ' ,
+      \ 'name' : '+ThinkVim Leader ' ,
       \ '1' : 'select window-1'      ,
       \ '2' : 'select window-2'      ,
       \ '3' : 'select window-3'      ,
@@ -94,11 +97,6 @@ let g:which_key_map[' '] = {
       \ 'f' : ['<plug>(easymotion-f)' , 'find {char} to the left'],
       \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
       \ }
-
-let g:which_key_localmap = {
-  \ 'name' : '+Thinkvim Local',
-  \ 'd'    : 'doc on Dash.app',
-  \ }
 
 let g:which_key_localmap.g ={
       \ 'name' : '+golang-toolkit',

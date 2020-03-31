@@ -71,15 +71,7 @@
   hook_add: |
         let g:comfortable_motion_no_default_key_mappings = 1
         let g:comfortable_motion_impulse_multiplier = 1
-- repo: rizzatti/dash.vim
-  on_map: { n: <Plug> }
-  hook_add: |
-      let g:dash_map = {
-        \ 'javascript': ['javascript', 'NodeJS'],
-        \ 'javascriptreact': ['react'],
-        \ 'html': ['html', 'svg'],
-        \ 'go' : 'Go',
-        \}
+
 - repo: thinca/vim-quickrun
   on_cmd: QuickRun
   hook_add: |
@@ -89,6 +81,7 @@
             \   },
             \}
         let g:quickrun_no_default_key_mappings = 1
+
 - {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
 
 - {repo: tpope/vim-repeat , on_map: .* }
@@ -101,6 +94,7 @@
         call which_key#register(';', 'g:which_key_localmap')
         call which_key#register(']', 'g:which_key_rsbgmap')
         call which_key#register('[', 'g:which_key_lsbgmap')
+
 - repo: easymotion/vim-easymotion
   on_map: { n: <Plug> }
   hook_source: |
