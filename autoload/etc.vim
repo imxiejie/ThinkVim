@@ -39,7 +39,7 @@ function! etc#init() abort
 		\   copy(g:etc#config_paths),
 		\   'g:etc#vim_path ."/". v:val'
 		\ )
-    let l:local_paths=expand($HOME.'/.thinkvim.d/local_plugins.yaml')
+    let l:local_paths=expand($HOME.'/.thinkvim.d/plugins.yaml')
 	call filter(l:config_paths, 'filereadable(v:val)')
     if filereadable(l:local_paths)
         if s:check_custom_settings(l:local_paths)
