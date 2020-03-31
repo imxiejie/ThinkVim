@@ -27,8 +27,10 @@ let g:which_key_map = {
       \ '-' : 'choose window by {prompt char}' ,
       \ 'g' : {
             \ 'name' : '+version control',
+            \ 'a' : 'Git add',
             \ 'g' : 'Magit Status',
             \ 'p' : 'Magit Push',
+            \ 'l' : 'show git log',
             \ },
       \ 'G' : 'distraction free writing' ,
       \ 'F' : 'find current file' ,

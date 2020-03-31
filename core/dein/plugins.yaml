@@ -164,10 +164,6 @@
       autocmd FileType fugitiveblame normal A
     augroup END
 
-- repo: junegunn/gv.vim
-  depends: vim-fugitive
-  on_cmd: GV
-
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
 
 
