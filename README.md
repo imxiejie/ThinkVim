@@ -42,6 +42,7 @@
     # then compile and install ctags
     ```
 - bat : [install bat](https://github.com/sharkdp/bat)
+- exa : [install exa](https://github.com/ogham/exa)
 
 ## Installation
 
