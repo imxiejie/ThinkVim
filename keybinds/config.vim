@@ -146,8 +146,18 @@ if dein#tap('vimagit')
 	nnoremap <silent> <Leader>gg :Magit<CR>
 endif
 
+if dein#tap('vim-fugitive')
+	nnoremap <silent> <leader>ga :Git add %:p<CR>
+	nnoremap <silent> <leader>gd :Gdiffsplit<CR>
+	nnoremap <silent> <leader>gc :Git commit<CR>
+	nnoremap <silent> <leader>gb :Git blame<CR>
+	nnoremap <silent> <leader>gF :Gfetch<CR>
+	nnoremap <silent> <leader>gS :Git<CR>
+endif
+
 if dein#tap('gina.vim')
 	nnoremap <silent><Leader>gp :Gina push<CR>
+	nnoremap <silent><Leader>gl :Gina log<CR>
 endif
 
 if dein#tap('vim-mundo')
