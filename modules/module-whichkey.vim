@@ -11,22 +11,24 @@ let g:which_key_map = {
       \ '8' : 'select window-8'      ,
       \ '9' : 'select window-9'      ,
       \ '0' : 'select window-10'      ,
-      \ 'a' : {
-            \ 'name' : '+coc-code-action',
-            \ 'c' : 'code action',
-            \ },
       \ 'b' : {
             \ 'name' : '+buffer',
             \ 'b' : 'buffer list',
             \ 'c' : 'keep current buffer',
             \ 'o' : 'keep input buffer',
             \ },
+      \ 'd' : {
+            \ 'name' : '+plugin manage',
+            \ 'u' : 'update all plugins',
+            \ 'r' : 'reache runtime path',
+            \ 'l' : 'plugins update log',
+            \ },
       \ 'e' : 'open file explorer' ,
       \ '-' : 'choose window by {prompt char}' ,
-      \ 'd' : 'search cursor word on Dash.app' ,
       \ 'g' : {
-            \ 'name' : 'version control',
-            \ 'g' : 'Magit status',
+            \ 'name' : '+version control',
+            \ 'g' : 'Magit Status',
+            \ 'p' : 'Magit Push',
             \ },
       \ 'G' : 'distraction free writing' ,
       \ 'F' : 'find current file' ,
@@ -40,8 +42,9 @@ let g:which_key_map = {
             \ 'p' : 'find on a project',
             \ 'P' : 'find on a git project',
             \ },
+      \ 'i' : 'open imenu list' ,
       \ 'o' : {
-            \ 'name' : 'open {terminal}',
+            \ 'name' : '+open {terminal}',
             \ 't' : 'open a temrinal',
             \ },
       \ 'm' : 'open mundotree' ,
@@ -49,6 +52,7 @@ let g:which_key_map = {
       \ 'j' : 'open coc-explorer',
       \ 's' : 'open startify screen',
       \ 'p' : 'edit pluginsconfig {filename}',
+      \ 'r' : 'quick run',
       \ 'x' : 'coc cursors operate',
       \ 'c'    : {
               \ 'name' : '+coc list' ,
@@ -67,51 +71,47 @@ let g:which_key_map = {
               \ 'm'    : 'coc search word to multiple cursors',
               \ },
       \ 'q' : {
-            \ 'name' : '+coc-quickfix',
+            \ 'name' : '+coc quickfix',
             \ 'f' : 'coc fixcurrent',
             \ },
       \ 't' : {
-            \ 'name' : '+tab-operate',
+            \ 'name' : 'tab operate',
             \ 'n' : 'new tab',
             \ 'e' : 'edit tab',
             \ 'm' : 'move tab',
             \ },
       \ }
 let g:which_key_map[' '] = {
-      \ 'name' : '+easymotion-jumpto-word ' ,
+      \ 'name' : '+easymotion jumpto word ' ,
       \ 'b' : ['<plug>(easymotion-b)' , 'beginning of word backward'],
       \ 'f' : ['<plug>(easymotion-f)' , 'find {char} to the left'],
       \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
       \ }
 
-let g:which_key_localmap ={
-      \ 'name' : '+LocalLeaderKey'  ,
-      \ 'v'    : 'open vista show outline',
-      \ 'r'    : 'quick run',
-      \ 'm'    : 'toolkit Menu',
-      \ 'g' : {
-            \ 'name' : '+golang-toolkit',
-            \ 'i'    : 'go impl',
-            \ 'd'    : 'go describe',
-            \ 'c'    : 'go callees',
-            \ 'C'    : 'go callers',
-            \ 's'    : 'go callstack',
-            \ },
+let g:which_key_localmap = {
+  \ 'name' : '+Thinkvim Local',
+  \ 'd'    : 'doc on Dash.app',
+  \ }
+
+let g:which_key_localmap.g ={
+      \ 'name' : '+golang-toolkit',
+      \ 'i'    : 'go impl',
+      \ 'd'    : 'go describe',
+      \ 'c'    : 'go callees',
+      \ 'C'    : 'go callers',
+      \ 's'    : 'go callstack',
       \ }
 
 let g:which_key_rsbgmap = {
       \ 'name' : '+RightSquarebrackets',
-      \ 'a'    : 'ale nextwarp',
       \ 'c'    : 'coc nextdiagnostics',
       \ 'b'    : 'next buffer',
       \ 'g'    : 'coc gitnextchunk',
       \ ']'    : 'jump prefunction-golang',
       \ }
 
-
 let g:which_key_lsbgmap = {
       \ 'name' : '+LeftSquarebrackets',
-      \ 'a'    : 'ale prewarp',
       \ 'c'    : 'coc prediagnostics',
       \ 'b'    : 'pre buffer',
       \ 'g'    : 'coc gitprevchunk',

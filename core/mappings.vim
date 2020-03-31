@@ -52,7 +52,7 @@ noremap <leader>tm :tabmove
 
 "buffer
 nnoremap <leader>bc :BufOnly<CR>
-nnoremap <Leader>bo :BufOnly 
+nnoremap <Leader>bo :BufOnly<Space>
 "yank to end
 nnoremap Y y$
 

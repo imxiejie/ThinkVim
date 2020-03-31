@@ -1,33 +1,35 @@
 "Plugin key settings
 
+if dein#tap('dein.vim')
+	nnoremap <silent> <Leader>du  :call dein#update()<CR>
+	nnoremap <silent> <Leader>dr  :call dein#recache_runtimepath()<CR>
+	nnoremap <silent> <Leader>dl  :echo dein#get_updates_log()<CR>
+endif
+
 if dein#tap('denite.nvim')
-        nnoremap <silent><LocalLeader>m :<C-u>Denite menu<CR>
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
         noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
-
-        nnoremap <silent> <Leader>gl :<C-u>Denite gitlog:all<CR>
-	    nnoremap <silent> <Leader>gh :<C-u>Denite gitbranch<CR>
         function! s:my_denite_outline(filetype) abort
-        execute 'Denite' a:filetype ==# 'go' ? "decls:'%:p'" : 'outline'
+          execute 'Denite' a:filetype ==# 'go' ? "decls:'%:p'" : 'outline'
         endfunction
         function! s:my_denite_decls(filetype) abort
-        if a:filetype ==# 'go'
-            Denite decls
-        else
-            call denite#util#print_error('decls does not support filetypes except go')
-        endif
+					if a:filetype ==# 'go'
+							Denite decls
+					else
+							call denite#util#print_error('decls does not support filetypes except go')
+					endif
         endfunction
         function! s:my_denite_file_rec_goroot() abort
-        if !executable('go')
-            call denite#util#print_error('`go` executable not found')
-            return
-        endif
-        let out = system('go env | grep ''^GOROOT='' | cut -d\" -f2')
-        let goroot = substitute(out, '\n', '', '')
-        call denite#start(
-                \ [{'name': 'file/rec', 'args': [goroot]}],
-                \ {'input': '.go'})
+					if !executable('go')
+							call denite#util#print_error('`go` executable not found')
+							return
+					endif
+					let out = system('go env | grep ''^GOROOT='' | cut -d\" -f2')
+					let goroot = substitute(out, '\n', '', '')
+					call denite#start(
+									\ [{'name': 'file/rec', 'args': [goroot]}],
+									\ {'input': '.go'})
         endfunction
 endif
 
@@ -63,11 +65,6 @@ if dein#tap('coc.nvim')
         " Remap for format selected region
         vmap <leader>cf  <Plug>(coc-format-selected)
         nmap <leader>cf  <Plug>(coc-format-selected)
-        " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-        " xmap <leader>ca  <Plug>(coc-codeaction-selected)
-        " nmap <leader>ca  <Plug>(coc-codeaction-selected)
-        " Remap for do codeAction of current line
-        nmap <leader>ac  <Plug>(coc-codeaction)
         " Fix autofix problem of current line
         nmap <leader>qf  <Plug>(coc-fix-current)
         " Remap keys for gotos
@@ -136,7 +133,6 @@ if dein#tap('vim-easy-align')
     nmap ga <Plug>(EasyAlign)
 endif
 
-
 if dein#tap('vim-go')
 	 nnoremap <silent> <LocalLeader>gi :GoImpl<CR>
 	 nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
@@ -175,18 +171,18 @@ endif
 
 if dein#tap('caw.vim')
     function! InitCaw() abort
-		if ! &l:modifiable
-			silent! nunmap <buffer> gc
-			silent! xunmap <buffer> gc
-			silent! nunmap <buffer> gcc
-			silent! xunmap <buffer> gcc
-		else
-			nmap <buffer> gc <Plug>(caw:prefix)
-			xmap <buffer> gc <Plug>(caw:prefix)
-			nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
-			xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
-		endif
-	endfunction
+			if ! &l:modifiable
+				silent! nunmap <buffer> gc
+				silent! xunmap <buffer> gc
+				silent! nunmap <buffer> gcc
+				silent! xunmap <buffer> gcc
+			else
+				nmap <buffer> gc <Plug>(caw:prefix)
+				xmap <buffer> gc <Plug>(caw:prefix)
+				nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+				xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+			endif
+		endfunction
 	autocmd FileType * call InitCaw()
 	call InitCaw()
 endif
@@ -231,11 +227,11 @@ if dein#tap('vim-startify')
 endif
 
 if dein#tap('vim-quickrun')
-    nnoremap <silent> <localleader>r :QuickRun<CR>
+    nnoremap <silent> <leader>r :QuickRun<CR>
 endif
 
 if dein#tap('dash.vim')
-        nnoremap <silent><leader>d :Dash<CR>
+        nnoremap <silent><localleader>d :Dash<CR>
 endif
 
 if dein#tap('vim-expand-region')
@@ -251,8 +247,7 @@ if dein#tap('splitjoin.vim')
 endif
 
 if dein#tap('vista.vim')
-        nnoremap <silent><localleader>v :Vista!!<CR>
-        nnoremap <silent><leader>fv     :Vista finder coc<CR>
+	nnoremap <silent> <Leader>i :<C-u>Vista!!<CR>
 endif
 
 if dein#tap('ale')
