@@ -48,16 +48,9 @@ let s:menus.thinkvim.file_candidates = [
   \   ['🐠 General            settings: general.vim         🔹', $VIMPATH.'/core/general.vim'],
   \   ['🐠 DeinConfig         settings: deinrc.vim          🔹', $VIMPATH.'/core/deinrc.vim'],
   \   ['🐠 FileTypes          settings: filetype.vim        🔹', $VIMPATH.'/core/filetype.vim'],
-  \   ['🐠 Installed       LoadPlugins: plugins.yaml        🔹', $VIMPATH.'/core/dein/plugins.yaml'],
-  \   ['🐠 Installed      LocalPlugins: local_plugins.yaml  🔹', $VIMPATH.'/core/dein/local_plugins.yaml'],
   \   ['🐠 Global   Key    Vimmappings: mappings.vim        🔹', $VIMPATH.'/core/mappings.vim'],
-  \   ['🐠 Global   Key Pluginmappings: Pluginmappings      🔹', $VIMPATH.'/core/plugins/allkey.vim'],
+  \   ['🐠 Global   Key Pluginmappings: Pluginmappings      🔹', $VIMPATH.'/keybinds/config.vim'],
   \ ]
 
 call denite#custom#var('menu', 'menus', s:menus)
 
-"let s:menus.sessions = { 'description': 'Sessions' }
-"let s:menus.sessions.command_candidates = [
-  "\   ['▶ Restore session │ ;s', 'Denite session'],
-  "\   ['▶ Save session…   │', 'Denite session/new'],
-  "\ ]
