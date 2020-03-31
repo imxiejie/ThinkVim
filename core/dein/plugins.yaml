@@ -264,7 +264,7 @@
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
-  hook_add: source  $VIM_PATH/modules/module-vista.vim
+  hook_source: source  $VIM_PATH/modules/module-vista.vim
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
