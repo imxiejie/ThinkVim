@@ -35,3 +35,7 @@ endfunction
 
 let g:startify_custom_header = s:center(s:header)
 let g:startify_custom_footer = s:center(s:footer)
+
+autocmd! FileType startify
+autocmd  FileType startify set laststatus=0
+  \| autocmd BufLeave <buffer> set laststatus=2
