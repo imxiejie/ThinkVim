@@ -293,10 +293,6 @@ if dein#tap('committia.vim')
 	endfunction
 endif
 
-if dein#tap('vim-startify')
-    nnoremap <silent> <leader>s :Startify<CR>
-endif
-
 if dein#tap('vim-quickrun')
     nnoremap <silent> <leader>r :QuickRun<CR>
 endif
