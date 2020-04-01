@@ -37,9 +37,9 @@ let g:fzf_preview_floating_window_winblend = 15
 
 " Commands used for fzf preview.
 " The file name selected by fzf becomes {}
-let g:fzf_preview_command = 'head -100 {-1}'                       " Not installed bat
+"let g:fzf_preview_command = 'head -100 {-1}'                       " Not installed bat
 "let g:fzf_preview_command = 'bat --color=always --style=grid {-1}' " Installed bat
-"let g:fzf_preview_command = 'bat --color=always --style=grid --theme=ansi-dark {-1}'
+let g:fzf_preview_command = 'bat --color=always --style=grid --theme=ansi-dark {-1}'
 
 " g:fzf_binary_preview_command is executed if this command succeeds, and g:fzf_preview_command is executed if it fails
 let g:fzf_preview_if_binary_command = '[[ "$(file --mime {})" =~ binary ]]'
@@ -85,9 +85,9 @@ let g:fzf_preview_fzf_preview_window_option = ''
 " let g:fzf_preview_fzf_preview_window_option = 'up:30%'
 
 " Command to be executed after file list creation
-" let g:fzf_preview_filelist_postprocess_command = ''
+let g:fzf_preview_filelist_postprocess_command = ''
 " let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" ls -U --color'      " Use dircolors
-let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" exa --color=always' " Use exa
+"let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" exa --color=always' " Use exa
 
 " devicons character width
 let g:fzf_preview_dev_icon_prefix_length = 2
