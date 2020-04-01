@@ -80,7 +80,8 @@ endif
 let g:which_key_map.F='test'
 ```
 
-- if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`, or use thinkvim menu `;+m` trigger menu,then choose dein,and choose `ReacheRuntimePath`
+- if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`
+- you can check  [my .thinkvim.d](https://github.com/taigacute/dotfiles/tree/master/thinkvim) for more usage.
 
 ## How to install or change colorscheme
 
