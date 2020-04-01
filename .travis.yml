@@ -1,4 +1,4 @@
-language: vim
+language: generic
 
 sudo: true
 
@@ -36,7 +36,7 @@ before_install:
   - cd ~/.config/nvim
 
 install:
-    - nvim -es -i NONE -N -u init.vim -c "try | call dein#install() | finally | echomsg '' | qall! | endtry"
+    - nvim -e -i NONE -N -u init.vim -c "try | call dein#install() | finally | echomsg '' | qall! | endtry"
 
 notifications:
   email: false
