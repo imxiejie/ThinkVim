@@ -36,7 +36,7 @@ before_install:
   - cd ~/.config/nvim
 
 install:
-    - nvim  -e -i NONE -N -u init.vim -c "try | call dein#install() | finally | echomsg '' | qall! | endtry"
+    - nvim -c "try | call dein#install() | finally | echomsg '' | qall! | endtry"
 
 notifications:
   email: false
