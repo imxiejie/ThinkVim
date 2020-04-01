@@ -115,15 +115,76 @@ if dein#tap('coc.nvim')
 endif
 
 if dein#tap('fzf-preview.vim')
-        nnoremap <silent> <leader>fc :Colors<CR>
-        nnoremap <silent> <leader>bb :<C-u>FzfPreviewBuffers<CR>
-        nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers<CR>
-        nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
-        nnoremap          <leader>fr :<C-u>FzfPreviewProjectGrep<Space>
-        nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
-        nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
-        nnoremap <silent> <leader>fp :<C-u>FzfPreviewProjectFiles<CR>
-        nnoremap <silent> <leader>fP :<C-u>FzfPreviewFromResources project_mru git<CR>
+	nnoremap <silent> <leader>fc :<C-u>Colors<CR>
+  nnoremap <silent> <leader>bb :<C-u>FzfPreviewBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
+	nnoremap <silent> <Leader>gS :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_gina_processors<CR>
+  nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
+  nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
+  nnoremap          <leader>fr :<C-u>FzfPreviewProjectGrep<Space>
+  nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
+	nnoremap <silent> <leader>fC :<C-u>FzfPreviewChanges<CR>
+  nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
+  nnoremap <silent> <leader>fp :<C-u>FzfPreviewProjectFiles<CR>
+	nnoremap <silent> <Leader>fw :<C-u>FzfPreviewLines -add-fzf-arg=--no-sort -add-fzf-arg=--query="'<C-r>=expand('<cword>')<CR>"<CR>
+  nnoremap <silent> <leader>fP :<C-u>FzfPreviewFromResources project_mru git<CR>
+	augroup fzf_preview
+		autocmd!
+		autocmd User fzf_preview#initialized call s:fzf_preview_settings()
+	augroup END
+
+	function! s:fzf_preview_settings() abort
+		let g:fzf_preview_buffer_delete_processors = fzf_preview#resource_processor#get_default_processors()
+		let g:fzf_preview_buffer_delete_processors['ctrl-x'] = function('s:buffers_delete_from_lines')
+	endfunction
+
+	function! s:buffers_delete_from_lines(lines) abort
+		for line in a:lines
+			let matches = matchlist(line, '^buffer \(\d\+\)$')
+			if len(matches) >= 1
+				execute 'bdelete! ' . matches[1]
+			else
+				execute 'bdelete! ' . line
+			endif
+		endfor
+	endfunction
+
+	function! s:gina_add(paths) abort
+		for path in a:paths
+			execute 'silent Gina add ' . path
+		endfor
+
+		echomsg 'Git add ' . join(a:paths, ', ')
+	endfunction
+
+	function! s:gina_reset(paths) abort
+		for path in a:paths
+			execute 'silent Gina reset ' . path
+		endfor
+
+		echomsg 'Git reset ' . join(a:paths, ', ')
+	endfunction
+
+	function! s:gina_patch(paths) abort
+		for path in a:paths
+			execute 'silent Gina patch ' . path
+		endfor
+
+		echomsg 'Git add --patch ' . join(a:paths, ', ')
+	endfunction
+
+	function! s:fzf_preview_settings() abort
+		let g:fzf_preview_custom_default_processors = fzf_preview#resource_processor#get_default_processors()
+		call remove(g:fzf_preview_custom_default_processors, 'ctrl-x')
+		let g:fzf_preview_custom_default_processors['ctrl-s'] = function('fzf_preview#resource_processor#split')
+
+		let g:fzf_preview_buffer_delete_processors = fzf_preview#resource_processor#get_default_processors()
+		let g:fzf_preview_buffer_delete_processors['ctrl-x'] = function('s:buffers_delete_from_lines')
+
+		let g:fzf_preview_gina_processors = fzf_preview#resource_processor#get_processors()
+		let g:fzf_preview_gina_processors['ctrl-a'] = function('s:gina_add')
+		let g:fzf_preview_gina_processors['ctrl-r'] = function('s:gina_reset')
+		let g:fzf_preview_gina_processors['ctrl-c'] = function('s:gina_patch')
+	endfunction
 endif
 
 if dein#tap('vim-easy-align')
