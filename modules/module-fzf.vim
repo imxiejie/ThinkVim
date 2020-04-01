@@ -85,7 +85,7 @@ let g:fzf_preview_fzf_preview_window_option = ''
 " let g:fzf_preview_fzf_preview_window_option = 'up:30%'
 
 " Command to be executed after file list creation
-let g:fzf_preview_filelist_postprocess_command = ''
+"let g:fzf_preview_filelist_postprocess_command = ''
 " let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" ls -U --color'      " Use dircolors
 "let g:fzf_preview_filelist_postprocess_command = 'xargs -d "\n" exa --color=always' " Use exa
 
