@@ -17,7 +17,7 @@ install:
     - nvim
 
 before_install:
-    - sudo apt-get neovim
+    - sudo apt-get install neovim
     - pip3 install --user pynvim
     - pip3 install neovim-remote
     - nvim --version
