@@ -15,9 +15,7 @@ function! s:goyo_enter()
 	endif
 
 	" Activate Limelight
-	let s:stl = &l:statusline
-	let &l:statusline = ''
-	setlocal laststatus=0
+	let g:loaded_spaceline=0
 	Limelight
 endfunction
 
@@ -36,8 +34,7 @@ function! s:goyo_leave()
 	endif
 
 	" De-activate Limelight
-	let &l:statusline = s:stl
-	unlet s:stl
+	let g:loaded_spaceline =1
 	Limelight!
 endfunction
 " }}}

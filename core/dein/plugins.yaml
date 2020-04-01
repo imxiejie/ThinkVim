@@ -287,6 +287,7 @@
   hook_post_source: 'call mkdp#util#install()'
   hook_source: |
       let g:mkdp_auto_start = 1
+
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
   hook_source: source  $VIM_PATH/modules/module-goyo.vim
