@@ -36,7 +36,7 @@ before_install:
 
 install:
     - nvim
-    - exit 0
+    - ctrl+c
 
 notifications:
   email: false
