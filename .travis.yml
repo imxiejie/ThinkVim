@@ -11,7 +11,7 @@ addons:
       - "python3"
       - "python3-pip"
 
-before_script:
+before_install:
   - |
     echo 'Add neovim PPA.'
     if [[ `lsb_release -r | awk '{print $2}'` < 16.04 ]]; then
