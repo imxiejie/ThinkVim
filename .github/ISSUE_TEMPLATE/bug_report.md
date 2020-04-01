@@ -12,6 +12,8 @@ about: Bug
 ## Environment Information
 
  * OS:
+ 
+ * thinkvim `:echo g:thinkvim_version` output:
 
  * neovim `:version` output:
 
