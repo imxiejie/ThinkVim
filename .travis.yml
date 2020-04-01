@@ -1,0 +1,26 @@
+language: generic
+
+sudo: true
+
+python:
+  - "3.7"
+
+addons:
+  apt:
+    packages:
+      - "python3"
+      - "python3-pip"
+      - "neovim"
+
+install:
+    - mkdir ~/.config/nvim
+    - git clone --depth=1  https://github.com/hardcoreplayers/ThinkVim ~/.config/nvim
+    - nvim
+
+before_script:
+    - pip3 install --user pynvim
+    - pip3 install neovim-remote
+    - nvim --version
+
+notifications:
+  email: false
