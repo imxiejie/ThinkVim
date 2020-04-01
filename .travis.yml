@@ -33,9 +33,10 @@ before_install:
     echo 'Clone dependencies.'
     mkdir -p ~/.config/nvim
     git clone --depth=1  https://github.com/hardcoreplayers/ThinkVim ~/.config/nvim
+  - cd ~/.config/nvim
 
 install:
-    - nvim -es
+    - nvim  -e -i NONE -N -u init.vim -c "try | call dein#install() | finally | echomsg '' | qall! | endtry"
 
 notifications:
   email: false
