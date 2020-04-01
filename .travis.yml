@@ -19,6 +19,7 @@ install:
 before_install:
     - sudo add-apt-repository ppa:neovim-ppa/unstable
     - sudo apt-get install -y neovim
+    - Enter
     - pip3 install --user pynvim
     - pip3 install neovim-remote
     - nvim --version
