@@ -125,7 +125,7 @@ if dein#tap('fzf-preview.vim')
 	nnoremap <silent> <leader>fC :<C-u>FzfPreviewChanges<CR>
   nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
   nnoremap <silent> <leader>fp :<C-u>FzfPreviewProjectFiles<CR>
-	nnoremap <silent> <Leader>fw :<C-u>FzfPreviewLines -add-fzf-arg=--no-sort -add-fzf-arg=--query="'<C-r>=expand('<cword>')<CR>"<CR>
+	nnoremap <silent> <Leader>fw :<C-u>FzfPreviewProjectGrep <C-r>=expand('<cword>')<CR><CR>
   nnoremap <silent> <leader>fP :<C-u>FzfPreviewFromResources project_mru git<CR>
 	augroup fzf_preview
 		autocmd!
