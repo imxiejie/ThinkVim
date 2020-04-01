@@ -139,8 +139,7 @@
 
 - repo: junegunn/fzf.vim
   depends: fzf
-  on_cmd: [Colors,Rg,Buffers]
-  on_func: Fzf_dev
+  on_cmd: Colors
   hook_source: source  $VIM_PATH/modules/module-fzf.vim
 
 - repo: yuki-ycino/fzf-preview.vim
