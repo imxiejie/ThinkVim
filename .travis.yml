@@ -17,7 +17,7 @@ install:
     - git clone --depth=1  https://github.com/hardcoreplayers/ThinkVim ~/.config/nvim
     - nvim
 
-before_script:
+before_install:
     - pip3 install --user pynvim
     - pip3 install neovim-remote
     - nvim --version
