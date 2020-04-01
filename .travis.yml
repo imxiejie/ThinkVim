@@ -7,9 +7,15 @@ python:
 
 addons:
   apt:
+    sources:
+    - deadsnakes
+    - sourceline: 'ppa:ubuntu-toolchain-r/test'
+    - sourceline: 'deb https://packagecloud.io/chef/stable/ubuntu/precise main'
+      key_url: 'https://packagecloud.io/gpg.key'
     packages:
       - "python3"
       - "python3-pip"
+      - "neovim"
 
 install:
     - mkdir ~/.config/nvim
@@ -17,7 +23,6 @@ install:
     - nvim
 
 before_install:
-    - sudo apt-get install neovim
     - pip3 install --user pynvim
     - pip3 install neovim-remote
     - nvim --version
