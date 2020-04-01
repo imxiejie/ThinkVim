@@ -35,8 +35,8 @@ before_install:
     git clone --depth=1  https://github.com/hardcoreplayers/ThinkVim ~/.config/nvim
 
 install:
-    - nvim -e
-    - :q
+    - nvim
+    - exit 0
 
 notifications:
   email: false
