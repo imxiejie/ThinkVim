@@ -1,4 +1,4 @@
-language: generic
+language: vim
 
 sudo: true
 
@@ -11,16 +11,35 @@ addons:
       - "python3"
       - "python3-pip"
 
+before_script:
+  - |
+    echo 'Add neovim PPA.'
+    if [[ `lsb_release -r | awk '{print $2}'` < 16.04 ]]; then
+      echo "Using neovim-ppa/unstable for Ubuntu version older than 16.04."
+      sudo add-apt-repository ppa:neovim-ppa/unstable -y
+    else
+      echo "Using neovim-ppa/stable for Ubuntu version 16.04 or newer."
+      sudo add-apt-repository ppa:neovim-ppa/stable   -y
+    fi
+  - sudo apt-get update  -q
+  - |
+    echo 'Install foreign language packs for international tests.'
+    sudo apt-get install -y language-pack-de language-pack-es
+  - |
+    echo 'Install neovim.'
+    sudo apt-get install -y neovim
+    nvim --version
+  - |
+    echo 'Clone dependencies.'
+    mkdir -p ~/.config/nvim
+    git clone --depth=1  https://github.com/hardcoreplayers/ThinkVim ~/.config/nvim
+
 install:
-    - mkdir ~/.config/nvim
-    - git clone --depth=1  https://github.com/hardcoreplayers/ThinkVim ~/.config/nvim
     - nvim
 
 before_install:
-    - $(curl -Ss https://raw.githubusercontent.com/neovim/bot-ci/master/scripts/travis-setup.sh) nightly-x64
     - pip3 install --user pynvim
     - pip3 install neovim-remote
     - nvim --version
-
 notifications:
   email: false
