@@ -1,3 +1,4 @@
+![](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master)
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
 <div align="center">
