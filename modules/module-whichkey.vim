@@ -38,6 +38,8 @@ let g:which_key_map = {
             \ 'b' : 'git blame',
             \ 'f' : 'git fetch',
             \ 'g' : 'Magit Status',
+            \ 'i' : 'show chunk diff at point',
+            \ 'm' : 'show commit contains at point',
             \ 'p' : 'Magit Push',
             \ 's' : 'git status',
             \ 'S' : 'show git status on fzf',

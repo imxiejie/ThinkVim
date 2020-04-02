@@ -83,9 +83,9 @@ if dein#tap('coc.nvim')
         nmap [g <Plug>(coc-git-prevchunk)
         nmap ]g <Plug>(coc-git-nextchunk)
         " show chunk diff at current position
-        nmap gs <Plug>(coc-git-chunkinfo)
+        nmap <leader>gi <Plug>(coc-git-chunkinfo)
         " show commit contains current position
-        nmap gm <Plug>(coc-git-commit)
+        nmap <leader>gm <Plug>(coc-git-commit)
         "nnoremap <silent> <leader>cg  :<C-u>CocList --normal gstatus<CR>
         " float window scroll
 				nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
