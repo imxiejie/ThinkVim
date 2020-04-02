@@ -1,9 +1,9 @@
 let g:which_key_map =  {}
 let g:which_key_localmap =  {
-  \ 'name' : "Thinkvim LocalLeader"
+  \ 'name' : 'LocalLeader'
   \ }
 let g:which_key_map = {
-      \ 'name' : '+ThinkVim Leader ' ,
+      \ 'name' : 'Leader' ,
       \ '1' : 'select window-1'      ,
       \ '2' : 'select window-2'      ,
       \ '3' : 'select window-3'      ,
