@@ -25,6 +25,10 @@ nnoremap <leader>s :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
 
+" Quiet
+nnoremap <leader>qq <esc>:wq<CR>
+nnoremap <leader>qw <esc>:q!<CR>
+
 "insert a newline
 inoremap <C-O> <Esc>o
 
