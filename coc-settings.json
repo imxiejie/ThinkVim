@@ -40,7 +40,7 @@
     "diagnostic.refreshOnInsertMode": true,
     //git
     "git.enableGutters": true,
-    "git.branchCharacter":"\uf408",
+    "git.branchCharacter":"\uf418",
     "git.addGBlameToBufferVar": true,
     "git.addGBlameToVirtualText": true,
     "git.virtualTextPrefix": " ❯❯❯ ",
