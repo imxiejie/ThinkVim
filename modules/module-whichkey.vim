@@ -28,8 +28,9 @@ let g:which_key_map = {
             \ 'l' : 'plugins update log',
             \ },
       \ 'e' : 'open file explorer' ,
-      \ '-' : 'choose window by {prompt char}' ,
-      \ ',' : 'Run coc command' ,
+      \ ';' : 'choose window by prompt' ,
+      \ '/' : 'remove end spaces' ,
+      \ ',' : 'Run coclist command' ,
       \ 'g' : {
             \ 'name' : '+version control',
             \ 'a' : 'git add',
