@@ -104,12 +104,12 @@ let g:which_key_map = {
               \ },
       \ }
 
-let g:which_key_map[' '] = {
-      \ 'name' : '+easymotion jumpto word ' ,
-      \ 'b' : ['<plug>(easymotion-b)' , 'beginning of word backward'],
-      \ 'f' : ['<plug>(easymotion-f)' , 'find {char} to the left'],
-      \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
-      \ }
+" let g:which_key_map[' '] = {
+"      \ 'name' : '+easymotion jumpto word ' ,
+"      \ 'b' : ['<plug>(easymotion-b)' , 'beginning of word backward'],
+"      \ 'f' : ['<plug>(easymotion-f)' , 'find {char} to the left'],
+"      \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
+"      \ }
 
 let g:which_key_localmap.g ={
       \ 'name' : '+golang-toolkit',
@@ -120,21 +120,6 @@ let g:which_key_localmap.g ={
       \ 's'    : 'go callstack',
       \ }
 
-let g:which_key_rsbgmap = {
-      \ 'name' : '+RightSquarebrackets',
-      \ 'c'    : 'coc nextdiagnostics',
-      \ 'b'    : 'next buffer',
-      \ 'g'    : 'coc gitnextchunk',
-      \ ']'    : 'jump prefunction-golang',
-      \ }
-
-let g:which_key_lsbgmap = {
-      \ 'name' : '+LeftSquarebrackets',
-      \ 'c'    : 'coc prediagnostics',
-      \ 'b'    : 'pre buffer',
-      \ 'g'    : 'coc gitprevchunk',
-      \ '['    : 'jump nextfunction-golang',
-      \ }
 
 let s:current_colorscheme = get(g:,"colors_name","")
 if  s:current_colorscheme == "base16-default-dark"
