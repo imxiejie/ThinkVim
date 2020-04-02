@@ -251,11 +251,10 @@
   on_map: { nx: <Plug> }
 
 - repo: Yggdroot/indentLine
-  on_ft: [python,html,css,vim,javascript,javascriptreact,vue]
+  on_ft: [python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php]
   hook_source: source $VIM_PATH/modules/module-indentline.vim
 
 # - repo: nathanaelkane/vim-indent-guides
-#   on_ft: [python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php]
 #   hook_post_source: IndentGuidesEnable
 #   hook_add: source  $VIM_PATH/modules/module-indentline.vim
 
