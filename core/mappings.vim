@@ -21,7 +21,7 @@ cnoremap <C-h> <BS>
 cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Write buffer (save)
-noremap <Leader>w :w<CR>
+nnoremap <leader>s :w<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
 
@@ -45,16 +45,27 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-"tabline operation
-noremap <leader>tn :tabnew<cr>
-noremap <leader>te :tabedit
-noremap <leader>tm :tabmove
-
 "buffer
 nnoremap <leader>bc :BufOnly<CR>
 nnoremap <Leader>bo :BufOnly<Space>
 "yank to end
 nnoremap Y y$
+
+" window
+nnoremap <leader>ws :sp<CR>
+nnoremap <leader>wv :vs<CR>
+nnoremap <leader>wh <C-w>h
+nnoremap <leader>wj <C-w>j
+nnoremap <leader>wk <C-w>k
+nnoremap <leader>wl <C-w>l
+nnoremap <leader>wH <C-w>H
+nnoremap <leader>wJ <C-w>J
+nnoremap <leader>wK <C-w>K
+nnoremap <leader>wL <C-w>L
+nnoremap <leader>wx <C-w>x
+nnoremap <leader>wc <C-w>c
+nnoremap <leader>wo <C-w>o
+nnoremap <leader>wR <C-w>R
 
 " settings for resize splitted window
 nmap <C-w>[ :vertical resize -3<CR>
