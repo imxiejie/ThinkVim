@@ -60,6 +60,7 @@ let g:which_key_map = {
       \ 'o' : {
             \ 'name' : '+open {terminal}',
             \ 't' : 'open a temrinal',
+            \ 's' : 'open stratify',
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'w' : 'save file',

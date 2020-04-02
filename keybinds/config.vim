@@ -6,6 +6,10 @@ if dein#tap('dein.vim')
 	nnoremap <silent> <Leader>dl  :echo dein#get_updates_log()<CR>
 endif
 
+if dein#tap('vim-startify')
+	nnoremap <silent> <Leader>os  :<C-u>Startify<CR>
+endif
+
 if dein#tap('denite.nvim')
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
