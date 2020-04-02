@@ -77,13 +77,15 @@ let g:which_key_map = {
               \ 'i'    : 'Lsp Find implementation',
               \ 'r'    : 'Lsp Rename',
               \ 'f'    : 'Lsp Format',
+              \ 'F'    : 'Lsp auto fix current line',
               \ 'j'    : 'coc Next',
               \ 'k'    : 'coc Prev',
               \ 's'    : 'Lsp Show Isymbols',
               \ },
       \ 'q' : {
-            \ 'name' : '+coc quickfix',
-            \ 'f' : 'coc fixcurrent',
+            \ 'name' : 'quiet',
+            \ 'q' : 'save and quiet',
+            \ 'w' : 'quiet without save',
             \ },
       \ 'w'    : {
               \ 'name' : '+window' ,
