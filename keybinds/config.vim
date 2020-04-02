@@ -1,9 +1,9 @@
 "Plugin key settings
 
 if dein#tap('dein.vim')
-	nnoremap <silent> <Leader>du  :call dein#update()<CR>
-	nnoremap <silent> <Leader>dr  :call dein#recache_runtimepath()<CR>
-	nnoremap <silent> <Leader>dl  :echo dein#get_updates_log()<CR>
+	nnoremap <silent> <Leader>pu  :call dein#update()<CR>
+	nnoremap <silent> <Leader>pr  :call dein#recache_runtimepath()<CR>
+	nnoremap <silent> <Leader>pl  :echo dein#get_updates_log()<CR>
 endif
 
 if dein#tap('vim-startify')

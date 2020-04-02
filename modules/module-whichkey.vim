@@ -21,7 +21,7 @@ let g:which_key_map = {
             \ 'c' : 'keep current buffer',
             \ 'o' : 'keep input buffer',
             \ },
-      \ 'd' : {
+      \ 'p' : {
             \ 'name' : '+plugin manage',
             \ 'u' : 'update all plugins',
             \ 'r' : 'reache runtime path',
