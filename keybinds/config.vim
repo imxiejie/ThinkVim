@@ -322,9 +322,8 @@ if dein#tap('ale')
 endif
 
 if dein#tap('vim-easymotion')
-        nmap <Leader><Leader>w <Plug>(easymotion-w)
-	    nmap <Leader><Leader>f <Plug>(easymotion-f)
-	    nmap <Leader><Leader>b <Plug>(easymotion-b)
+	nmap gsj <Plug>(easymotion-w)
+	nmap gsk <Plug>(easymotion-b)
 endif
 
 if dein#tap('vim-which-key')
