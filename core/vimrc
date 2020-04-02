@@ -8,14 +8,9 @@ if &compatible
 endif
 
 " Set main configuration directory as parent directory
-let $VIM_PATH =
-	\ get(g:, 'etc#vim_path',
-	\   exists('*stdpath') ? stdpath('config') :
-	\   ! empty($MYVIMRC) ? fnamemodify(expand($MYVIMRC), ':h') :
-	\   ! empty($VIMCONFIG) ? expand($VIMCONFIG) :
-	\   ! empty($VIM_PATH) ? expand($VIM_PATH) :
-	\   fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
-	\ )
+let $VIM_PATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
+
+" set the user config file
 let s:user_settings_path = expand('~/.thinkvim.d/custom.vim')
 
 " Regular Vim doesn't add custom configuration directories, if you use one
