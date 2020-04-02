@@ -50,9 +50,9 @@ if dein#tap('coc.nvim')
         " Manage extensions
         nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
         " Show commands
-        nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+        nnoremap <silent> <leader>,  :<C-u>CocList commands<cr>
         " Find symbol of current document
-        nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+        "nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
         " Search workspace symbols
         nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
         " Do default action for next item.
@@ -60,12 +60,12 @@ if dein#tap('coc.nvim')
         " Do default action for previous item.
         nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
         " Resume latest coc list
-        nnoremap <silent> <leader>cr  :<C-u>CocListResume<CR>
+        nnoremap <silent> <leader>cu  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
         nmap <silent> ]c <Plug>(coc-diagnostic-prev)
         nmap <silent> [c <Plug>(coc-diagnostic-next)
         " Remap for rename current word
-        nmap <leader>cn <Plug>(coc-rename)
+        nmap <leader>cr <Plug>(coc-rename)
         " Remap for format selected region
         vmap <leader>cf  <Plug>(coc-format-selected)
         nmap <leader>cf  <Plug>(coc-format-selected)
@@ -86,7 +86,7 @@ if dein#tap('coc.nvim')
         nmap gs <Plug>(coc-git-chunkinfo)
         " show commit contains current position
         nmap gm <Plug>(coc-git-commit)
-        nnoremap <silent> <leader>cg  :<C-u>CocList --normal gstatus<CR>
+        "nnoremap <silent> <leader>cg  :<C-u>CocList --normal gstatus<CR>
         " float window scroll
 				nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 				nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
@@ -107,8 +107,7 @@ if dein#tap('coc.nvim')
 				" Use `:Format` for format current buffer
         command! -nargs=0 Format :call CocAction('format')
 
-        nnoremap  <leader>cm :<C-u>CocSearch -w<Space>
-        nnoremap  <leader>cw :<C-u>CocSearch<Space>
+        nnoremap  <leader>fz :<C-u>CocSearch -w<Space>
         " use normal command like `<leader>xi(`
         nmap <leader>x  <Plug>(coc-cursors-operator)
         " coc-explorer
@@ -124,8 +123,7 @@ if dein#tap('fzf-preview.vim')
 	nnoremap <silent> <Leader>gS :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_gina_processors<CR>
   nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
   nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
-  nnoremap <silent> <leader>fg :<C-u>FzfPreviewProjectGrep .<CR>
-  nnoremap          <leader>fW :<C-u>FzfPreviewProjectGrep<Space>
+  nnoremap <silent> <leader>fa :<C-u>FzfPreviewProjectGrep .<CR>
   nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
 	nnoremap <silent> <leader>fC :<C-u>FzfPreviewChanges<CR>
   nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
