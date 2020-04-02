@@ -230,7 +230,7 @@ endif
 
 if dein#tap('vim-choosewin')
 	nmap -         <Plug>(choosewin)
-	nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
+	nmap <Leader>; :<C-u>ChooseWinSwapStay<CR>
 endif
 
 if dein#tap('accelerated-jk')
