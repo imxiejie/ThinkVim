@@ -86,7 +86,7 @@ let g:which_key_map = {
               \ 's'    : 'Lsp Show Isymbols',
               \ },
       \ 'q' : {
-            \ 'name' : 'quiet',
+            \ 'name' : '+quiet',
             \ 'q' : 'save and quiet',
             \ 'w' : 'quiet without save',
             \ },
