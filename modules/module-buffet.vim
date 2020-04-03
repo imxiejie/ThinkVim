@@ -1,5 +1,6 @@
 
 let g:buffet_tab_icon = "\uf00a"
+let g:buffet_always_show_tabline = 0
 
 function! g:BuffetSetCustomColors()
     hi! BuffetCurrentBuffer cterm=NONE ctermbg=106 ctermfg=8 guibg=#b8bb26 guifg=#000000

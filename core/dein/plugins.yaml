@@ -29,9 +29,8 @@
 
 # Lazy Loading
 # ==========================================
-
 - repo: bagrat/vim-buffet
-  on_event: VimEnter
+  on_cmd: VimEnter
   hook_add: source $VIM_PATH/modules/module-buffet.vim
 
 # Interface{{{
