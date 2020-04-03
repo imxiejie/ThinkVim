@@ -10,6 +10,10 @@ if dein#tap('vim-startify')
 	nnoremap <silent> <Leader>os  :<C-u>Startify<CR>
 endif
 
+if dein#tap('indentLine')
+	nnoremap <leader>ti :IndentLinesToggle<CR>
+endif
+
 if dein#tap('denite.nvim')
         noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
         noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
