@@ -3,8 +3,6 @@
 # StartUp Plugins{{{
 - repo: Shougo/dein.vim
 - repo: taigacute/spaceline.vim
-- repo: bagrat/vim-buffet
-  hook_add: source $VIM_PATH/modules/module-buffet.vim
 - repo: sgur/vim-editorconfig
 - repo: ryanoasis/vim-devicons
 
@@ -31,6 +29,10 @@
 
 # Lazy Loading
 # ==========================================
+
+- repo: bagrat/vim-buffet
+  on_event: VimEnter
+  hook_add: source $VIM_PATH/modules/module-buffet.vim
 
 # Interface{{{
 
