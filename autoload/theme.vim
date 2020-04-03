@@ -50,4 +50,10 @@ function! theme#init() abort
 	endif
 endfunction
 
+function! theme#opactiy() abort
+  if get(g:,'thinkvim_colorscheme_opactiy',0) == 1
+   hi Normal guibg=NONE ctermbg=NONE
+  endif
+endfunction
+
 " vim: set ts=2 sw=2 tw=80 noet :

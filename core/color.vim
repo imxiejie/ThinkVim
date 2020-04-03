@@ -1,4 +1,3 @@
-
 " Vim Colors
 " ---------------------------------------------------------
 hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
