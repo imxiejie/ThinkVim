@@ -22,7 +22,7 @@ let s:header = [
       \ ]
 
 let s:footer = [
-      \ ' [ThinkVim] [Report Bug] [Version 2.0.5]',
+      \ ' [ThinkVim] [Report Bug] [Version 2.0.6]',
       \ '',
       \ ]
 
