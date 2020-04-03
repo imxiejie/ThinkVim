@@ -95,8 +95,28 @@ check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
 ## How to set the Startify
 
-- Custom Header check here [startify doc](https://github.com/mhinz/vim-startify/blob/master/doc/startify.txt#L601)
-- Startify can only set the header and footer centered，set this `let g:startify_padding_left = {number}` into your `custom.vim`,change the value until the file area centered on your screen
+- Custom Startify Header And Footer
+
+this is an example to config straify header and footer on your `custom.vim`.
+```viml
+let s:header = [
+      \ '       o',
+      \ '        o   ^__^',
+      \ '         o  (oo)\_______',
+      \ '            (__)\       )\/\',
+      \ '                ||----w |',
+      \ '                ||     ||',
+      \ ]
+let s:footer = [
+      \ ' [ test custom footer]',
+      \ '',
+      \ ]
+
+let g:startify_custom_header = Thinkvim_startify_center(s:header)
+let g:startify_custom_header = Thinkvim_startify_center(s:footer)
+
+```
+-  set this variable value `let g:startify_padding_left`(number) to make startify mid area center. 
 
 ## How to config completion
 
