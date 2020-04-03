@@ -1,6 +1,6 @@
 " Vim Colors
 " ---------------------------------------------------------
-hi Whitespace ctermfg=96 guifg=#725972 guibg=NONE ctermbg=NONE
+hi Whitespace ctermfg=238 guifg=#424450 guibg=NONE ctermbg=NONE
 hi VertSplit  ctermfg=Black  guifg=Black guibg=NONE ctermbg=NONE
 hi LineNr ctermbg=NONE guibg=NONE
 hi SignColumn ctermfg=187 ctermbg=NONE guifg=#ebdbb2 guibg=NONE guisp=NONE cterm=NONE gui=NONE
@@ -16,6 +16,8 @@ hi PmenuSbar ctermfg=NONE ctermbg=234 guifg=NONE guibg=#212026 guisp=NONE cterm=
 hi PmenuSel ctermfg=NONE ctermbg=60 guifg=NONE guibg=#5e5079 guisp=NONE cterm=NONE gui=NONE
 hi PmenuThumb ctermfg=NONE ctermbg=60 guifg=NONE guibg=#5d4d7a guisp=NONE cterm=NONE gui=NONE
 
+"Startify Header
+hi StartifyHeader ctermfg=12 guifg=#68A8E4
 
 "coc setting
 " ---------------------------------------------------------
