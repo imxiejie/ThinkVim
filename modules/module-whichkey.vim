@@ -47,7 +47,7 @@ let g:which_key_map = {
             \ 'l' : 'show git log',
             \ },
       \ 'G' : 'distraction free writing' ,
-      \ 'F' : 'find current file' ,
+      \ 'F' : 'open current file on filetree' ,
       \ 'f' : {
             \ 'name' : '+find [files cursorword word outline]',
             \ 'a' : 'find a word in project',
@@ -89,6 +89,10 @@ let g:which_key_map = {
             \ 'name' : '+quiet',
             \ 'q' : 'save and quiet',
             \ 'w' : 'quiet without save',
+            \ },
+      \ 't' : {
+            \ 'name' : '+toggle',
+            \ 'i' : 'Indentline toggle',
             \ },
       \ 'w'    : {
               \ 'name' : '+window' ,
