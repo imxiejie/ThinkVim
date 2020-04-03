@@ -287,7 +287,7 @@
   on_ft: [markdown,pandoc.markdown,rmd]
   hook_post_source: 'call mkdp#util#install()'
   hook_source: |
-      let g:mkdp_auto_start = 1
+      let g:mkdp_auto_start = 0
 
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
