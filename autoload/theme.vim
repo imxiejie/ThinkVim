@@ -41,7 +41,7 @@ augroup END
 
 " COLORSCHEME NAME
 function! theme#init() abort
-	let l:default = 'ayu'
+	let l:default = 'srcery'
 	let l:cache = g:etc#cache_path . '/theme.txt'
 	if ! exists('g:colors_name')
 		set background=dark
