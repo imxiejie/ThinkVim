@@ -18,11 +18,13 @@ let s:header = [
       \ '    ⠀⠀⠻⣿⣿⡇⠀⠈⠓⢦⣤⣤⣤⡤⠞⠉⠀⠀⠀⠀⠈⠛⠒⠚⢩⡅⣠⡴⠋⠀⠀⠀⠀  ',
       \ '    ⠀⠀⠀⠈⠻⢧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣻⠿⠋⠀⠀⠀⠀⠀⠀  ',
       \ '    ⠀⠀⠀⠀⠀⠀⠉⠓⠶⣤⣄⣀⡀⠀⠀⠀⠀⠀⢀⣀⣠⡴⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀  ',
+      \ '                                       ',
+      \ ' [  thinvim version 2.0.6 @tagiacute  ]',
       \ '',
       \ ]
 
 let s:footer = [
-      \ ' [ThinkVim] [Report Bug] [Version 2.0.6]',
+      \ '      Have fun with thinkvim           ',
       \ '',
       \ ]
 
