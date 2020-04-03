@@ -66,6 +66,7 @@ let g:which_key_map = {
             \ 'name' : '+open [terminal startify]',
             \ 't' : 'open a temrinal',
             \ 's' : 'open stratify',
+            \ 'm' : 'open markdown preview',
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'j' : 'open coc-explorer',

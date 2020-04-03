@@ -1,4 +1,4 @@
-![](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master)  [![Gitter](https://badges.gitter.im/thinkvim/Thinkvim.svg)](https://gitter.im/thinkvim/Thinkvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+![](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master) [![Gitter](https://badges.gitter.im/thinkvim/Thinkvim.svg)](https://gitter.im/thinkvim/Thinkvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
@@ -6,10 +6,8 @@
 <img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim.v1.png" width="700" height="400">
 </div>
 
-
-
-|                                                                                                       |                                                                                                |
-| --------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+|                                                                                                                        |                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
 | <img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim-ayu.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
 
 ## Feature
@@ -71,7 +69,6 @@
 | [taigacute/spaceline.vim](https://github.com/taigacute/spaceline.vim)     | spaceline       |
 | [neoclide/coc.nvim](https://github.com/mengelbrecht/lightline-bufferline) | Autocompletaion |
 
-
 </p>
 </details>
 
@@ -82,7 +79,7 @@
 | ----------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags)                       | Provide ctags/gtags                                                                |
 | [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                                           | Startify                                                                           |
-| [hona/vim-snippets](https://github.com/hona/vim-snippets)                 | Snippets        |
+| [hona/vim-snippets](https://github.com/hona/vim-snippets)                                             | Snippets                                                                           |
 | [tyru/caw.vim](https://github.com/tyru/caw.vim)                                                       | Comment Plugins                                                                    |
 | [t9md/vim-choosewin](https://github.com/t9md/vim-choosewin)                                           | Easy to jump window                                                                |
 | [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                                   | Provide the Icons                                                                  |

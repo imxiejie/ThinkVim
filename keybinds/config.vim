@@ -10,6 +10,10 @@ if dein#tap('vim-startify')
 	nnoremap <silent> <Leader>os  :<C-u>Startify<CR>
 endif
 
+if dein#tap('markdown-preview.nvim')
+	nnoremap <silent> <Leader>om  :<C-u>MarkdownPreview<CR>
+endif
+
 if dein#tap('indentLine')
 	nnoremap <leader>ti :IndentLinesToggle<CR>
 endif
