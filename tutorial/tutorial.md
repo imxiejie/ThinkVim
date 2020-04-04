@@ -81,7 +81,7 @@ let g:which_key_map.F='test'
 ```
 
 - if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`
-- you can check  [my .thinkvim.d](https://github.com/taigacute/dotfiles/tree/master/thinkvim) for more usage.
+- you can check [my .thinkvim.d](https://github.com/taigacute/dotfiles/tree/master/thinkvim) for more usage.
 
 ## How to install or change colorscheme
 
@@ -98,6 +98,7 @@ check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 - Custom Startify Header And Footer
 
 this is an example to config straify header and footer on your `custom.vim`.
+
 ```viml
 let s:header = [
       \ '       o',
@@ -116,12 +117,14 @@ let g:startify_custom_header = Thinkvim_startify_center(s:header)
 let g:startify_custom_header = Thinkvim_startify_center(s:footer)
 
 ```
--  set this variable value `let g:startify_padding_left`(number) to make startify mid area center. 
+
+- set this variable value `let g:startify_padding_left`(number) to make startify mid area center.
 
 ## How to config completion
 
 - Completion use LanguageServerProtocol by CoC.nvim.
-- ThinkVim has provide the python,go,javascript,typescript support.
+- ThinkVim has provide the python,go,javascript,typescript vue html css less
+  tabnine
 
   - For python thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
   - For go used the gopls,you need install the gopls
@@ -130,6 +133,8 @@ let g:startify_custom_header = Thinkvim_startify_center(s:footer)
   go get golang.org/x/tools/gopls@latest
   ```
 
+  - For vue used the coc-vetur
+  - For html css less used the coc-html and coc-css
   - For javascript/typescript used the coc-tsserver.
 
 - Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
@@ -141,7 +146,6 @@ let g:startify_custom_header = Thinkvim_startify_center(s:footer)
   - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
   - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
   - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
-  - [Go](https://github.com/neoclide/coc.nvim/wiki/Language-servers#go)
   - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
   - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
   - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
@@ -168,10 +172,8 @@ let g:startify_custom_header = Thinkvim_startify_center(s:footer)
 Extensions are more powerful than a configured language server. Check out
 [Using coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
 
-- **[coc-json](https://github.com/neoclide/coc-json)** for `json`.
 - **[coc-tsserver](https://github.com/neoclide/coc-tsserver)** for `javascript`
   and `typescript`.
-- **[coc-html](https://github.com/neoclide/coc-html)** for `html`, `handlebars`
   and `razor`.
 - **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
 - **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
@@ -211,5 +213,3 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 **Note:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed. ThinkVim has installed some cocextensions you can check it in pluginDetail
 
 ## KeyMap
-
-
