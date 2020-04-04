@@ -1,5 +1,5 @@
 " version info of thinkvim
-let g:thinkvim_version = "2.0.6"
+let g:thinkvim_version = "2.0.7"
 
 if &compatible
 	" vint: -ProhibitSetNoCompatible
