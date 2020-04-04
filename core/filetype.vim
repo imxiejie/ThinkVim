@@ -1,9 +1,9 @@
 
 augroup user_plugin_filetype "{{{
-    autocmd!
-    " Reload vim config automatically
-    autocmd BufWritePost $VIM_PATH/{*.vim,*.yaml,vimrc} nested
-		\ source $MYVIMRC | redraw
+  autocmd!
+  " Reload vim config automatically
+  autocmd BufWritePost $VIM_PATH/{*.vim,*.yaml,vimrc} nested
+	\ source $MYVIMRC | redraw
 
 	autocmd WinEnter,InsertLeave * set cursorline
 
@@ -26,7 +26,7 @@ augroup user_plugin_filetype "{{{
   " HTML (.gohtml and .tpl for server side)
   autocmd BufNewFile,BufRead *.html,*.htm,*.gohtml,*.tpl  setf html
   " Magit
-   autocmd User VimagitEnterCommit startinsert
+  autocmd User VimagitEnterCommit startinsert
 
 	" https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
 	autocmd FileType css,javascript,javascriptreact setlocal backupcopy=yes

@@ -121,17 +121,15 @@ let g:which_key_map = {
 "      \ 'w' : ['<plug>(easymotion-w)' , 'beginning of word forward'],
 "      \ }
 
-let g:which_key_localmap.g ={
-      \ 'name' : '+golang-toolkit',
-      \ 'i'    : 'go impl',
-      \ 'd'    : 'go describe',
-      \ 'c'    : 'go callees',
-      \ 'C'    : 'go callers',
-      \ 's'    : 'go callstack',
-      \ }
+function! WhichKeyForGo() abort
+  let g:which_key_localmap.g ={
+        \ 'name' : '+golang-toolkit',
+        \ 'i'    : 'go impl',
+        \ 'd'    : 'go describe',
+        \ 'c'    : 'go callees',
+        \ 'C'    : 'go callers',
+        \ 's'    : 'go callstack',
+        \ }
+endfunction
 
-
-let s:current_colorscheme = get(g:,"colors_name","")
-if  s:current_colorscheme == "base16-default-dark"
-    highlight WhichKeySeperator guibg=NONE ctermbg=NONE guifg=#a1b56c ctermfg=02
-endif
+autocmd FileType go call WhichKeyForGo()
