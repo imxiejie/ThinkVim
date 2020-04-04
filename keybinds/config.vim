@@ -126,18 +126,17 @@ if dein#tap('coc.nvim')
 endif
 
 if dein#tap('fzf-preview.vim')
-	nnoremap <silent> <leader>fc :<C-u>Colors<CR>
+	nnoremap <silent> <leader>tc :<C-u>Colors<CR>
   nnoremap <silent> <leader>bb :<C-u>FzfPreviewBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
 	nnoremap <silent> <Leader>gS :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_gina_processors<CR>
   nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
   nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
   nnoremap <silent> <leader>fa :<C-u>FzfPreviewProjectGrep .<CR>
   nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
-	nnoremap <silent> <leader>fC :<C-u>FzfPreviewChanges<CR>
+	nnoremap <silent> <leader>fc :<C-u>FzfPreviewChanges<CR>
   nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
-  nnoremap <silent> <leader>fp :<C-u>FzfPreviewProjectFiles<CR>
 	nnoremap <silent> <Leader>fw :<C-u>FzfPreviewProjectGrep <C-r>=expand('<cword>')<CR><CR>
-  nnoremap <silent> <leader>fP :<C-u>FzfPreviewFromResources project_mru git<CR>
+  nnoremap <silent> <leader>fp :<C-u>FzfPreviewFromResources project_mru git<CR>
 	augroup fzf_preview
 		autocmd!
 		autocmd User fzf_preview#initialized call s:fzf_preview_settings()

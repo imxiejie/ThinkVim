@@ -51,14 +51,12 @@ let g:which_key_map = {
       \ 'f' : {
             \ 'name' : '+find [files cursorword word outline]',
             \ 'a' : 'find a word in project',
-            \ 'f' : 'find file in directory',
-            \ 'c' : 'change colorscheme',
-            \ 'C' : 'find Changes',
+            \ 'f' : 'find file in current directory',
+            \ 'c' : 'find Changes',
             \ 'o' : 'find old files',
             \ 'm' : 'find mru files',
             \ 'w' : 'find current word in project',
-            \ 'p' : 'find in a project',
-            \ 'P' : 'find in a git project',
+            \ 'p' : 'find word in git project',
             \ 'z' : 'find word in all project files',
             \ },
       \ 'i' : 'Show symbols list' ,
@@ -94,6 +92,7 @@ let g:which_key_map = {
       \ 't' : {
             \ 'name' : '+toggle',
             \ 'i' : 'Indentline toggle',
+            \ 'c' : 'change colorscheme',
             \ },
       \ 'w'    : {
               \ 'name' : '+window' ,
