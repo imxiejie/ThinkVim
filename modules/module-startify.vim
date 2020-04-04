@@ -24,7 +24,7 @@ let s:header = [
       \ ]
 
 let s:footer = [
-      \ '      Have fun with thinkvim           ',
+      \ '      Have fun with thinkvim ^_^       ',
       \ '',
       \ ]
 
