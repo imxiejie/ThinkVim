@@ -135,7 +135,7 @@ if dein#tap('fzf-preview.vim')
 	nnoremap <silent> <Leader>gS :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_gina_processors<CR>
   nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
   nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
-  nnoremap <silent> <leader>fa :<C-u>FzfPreviewProjectGrep<Space>
+  nnoremap <silent> <leader>fb :<C-u>FzfPreviewProjectGrep<Space>
   nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
 	nnoremap <silent> <leader>fc :<C-u>FzfPreviewChanges<CR>
   nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
