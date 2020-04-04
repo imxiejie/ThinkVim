@@ -135,13 +135,13 @@
 
 - repo: junegunn/fzf.vim
   depends: fzf
-  on_cmd: Colors
+  on_cmd: [Colors,Rg]
   hook_source: source  $VIM_PATH/modules/module-fzf.vim
 
 - repo: yuki-ycino/fzf-preview.vim
   depends: fzf
   on_cmd: [FzfPreviewProjectFiles,FzfPreviewDirectoryFile,FzfPreviewBuffers,FzfPreviewMruFiles,FzfPreviewAllBuffers,FzfPreviewProjectGrep,FzfPreviewMruFiles,FzfPreviewFromResources]
-  hook_source: source  $VIM_PATH/modules/module-fzf.vim
+  hook_source: source  $VIM_PATH/modules/module-fzfpreview.vim
 
 # }}}
 

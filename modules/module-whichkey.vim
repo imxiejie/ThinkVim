@@ -50,7 +50,8 @@ let g:which_key_map = {
       \ 'F' : 'open current file on filetree' ,
       \ 'f' : {
             \ 'name' : '+find [files cursorword word outline]',
-            \ 'a' : 'find a word in project',
+            \ 'a' : 'find word in project',
+            \ 'b' : 'find word in large project',
             \ 'f' : 'find file in current directory',
             \ 'c' : 'find Changes',
             \ 'o' : 'find old files',
