@@ -10,7 +10,6 @@ inoremap <C-a> <Home>
 inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
 
 " command line alias
-"cnoremap w!! w !sudo tee % >/dev/null
 cnoremap <C-p> <Up>
 cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
@@ -21,9 +20,12 @@ cnoremap <C-h> <BS>
 cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 
 " Write buffer (save)
-nnoremap <leader>s :w<CR>
+nnoremap <C-s> :<C-u>write<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
+
+" Editor UI
+nmap <Leader>tn :setlocal nonumber!<CR>
 
 " Quiet
 nnoremap <leader>qq <esc>:wq<CR>
@@ -56,8 +58,8 @@ nnoremap <Leader>bo :BufOnly<Space>
 nnoremap Y y$
 
 " window
-nnoremap <leader>ws :sp<CR>
-nnoremap <leader>wv :vs<CR>
+nnoremap <leader>ws :<C-u>sp<CR>
+nnoremap <leader>wv :<C-u>vs<CR>
 nnoremap <leader>wh <C-w>h
 nnoremap <leader>wj <C-w>j
 nnoremap <leader>wk <C-w>k
@@ -74,6 +76,14 @@ nnoremap <leader>wR <C-w>R
 " settings for resize splitted window
 nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
+
+" Session management shortcuts (see plugin/sessions.vim)
+nmap <Leader>ss :<C-u>SessionSave<CR>
+nmap <Leader>sl :<C-u>SessionLoad<CR>
+
+" Whitespace jump (see plugin/whitespace.vim)
+nnoremap ]w :<C-u>WhitespaceNext<CR>
+nnoremap [w :<C-u>WhitespacePrev<CR>
 
 " Remove spaces at the end of lines
 nnoremap <silent> <Space>/ :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>

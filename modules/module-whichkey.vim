@@ -69,7 +69,6 @@ let g:which_key_map = {
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'j' : 'open coc-explorer',
-      \ 's' : 'save file',
       \ 'r' : 'quick run',
       \ 'x' : 'coc cursors operate',
       \ 'c'    : {
@@ -90,10 +89,16 @@ let g:which_key_map = {
             \ 'q' : 'save and quiet',
             \ 'w' : 'quiet without save',
             \ },
+      \ 's' : {
+            \ 'name' : '+session',
+            \ 's' : 'Save session',
+            \ 'l' : 'Load session',
+            \ },
       \ 't' : {
             \ 'name' : '+toggle',
             \ 'i' : 'Indentline toggle',
-            \ 'c' : 'change colorscheme',
+            \ 'c' : 'Change colorscheme',
+            \ 'n' : 'Toggle line number',
             \ },
       \ 'w'    : {
               \ 'name' : '+window' ,
