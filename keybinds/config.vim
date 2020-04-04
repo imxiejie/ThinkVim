@@ -206,11 +206,14 @@ if dein#tap('vim-easy-align')
 endif
 
 if dein#tap('vim-go')
+	function! InitGoKeyMap() abort
 	 nnoremap <silent> <LocalLeader>gi :GoImpl<CR>
 	 nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
 	 nnoremap <silent> <LocalLeader>gc :GoCallees<CR>
 	 nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
 	 nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
+	endfunction
+	autocmd FileType go  call InitGoKeyMap()
 endif
 
 
