@@ -215,6 +215,7 @@ endif
 
 " Editor UI {{{
 set number              " Show number
+set noruler             " Disable default status ruler
 set shortmess=aFc
 set scrolloff=2         " Keep at least 2 lines above/below
 set sidescrolloff=5     " Keep at least 5 lines left/right
