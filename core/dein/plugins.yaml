@@ -48,12 +48,10 @@
 - repo: junegunn/vim-easy-align
   on_ft: [vim,json,go,html,js,jsx,py,css,less,tmpl,toml,xml,sql,Dockerfile]
 
-
-- repo: yuttie/comfortable-motion.vim
-  on_func: comfortable_motion#flick
+- repo: psliwka/vim-smoothie
+  on_func: smoothie#
   hook_add: |
-        let g:comfortable_motion_no_default_key_mappings = 1
-        let g:comfortable_motion_impulse_multiplier = 1
+    let g:smoothie_no_default_mappings = v:true
 
 - repo: thinca/vim-quickrun
   on_cmd: QuickRun
