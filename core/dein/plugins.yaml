@@ -219,6 +219,9 @@
     let g:go_highlight_variable_declarations = 0
     let g:go_highlight_variable_assignments = 0
 
+- repo: sebdah/vim-delve
+  on_ft: go
+
 # Markdown related
 - repo: plasticboy/vim-markdown
   on_ft: markdown

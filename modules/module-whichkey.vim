@@ -132,4 +132,19 @@ function! WhichKeyForGo() abort
         \ }
 endfunction
 
-autocmd FileType go call WhichKeyForGo()
+function! WhichKeyForGoDebug() abort
+  let g:which_key_map.d ={
+    \ 'name' : 'Debugger',
+    \ 'a'    : 'Add or Remove BreakPoint',
+    \ 'b'    : 'Add or Remove TracePoint',
+    \ 'c'    : 'Clear All Point',
+    \ 'd'    : 'Start Debug',
+    \ 't'    : 'Start Debug Test',
+    \ 'r'    : 'Remove BreakPoint',
+    \ 'R'    : 'Remove TracePoint',
+    \ }
+endfunction
+
+autocmd FileType go
+                    \ call WhichKeyForGo() |
+                    \ call WhichKeyForGoDebug()

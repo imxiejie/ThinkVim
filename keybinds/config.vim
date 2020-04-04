@@ -213,7 +213,20 @@ if dein#tap('vim-go')
 	 nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
 	 nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
 	endfunction
-	autocmd FileType go  call InitGoKeyMap()
+	autocmd FileType go call InitGoKeyMap()
+endif
+
+if dein#tap('vim-delve')
+	function! InitGoDebugKeyMap() abort
+		nnoremap <silent> <Leader>da :DlvToggleBreakpoint<CR>
+		nnoremap <silent> <Leader>db :DlvToggleTracepoint<CR>
+		nnoremap <silent> <Leader>dc :DlvClearAll<CR>
+		nnoremap <silent> <Leader>dd :DlvDebug<Space>
+		nnoremap <silent> <Leader>dt :DlvTest<Space>
+		nnoremap <silent> <Leader>dr :DlvRemoveBreakpoint<CR>
+		nnoremap <silent> <Leader>dR :DlvRemoveTracepoint<CR>
+	endfunction
+	autocmd FileType go call InitGoDebugKeyMap()
 endif
 
 
