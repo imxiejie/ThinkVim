@@ -19,7 +19,7 @@ let s:header = [
       \ '    ⠀⠀⠀⠈⠻⢧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣻⠿⠋⠀⠀⠀⠀⠀⠀  ',
       \ '    ⠀⠀⠀⠀⠀⠀⠉⠓⠶⣤⣄⣀⡀⠀⠀⠀⠀⠀⢀⣀⣠⡴⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀  ',
       \ '                                       ',
-      \ ' [  thinvim version 2.1.3 @tagiacute  ]',
+      \ ' [  thinvim version 2.1.4 @tagiacute  ]',
       \ '',
       \ ]
 
