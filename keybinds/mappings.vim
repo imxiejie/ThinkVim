@@ -28,7 +28,7 @@ imap <C-Q> <esc>:wq<CR>
 nmap <Leader>tn :setlocal nonumber!<CR>
 
 " Quiet
-nnoremap <leader>qq <esc>:wq<CR>
+nnoremap <leader>qq <esc>:wq!<CR>
 nnoremap <leader>qw <esc>:q!<CR>
 
 "insert a newline
