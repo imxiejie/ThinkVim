@@ -6,10 +6,6 @@
 <img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim.png" width="960" height="540">
 </div>
 
-|                                                                                                                        |                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
-| <img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim-ayu.png" width="480"  height="300"> | <img src="https://github.com/taigacute/IMG/blob/master/spaceline/spaceline.png" width="480" height="300"> |
-
 ## Feature
 
 - 🚀Fastest StartupTime(Plugins Total:62 40-60ms)
