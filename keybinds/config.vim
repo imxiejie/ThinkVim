@@ -355,6 +355,7 @@ endif
 
 if dein#tap('vim-which-key')
 		nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+		vnoremap <silent> <leader>      :<c-u>WhichKeyVisual '<Space>'<CR>
 		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
 		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
 		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
