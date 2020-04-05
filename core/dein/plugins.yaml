@@ -170,7 +170,7 @@
   on_map: { nv: <Plug> }
   on_func: IronUnwatchFile
   hook_add: let g:iron_map_defaults = 0 | let g:iron_map_extended = 0
-  hook_source: luafile $VIM_PATH/config/modules/module-iron.lua
+  hook_source: luafile $VIM_PATH/modules/module-iron.lua
 
 # }}}
 
@@ -203,7 +203,7 @@
       \ }
 
 - { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
-- { repo: leafgarland/typescript-vim, on_ft: [typescriptreact,typescript] }
+- { repo: HerringtonDarkholme/yats.vim,on_ft: [ typescript, typescriptreact]}
 - { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
 
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }

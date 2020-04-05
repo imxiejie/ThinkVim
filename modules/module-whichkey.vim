@@ -96,8 +96,8 @@ let g:which_key_map = {
             \ 'l' : 'Send line',
             \ 'p' : 'Repl repeat',
             \ 'c' : 'Repl clear',
-            \ 'CR': 'Repl return',
-            \ 'ESC': 'Repl interrupt',
+            \ '<CR>': 'Repl return',
+            \ '<Esc>': 'Repl interrupt',
             \ },
       \ 's' : {
             \ 'name' : '+session',
