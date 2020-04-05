@@ -34,10 +34,10 @@ nnoremap <leader>qw <esc>:q!<CR>
 "insert a newline
 inoremap <C-O> <Esc>o
 
-nnoremap  ]b :bp<CR>
-nnoremap  [b :bn<CR>
+nnoremap  ]b :<C-u>bp<CR>
+nnoremap  [b :<C-u>bn<CR>
 "delete buffer
-nnoremap <C-x>  :bd<CR>
+nnoremap <C-x> :<C-u>bd<CR>
 
 "switch windw
 nnoremap <C-h> <C-w>h
@@ -99,6 +99,4 @@ nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 
-" Improve scroll, credits: https://github.com/Shougo
-nnoremap <expr> zz (winline() == (winheight(0)+1) / 2) ?
-	\ 'zt' : (winline() == 1) ? 'zb' : 'zz'
+" vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :

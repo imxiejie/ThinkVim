@@ -185,6 +185,7 @@ endif
 
 " Behavior {{{
 " --------
+set autoread                    " Auto readfile
 set nowrap                      " No wrap by default
 set linebreak                   " Break long lines at 'breakat'
 set breakat=\ \	;:,!?           " Long lines break chars
