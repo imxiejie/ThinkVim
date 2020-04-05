@@ -8,6 +8,9 @@
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/modules/module-buffet.vim
 
+- repo: christoomey/vim-tmux-navigator
+  if: "! (has('win32') || has('win64'))"
+
 - repo: mhinz/vim-startify
   # on_cmd: Startify
   # depends: vim-devicons
@@ -163,32 +166,47 @@
 
 # }}}
 
+# Neovim Lua feature{{{
+- repo: norcalli/nvim-colorizer.lua
+  if: has('nvim-0.4')
+  on_event: FileType
+  hook_source: luafile $VIM_PATH/modules/module-colorizer.lua
+
+# }}}
+
 # Language{{{
-
+- { repo: rust-lang/rust.vim, on_ft: rust }
+- { repo: chr4/nginx.vim, on_ft: nginx }
 - { repo: honza/dockerfile.vim, on_ft: Dockerfile }
+- { repo: cespare/vim-toml, on_ft: toml }
+- { repo: elzr/vim-json, on_ft: json }
 
+- repo: pearofducks/ansible-vim
+  on_ft: [ ansible, ansible_hosts, jinja2 ]
+  hook_add: |
+    let g:ansible_extra_keywords_highlight = 1
+    let g:ansible_template_syntaxes = {
+      \   '*.json.j2': 'json',
+      \   '*.(ba)?sh.j2': 'sh',
+      \   '*.ya?ml.j2': 'yaml',
+      \   '*.xml.j2': 'xml',
+      \   '*.conf.j2': 'conf',
+      \   '*.ini.j2': 'ini'
+      \ }
+
+- { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
 - { repo: leafgarland/typescript-vim, on_ft: [typescriptreact,typescript] }
 - { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
 
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
-- { repo: tmhedberg/SimpylFold, on_ft: python }
 - { repo: vim-scripts/python_match.vim, on_ft: python }
 - repo: vim-python/python-syntax
   on_ft: python
   hook_add: let g:python_highlight_all = 1
-
-- { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
-
-- { repo: cespare/vim-toml, on_ft: toml }
-- { repo: vim-scripts/xml.vim, on_ft: xml}
-- { repo: pearofducks/ansible-vim, on_ft: [ yaml.ansible, ansible_hosts ]}
-
-- repo: elzr/vim-json
-  on_ft: json
-  hook_add: let g:vim_json_syntax_conceal = 0
+- { repo: raimon49/requirements.txt.vim, on_ft: requirements }
 
 - repo: fatih/vim-go
-  on_ft: go
+  on_ft: [go,gomod]
   hook_source: |
     let g:go_gopls_enabled = 0
     let g:go_code_completion_enabled = 0
@@ -252,10 +270,6 @@
 - repo: Yggdroot/indentLine
   on_ft: [python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php]
   hook_source: source $VIM_PATH/modules/module-indentline.vim
-
-# - repo: nathanaelkane/vim-indent-guides
-#   hook_post_source: IndentGuidesEnable
-#   hook_add: source  $VIM_PATH/modules/module-indentline.vim
 
 - repo: liuchengxu/vista.vim
   on_cmd: [Vista,Vista!,Vista!!]
