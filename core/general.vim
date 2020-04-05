@@ -139,7 +139,7 @@ set shiftwidth=2    " Number of spaces to use in auto(indent)
 set softtabstop=-1  " Automatically keeps in sync with shiftwidth
 set smarttab        " Tab insert blanks according to 'shiftwidth'
 set autoindent      " Use same indenting on new lines
-" set smartindent     " Smart autoindenting on new lines
+set smartindent     " Smart autoindenting on new lines
 set shiftround      " Round indent to multiple of 'shiftwidth'
 
 if exists('&breakindent')
@@ -215,6 +215,7 @@ endif
 
 " Editor UI {{{
 set number              " Show number
+set noshowmode          " Don't show mode on bottom
 set noruler             " Disable default status ruler
 set shortmess=aFc
 set scrolloff=2         " Keep at least 2 lines above/below
