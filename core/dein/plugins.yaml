@@ -166,7 +166,6 @@
 # Language{{{
 
 - { repo: honza/dockerfile.vim, on_ft: Dockerfile }
-- { repo: junegunn/vim-emoji, on_ft: [markdown,vim] }
 
 - { repo: leafgarland/typescript-vim, on_ft: [typescriptreact,typescript] }
 - { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
@@ -264,7 +263,7 @@
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
-  on_ft: [ html, css, javascript, javascriptreact ]
+  on_ft: [python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php]
   hook_source: |
     let g:user_emmet_complete_tag = 0
     let g:user_emmet_install_global = 0
