@@ -1,5 +1,6 @@
 # why use yaml to manage plugins
 # see http://genkisugimoto.com/blog/manage-vim-plugins-via-yamsource
+
 # StartUp Plugins{{{
 - repo: Shougo/dein.vim
 - repo: taigacute/spaceline.vim
