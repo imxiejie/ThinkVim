@@ -212,4 +212,3 @@ or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which 
 
 **Note:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed. ThinkVim has installed some cocextensions you can check it in pluginDetail
 
-## KeyMap
