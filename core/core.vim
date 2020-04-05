@@ -91,9 +91,6 @@ call etc#util#source_file('core/general.vim')
 call etc#util#source_file('core/filetype.vim')
 call etc#util#source_file('core/mappings.vim')
 
-" Initialize user favorite colorscheme
-call theme#init()
-call etc#util#source_file('core/color.vim')
 
 function! s:check_custom_settings(filename)abort
        let  content = readfile(a:filename)
@@ -132,6 +129,9 @@ if filereadable(s:user_settings_path)
 	endif
 endif
 
+" Initialize user favorite colorscheme
+call theme#init()
+call etc#util#source_file('core/color.vim')
 
 set secure
 
