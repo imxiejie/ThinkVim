@@ -6,6 +6,8 @@
 <img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim.png" width="960" height="540">
 </div>
 
+[See here for more screenshots](https://github.com/hardcoreplayers/ThinkVim/wiki/Screenshots)
+
 ## Feature
 
 - 🚀Fastest StartupTime(Plugins Total:62 40-60ms)
