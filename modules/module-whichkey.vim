@@ -69,7 +69,6 @@ let g:which_key_map = {
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'j' : 'open coc-explorer',
-      \ 'r' : 'quick run',
       \ 'x' : 'coc cursors operate',
       \ 'c'    : {
               \ 'name' : '+code' ,
@@ -88,6 +87,17 @@ let g:which_key_map = {
             \ 'name' : '+quiet',
             \ 'q' : 'save and quiet',
             \ 'w' : 'quiet without save',
+            \ },
+      \ 'r' : {
+            \ 'name' : '+repl quickrun',
+            \ 'R' : 'Quick Run',
+            \ 'r' : 'Open Repl',
+            \ 'q' : 'Exit Repl',
+            \ 'l' : 'Send line',
+            \ 'p' : 'Repl repeat',
+            \ 'c' : 'Repl clear',
+            \ 'CR': 'Repl return',
+            \ 'ESC': 'Repl interrupt',
             \ },
       \ 's' : {
             \ 'name' : '+session',
