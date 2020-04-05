@@ -86,10 +86,10 @@ if has('vim_starting')
 endif
 
 call etc#init()
-call etc#util#source_file('keybinds/config.vim')
+call etc#util#source_file('keybinds/leaderkey.vim')
 call etc#util#source_file('core/general.vim')
 call etc#util#source_file('core/filetype.vim')
-call etc#util#source_file('core/mappings.vim')
+call etc#util#source_file('keybinds/mappings.vim')
 
 
 function! s:check_custom_settings(filename)abort
