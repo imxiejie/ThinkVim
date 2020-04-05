@@ -324,7 +324,7 @@ if dein#tap('committia.vim')
 endif
 
 if dein#tap('vim-quickrun')
-    nnoremap <silent> <leader>r :QuickRun<CR>
+    nnoremap <silent> <leader>rR :QuickRun<CR>
 endif
 
 if dein#tap('vim-expand-region')
@@ -366,6 +366,17 @@ if dein#tap('vim-smartchr')
             \ smartchr#loop(':=',';')
     autocmd FileType go inoremap <buffer> <expr> .
           \ smartchr#loop('.', '<-', '->','...')
+endif
+
+if dein#tap('iron.nvim')
+	nmap <silent> <Leader>rr :<C-u>IronRepl<CR><Esc>
+	nmap <silent> <Leader>rq <Plug>(iron-exit)
+	nmap <silent> <Leader>rl <Plug>(iron-send-line)
+	vmap <silent> <Leader>rl <Plug>(iron-visual-send)
+	nmap <silent> <Leader>rp <Plug>(iron-repeat-cmd)
+	nmap <silent> <Leader>rc <Plug>(iron-clear)
+	nmap <silent> <Leader>r<CR>  <Plug>(iron-cr)
+	nmap <silent> <Leader>r<Esc> <Plug>(iron-interrupt)
 endif
 
 if dein#tap('vim-sandwich')

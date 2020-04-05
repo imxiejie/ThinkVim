@@ -164,6 +164,13 @@
 
 - { repo: lambdalisue/gina.vim, on_cmd: Gina }
 
+- repo: Vigemus/iron.nvim
+  if: has('nvim')
+  on_cmd: [ IronRepl, IronReplHere, IronFocus, IronSend, IronWatchCurrentFile ]
+  on_map: { nv: <Plug> }
+  on_func: IronUnwatchFile
+  hook_add: let g:iron_map_defaults = 0 | let g:iron_map_extended = 0
+  hook_source: luafile $VIM_PATH/config/modules/module-iron.lua
 
 # }}}
 
