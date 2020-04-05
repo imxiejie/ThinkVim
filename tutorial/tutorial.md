@@ -8,7 +8,7 @@ The structure of Thinkvim ‼️
 - [core/](~/.config/nvim/rc) - core config file
   - [dein](~/.config/nvim/rc/dein) - _**Plugins list!**_
     - [plugins.yaml](~/.config/nvim/rc/dein/plugins.yaml) - ThinkVim Installed plugins
-  - [init.vim](~/.config/nvim/rc/init.vim) - `runtimepath`
+  - [core.vim](~/.config/nvim/rc/init.vim) - the heart of thinkvim
   - [color.vim](~/.config/nvim/rc/color.vim) - thinkvim custom color
   - [general.vim](~/.config/nvim/rc/general.vim) - Vim settings
   - [filetype.vim](~/.config/nvim/rc/general.vim) - filetype settings
@@ -22,7 +22,7 @@ The structure of Thinkvim ‼️
 
 User custom folder `~/.thinkvim.d`,notice the folder must be in your root path `~`,in this folder you should touch two files `plugins.yaml` and `custom.vim`
 
-## How to Install plugins?
+## Install plugins
 
 I suggest that most of plugins should lazyload by dein ,There has two ways to install plugins.
 
@@ -83,17 +83,17 @@ let g:which_key_map.F='test'
 - if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`
 - you can check [my .thinkvim.d](https://github.com/taigacute/dotfiles/tree/master/thinkvim) for more usage.
 
-## How to install or change colorscheme
+## change colorscheme
 
-- ThinkVim provide a easy way to change colorscheme, use this keymap `Leader+fc` then thinkvim will write the colorscheme that your choose into cache file,ThinkVim will read this file to load colorscheme when next startup
+- ThinkVim provide a easy way to change colorscheme, use this keymap `Leader+tc` then thinkvim will write the colorscheme that your choose into cache file,ThinkVim will read this file to load colorscheme when next startup
 
 - Add your favorite coloscheme file into colors folder
 
-## How to use the spaceline
+## Spaceline
 
 check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
-## How to set the Startify
+## Startify
 
 - Custom Startify Header And Footer
 
@@ -120,95 +120,21 @@ let g:startify_custom_header = Thinkvim_startify_center(s:footer)
 
 - set this variable value `let g:startify_padding_left`(number) to make startify mid area center.
 
-## How to config completion
+## Completion
 
-- Completion use LanguageServerProtocol by CoC.nvim.
-- ThinkVim has provide the python,go,javascript,typescript vue html css less
-  tabnine
+Completion use LanguageServerProtocol by [coc.nvim](https://github.com/neoclide/coc.nvim),These files thinkvim is out of the box.
+`Html,Css,Json,Yaml,Javascript,Typescript,Go,Python`
 
-  - For python thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
-  - For go used the gopls,you need install the gopls
+- Python
+  - thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
+- Go
 
-  ```
-  go get golang.org/x/tools/gopls@latest
-  ```
+```
+go get golang.org/x/tools/gopls@latest
+```
 
-  - For vue used the coc-vetur
-  - For html css less used the coc-html and coc-css
-  - For javascript/typescript used the coc-tsserver.
+- Other language support,Please check [wiki of coc](https://github.com/neoclide/coc.nvim/wiki/Language-servers) for help.
 
-- Whats is [Language servers](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-- [Supported features](https://github.com/neoclide/coc.nvim/wiki/Language-servers#supported-features)
-- [Register language servers in coc-settings.json](https://github.com/neoclide/coc.nvim/wiki/Language-servers#register-custom-language-servers)
-- Checkout the language server protocol list which coc.nvim support,[Coc Wiki](https://github.com/neoclide/coc.nvim/wiki/Language-servers)
-- the coc has some language support by coc-extensions,just installed that coc-extensions.
+## Shortcuts
 
-  - [Dart](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dart)
-  - [C/C++/Objective-C](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c)
-  - [Rust](https://github.com/neoclide/coc.nvim/wiki/Language-servers#rust)
-  - [PHP](https://github.com/neoclide/coc.nvim/wiki/Language-servers#php)
-  - [Dockerfile](https://github.com/neoclide/coc.nvim/wiki/Language-servers#dockerfile)
-  - [Bash](https://github.com/neoclide/coc.nvim/wiki/Language-servers#bash)
-  - [Lua](https://github.com/neoclide/coc.nvim/wiki/Language-servers#lua)
-  - [OCaml and ReasonML](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ocaml-and-reasonml)
-  - [PureScript](https://github.com/neoclide/coc.nvim/wiki/Language-servers#purescript)
-  - [Flow](https://github.com/neoclide/coc.nvim/wiki/Language-servers#flow)
-  - [Haskell](https://github.com/neoclide/coc.nvim/wiki/Language-servers#haskell)
-  - [vim/erb/markdown](https://github.com/neoclide/coc.nvim/wiki/Language-servers#vimerbmarkdown)
-  - [Elixir](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elixir)
-  - [Python](https://github.com/neoclide/coc.nvim/wiki/Language-servers#python)
-  - [Ruby](https://github.com/neoclide/coc.nvim/wiki/Language-servers#ruby)
-  - [Scala](https://github.com/neoclide/coc.nvim/wiki/Language-servers#scala)
-  - [Latex](https://github.com/neoclide/coc.nvim/wiki/Language-servers#latex)
-  - [Elm](https://github.com/neoclide/coc.nvim/wiki/Language-servers#elm)
-  - [Fortran](https://github.com/neoclide/coc.nvim/wiki/Language-servers#fortran)
-  - [Clojure](https://github.com/neoclide/coc.nvim/wiki/Language-servers#clojure)
-  - [Julia](https://github.com/neoclide/coc.nvim/wiki/Language-servers#julia)
-
-[More about Coc](https://github.com/neoclide/coc.nvim)❤️ , thinkvim is centered on coc with coc-extensions,so you should learn more about coc and coc-extensions
-
-### Coc Extensions
-
-Extensions are more powerful than a configured language server. Check out
-[Using coc extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions).
-
-- **[coc-tsserver](https://github.com/neoclide/coc-tsserver)** for `javascript`
-  and `typescript`.
-  and `razor`.
-- **[coc-css](https://github.com/neoclide/coc-css)** for `css`, `scss` and `less`.
-- **[coc-vetur](https://github.com/neoclide/coc-vetur)** for `vue`, use [vetur](https://github.com/vuejs/vetur).
-- **[coc-phpls](https://github.com/marlonfan/coc-phpls)** for `php`, use [intelephense-docs](https://github.com/bmewburn/intelephense-docs).
-- **[coc-java](https://github.com/neoclide/coc-java)** for `java`, use [eclipse.jdt.ls](https://github.com/eclipse/eclipse.jdt.ls).
-- **[coc-solargraph](https://github.com/neoclide/coc-solargraph)** for `ruby`,
-  use [solargraph](http://solargraph.org/).
-- **[coc-rls](https://github.com/neoclide/coc-rls)** for `rust`, use
-  [Rust Language Server](https://github.com/rust-lang/rls)
-- **[coc-r-lsp](https://github.com/neoclide/coc-r-lsp)** for `r`, use [R languageserver](https://github.com/REditorSupport/languageserver).
-- **[coc-yaml](https://github.com/neoclide/coc-yaml)** for `yaml`
-- **[coc-python](https://github.com/neoclide/coc-python)** for `python`, extension forked from [vscode-python](https://github.com/Microsoft/vscode-python).
-- **[coc-highlight](https://github.com/neoclide/coc-highlight)** provides default
-  document symbol highlighting and color support.
-- **[coc-emmet](https://github.com/neoclide/coc-emmet)** provides emmet
-  suggestions in completion list.
-- **[coc-snippets](https://github.com/neoclide/coc-snippets)** provides snippets
-  solution.
-- **[coc-lists](https://github.com/neoclide/coc-lists)** provides some basic
-  lists like fzf.vim.
-- **[coc-git](https://github.com/neoclide/coc-git)** provides git integration.
-- **[coc-yank](https://github.com/neoclide/coc-yank)** provides yank highlights & history.
-- **[coc-fsharp](https://github.com/yatli/coc-fsharp)** for `fsharp`.
-- **[coc-svg](https://github.com/iamcco/coc-svg)** for `svg`.
-- **[coc-tailwindcss](https://github.com/iamcco/coc-tailwindcss)** for `tailwindcss`.
-- **[coc-angular](https://github.com/iamcco/coc-angular)** for `angular`.
-- **[coc-vimlsp](https://github.com/iamcco/coc-vimlsp)** for `viml`.
-- **[coc-xml](https://github.com/fannheyward/coc-xml)** for `xml`, use [lsp4xml](https://github.com/angelozerr/lsp4xml).
-- **[coc-elixir](https://github.com/amiralies/coc-elixir)** for `elixir`, based on [elixir-ls](https://github.com/JakeBecker/elixir-ls/).
-- **[coc-tabnine](https://github.com/neoclide/coc-tabnine)** for [tabnine](https://tabnine.com/).
-- **[coc-powershell](https://github.com/yatli/coc-powershell)** for PowerShellEditorService integration.
-- **[coc-omnisharp](https://github.com/yatli/coc-omnisharp)** for `csharp` and `visualbasic`.
-
-Plus more! To get a full list of coc extensions, [search coc.nvim on npm](https://www.npmjs.com/search?q=keywords%3Acoc.nvim),
-or use [coc-marketplace](https://github.com/fannheyward/coc-marketplace), which can search and install extensions in coc.nvim directly.
-
-**Note:** use `:CocConfig` to edit the configuration file. Completion & validation are supported after `coc-json` is installed. ThinkVim has installed some cocextensions you can check it in pluginDetail
-
+need update ....................!!!
