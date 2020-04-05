@@ -153,6 +153,7 @@
 
 | name                                                                                         | description                               |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------- |
+| [coc-explorer](https://github.com/weirongxu/coc-explorer)                                    | Explorer for coc.nvim                     |
 | [Shougo/defx.nvim](https://github.com/Shougo/defx.nvim)                                      | Dark powered file explorer implementation |
 | [kristijanhusak/defx-icons](https://github.com/https://github.com/kristijanhusak/defx-icons) | Filetype icons for Defx                   |
 | [kristijanhusak/defx-git](https://github.com/https://github.com/kristijanhusak/defx-git)     | Git status icons for Defx                 |
