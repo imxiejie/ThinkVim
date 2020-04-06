@@ -11,23 +11,31 @@ endif
 let $VIM_PATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 
 " set the user config file
-let s:user_settings_path = expand('~/.thinkvim.d/custom.vim')
+let s:user_custom_config = expand('~/.thinkvim.d/custom.vim')
 
-" Regular Vim doesn't add custom configuration directories, if you use one
-if &runtimepath !~# $VIM_PATH
-	set runtimepath^=$VIM_PATH
-endif
+function! s:source_file(path, ...)
+	" Source user configuration files with set/global sensitivity
+	let use_global = get(a:000, 0, ! has('vim_starting'))
+	let abspath = resolve($VIM_PATH . '/' . a:path)
+	if ! use_global
+		execute 'source' fnameescape(abspath)
+		return
+	endif
 
-let $DATA_PATH = g:etc#cache_path
-
-
-augroup MyAutoCmd
-	autocmd!
-	autocmd CursorHold *? syntax sync minlines=300
-augroup END
+	let tempfile = tempname()
+	let content = map(readfile(abspath),
+		\ "substitute(v:val, '^\\W*\\zsset\\ze\\W', 'setglobal', '')")
+	try
+		call writefile(content, tempfile)
+		execute printf('source %s', fnameescape(tempfile))
+	finally
+		if filereadable(tempfile)
+			call delete(tempfile)
+		endif
+	endtry
+endfunction
 
 " Disable vim distribution plugins
-
 let g:loaded_gzip = 1
 let g:loaded_tar = 1
 let g:loaded_tarPlugin = 1
@@ -66,72 +74,24 @@ if has('vim_starting')
 	nnoremap ;        <Nop>
 	xnoremap ;        <Nop>
 
-   if ! has('nvim') && has('pythonx')
-		if has('python3')
-			set pyxversion=3
-		elseif has('python')
-			set pyxversion=2
-		endif
-	endif
-
-
-	" Ensure data directories
-	call etc#util#ensure_directory([
-		\   g:etc#cache_path . '/undo',
-		\   g:etc#cache_path . '/backup',
-		\   g:etc#cache_path . '/session',
-		\   g:etc#vim_path . '/spell'
-		\ ])
-
 endif
 
-call etc#init()
-call etc#util#source_file('keybinds/leaderkey.vim')
-call etc#util#source_file('core/general.vim')
-call etc#util#source_file('core/filetype.vim')
-call etc#util#source_file('keybinds/motion.vim')
+call s:source_file('core/packman.vim')
+call s:source_file('keybinds/leaderkey.vim')
+call s:source_file('core/general.vim')
+call s:source_file('core/filetype.vim')
+call s:source_file('keybinds/motion.vim')
 
-
-function! s:check_custom_settings(filename)abort
-       let  content = readfile(a:filename)
-       if empty(content)
-           return 0
-       endif
-       return 1
-endfunction
-
-function! s:source_custom(path, ...) abort
-  let use_global = get(a:000, 0, !has('vim_starting'))
-  let abspath = resolve(expand('~/.thinkvim.d' . a:path))
-  if !use_global
-    execute 'source' fnameescape(abspath)
-    return
+if filereadable(s:user_custom_config)
+  let content = readfile(s:user_custom_config)
+  if !empty(content)
+	 execute 'source' s:user_custom_config
   endif
-
-  " substitute all 'set' to 'setglobal'
-  let content = map(readfile(abspath),
-        \ 'substitute(v:val, "^\\W*\\zsset\\ze\\W", "setglobal", "")')
-  " create tempfile and source the tempfile
-  let tempfile = tempname()
-  try
-    call writefile(content, tempfile)
-    execute 'source' fnameescape(tempfile)
-  finally
-    if filereadable(tempfile)
-      call delete(tempfile)
-    endif
-  endtry
-endfunction
-" Load user custom local settings
-if filereadable(s:user_settings_path)
-	if s:check_custom_settings(s:user_settings_path)
-		call s:source_custom('/custom.vim')
-	endif
 endif
 
 " Initialize user favorite colorscheme
 call theme#init()
-call etc#util#source_file('core/color.vim')
+call s:source_file('core/color.vim')
 
 set secure
 
