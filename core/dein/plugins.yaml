@@ -1,28 +1,25 @@
 # why use yaml to manage plugins
 # see http://genkisugimoto.com/blog/manage-vim-plugins-via-yamsource
 
-# StartUp Plugins{{{
+# PackageManage{{{
 - repo: Shougo/dein.vim
+# }}}
+
+# Editor UI{{{
 - repo: taigacute/spaceline.vim
-- repo: sgur/vim-editorconfig
-- repo: ryanoasis/vim-devicons
 - repo: bagrat/vim-buffet
   hook_add: source $VIM_PATH/modules/module-buffet.vim
-
-- repo: christoomey/vim-tmux-navigator
-  if: "! (has('win32') || has('win64'))"
-
+- repo: ryanoasis/vim-devicons
 - repo: mhinz/vim-startify
-  # on_cmd: Startify
-  # depends: vim-devicons
   hook_add: source  $VIM_PATH/modules/module-startify.vim
   hook_post_source: |
       function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
       endfunction
+
 #}}}
 
-# Core Plugins{{{
+# Completion{{{
 - repo: neoclide/coc.nvim
   merge: 0
   rev: release
@@ -30,13 +27,23 @@
 
 - repo: honza/vim-snippets
   depends : coc.nvim
+
 # }}}
 
 
 # Lazy Loading
 # ==========================================
 
+# CodeStyle{{{
+- repo: editorconfig/editorconfig-vim
+  on_path: .*
+# }}}
+
 # Interface{{{
+
+- repo: christoomey/vim-tmux-navigator
+  if: "! (has('win32') || has('win64'))"
+
 - { repo: rhysd/accelerated-jk, on_map: { n: <Plug> } }
 
 - repo: ludovicchabant/vim-gutentags
