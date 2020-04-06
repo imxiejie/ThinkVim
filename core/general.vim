@@ -1,7 +1,6 @@
 
 "General settins{{{
 set mouse=nv                 " Disable mouse in command-line mode
-set termguicolors            " Enable true color
 set report=0                 " Don't report on line changes
 set errorbells               " Trigger bell on error
 set visualbell               " Use visual bell instead of beeping
@@ -215,6 +214,7 @@ endif
 " }}}
 
 " Editor UI {{{
+set termguicolors       " Enable true color
 set number              " Show number
 set noshowmode          " Don't show mode on bottom
 set noruler             " Disable default status ruler
