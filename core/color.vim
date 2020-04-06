@@ -26,7 +26,7 @@ hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
 "GitGutter Coc-git Highlight
 " ---------------------------------------------------------
 highlight GitGutterAdd ctermfg=22 guifg=#006000 ctermbg=NONE guibg=NONE
-highlight GitGutterChange ctermfg=58 guifg=#5F6000 ctermbg=NONE guibg=NONE
+highlight GitGutterChange ctermfg=208 guifg=#FF8800 ctermbg=NONE guibg=NONE
 highlight GitGutterDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
 highlight GitGutterChangeDelete ctermfg=52 guifg=#600000 ctermbg=NONE guibg=NONE
 
