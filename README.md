@@ -1,4 +1,5 @@
-![](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master) [![Gitter](https://badges.gitter.im/thinkvim/Thinkvim.svg)](https://gitter.im/thinkvim/Thinkvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Build Status](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master)](https://travis-ci.com/hardcoreplayers/ThinkVim)
+[![Gitter](https://badges.gitter.im/thinkvim/Thinkvim.svg)](https://gitter.im/thinkvim/Thinkvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
