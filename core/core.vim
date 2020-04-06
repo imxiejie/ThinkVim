@@ -11,7 +11,7 @@ endif
 let $VIM_PATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
 
 " set the user config file
-let s:user_custom_config = expand('~/.thinkvim.d/custom.vim')
+let s:user_custom_config = expand($HOME.'/.thinkvim.d/custom.vim')
 
 function! s:source_file(path, ...)
 	" Source user configuration files with set/global sensitivity
