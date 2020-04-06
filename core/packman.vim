@@ -31,21 +31,17 @@ let s:config_paths = get(g:, 'etc_config_paths', [
 	\ $VIM_PATH . '/vimrc.json',
 	\ ])
 
-let s:local_paths=expand($HOME.'/.thinkvim.d/plugins.yaml')
+let s:user_plugins=expand($HOME.'/.thinkvim.d/plugins.yaml')
 
-function! s:check_user_plugins(filename)
-  if filereadable(a:filename)
-     let content = readfile(a:filename)
-     if empty(content)
-        call filter(s:config_paths,'filereadable(v:val)')
-     else
-		call add(s:config_paths,s:local_paths)
-        call filter(s:config_paths, 'filereadable(v:val)')
-     endif
-   endif
-endfunction
-
-call s:check_user_plugins(s:local_paths)
+if filereadable(s:user_plugins)
+	let content = readfile(s:user_plugins)
+	if empty(content)
+		call filter(s:config_paths,'filereadable(v:val)')
+	else
+		call filter(s:config_paths, 'filereadable(v:val)')
+		call add(s:config_paths,s:user_plugins)
+	endif
+endif
 
 function! s:main()
 	if has('vim_starting')
