@@ -27,8 +27,15 @@ imap <C-Q> <esc>:wq<CR>
 " Editor UI
 nmap <Leader>tn :setlocal nonumber!<CR>
 
+function! s:QuiteVim() abort
+	if empty(expand('%:t'))
+		execute ":q"
+	else
+		execute ":wq!"
+	endif
+endfunction
 " Quiet
-nnoremap <leader>qq <esc>:wq!<CR>
+nnoremap <leader>qq :call <SID>QuiteVim()<CR>
 nnoremap <leader>qw <esc>:q!<CR>
 
 "insert a newline
