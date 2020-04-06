@@ -1,5 +1,5 @@
 " version info of thinkvim
-let g:thinkvim_version = "2.2.2"
+let g:thinkvim_version = "2.2.3"
 
 if &compatible
 	" vint: -ProhibitSetNoCompatible
@@ -89,7 +89,7 @@ call etc#init()
 call etc#util#source_file('keybinds/leaderkey.vim')
 call etc#util#source_file('core/general.vim')
 call etc#util#source_file('core/filetype.vim')
-call etc#util#source_file('keybinds/mappings.vim')
+call etc#util#source_file('keybinds/motion.vim')
 
 
 function! s:check_custom_settings(filename)abort
