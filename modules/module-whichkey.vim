@@ -59,6 +59,7 @@ let g:which_key_map = {
             \ 'l' : 'find locationlist',
             \ 'u' : 'find uncommitted files',
             \ 'v' : 'find visual area',
+            \ 'z' : 'find word on multiple files',
             \ },
       \ 'i' : 'Show symbols list' ,
       \ 'o' : {
