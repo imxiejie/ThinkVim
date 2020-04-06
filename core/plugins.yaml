@@ -340,28 +340,4 @@
   on_map: { ox: <Plug> }
   hook_add: let g:textobj_function_no_default_key_mappings = 1
 
-# Search Plugins{{{
-# - repo: junegunn/fzf
-#   build: './install --all'
-#   merged: 0
-#
-# - repo: Shougo/neomru.vim
-#   on_source: fzf-preview.vim
-#   hook_add: |
-#     let g:neomru#directory_mru_path = $DATA_PATH . '/mru/dir'
-#     let g:neomru#file_mru_path = $DATA_PATH . '/mru/file'
-#     let g:unite_source_file_mru_limit = 5000
-#
-# - repo: junegunn/fzf.vim
-#   depends: fzf
-#   on_cmd: [Colors,Rg,Files]
-#   hook_source: source  $VIM_PATH/modules/module-fzf.vim
-#
-# - repo: yuki-ycino/fzf-preview.vim
-#   depends: fzf
-#   on_cmd: [FzfPreviewProjectFiles,FzfPreviewDirectoryFile,FzfPreviewBuffers,FzfPreviewMruFiles,FzfPreviewAllBuffers,FzfPreviewProjectGrep,FzfPreviewMruFiles,FzfPreviewFromResources]
-#   hook_source: source  $VIM_PATH/modules/module-fzfpreview.vim
-#
-# }}}
-
 #  vim: set ts=2 sw=2 tw=80 et :
