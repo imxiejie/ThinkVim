@@ -125,80 +125,19 @@ if dein#tap('coc.nvim')
             \ ' --sources=file+'<CR>
 endif
 
-if dein#tap('fzf.vim')
-	nnoremap <silent> <leader>tc :<C-u>Colors<CR>
-	nnoremap <silent> <leader>fa :<C-u>Rg<CR>
-endif
-
-if dein#tap('fzf-preview.vim')
-  nnoremap <silent> <leader>bb :<C-u>FzfPreviewBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
-	nnoremap <silent> <Leader>gS :<C-u>FzfPreviewGitStatus -processors=g:fzf_preview_gina_processors<CR>
-  nnoremap <silent> <leader>bB :<C-u>FzfPreviewAllBuffers -processors=g:fzf_preview_buffer_delete_processors<CR>
-  nnoremap <silent> <leader>ff :<C-u>FzfPreviewDirectoryFiles<CR>
-  nnoremap <silent> <leader>fb :<C-u>FzfPreviewProjectGrep<Space>
-  nnoremap <silent> <leader>fo :<C-u>FzfPreviewOldFiles<CR>
-	nnoremap <silent> <leader>fc :<C-u>FzfPreviewChanges<CR>
-  nnoremap <silent> <leader>fm :<C-u>FzfPreviewMruFiles<CR>
-	nnoremap <silent> <Leader>fw :<C-u>FzfPreviewProjectGrep <C-r>=expand('<cword>')<CR><CR>
-  nnoremap <silent> <leader>fp :<C-u>FzfPreviewFromResources project_mru git<CR>
-	augroup fzf_preview
-		autocmd!
-		autocmd User fzf_preview#initialized call s:fzf_preview_settings()
-	augroup END
-
-	function! s:fzf_preview_settings() abort
-		let g:fzf_preview_buffer_delete_processors = fzf_preview#resource_processor#get_default_processors()
-		let g:fzf_preview_buffer_delete_processors['ctrl-x'] = function('s:buffers_delete_from_lines')
-	endfunction
-
-	function! s:buffers_delete_from_lines(lines) abort
-		for line in a:lines
-			let matches = matchlist(line, '^buffer \(\d\+\)$')
-			if len(matches) >= 1
-				execute 'bdelete! ' . matches[1]
-			else
-				execute 'bdelete! ' . line
-			endif
-		endfor
-	endfunction
-
-	function! s:gina_add(paths) abort
-		for path in a:paths
-			execute 'silent Gina add ' . path
-		endfor
-
-		echomsg 'Git add ' . join(a:paths, ', ')
-	endfunction
-
-	function! s:gina_reset(paths) abort
-		for path in a:paths
-			execute 'silent Gina reset ' . path
-		endfor
-
-		echomsg 'Git reset ' . join(a:paths, ', ')
-	endfunction
-
-	function! s:gina_patch(paths) abort
-		for path in a:paths
-			execute 'silent Gina patch ' . path
-		endfor
-
-		echomsg 'Git add --patch ' . join(a:paths, ', ')
-	endfunction
-
-	function! s:fzf_preview_settings() abort
-		let g:fzf_preview_custom_default_processors = fzf_preview#resource_processor#get_default_processors()
-		call remove(g:fzf_preview_custom_default_processors, 'ctrl-x')
-		let g:fzf_preview_custom_default_processors['ctrl-s'] = function('fzf_preview#resource_processor#split')
-
-		let g:fzf_preview_buffer_delete_processors = fzf_preview#resource_processor#get_default_processors()
-		let g:fzf_preview_buffer_delete_processors['ctrl-x'] = function('s:buffers_delete_from_lines')
-
-		let g:fzf_preview_gina_processors = fzf_preview#resource_processor#get_processors()
-		let g:fzf_preview_gina_processors['ctrl-a'] = function('s:gina_add')
-		let g:fzf_preview_gina_processors['ctrl-r'] = function('s:gina_reset')
-		let g:fzf_preview_gina_processors['ctrl-c'] = function('s:gina_patch')
-	endfunction
+if dein#tap('vim-clap')
+	nnoremap <silent> <leader>tc :<C-u>Clap colors<CR>
+	nnoremap <silent> <leader>bb :<C-u>Clap buffers<CR>
+	nnoremap <silent> <leader>fa :<C-u>Clap grep<CR>
+	nnoremap <silent> <Leader>fe :<C-u>Clap filer<CR>
+	nnoremap <silent> <leader>ff :<C-u>Clap files ++finder=rg --no-ignore --hidden --files<cr>
+	nnoremap <silent> <leader>fg :<C-u>Clap gfiles<CR>
+	nnoremap <silent> <leader>fw :<C-u>Clap grep ++query=<cword><cr>
+	nnoremap <silent> <leader>fh :<C-u>Clap history<CR>
+	nnoremap <silent> <leader>fW :<C-u>Clap windows<CR>
+	nnoremap <silent> <leader>fl :<C-u>Clap loclist<CR>
+	nnoremap <silent> <leader>fu :<C-u>Clap git_diff_files<CR>
+	nnoremap <silent> <leader>ft :<C-u>Clap grep ++query=@visual<CR>
 endif
 
 if dein#tap('vim-easy-align')
@@ -265,10 +204,6 @@ if dein#tap('accelerated-jk')
 	nmap <silent>k <Plug>(accelerated_jk_gk)
 endif
 
-if dein#tap('dsf.vim')
-	nmap dsf <Plug>DsfDelete
-	nmap csf <Plug>DsfChange
-endif
 
 if dein#tap('caw.vim')
     function! InitCaw() abort
@@ -325,18 +260,6 @@ endif
 
 if dein#tap('vim-quickrun')
     nnoremap <silent> <leader>rR :QuickRun<CR>
-endif
-
-if dein#tap('vim-expand-region')
-        xmap v <Plug>(expand_region_expand)
-        xmap V <Plug>(expand_region_shrink)
-endif
-
-if dein#tap('splitjoin.vim')
-        let g:splitjoin_join_mapping = ''
-        let g:splitjoin_split_mapping = ''
-        nmap sj :SplitjoinJoin<CR>
-        nmap sk :SplitjoinSplit<CR>
 endif
 
 if dein#tap('vista.vim')
@@ -398,6 +321,23 @@ if dein#tap('vim-sandwich')
      xmap is <Plug>(textobj-sandwich-query-i)
      omap as <Plug>(textobj-sandwich-query-a)
      xmap as <Plug>(textobj-sandwich-query-a)
+endif
+
+if dein#tap('vim-expand-region')
+        xmap v <Plug>(expand_region_expand)
+        xmap V <Plug>(expand_region_shrink)
+endif
+
+if dein#tap('dsf.vim')
+	nmap dsf <Plug>DsfDelete
+	nmap csf <Plug>DsfChange
+endif
+
+if dein#tap('splitjoin.vim')
+        let g:splitjoin_join_mapping = ''
+        let g:splitjoin_split_mapping = ''
+        nmap sj :SplitjoinJoin<CR>
+        nmap sk :SplitjoinSplit<CR>
 endif
 
 if dein#tap('vim-operator-replace')
