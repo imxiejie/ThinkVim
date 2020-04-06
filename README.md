@@ -39,11 +39,7 @@
     sudo apt-get install libjansson-dev
     # then compile and install ctags
     ```
-
-### Not Required
-
 - bat : [install bat](https://github.com/sharkdp/bat)
-- exa : [install exa](https://github.com/ogham/exa)
 
 ## Installation
 
