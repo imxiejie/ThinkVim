@@ -58,9 +58,6 @@ nnoremap k gk
 vnoremap j gj
 vnoremap k gk
 
-"buffer
-nnoremap <leader>bc :BufOnly<CR>
-nnoremap <Leader>bo :BufOnly<Space>
 "yank to end
 nnoremap Y y$
 
