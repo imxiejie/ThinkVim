@@ -1,10 +1,3 @@
-let g:coc_start_at_startup=0
-" enable coc service after 500ms
-function! CocTimerStart(timer)
-    exec "CocStart"
-endfunction
-
-autocmd VimEnter call timer_start(500,'CocTimerStart',{'repeat':1})
 
 " seems like coc will crash on large files?
 let g:trigger_size = 0.5 * 1048576
