@@ -9,31 +9,10 @@ endif
 
 " Set main configuration directory as parent directory
 let $VIM_PATH = fnamemodify(resolve(expand('<sfile>:p')), ':h:h')
+let $THINKVIM = expand($HOME.'/.thinkvim.d')
 
 " set the user config file
-let s:user_custom_config = expand($HOME.'/.thinkvim.d/custom.vim')
-
-function! s:source_file(path, ...)
-	" Source user configuration files with set/global sensitivity
-	let use_global = get(a:000, 0, ! has('vim_starting'))
-	let abspath = resolve($VIM_PATH . '/' . a:path)
-	if ! use_global
-		execute 'source' fnameescape(abspath)
-		return
-	endif
-
-	let tempfile = tempname()
-	let content = map(readfile(abspath),
-		\ "substitute(v:val, '^\\W*\\zsset\\ze\\W', 'setglobal', '')")
-	try
-		call writefile(content, tempfile)
-		execute printf('source %s', fnameescape(tempfile))
-	finally
-		if filereadable(tempfile)
-			call delete(tempfile)
-		endif
-	endtry
-endfunction
+let s:user_init_config = expand($THINKVIM.'/init.vim')
 
 " Disable vim distribution plugins
 let g:loaded_gzip = 1
@@ -76,22 +55,17 @@ if has('vim_starting')
 
 endif
 
-call s:source_file('core/packman.vim')
-call s:source_file('keybinds/leaderkey.vim')
-call s:source_file('core/general.vim')
-call s:source_file('core/filetype.vim')
-call s:source_file('keybinds/motion.vim')
-
-if filereadable(s:user_custom_config)
-  let content = readfile(s:user_custom_config)
-  if !empty(content)
-	 execute 'source' s:user_custom_config
-  endif
-endif
-
+call utils#source_file($VIM_PATH,'core/packman.vim')
+call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
+call utils#source_file($VIM_PATH,'core/general.vim')
+call utils#source_file($VIM_PATH,'core/filetype.vim')
+call utils#source_file($VIM_PATH,'keybinds/motion.vim')
+call utils#check_source(s:user_init_config)
 " Initialize user favorite colorscheme
 call theme#init()
-call s:source_file('core/color.vim')
+call utils#source_file($VIM_PATH,'core/color.vim')
+
+call utils#generate_coc_json()
 
 set secure
 

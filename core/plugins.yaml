@@ -41,7 +41,7 @@
 - repo: liuchengxu/vim-clap
   build: 'sh ./install.sh'
   on_cmd: Clap
-  hook_add: source $VIM_PATH/modules/module-clap.vim
+  hook_source: source $VIM_PATH/modules/module-clap.vim
 
 # Interface{{{
 
