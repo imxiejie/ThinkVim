@@ -7,15 +7,14 @@
 
 # Editor UI{{{
 - repo: ryanoasis/vim-devicons
-- repo: taigacute/spaceline.vim
+- repo: hardcoreplayers/spaceline.vim
+- repo: hardcoreplayers/vim-buffet
 - repo: mhinz/vim-startify
   hook_add: source  $VIM_PATH/modules/module-startify.vim
   hook_post_source: |
       function! StartifyEntryFormat()
         return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
       endfunction
-- repo: bagrat/vim-buffet
-  hook_add: source $VIM_PATH/modules/module-buffet.vim
 #}}}
 
 # Completion{{{
