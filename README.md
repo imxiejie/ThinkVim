@@ -9,16 +9,19 @@
 
 [See here for more screenshots](https://github.com/hardcoreplayers/ThinkVim/wiki/Screenshots)
 
-## Feature
+## Features
 
-- 🚀Fastest StartupTime(Plugins Total:62 40-60ms)
-- 💎Modular Plugin Config
-- ⚒ Easy to use Easy to hack
-- 🌟95% plugins lazyload with dein
-- ⚡️Centerd on Coc.nvim, Denite auxiliary
-- 🎱Autocompletion by lsp which coc.nvim support
-- ⚔️ Fully customizable
-- 🌈Comfortable theme gruvbox9
+- Minimalistic good looks inspired by modern editors.
+- A modular architecture for a more organized Neovim configuration.
+- Modular config
+- Automatic indentation detection and editorconfig integration. Let someone else argue about tabs vs _*spaces*_.
+- Fast search (and replace) utilities, powered by ripgrep and
+  [vim-clap](https://github.com/liuchengxu/vim-clap)
+- A powered keybinding scheme, centered around leader and localleader prefix keys (<kbd>SPC</kbd> and <kbd>;</kbd>, by default).
+- Full Lsp support by [coc.nvim](https://github.com/neoclide/coc.nvim)
+- A declarative plugin management powered by
+  [dein](https://github.com/Shougo/dein.vim)
+- Support Html,Css,Less,Json,Yaml,Toml,Javascript,Typescript,React,Vue,Go,Rust,Python,Dockerfile
 
 ## Required Env
 
