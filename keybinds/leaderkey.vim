@@ -143,6 +143,7 @@ if dein#tap('vim-clap')
 	nnoremap <silent> <leader>fl :<C-u>Clap loclist<CR>
 	nnoremap <silent> <leader>fu :<C-u>Clap git_diff_files<CR>
 	nnoremap <silent> <leader>ft :<C-u>Clap grep ++query=@visual<CR>
+	nnoremap <silent> <leader>oc :<C-u>Clap personalconf<CR>
 endif
 
 if dein#tap('vim-easy-align')
