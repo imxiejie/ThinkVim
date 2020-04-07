@@ -6,6 +6,11 @@ if dein#tap('dein.vim')
 	nnoremap <silent> <Leader>pl  :echo dein#get_updates_log()<CR>
 endif
 
+if dein#tap('vim-buffet')
+	nnoremap <silent> <leader>bc :Bonly<CR>
+	nnoremap <silent> <leader>bx :Bw<CR>
+endif
+
 if dein#tap('vim-startify')
 	nnoremap <silent> <Leader>os  :<C-u>Startify<CR>
 endif

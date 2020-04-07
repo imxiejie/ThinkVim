@@ -18,7 +18,7 @@ let g:which_key_map = {
             \ 'name' : '+buffer',
             \ 'b' : 'buffer list',
             \ 'c' : 'keep current buffer',
-            \ 'o' : 'keep input buffer',
+            \ 'x' : 'remove all buffers',
             \ },
       \ 'p' : {
             \ 'name' : '+plugin manage',
