@@ -57,13 +57,9 @@
 
 **_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
-## PluginsDetail
+## Quick Start
 
-Check this [wiki page](https://github.com/hardcoreplayers/ThinkVim/wiki/Plugins-Detail) to know all plugins that thinkvim installed.
-
-## Tutorial
-
-- check the [tutorial](/tutorial/tutorial.md) to know more about ThinkVim
+Check the [thinkvim wiki](https://github.com/hardcoreplayers/ThinkVim/wiki) to know how to use this.
 
 ## Backers
 
