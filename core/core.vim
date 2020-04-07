@@ -60,11 +60,15 @@ call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
 call utils#source_file($VIM_PATH,'core/general.vim')
 call utils#source_file($VIM_PATH,'core/filetype.vim')
 call utils#source_file($VIM_PATH,'keybinds/motion.vim')
+
+" Load user init config
 call utils#check_source(s:user_init_config)
+
 " Initialize user favorite colorscheme
 call theme#init()
 call utils#source_file($VIM_PATH,'core/color.vim')
 
+" Generate coc-settings.json
 call utils#generate_coc_json()
 
 set secure
