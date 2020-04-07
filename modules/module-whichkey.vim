@@ -27,7 +27,8 @@ let g:which_key_map = {
             \ 'l' : 'plugins update log',
             \ },
       \ 'e' : 'open file explorer' ,
-      \ ';' : 'choose window by prompt' ,
+      \ ';' : 'coc extensions',
+      \ '-' : 'choose window by prompt' ,
       \ '/' : 'remove end spaces' ,
       \ ',' : 'Run coclist command' ,
       \ 'g' : {
@@ -64,6 +65,7 @@ let g:which_key_map = {
       \ 'i' : 'Show symbols list' ,
       \ 'o' : {
             \ 'name' : '+open [terminal startify]',
+            \ 'c' : 'open personal config',
             \ 't' : 'open a temrinal',
             \ 's' : 'open stratify',
             \ 'm' : 'open markdown preview',
@@ -75,7 +77,6 @@ let g:which_key_map = {
               \ 'name' : '+code' ,
               \ 'a'    : 'Lsp CodeActionSelected',
               \ 'd'    : 'Lsp Show Diagnostics',
-              \ 'e'    : 'coc Extensions',
               \ 'i'    : 'Lsp Find implementation',
               \ 'r'    : 'Lsp Rename',
               \ 'f'    : 'Lsp Format',

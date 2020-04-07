@@ -61,7 +61,7 @@ if dein#tap('coc.nvim')
         " Show all diagnostics
         nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
         " Manage extensions
-        nnoremap <silent> <leader>ce  :<C-u>CocList extensions<cr>
+        nnoremap <silent> <leader>;  :<C-u>CocList extensions<cr>
         " Show commands
         nnoremap <silent> <leader>,  :<C-u>CocList commands<cr>
         " Find symbol of current document
