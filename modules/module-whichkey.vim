@@ -110,6 +110,7 @@ let g:which_key_map = {
             \ 'i' : 'Indentline toggle',
             \ 'c' : 'Change colorscheme',
             \ 'n' : 'Toggle line number',
+            \ 's' : 'Toggle spell check',
             \ },
       \ 'w'    : {
               \ 'name' : '+window' ,

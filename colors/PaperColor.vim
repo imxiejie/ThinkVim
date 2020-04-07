@@ -2173,6 +2173,7 @@ fun! s:apply_syntax_highlightings()
   exec 'hi StartifySlash' . s:fg_navy
   exec 'hi StartifyBracket' . s:fg_aqua
   exec 'hi StartifySpecial' . s:fg_aqua
+  exec 'hi StartifyFooter' . s:fg_navy . s:ft_bold
 
   " Git commit message
   exec 'hi gitcommitSummary' . s:fg_blue

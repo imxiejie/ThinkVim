@@ -106,4 +106,16 @@ nmap <leader>8 <Plug>BuffetSwitch(8)
 nmap <leader>9 <Plug>BuffetSwitch(9)
 nmap <leader>0 <Plug>BuffetSwitch(10)
 
+" Toggle spellchecking
+function! s:toggleSpellCheck()
+  set spell!
+  if &spell
+    echo "Spellcheck ON"
+  else
+    echo "Spellcheck OFF"
+  endif
+endfunction
+
+nnoremap <silent> <leader>ts :call <SID>toggleSpellCheck()<CR>
+
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
