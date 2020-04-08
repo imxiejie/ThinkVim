@@ -93,4 +93,7 @@ npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-pack
 npm install coc-floaterm --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
-ok "Congratulations thinkvim install success "
+ok "Congratulations thinkvim install success!!!
+    Please choose a font which you favorite on here https://www.nerdfonts.com/font-downloads
+    Then install it, thinkvim dosen't provide install font script.
+    Because it depends you.Thanks for you love this neovim config."
