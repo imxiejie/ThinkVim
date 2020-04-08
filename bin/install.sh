@@ -8,6 +8,7 @@ action "Checking node..."
 node --version | grep "v" &> /dev/null
 if [ $? != 0 ]; then
   error "Node not installed"
+  warn "Please install node use this script 'curl -sL install-node.now.sh/lts | bash' "
   exit 1;
 fi
 
@@ -24,19 +25,21 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 
-action "Install bat"
+action "Install tools"
 if [ "$(uname)" == "Darwin" ]; then
   running "Found you use mac"
   brew install bat
+  brew install ripgrep
+  brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   running "Found you use Linux"
-  if [ -x "$(command -v apk)" ];then apk add bat; fi
-  if [ -x "$(command -v pkg)" ];then pkg install bat; fi
-  if [ -x "$(command -v pacman)" ];then pacman -S bat; fi
-  if [ -x "$(command -v apt-get)" ]; then apt-get install bat; fi
-  if [ -x "$(command -v dnf)" ]; then dnf install bat; fi
-  if [ -x "$(command -v nix-env)" ]; then nix-env -i bat; fi
-  if [ -x "$(command -v zypper)" ]; then zypper install bat; fi
+  if [ -x "$(command -v apk)" ];then apk add bat ripgrep ctags; fi
+  if [ -x "$(command -v pkg)" ];then pkg install bat ripgrep ctags; fi
+  if [ -x "$(command -v pacman)" ];then pacman -S bat ripgrep ctags; fi
+  if [ -x "$(command -v apt-get)" ]; then apt-get install bat ripgrep ctags; fi
+  if [ -x "$(command -v dnf)" ]; then dnf install bat ripgrep ctags; fi
+  if [ -x "$(command -v nix-env)" ]; then nix-env -i bat ripgrep ctags; fi
+  if [ -x "$(command -v zypper)" ]; then zypper install bat ripgrep ctags; fi
 fi
 
 action "Install pynvim..."
@@ -93,9 +96,35 @@ npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-pack
 npm install coc-floaterm --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
+read -r -p "Are you a gopher? [y|N] " response
+if [[ $response =~ (y|yes|Y) ]];then
+  export GO111MODULE="on"
+  warn "If you are live in china,please use proxy to install gopls"
+  go get golang.org/x/tools/gopls@latest
+  go get -u github.com/go-delve/delve/cmd/dlv
+else
+  ok "skipped"
+fi
+
+read -r -p "Did you write rust? [y|N] " response
+if [[ $response =~ (y|yes|Y) ]];then
+  rustup -V | grep "v" &> /dev/null
+  if [ $? != 0 ]; then
+    error "Please install rustup by this script 'curl https://sh.rustup.rs -sSf | sh' "
+  else
+    rustup self update
+    # get nightly compiler
+    rustup update nightly
+    # after nightly installed
+    rustup component add rls-preview --toolchain nightly
+    rustup component add rust-analysis --toolchain nightly
+    rustup component add rust-src --toolchain nightly
+  fi
+fi
+
+
 ok "\n
 Congratulations thinkvim install success!!!\n
 Please choose a font which you favorite on here https://www.nerdfonts.com/font-downloads\n
 Then install it, thinkvim dosen't provide install font script.Because it depends you.\n
-Install ctags on your system.\n
 Thanks for you love this neovim config."
