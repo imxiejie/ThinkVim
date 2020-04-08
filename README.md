@@ -23,15 +23,6 @@
   [dein](https://github.com/Shougo/dein.vim)
 - Support Html Css Less Json Yaml Toml Javascript Typescript React Vue Go Rust Python Dockerfile
 
-## Required Env
-
-- macos or linux
-- neovim >= 0.4.0（cause i used floatwindow,this feature support by neovim 0.4.0 above)
-- python3 support
-  - pip3 install --user pynvim
-- node and yarn
-- NerdFont
-
 ### Required Tool
 
 - rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -47,18 +38,11 @@
 
 ## Installation
 
-**_1._**
-
 ```
-1. git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
-2. open nvim
+git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
+cd ~/.config/nvim
+sh bin/install.sh
 ```
-
-- Note: If your system sets \$XDG_CONFIG_HOME, use that instead of ~/.config in the code above. Nvim follows the XDG base-directories convention.
-
-**_2._** open the nvim ,it will auto install dein and plugins,when the plugins install success,it will install coc extensions.
-
-**_3._** if you see the coc extesions installed success in your vim commandline .Congratulations‼️
 
 ## Quick Start
 
