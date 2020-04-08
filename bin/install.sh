@@ -3,7 +3,7 @@
 source ./bin/format.sh
 source ./bin/pynvim.sh
 
-action "Checking node..."
+action "Checking node and yarn..."
 
 node --version | grep "v" &> /dev/null
 if [ $? != 0 ]; then
@@ -12,9 +12,16 @@ if [ $? != 0 ]; then
   exit 1;
 fi
 
+yarn --version | grep "v" &> /dev/null
+if [ $? == 0 ]; then
+  error "yarn not installed"
+  warn "Please install yarn use this script 'curl --compressed -o- -L https://yarnpkg.com/install.sh | bash' "
+  exit 1;
+fi
+
 ok "===> check pass"
 
-action "Install bat"
+action "Install tools"
 
 unameOut="$(uname -s)"
 case "${unameOut}" in
@@ -25,7 +32,7 @@ case "${unameOut}" in
     *)          machine="UNKNOWN:${unameOut}"
 esac
 
-action "Install tools"
+
 if [ "$(uname)" == "Darwin" ]; then
   running "Found you use mac"
   brew install bat
@@ -50,8 +57,10 @@ make
 
 action "Install coc extensions"
 running "Create extensions dir"
+
 extensinsdir="$HOME/.config/coc/extensions"
 if [ ! -d "$extensinsdir" ]
+then
   mkdir -p ~/.config/coc/extensions
 fi
 cd ~/.config/coc/extensions
@@ -59,7 +68,7 @@ cd ~/.config/coc/extensions
 if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
-elif
+else
   error "package.json duplicate."
   exit 1
 fi
@@ -86,9 +95,6 @@ npm install coc-lists --global-style --ignore-scripts --no-bin-links --no-packag
 npm install coc-post --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-stylelint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-template --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-tabnine --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-marketplace --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
@@ -96,7 +102,9 @@ npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-pack
 npm install coc-floaterm --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
-read -r -p "Are you a gopher? [y|N] " response
+ok "===>install all extensions success"
+
+read -r -p "Install gopls? [y|N] " response
 if [[ $response =~ (y|yes|Y) ]];then
   export GO111MODULE="on"
   warn "If you are live in china,please use proxy to install gopls"
@@ -106,7 +114,7 @@ else
   ok "skipped"
 fi
 
-read -r -p "Did you write rust? [y|N] " response
+read -r -p "Install rust-analysis? [y|N] " response
 if [[ $response =~ (y|yes|Y) ]];then
   rustup -V | grep "v" &> /dev/null
   if [ $? != 0 ]; then
@@ -122,6 +130,10 @@ if [[ $response =~ (y|yes|Y) ]];then
   fi
 fi
 
+running "Clean up..."
+rm -rf "$HOME/.cache/vim/dein/cache_nvim"
+rm -rf "$HOME/.cache/vim/dein/state_nvim.vim"
+rm -rf "$HOME/.cache/vim/dein/.cache/"
 
 ok "\n
 Congratulations thinkvim install success!!!\n

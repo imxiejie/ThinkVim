@@ -20,7 +20,7 @@
 # Completion{{{
 - repo: neoclide/coc.nvim
   merge: 0
-  rev: release
+  build: 'yarn install --frozen-lockfile'
   hook_add: source  $VIM_PATH/modules/module-coc.vim
 
 - repo: honza/vim-snippets
