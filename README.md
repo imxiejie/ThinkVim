@@ -23,19 +23,6 @@
   [dein](https://github.com/Shougo/dein.vim)
 - Support Html Css Less Json Yaml Toml Javascript Typescript React Vue Go Rust Python Dockerfile
 
-### Required Tool
-
-- rg (Ripgrep): [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
-- Universal ctags: [ctags.io](https://ctags.io/)
-  - mac `brew install --HEAD universal-ctags/universal-ctags/universal-ctags`
-  - ubuntu
-    ```
-    # install libjansson first
-    sudo apt-get install libjansson-dev
-    # then compile and install ctags
-    ```
-- bat : [install bat](https://github.com/sharkdp/bat)
-
 ## Installation
 
 ```
