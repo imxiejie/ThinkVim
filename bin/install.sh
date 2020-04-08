@@ -92,7 +92,6 @@ npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-
 npm install coc-emoji --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-project --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-lists --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-post --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-stylelint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
