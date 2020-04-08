@@ -126,5 +126,5 @@ fi
 ok "\n
 Congratulations thinkvim install success!!!\n
 Please choose a font which you favorite on here https://www.nerdfonts.com/font-downloads\n
-Then install it, thinkvim dosen't provide install font script.Because it depends you.\n
+Then install it, thinkvim dosen't provide install font script.Because it depends on you.\n
 Thanks for you love this neovim config."
