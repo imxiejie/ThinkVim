@@ -288,7 +288,7 @@
 # Writing{{{
 - repo: iamcco/markdown-preview.nvim
   on_ft: [markdown,pandoc.markdown,rmd]
-  hook_post_source: 'call mkdp#util#install()'
+  build: 'sh -c "cd app & yarn install"'
   hook_source: |
       let g:mkdp_auto_start = 0
 
