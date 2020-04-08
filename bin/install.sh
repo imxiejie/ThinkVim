@@ -47,11 +47,18 @@ make
 
 action "Install coc extensions"
 running "Create extensions dir"
-mkdir -p ~/.config/coc/extensions
+extensinsdir="$HOME/.config/coc/extensions"
+if [ ! -d "$extensinsdir" ]
+  mkdir -p ~/.config/coc/extensions
+fi
 cd ~/.config/coc/extensions
+
 if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
+elif
+  error "package.json duplicate."
+  exit 1
 fi
 
 running "Installing extensions..."
