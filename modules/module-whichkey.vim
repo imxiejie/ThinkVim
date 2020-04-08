@@ -64,7 +64,7 @@ let g:which_key_map = {
             \ },
       \ 'i' : 'Show symbols list' ,
       \ 'o' : {
-            \ 'name' : '+open [terminal startify]',
+            \ 'name' : '+open',
             \ 'c' : 'open personal config',
             \ 't' : 'open a temrinal',
             \ 's' : 'open stratify',
