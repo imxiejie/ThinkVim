@@ -3,6 +3,43 @@
 source ./bin/format.sh
 source ./bin/pynvim.sh
 
+thinkvim_personal="$HOME/.thinkvim.d"
+
+action "Create .thinkvim.d "
+
+function ensureThinkvimd(){
+  if [ ! -d "$thinkvim_personal" ]
+  then
+    mkdir -p $HOME/.thinkvim.d
+    ok "create .thinkvim.d folder success"
+  else
+    warn "the .thinkvim.d folder exist skipped"
+  fi
+
+  cd ~/.thinkvim.d/
+
+  if [ ! -f plugins.yaml ]
+  then
+    touch plugins.yaml
+    ok "create .thinkvim.d/plugins.yaml success"
+  else
+    warn "the .thinkvim.d/plugns.yaml exist skipped"
+  fi
+
+  if [ ! -f init.vim ]
+  then
+    touch init.vim
+    ok "create .thinkvim.d/init.vim success"
+  else
+    warn "the .thinkvim.d/init.vim exist skipped"
+  fi
+  cd -
+}
+
+ensureThinkvimd
+
+ok
+
 action "Checking node and yarn..."
 
 node --version | grep "v" &> /dev/null
@@ -54,11 +91,18 @@ Install_Pynvim
 
 action "Install plugins"
 make
+running "Clean up..."
+rm -rf "$HOME/.cache/vim/dein/cache_nvim"
+rm -rf "$HOME/.cache/vim/dein/state_nvim.vim"
+rm -rf "$HOME/.cache/vim/dein/.cache/"
+nvim -u init.vim -c 'call dein#recache_runtimepath()|q'
 
 action "Install coc extensions"
+
 running "Create extensions dir"
 
 extensinsdir="$HOME/.config/coc/extensions"
+
 if [ ! -d "$extensinsdir" ]
 then
   mkdir -p ~/.config/coc/extensions
@@ -128,11 +172,6 @@ if [[ $response =~ (y|yes|Y) ]];then
     rustup component add rust-src --toolchain nightly
   fi
 fi
-
-running "Clean up..."
-rm -rf "$HOME/.cache/vim/dein/cache_nvim"
-rm -rf "$HOME/.cache/vim/dein/state_nvim.vim"
-rm -rf "$HOME/.cache/vim/dein/.cache/"
 
 ok "\n
 Congratulations thinkvim install success!!!\n
