@@ -15,9 +15,9 @@
 - A modular architecture for a more organized Neovim configuration.
 - Modular config
 - Automatic indentation detection and editorconfig integration. Let someone else argue about tabs vs _*spaces*_.
-- Fast search (and replace) utilities, powered by ripgrep and
+- Fast search (and replace) utilities, powered by [ripgrep](https://github.com/BurntSushi/ripgrep) and
   [vim-clap](https://github.com/liuchengxu/vim-clap)
-- A powered keybinding scheme, centered around leader and localleader prefix keys (<kbd>SPC</kbd> and <kbd>;</kbd>, by default).
+- A combining vim and emacs keybinding scheme, centered around leader and localleader prefix keys (<kbd>SPC</kbd> and <kbd>;</kbd>, by default).
 - Full Lsp support by [coc.nvim](https://github.com/neoclide/coc.nvim)
 - A declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
@@ -60,8 +60,7 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
 </a>
 <img src="https://github.com/taigacute/IMG/blob/master/wechat/mm_reward_qrcode_1556454268864.png" width="40%"  height="40%">
 
-## Thanks
+## Credits & Contribution
 
 - [chemzqm](https://github.com/chemzqm)
 - [rafi](https://github.com/rafi/vim-config)
-- [Shougo](https://github.com/Shougo)
