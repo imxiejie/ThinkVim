@@ -31,6 +31,7 @@ let g:which_key_map = {
       \ '-' : 'choose window by prompt' ,
       \ '/' : 'remove end spaces' ,
       \ ',' : 'Run coclist command' ,
+      \ '<Tab>' :'switch to last buffer',
       \ 'g' : {
             \ 'name' : '+version control',
             \ 'a' : 'git add',
