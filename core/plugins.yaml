@@ -81,7 +81,7 @@
 - {repo: tpope/vim-repeat , on_map: .* }
 
 - repo: liuchengxu/vim-which-key
-  on_cmd: [Whichkey, Whichkey!,WhichKeyVisual, WhichKeyVisual!]
+  on_cmd: [Whichkey, Whichkey!]
   hook_add: source  $VIM_PATH/modules/module-whichkey.vim
   hook_post_source: |
         call which_key#register('<Space>', 'g:which_key_map')
