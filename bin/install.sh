@@ -115,6 +115,7 @@ then
 else
   warn "package.json duplicate.remove old package.json file"
   rm -rf ~/.config/coc/extensions/package.json
+  echo '{"dependencies":{}}'> package.json
 fi
 
 running "Installing extensions..."
