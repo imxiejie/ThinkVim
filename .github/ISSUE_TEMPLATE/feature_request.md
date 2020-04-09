@@ -1,6 +1,6 @@
 ---
 name: Feature request
-label: feature
+labels: feature
 about: Suggest an idea for this project
 
 ---
