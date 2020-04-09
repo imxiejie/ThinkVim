@@ -204,10 +204,10 @@
     let g:go_imports_autosave = 0
     let g:go_def_mapping_enabled = 0
     let g:go_mod_fmt_autosave = 0
-    let g:go_highlight_array_whitespace_error = 0
-    let g:go_highlight_chan_whitespace_error = 0
+    let g:go_highlight_array_whitespace_error = 1
+    let g:go_highlight_chan_whitespace_error = 1
     let g:go_highlight_space_tab_error = 0
-    let g:go_highlight_trailing_whitespace_error = 0
+    let g:go_highlight_trailing_whitespace_error = 1
     let g:go_highlight_extra_types = 1
     let g:go_highlight_build_constraints = 1
     let g:go_highlight_extra_types = 1
@@ -222,6 +222,9 @@
     let g:go_highlight_string_spellcheck = 0
     let g:go_highlight_variable_declarations = 0
     let g:go_highlight_variable_assignments = 0
+
+# - repo : hardcoreplayers/go-nvim
+#   on_ft: [ go ,gomod ]
 
 - repo: sebdah/vim-delve
   on_ft: go
@@ -336,4 +339,5 @@
   on_map: { ox: <Plug> }
   hook_add: let g:textobj_function_no_default_key_mappings = 1
 
+#
 #  vim: set ts=2 sw=2 tw=80 et :

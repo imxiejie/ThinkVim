@@ -156,6 +156,8 @@ endif
 
 if dein#tap('vim-go')
 	function! InitGoKeyMap() abort
+	 nnoremap <silent> <LocalLeader>ga :GoAddTags<CR>
+	 nnoremap <silent> <LocalLeader>gr :GoRemoveTags<CR>
 	 nnoremap <silent> <LocalLeader>gi :GoImpl<CR>
 	 nnoremap <silent> <LocalLeader>gd :GoDescribe<CR>
 	 nnoremap <silent> <LocalLeader>gc :GoCallees<CR>
