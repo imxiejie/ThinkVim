@@ -118,7 +118,8 @@ else
   echo '{"dependencies":{}}'> package.json
 fi
 
-running "Installing extensions..."
+running "Installing extensions...If you live in China,npm is very slow.\n
+you may need to config npm to use taobao or cnpm\n"
 npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-tsserver --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
@@ -155,7 +156,7 @@ if [[ $response =~ (y|yes|Y) ]];then
   go get golang.org/x/tools/gopls@latest
   go get -u github.com/go-delve/delve/cmd/dlv
 else
-  ok "skipped"
+  ok "skipped\n"
 fi
 
 read -r -p "Install rust-analysis? [y|N] " response
@@ -172,6 +173,8 @@ if [[ $response =~ (y|yes|Y) ]];then
     rustup component add rust-analysis --toolchain nightly
     rustup component add rust-src --toolchain nightly
   fi
+else
+  ok "skipped\n"
 fi
 
 ok "\n
