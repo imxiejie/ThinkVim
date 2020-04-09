@@ -113,8 +113,8 @@ if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
 else
-  error "package.json duplicate."
-  exit 1
+  warn "package.json duplicate.remove old package.json file"
+  rm -rf ~/.config/coc/extensions/package.json
 fi
 
 running "Installing extensions..."
