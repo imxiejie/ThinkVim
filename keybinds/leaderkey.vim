@@ -23,31 +23,9 @@ if dein#tap('indentLine')
 	nnoremap <leader>ti :IndentLinesToggle<CR>
 endif
 
-if dein#tap('denite.nvim')
-        noremap zl :<C-u>call <SID>my_denite_outline(&filetype)<CR>
-        noremap zL :<C-u>call <SID>my_denite_decls(&filetype)<CR>
-        noremap zT :<C-u>call <SID>my_denite_file_rec_goroot()<CR>
-        function! s:my_denite_outline(filetype) abort
-          execute 'Denite' a:filetype ==# 'go' ? "decls:'%:p'" : 'outline'
-        endfunction
-        function! s:my_denite_decls(filetype) abort
-					if a:filetype ==# 'go'
-							Denite decls
-					else
-							call denite#util#print_error('decls does not support filetypes except go')
-					endif
-        endfunction
-        function! s:my_denite_file_rec_goroot() abort
-					if !executable('go')
-							call denite#util#print_error('`go` executable not found')
-							return
-					endif
-					let out = system('go env | grep ''^GOROOT='' | cut -d\" -f2')
-					let goroot = substitute(out, '\n', '', '')
-					call denite#start(
-									\ [{'name': 'file/rec', 'args': [goroot]}],
-									\ {'input': '.go'})
-        endfunction
+if dein#tap('any-jump.vim')
+	nnoremap <silent> <Leader>cj :AnyJump<CR>
+	xnoremap <silent> <Leader>cj :AnyJump<CR>
 endif
 
 if dein#tap('coc.nvim')

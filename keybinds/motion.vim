@@ -23,6 +23,7 @@ cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <C-s> :<C-u>write<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
+nnoremap<Leader><TAB> <C-O><CR>
 
 " Editor UI
 nmap <Leader>tn :setlocal nonumber!<CR>
