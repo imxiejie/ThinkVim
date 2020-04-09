@@ -1,6 +1,6 @@
 ---
 name: Bug Report
-labels:bug
+labels: bug
 about: Bug
 
 ---
