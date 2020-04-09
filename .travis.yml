@@ -14,7 +14,7 @@ addons:
 before_install:
   - |
     echo 'Add neovim PPA.'
-    if [[ `lsb_release -r | awk '{print $2}'` < 16.04 ]]; then
+    if [[ `lsb_release -r | awk '{print $2}'` > 16.04 ]]; then
       echo "Using neovim-ppa/unstable for Ubuntu version older than 16.04."
       sudo add-apt-repository ppa:neovim-ppa/unstable -y
     else
