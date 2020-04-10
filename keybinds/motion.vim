@@ -91,7 +91,7 @@ nnoremap ]w :<C-u>WhitespaceNext<CR>
 nnoremap [w :<C-u>WhitespacePrev<CR>
 
 " Remove spaces at the end of lines
-nnoremap <silent> <Space>/ :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
+nnoremap <silent> <Space>cw :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
 
 nmap <leader>1 <Plug>BuffetSwitch(1)
 nmap <leader>2 <Plug>BuffetSwitch(2)
