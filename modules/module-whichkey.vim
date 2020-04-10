@@ -61,6 +61,7 @@ let g:which_key_map = {
             \ 'u' : 'find uncommitted files',
             \ 'v' : 'find visual area',
             \ 'z' : 'find word on multiple files',
+            \ 't' : 'find visual select',
             \ },
       \ 'i' : 'Show symbols list' ,
       \ 'o' : {
