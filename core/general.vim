@@ -196,16 +196,11 @@ set switchbuf=useopen,vsplit    " Jump to the first open window
 set backspace=indent,eol,start  " Intuitive backspacing in insert mode
 set diffopt=filler,iwhite       " Diff mode: show fillers, ignore whitespace
 set completeopt=menu,menuone    " Always show menu, even for one item
-set completeopt+=noselect       " Do not select a match in the menu
+set completeopt+=noselect,noinsert
 
 if exists('+completepopup')
 	set completeopt+=popup
 	set completepopup=height:4,width:60,highlight:InfoPopup
-endif
-
-if has('patch-7.4.775')
-	" Do not insert any text for a match until the user selects from menu
-	set completeopt+=noinsert
 endif
 
 if has('patch-8.1.0360') || has('nvim-0.4')

@@ -35,6 +35,10 @@ if dein#tap('coc.nvim')
         endfunction
         xmap <silent> <leader>ca :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
         nmap <silent> <leader>ca :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
+        " Do default action for next item.
+        nnoremap <silent> <leader>cn  :<C-u>CocNext<CR>
+        " Do default action for previous item.
+        nnoremap <silent> <leader>cp  :<C-u>CocPrev<CR>
         " Using CocList
         " Show all diagnostics
         nnoremap <silent> <leader>cd  :<C-u>CocList diagnostics<cr>
@@ -46,12 +50,8 @@ if dein#tap('coc.nvim')
         "nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
         " Search workspace symbols
         nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
-        " Do default action for next item.
-        nnoremap <silent> <leader>cj  :<C-u>CocNext<CR>
-        " Do default action for previous item.
-        nnoremap <silent> <leader>ck  :<C-u>CocPrev<CR>
         " Resume latest coc list
-        nnoremap <silent> <leader>cu  :<C-u>CocListResume<CR>
+        nnoremap <silent> <leader>'  :<C-u>CocListResume<CR>
         " Use `[c` and `]c` for navigate diagnostics
         nmap <silent> ]c <Plug>(coc-diagnostic-prev)
         nmap <silent> [c <Plug>(coc-diagnostic-next)
@@ -77,10 +77,17 @@ if dein#tap('coc.nvim')
         nmap <leader>gi <Plug>(coc-git-chunkinfo)
         " show commit contains current position
         nmap <leader>gm <Plug>(coc-git-commit)
-        "nnoremap <silent> <leader>cg  :<C-u>CocList --normal gstatus<CR>
         " float window scroll
 				nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 				nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+				" Use <TAB> for selections ranges.
+				" NOTE: Requires 'textDocument/selectionRange' support from the language server.
+				" coc-tsserver, coc-python are the examples of servers that support it.
+				nmap <silent> <TAB> <Plug>(coc-range-select)
+				xmap <silent> <TAB> <Plug>(coc-range-select)
+        " Add `:OR` command for organize imports of the current buffer.
+        command! -nargs=0 OR  :call CocAction('runCommand', 'editor.action.organizeImport')
+				nnoremap <silent> <Leader>co :<C-u>OR<CR>
         " multiple cursors
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
         nmap <expr> <silent> <C-m> <SID>select_current_word()
@@ -246,7 +253,7 @@ if dein#tap('committia.vim')
 endif
 
 if dein#tap('vim-quickrun')
-    nnoremap <silent> <leader>rR :QuickRun<CR>
+    nnoremap <silent> <leader>cR :QuickRun<CR>
 endif
 
 if dein#tap('vista.vim')
