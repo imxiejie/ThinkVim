@@ -44,7 +44,10 @@ augroup user_plugin_filetype "{{{
   autocmd FileType json syntax match Comment +\/\/.\+$+
 
   " Go (Google)
-  autocmd FileType go let b:coc_pairs_disabled = ['<']
+  autocmd FileType go
+                     \  let b:coc_pairs_disabled = ['<']
+                     \ | let b:coc_root_patterns = ['.git', 'go.mod']
+
   autocmd BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
 
   " Python
