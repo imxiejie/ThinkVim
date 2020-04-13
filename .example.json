@@ -1,113 +1,123 @@
 {
-    "suggest.triggerAfterInsertEnter": false,
-    "suggest.timeout": 500,
-    "suggest.noselect": false,
-    "suggest.detailField":"abbr",
-    "suggest.snippetIndicator": "🌟",
-    "suggest.triggerCompletionWait": 100,
-    "suggest.echodocSupport": true,
-    "suggest.completionItemKindLabels": {
-      "keyword":       "\uf1de",
-      "variable":      "\ue79b",
-      "value":         "\uf89f",
-      "operator":      "\u03a8",
-      "function":      "\u0192",
-      "reference":     "\ufa46",
-      "constant":      "\uf8fe",
-      "method":        "\uf09a",
-      "struct":        "\ufb44",
-      "class":         "\uf0e8",
-      "interface":     "\uf417",
-      "text":          "\ue612",
-      "enum":          "\uf435",
-      "enumMember":    "\uf02b",
-      "module":        "\uf40d",
-      "color":         "\ue22b",
-      "property":      "\ue624",
-      "field":         "\uf9be",
-      "unit":          "\uf475",
-      "event":         "\ufacd",
-      "file":          "\uf15c",
-      "folder":        "\uf114",
-      "snippet":       "\ue60b",
-      "typeParameter": "\uf728",
-      "default":       "\uf29c"
-    },
-    //diagnostic
-    "diagnostic.signOffset": 9999999,
-	  "diagnostic.errorSign": "●",
-	  "diagnostic.warningSign": "●",
-    "diagnostic.displayByAle": false,
-    "diagnostic.refreshOnInsertMode": true,
-    //git
-    "git.enableGutters": true,
-    "git.branchCharacter":"\uf418",
-    "git.addGBlameToBufferVar": true,
-    "git.addGBlameToVirtualText": true,
-    "git.virtualTextPrefix": " ❯❯❯ ",
-    "git.addedSign.hlGroup": "GitGutterAdd",
-    "git.changedSign.hlGroup": "GitGutterChange",
-    "git.removedSign.hlGroup": "GitGutterDelete",
-    "git.topRemovedSign.hlGroup": "GitGutterDelete",
-    "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-    "git.addedSign.text":"▎",
-    "git.changedSign.text":"▎",
-    "git.removedSign.text":"▏",
-    "git.topRemovedSign.text": "▔",
-    "git.changeRemovedSign.text": "▋",
-    //Snippet
-    "coc.preferences.snippetStatusText": "Ⓢ ",
-    //CocList
-    "list.source.files.defaultOptions": ["--auto-preview"],
-    "list.source.outline.defaultOptions": ["--auto-preview"],
-    //prettier
-    "coc.preferences.formatOnSaveFiletypes": [
-      "html",
-      "css",
-      "markdown",
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "go",
-      "json"],
-    "prettier.statusItemText": "ⓟ ",
-    "prettier.eslintIntegration": true,
-    "prettier.tslintIntegration": true,
-    "prettier.stylelintIntegration": true,
-    //emmet
-    "emmet.includeLanguages": {"vue-html": "html", "javascript": "javascriptreact"},
-    //imselect
-    "imselect.enableStatusItem": false,
-    //multiple curssors
-    "cursors.nextKey": "<C-n>",
-    "cursors.previousKey": "<C-p>",
-    "cursors.cancelKey": "<esc>",
-    //sessions
-    "session.directory": "~/.cache/vim/session",
-    "project.dbpath": "~/.cache/vim/.coc-project",
-    "project.rootPatterns": [".git","go.mod","jsconfig.json","tsconfig.json","Cargo.toml"],
-    // coc-explorer
-    "explorer.icon.expanded": "▾",
-    "explorer.icon.collapsed": "▸",
-    "explorer.width": 30,
-    "explorer.icon.enableNerdfont": true,
-    "explorer.quitOnOpen": true,
-    "explorer.floating.width": -20,
-    "explorer.floating.height": -10,
-    "explorer.openAction.strategy": "sourceWindow",
-    // eslint
-    "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
-    "eslint.autoFix": true,
-    "eslint.autoFixOnSave": true,
-    // python
-    "python.jediEnabled": false,
-    // add your languageServer into this list
-    "languageserver": {
-      "golang": {
-          "command": "gopls",
-          "rootPatterns": ["go.mod"],
-          "filetypes": ["go"]
-      }
+  "suggest.triggerAfterInsertEnter": false,
+  "suggest.timeout": 500,
+  "suggest.noselect": false,
+  "suggest.detailField": "abbr",
+  "suggest.snippetIndicator": "🌟",
+  "suggest.triggerCompletionWait": 100,
+  "suggest.echodocSupport": true,
+  "suggest.completionItemKindLabels": {
+    "keyword": "\uf1de",
+    "variable": "\ue79b",
+    "value": "\uf89f",
+    "operator": "\u03a8",
+    "function": "\u0192",
+    "reference": "\ufa46",
+    "constant": "\uf8fe",
+    "method": "\uf09a",
+    "struct": "\ufb44",
+    "class": "\uf0e8",
+    "interface": "\uf417",
+    "text": "\ue612",
+    "enum": "\uf435",
+    "enumMember": "\uf02b",
+    "module": "\uf40d",
+    "color": "\ue22b",
+    "property": "\ue624",
+    "field": "\uf9be",
+    "unit": "\uf475",
+    "event": "\ufacd",
+    "file": "\uf15c",
+    "folder": "\uf114",
+    "snippet": "\ue60b",
+    "typeParameter": "\uf728",
+    "default": "\uf29c"
+  },
+  //diagnostic
+  "diagnostic.signOffset": 9999999,
+  "diagnostic.errorSign": "●",
+  "diagnostic.warningSign": "●",
+  "diagnostic.displayByAle": false,
+  "diagnostic.refreshOnInsertMode": true,
+  //git
+  "git.enableGutters": true,
+  "git.branchCharacter": "\uf418",
+  "git.addGBlameToBufferVar": true,
+  "git.addGBlameToVirtualText": true,
+  "git.virtualTextPrefix": " ❯❯❯ ",
+  "git.addedSign.hlGroup": "GitGutterAdd",
+  "git.changedSign.hlGroup": "GitGutterChange",
+  "git.removedSign.hlGroup": "GitGutterDelete",
+  "git.topRemovedSign.hlGroup": "GitGutterDelete",
+  "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
+  "git.addedSign.text": "▎",
+  "git.changedSign.text": "▎",
+  "git.removedSign.text": "▏",
+  "git.topRemovedSign.text": "▔",
+  "git.changeRemovedSign.text": "▋",
+  //Snippet
+  "coc.preferences.snippetStatusText": "Ⓢ ",
+  //CocList
+  "list.source.files.defaultOptions": ["--auto-preview"],
+  "list.source.outline.defaultOptions": ["--auto-preview"],
+  //prettier
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "css",
+    "markdown",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "go",
+    "json"
+  ],
+  "prettier.statusItemText": "ⓟ ",
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  //emmet
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact"
+  },
+  //imselect
+  "imselect.enableStatusItem": false,
+  //multiple curssors
+  "cursors.nextKey": "<C-n>",
+  "cursors.previousKey": "<C-p>",
+  "cursors.cancelKey": "<esc>",
+  //sessions
+  "session.directory": "~/.cache/vim/session",
+  "project.dbpath": "~/.cache/vim/.coc-project",
+  "project.rootPatterns": [
+    ".git",
+    "go.mod",
+    "jsconfig.json",
+    "tsconfig.json",
+    "Cargo.toml"
+  ],
+  // coc-explorer
+  "explorer.icon.expanded": "▾",
+  "explorer.icon.collapsed": "▸",
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.quitOnOpen": true,
+  "explorer.floating.width": -20,
+  "explorer.floating.height": -10,
+  "explorer.openAction.strategy": "sourceWindow",
+  // eslint
+  "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
+  "eslint.autoFix": true,
+  "eslint.autoFixOnSave": true,
+  // python
+  "python.jediEnabled": false,
+  // add your languageServer into this list
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "filetypes": ["go"]
     }
+  }
 }

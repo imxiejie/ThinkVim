@@ -33,7 +33,7 @@ sh bin/install.sh
 
 ## Quick Start
 
-Check the [thinkvim wiki](https://github.com/hardcoreplayers/ThinkVim/wiki) page.
+Check the [thinkvim wiki](https://github.com/hardcoreplayers/ThinkVim/wiki) page or docs folder.
 
 ## Backers
 
