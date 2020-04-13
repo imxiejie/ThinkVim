@@ -6,7 +6,7 @@ inoremap <C-k>  <ESC>d$a
 inoremap <C-u> <C-G>u<C-U>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
-inoremap <C-a> <Home>
+inoremap <C-a> <ESC>^a
 inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
 
 " command line alias
