@@ -59,9 +59,8 @@ let g:which_key_map = {
             \ 'W' : 'find windows',
             \ 'l' : 'find locationlist',
             \ 'u' : 'find uncommitted files',
-            \ 'v' : 'find visual area',
             \ 'z' : 'find word on multiple files',
-            \ 't' : 'find visual select',
+            \ 'v' : 'find visual select',
             \ },
       \ 'i' : 'Show symbols list' ,
       \ 'o' : {
@@ -77,7 +76,8 @@ let g:which_key_map = {
       \ 'c'    : {
               \ 'name' : '+code' ,
               \ 'a'    : 'Lsp CodeActionSelected',
-              \ 'd'    : 'Lsp Show Diagnostics',
+              \ 'e'    : 'Lsp Show Diagnostics',
+              \ 'd'    : 'Lsp Show Document',
               \ 'j'    : 'Show definition references',
               \ 'i'    : 'Lsp Find implementation',
               \ 'r'    : 'Lsp Rename',
