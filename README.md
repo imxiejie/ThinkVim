@@ -7,13 +7,19 @@
 <img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim.png" width="960" height="540">
 </div>
 
-[See here for more screenshots](https://github.com/hardcoreplayers/ThinkVim/wiki/Screenshots)
-
+<p align="center">
+  <b><a href="https://github.com/hardcoreplayers/ThinkVim/wiki/Screenshots">Screenshots</a></b>
+  |
+  <b><a href="https://github.com/hardcoreplayers/ThinkVim/wiki/QuickStart">Get started</a></b>
+  |
+  <b><a href="https://github.com/hardcoreplayers/ThinkVim/wiki/Shorcuts">Shortcuts</a></b>
+  |
+  <b><a href="/docs">docs</a></b>
+</p>
 ## Features
 
 - Minimalistic good looks inspired by modern editors.
 - A modular architecture for a more organized Neovim configuration.
-- Modular config
 - Automatic indentation detection and editorconfig integration. Let someone else argue about tabs vs _*spaces*_.
 - Fast search (and replace) utilities, powered by [ripgrep](https://github.com/BurntSushi/ripgrep) and
   [vim-clap](https://github.com/liuchengxu/vim-clap)
