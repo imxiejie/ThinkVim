@@ -223,6 +223,10 @@ set fcs=eob:\           " hide ~ tila
 set list
 set listchars=tab:»·,nbsp:+,trail:·,extends:→,precedes:←
 
+set showmatch           " Jump to matching bracket
+set matchpairs+=<:>     " Add HTML brackets to pair matching
+set matchtime=1         " Tenths of a second to show the matching paren
+
 set showtabline=2       " Always show the tabs line
 set winwidth=30         " Minimum width for active window
 set winminwidth=10      " Minimum width for inactive windows
