@@ -1,6 +1,3 @@
-# why use yaml to manage plugins
-# see http://genkisugimoto.com/blog/manage-vim-plugins-via-yamsource
-
 # PackageManage{{{
 - repo: Shougo/dein.vim
 # }}}
