@@ -16,6 +16,7 @@
   |
   <b><a href="/docs">docs</a></b>
 </p>
+
 ## Features
 
 - Minimalistic good looks inspired by modern editors.
