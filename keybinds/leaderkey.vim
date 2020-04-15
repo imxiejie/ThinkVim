@@ -253,7 +253,7 @@ if dein#tap('committia.vim')
 		imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
 		imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
 
-		setLocal winminheight=1 winheight=1
+		setlocal winminheight=1 winheight=1
 		resize 10
 		startinsert
 	endfunction
