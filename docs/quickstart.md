@@ -2,7 +2,17 @@
 
 ## User Custom
 
-User custom folder `~/.thinkvim.d`,notice the folder must be in your root path `~`,in this folder you should touch two files `plugins.yaml` and `custom.vim`
+Thinkvim will generate `.thinkvim.d` folder under your home path,This folder
+will has two files `plugins.yaml` and `init.vim`
+
+## Custom leaderkey and localleader key
+
+Just config this variable
+
+```viml
+let g:mapleader
+let g:maplocalleader
+```
 
 ## Install plugins
 
