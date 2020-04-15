@@ -7,8 +7,8 @@ if dein#tap('dein.vim')
 endif
 
 if dein#tap('vim-buffet')
-	nnoremap <silent> <leader>bc :Bonly<CR>
-	nnoremap <silent> <leader>bx :Bw<CR>
+	nnoremap <silent> <Leader>bc :Bonly<CR>
+	nnoremap <silent> <Leader>bx :Bw<CR>
 endif
 
 if dein#tap('vim-startify')
@@ -20,7 +20,7 @@ if dein#tap('markdown-preview.nvim')
 endif
 
 if dein#tap('indentLine')
-	nnoremap <leader>ti :IndentLinesToggle<CR>
+	nnoremap <Leader>ti :IndentLinesToggle<CR>
 endif
 
 if dein#tap('any-jump.vim')
@@ -33,51 +33,51 @@ if dein#tap('coc.nvim')
         function! s:cocActionsOpenFromSelected(type) abort
             execute 'CocCommand actions.open ' . a:type
         endfunction
-        xmap <silent> <leader>ca :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
-        nmap <silent> <leader>ca :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
+        xmap <silent> <Leader>ca :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+        nmap <silent> <Leader>ca :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
         " Do default action for next item.
-        nnoremap <silent> <leader>cn  :<C-u>CocNext<CR>
+        nnoremap <silent> <Leader>cn  :<C-u>CocNext<CR>
         " Do default action for previous item.
-        nnoremap <silent> <leader>cp  :<C-u>CocPrev<CR>
+        nnoremap <silent> <Leader>cp  :<C-u>CocPrev<CR>
         " Using CocList
         " Show all diagnostics
-        nnoremap <silent> <leader>ce  :<C-u>CocList diagnostics<cr>
+        nnoremap <silent> <Leader>ce  :<C-u>CocList diagnostics<cr>
         " Manage extensions
-        nnoremap <silent> <leader>;  :<C-u>CocList extensions<cr>
+        nnoremap <silent> <Leader>;  :<C-u>CocList extensions<cr>
         " Show commands
-        nnoremap <silent> <leader>,  :<C-u>CocList commands<cr>
+        nnoremap <silent> <Leader>,  :<C-u>CocList commands<cr>
         " Find symbol of current document
-        "nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+        "nnoremap <silent> <Leader>co  :<C-u>CocList outline<cr>
         " Search workspace symbols
-        nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+        nnoremap <silent> <Leader>cs  :<C-u>CocList -I symbols<cr>
         " Resume latest coc list
-        nnoremap <silent> <leader>'  :<C-u>CocListResume<CR>
+        nnoremap <silent> <Leader>'  :<C-u>CocListResume<CR>
         " Use `[e` and `]e` for navigate diagnostics
         nmap <silent> ]e <Plug>(coc-diagnostic-prev)
         nmap <silent> [e <Plug>(coc-diagnostic-next)
         " Remap for rename current word
-        nmap <leader>cr <Plug>(coc-rename)
+        nmap <Leader>cr <Plug>(coc-rename)
         " Remap for format selected region
-        vmap <leader>cf  <Plug>(coc-format-selected)
-        nmap <leader>cf  <Plug>(coc-format-selected)
+        vmap <Leader>cf  <Plug>(coc-format-selected)
+        nmap <Leader>cf  <Plug>(coc-format-selected)
         " Fix autofix problem of current line
-        nmap <leader>cF  <Plug>(coc-fix-current)
+        nmap <Leader>cF  <Plug>(coc-fix-current)
         " Remap keys for gotos
         nmap <silent> gd <Plug>(coc-definition)
         nmap <silent> gy <Plug>(coc-type-definition)
-        nmap <silent> <leader>ci <Plug>(coc-implementation)
+        nmap <silent> <Leader>ci <Plug>(coc-implementation)
         nmap <silent> gr <Plug>(coc-references)
         " Use K for show documentation in float window
         nnoremap <silent> K :call CocActionAsync('doHover')<CR>
-        nnoremap <silent> <leader>cd :call CocActionAsync('doHover')<CR>
+        nnoremap <silent> <Leader>cd :call CocActionAsync('doHover')<CR>
         " use <c-space> for trigger completion.
         inoremap <silent><expr> <c-space> coc#refresh()
         nmap ]g <Plug>(coc-git-prevchunk)
         nmap [g <Plug>(coc-git-nextchunk)
         " show chunk diff at current position
-        nmap <leader>gi <Plug>(coc-git-chunkinfo)
+        nmap <Leader>gi <Plug>(coc-git-chunkinfo)
         " show commit contains current position
-        nmap <leader>gm <Plug>(coc-git-commit)
+        nmap <Leader>gm <Plug>(coc-git-commit)
         " float window scroll
 				nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 				nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
@@ -93,9 +93,9 @@ if dein#tap('coc.nvim')
         nmap <silent> <C-c> <Plug>(coc-cursors-position)
         nmap <expr> <silent> <C-m> <SID>select_current_word()
         xmap <silent> <C-d> <Plug>(coc-cursors-range)
-        " use normal command like `<leader>xi(`
-        nmap <leader>x  <Plug>(coc-cursors-operator)
-        nnoremap <silent> <leader>ot :<C-u>CocCommand floaterm.new<cr>
+        " use normal command like `<Leader>xi(`
+        nmap <Leader>x  <Plug>(coc-cursors-operator)
+        nnoremap <silent> <Leader>ot :<C-u>CocCommand floaterm.new<cr>
 
         function! s:select_current_word()
             if !get(g:, 'coc_cursors_activated', 0)
@@ -106,11 +106,11 @@ if dein#tap('coc.nvim')
 				" Use `:Format` for format current buffer
         command! -nargs=0 Format :call CocAction('format')
 
-        nnoremap  <leader>fz :<C-u>CocSearch -w<Space>
-        " use normal command like `<leader>xi(`
-        nmap <leader>x  <Plug>(coc-cursors-operator)
+        nnoremap  <Leader>fz :<C-u>CocSearch -w<Space>
+        " use normal command like `<Leader>xi(`
+        nmap <Leader>x  <Plug>(coc-cursors-operator)
         " coc-explorer
-        noremap <silent> <leader>j :execute 'CocCommand explorer' .
+        noremap <silent> <Leader>j :execute 'CocCommand explorer' .
             \ ' --toggle' .
             \ ' --position=floating' .
             \ ' --sources=file+'<CR>
@@ -123,20 +123,20 @@ if dein#tap('coc.nvim')
 endif
 
 if dein#tap('vim-clap')
-	nnoremap <silent> <leader>tc :<C-u>Clap colors<CR>
-	nnoremap <silent> <leader>bb :<C-u>Clap buffers<CR>
-	nnoremap <silent> <leader>fa :<C-u>Clap grep<CR>
+	nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
+	nnoremap <silent> <Leader>bb :<C-u>Clap buffers<CR>
+	nnoremap <silent> <Leader>fa :<C-u>Clap grep<CR>
 	"like emacs counsel-find-file
 	nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
-	nnoremap <silent> <leader>ff :<C-u>Clap files ++finder=rg --no-ignore --hidden --files<cr>
-	nnoremap <silent> <leader>fg :<C-u>Clap gfiles<CR>
-	nnoremap <silent> <leader>fw :<C-u>Clap grep ++query=<cword><cr>
-	nnoremap <silent> <leader>fh :<C-u>Clap history<CR>
-	nnoremap <silent> <leader>fW :<C-u>Clap windows<CR>
-	nnoremap <silent> <leader>fl :<C-u>Clap loclist<CR>
-	nnoremap <silent> <leader>fu :<C-u>Clap git_diff_files<CR>
-	nnoremap <silent> <leader>fv :<C-u>Clap grep ++query=@visual<CR>
-	nnoremap <silent> <leader>oc :<C-u>Clap personalconf<CR>
+	nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --no-ignore --hidden --files<cr>
+	nnoremap <silent> <Leader>fg :<C-u>Clap gfiles<CR>
+	nnoremap <silent> <Leader>fw :<C-u>Clap grep ++query=<cword><cr>
+	nnoremap <silent> <Leader>fh :<C-u>Clap history<CR>
+	nnoremap <silent> <Leader>fW :<C-u>Clap windows<CR>
+	nnoremap <silent> <Leader>fl :<C-u>Clap loclist<CR>
+	nnoremap <silent> <Leader>fu :<C-u>Clap git_diff_files<CR>
+	nnoremap <silent> <Leader>fv :<C-u>Clap grep ++query=@visual<CR>
+	nnoremap <silent> <Leader>oc :<C-u>Clap personalconf<CR>
 endif
 
 if dein#tap('vim-easy-align')
@@ -178,12 +178,12 @@ if dein#tap('vimagit')
 endif
 
 if dein#tap('vim-fugitive')
-	nnoremap <silent> <leader>ga :Git add %:p<CR>
-	nnoremap <silent> <leader>gd :Gdiffsplit<CR>
-	nnoremap <silent> <leader>gc :Git commit<CR>
-	nnoremap <silent> <leader>gb :Git blame<CR>
-	nnoremap <silent> <leader>gf :Gfetch<CR>
-	nnoremap <silent> <leader>gs :Git<CR>
+	nnoremap <silent> <Leader>ga :Git add %:p<CR>
+	nnoremap <silent> <Leader>gd :Gdiffsplit<CR>
+	nnoremap <silent> <Leader>gc :Git commit<CR>
+	nnoremap <silent> <Leader>gb :Git blame<CR>
+	nnoremap <silent> <Leader>gf :Gfetch<CR>
+	nnoremap <silent> <Leader>gs :Git<CR>
 endif
 
 if dein#tap('gina.vim')
@@ -192,7 +192,7 @@ if dein#tap('gina.vim')
 endif
 
 if dein#tap('vim-mundo')
-    nnoremap <silent> <leader>m :MundoToggle<CR>
+    nnoremap <silent> <Leader>m :MundoToggle<CR>
 endif
 
 if dein#tap('vim-choosewin')
@@ -253,14 +253,14 @@ if dein#tap('committia.vim')
 		imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
 		imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
 
-		setlocal winminheight=1 winheight=1
+		setLocal winminheight=1 winheight=1
 		resize 10
 		startinsert
 	endfunction
 endif
 
 if dein#tap('vim-quickrun')
-    nnoremap <silent> <leader>cR :QuickRun<CR>
+    nnoremap <silent> <Leader>cR :QuickRun<CR>
 endif
 
 if dein#tap('vista.vim')
@@ -278,11 +278,14 @@ if dein#tap('vim-easymotion')
 endif
 
 if dein#tap('vim-which-key')
-		nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-		vnoremap <silent> <leader>      :<c-u>WhichKeyVisual '<Space>'<CR>
-		nnoremap <silent> <localleader> :<c-u>WhichKey  ';'<CR>
-		nnoremap <silent>[              :<c-u>WhichKey  '['<CR>
-		nnoremap <silent>]              :<c-u>WhichKey  ']'<CR>
+    function! InitWhickey()
+      let s:leader_key=substitute(get(g:,"mapleader","\\"), ' ', '<Space>', '')
+      let s:localleader_key= get(g:,'maplocalleader',';')
+		  execute 'nnoremap <silent> <Leader> :<c-u>WhichKey "'.s:leader_key.'"<CR>'
+		  execute 'vnoremap <silent> <Leader> :<c-u>WhichKeyVisual "'.s:leader_key.'"<CR>'
+		  execute 'nnoremap <silent> <LocalLeader> :<c-u>WhichKey "' .s:localleader_key.'"<CR>'
+    endfunction
+    call InitWhickey()
 endif
 
 if dein#tap('vim-smartchr')
