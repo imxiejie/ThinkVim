@@ -110,6 +110,37 @@
 | <kbd>v</kbd> | **v** | [vim-expand-region](https://github.com/terryma/vim-expand-region) |
 | <kbd>V</kbd> | **V** | [vim-expand-region](https://github.com/terryma/vim-expand-region) |
 
+## [defx.nvim](https://github.com/Shougo/defx.nvim)
+
+| Key                                                 | Mode | Action                                        |
+| --------------------------------------------------- | :--: | --------------------------------------------- |
+| <kbd>j</kbd> or <kbd>k</kbd>                        |  𝐍   | Move up and down the tree                     |
+| <kbd>l</kbd> or <kbd>Return</kbd>                   |  𝐍   | Toggle collapse/expand directory or open file |
+| <kbd>h</kbd>                                        |  𝐍   | Collapse directory tree                       |
+| <kbd>t</kbd>                                        |  𝐍   | Expand directory tree recursively             |
+| <kbd>.</kbd>                                        |  𝐍   | Toggle hidden files                           |
+| <kbd>Space</kbd>                                    |  𝐍   | Select entry                                  |
+| <kbd>\*</kbd>                                       |  𝐍   | Invert selection (select all)                 |
+| <kbd>&</kbd> or <kbd>\</kbd>                        |  𝐍   | Change into current working directory         |
+| <kbd>~</kbd>                                        |  𝐍   | Change to user home directory                 |
+| <kbd>u</kbd> or <kbd>Backspace</kbd>                |  𝐍   | Change into parent directory                  |
+| <kbd>u</kbd> <kbd>2</kbd>/<kbd>3</kbd>/<kbd>4</kbd> |  𝐍   | Change into parent directory count            |
+| <kbd>st</kbd>                                       |  𝐍   | Open file in new tab                          |
+| <kbd>sv</kbd>                                       |  𝐍   | Open file in a horizontal split               |
+| <kbd>sg</kbd>                                       |  𝐍   | Open file in a vertical split                 |
+| <kbd>N</kbd>                                        |  𝐍   | Create new directories and/or files           |
+| <kbd>K</kbd>                                        |  𝐍   | Create new directory                          |
+| <kbd>c</kbd> / <kbd>m</kbd> / <kbd>p</kbd>          |  𝐍   | Copy, move, and paste                         |
+| <kbd>r</kbd>                                        |  𝐍   | Rename file or directory                      |
+| <kbd>dd</kbd>                                       |  𝐍   | Trash selected files and directories          |
+| <kbd>y</kbd>                                        |  𝐍   | Yank path to clipboard                        |
+| <kbd>w</kbd>                                        |  𝐍   | Toggle window size                            |
+| <kbd>]g</kbd>                                       |  𝐍   | Next dirty git item                           |
+| <kbd>[g</kbd>                                       |  𝐍   | Previous dirty git item                       |
+| <kbd>x</kbd> or <kbd>gx</kbd>                       |  𝐍   | Execute associated system application         |
+| <kbd>gd</kbd>                                       |  𝐍   | Open git diff on selected file                |
+| <kbd>gl</kbd>                                       |  𝐍   | Open terminal file explorer with tmux         |
+
 ## Leader
 
 | KeyMap                             | Mode  | Description            |

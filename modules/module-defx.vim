@@ -162,14 +162,6 @@ function! s:find_files(context) abort
 	silent execute 'Denite file/rec:'.l:parent
 endfunction
 
-function! s:grep(context) abort
-	" Grep in parent directory with Denite
-	let l:target = a:context['targets'][0]
-	let l:parent = fnamemodify(l:target, ':h')
-	silent execute 'wincmd w'
-	silent execute 'Denite grep:'.l:parent
-endfunction
-
 function! s:toggle_width(context) abort
 	" Toggle between defx window width and longest line
 	let l:max = 0
