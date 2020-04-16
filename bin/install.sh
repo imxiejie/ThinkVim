@@ -144,7 +144,6 @@ npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-pa
 npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-floaterm --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
 ok "===>install all extensions success"
