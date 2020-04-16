@@ -171,5 +171,3 @@ autocmd FileType go
                     \ call WhichKeyForGo() |
                     \ call WhichKeyForGoDebug()
 
-hi! WhichKeyDesc guifg=#d7af00  ctermfg=178 guibg=NONE ctermbg=NONE
-hi! WhichKey  guifg=#5fafd7 ctermfg=74
