@@ -45,7 +45,6 @@ let g:coc_global_extensions =[
     \ 'coc-yank',
     \ 'coc-explorer',
     \ 'coc-actions',
-    \ 'coc-floaterm',
     \'coc-rust-analyzer'
     \]
 

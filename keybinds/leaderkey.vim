@@ -28,6 +28,10 @@ if dein#tap('any-jump.vim')
 	xnoremap <silent> <Leader>cj :AnyJump<CR>
 endif
 
+if dein#tap('vim-floaterm')
+  nnoremap <silent> <Leader>ot ::FloatermToggle<CR>
+endif
+
 if dein#tap('coc.nvim')
        " Remap for do codeAction of selected region
         function! s:cocActionsOpenFromSelected(type) abort
@@ -95,7 +99,6 @@ if dein#tap('coc.nvim')
         xmap <silent> <C-d> <Plug>(coc-cursors-range)
         " use normal command like `<Leader>xi(`
         nmap <Leader>x  <Plug>(coc-cursors-operator)
-        nnoremap <silent> <Leader>ot :<C-u>CocCommand floaterm.new<cr>
 
         function! s:select_current_word()
             if !get(g:, 'coc_cursors_activated', 0)
