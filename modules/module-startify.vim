@@ -41,4 +41,4 @@ let g:startify_custom_footer = Thinkvim_startify_center(s:footer)
 autocmd! FileType startify
 autocmd  FileType startify set laststatus=0 showtabline=0
   \| autocmd BufLeave <buffer> set laststatus=2 showtabline=2
-
+autocmd User Startified setlocal buflisted
