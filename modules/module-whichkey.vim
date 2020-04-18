@@ -45,6 +45,7 @@ let g:which_key_map = {
             \ 's' : 'git status',
             \ 'S' : 'show git status on fzf',
             \ 'l' : 'show git log',
+            \ 'z' : 'lazygit',
             \ },
       \ 'G' : 'distraction free writing' ,
       \ 'F' : 'open current file on filetree' ,
