@@ -188,11 +188,7 @@ if dein#tap('vim-fugitive')
 	nnoremap <silent> <Leader>gb :Git blame<CR>
 	nnoremap <silent> <Leader>gf :Gfetch<CR>
 	nnoremap <silent> <Leader>gs :Git<CR>
-endif
-
-if dein#tap('gina.vim')
-	nnoremap <silent><Leader>gp :Gina push<CR>
-	nnoremap <silent><Leader>gl :Gina log<CR>
+	nnoremap <silent> <Leader>gp :Gpush<CR>
 endif
 
 if dein#tap('vim-mundo')

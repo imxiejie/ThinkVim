@@ -151,8 +151,6 @@
       autocmd FileType fugitiveblame normal A
     augroup END
 
-- { repo: lambdalisue/gina.vim, on_cmd: Gina }
-
 - repo: Vigemus/iron.nvim
   if: has('nvim')
   on_cmd: [ IronRepl, IronReplHere, IronFocus, IronSend, IronWatchCurrentFile ]
