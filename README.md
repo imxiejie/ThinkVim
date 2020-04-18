@@ -27,7 +27,7 @@
 - Full Lsp support by [coc.nvim](https://github.com/neoclide/coc.nvim)
 - A declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
-- Support Html Css Less Json Yaml Toml Javascript Typescript React Vue Go Rust Python Dockerfile
+- Default support Html Css Less Json Yaml Toml Javascript Typescript React Vue Go Rust Python Dockerfile,Easy to add support for other languages
 
 ## Installation
 
