@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master)](https://travis-ci.com/hardcoreplayers/ThinkVim)
-[![Gitter](https://badges.gitter.im/thinkvim/Thinkvim.svg)](https://gitter.im/thinkvim/Thinkvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
@@ -41,6 +40,11 @@ sh bin/install.sh
 ## Quick Start
 
 Check the [thinkvim wiki](https://github.com/hardcoreplayers/ThinkVim/wiki) page or docs folder.
+
+## Feedback
+
+- ask on [![Gitter](https://badges.gitter.im/thinkvim/Thinkvim.svg)](https://gitter.im/thinkvim/Thinkvim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+- 中文频道 [![Gitter](https://badges.gitter.im/thinkvim/community.svg)](https://gitter.im/thinkvim/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 ## Backers
 
