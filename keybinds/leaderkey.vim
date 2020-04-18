@@ -29,7 +29,8 @@ if dein#tap('any-jump.vim')
 endif
 
 if dein#tap('vim-floaterm')
-  nnoremap <silent> <Leader>ot ::FloatermToggle<CR>
+  nnoremap <silent> <Leader>ot :FloatermToggle<CR>
+	nnoremap <silent> <Leader>gz :FloatermNew height=0.8 width=0.9 lazygit<CR>
 endif
 
 if dein#tap('coc.nvim')
