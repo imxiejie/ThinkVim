@@ -1,0 +1,2 @@
+
+- { repo: honza/dockerfile.vim, on_ft: Dockerfile }

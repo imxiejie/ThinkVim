@@ -1,0 +1,2 @@
+
+- { repo: elzr/vim-json, on_ft: json }

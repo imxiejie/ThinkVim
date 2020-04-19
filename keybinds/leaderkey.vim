@@ -33,6 +33,13 @@ if dein#tap('vim-floaterm')
 	nnoremap <silent> <Leader>gz :<C-u>FloatermNew height=0.7 width=0.8 lazygit<CR>
 endif
 
+" Dash keymap
+if dein#tap('dash.vim')
+    nnoremap <silent><localleader>d :Dash<CR>
+		" which_key_localmap
+		let g:which_key_localmap.d="open doc on Dash.app"
+endif
+
 if dein#tap('coc.nvim')
        " Remap for do codeAction of selected region
         function! s:cocActionsOpenFromSelected(type) abort

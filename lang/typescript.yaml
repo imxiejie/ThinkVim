@@ -1,0 +1,3 @@
+
+- { repo: HerringtonDarkholme/yats.vim,on_ft: [ typescript, typescriptreact]}
+- { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}

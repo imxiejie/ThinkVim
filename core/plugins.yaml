@@ -27,11 +27,27 @@
 
 # }}}
 
+- repo : hardcoreplayers/go-nvim
+  on_ft: [ go ,gomod ]
+
+- repo: sebdah/vim-delve
+  on_ft: go
 # Code{{{
 - repo: editorconfig/editorconfig-vim
 
 - repo: pechorin/any-jump.vim
   on_cmd: AnyJump
+
+- repo: rizzatti/dash.vim
+  if: "has('mac')"
+  on_map: { n: <Plug> }
+  hook_source: |
+      let g:dash_map = {
+        \ 'javascript': ['javascript', 'NodeJS'],
+        \ 'javascriptreact': ['react'],
+        \ 'html': ['html', 'svg'],
+        \ 'go' : 'Go',
+        \}
 # }}}
 
 # Lazy Loading
@@ -170,11 +186,6 @@
 # }}}
 
 # Language{{{
-- { repo: rust-lang/rust.vim, on_ft: rust }
-- { repo: chr4/nginx.vim, on_ft: nginx }
-- { repo: honza/dockerfile.vim, on_ft: Dockerfile }
-- { repo: cespare/vim-toml, on_ft: toml }
-- { repo: elzr/vim-json, on_ft: json }
 
 - repo: pearofducks/ansible-vim
   on_ft: [ ansible, ansible_hosts, jinja2 ]
@@ -189,49 +200,7 @@
       \   '*.ini.j2': 'ini'
       \ }
 
-- { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
-- { repo: HerringtonDarkholme/yats.vim,on_ft: [ typescript, typescriptreact]}
-- { repo: peitalin/vim-jsx-typescript, on_ft: [typescriptreact]}
-
-- { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
-- { repo: vim-scripts/python_match.vim, on_ft: python }
-- repo: vim-python/python-syntax
-  on_ft: python
-  hook_add: let g:python_highlight_all = 1
 - { repo: raimon49/requirements.txt.vim, on_ft: requirements }
-
-# - repo: fatih/vim-go
-#   on_ft: [go,gomod]
-#   hook_source: |
-#     let g:go_gopls_enabled = 0
-#     let g:go_code_completion_enabled = 0
-#     let g:go_doc_keywordprg_enabled = 0
-#     let g:go_def_mapping_enabled = 0
-#     let g:go_mod_fmt_autosave = 0
-#     let g:go_highlight_array_whitespace_error = 1
-#     let g:go_highlight_chan_whitespace_error = 1
-#     let g:go_highlight_space_tab_error = 0
-#     let g:go_highlight_trailing_whitespace_error = 1
-#     let g:go_highlight_extra_types = 1
-#     let g:go_highlight_build_constraints = 1
-#     let g:go_highlight_extra_types = 1
-#     let g:go_highlight_fields = 1
-#     let g:go_highlight_format_strings = 1
-#     let g:go_highlight_functions = 1
-#     let g:go_highlight_function_calls = 1
-#     let g:go_highlight_function_parameters = 1
-#     let g:go_highlight_types = 1
-#     let g:go_highlight_generate_tags = 1
-#     let g:go_highlight_operators = 1
-#     let g:go_highlight_string_spellcheck = 0
-#     let g:go_highlight_variable_declarations = 0
-#     let g:go_highlight_variable_assignments = 0
-
-- repo : hardcoreplayers/go-nvim
-  on_ft: [ go ,gomod ]
-
-- repo: sebdah/vim-delve
-  on_ft: go
 
 # Markdown related
 - repo: plasticboy/vim-markdown
