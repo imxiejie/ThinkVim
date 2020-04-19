@@ -1,0 +1,6 @@
+
+- { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
+- { repo: vim-scripts/python_match.vim, on_ft: python }
+- repo: vim-python/python-syntax
+  on_ft: python
+  hook_add: let g:python_highlight_all = 1

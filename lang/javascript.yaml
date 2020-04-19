@@ -1,0 +1,3 @@
+
+- { repo: chemzqm/vim-jsx-improve, on_ft: [javascript,javascriptreact]}
+
