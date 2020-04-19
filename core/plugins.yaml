@@ -37,6 +37,17 @@
 # Lazy Loading
 # ==========================================
 
+- repo: rizzatti/dash.vim
+  if: "has('mac')"
+  on_map: { n: <Plug> }
+  hook_source: |
+      let g:dash_map = {
+        \ 'javascript': ['javascript', 'NodeJS'],
+        \ 'javascriptreact': ['react'],
+        \ 'html': ['html', 'svg'],
+        \ 'go' : 'Go',
+        \}
+
 # Find Everythins
 - repo: liuchengxu/vim-clap
   build: 'sh ./install.sh'
