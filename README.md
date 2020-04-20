@@ -3,7 +3,7 @@
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/taigacute/IMG/master/thinkvim/thinkvim.png" width="960" height="540">
+<img src="https://user-images.githubusercontent.com/41671631/79723930-3a138400-8319-11ea-857a-c672813df67f.png" width="960" height="540">
 </div>
 
 <p align="center">
