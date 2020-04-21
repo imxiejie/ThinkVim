@@ -18,14 +18,6 @@ function ensureThinkvimd(){
 
   cd ~/.thinkvim.d/
 
-  if [ ! -f plugins.yaml ]
-  then
-    touch plugins.yaml
-    ok "create .thinkvim.d/plugins.yaml success"
-  else
-    warn "the .thinkvim.d/plugns.yaml exist skipped"
-  fi
-
   if [ ! -f init.vim ]
   then
     touch init.vim
@@ -33,6 +25,16 @@ function ensureThinkvimd(){
   else
     warn "the .thinkvim.d/init.vim exist skipped"
   fi
+
+  if [ ! -f plugins.yaml ]
+  then
+    touch plugins.yaml
+    ok "create .thinkvim.d/plugins.yaml success"
+    curl -L https://github.com/hardcoreplayers/ThinkVim/releases/download/v0.0.1/generator-x86_64-darwin
+  else
+    warn "the .thinkvim.d/plugns.yaml exist skipped"
+  fi
+
   cd -
 }
 
