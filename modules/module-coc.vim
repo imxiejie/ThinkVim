@@ -23,6 +23,7 @@ let g:coc_global_extensions =[
     \ 'coc-html',
     \ 'coc-css',
     \ 'coc-tsserver',
+    \ 'coc-vimlsp',
     \ 'coc-vetur',
     \ 'coc-snippets',
     \ 'coc-prettier',
