@@ -120,6 +120,7 @@ fi
 
 running "Installing extensions...If you live in China,npm is very slow.\n
 you may need to config npm to use taobao or cnpm\n"
+npm install coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-tsserver --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
