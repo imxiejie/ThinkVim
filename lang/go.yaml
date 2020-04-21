@@ -28,6 +28,15 @@
 
 - repo : hardcoreplayers/go-nvim
   on_ft: [ go ,gomod ]
+  hook_source: |
+    call coc#config('languageserver', {
+      \ 'golang': {
+        \ "command": "gopls",
+        \ "rootPatterns": ["go.mod"],
+        \ "disableWorkspaceFolders": "true",
+        \ "filetypes": ["go"]
+        \ }
+        \})
 
 - repo: sebdah/vim-delve
   on_ft: go

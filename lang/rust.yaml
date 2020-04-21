@@ -1,2 +1,5 @@
 
-- { repo: rust-lang/rust.vim, on_ft: rust }
+- repo: rust-lang/rust.vim
+  on_ft: rust
+  hook_add:
+    call coc#add_extension('coc-rust-analyzer')

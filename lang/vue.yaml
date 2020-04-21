@@ -1,2 +1,4 @@
 - repo: posva/vim-vue
   on_ft: vue
+  hook_add:
+    call coc#add_extension('coc-vetur')
