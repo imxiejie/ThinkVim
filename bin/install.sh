@@ -30,7 +30,6 @@ function ensureThinkvimd(){
   then
     touch plugins.yaml
     ok "create .thinkvim.d/plugins.yaml success"
-    curl -L https://github.com/hardcoreplayers/ThinkVim/releases/download/v0.0.1/generator-x86_64-darwin
   else
     warn "the .thinkvim.d/plugns.yaml exist skipped"
   fi
