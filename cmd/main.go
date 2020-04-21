@@ -11,23 +11,25 @@ import (
 	"github.com/AlecAivazis/survey/v2"
 )
 
-var Homepath = os.Getenv("HOME")
+var (
+	homepath        = os.Getenv("HOME")
+	langpluginsfile string
+	wg              sync.WaitGroup
+)
 
 func main() {
 	userlangs := cliqs()
-	var langpluginsfile string
-	wg := sync.WaitGroup{}
 	for _, v := range userlangs {
-		langpluginsfile = Homepath + "/.config/nvim/lang/" + v + ".yaml"
+		langpluginsfile = homepath + "/.config/nvim/lang/" + v + ".yaml"
 		wg.Add(1)
-		go writefile(&wg, langpluginsfile)
+		go writeuserplugins(&wg, langpluginsfile)
 	}
 	wg.Wait()
-	fmt.Println("success")
+	fmt.Println("generat your languages plugins.yaml success")
 }
 
-func writefile(wg *sync.WaitGroup, filename string) {
-	userplugins := Homepath + "/.thinkvim.d/plugins.yaml"
+func writeuserplugins(wg *sync.WaitGroup, filename string) {
+	userplugins := homepath + "/.thinkvim.d/plugins.yaml"
 	mu := sync.RWMutex{}
 	mu.RLock()
 	f, err := os.OpenFile(userplugins, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
@@ -37,7 +39,8 @@ func writefile(wg *sync.WaitGroup, filename string) {
 	content, _ := ioutil.ReadFile(filename)
 	_, err = f.Write(content)
 	if err != nil {
-		log.Fatalln("write to thinkvim/plugins.yaml failed")
+		log.Fatalln("write to user plugins.yaml failed")
+		os.Exit(1)
 	}
 	wg.Done()
 	f.Close()
@@ -52,13 +55,21 @@ func cliqs() []string {
 			Prompt: &survey.MultiSelect{
 				Message: "What languages do you write:",
 				Options: []string{
+					"c-family",
+					"R",
 					"javascript",
 					"typescript",
 					"vue",
 					"go",
 					"rust",
+					"haskell",
+					"php",
+					"ruby",
+					"scala",
+					"shell",
+					"lua",
 					"python",
-					"docker",
+					"dockerfile",
 					"json",
 					"nginx",
 					"toml",
@@ -69,7 +80,7 @@ func cliqs() []string {
 	err := survey.Ask(langquestion, &answers, survey.WithIcons(func(icons *survey.IconSet) {
 		icons.UnmarkedOption.Text = "○"
 		icons.MarkedOption.Text = "◉"
-	}), survey.WithPageSize(10))
+	}), survey.WithPageSize(18))
 	if err != nil {
 		panic(err)
 	}
