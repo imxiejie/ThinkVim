@@ -1,3 +1,4 @@
+
 # shell zsh support
 # LanguageServerProtocol used by https://github.com/bash-lsp/bash-language-server
 - repo: arzg/vim-sh

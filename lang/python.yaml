@@ -1,3 +1,7 @@
+
+# Python support
+# LanguageServerProtocol used by coc-python
+# default of coc-python is mpls you can choose pyls
 - repo: vim-python/python-syntax
   on_ft: python
   hook_add:
