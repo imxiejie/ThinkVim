@@ -122,16 +122,10 @@ running "Installing extensions...If you live in China,npm is very slow.\n
 you may need to config npm to use taobao or cnpm\n"
 npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-tsserver --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-vetur --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-prettier --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-tslint-plugin --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-eslint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-emmet --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-python --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-highlight --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
@@ -144,7 +138,6 @@ npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-pa
 npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-rust-analyzer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
 ok "===>install all extensions success"
 

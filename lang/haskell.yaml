@@ -1,3 +1,4 @@
+
 # Haskell support
 # LanguageServerProtocol used by https://github.com/haskell/haskell-ide-engine
 - repo: neovimhaskell/haskell-vim

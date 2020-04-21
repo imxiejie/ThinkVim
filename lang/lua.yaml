@@ -1,3 +1,6 @@
+
+# lua support
+# LanguageServerProtocol used by lua-lsp
 - repo: tbastos/vim-lua
   on_ft: lua
   hook_source: |
