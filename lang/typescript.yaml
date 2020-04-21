@@ -3,7 +3,7 @@
 - repo: HerringtonDarkholme/yats.vim
   on_ft: [ typescript, typescriptreact]
   hook_add:
-    call coc#add_extension('coc-tsserver')
+    autocmd FileType typescript,typescriptreact exec "CocInstall coc-tsserver"
 
 - repo: peitalin/vim-jsx-typescript
   on_ft: [typescriptreact]

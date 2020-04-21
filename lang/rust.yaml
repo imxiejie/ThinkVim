@@ -3,4 +3,4 @@
 - repo: rust-lang/rust.vim
   on_ft: rust
   hook_add:
-    call coc#add_extension('coc-rust-analyzer')
+    autocmd FileType rust exec "CocInstall coc-rust-analyzer"

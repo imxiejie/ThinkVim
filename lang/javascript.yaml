@@ -3,7 +3,7 @@
 - repo: chemzqm/vim-jsx-improve
   on_ft: [javascript,javascriptreact]
   hook_add:
-    call coc#add_extension('coc-tsserver')
+    autocmd FileType javascript,javascriptreact exec "CocInstall coc-tsserver"
 
 - { repo: moll/vim-node, on_ft: [ javascript, javascriptreact ] }
 - { repo: jparise/vim-graphql, on_ft: [ javascript, javascriptreact ] }
