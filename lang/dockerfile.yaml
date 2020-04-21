@@ -1,0 +1,13 @@
+# Dockerfile support
+# LanguageServerProtocol used https://github.com/rcjsuen/dockerfile-language-server-nodejs
+- repo: honza/dockerfile.vim
+  on_ft: Dockerfile
+  hook_source: |
+    call coc#config('languageserver', {
+      \ 'dockerfile': {
+        \ "command": "docker-langserver",
+        \ "filetypes": ["go"],
+        \ "args": ["--stdio"]
+        \ }
+        \})
+
