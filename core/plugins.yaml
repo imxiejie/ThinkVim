@@ -27,11 +27,6 @@
 
 # }}}
 
-- repo : hardcoreplayers/go-nvim
-  on_ft: [ go ,gomod ]
-
-- repo: sebdah/vim-delve
-  on_ft: go
 # Code{{{
 - repo: editorconfig/editorconfig-vim
 
@@ -200,8 +195,6 @@
       \   '*.ini.j2': 'ini'
       \ }
 
-- { repo: raimon49/requirements.txt.vim, on_ft: requirements }
-
 # Markdown related
 - repo: plasticboy/vim-markdown
   on_ft: markdown
@@ -228,6 +221,15 @@
       \ 'makefile=make',
       \ 'py=python'
       \ ]
+
+- repo: rhysd/vim-gfm-syntax
+  depends: vim-markdown
+  on_ft: markdown
+  hook_add: |
+    let g:gfm_syntax_enable_always = 0
+    let g:gfm_syntax_highlight_emoji = 0
+    let g:gfm_syntax_enable_filetypes = ['markdown']
+
 # }}}
 
 # Coding{{{
@@ -244,7 +246,7 @@
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
-  on_ft: [python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php]
+  on_ft: [html,css,javascript,javascriptreact,vue,typescript,typescriptreact]
   hook_source: |
     let g:user_emmet_complete_tag = 0
     let g:user_emmet_install_global = 0

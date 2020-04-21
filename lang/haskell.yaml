@@ -1,0 +1,20 @@
+# Haskell support
+# LanguageServerProtocol used by https://github.com/haskell/haskell-ide-engine
+- repo: neovimhaskell/haskell-vim
+  on_ft: haskell
+  hook_source: |
+    call coc#config('languageserver', {
+      \ 'haskell': {
+        \ "command": "hie-wrapper",
+        \ "rootPatterns": [".stack.yaml","cabal.config","package.yaml"],
+        \ "filetypes": ["hs","lhs","haskell"],
+        \ "initializationOptions":{},
+        \ "settings":{
+          \ "languageServerHaskell":{
+            \ "hlintOn":"true",
+            \ "maxNumberOfProblems":10,
+            \ "completionSnippetsOn": "true"
+        \ }
+        \ }
+        \ }
+        \})

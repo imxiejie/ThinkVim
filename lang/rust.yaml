@@ -1,4 +1,5 @@
-
+# Rust support
+# LanguageServerProtocol used by coc-rust-analyzer extension
 - repo: rust-lang/rust.vim
   on_ft: rust
   hook_add:
