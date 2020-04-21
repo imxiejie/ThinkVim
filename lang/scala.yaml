@@ -1,5 +1,5 @@
 # Scala support
 # LanguageServerProtocol used by coc-scala
 - repo: derekwyatt/vim-scala
-  hook_add:
-    call coc#add_extension('coc-metals')
+  hook_source:
+    autocmd FileType scala exec "CocInstall coc-metals"

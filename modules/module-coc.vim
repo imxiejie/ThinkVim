@@ -22,8 +22,6 @@ let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =[
     \ 'coc-html',
     \ 'coc-css',
-    \ 'coc-tsserver',
-    \ 'coc-vetur',
     \ 'coc-snippets',
     \ 'coc-prettier',
     \ 'coc-tslint-plugin',
@@ -31,7 +29,6 @@ let g:coc_global_extensions =[
     \ 'coc-emmet',
     \ 'coc-pairs',
     \ 'coc-json',
-    \ 'coc-python',
     \ 'coc-imselect',
     \ 'coc-highlight',
     \ 'coc-git',
@@ -45,7 +42,6 @@ let g:coc_global_extensions =[
     \ 'coc-yank',
     \ 'coc-explorer',
     \ 'coc-actions',
-    \'coc-rust-analyzer'
     \]
 
 augroup MyAutoCmd

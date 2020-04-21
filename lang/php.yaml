@@ -1,6 +1,6 @@
 # Php support
 # LanguageServerProtocol use for php
-# by https://github.com/bmewburn/intelephense-docs
+# https://github.com/bmewburn/vscode-intelephense
 - repo: StanAngeloff/php.vim
   on_ft: php
   hook_source: |
