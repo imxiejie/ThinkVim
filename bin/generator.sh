@@ -33,7 +33,7 @@ try_download() {
   else
     local temp=${TMPDIR}/generator
     download "$DOWNLOAD_URL/$asset" "$temp"
-    mv "$temp" bin/$APP
+    mv "$temp" ~/.config/nvim/bin/$APP
   fi
   chmod a+x "bin/$APP"
 }
