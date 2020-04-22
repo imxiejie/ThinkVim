@@ -5,6 +5,9 @@ source ./bin/pynvim.sh
 
 thinkvim_personal="$HOME/.thinkvim.d"
 
+action "Download generator binary"
+source ./bin/generator.sh
+
 action "Create .thinkvim.d "
 
 function ensureThinkvimd(){
@@ -12,6 +15,8 @@ function ensureThinkvimd(){
   then
     mkdir -p $HOME/.thinkvim.d
     ok "create .thinkvim.d folder success"
+    action "Select your languages"
+    ./generator
   else
     warn "the .thinkvim.d folder exist skipped"
   fi

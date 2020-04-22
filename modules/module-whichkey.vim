@@ -71,7 +71,6 @@ let g:which_key_map = {
             \ },
       \ 'm' : 'open mundotree' ,
       \ 'j' : 'open coc-explorer',
-      \ 'x' : 'coc cursors operate',
       \ 'c'    : {
               \ 'name' : '+code' ,
               \ 'a'    : 'Lsp CodeActionSelected',
