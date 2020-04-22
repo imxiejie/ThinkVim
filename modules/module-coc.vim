@@ -22,6 +22,7 @@ let g:coc_status_warning_sign = '•'
 let g:coc_global_extensions =[
     \ 'coc-html',
     \ 'coc-css',
+    \ 'coc-vimlsp',
     \ 'coc-snippets',
     \ 'coc-emmet',
     \ 'coc-pairs',

@@ -40,6 +40,18 @@ if dein#tap('dash.vim')
 		let g:which_key_localmap.d="open doc on Dash.app"
 endif
 
+if dein#tap('coc-clap')
+        " Show all diagnostics
+        nnoremap <silent> <Leader>ce  :Clap coc_diagnostics<cr>
+        " Manage extensions
+        nnoremap <silent> <Leader>;  :Clap coc_extensions<cr>
+        " Show commands
+        nnoremap <silent> <Leader>,   :Clap coc_commands<cr>
+        " Search workspace symbols
+        nnoremap <silent> <Leader>cs  :Clap coc_symbols<cr>
+				nnoremap <silent> <silent>cS  :Clap coc_services<CR>
+endif
+
 if dein#tap('coc.nvim')
        " Remap for do codeAction of selected region
         function! s:cocActionsOpenFromSelected(type) abort
@@ -51,17 +63,8 @@ if dein#tap('coc.nvim')
         nnoremap <silent> <Leader>cn  :<C-u>CocNext<CR>
         " Do default action for previous item.
         nnoremap <silent> <Leader>cp  :<C-u>CocPrev<CR>
-        " Using CocList
-        " Show all diagnostics
-        nnoremap <silent> <Leader>ce  :<C-u>CocList diagnostics<cr>
-        " Manage extensions
-        nnoremap <silent> <Leader>;  :<C-u>CocList extensions<cr>
-        " Show commands
-        nnoremap <silent> <Leader>,  :<C-u>CocList commands<cr>
         " Find symbol of current document
         "nnoremap <silent> <Leader>co  :<C-u>CocList outline<cr>
-        " Search workspace symbols
-        nnoremap <silent> <Leader>cs  :<C-u>CocList -I symbols<cr>
         " Resume latest coc list
         nnoremap <silent> <Leader>'  :<C-u>CocListResume<CR>
         " Use `[e` and `]e` for navigate diagnostics
