@@ -49,7 +49,8 @@ if dein#tap('coc-clap')
         nnoremap <silent> <Leader>,   :Clap coc_commands<cr>
         " Search workspace symbols
         nnoremap <silent> <Leader>cs  :Clap coc_symbols<cr>
-				nnoremap <silent> <silent>cS  :Clap coc_services<CR>
+				nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
+				nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
 endif
 
 if dein#tap('coc.nvim')
@@ -60,18 +61,16 @@ if dein#tap('coc.nvim')
         xmap <silent> <Leader>ca :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
         nmap <silent> <Leader>ca :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
         " Do default action for next item.
-        nnoremap <silent> <Leader>cn  :<C-u>CocNext<CR>
+        nmap <silent> [a  :<C-u>CocNext<CR>
         " Do default action for previous item.
-        nnoremap <silent> <Leader>cp  :<C-u>CocPrev<CR>
-        " Find symbol of current document
-        "nnoremap <silent> <Leader>co  :<C-u>CocList outline<cr>
+        nmap <silent> ]a  :<C-u>CocPrev<CR>
         " Resume latest coc list
         nnoremap <silent> <Leader>'  :<C-u>CocListResume<CR>
         " Use `[e` and `]e` for navigate diagnostics
         nmap <silent> ]e <Plug>(coc-diagnostic-prev)
         nmap <silent> [e <Plug>(coc-diagnostic-next)
         " Remap for rename current word
-        nmap <Leader>cr <Plug>(coc-rename)
+        nmap <Leader>cn <Plug>(coc-rename)
         " Remap for format selected region
         vmap <Leader>cf  <Plug>(coc-format-selected)
         nmap <Leader>cf  <Plug>(coc-format-selected)
@@ -270,7 +269,7 @@ if dein#tap('committia.vim')
 endif
 
 if dein#tap('vim-quickrun')
-    nnoremap <silent> <Leader>cR :QuickRun<CR>
+    nnoremap <silent> <Leader>cr :QuickRun<CR>
 endif
 
 if dein#tap('vista.vim')
