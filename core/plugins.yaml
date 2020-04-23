@@ -94,7 +94,7 @@
 - {repo: tpope/vim-repeat , on_map: .* }
 
 - repo: liuchengxu/vim-which-key
-  on_cmd: [Whichkey, Whichkey!]
+  on_cmd: [ Whichkey, Whichkey! ]
   hook_add: source  $VIM_PATH/modules/module-whichkey.vim
   hook_post_source: |
     function! s:register_whichkey()
@@ -140,12 +140,20 @@
   hook_add: |
     let g:defx_icons_column_length = 1
     let g:defx_icons_mark_icon = ''
+# }}}
 
+# Database{{{
+- repo: tpope/vim-dadbod
+  depends: vim-dadbod-ui
+
+- repo: kristijanhusak/vim-dadbod-ui
+  on_cmd: [ DBUIAddConnection,DBUI,DBUIFindBuffer,DBUIRenameBuffer ]
+  hook_source: source $VIM_PATH/modules/module-dadbod-ui.vim
 # }}}
 
 # Terminal {{{
 - repo: voldikss/vim-floaterm
-  on_cmd: [FloatermNew,FloatermToggle,FloatermPrev,FloatermNext,FloatermSend]
+  on_cmd: [ FloatermNew,FloatermToggle,FloatermPrev,FloatermNext,FloatermSend ]
   hook_source: source  $VIM_PATH/modules/module-floaterm.vim
 # }}}
 
@@ -240,11 +248,11 @@
   on_map: { nx: <Plug> }
 
 - repo: Yggdroot/indentLine
-  on_ft: [python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php]
+  on_ft: [ python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php ]
   hook_source: source $VIM_PATH/modules/module-indentline.vim
 
 - repo: liuchengxu/vista.vim
-  on_cmd: [Vista,Vista!,Vista!!]
+  on_cmd: [ Vista,Vista!,Vista!! ]
   hook_source: source  $VIM_PATH/modules/module-vista.vim
 
 - repo: mattn/emmet-vim
@@ -260,11 +268,6 @@
   on_ft: [python,javascript,javascriptreact,html,css,go,vim,toml]
   hook_source: let g:rainbow_active = 1
 
-- repo: Shougo/echodoc.vim
-  on_event: CompleteDone
-  hook_source: |
-        call echodoc#enable()
-        let g:echodoc#type = "virtual"
 # }}}
 
 # Writing{{{

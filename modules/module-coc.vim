@@ -40,6 +40,7 @@ let g:coc_global_extensions =[
     \ 'coc-yank',
     \ 'coc-explorer',
     \ 'coc-actions',
+    \ 'coc-db',
     \]
 
 augroup MyAutoCmd
