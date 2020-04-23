@@ -44,8 +44,6 @@ function ensureThinkvimd(){
 
 ensureThinkvimd
 
-ok
-
 action "Checking node and yarn..."
 
 node --version | grep "v" &> /dev/null
@@ -144,6 +142,7 @@ npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-pa
 npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 
 ok "===>install all extensions success"
 
