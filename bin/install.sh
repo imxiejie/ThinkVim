@@ -148,63 +148,12 @@ then
   npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   ok "===>install all extensions success"
 else
-  warn "package.json duplicate.remove old package.json file"
-  rm -rf ~/.config/coc/extensions/package.json
-  echo '{"dependencies":{}}'> package.json
-  running "Installing extensions...If you live in China,npm is very slow.\n
-  you may need to config npm to use taobao or cnpm\n"
-  npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-emmet --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-highlight --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-emoji --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-project --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-lists --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-stylelint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  ok "===>install all extensions success"
-fi
-
-read -r -p "Install gopls? [y|N] " response
-if [[ $response =~ (y|yes|Y) ]];then
-  export GO111MODULE="on"
-  warn "If you are live in china,please use proxy to install gopls"
-  go get golang.org/x/tools/gopls@latest
-  go get -u github.com/go-delve/delve/cmd/dlv
-else
-  ok "skipped\n"
-fi
-
-read -r -p "Install rust-analysis? [y|N] " response
-if [[ $response =~ (y|yes|Y) ]];then
-  rustup -V | grep "v" &> /dev/null
-  if [ $? != 0 ]; then
-    error "Please install rustup by this script 'curl https://sh.rustup.rs -sSf | sh' "
-  else
-    rustup self update
-    # get nightly compiler
-    rustup update nightly
-    # after nightly installed
-    rustup component add rls-preview --toolchain nightly
-    rustup component add rust-analysis --toolchain nightly
-    rustup component add rust-src --toolchain nightly
-  fi
-else
-  ok "skipped\n"
+  warn "pakcages.json file exist,skipped install coc-extensions"
 fi
 
 ok "\n
 Congratulations thinkvim install success!!!\n
-Please choose a font which you favorite on here https://www.nerdfonts.com/font-downloads\n
-Then install it, thinkvim dosen't provide install font script.Because it depends on you.\n
+Install your favorite font on here https://www.nerdfonts.com/font-downloads\n
+If you use linux,you need install ctags with janson support.\n
+Install the Lsp for your languages.\n
 Thanks for you love this neovim config."
