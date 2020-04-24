@@ -27,12 +27,13 @@
 - Full Lsp support by [coc.nvim](https://github.com/neoclide/coc.nvim)
 - A declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
-- Default support Html Css Less Json Yaml Toml Javascript Typescript React Vue Go Rust Python Dockerfile,Easy to add support for other languages
+- Interactive shell installation language support
 
 ## Installation
 
 ```console
-git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
+Install develop branch
+git clone -b develop --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
 cd ~/.config/nvim
 sh bin/install.sh
 ```
