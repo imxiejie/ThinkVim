@@ -16,7 +16,8 @@
       endfunction
 #}}}
 
-- { repo: wellle/targets.vim, merged: 0 }
+- repo: wellle/targets.vim
+  merged: 0
 
 # Completion{{{
 - repo: neoclide/coc.nvim
