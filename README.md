@@ -15,6 +15,9 @@
   |
   <b><a href="/docs">docs</a></b>
 </p>
+## Newchange
+
+Thinkvim has support more languages in develop branch. but you can also install master branch.
 
 ## Features
 
@@ -28,6 +31,7 @@
 - A declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
 - Default support Html Css Less Json Yaml Toml Javascript Typescript React Vue Go Rust Python Dockerfile,Easy to add support for other languages
+
 
 ## Installation
 
