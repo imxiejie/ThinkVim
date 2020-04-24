@@ -43,11 +43,10 @@ function ensureThinkvimd(){
       action "choose your languages"
       ./bin/generator
     fi
+    cd -
   else
     warn "the .thinkvim.d/plugns.yaml exist skipped"
   fi
-
-  cd -
 }
 
 ensureThinkvimd
@@ -102,12 +101,14 @@ action "Install pynvim..."
 Install_Pynvim
 
 action "Install plugins"
+cd $HOME/.config/nvim/
 make
 running "Clean up..."
 rm -rf "$HOME/.cache/vim/dein/cache_nvim"
 rm -rf "$HOME/.cache/vim/dein/state_nvim.vim"
 rm -rf "$HOME/.cache/vim/dein/.cache/"
 nvim -u init.vim -c 'call dein#recache_runtimepath()|q'
+cd -
 
 action "Install coc extensions"
 
@@ -124,35 +125,55 @@ cd ~/.config/coc/extensions
 if [ ! -f package.json ]
 then
   echo '{"dependencies":{}}'> package.json
+  running "Installing extensions...If you live in China,npm is very slow.\n
+  you may need to config npm to use taobao or cnpm\n"
+  npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-emmet --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-highlight --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-emoji --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-project --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-lists --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-stylelint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  ok "===>install all extensions success"
 else
   warn "package.json duplicate.remove old package.json file"
   rm -rf ~/.config/coc/extensions/package.json
   echo '{"dependencies":{}}'> package.json
+  running "Installing extensions...If you live in China,npm is very slow.\n
+  you may need to config npm to use taobao or cnpm\n"
+  npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-emmet --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-highlight --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-emoji --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-project --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-lists --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-stylelint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  ok "===>install all extensions success"
 fi
-
-running "Installing extensions...If you live in China,npm is very slow.\n
-you may need to config npm to use taobao or cnpm\n"
-npm install coc-html --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-css --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-snippets --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-emmet --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-highlight --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-emoji --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-project --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-lists --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-stylelint --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-gitignore --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-yank --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-
-ok "===>install all extensions success"
 
 read -r -p "Install gopls? [y|N] " response
 if [[ $response =~ (y|yes|Y) ]];then
