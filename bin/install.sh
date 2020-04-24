@@ -4,9 +4,7 @@ source ./bin/format.sh
 source ./bin/pynvim.sh
 
 thinkvim_personal="$HOME/.thinkvim.d"
-
-action "Download generator binary"
-source ./bin/generator.sh
+generator="$HOME/.config/nvim/bin/generator"
 
 action "Create .thinkvim.d "
 
@@ -15,8 +13,6 @@ function ensureThinkvimd(){
   then
     mkdir -p $HOME/.thinkvim.d
     ok "create .thinkvim.d folder success"
-    action "Select your languages"
-    ./generator
   else
     warn "the .thinkvim.d folder exist skipped"
   fi
@@ -35,6 +31,18 @@ function ensureThinkvimd(){
   then
     touch plugins.yaml
     ok "create .thinkvim.d/plugins.yaml success"
+    cd -
+    cd $HOME/.config/nvim/
+    if [ ! -f $generator ]
+    then
+      action "Download generator binary"
+      source ./bin/generator.sh
+      action "choose your languages"
+      ./bin/generator
+    else
+      action "choose your languages"
+      ./bin/generator
+    fi
   else
     warn "the .thinkvim.d/plugns.yaml exist skipped"
   fi
