@@ -45,9 +45,6 @@
         \}
 # }}}
 
-# Lazy Loading
-# ==========================================
-
 # Find Everythins
 - repo: liuchengxu/vim-clap
   build: 'sh ./install.sh'
@@ -70,10 +67,6 @@
   on_map: { n: <Plug> }
   hook_source: source  $VIM_PATH/modules/module-choosewin.vim
 
-
-- repo: junegunn/vim-easy-align
-  on_ft: [vim,json,go,html,js,jsx,py,css,less,tmpl,toml,xml,sql,Dockerfile]
-
 - repo: psliwka/vim-smoothie
   on_func: smoothie#
   hook_add: |
@@ -90,8 +83,6 @@
         let g:quickrun_no_default_key_mappings = 1
 
 - {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
-
-- {repo: tpope/vim-repeat , on_map: .* }
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [ Whichkey, Whichkey! ]
@@ -172,7 +163,9 @@
       autocmd!
       autocmd FileType fugitiveblame normal A
     augroup END
+# }}}
 
+# Neovim Lua feature{{{
 - repo: Vigemus/iron.nvim
   if: has('nvim')
   on_cmd: [ IronRepl, IronReplHere, IronFocus, IronSend, IronWatchCurrentFile ]
@@ -181,17 +174,11 @@
   hook_add: let g:iron_map_defaults = 0 | let g:iron_map_extended = 0
   hook_source: luafile $VIM_PATH/modules/module-iron.lua
 
-# }}}
-
-# Neovim Lua feature{{{
 - repo: norcalli/nvim-colorizer.lua
   if: has('nvim-0.4')
   on_event: FileType
   hook_source: luafile $VIM_PATH/modules/module-colorizer.lua
-
 # }}}
-
-# Language{{{
 
 - repo: pearofducks/ansible-vim
   on_ft: [ ansible, ansible_hosts, jinja2 ]
@@ -205,43 +192,6 @@
       \   '*.conf.j2': 'conf',
       \   '*.ini.j2': 'ini'
       \ }
-
-# Markdown related
-- repo: plasticboy/vim-markdown
-  on_ft: markdown
-  hook_add: |
-    let g:vim_markdown_folding_level = 1
-    let g:vim_markdown_folding_style_pythonic = 1
-    let g:vim_markdown_frontmatter = 1
-    let g:vim_markdown_auto_insert_bullets = 1
-    let g:vim_markdown_new_list_item_indent = 0
-    let g:vim_markdown_conceal_code_blocks = 0
-    let g:vim_markdown_conceal = 0
-    let g:vim_markdown_strikethrough = 1
-    let g:vim_markdown_edit_url_in = 'vsplit'
-    let g:vim_markdown_fenced_languages = [
-      \ 'c++=cpp',
-      \ 'viml=vim',
-      \ 'bash=sh',
-      \ 'ini=dosini',
-      \ 'js=javascript',
-      \ 'json=javascript',
-      \ 'jsx=javascriptreact',
-      \ 'tsx=typescriptreact',
-      \ 'docker=Dockerfile',
-      \ 'makefile=make',
-      \ 'py=python'
-      \ ]
-
-- repo: rhysd/vim-gfm-syntax
-  depends: vim-markdown
-  on_ft: markdown
-  hook_add: |
-    let g:gfm_syntax_enable_always = 0
-    let g:gfm_syntax_highlight_emoji = 0
-    let g:gfm_syntax_enable_filetypes = ['markdown']
-
-# }}}
 
 # Coding{{{
 - repo: tyru/caw.vim
@@ -271,12 +221,6 @@
 # }}}
 
 # Writing{{{
-- repo: iamcco/markdown-preview.nvim
-  on_ft: [markdown,pandoc.markdown,rmd]
-  build: 'sh -c "cd app & yarn install"'
-  hook_source: |
-      let g:mkdp_auto_start = 0
-
 - repo: junegunn/goyo.vim
   on_cmd: Goyo
   hook_source: source  $VIM_PATH/modules/module-goyo.vim
@@ -319,6 +263,3 @@
 - repo: kana/vim-textobj-function
   on_map: { ox: <Plug> }
   hook_add: let g:textobj_function_no_default_key_mappings = 1
-
-#
-#  vim: set ts=2 sw=2 tw=80 et :
