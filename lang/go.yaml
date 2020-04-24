@@ -13,6 +13,7 @@
         \ }
         \})
 
+# Go debug support
 - repo: sebdah/vim-delve
   on_ft: go
 
