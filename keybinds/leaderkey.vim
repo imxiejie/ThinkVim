@@ -152,13 +152,6 @@ if dein#tap('vim-clap')
 	nnoremap <silent> <Leader>oc :<C-u>Clap personalconf<CR>
 endif
 
-if dein#tap('vim-easy-align')
-    " Start interactive EasyAlign in visual mode (e.g. vipga)
-    xmap ga <Plug>(EasyAlign)
-    " Start interactive EasyAlign for a motion/text object (e.g. gaip)
-    nmap ga <Plug>(EasyAlign)
-endif
-
 if dein#tap('vim-go')
 	function! InitGoKeyMap() abort
 	 nnoremap <silent> <LocalLeader>ga :GoAddTags<CR>
@@ -334,6 +327,18 @@ if dein#tap('vim-sandwich')
      xmap is <Plug>(textobj-sandwich-query-i)
      omap as <Plug>(textobj-sandwich-query-a)
      xmap as <Plug>(textobj-sandwich-query-a)
+endif
+
+if dein#tap('vim-asterisk')
+	map *   <Plug>(asterisk-g*)
+	map g*  <Plug>(asterisk-*)
+	map #   <Plug>(asterisk-g#)
+	map g#  <Plug>(asterisk-#)
+
+	map z*  <Plug>(asterisk-z*)
+	map gz* <Plug>(asterisk-gz*)
+	map z#  <Plug>(asterisk-z#)
+	map gz# <Plug>(asterisk-gz#)
 endif
 
 if dein#tap('vim-expand-region')

@@ -4,6 +4,5 @@
   on_ft: [javascript,javascriptreact]
   hook_add:
     autocmd FileType javascript,javascriptreact exec "CocInstall coc-tsserver coc-eslint coc-prettier"
-
 - { repo: moll/vim-node, on_ft: [ javascript, javascriptreact ] }
 - { repo: jparise/vim-graphql, on_ft: [ javascript, javascriptreact ] }
