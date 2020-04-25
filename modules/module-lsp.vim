@@ -26,6 +26,12 @@ if dein#tap('chromatica.nvim')
         \})
 endif
 
+"python lsp config
+if dein#tap('python-syntax')
+    let g:python_highlight_all = 1
+    call coc#add_extension('coc-python')
+endif
+
 "docker lsp config
 if dein#tap('Dockerfile.vim')
     call coc#config('languageserver', {
