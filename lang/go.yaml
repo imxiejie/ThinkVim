@@ -1,19 +1,6 @@
 
-# Go support
+# Go Debug support
 # LanguageServerProtocol used by gopls
-- repo : hardcoreplayers/go-nvim
-  on_ft: [ go ,gomod ]
-  hook_source: |
-    call coc#config('languageserver', {
-      \ 'golang': {
-        \ "command": "gopls",
-        \ "rootPatterns": ["go.mod"],
-        \ "disableWorkspaceFolders": "true",
-        \ "filetypes": ["go"]
-        \ }
-        \})
-
-# Go debug support
-- repo: sebdah/vim-delve
-  on_ft: go
+- { repo : hardcoreplayers/go-nvim,on_ft: [ go ,gomod ]}
+- { repo: sebdah/vim-delve,on_ft: go }
 

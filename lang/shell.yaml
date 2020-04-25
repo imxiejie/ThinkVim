@@ -1,16 +1,4 @@
 
 # shell zsh support
 # LanguageServerProtocol used by https://github.com/bash-lsp/bash-language-server
-- repo: arzg/vim-sh
-  on_ft: [sh,zsh]
-  hook_source: |
-    call coc#config('languageserver', {
-      \ 'bash': {
-        \ "command": "bash-language-server",
-        \ "args" : ["start"]
-        \ "rootPatterns": ["go.mod"],
-        \ "ignoredRootPaths": ["~"],
-        \ "filetypes": ["sh"]
-        \ }
-        \})
-
+- { repo: arzg/vim-sh,on_ft: [ sh,zsh ]}

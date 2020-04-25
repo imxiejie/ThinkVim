@@ -7,7 +7,6 @@
   hook_add:
     autocmd FileType python exec "CocInstall coc-python"
     let g:python_highlight_all = 1
-
 - { repo: Vimjas/vim-python-pep8-indent, on_ft: python }
 - { repo: vim-scripts/python_match.vim, on_ft: python }
 - { repo: raimon49/requirements.txt.vim, on_ft: requirements }

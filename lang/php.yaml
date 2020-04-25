@@ -2,16 +2,4 @@
 # Php support
 # LanguageServerProtocol use for php
 # https://github.com/bmewburn/vscode-intelephense
-- repo: StanAngeloff/php.vim
-  on_ft: php
-  hook_source: |
-    call coc#config('languageserver', {
-      \ 'intelephense': {
-        \ "command": "intelephense",
-        \ "args": ["--stdio"],
-        \ "filetypes": ["php"],
-        \ "initializationOptions": {
-             \ "storagePath": "/tmp/intelephense"
-        \ }
-        \ }
-        \})
+- { repo: StanAngeloff/php.vim,on_ft: php }

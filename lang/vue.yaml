@@ -1,7 +1,4 @@
 
 # Vue support
 # LanguageServerProtocol used by coc-vetur
-- repo: posva/vim-vue
-  on_ft: vue
-  hook_add:
-    autocmd FileType vue exec "CocInstall coc-vetur"
+- { repo: posva/vim-vue,on_ft: vue }

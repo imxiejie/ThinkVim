@@ -81,7 +81,7 @@ func cliqs() []string {
 	err := survey.Ask(langquestion, &answers, survey.WithIcons(func(icons *survey.IconSet) {
 		icons.UnmarkedOption.Text = "○"
 		icons.MarkedOption.Text = "◉"
-	}), survey.WithPageSize(18))
+	}), survey.WithPageSize(19))
 	if err != nil {
 		panic(err)
 	}
