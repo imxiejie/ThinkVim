@@ -227,7 +227,7 @@ set titlelen=95
 " Title string.
 let &g:titlestring="
       \ %{expand('%:p:~:.')}%(%m%r%w%)
-      \ %<\(%{fnamemodify(getcwd(), ':~')}\) - Neovim"
+      \ %<\[%{fnamemodify(getcwd(), ':~')}\] - Neovim"
 
 set showmatch           " Jump to matching bracket
 set matchpairs+=<:>     " Add HTML brackets to pair matching
