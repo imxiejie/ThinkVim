@@ -16,9 +16,6 @@
       endfunction
 #}}}
 
-- repo: wellle/targets.vim
-  merged: 0
-
 # Completion{{{
 - repo: neoclide/coc.nvim
   merge: 0
@@ -75,6 +72,7 @@
 
 # Code{{{
 - repo: editorconfig/editorconfig-vim
+  on_path: .*
 
 - repo: pechorin/any-jump.vim
   on_cmd: AnyJump
@@ -174,7 +172,6 @@
       \ 'Unknown'   : '⁇'
       \ }
 
-
 - repo: kristijanhusak/defx-icons
   on_source: defx.nvim
   hook_add: |
@@ -184,6 +181,7 @@
 
 # Database{{{
 - repo: tpope/vim-dadbod
+  on_cmd: DB
   depends: vim-dadbod-ui
 
 - repo: kristijanhusak/vim-dadbod-ui
@@ -196,7 +194,6 @@
   on_cmd: [ FloatermNew,FloatermToggle,FloatermPrev,FloatermNext,FloatermSend ]
   hook_source: source  $VIM_PATH/modules/module-floaterm.vim
 # }}}
-
 
 # Version control{{{
 - { repo: jreybert/vimagit, on_cmd: Magit }
@@ -229,25 +226,12 @@
   hook_source: luafile $VIM_PATH/modules/module-colorizer.lua
 # }}}
 
-- repo: pearofducks/ansible-vim
-  on_ft: [ ansible, ansible_hosts, jinja2 ]
-  hook_add: |
-    let g:ansible_extra_keywords_highlight = 1
-    let g:ansible_template_syntaxes = {
-      \   '*.json.j2': 'json',
-      \   '*.(ba)?sh.j2': 'sh',
-      \   '*.ya?ml.j2': 'yaml',
-      \   '*.xml.j2': 'xml',
-      \   '*.conf.j2': 'conf',
-      \   '*.ini.j2': 'ini'
-      \ }
-
 # Coding{{{
 - repo: tyru/caw.vim
   on_map: { nx: <Plug> }
 
 - repo: Yggdroot/indentLine
-  on_ft: [ python,html,css,javascript,javascriptreact,vue,c,c++,lua,rust,typescript,typescriptreact,php ]
+  on_event: FileType
   hook_source: source $VIM_PATH/modules/module-indentline.vim
 
 - repo: liuchengxu/vista.vim
@@ -256,7 +240,7 @@
 
 - repo: mattn/emmet-vim
   on_event: InsertEnter
-  on_ft: [html,css,javascript,javascriptreact,vue,typescript,typescriptreact]
+  on_ft: [ html,css,javascript,javascriptreact,vue,typescript,typescriptreact ]
   hook_source: |
     let g:user_emmet_complete_tag = 0
     let g:user_emmet_install_global = 0
@@ -304,6 +288,10 @@
 
 - repo: kana/vim-smartchr
   on_event: InsertCharPre
+
+- repo: kana/vim-niceblock
+  on_map: { x: <Plug> }
+  hook_add: let g:niceblock_no_default_key_mappings = 0
 
 - repo: osyo-manga/vim-textobj-multiblock
   on_map: { ox: <Plug> }

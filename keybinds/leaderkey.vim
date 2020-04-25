@@ -341,6 +341,12 @@ if dein#tap('vim-asterisk')
 	map gz# <Plug>(asterisk-gz#)
 endif
 
+if dein#tap('vim-niceblock')
+	silent! xmap I  <Plug>(niceblock-I)
+	silent! xmap gI <Plug>(niceblock-gI)
+	silent! xmap A  <Plug>(niceblock-A)
+endif
+
 if dein#tap('vim-expand-region')
         xmap v <Plug>(expand_region_expand)
         xmap V <Plug>(expand_region_shrink)
