@@ -45,7 +45,7 @@ inoremap <C-O> <Esc>o
 nnoremap  ]b :<C-u>bp<CR>
 nnoremap  [b :<C-u>bn<CR>
 "delete buffer
-nnoremap <C-x> :<C-u>bd<CR>
+nmap <C-x>b :<C-u>bd<CR>
 
 "switch windw
 nnoremap <C-h> <C-w>h
