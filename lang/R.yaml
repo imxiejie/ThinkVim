@@ -1,7 +1,4 @@
 
 # R support
 # LanguageServerProtocol used by coc-R
-- repo: jalvesaq/Nvim-R
-  on_ft: R
-  hook_add:
-    autocmd FileType R exec "CocInstall coc-R"
+- { repo: jalvesaq/Nvim-R,on_ft: R }

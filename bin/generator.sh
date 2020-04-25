@@ -2,7 +2,7 @@
 
 set -u
 
-version=v0.0.1
+version=v0.0.2
 
 APP=generator
 

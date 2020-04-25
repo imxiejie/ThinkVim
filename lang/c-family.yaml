@@ -1,19 +1,4 @@
 
 # C family support https://github.com/arakashic/chromatica.nvim
 # LanguageServerProtocol used by ccls
-- repo: arakashic/chromatica.nvim
-  on_ft: [ c,cpp]
-  hook_source: |
-    call coc#config('languageserver', {
-      \ 'ccls': {
-        \ "command": "ccls",
-        \ "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-        \ "filetypes": ["c","cpp","objc","objcpp"]
-        \ "initializationOptions": {
-          \ "cache":{
-            \ "directory": "/tmp/ccls"
-        \ }
-        \ }
-        \ }
-        \})
-
+- { repo: arakashic/chromatica.nvim,on_ft: [ c,cpp ]}
