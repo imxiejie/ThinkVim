@@ -120,8 +120,6 @@ if dein#tap('coc.nvim')
         command! -nargs=0 Format :call CocAction('format')
 
         nnoremap  <Leader>fz :<C-u>CocSearch -w<Space>
-        " use normal command like `<Leader>xi(`
-        nmap <Leader>x  <Plug>(coc-cursors-operator)
         " coc-explorer
         noremap <silent> <Leader>j :execute 'CocCommand explorer' .
             \ ' --toggle' .
