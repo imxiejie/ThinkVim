@@ -73,6 +73,7 @@ func cliqs() []string {
 					"json",
 					"nginx",
 					"toml",
+					"web",
 				},
 			},
 		},
