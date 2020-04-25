@@ -74,7 +74,7 @@ endif
 " ---------------
 set nobackup
 set nowritebackup
-set undofile swapfile
+set undofile noswapfile
 set directory=$DATA_PATH/swap//,$DATA_PATH,~/tmp,/var/tmp,/tmp
 set undodir=$DATA_PATH/undo//,$DATA_PATH,~/tmp,/var/tmp,/tmp
 set backupdir=$DATA_PATH/backup/,$DATA_PATH,~/tmp,/var/tmp,/tmp
@@ -217,10 +217,17 @@ set noshowmode          " Don't show mode on bottom
 set noruler             " Disable default status ruler
 set shortmess=aFc
 set scrolloff=2         " Keep at least 2 lines above/below
-"set fillchars+=vert:\|  " add a bar for vertical splits
+set fillchars+=vert:\|  " add a bar for vertical splits
 set fcs=eob:\           " hide ~ tila
 set list
 set listchars=tab:»·,nbsp:+,trail:·,extends:→,precedes:←
+set title
+" Title length.
+set titlelen=95
+" Title string.
+let &g:titlestring="
+      \ %{expand('%:p:~:.')}%(%m%r%w%)
+      \ %<\(%{fnamemodify(getcwd(), ':~')}\) - Neovim"
 
 set showmatch           " Jump to matching bracket
 set matchpairs+=<:>     " Add HTML brackets to pair matching
