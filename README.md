@@ -32,7 +32,7 @@
 ## Installation
 
 ```console
-git clone -b develop --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
+git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
 cd ~/.config/nvim
 sh bin/install.sh
 ```
