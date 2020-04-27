@@ -7,12 +7,12 @@
 - repo: ryanoasis/vim-devicons
 
 - repo: hardcoreplayers/spaceline.vim
-  on_event: BufReadPre
+  on_event: [ BufReadPre,BufNew ]
   hook_source:
     let g:spaceline_seperate_style= 'slant-cons'
 
 - repo: hardcoreplayers/vim-buffet
-  on_event: BufReadPre
+  on_event: [ BufReadPre, BufNew ]
 
 - repo: mhinz/vim-startify
   hook_add: source  $VIM_PATH/modules/module-startify.vim
