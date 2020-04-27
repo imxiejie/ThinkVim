@@ -136,7 +136,7 @@ endif
 if dein#tap('vim-clap')
 	nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
 	nnoremap <silent> <Leader>bb :<C-u>Clap buffers<CR>
-	nnoremap <silent> <Leader>fa :<C-u>Clap grep<CR>
+	nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
 	"like emacs counsel-find-file
 	nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
 	nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --no-ignore --hidden --files<cr>
