@@ -104,11 +104,11 @@ if dein#tap('coc.nvim')
         command! -nargs=0 OR  :call CocAction('runCommand', 'editor.action.organizeImport')
 				nnoremap <silent> <Leader>co :<C-u>OR<CR>
         " multiple cursors
-        nmap <silent>gzp <Plug>(coc-cursors-position)
-        nmap <expr> <silent>gzw <SID>select_current_word()
-        xmap <silent>gzr <Plug>(coc-cursors-range)
+        nmap <silent><M-d> <Plug>(coc-cursors-position)
+        nmap <expr> <silent><M-d> <SID>select_current_word()
+        xmap <silent><M-d> <Plug>(coc-cursors-range)
         " use normal command like `<Leader>xi(`
-        nmap <silent>gzo  <Plug>(coc-cursors-operator)
+        nmap <silent><M-c>  <Plug>(coc-cursors-operator)
 
         function! s:select_current_word()
             if !get(g:, 'coc_cursors_activated', 0)
