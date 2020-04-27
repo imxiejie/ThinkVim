@@ -27,7 +27,6 @@ let g:coc_global_extensions =[
     \ 'coc-emmet',
     \ 'coc-pairs',
     \ 'coc-json',
-    \ 'coc-imselect',
     \ 'coc-highlight',
     \ 'coc-git',
     \ 'coc-emoji',
@@ -42,6 +41,10 @@ let g:coc_global_extensions =[
     \ 'coc-actions',
     \ 'coc-db',
     \]
+
+if has('mac')
+    call coc#add_extension('coc-imselect')
+endif
 
 augroup MyAutoCmd
   autocmd!

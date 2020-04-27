@@ -133,7 +133,10 @@ then
   npm install coc-emmet --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-pairs --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-json --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
-  npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  if [ "$(uname)" == "Darwin" ]; then
+    npm install coc-imselect --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  fi
+  npm install coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-highlight --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-git --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-emoji --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
