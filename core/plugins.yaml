@@ -1,13 +1,19 @@
 # PackageManage{{{
 - repo: Shougo/dein.vim
+  on_func: dein#
 # }}}
 
 # Editor UI{{{
 - repo: ryanoasis/vim-devicons
+
 - repo: hardcoreplayers/spaceline.vim
+  on_event: BufReadPre
   hook_source:
     let g:spaceline_seperate_style= 'slant-cons'
+
 - repo: hardcoreplayers/vim-buffet
+  on_event: BufReadPre
+
 - repo: mhinz/vim-startify
   hook_add: source  $VIM_PATH/modules/module-startify.vim
   hook_post_source: |
@@ -73,7 +79,6 @@
 
 # Code{{{
 - repo: editorconfig/editorconfig-vim
-  on_path: .*
 
 - repo: pechorin/any-jump.vim
   on_cmd: AnyJump
@@ -97,6 +102,7 @@
   hook_source: source $VIM_PATH/modules/module-clap.vim
 
 - repo: vn-ki/coc-clap
+  on_cmd: Clap
   depends: vim-clap
 
 # Interface{{{
@@ -223,7 +229,7 @@
 
 - repo: norcalli/nvim-colorizer.lua
   if: has('nvim-0.4')
-  on_event: FileType
+  on_ft: [ html,css,sass,scss,stylus,vim,javascript,javascriptreact,typescript,typescriptreact ]
   hook_source: luafile $VIM_PATH/modules/module-colorizer.lua
 # }}}
 
@@ -232,7 +238,7 @@
   on_map: { nx: <Plug> }
 
 - repo: Yggdroot/indentLine
-  on_event: FileType
+  on_event: BufRead
   hook_source: source $VIM_PATH/modules/module-indentline.vim
 
 - repo: liuchengxu/vista.vim
