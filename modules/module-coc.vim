@@ -42,10 +42,6 @@ let g:coc_global_extensions =[
     \ 'coc-db',
     \]
 
-if has('mac')
-    call coc#add_extension('coc-imselect')
-endif
-
 augroup MyAutoCmd
   autocmd!
   " Setup formatexpr specified filetype(s).
