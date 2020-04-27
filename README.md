@@ -25,7 +25,7 @@
   [vim-clap](https://github.com/liuchengxu/vim-clap)
 - A combining vim and emacs keybinding scheme, centered around leader and localleader prefix keys (<kbd>SPC</kbd> and <kbd>;</kbd>, by default).
 - Full Lsp support by [coc.nvim](https://github.com/neoclide/coc.nvim)
-- A declarative plugin management powered by
+- Fast startup and a declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
 - Interactive shell installation language support
 
