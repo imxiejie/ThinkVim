@@ -300,6 +300,8 @@ if dein#tap('vim-smartchr')
             \ smartchr#loop(':=',';')
     autocmd FileType go inoremap <buffer> <expr> .
           \ smartchr#loop('.', '<-', '->','...')
+		autocmd FileType typescript inoremap <buffer><expr>;
+						\ smartchr#loop(':',';')
 endif
 
 if dein#tap('iron.nvim')
