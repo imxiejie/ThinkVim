@@ -65,6 +65,7 @@ let g:which_key_map = {
       \ 'o' : {
             \ 'name' : '+open',
             \ 'c' : 'open personal config',
+            \ 'd' : 'open database',
             \ 't' : 'open a temrinal',
             \ 's' : 'open stratify',
             \ 'm' : 'open markdown preview',

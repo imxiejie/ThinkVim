@@ -187,11 +187,10 @@
 
 # Database{{{
 - repo: tpope/vim-dadbod
-  on_cmd: DB
-  depends: vim-dadbod-ui
 
 - repo: kristijanhusak/vim-dadbod-ui
-  on_cmd: [ DBUIAddConnection,DBUI,DBUIFindBuffer,DBUIRenameBuffer ]
+  on_cmd: [ DBUIToggle,DBUIAddConnection,DBUI,DBUIFindBuffer,DBUIRenameBuffer ]
+  on_source: vim-dadbod
   hook_source: source $VIM_PATH/modules/module-dadbod-ui.vim
 # }}}
 
