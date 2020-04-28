@@ -33,6 +33,10 @@ if dein#tap('vim-floaterm')
 	nnoremap <silent> <Leader>gz :<C-u>FloatermNew height=0.7 width=0.8 lazygit<CR>
 endif
 
+if dein#tap('vim-dadbod-ui')
+	nnoremap <silent> <Leader>od :DBUIToggle<CR>
+endif
+
 " Dash keymap
 if dein#tap('dash.vim')
     nnoremap <silent><localleader>d :Dash<CR>
