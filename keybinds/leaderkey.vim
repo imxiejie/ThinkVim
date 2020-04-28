@@ -275,6 +275,8 @@ endif
 if dein#tap('vim-easymotion')
 	nmap gsj <Plug>(easymotion-w)
 	nmap gsk <Plug>(easymotion-b)
+	nmap gsf <Plug>(easymotion-overwin-f)
+	nmap gss <Plug>(easymotion-overwin-f2)
 endif
 
 if dein#tap('vim-which-key')
