@@ -35,6 +35,9 @@
 # }}}
 
 # FileType{{{
+- repo: Shougo/context_filetype.vim
+  on_event: [ BufReadPre, BufNew ]
+
 - { repo: MTDL9/vim-log-highlighting, on_ft: log }
 - repo: plasticboy/vim-markdown
   on_ft: markdown
