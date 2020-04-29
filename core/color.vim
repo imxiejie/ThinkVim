@@ -22,6 +22,7 @@ hi StartifyHeader ctermfg=12 guifg=#68A8E4
 hi CocCursorRange guibg=#b16286 guifg=#ebdbb2
 hi default CocHighlightText  guibg=#725972 ctermbg=96
 hi CocWarningSign  ctermfg=32 ctermbg=NONE guifg=#0087d7 guibg=NONE
+hi CocErrorSign ctermfg=124  ctermbg=NONE guifg=#ff5370 guibg=NONE
 
 "GitGutter Coc-git Highlight
 " ---------------------------------------------------------
