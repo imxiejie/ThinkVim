@@ -1,5 +1,5 @@
 
 # Typescript and React support
 # LanguageServerProtocol used by coc-tsserver
-- { repo: HerringtonDarkholme/yats.vim,on_ft: [ typescript, typescriptreact ]}
+- { repo: leafgarland/typescript-vim,on_ft: [ typescript, typescriptreact ]}
 - { repo: peitalin/vim-jsx-typescript,on_ft: [typescriptreact ]}
