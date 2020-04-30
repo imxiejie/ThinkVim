@@ -202,7 +202,7 @@ function! s:load_coc() abort
     command! -nargs=0 OR  :call CocAction('runCommand', 'editor.action.organizeImport')
     nnoremap <silent> <Leader>co :<C-u>OR<CR>
     " multiple cursors
-    nmap <silent><M-d> <Plug>(coc-cursors-position)
+    nmap <silent><M-s> <Plug>(coc-cursors-position)
     nmap <expr> <silent><M-d> <SID>select_current_word()
     xmap <silent><M-d> <Plug>(coc-cursors-range)
     " use normal command like `<Leader>xi(`

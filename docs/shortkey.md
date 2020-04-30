@@ -83,11 +83,11 @@
 
 ## Mulitple edit by [coc.nvim](https://github.com/neoclide/coc.nvim)
 
-| KeyMap                         | Mode  | Description         |
-| ------------------------------ | ----- | ------------------- |
-| <kbd>Ctrl</kbd> + <kbd>c</kbd> | **N** | Cursors position    |
-| <kbd>Ctrl</kbd> + <kbd>m</kbd> | **N** | Select current word |
-| <kbd>Ctrl</kbd> + <kbd>d</kbd> | **V** | Cursors range       |
+| KeyMap                        | Mode  | Description         |
+| ----------------------------- | ----- | ------------------- |
+| <kbd>Alt</kbd> + <kbd>s</kbd> | **N** | Cursors position    |
+| <kbd>Alt</kbd> + <kbd>d</kbd> | **N** | Select current word |
+| <kbd>Alt</kbd> + <kbd>c</kbd> | **V** | Cursors range       |
 
 ## dsf.vim
 
