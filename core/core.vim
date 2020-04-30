@@ -1,5 +1,7 @@
 " version info of thinkvim
 let g:thinkvim_version = "2.5.1"
+let g:thinkvim_disable_default_plugins_map = 0
+let g:thinkvim_disable_default_plugin_map = []
 
 if &compatible
 	" vint: -ProhibitSetNoCompatible
@@ -61,7 +63,11 @@ call utils#source_file($VIM_PATH,'core/filetype.vim')
 
 " Load user init config
 call utils#check_source(s:user_init_config)
-call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
+
+if !g:thinkvim_disable_default_plugins_map
+	call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
+endif
+
 call utils#source_file($VIM_PATH,'keybinds/motion.vim')
 
 " Initialize user favorite colorscheme
