@@ -1,5 +1,3 @@
-# QuickStart
-
 ## User Custom
 
 Thinkvim will generate `.thinkvim.d` folder under your home path,This folder
@@ -112,21 +110,53 @@ let g:startify_custom_header = Thinkvim_startify_center(s:footer)
 
 - set this variable value `let g:startify_padding_left`(number) to make startify mid area center.
 
-## Completion
+## Custom keymap
 
-Completion use LanguageServerProtocol by [coc.nvim](https://github.com/neoclide/coc.nvim),thinkvim will generate a `coc-settings.json` file by `.example.json`.These files thinkvim is out of the box.
-`Html,Css,Json,Yaml,Javascript,Typescript,Go,Python,Rust`
-
-- Python
-  - thinkvim used Mpls.it will auto install mpls,if you want use the jedi for python completion change the `python.jediEnable` to true which in coc-settings.json
-- Go
-
-```
-go get golang.org/x/tools/gopls@latest
+```viml
+" disable all keymaps of plugins
+let g:thinkvim_disable_mappings = 0
+" disable some plugins keymap is a list
+let g:thinkvim_disable_pmaping = []
 ```
 
-- Rust
+The value of `thinkvim_disable_pmaping` are
 
-  - Install [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer)
+```
+plugins:
+dein.vim vim-buffet markdown-preview.nvim
+indentLine any-jump.vim vim-floaterm
+vim-dadbod-ui dash.vim coc-clap
+coc.nvim vim-clap vim-go vim-delve
+vimagit vim-choosewin caw.vim vim-smoothie
+goyo.vim defx.nvim vim-quickrun vim-easymotion
+vim-smartchr iron.nvim vim-sandwich vim-startify
+vim-fugitive vim-mundo vista.vim
 
-- Other language support,Please check [wiki of coc](https://github.com/neoclide/coc.nvim/wiki/Language-servers) for help.
+general:
+insert command quiet window session toggle normal
+```
+
+eg:
+
+```viml
+let g:thinkvim_disable_pmaping = ['dein.vim','insert'....]
+```
+
+Why add this support, Because vim is free, and key mapping everyone has everyone's habits, so we can't bundle them, it should be customized by the user. more information on this issue https://github.com/hardcoreplayers/ThinkVim/issues/105.
+
+## Lsp
+
+- Go use gopls (need user install)
+- C C++ OC use ccls (need user install)
+- Python support `coc-python`,When install thinkvim if you choose python,when open python file it will auto install mpls.
+- Dockerfile use docker-langserver (need user install)
+- Haskell use https://github.com/haskell/haskell-ide-engine (need user install)
+- Lua use lua-lsp (need user install)
+- Javascript Typescript use coc-tsserver
+- Php use https://github.com/bmewburn/vscode-intelephense (need user install)
+- Shell use https://github.com/bash-lsp/bash-language-server (need user install)
+- R use coc-R
+- Ruby use coc-solargraph
+- Rust use coc-rust-analyzer
+- Scala use coc-metals
+- Vue use coc-vetur
