@@ -142,7 +142,9 @@
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [ Whichkey, Whichkey! ]
-  hook_add: source  $VIM_PATH/modules/module-whichkey.vim
+  hook_add: |
+    let g:which_key_map =  { 'name' : 'Leader'}
+    let g:which_key_localmap =  {'name' : 'LocalLeader'}
   hook_post_source: |
     function! s:register_whichkey()
       let s:leader_key=substitute(get(g:,"mapleader","\\"), ' ', '<Space>', '')

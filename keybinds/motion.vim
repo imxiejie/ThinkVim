@@ -23,7 +23,6 @@ cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 nnoremap <C-s> :<C-u>write<CR>
 imap <C-S> <esc>:w<CR>
 imap <C-Q> <esc>:wq<CR>
-nnoremap<Leader><TAB> <C-O><CR>
 
 " Editor UI
 nmap <Leader>tn :setlocal nonumber!<CR>
@@ -63,6 +62,7 @@ vnoremap k gk
 nnoremap Y y$
 
 " window
+nnoremap <Leader><TAB> <C-O><CR>
 nnoremap <leader>ws :<C-u>sp<CR>
 nnoremap <leader>wv :<C-u>vs<CR>
 nnoremap <leader>wh <C-w>h
@@ -78,6 +78,22 @@ nnoremap <leader>wc <C-w>c
 nnoremap <leader>wo <C-w>o
 nnoremap <leader>wR <C-w>R
 
+let g:which_key_map['<Tab>'] = 'switch to last buffer'
+let g:which_key_map.w.s = 'horizontally split'
+let g:which_key_map.w.v = 'vertical split'
+let g:which_key_map.w.h = 'jump left window'
+let g:which_key_map.w.j = 'jump bottom window'
+let g:which_key_map.w.k = 'jump top window'
+let g:which_key_map.w.l = 'jump right window'
+let g:which_key_map.w.H = 'move window to left'
+let g:which_key_map.w.J = 'move window to bottom'
+let g:which_key_map.w.K = 'move window to top'
+let g:which_key_map.w.L = 'move window to right'
+let g:which_key_map.w.x = 'swap window'
+let g:which_key_map.w.c = 'close window'
+let g:which_key_map.w.o = 'close other window'
+let g:which_key_map.w.R = 'spin window'
+
 " settings for resize splitted window
 nmap <C-w>[ :vertical resize -3<CR>
 nmap <C-w>] :vertical resize +3<CR>
@@ -92,17 +108,7 @@ nnoremap [w :<C-u>WhitespacePrev<CR>
 
 " Remove spaces at the end of lines
 nnoremap <silent> <Space>cw :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
-
-nmap <leader>1 <Plug>BuffetSwitch(1)
-nmap <leader>2 <Plug>BuffetSwitch(2)
-nmap <leader>3 <Plug>BuffetSwitch(3)
-nmap <leader>4 <Plug>BuffetSwitch(4)
-nmap <leader>5 <Plug>BuffetSwitch(5)
-nmap <leader>6 <Plug>BuffetSwitch(6)
-nmap <leader>7 <Plug>BuffetSwitch(7)
-nmap <leader>8 <Plug>BuffetSwitch(8)
-nmap <leader>9 <Plug>BuffetSwitch(9)
-nmap <leader>0 <Plug>BuffetSwitch(10)
+let g:which_key_map.c.w = 'Remove whitespace'
 
 " Toggle spellchecking
 function! s:toggleSpellCheck()
@@ -115,5 +121,6 @@ function! s:toggleSpellCheck()
 endfunction
 
 nnoremap <silent> <leader>ts :call <SID>toggleSpellCheck()<CR>
+let g:which_key_map.t.s = 'Toggle Spellcheck'
 
 " vim: set foldmethod=marker ts=2 sw=2 tw=80 noet :
