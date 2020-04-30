@@ -354,21 +354,22 @@ if dein#tap('accelerated-jk')
   nmap <silent>k <Plug>(accelerated_jk_gk)
 endif
 
+function! InitCaw() abort
+  if ! &l:modifiable
+    silent! nunmap <buffer> gc
+    silent! xunmap <buffer> gc
+    silent! nunmap <buffer> gcc
+    silent! xunmap <buffer> gcc
+  else
+    nmap <buffer> gc <Plug>(caw:prefix)
+    xmap <buffer> gc <Plug>(caw:prefix)
+    nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+    xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
+  endif
+endfunction
+
 function! s:load_caw() abort
   if dein#tap('caw.vim')
-    function! InitCaw() abort
-      if ! &l:modifiable
-        silent! nunmap <buffer> gc
-        silent! xunmap <buffer> gc
-        silent! nunmap <buffer> gcc
-        silent! xunmap <buffer> gcc
-      else
-        nmap <buffer> gc <Plug>(caw:prefix)
-        xmap <buffer> gc <Plug>(caw:prefix)
-        nmap <buffer> gcc <Plug>(caw:hatpos:toggle)
-        xmap <buffer> gcc <Plug>(caw:hatpos:toggle)
-      endif
-    endfunction
     autocmd FileType * call InitCaw()
     call InitCaw()
   endif
@@ -411,7 +412,6 @@ if dein#tap('committia.vim')
   function! g:committia_hooks.edit_open(info)
     imap <buffer><C-d> <Plug>(committia-scroll-diff-down-half)
     imap <buffer><C-u> <Plug>(committia-scroll-diff-up-half)
-
     setlocal winminheight=1 winheight=1
     resize 10
     startinsert
