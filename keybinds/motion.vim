@@ -26,6 +26,7 @@ imap <C-Q> <esc>:wq<CR>
 
 " Editor UI
 nmap <Leader>tn :setlocal nonumber!<CR>
+let g:which_key_map.t.n = 'close number'
 
 function! s:QuiteVim() abort
 	if empty(expand('%:t'))
@@ -34,9 +35,12 @@ function! s:QuiteVim() abort
 		execute ":wq!"
 	endif
 endfunction
+
 " Quiet
 nnoremap <leader>qq :call <SID>QuiteVim()<CR>
 nnoremap <leader>qw <esc>:q!<CR>
+let g:which_key_map.q.q = 'Quiet with save'
+let g:which_key_map.q.w = 'Quiet without save'
 
 "insert a newline
 inoremap <C-O> <Esc>o
