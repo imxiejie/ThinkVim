@@ -4,6 +4,8 @@ let g:thinkvim_version = "2.5.2"
 let g:thinkvim_disable_mappings = 0
 " disable some plugins keymap
 let g:thinkvim_disable_pmaping = []
+" Load thinkvim provide color config
+let g:thinkvim_load_color = 1
 
 if &compatible
 	" vint: -ProhibitSetNoCompatible
@@ -70,7 +72,11 @@ call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
 
 " Initialize user favorite colorscheme
 call theme#init()
-call utils#source_file($VIM_PATH,'core/color.vim')
+
+" Load thinkvim custom color
+if g:thinkvim_load_color
+	call utils#source_file($VIM_PATH,'core/color.vim')
+endif
 
 " Generate coc-settings.json
 call utils#generate_coc_json()
