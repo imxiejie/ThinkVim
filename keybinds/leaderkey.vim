@@ -1,5 +1,6 @@
-"Plugin key settings
-if dein#tap('vim-which-key')
+let s:enable_whichkey = dein#tap('vim-which-key')
+
+if s:enable_whichkey
   function! InitWhickey()
     let s:leader_key=substitute(get(g:,"mapleader","\\"), ' ', '<Space>', '')
     let s:localleader_key= get(g:,'maplocalleader',';')
@@ -24,10 +25,12 @@ function! s:load_dein() abort
     nnoremap <silent> <Leader>pu  :call dein#update()<CR>
     nnoremap <silent> <Leader>pr  :call dein#recache_runtimepath()<CR>
     nnoremap <silent> <Leader>pl  :echo dein#get_updates_log()<CR>
-    let g:which_key_map.p = { 'name': '+plugin'}
-    let g:which_key_map.p.u = 'update all plugins'
-    let g:which_key_map.p.r = 'reache runtime path'
-    let g:which_key_map.p.l = 'plugins update log'
+    if s:enable_whichkey
+      let g:which_key_map.p = { 'name': '+plugin'}
+      let g:which_key_map.p.u = 'update all plugins'
+      let g:which_key_map.p.r = 'reache runtime path'
+      let g:which_key_map.p.l = 'plugins update log'
+    endif
   endif
 endfunction
 
@@ -49,39 +52,47 @@ function! s:load_buffet() abort
     nmap <leader>8 <Plug>BuffetSwitch(8)
     nmap <leader>9 <Plug>BuffetSwitch(9)
     nmap <leader>0 <Plug>BuffetSwitch(10)
-    let g:which_key_map.b.c = 'keep current buffer'
-    let g:which_key_map.b.x = 'remove all buffers'
-    let g:which_key_map.1 = 'select window-1'
-    let g:which_key_map.2 = 'select window-2'
-    let g:which_key_map.3 = 'select window-3'
-    let g:which_key_map.4 = 'select window-4'
-    let g:which_key_map.5 = 'select window-5'
-    let g:which_key_map.6 = 'select window-6'
-    let g:which_key_map.7 = 'select window-7'
-    let g:which_key_map.8 = 'select window-8'
-    let g:which_key_map.9 = 'select window-9'
-    let g:which_key_map.0 = 'select window-10'
+    if s:enable_whichkey
+      let g:which_key_map.b.c = 'keep current buffer'
+      let g:which_key_map.b.x = 'remove all buffers'
+      let g:which_key_map.1 = 'select window-1'
+      let g:which_key_map.2 = 'select window-2'
+      let g:which_key_map.3 = 'select window-3'
+      let g:which_key_map.4 = 'select window-4'
+      let g:which_key_map.5 = 'select window-5'
+      let g:which_key_map.6 = 'select window-6'
+      let g:which_key_map.7 = 'select window-7'
+      let g:which_key_map.8 = 'select window-8'
+      let g:which_key_map.9 = 'select window-9'
+      let g:which_key_map.0 = 'select window-10'
+    endif
   endif
 endfunction
 
 function! s:load_startify() abort
   if dein#tap('vim-startify')
     nnoremap <silent> <Leader>os  :<C-u>Startify<CR>
-    let g:which_key_map.o.s = 'open stratify'
+    if s:enable_whichkey
+      let g:which_key_map.o.s = 'open stratify'
+    endif
   endif
 endfunction
 
 function! s:load_markdown_preview() abort
   if dein#tap('markdown-preview.nvim')
     nnoremap <silent> <Leader>om  :<C-u>MarkdownPreview<CR>
-    let g:which_key_map.o.m = 'open markdownPreview'
+    if s:enable_whichkey
+      let g:which_key_map.o.m = 'open markdownPreview'
+    endif
   endif
 endfunction
 
 function! s:load_indentline()abort
   if dein#tap('indentLine')
     nnoremap <Leader>ti :IndentLinesToggle<CR>
-    let g:which_key_map.t.i = 'Indentline toggle'
+    if s:enable_whichkey
+      let g:which_key_map.t.i = 'Indentline toggle'
+    endif
   endif
 endfunction
 
@@ -89,7 +100,9 @@ function! s:load_any_jump() abort
   if dein#tap('any-jump.vim')
     nnoremap <silent> <Leader>cj :AnyJump<CR>
     xnoremap <silent> <Leader>cj :AnyJump<CR>
-    let g:which_key_map.c.j ='Show definition references'
+    if s:enable_whichkey
+      let g:which_key_map.c.j ='Show definition references'
+    endif
   endif
 endfunction
 
@@ -97,23 +110,28 @@ function! s:load_floaterm() abort
   if dein#tap('vim-floaterm')
     nnoremap <silent> <Leader>ot :<C-u>FloatermToggle<CR>
     nnoremap <silent> <Leader>gz :<C-u>FloatermNew height=0.7 width=0.8 lazygit<CR>
-    let g:which_key_map.o.t = 'open terminal'
-    let g:which_key_map.g.z = 'lazygit'
+    if s:enable_whichkey
+      let g:which_key_map.o.t = 'open terminal'
+      let g:which_key_map.g.z = 'lazygit'
+    endif
   endif
 endfunction
 
 function s:load_dadbod_ui() abort
   if dein#tap('vim-dadbod-ui')
     nnoremap <silent> <Leader>od :DBUIToggle<CR>
-    let g:which_key_map.o.d = 'open database'
+    if s:enable_whichkey
+      let g:which_key_map.o.d = 'open database'
+    endif
   endif
 endfunction
 
 function! s:load_dash() abort
   if dein#tap('dash.vim')
     nnoremap <silent><localleader>d :Dash<CR>
-    " which_key_localmap
-    let g:which_key_localmap.d="open doc on Dash.app"
+    if s:enable_whichkey
+      let g:which_key_localmap.d="open doc on Dash.app"
+    endif
   endif
 endfunction
 
@@ -129,29 +147,33 @@ function! s:load_coc_clap() abort
     nnoremap <silent> <Leader>cs  :Clap coc_symbols<cr>
     nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
     nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
-    let g:which_key_map[';'] = 'coc extensions'
-    let g:which_key_map[','] = 'coc commands'
-    let g:which_key_map.c.e = 'Lsp Show Diagnostics'
-    let g:which_key_map.c.S = 'Lsp Show Services'
-    let g:which_key_map.c.s = 'Lsp Show Symbols'
-    let g:which_key_map.c.t = 'Lsp Show Outline'
+    if s:enable_whichkey
+      let g:which_key_map[';'] = 'coc extensions'
+      let g:which_key_map[','] = 'coc commands'
+      let g:which_key_map.c.e = 'Lsp Show Diagnostics'
+      let g:which_key_map.c.S = 'Lsp Show Services'
+      let g:which_key_map.c.s = 'Lsp Show Symbols'
+      let g:which_key_map.c.t = 'Lsp Show Outline'
+    endif
   endif
 endfunction
 
 function! s:load_coc() abort
   if dein#tap('coc.nvim')
-    let g:which_key_map.c.a = 'Lsp CodeActionSelected'
-    let g:which_key_map["'"] = 'coc resume'
-    let g:which_key_map.c.n = 'Lsp Rename'
-    let g:which_key_map.c.i = 'Lsp Find implementation'
-    let g:which_key_map.c.f = 'Lsp Format'
-    let g:which_key_map.c.F = 'Lsp auto fix'
-    let g:which_key_map.c.d = 'Lsp Show Document'
-    let g:which_key_map.c.o = 'Lsp Organize Import'
-    let g:which_key_map.g.i = 'Show chunk diff at point'
-    let g:which_key_map.g.m = 'Show commit contains at point'
-    let g:which_key_map.j = 'open coc-exoplorer'
-    let g:which_key_map.f.z = 'find word on multipe files'
+    if s:enable_whichkey
+      let g:which_key_map.c.a = 'Lsp CodeActionSelected'
+      let g:which_key_map["'"] = 'coc resume'
+      let g:which_key_map.c.n = 'Lsp Rename'
+      let g:which_key_map.c.i = 'Lsp Find implementation'
+      let g:which_key_map.c.f = 'Lsp Format'
+      let g:which_key_map.c.F = 'Lsp auto fix'
+      let g:which_key_map.c.d = 'Lsp Show Document'
+      let g:which_key_map.c.o = 'Lsp Organize Import'
+      let g:which_key_map.g.i = 'Show chunk diff at point'
+      let g:which_key_map.g.m = 'Show commit contains at point'
+      let g:which_key_map.j = 'open coc-exoplorer'
+      let g:which_key_map.f.z = 'find word on multipe files'
+    endif
     " Remap for do codeAction of selected region
     function! s:cocActionsOpenFromSelected(type) abort
         execute 'CocCommand actions.open ' . a:type
@@ -248,18 +270,20 @@ function! s:load_clap() abort
     nnoremap <silent> <Leader>fu :<C-u>Clap git_diff_files<CR>
     nnoremap <silent> <Leader>fv :<C-u>Clap grep ++query=@visual<CR>
     nnoremap <silent> <Leader>oc :<C-u>Clap personalconf<CR>
-    let g:which_key_map.t.c = 'Change Colorscheme'
-    let g:which_key_map.b.b = 'Buffer List'
-    let g:which_key_map.f.a = 'Find Word'
-    let g:which_key_map.f.f = 'Find File'
-    let g:which_key_map.f.g = 'Find files with git'
-    let g:which_key_map.f.w = 'Find current word'
-    let g:which_key_map.f.h = 'Find history'
-    let g:which_key_map.f.W = 'Find windows'
-    let g:which_key_map.f.l = 'Find locallist'
-    let g:which_key_map.f.u = 'Find uncommitted files'
-    let g:which_key_map.f.v = 'Find visual text'
-    let g:which_key_map.o.c = 'Open personal config'
+    if s:enable_whichkey
+      let g:which_key_map.t.c = 'Change Colorscheme'
+      let g:which_key_map.b.b = 'Buffer List'
+      let g:which_key_map.f.a = 'Find Word'
+      let g:which_key_map.f.f = 'Find File'
+      let g:which_key_map.f.g = 'Find files with git'
+      let g:which_key_map.f.w = 'Find current word'
+      let g:which_key_map.f.h = 'Find history'
+      let g:which_key_map.f.W = 'Find windows'
+      let g:which_key_map.f.l = 'Find locallist'
+      let g:which_key_map.f.u = 'Find uncommitted files'
+      let g:which_key_map.f.v = 'Find visual text'
+      let g:which_key_map.o.c = 'Open personal config'
+    endif
   endif
 endfunction
 
@@ -273,13 +297,15 @@ function! s:load_vim_go() abort
       nnoremap <silent> <LocalLeader>gc :GoCallees<CR>
       nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
       nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
-      let g:which_key_localmap.g.a = 'Add tags'
-      let g:which_key_localmap.g.r = 'Remove tags'
-      let g:which_key_localmap.g.i = 'Go impl'
-      let g:which_key_localmap.g.d = 'Go description'
-      let g:which_key_localmap.g.c = 'Go Callees'
-      let g:which_key_localmap.g.C = 'Go Callers'
-      let g:which_key_localmap.g.s = 'Go Callstack'
+      if s:enable_whichkey
+        let g:which_key_localmap.g.a = 'Add tags'
+        let g:which_key_localmap.g.r = 'Remove tags'
+        let g:which_key_localmap.g.i = 'Go impl'
+        let g:which_key_localmap.g.d = 'Go description'
+        let g:which_key_localmap.g.c = 'Go Callees'
+        let g:which_key_localmap.g.C = 'Go Callers'
+        let g:which_key_localmap.g.s = 'Go Callstack'
+      endif
     endfunction
     autocmd FileType go call InitGoKeyMap()
   endif
@@ -295,14 +321,16 @@ function! s:load_vim_delve()abort
       nnoremap <silent> <Leader>dt :DlvTest<CR>
       nnoremap <silent> <Leader>dr :DlvRemoveBreakpoint<CR>
       nnoremap <silent> <Leader>dR :DlvRemoveTracepoint<CR>
-      let g:which_key_map.d = {'name': 'Debug'}
-      let g:which_key_map.d.a = 'Add or Remove BreakPoint'
-      let g:which_key_map.d.b = 'Add or Remove TracePoint'
-      let g:which_key_map.d.c = 'Clear All Point'
-      let g:which_key_map.d.d = 'Start Debug'
-      let g:which_key_map.d.t = 'Start Debug Test'
-      let g:which_key_map.d.r = 'Remove BreakPoint'
-      let g:which_key_map.d.R = 'Remove TracePoint'
+      if s:enable_whichkey
+        let g:which_key_map.d = {'name': 'Debug'}
+        let g:which_key_map.d.a = 'Add or Remove BreakPoint'
+        let g:which_key_map.d.b = 'Add or Remove TracePoint'
+        let g:which_key_map.d.c = 'Clear All Point'
+        let g:which_key_map.d.d = 'Start Debug'
+        let g:which_key_map.d.t = 'Start Debug Test'
+        let g:which_key_map.d.r = 'Remove BreakPoint'
+        let g:which_key_map.d.R = 'Remove TracePoint'
+      endif
     endfunction
     autocmd FileType go call InitGoDebugKeyMap()
   endif
@@ -311,7 +339,9 @@ endfunction
 function! s:load_vimagit() abort
   if dein#tap('vimagit')
     nnoremap <silent> <Leader>gg :Magit<CR>
-    let g:which_key_map.g.g = 'Magit'
+    if s:enable_whichkey
+      let g:which_key_map.g.g = 'Magit'
+    endif
   endif
 endfunction
 
@@ -324,20 +354,24 @@ function! s:load_fugitive() abort
     nnoremap <silent> <Leader>gf :Gfetch<CR>
     nnoremap <silent> <Leader>gs :Git<CR>
     nnoremap <silent> <Leader>gp :Gpush<CR>
-    let g:which_key_map.g.a = 'git add'
-    let g:which_key_map.g.d = 'git diff split'
-    let g:which_key_map.g.b = 'git blame'
-    let g:which_key_map.g.f = 'git fetch'
-    let g:which_key_map.g.c = 'git commit'
-    let g:which_key_map.g.s = 'git status'
-    let g:which_key_map.g.p = 'git push'
+    if s:enable_whichkey
+      let g:which_key_map.g.a = 'git add'
+      let g:which_key_map.g.d = 'git diff split'
+      let g:which_key_map.g.b = 'git blame'
+      let g:which_key_map.g.f = 'git fetch'
+      let g:which_key_map.g.c = 'git commit'
+      let g:which_key_map.g.s = 'git status'
+      let g:which_key_map.g.p = 'git push'
+    endif
   endif
 endfunction
 
 function! s:load_mundo()abort
   if dein#tap('vim-mundo')
     nnoremap <silent> <Leader>m :MundoToggle<CR>
-    let g:which_key_map.m = 'MundoToggle'
+    if s:enable_whichkey
+      let g:which_key_map.m = 'MundoToggle'
+    endif
   endif
 endfunction
 
@@ -345,7 +379,9 @@ function! s:load_choosewin() abort
   if dein#tap('vim-choosewin')
     nmap -         <Plug>(choosewin)
     nmap <Leader>- :<C-u>ChooseWinSwapStay<CR>
-    let g:which_key_map['-'] = 'Choose window'
+    if s:enable_whichkey
+      let g:which_key_map['-'] = 'Choose window'
+    endif
   endif
 endfunction
 
@@ -392,7 +428,9 @@ endif
 function! s:load_goyo() abort
   if dein#tap('goyo.vim')
     nnoremap <Leader>G :Goyo<CR>
-    let g:which_key_map.G = 'Goyo'
+    if s:enable_whichkey
+      let g:which_key_map.G = 'Goyo'
+    endif
   endif
 endfunction
 
@@ -402,8 +440,10 @@ function! s:load_defx() abort
       \ :<C-u>Defx -resume -toggle -buffer-name=tab`tabpagenr()`<CR>
     nnoremap <silent> <Leader>F
       \ :<C-u>Defx -resume -buffer-name=tab`tabpagenr()` -search=`expand('%:p')`<CR>
-    let g:which_key_map.e = 'Open defx'
-    let g:which_key_map.F = 'Open current file on defx'
+    if s:enable_whichkey
+      let g:which_key_map.e = 'Open defx'
+      let g:which_key_map.F = 'Open current file on defx'
+    endif
   endif
 endfunction
 
@@ -421,14 +461,18 @@ endif
 function! s:load_quickrun() abort
   if dein#tap('vim-quickrun')
     nnoremap <silent> <Leader>cr :QuickRun<CR>
-    let g:which_key_map.c.r = 'Quick Run'
+    if s:enable_whichkey
+      let g:which_key_map.c.r = 'Quick Run'
+    endif
   endif
 endfunction
 
 function! s:load_vista() abort
   if dein#tap('vista.vim')
     nnoremap <silent> <Leader>i :<C-u>Vista!!<CR>
-    let g:which_key_map.i = 'Vista'
+    if s:enable_whichkey
+      let g:which_key_map.i = 'Vista'
+    endif
   endif
 endfunction
 
@@ -463,16 +507,18 @@ function! s:load_iron() abort
     nmap <silent> <Leader>rc <Plug>(iron-clear)
     nmap <silent> <Leader>r<CR>  <Plug>(iron-cr)
     nmap <silent> <Leader>r<Esc> <Plug>(iron-interrupt)
-    let g:which_key_map.r ={
-      \ 'name' : '+repl',
-      \ 'r' : 'Open Repl',
-      \ 'q' : 'Exit Repl',
-      \ 'l' : 'Send line',
-      \ 'p' : 'Repl repeat',
-      \ 'c' : 'Repl clear',
-      \ '<CR>': 'Repl return',
-      \ '<Esc>': 'Repl interrupt',
-      \ }
+    if s:enable_whichkey
+      let g:which_key_map.r ={
+        \ 'name' : '+repl',
+        \ 'r' : 'Open Repl',
+        \ 'q' : 'Exit Repl',
+        \ 'l' : 'Send line',
+        \ 'p' : 'Repl repeat',
+        \ 'c' : 'Repl clear',
+        \ '<CR>': 'Repl return',
+        \ '<Esc>': 'Repl interrupt',
+        \ }
+    endif
   endif
 endfunction
 
@@ -566,7 +612,9 @@ function! s:load_normalmap() abort
   nnoremap [w :<C-u>WhitespacePrev<CR>
   " Remove spaces at the end of lines
   nnoremap <silent> <Space>cw :<C-u>silent! keeppatterns %substitute/\s\+$//e<CR>
-  let g:which_key_map.c.w = 'Remove whitespace'
+  if s:enable_whichkey
+    let g:which_key_map.c.w = 'Remove whitespace'
+  endif
 endfunction
 
 function! s:load_insertmap() abort
@@ -609,8 +657,10 @@ function! s:load_quietmap() abort
   " Quiet
   nnoremap <leader>qq :call <SID>QuiteVim()<CR>
   nnoremap <leader>qw <esc>:q!<CR>
-  let g:which_key_map.q.q = 'Quiet with save'
-  let g:which_key_map.q.w = 'Quiet without save'
+  if s:enable_whichkey
+    let g:which_key_map.q.q = 'Quiet with save'
+    let g:which_key_map.q.w = 'Quiet without save'
+  endif
 endfunction
 
 function! s:load_windowmap() abort
@@ -635,21 +685,23 @@ function! s:load_windowmap() abort
   nnoremap <leader>wc <C-w>c
   nnoremap <leader>wo <C-w>o
   nnoremap <leader>wR <C-w>R
-  let g:which_key_map['<Tab>'] = 'switch to last buffer'
-  let g:which_key_map.w.s = 'horizontally split'
-  let g:which_key_map.w.v = 'vertical split'
-  let g:which_key_map.w.h = 'jump left window'
-  let g:which_key_map.w.j = 'jump bottom window'
-  let g:which_key_map.w.k = 'jump top window'
-  let g:which_key_map.w.l = 'jump right window'
-  let g:which_key_map.w.H = 'move window to left'
-  let g:which_key_map.w.J = 'move window to bottom'
-  let g:which_key_map.w.K = 'move window to top'
-  let g:which_key_map.w.L = 'move window to right'
-  let g:which_key_map.w.x = 'swap window'
-  let g:which_key_map.w.c = 'close window'
-  let g:which_key_map.w.o = 'close other window'
-  let g:which_key_map.w.R = 'spin window'
+  if s:enable_whichkey
+    let g:which_key_map['<Tab>'] = 'switch to last buffer'
+    let g:which_key_map.w.s = 'horizontally split'
+    let g:which_key_map.w.v = 'vertical split'
+    let g:which_key_map.w.h = 'jump left window'
+    let g:which_key_map.w.j = 'jump bottom window'
+    let g:which_key_map.w.k = 'jump top window'
+    let g:which_key_map.w.l = 'jump right window'
+    let g:which_key_map.w.H = 'move window to left'
+    let g:which_key_map.w.J = 'move window to bottom'
+    let g:which_key_map.w.K = 'move window to top'
+    let g:which_key_map.w.L = 'move window to right'
+    let g:which_key_map.w.x = 'swap window'
+    let g:which_key_map.w.c = 'close window'
+    let g:which_key_map.w.o = 'close other window'
+    let g:which_key_map.w.R = 'spin window'
+  endif
   " settings for resize splitted window
   nmap <C-w>[ :vertical resize -3<CR>
   nmap <C-w>] :vertical resize +3<CR>
@@ -659,6 +711,10 @@ function! s:load_session() abort
   " Session management shortcuts (see plugin/sessions.vim)
   nmap <Leader>ss :<C-u>SessionSave<CR>
   nmap <Leader>sl :<C-u>SessionLoad<CR>
+  if s:enable_whichkey
+    let g:which_key_map.s.s = 'Session Save'
+    let g:which_key_map.s.l = 'Session Load'
+  endif
 endfunction
 
 function! s:load_toggle() abort
@@ -672,7 +728,9 @@ function! s:load_toggle() abort
     endif
   endfunction
   nnoremap <silent> <leader>ts :call <SID>toggleSpellCheck()<CR>
-  let g:which_key_map.t.s = 'Toggle Spellcheck'
+  if s:enable_whichkey
+    let g:which_key_map.t.s = 'Toggle Spellcheck'
+  endif
 endfunction
 
 let s:plugins = {
