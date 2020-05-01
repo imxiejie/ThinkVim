@@ -79,6 +79,10 @@ if g:thinkvim_load_color
 	call utils#source_file($VIM_PATH,'core/color.vim')
 endif
 
+if exists("*UserInit")
+	call UserInit()
+endif
+
 " Generate coc-settings.json
 call utils#generate_coc_json()
 
