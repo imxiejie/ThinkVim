@@ -1,5 +1,5 @@
 " version info of thinkvim
-let g:thinkvim_version = "2.5.2"
+let g:thinkvim_version = "2.5.3"
 " disable all keymaps of plugins
 let g:thinkvim_disable_mappings = 0
 " disable some plugins keymap
@@ -67,6 +67,7 @@ call utils#source_file($VIM_PATH,'core/filetype.vim')
 
 " Load user init config
 call utils#check_source(s:user_init_config)
+
 " Load key map
 call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
 
@@ -76,6 +77,10 @@ call theme#init()
 " Load thinkvim custom color
 if g:thinkvim_load_color
 	call utils#source_file($VIM_PATH,'core/color.vim')
+endif
+
+if exists("*UserInit")
+	call UserInit()
 endif
 
 " Generate coc-settings.json
