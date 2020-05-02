@@ -9,15 +9,11 @@ if s:enable_whichkey
     execute 'nnoremap <silent> <LocalLeader> :<c-u>WhichKey "' .s:localleader_key.'"<CR>'
   endfunction
   call InitWhickey()
-  let g:which_key_map.b = { 'name': '+buffer' }
   let g:which_key_map.c = { 'name': '+code' }
   let g:which_key_map.f = { 'name': '+find'}
   let g:which_key_map.o = { 'name': '+open' }
   let g:which_key_map.t = { 'name': '+toggle'}
   let g:which_key_map.g = { 'name': '+versioncontrol'}
-  let g:which_key_map.q = { 'name': '+quiet'}
-  let g:which_key_map.s = { 'name': '+session'}
-  let g:which_key_map.w = { 'name': '+window'}
 endif
 
 function! s:load_dein() abort
@@ -53,6 +49,7 @@ function! s:load_buffet() abort
     nmap <leader>9 <Plug>BuffetSwitch(9)
     nmap <leader>0 <Plug>BuffetSwitch(10)
     if s:enable_whichkey
+      let g:which_key_map.b = { 'name': '+buffer' }
       let g:which_key_map.b.c = 'keep current buffer'
       let g:which_key_map.b.x = 'remove all buffers'
       let g:which_key_map.1 = 'select window-1'
@@ -658,6 +655,7 @@ function! s:load_quietmap() abort
   nnoremap <leader>qq :call <SID>QuiteVim()<CR>
   nnoremap <leader>qw <esc>:q!<CR>
   if s:enable_whichkey
+    let g:which_key_map.q = { 'name': '+quiet'}
     let g:which_key_map.q.q = 'Quiet with save'
     let g:which_key_map.q.w = 'Quiet without save'
   endif
@@ -686,6 +684,7 @@ function! s:load_windowmap() abort
   nnoremap <leader>wo <C-w>o
   nnoremap <leader>wR <C-w>R
   if s:enable_whichkey
+    let g:which_key_map.w = { 'name': '+window'}
     let g:which_key_map['<Tab>'] = 'switch to last buffer'
     let g:which_key_map.w.s = 'horizontally split'
     let g:which_key_map.w.v = 'vertical split'
@@ -712,6 +711,7 @@ function! s:load_session() abort
   nmap <Leader>ss :<C-u>SessionSave<CR>
   nmap <Leader>sl :<C-u>SessionLoad<CR>
   if s:enable_whichkey
+    let g:which_key_map.s = { 'name': '+session'}
     let g:which_key_map.s.s = 'Session Save'
     let g:which_key_map.s.l = 'Session Load'
   endif
