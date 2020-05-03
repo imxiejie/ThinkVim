@@ -76,7 +76,7 @@ call theme#init()
 
 " Load thinkvim custom color
 if g:thinkvim_load_color
-	call utils#source_file($VIM_PATH,'core/color.vim')
+	" call utils#source_file($VIM_PATH,'core/color.vim')
 endif
 
 if exists("*UserInit")
