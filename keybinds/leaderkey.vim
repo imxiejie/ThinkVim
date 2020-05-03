@@ -612,6 +612,10 @@ function! s:load_normalmap() abort
   if s:enable_whichkey
     let g:which_key_map.c.w = 'Remove whitespace'
   endif
+  "GetColorSynatxGroup
+  map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+        \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+        \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 endfunction
 
 function! s:load_insertmap() abort
