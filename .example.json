@@ -51,9 +51,9 @@
   "git.removedSign.hlGroup": "GitGutterDelete",
   "git.topRemovedSign.hlGroup": "GitGutterDelete",
   "git.changeRemovedSign.hlGroup": "GitGutterChangeDelete",
-  "git.addedSign.text": "▎",
-  "git.changedSign.text": "▎",
-  "git.removedSign.text": "▏",
+  "git.addedSign.text": "▋",
+  "git.changedSign.text": "▋",
+  "git.removedSign.text": "▋",
   "git.topRemovedSign.text": "▔",
   "git.changeRemovedSign.text": "▋",
   //Snippet
