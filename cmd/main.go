@@ -74,6 +74,7 @@ func colorscheme(filename string) {
 	message := "Choose your favorite colorscheme"
 	pagesize := 19
 	options := []string{
+		"hardcoreplayers/oceanic-material",
 		"drewtempelmeyer/palenight.vim",
 		"ayu-theme/ayu-vim",
 		"NLKNguyen/papercolor-theme",
