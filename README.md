@@ -27,6 +27,10 @@
 - Full Lsp support by [coc.nvim](https://github.com/neoclide/coc.nvim)
 - Fast startup and a declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
+- Beautiful statusline
+  [spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim) and
+  colorscheme
+  [OceanicMaterial](https://github.com/hardcoreplayers/oceanic-material)
 - Interactive shell installation language support
 
 ## Installation
