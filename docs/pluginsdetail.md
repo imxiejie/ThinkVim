@@ -26,7 +26,7 @@
 | Name                                                                                      | Description                                            |
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | [rhysd/accelerated-jk](https://github.com/rhysd/accelerated-jk)                           | Up/down movement acceleration                          |
-| [psliwka/vim-smoothie](https://github.com/yonchu/psliwka/vim-smoothie)                    | Smooth Scroll                                          |
+| [psliwka/vim-smoothie](https://github.com/psliwka/vim-smoothie)                           | Smooth Scroll                                          |
 | [junegunn/vim-easyalign](https://github.com/junegunn/vim-easyalign)                       | Easy Align                                             |
 | [simnalamburt/vim-mundo](https://github.com/simnalamburt/vim-mundo)                       | Ultimate mundo history visualizer                      |
 | [tpope/vim-repeat](https://github.com/tpope/vim-repeat)                                   | Operate Repeat                                         |
