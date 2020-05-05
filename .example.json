@@ -113,14 +113,5 @@
   "eslint.autoFix": true,
   "eslint.autoFixOnSave": true,
   // python
-  "python.jediEnabled": false,
-  // add your languageServer into this list
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "disableWorkspaceFolders": true,
-      "filetypes": ["go"]
-    }
-  }
+  "python.jediEnabled": false
 }
