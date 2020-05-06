@@ -8,7 +8,7 @@
 
 - repo: hardcoreplayers/spaceline.vim
   on_event: [ BufReadPre,BufNew ]
-  hook_source:
+  hook_add:
     let g:spaceline_seperate_style= 'slant-cons'
 
 - repo: hardcoreplayers/vim-buffet
@@ -230,10 +230,6 @@
   hook_add: let g:iron_map_defaults = 0 | let g:iron_map_extended = 0
   hook_source: luafile $VIM_PATH/modules/module-iron.lua
 
-- repo: norcalli/nvim-colorizer.lua
-  if: has('nvim-0.4')
-  on_ft: [ html,css,sass,scss,stylus,vim,javascript,javascriptreact,typescript,typescriptreact ]
-  hook_source: luafile $VIM_PATH/modules/module-colorizer.lua
 # }}}
 
 # Coding{{{
