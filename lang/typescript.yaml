@@ -2,6 +2,4 @@
 # Typescript and React support
 # LanguageServerProtocol used by coc-tsserver
 - { repo: HerringtonDarkholme/yats.vim, on_ft: [ typescript, typescriptreact ]}
-- repo: MaxMEllon/vim-jsx-pretty
-  on_ft: typescriptreact
-  hook_add: let g:vim_jsx_pretty_highlight_close_tag = 1
+- { repo: MaxMEllon/vim-jsx-pretty,on_ft: typescriptreact }

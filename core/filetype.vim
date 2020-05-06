@@ -61,3 +61,8 @@ augroup user_plugin_filetype "{{{
   autocmd User VimagitEnterCommit startinsert
 
 augroup END "}}}
+
+" FileType plugin config
+
+"MaxMEllon/vim-jsx-pretty
+let g:vim_jsx_pretty_highlight_close_tag = 1
