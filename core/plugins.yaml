@@ -36,7 +36,6 @@
 
 # FileType{{{
 - repo: Shougo/context_filetype.vim
-  on_event: [ BufReadPre, BufNew ]
 
 - { repo: MTDL9/vim-log-highlighting, on_ft: log }
 - repo: plasticboy/vim-markdown
@@ -130,7 +129,7 @@
 
 - repo: thinca/vim-quickrun
   on_cmd: QuickRun
-  hook_add: |
+  hook_source: |
         let g:quickrun_config = {
             \   "_" : {
             \       "outputter" : "message",
@@ -238,6 +237,7 @@
 
 # Coding{{{
 - repo: tyru/caw.vim
+  depends: context_filetype.vim
   on_map: { nx: <Plug> }
 
 - repo: Yggdroot/indentLine
