@@ -107,7 +107,7 @@ running "Clean up..."
 rm -rf "$HOME/.cache/vim/dein/cache_nvim"
 rm -rf "$HOME/.cache/vim/dein/state_nvim.vim"
 rm -rf "$HOME/.cache/vim/dein/.cache/"
-nvim -u init.vim -c 'call dein#recache_runtimepath()|q'
+nvim -u init.vim -c 'call |utils#generate_coc_json|dein#recache_runtimepath()|q'
 cd -
 
 action "Install coc extensions"

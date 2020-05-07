@@ -76,9 +76,6 @@ if exists("*UserInit")
 	call UserInit()
 endif
 
-" Generate coc-settings.json
-call utils#generate_coc_json()
-
 set secure
 
 " vim: set ts=2 sw=2 tw=80 noet :
