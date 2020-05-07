@@ -4,11 +4,13 @@ augroup user_plugin_filetype "{{{
   " Reload vim config automatically
   autocmd BufWritePost $VIM_PATH/{*.vim,*.yaml,vimrc} nested
         \ source $MYVIMRC | redraw
+
   " Reload Vim script automatically if setlocal autoread
   autocmd BufWritePost,FileWritePost *.vim nested
         \ if &l:autoread > 0 | source <afile> |
         \   echo 'source ' . bufname('%') |
         \ endif
+
   " Update filetype on save if empty
   autocmd BufWritePost * nested
         \ if &l:filetype ==# '' || exists('b:ftdetect')
@@ -16,9 +18,12 @@ augroup user_plugin_filetype "{{{
         \ |   filetype detect
         \ | endif
 
-  autocmd WinEnter,InsertLeave * set cursorline
+  " Highlight current line only on focused window
+  autocmd WinEnter,InsertLeave * if &ft !~# '^\(denite\|clap_\)' |
+    \ set cursorline | endif
 
-  autocmd WinLeave,InsertEnter * set nocursorline
+  autocmd WinLeave,InsertEnter * if &ft !~# '^\(denite\|clap_\)' |
+    \ set nocursorline | endif
 
   " Automatically set read-only for files being edited elsewhere
   autocmd SwapExists * nested let v:swapchoice = 'o'
@@ -34,14 +39,10 @@ augroup user_plugin_filetype "{{{
 
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | execute "normal! g'\"" | endif
 
-  autocmd Syntax * if 5000 < line('$') | syntax sync minlines=200 | endif
-
-  autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
+  autocmd Syntax * if line('$') > 5000 | syntax sync minlines=200 | endif
 
   " https://webpack.github.io/docs/webpack-dev-server.html#working-with-editors-ides-supporting-safe-write
   autocmd FileType css,javascript,javascriptreact setlocal backupcopy=yes
-
-  autocmd FileType json syntax match Comment +\/\/.\+$+
 
   " Go (Google)
   autocmd FileType go
@@ -57,8 +58,6 @@ augroup user_plugin_filetype "{{{
 
   " HTML (.gohtml and .tpl for server side)
   autocmd BufNewFile,BufRead *.html,*.htm,*.gohtml,*.tpl  setf html
-  " Magit
-  autocmd User VimagitEnterCommit startinsert
 
 augroup END "}}}
 
