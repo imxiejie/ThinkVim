@@ -205,7 +205,9 @@
 # }}}
 
 # Version control{{{
-- { repo: jreybert/vimagit, on_cmd: Magit }
+- repo: jreybert/vimagit
+  on_cmd: Magit
+  hook_source: autocmd User VimagitEnterCommit startinsert
 
 - repo: rhysd/committia.vim
   on_path: [ COMMIT_EDITMSG, MERGE_MSG ]

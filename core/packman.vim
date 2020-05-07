@@ -33,8 +33,12 @@ let s:config_paths = get(g:, 'etc_config_paths', [
 
 let s:user_plugins=expand($HOME.'/.thinkvim.d/plugins.yaml')
 
-call filter(s:config_paths, 'filereadable(v:val)')
-call add(s:config_paths,s:user_plugins)
+if filereadable(s:user_plugins)
+	call add(s:config_paths,s:user_plugins)
+	call filter(s:config_paths, 'filereadable(v:val)')
+else
+	call filter(s:config_paths, 'filereadable(v:val)')
+endif
 
 function! s:main()
 	if has('vim_starting')
