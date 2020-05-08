@@ -117,6 +117,8 @@ func colorscheme(filename string) {
 	wg.Wait()
 	colors := ""
 	switch colorschemes[0] {
+	case "hardcoreplayers/oceanic-material":
+		colors = ""
 	case "NLKNguyen/papercolor-theme":
 		colors = "PaperColor\n"
 	case "drewtempelmeyer/palenight.vim":
