@@ -1125,24 +1125,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi matlabRelationalOperator' . s:fg_orange
   exec 'hi matlabLogicalOperator' . s:fg_orange
   "===============================================================
-  " Zsh:
-  " builtin: https://github.com/chrisbra/vim-zsh
-  "===============================================================
-  exec 'hi zshOptStart' . s:fg_purple  . s:italic
-  exec 'hi zshOption' . s:fg_blue
-  exec 'hi zshSubst' . s:fg_yellow
-  exec 'hi zshFunction' . s:fg_green  . s:bold
-  exec 'hi zshDeref' . s:fg_blue
-  exec 'hi zshTypes' . s:fg_orange
-  exec 'hi zshVariableDef' . s:fg_blue
-  "===============================================================
-  " Fish:
-  " vim-fish: https://github.com/georgewitteman/vim-fish
-  "===============================================================
-  exec 'hi fishStatement' . s:fg_orange
-  exec 'hi fishLabel' . s:fg_red  . s:italic
-  exec 'hi fishCommandSub' . s:fg_yellow
-  "===============================================================
   " PowerShell:
   " vim-ps1: https://github.com/PProvost/vim-ps1
   "===============================================================
