@@ -2,7 +2,7 @@
 
 function! theme#init()
 	" Load cached colorscheme or hybrid by default
-	let l:default = 'ayu'
+	let l:default = 'oceanic_material'
 	let l:cache = s:theme_cache_file()
 	if ! exists('g:colors_name')
 		set background=dark
