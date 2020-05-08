@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master)](https://travis-ci.com/hardcoreplayers/ThinkVim)
+[![Go Report Card](https://goreportcard.com/badge/github.com/hardcoreplayers/ThinkVim)](https://goreportcard.com/report/github.com/hardcoreplayers/ThinkVim)
 
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
