@@ -1,5 +1,5 @@
 " version info of thinkvim
-let g:thinkvim_version = "2.5.5"
+let g:thinkvim_version = "2.5.6"
 " disable all keymaps of plugins
 let g:thinkvim_disable_mappings = 0
 " disable some plugins keymap
