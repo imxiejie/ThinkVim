@@ -115,6 +115,19 @@ func colorscheme(filename string) {
 		}(&wg)
 	}
 	wg.Wait()
+	themecache := homepath + "/.cache/vim/theme.txt"
+	f, _ := os.OpenFile(themecache, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+	colors := GetColorScheme(colorschemes)
+	_, err = f.WriteString(colors)
+	if err != nil {
+		log.Fatalf("Write to theme cache file error %s", err)
+		os.Exit(1)
+	}
+	f.Close()
+	fmt.Println("generate colorscehme success")
+}
+
+func GetColorScheme(colorschemes []string) string {
 	colors := ""
 	switch colorschemes[0] {
 	case "hardcoreplayers/oceanic-material(support by default)":
@@ -123,8 +136,8 @@ func colorscheme(filename string) {
 		colors = "PaperColor\n"
 	case "drewtempelmeyer/palenight.vim":
 		colors = "palenight\n"
-	case "ayu-theme/ayu-vim\n":
-		colors = "ayu"
+	case "ayu-theme/ayu-vim":
+		colors = "ayu\n"
 	case "lifepillar/vim-gruvbox8":
 		colors = "gruvbox8\n"
 	case "lifepillar/vim-solarized8":
@@ -152,15 +165,7 @@ func colorscheme(filename string) {
 	default:
 		colors = ""
 	}
-	themecache := homepath + "/.cache/vim/theme.txt"
-	f, _ := os.OpenFile(themecache, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
-	_, err = f.WriteString(colors)
-	if err != nil {
-		log.Fatalf("Write to theme cache file error %s", err)
-		os.Exit(1)
-	}
-	f.Close()
-	fmt.Println("generate colorscehme success")
+	return colors
 }
 
 func clilangqs() []string {
