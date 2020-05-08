@@ -190,6 +190,9 @@ function! s:apply_syntax_highlightings()
   exec 'hi PmenuThumb'. s:fg_none. s:bg_grey0
   exec 'hi WildMenu'. s:fg_bg3. s:bg_bg_green
   exec 'hi Question'. s:fg_yellow
+  " Statusline
+  exec 'hi StatusLine'. s:fg_bg0. s:bg_none
+  exec 'hi StatusLineNC'. s:fg_bg0 . s:bg_none
   " spell
   exec 'hi SpellBad'. s:fg_red. s:undercurl. s:sp_red
   exec 'hi SpellCap'. s:fg_blue. s:undercurl. s:sp_blue
