@@ -74,7 +74,7 @@ func colorscheme(filename string) {
 	message := "Choose your favorite colorscheme"
 	pagesize := 19
 	options := []string{
-		"hardcoreplayers/oceanic-material",
+		"hardcoreplayers/oceanic-material(support by default)",
 		"drewtempelmeyer/palenight.vim",
 		"ayu-theme/ayu-vim",
 		"NLKNguyen/papercolor-theme",
@@ -117,7 +117,7 @@ func colorscheme(filename string) {
 	wg.Wait()
 	colors := ""
 	switch colorschemes[0] {
-	case "hardcoreplayers/oceanic-material":
+	case "hardcoreplayers/oceanic-material(support by default)":
 		colors = ""
 	case "NLKNguyen/papercolor-theme":
 		colors = "PaperColor\n"
