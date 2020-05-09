@@ -597,7 +597,7 @@ endif
 function s:load_open_browser()abort
   nmap gx <Plug>(openbrowser-smart-search)
   vmap gx <Plug>(openbrowser-smart-search)
-  nnoremap <Leader>ob :OpenBrowserSmartSearch<Space>
+  noremap <Leader>ob :OpenBrowserSmartSearch<Space>
   if s:enable_whichkey
     let g:which_key_map.o.b = 'Open Browser'
   endif
