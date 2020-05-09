@@ -222,6 +222,29 @@
     augroup END
 # }}}
 
+#{{{Browser
+- repo: tyru/open-browser.vim
+  on_map: { nv: <Plug> }
+  on_cmd: OpenBrowserSmartSearch
+  hook_add: |
+    let g:netrw_nogx = 1
+    let g:openbrowser_search_engines = {
+      \ 'askubuntu': 'https://askubuntu.com/search?q={query}',
+      \ 'baidu': 'https://www.baidu.com/s?wd={query}&rsv_bp=0&rsv_spt=3&inputT=2478',
+      \ 'cpan': 'http://search.cpan.org/search?query={query}',
+      \ 'devdocs': 'https://devdocs.io/#q={query}',
+      \ 'duckduckgo': 'https://duckduckgo.com/?q={query}',
+      \ 'go': 'https://pkg.go.dev/search?q={query}',
+      \ 'fileformat': 'https://www.fileformat.info/info/unicode/char/{query}/',
+      \ 'github': 'https://github.com/search?q={query}',
+      \ 'google': 'https://google.com/search?q={query}',
+      \ 'php': 'https://php.net/{query}',
+      \ 'python': 'https://docs.python.org/dev/search.html?q={query}&check_keywords=yes&area=default',
+      \ 'vim': 'https://www.google.com/cse?cx=partner-pub-3005259998294962%3Abvyni59kjr1&ie=ISO-8859-1&q={query}&sa=Search&siteurl=www.vim.org%2F#gsc.tab=0&gsc.q={query}&gsc.page=1',
+      \ 'stack': 'http://stackoverflow.com/search?q={query}'
+      \}
+#}}}
+
 # Neovim Lua feature{{{
 - repo: Vigemus/iron.nvim
   if: has('nvim')

@@ -176,7 +176,7 @@ function! s:apply_syntax_highlightings()
   exec 'hi DiffDelete'. s:fg_none. s:bg_bg_diff_red
   exec 'hi DiffText'. s:fg_bg0 . s:bg_fg0
   exec 'hi Directory'. s:fg_green
-  exec 'hi ErrorMsg'. s:fg_red. s:bold . s:underline
+  exec 'hi ErrorMsg'. s:fg_red . s:bg_none . s:bold . s:underline
   exec 'hi WarningMsg'. s:fg_yellow. s:bold
   exec 'hi ModeMsg'. s:fg_fg0. s:bold
   exec 'hi MoreMsg'. s:fg_yellow. s:bold
