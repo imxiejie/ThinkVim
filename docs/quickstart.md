@@ -108,8 +108,6 @@ let g:startify_custom_header = Thinkvim_startify_center(s:footer)
 
 ```
 
-- set this variable value `let g:startify_padding_left`(number) to make startify mid area center.
-
 ## Custom keymap
 
 ```viml
