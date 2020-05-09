@@ -594,15 +594,6 @@ if dein#tap('vim-textobj-function')
   xmap <silent> if <Plug>(textobj-function-i)
 endif
 
-function s:load_open_browser()abort
-  nmap gx <Plug>(openbrowser-smart-search)
-  vmap gx <Plug>(openbrowser-smart-search)
-  noremap <Leader>ob :OpenBrowserSmartSearch<Space>
-  if s:enable_whichkey
-    let g:which_key_map.o.b = 'Open Browser'
-  endif
-endfunction
-
 function! s:load_normalmap() abort
   " Write buffer (save)
   nnoremap <C-s> :<C-u>write<CR>
@@ -756,7 +747,7 @@ let s:plugins = {
   \ 'smartchr':'vim-smartchr','iron':'iron.nvim','sandwich':'vim-sandwich', 'startify':'vim-startify',
   \ 'fugitive': 'vim-fugitive', 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quietmap':'quiet','windowmap':'window','session':'session',
-  \ 'toggle':'toggle','normalmap':'normal','open_browser':'open-browser'
+  \ 'toggle':'toggle','normalmap':'normal'
   \ }
 
 function! s:load_plugins_keybinds(pmap) abort
