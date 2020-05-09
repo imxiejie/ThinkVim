@@ -13,10 +13,6 @@ endfunction
 
 function! s:theme_autoload()
 	if exists('g:colors_name')
-		let theme_path = $VIM_PATH . '/themes/' . g:colors_name . '.vim'
-		if filereadable(theme_path)
-			execute 'source' fnameescape(theme_path)
-		endif
 		" Persist theme
 		call writefile([g:colors_name], s:theme_cache_file())
 	endif

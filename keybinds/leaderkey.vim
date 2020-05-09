@@ -627,7 +627,7 @@ function! s:load_insertmap() abort
   inoremap <C-u> <C-G>u<C-U>
   inoremap <C-b> <Left>
   inoremap <C-f> <Right>
-  inoremap <C-a> <ESC>^a
+  inoremap <C-a> <ESC>^i
   inoremap <expr><C-e> pumvisible() ? "\<C-e>" : "\<End>"
   "insert a newline
   inoremap <C-O> <Esc>o
