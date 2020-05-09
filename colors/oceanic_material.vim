@@ -1284,11 +1284,13 @@ function! s:apply_syntax_highlightings()
   "===============================================================
   exec 'hi VistaBracket' . s:fg_grey1
   exec 'hi VistaChildrenNr' . s:fg_orange
+  exec 'hi VistaKind' . s:fg_purple
   exec 'hi VistaScope' . s:fg_red
-  exec 'hi VistaTag' . s:fg_green
+  exec 'hi VistaScopeKind' . s:fg_blue
+  exec 'hi VistaTag' . s:fg_green . s:bold
   exec 'hi VistaPrefix' . s:fg_grey1
   exec 'hi VistaColon' . s:fg_green
-  exec 'hi VistaIcon' . s:fg_purple
+  exec 'hi VistaIcon' . s:fg_yellow
   exec 'hi VistaLineNr' . s:fg_fg0
   "===============================================================
   " airblade/vim-gitgutter
