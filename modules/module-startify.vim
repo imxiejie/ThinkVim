@@ -45,7 +45,13 @@ endfunction
 let g:startify_custom_header = Thinkvim_startify_center(s:header)
 let g:startify_custom_footer = Thinkvim_startify_center(s:footer)
 
+function! s:set_startify_left_padding() abort
+  let g:startify_padding_left = winwidth(0)/2 - 20
+endfunction
+
 autocmd! FileType startify
 autocmd  FileType startify set laststatus=0 showtabline=0
   \| autocmd BufLeave <buffer> set laststatus=2 showtabline=2
 autocmd User Startified setlocal buflisted
+autocmd VimEnter * call s:set_startify_left_padding()
+
