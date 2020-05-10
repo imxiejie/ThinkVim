@@ -157,16 +157,16 @@ function! s:apply_syntax_highlightings()
     exec 'hi VertSplit' . s:fg_bg0 . s:bg_bg5
   endif
   exec 'hi Folded' . s:fg_grey1 . s:bg_bg2
-  exec 'hi EndOfBuffer' . s:fg_bg0
+  exec 'hi EndOfBuffer' . s:fg_bg0 . s:bg_none
   exec 'hi IncSearch'. s:fg_bg0 . s:bg_bg_red
   exec 'hi Search'. s:fg_bg0 . s:bg_bg_green
   exec 'hi ColorColumn'. s:fg_none . s:bg_bg1
-  exec 'hi Conceal'. s:fg_grey1
-  exec 'hi Cursor'. s:fg_none  . s:reverse
-  exec 'hi vCursor'. s:fg_none  . s:reverse
-  exec 'hi iCursor'. s:fg_none  . s:reverse
-  exec 'hi lCursor'. s:fg_none  . s:reverse
-  exec 'hi CursorIM'. s:fg_none  . s:reverse
+  exec 'hi Conceal'. s:fg_grey1 . s:bg_none
+  exec 'hi Cursor'. s:fg_none . s:bg_none . s:reverse
+  exec 'hi vCursor'. s:fg_none . s:bg_none . s:reverse
+  exec 'hi iCursor'. s:fg_none . s:bg_none . s:reverse
+  exec 'hi lCursor'. s:fg_none . s:bg_none . s:reverse
+  exec 'hi CursorIM'. s:fg_none . s:bg_none . s:reverse
   exec 'hi CursorColumn'. s:fg_none. s:fg_bg1
   exec 'hi CursorLine'. s:fg_none . s:bg_bg1
   exec 'hi LineNr'. s:fg_grey0
@@ -175,11 +175,11 @@ function! s:apply_syntax_highlightings()
   exec 'hi DiffChange'. s:fg_none. s:bg_bg_diff_blue
   exec 'hi DiffDelete'. s:fg_none. s:bg_bg_diff_red
   exec 'hi DiffText'. s:fg_bg0 . s:bg_fg0
-  exec 'hi Directory'. s:fg_green
-  exec 'hi ErrorMsg'. s:fg_red . s:bg_none . s:bold . s:underline
-  exec 'hi WarningMsg'. s:fg_yellow. s:bold
-  exec 'hi ModeMsg'. s:fg_fg0. s:bold
-  exec 'hi MoreMsg'. s:fg_yellow. s:bold
+  exec 'hi Directory'. s:fg_green. s:bg_none
+  exec 'hi ErrorMsg'. s:fg_red. s:bg_none. s:bold . s:underline
+  exec 'hi WarningMsg'. s:fg_yellow. s:bg_none. s:bold
+  exec 'hi ModeMsg'. s:fg_fg0. s:bg_none. s:bold
+  exec 'hi MoreMsg'. s:fg_yellow. s:bg_none. s:bold
   exec 'hi MatchParen'. s:fg_none. s:bg_bg4
   exec 'hi NonText'. s:fg_bg5
   exec 'hi Whitespace'. s:fg_bg5
@@ -194,10 +194,10 @@ function! s:apply_syntax_highlightings()
   exec 'hi StatusLine'. s:fg_bg0. s:bg_none
   exec 'hi StatusLineNC'. s:fg_bg0 . s:bg_none
   " spell
-  exec 'hi SpellBad'. s:fg_red. s:undercurl. s:sp_red
-  exec 'hi SpellCap'. s:fg_blue. s:undercurl. s:sp_blue
-  exec 'hi SpellLocal'. s:fg_aqua. s:undercurl. s:sp_aqua
-  exec 'hi SpellRare'. s:fg_purple. s:undercurl. s:sp_purple
+  exec 'hi SpellBad'. s:fg_red. s:bg_none. s:undercurl. s:sp_red
+  exec 'hi SpellCap'. s:fg_blue. s:bg_none. s:undercurl. s:sp_blue
+  exec 'hi SpellLocal'. s:fg_aqua. s:bg_none. s:undercurl. s:sp_aqua
+  exec 'hi SpellRare'. s:fg_purple. s:bg_none. s:undercurl. s:sp_purple
 
   exec 'hi Visual'. s:fg_none. s:reverse
   exec 'hi VisualNOS'. s:fg_none. s:reverse
