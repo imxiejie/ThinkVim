@@ -222,7 +222,7 @@ function! s:apply_syntax_highlightings()
   exec 'hi Typedef'. s:fg_red. s:italic
   exec 'hi Exception'. s:fg_red. s:italic
   exec 'hi Statement'. s:fg_red. s:italic
-  exec 'hi Error'. s:fg_red
+  exec 'hi Error'. s:fg_red . s:bg_none
   exec 'hi StorageClass'. s:fg_orange
   exec 'hi Tag'. s:fg_orange
   exec 'hi Label'. s:fg_orange
