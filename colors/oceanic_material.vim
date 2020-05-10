@@ -1424,6 +1424,11 @@ function! s:apply_syntax_highlightings()
   "kristijanhusak/vim-dadbod-ui
   "===============================================================
   exec 'hi dbui_tables' . s:fg_blue
+  "===============================================================
+  "Shougo/defx.nvim
+  "===============================================================
+  exec 'hi DefxIconsDirectory' . s:fg_blue
+
 endfunction
 
 command! -nargs=0 OceanicMaterial :call g:OceanicMaterial()
