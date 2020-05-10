@@ -27,10 +27,6 @@ call defx#custom#column('git', {
 
 call defx#custom#column('mark', { 'readonly_icon': '', 'selected_icon': '' })
 
-
-" Internal use
-let s:original_width = get(get(defx#custom#_get().option, '_'), 'winwidth')
-
 " Events
 " ---
 
@@ -45,14 +41,6 @@ augroup user_plugin_defx
 
 	" Move focus to the next window if current buffer is defx
 	autocmd TabLeave * if &filetype == 'defx' | wincmd w | endif
-
-	" autocmd WinEnter * if &filetype ==# 'defx'
-	"	\ |   silent! highlight! link CursorLine TabLineSel
-	"	\ | endif
-	"
-	" autocmd WinLeave * if &filetype ==# 'defx'
-	"	\ |   silent! highlight! link CursorLine NONE
-	"	\ | endif
 
 augroup END
 
@@ -80,7 +68,6 @@ endfunction
 function! s:defx_mappings() abort
 	" Defx window keyboard mappings
 	setlocal signcolumn=no expandtab
-
 
 	nnoremap <silent><buffer><expr> <CR>  defx#do_action('drop')
 	nnoremap <silent><buffer><expr> l     <SID>defx_toggle_tree()
@@ -139,64 +126,6 @@ function! s:defx_mappings() abort
 	nnoremap <silent><buffer><expr> C
 		\ defx#do_action('toggle_columns', 'indent:mark:filename:type:size:time')
 
-	" Tools
-	nnoremap <silent><buffer><expr> w   defx#do_action('call', '<SID>toggle_width')
-	nnoremap <silent><buffer><expr> gd  defx#async_action('multi', ['drop', ['call', '<SID>git_diff']])
-	if exists('$TMUX')
-		nnoremap <silent><buffer><expr> gl  defx#async_action('call', '<SID>explorer')
-	endif
-endfunction
-
-" TOOLS
-" ---
-
-function! s:git_diff(context) abort
-	execute 'GdiffThis'
-endfunction
-
-function! s:find_files(context) abort
-	" Find files in parent directory with Denite
-	let l:target = a:context['targets'][0]
-	let l:parent = fnamemodify(l:target, ':h')
-	silent execute 'wincmd w'
-	silent execute 'Denite file/rec:'.l:parent
-endfunction
-
-function! s:toggle_width(context) abort
-	" Toggle between defx window width and longest line
-	let l:max = 0
-	for l:line in range(1, line('$'))
-		let l:len = len(getline(l:line))
-		let l:max = max([l:len, l:max])
-	endfor
-	let l:new = l:max == winwidth(0) ? s:original_width : l:max
-	call defx#call_action('resize', l:new)
-endfunction
-
-function! s:explorer(context) abort
-	" Open file-explorer split with tmux
-	let l:explorer = s:find_file_explorer()
-	if empty('$TMUX') || empty(l:explorer)
-		return
-	endif
-	let l:target = a:context['targets'][0]
-	let l:parent = fnamemodify(l:target, ':h')
-	let l:cmd = 'split-window -p 30 -c ' . l:parent . ' ' . l:explorer
-	silent execute '!tmux ' . l:cmd
-endfunction
-
-function! s:find_file_explorer() abort
-	" Detect terminal file-explorer
-	let s:file_explorer = get(g:, 'terminal_file_explorer', '')
-	if empty(s:file_explorer)
-		for l:explorer in ['lf', 'hunter', 'ranger', 'vifm']
-			if executable(l:explorer)
-				let s:file_explorer = l:explorer
-				break
-			endif
-		endfor
-	endif
-	return s:file_explorer
 endfunction
 
 " vim: set ts=2 sw=2 tw=80 noet :
