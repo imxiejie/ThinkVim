@@ -98,8 +98,8 @@ func colorscheme(filename string) {
 	}
 	var wg sync.WaitGroup
 	for _, v := range colorschemes {
-		wg.Add(1)
 		if v != "hardcoreplayers/oceanic-material(support by default)" {
+			wg.Add(1)
 			repo := fmt.Sprintf("- { repo: %s }", v)
 			go func(wg *sync.WaitGroup) {
 				var mu sync.RWMutex
