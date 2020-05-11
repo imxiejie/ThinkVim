@@ -83,6 +83,7 @@ let s:colors = {
       \ 'blue':             ['#7daea3',   '109'],
       \ 'purple':           ['#d3869b',   '175'],
       \ 'darkgreen':        ['#5faf5f',    '71'],
+      \ 'black':            ['#000000',    '0'],
       \ 'bg_red':           ['#ea6962',   '167'],
       \ 'bg_green':         ['#a9b665',   '142'],
       \ 'bg_yellow':        ['#d8a657',   '214'],
@@ -147,14 +148,14 @@ function! s:apply_syntax_highlightings()
     exec 'hi FoldColumn' . s:fg_grey0 . s:bg_none
     exec 'hi SignColumn' . s:fg_fg0 . s:bg_none
     exec 'hi ToolbarLine' . s:fg_fg0 . s:bg_none
-    exec 'hi VertSplit' . s:fg_bg0 . s:bg_none
+    exec 'hi VertSplit' . s:fg_black . s:bg_none . 'gui=NONE cterm=NONE'
   else
     exec 'hi Normal' . s:fg_fg0 . s:bg_bg0
     exec 'hi Terminal' . s:fg_fg0 . s:bg_bg0
     exec 'hi ToolbarLine' . s:fg_fg1 . s:bg_bg3
     exec 'hi SignColumn' . s:fg_fg0 . s:bg_bg0
     exec 'hi FoldColumn' . s:fg_grey0 . s:bg_bg2
-    exec 'hi VertSplit' . s:fg_bg0 . s:bg_bg5
+    exec 'hi VertSplit' . s:fg_bg0 . s:bg_black
   endif
   exec 'hi Folded' . s:fg_grey1 . s:bg_bg2
   exec 'hi EndOfBuffer' . s:fg_bg0 . s:bg_none
