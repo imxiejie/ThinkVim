@@ -100,7 +100,7 @@ func colorscheme(filename string) {
 	for _, v := range colorschemes {
 		if v != "hardcoreplayers/oceanic-material(support by default)" {
 			wg.Add(1)
-			repo := fmt.Sprintf("- { repo: %s }", v)
+			repo := fmt.Sprintf("- { repo: %s }\n", v)
 			go func(wg *sync.WaitGroup) {
 				var mu sync.RWMutex
 				mu.RLock()
