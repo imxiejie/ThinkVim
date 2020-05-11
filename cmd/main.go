@@ -99,20 +99,22 @@ func colorscheme(filename string) {
 	var wg sync.WaitGroup
 	for _, v := range colorschemes {
 		wg.Add(1)
-		repo := fmt.Sprintf("- { repo: %s }", v)
-		go func(wg *sync.WaitGroup) {
-			var mu sync.RWMutex
-			mu.RLock()
-			defer mu.RUnlock()
-			f, _ := os.OpenFile(filename, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
-			defer f.Close()
-			_, err := f.WriteString(repo)
-			if err != nil {
-				log.Fatalf("Write colorscheme to %s failed error:%s", filename, err)
-				os.Exit(1)
-			}
-			wg.Done()
-		}(&wg)
+		if v != "hardcoreplayers/oceanic-material(support by default)" {
+			repo := fmt.Sprintf("- { repo: %s }", v)
+			go func(wg *sync.WaitGroup) {
+				var mu sync.RWMutex
+				mu.RLock()
+				defer mu.RUnlock()
+				f, _ := os.OpenFile(filename, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0644)
+				defer f.Close()
+				_, err := f.WriteString(repo)
+				if err != nil {
+					log.Fatalf("Write colorscheme to %s failed error:%s", filename, err)
+					os.Exit(1)
+				}
+				wg.Done()
+			}(&wg)
+		}
 	}
 	wg.Wait()
 	themecache := homepath + "/.cache/vim/theme.txt"
