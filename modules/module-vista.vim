@@ -8,4 +8,5 @@ let g:vista_executive_for = {
   \ 'pandoc': 'markdown',
   \ 'markdown': 'toc',
   \ 'yaml': 'coc',
+  \ 'typescript': 'coc',
   \ }
