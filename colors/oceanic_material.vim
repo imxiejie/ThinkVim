@@ -1420,7 +1420,7 @@ function! s:apply_syntax_highlightings()
   "===============================================================
   " machakann/vim-sandwich
   "===============================================================
-  exec 'hi OperatorSandwichChange' .s:fg_fg0 . s:bg_darkgreen
+  exec 'hi OperatorSandwichChange' .s:fg_bg4 . s:bg_darkgreen
   "===============================================================
   "kristijanhusak/vim-dadbod-ui
   "===============================================================
