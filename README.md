@@ -4,7 +4,7 @@
 ## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
 
 <div align="center">
-<img src="https://user-images.githubusercontent.com/41671631/81565109-688df780-93cb-11ea-9d9f-df270a52acdb.png" width="960" height="540">
+<img src="https://user-images.githubusercontent.com/41671631/81565109-688df780-93cb-11ea-9d9f-df270a52acdb.png" width="704" height="507">
 </div>
 
 <p align="center">
