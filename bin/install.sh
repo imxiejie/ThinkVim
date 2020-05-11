@@ -4,6 +4,7 @@ source ./bin/format.sh
 source ./bin/pynvim.sh
 
 thinkvim_personal="$HOME/.thinkvim.d"
+cache_vim="$HOME/.cache/vim"
 generator="$HOME/.config/nvim/bin/generator"
 
 action "Create .thinkvim.d "
@@ -15,6 +16,14 @@ function ensureThinkvimd(){
     ok "create .thinkvim.d folder success"
   else
     warn "the .thinkvim.d folder exist skipped"
+  fi
+
+  if [ ! -d "$cache_vim" ]
+  then
+    mkdir -p $HOME/.cache/vim
+    ok "create .cache/vim folder success"
+  else
+    warn "the .cache/vim folder exist skipped"
   fi
 
   cd ~/.thinkvim.d/
