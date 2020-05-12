@@ -76,4 +76,13 @@ endfunction
 " FileType plugin config
 
 "MaxMEllon/vim-jsx-pretty
-let g:vim_jsx_pretty_highlight_close_tag = 1
+if dein#tap('vim-jsx-pretty')
+  let g:vim_jsx_pretty_highlight_close_tag = 1
+endif
+
+if dein#tap('html5.vim')
+  let g:html5_event_handler_attributes_complete = 0
+  let g:html5_rdfa_attributes_complete = 0
+  let g:html5_microdata_attributes_complete = 0
+  let g:html5_aria_attributes_complete = 0
+endif

@@ -1,0 +1,2 @@
+# Css Support languageserver by coc-css
+- { repo: hail2u/vim-css3-syntax, on_ft: css }

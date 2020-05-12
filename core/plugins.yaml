@@ -243,7 +243,7 @@
   on_map: { nx: <Plug> }
 
 - repo: Yggdroot/indentLine
-  on_event: BufRead
+  on_event: BufReadPre
   hook_source: source $VIM_PATH/modules/module-indentline.vim
 
 - repo: liuchengxu/vista.vim
