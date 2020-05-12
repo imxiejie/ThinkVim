@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-source ./bin/format.sh
-source ./bin/pynvim.sh
+source ./scripts/format.sh
+source ./scripts/pynvim.sh
 
 thinkvim_personal="$HOME/.thinkvim.d"
 cache_vim="$HOME/.cache/vim"
@@ -45,7 +45,7 @@ function ensureThinkvimd(){
     if [ ! -f $generator ]
     then
       action "Download generator binary"
-      source ./bin/generator.sh
+      source ./scripts/generator.sh
       action "choose your languages"
       ./bin/generator
     else
