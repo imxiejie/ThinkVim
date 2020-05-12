@@ -81,7 +81,7 @@
   "emmet.includeLanguages": {
     "vue-html": "html",
     "javascript": "javascriptreact",
-    "typescript": "typescriptreact"
+    "typescriptreact": "typescriptreact"
   },
   //imselect
   "imselect.enableStatusItem": false,

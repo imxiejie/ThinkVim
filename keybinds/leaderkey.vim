@@ -295,6 +295,7 @@ function! s:load_vim_go() abort
       nnoremap <silent> <LocalLeader>gC :GoCallers<CR>
       nnoremap <silent> <LocalLeader>gs :GoCallstack<CR>
       if s:enable_whichkey
+        let g:which_key_localmap.g = { 'name': '+GoToolKit'}
         let g:which_key_localmap.g.a = 'Add tags'
         let g:which_key_localmap.g.r = 'Remove tags'
         let g:which_key_localmap.g.i = 'Go impl'
