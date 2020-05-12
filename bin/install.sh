@@ -97,13 +97,13 @@ if [ "$(uname)" == "Darwin" ]; then
   brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
   running "Found you use Linux"
-  if [ -x "$(command -v apk)" ];then apk add bat ripgrep ; fi
-  if [ -x "$(command -v pkg)" ];then pkg install bat ripgrep ; fi
-  if [ -x "$(command -v pacman)" ];then pacman -S bat ripgrep ; fi
-  if [ -x "$(command -v apt-get)" ]; then apt-get install bat ripgrep ; fi
-  if [ -x "$(command -v dnf)" ]; then dnf install bat ripgrep ; fi
-  if [ -x "$(command -v nix-env)" ]; then nix-env -i bat ripgrep ; fi
-  if [ -x "$(command -v zypper)" ]; then zypper install bat ripgrep ; fi
+  if [ -x "$(command -v apk)" ];then sudo apk add bat ripgrep ; fi
+  if [ -x "$(command -v pkg)" ];then sudo pkg install bat ripgrep ; fi
+  if [ -x "$(command -v pacman)" ];then sudo pacman -S bat ripgrep ; fi
+  if [ -x "$(command -v apt-get)" ]; then sudo apt-get install bat ripgrep ; fi
+  if [ -x "$(command -v dnf)" ]; then sudo dnf install bat ripgrep ; fi
+  if [ -x "$(command -v nix-env)" ]; then sudo nix-env -i bat ripgrep ; fi
+  if [ -x "$(command -v zypper)" ]; then sudo zypper install bat ripgrep ; fi
 fi
 
 action "Install pynvim..."
