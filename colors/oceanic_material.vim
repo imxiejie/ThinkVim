@@ -183,7 +183,7 @@ function! s:apply_syntax_highlightings()
   exec 'hi MoreMsg'. s:fg_yellow. s:bg_none. s:bold
   exec 'hi MatchParen'. s:fg_none. s:bg_bg4
   exec 'hi NonText'. s:fg_bg5
-  exec 'hi Whitespace'. s:fg_red. s:bg_none. s:undercurl. s:sp_red
+  exec 'hi Whitespace'. s:fg_bg5
   exec 'hi SpecialKey'. s:fg_bg5
   exec 'hi Pmenu'. s:fg_fg1. s:bg_bg3
   exec 'hi PmenuSbar'. s:fg_none. s:bg_bg3

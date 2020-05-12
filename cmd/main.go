@@ -193,7 +193,11 @@ func clilangqs() []string {
 		"json",
 		"nginx",
 		"toml",
-		"web",
+		"html",
+		"css",
+		"less",
+		"sass",
+		"stylus",
 	}
 	answers, err := answertemplate(questionname, message, options, pagesize)
 	if err != nil {
