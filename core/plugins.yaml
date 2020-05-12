@@ -261,7 +261,7 @@
 
 - repo: luochen1990/rainbow
   on_ft: [ go,rust,python,c,cpp,html,css,yaml,ini,toml,javascript,javascriptreact,vue,typescriptreact ]
-  hook_add: let g:rainbow_active = 1
+  hook_source: let g:rainbow_active = 1
 
 # }}}
 

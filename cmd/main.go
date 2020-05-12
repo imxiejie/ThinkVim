@@ -133,7 +133,7 @@ func GetColorScheme(colorschemes []string) string {
 	colors := ""
 	switch colorschemes[0] {
 	case "hardcoreplayers/oceanic-material(support by default)":
-		colors = ""
+		colors = "oceanic_material\n"
 	case "NLKNguyen/papercolor-theme":
 		colors = "PaperColor\n"
 	case "drewtempelmeyer/palenight.vim":
