@@ -158,3 +158,12 @@ Why add this support, Because vim is free, and key mapping everyone has everyone
 - Rust use coc-rust-analyzer
 - Scala use coc-metals
 - Vue use coc-vetur
+
+## Add Language support
+
+It's easy to add new language supoort,just run this script,then choose the new languages that you write. it will write the languages plugins to your `.thinkvim.d/plugins.yaml`
+
+```console
+cd .config/nvim/bin
+./generator
+```
