@@ -12,7 +12,7 @@ iron.core.set_config {
   preferred = {
     go = "gore",
     python = "ipython",
-    typescript = "ts-node",
+    typescript.ts = "ts-node",
     javascript = "node"
   }
 }
