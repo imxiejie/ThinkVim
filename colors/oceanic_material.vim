@@ -586,10 +586,12 @@ function! s:apply_syntax_highlightings()
   " vim-jsx-pretty: https://github.com/maxmellon/vim-jsx-pretty
   "===============================================================
   exec 'hi jsxTagName' . s:fg_orange  . s:italic
+  exec 'hi jsxTag' . s:fg_purple . s:bold
   exec 'hi jsxOpenPunct' . s:fg_green
   exec 'hi jsxClosePunct' . s:fg_blue
   exec 'hi jsxEscapeJs' . s:fg_blue
-  exec 'hi jsxAttrib' . s:fg_aqua
+  exec 'hi jsxAttrib' . s:fg_yellow
+  exec 'hi jsxCloseTag' . s:fg_aqua . s:bold
   "===============================================================
   " TypeScript:
   " vim-typescript: https://github.com/leafgarland/typescript-vim {{{
@@ -638,7 +640,7 @@ function! s:apply_syntax_highlightings()
   exec 'hi typescriptNodeGlobal' . s:fg_purple  . s:italic
   exec 'hi typescriptExport' . s:fg_purple  . s:italic
   exec 'hi typescriptDefaultParam' . s:fg_orange
-  exec 'hi typescriptImport' . s:fg_purple  . s:italic
+  exec 'hi typescriptImport' . s:fg_red  . s:italic
   exec 'hi typescriptTypeParameter' . s:fg_yellow
   exec 'hi typescriptReadonlyModifier' . s:fg_orange
   exec 'hi typescriptAccessibilityModifier' . s:fg_orange
