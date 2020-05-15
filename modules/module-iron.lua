@@ -7,12 +7,10 @@ iron.core.add_repl_definitions {
     }
   }
 }
-
 iron.core.set_config {
   preferred = {
     go = "gore",
     python = "ipython",
-    typescript.ts = "ts-node",
-    javascript = "node"
+    javascript = "node",
   }
 }
