@@ -260,7 +260,7 @@
     let g:user_emmet_mode = 'i'
 
 - repo: luochen1990/rainbow
-  on_event: BufReadPre
+  on_ft: [ html,css,javascript,javascriptreact,vue,go,python,c,cpp,lua,rust,vim,less,stylus,sass,scss,json,ruby,scala,toml,php,haskell]
   hook_source: let g:rainbow_active = 1
 
 # }}}
