@@ -12,5 +12,6 @@ iron.core.set_config {
     go = "gore",
     python = "ipython",
     javascript = "node",
-  }
+  },
+  repl_open_cmd = "vertical split"
 }
