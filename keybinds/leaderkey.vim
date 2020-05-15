@@ -498,6 +498,7 @@ endfunction
 function! s:load_iron() abort
   if dein#tap('iron.nvim')
     nmap <silent> <Leader>rr :<C-u>IronRepl<CR><Esc>
+    nmap <silent> <Leader>rf :IronWatchCurrentFile<CR>
     nmap <silent> <Leader>rq <Plug>(iron-exit)
     nmap <silent> <Leader>rl <Plug>(iron-send-line)
     vmap <silent> <Leader>rl <Plug>(iron-visual-send)
@@ -509,6 +510,8 @@ function! s:load_iron() abort
       let g:which_key_map.r ={
         \ 'name' : '+repl',
         \ 'r' : 'Open Repl',
+        \ 'f' : 'Repl Watch',
+        \ 'h' : 'Repl Here',
         \ 'q' : 'Exit Repl',
         \ 'l' : 'Send line',
         \ 'p' : 'Repl repeat',
