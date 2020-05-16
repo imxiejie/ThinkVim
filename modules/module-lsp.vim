@@ -63,6 +63,7 @@ if dein#tap('haskell-vim')
 endif
 
 "lua lsp config
+"https://github.com/Alloyed/lua-lsp
 if dein#tap('vim-lua')
     call coc#config('languageserver', {
       \ 'lua': {
