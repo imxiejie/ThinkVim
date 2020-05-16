@@ -134,11 +134,6 @@
       \   "_" : {
         \       "outputter" : "message",
         \   },
-        \ "typescript":{
-                \ 'command': 'ts-node',
-                \ 'cmdopt': '--compiler-options ''{"target": "es2015"}''',
-                \  'exec': '%c %o %s',
-                \}
         \}
     let g:quickrun_no_default_key_mappings = 1
 
