@@ -1,4 +1,4 @@
 
 # json support
 # LanguageServerProtocol for json by thinkvim default
-- { repo: elzr/vim-json, on_ft: json }
+- { repo: kevinoid/vim-jsonc, on_ft: json }
