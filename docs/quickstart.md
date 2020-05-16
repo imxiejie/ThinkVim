@@ -149,7 +149,7 @@ Why add this support, Because vim is free, and key mapping everyone has everyone
 - Python support `coc-python`,When install thinkvim if you choose python,when open python file it will auto install mpls.
 - Dockerfile use docker-langserver (need user install)
 - Haskell use https://github.com/haskell/haskell-ide-engine (need user install)
-- Lua use lua-lsp (need user install)
+- Lua use https://github.com/Alloyed/lua-lsp
 - Javascript Typescript use coc-tsserver
 - Php use https://github.com/bmewburn/vscode-intelephense (need user install)
 - Shell use https://github.com/bash-lsp/bash-language-server (need user install)
