@@ -130,12 +130,17 @@
 - repo: thinca/vim-quickrun
   on_cmd: QuickRun
   hook_source: |
-        let g:quickrun_config = {
-            \   "_" : {
-            \       "outputter" : "message",
-            \   },
-            \}
-        let g:quickrun_no_default_key_mappings = 1
+    let g:quickrun_config = {
+      \   "_" : {
+        \       "outputter" : "message",
+        \   },
+        \ "typescript":{
+                \ 'command': 'ts-node',
+                \ 'cmdopt': '--compiler-options ''{"target": "es2015"}''',
+                \  'exec': '%c %o %s',
+                \}
+        \}
+    let g:quickrun_no_default_key_mappings = 1
 
 - {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
 
