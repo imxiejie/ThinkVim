@@ -137,7 +137,8 @@
         \}
     let g:quickrun_no_default_key_mappings = 1
 
-- {repo: simnalamburt/vim-mundo , on_map: { n: <Plug> } }
+- repo: simnalamburt/vim-mundo
+  on_cmd: MundoToggle
 
 - repo: liuchengxu/vim-which-key
   on_cmd: [ Whichkey, Whichkey! ]
