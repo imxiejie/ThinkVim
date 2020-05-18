@@ -33,14 +33,24 @@ let s:config_paths = get(g:, 'etc_config_paths', [
 
 let s:user_plugins=expand($HOME.'/.thinkvim.d/plugins.yaml')
 
-if filereadable(s:user_plugins)
-	call add(s:config_paths,s:user_plugins)
-	call filter(s:config_paths, 'filereadable(v:val)')
-else
-	call filter(s:config_paths, 'filereadable(v:val)')
-endif
+function! s:load_plugins(plugin_files)
+	" check the user plugins
+	if filereadable(a:plugin_files)
+		let content = readfile(a:plugin_files)
+		if empty(content)
+			" Filter non-existent config paths
+			call filter(s:config_paths, 'filereadable(v:val)')
+		else
+			call filter(s:config_paths, 'filereadable(v:val)')
+			call add(s:config_paths,a:plugin_files)
+		endif
+	else
+		call filter(s:config_paths, 'filereadable(v:val)')
+	endif
+endfunction
 
 function! s:main()
+	call s:load_plugins(s:user_plugins)
 	if has('vim_starting')
 		" When using VIMINIT trick for exotic MYVIMRC locations, add path now.
 		if &runtimepath !~# $VIM_PATH
