@@ -39,13 +39,13 @@
 ```console
 git clone --depth=1 https://github.com/hardcoreplayers/ThinkVim.git ~/.config/nvim
 cd ~/.config/nvim
-sh scripts/install.sh
+bash scripts/install.sh
 ```
 
 ## Uninstall
 
 ```console
-sh scripts/cleanup.sh
+bash scripts/cleanup.sh
 ```
 
 ## Quick Start
