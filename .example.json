@@ -77,6 +77,7 @@
   "prettier.eslintIntegration": true,
   "prettier.tslintIntegration": true,
   "prettier.stylelintIntegration": true,
+  "prettier.disableSuccessMessage": true,
   //emmet
   "emmet.includeLanguages": {
     "vue-html": "html",
@@ -109,9 +110,12 @@
   "explorer.floating.height": -10,
   "explorer.openAction.strategy": "sourceWindow",
   // eslint
-  "eslint.filetypes": ["javascript", "javascript.jsx", "javascriptreact"],
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "eslint.autoFix": true,
-  "eslint.autoFixOnSave": true,
-  // python
-  "python.jediEnabled": false
+  "eslint.autoFixOnSave": true
 }
