@@ -651,6 +651,10 @@ function! s:load_commandmap() abort
   cnoremap <C-t> <C-R>=expand("%:p:h") . "/" <CR>
 endfunction
 
+function! s:load_terminalmap() abort
+  tnoremap <A-[> <C-\><C-n>
+endfunction
+
 function! s:load_quietmap() abort
   function! s:QuiteVim() abort
     if empty(expand('%:t'))
@@ -751,7 +755,7 @@ let s:plugins = {
   \ 'smartchr':'vim-smartchr','iron':'iron.nvim','sandwich':'vim-sandwich', 'startify':'vim-startify',
   \ 'fugitive': 'vim-fugitive', 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quietmap':'quiet','windowmap':'window','session':'session',
-  \ 'toggle':'toggle','normalmap':'normal'
+  \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal'
   \ }
 
 function! s:load_plugins_keybinds(pmap) abort
