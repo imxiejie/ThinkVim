@@ -490,7 +490,7 @@ function! s:load_smartchr() abort
             \ smartchr#loop(':=',';')
     autocmd FileType go inoremap <buffer> <expr> .
           \ smartchr#loop('.', '<-', '->','...')
-    autocmd FileType typescript inoremap <buffer><expr>;
+    autocmd FileType typescript,typescriptreact inoremap <buffer><expr>;
             \ smartchr#loop(':',';')
   endif
 endfunction
