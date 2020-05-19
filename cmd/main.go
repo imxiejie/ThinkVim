@@ -179,6 +179,7 @@ func clilangqs() []string {
 		"R",
 		"javascript",
 		"typescript",
+		"react",
 		"vue",
 		"go",
 		"rust",
