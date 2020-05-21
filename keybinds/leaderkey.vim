@@ -135,13 +135,13 @@ endfunction
 function! s:load_coc_clap() abort
   if dein#tap('coc-clap')
     " Show all diagnostics
-    nnoremap <silent> <Leader>ce  :Clap coc_diagnostics<cr>
+    nnoremap <silent> <Leader>ce  :Clap coc_diagnostics<CR>
     " Manage extensions
-    nnoremap <silent> <Leader>;  :Clap coc_extensions<cr>
+    nnoremap <silent> <Leader>;   :Clap coc_extensions<CR>
     " Show commands
-    nnoremap <silent> <Leader>,   :Clap coc_commands<cr>
+    nnoremap <silent> <Leader>,   :Clap coc_commands<CR>
     " Search workspace symbols
-    nnoremap <silent> <Leader>cs  :Clap coc_symbols<cr>
+    nnoremap <silent> <Leader>cs  :Clap coc_symbols<CR>
     nnoremap <silent> <Leader>cS  :Clap coc_services<CR>
     nnoremap <silent> <leader>ct  :Clap coc_outline<CR>
     if s:enable_whichkey

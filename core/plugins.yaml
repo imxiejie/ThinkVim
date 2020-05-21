@@ -99,8 +99,9 @@
 
 # Find Everythins
 - repo: liuchengxu/vim-clap
+  merged: 0
   build: 'bash install.sh'
-  on_cmd: Clap
+  on_map: { n: <Plug> }
   hook_add: source $VIM_PATH/modules/module-clap.vim
 
 - repo: vn-ki/coc-clap
