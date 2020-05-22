@@ -496,10 +496,20 @@ function! s:load_smartchr() abort
 endfunction
 
 function! s:load_iron() abort
+  function! s:exit_iron() abort
+    let l:flist = ['gore','ts-node','node','ipython']
+    for fname in l:flist
+      let l:bnr = bufwinnr(fname)
+      if l:bnr > 0
+        exec bnr . "wincmd w"
+        quit!
+      endif
+    endfor
+  endfunction
   if dein#tap('iron.nvim')
     nmap <silent> <Leader>rr :<C-u>IronRepl<CR><Esc>
     nmap <silent> <Leader>rf :IronWatchCurrentFile<CR>
-    nmap <silent> <Leader>rq <Plug>(iron-exit)
+    nmap <silent> <Leader>rq :call <SID>exit_iron()<CR>
     nmap <silent> <Leader>rl <Plug>(iron-send-line)
     vmap <silent> <Leader>rl <Plug>(iron-visual-send)
     nmap <silent> <Leader>rp <Plug>(iron-repeat-cmd)
