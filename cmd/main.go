@@ -199,6 +199,8 @@ func clilangqs() []string {
 		"less",
 		"sass",
 		"stylus",
+		"sql",
+		"dart",
 	}
 	answers, err := answertemplate(questionname, message, options, pagesize)
 	if err != nil {

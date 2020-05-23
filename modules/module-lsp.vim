@@ -133,3 +133,12 @@ endif
 if dein#tap('vim-vue')
     call coc#add_extension('coc-vetur')
 endif
+
+"Dart lsp config
+if dein#tap('dart-vim-plugin')
+  call coc#add_extension('coc-flutter')
+endif
+
+if dein#tap('sql.vim')
+  call coc#add_extension('coc-sql')
+endif
