@@ -67,7 +67,7 @@ call utils#source_file($VIM_PATH,'core/filetype.vim')
 call utils#check_source(s:user_init_config)
 
 " Load key map
-call utils#source_file($VIM_PATH,'keybinds/leaderkey.vim')
+call utils#source_file($VIM_PATH,'keybinds/keybinds.vim')
 
 " Initialize user favorite colorscheme
 call theme#init()
