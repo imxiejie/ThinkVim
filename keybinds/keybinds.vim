@@ -93,16 +93,6 @@ function! s:load_indentline()abort
   endif
 endfunction
 
-function! s:load_any_jump() abort
-  if dein#tap('any-jump.vim')
-    nnoremap <silent> <Leader>cj :AnyJump<CR>
-    xnoremap <silent> <Leader>cj :AnyJump<CR>
-    if s:enable_whichkey
-      let g:which_key_map.c.j ='Show definition references'
-    endif
-  endif
-endfunction
-
 function! s:load_floaterm() abort
   if dein#tap('vim-floaterm')
     nnoremap <silent> <Leader>ot :<C-u>FloatermToggle<CR>
@@ -757,7 +747,7 @@ endfunction
 
 let s:plugins = {
   \ 'dein': 'dein.vim','buffet':'vim-buffet','markdown_preview':'markdown-preview.nvim',
-  \ 'indentline':'indentLine','any_jump':'any-jump.vim','floaterm':'vim-floaterm',
+  \ 'indentline':'indentLine', 'floaterm':'vim-floaterm',
   \ 'dadbod_ui':'vim-dadbod-ui','dash':'dash.vim','coc_clap':'coc-clap',
   \ 'coc':'coc.nvim','clap':'vim-clap','vim_go':'vim-go','vim_delve':'vim-delve',
   \ 'vimagit':'vimagit','choosewin':'vim-choosewin','caw':'caw.vim','smoothie':'vim-smoothie',

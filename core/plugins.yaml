@@ -82,9 +82,6 @@
 # Code{{{
 - repo: editorconfig/editorconfig-vim
 
-- repo: pechorin/any-jump.vim
-  on_cmd: AnyJump
-
 - repo: rizzatti/dash.vim
   if: "has('mac')"
   on_map: { n: <Plug> }
