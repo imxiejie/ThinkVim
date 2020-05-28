@@ -75,7 +75,6 @@
   ],
   "prettier.statusItemText": "ⓟ ",
   "prettier.eslintIntegration": true,
-  "prettier.tslintIntegration": true,
   "prettier.stylelintIntegration": true,
   "prettier.disableSuccessMessage": true,
   //emmet
