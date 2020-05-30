@@ -91,14 +91,6 @@
   "cursors.cancelKey": "<esc>",
   //sessions
   "session.directory": "~/.cache/vim/session",
-  "project.dbpath": "~/.cache/vim/.coc-project",
-  "project.rootPatterns": [
-    ".git",
-    "go.mod",
-    "jsconfig.json",
-    "tsconfig.json",
-    "Cargo.toml"
-  ],
   // coc-explorer
   "explorer.icon.expanded": "▾",
   "explorer.icon.collapsed": "▸",
