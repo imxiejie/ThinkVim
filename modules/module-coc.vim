@@ -3,6 +3,7 @@ let g:coc_snippet_next = '<TAB>'
 let g:coc_snippet_prev = '<S-TAB>'
 let g:coc_status_error_sign = '•'
 let g:coc_status_warning_sign = '•'
+
 let g:coc_global_extensions =[
     \ 'coc-html',
     \ 'coc-css',
@@ -14,7 +15,6 @@ let g:coc_global_extensions =[
     \ 'coc-highlight',
     \ 'coc-git',
     \ 'coc-emoji',
-    \ 'coc-project',
     \ 'coc-lists',
     \ 'coc-stylelint',
     \ 'coc-yaml',
