@@ -59,7 +59,9 @@ Check the [thinkvim wiki](https://github.com/hardcoreplayers/ThinkVim/wiki) page
 
 ## Backers
 
-Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!
+Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!  
+
+[![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/bobbyhub)
 
 <a href="https://github.com/emeentag" target="_blank" title="emeentag">
   <img src="https://github.com/emeentag.png?size=64" width="64" height="64" alt="emeentag">
