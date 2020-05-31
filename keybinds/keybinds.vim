@@ -165,6 +165,15 @@ function! s:load_coc() abort
     function! s:cocActionsOpenFromSelected(type) abort
         execute 'CocCommand actions.open ' . a:type
     endfunction
+    " Jump definition in other window
+    function! s:definition_other_window() abort
+      if winnr('$') >= 4
+        exec "normal \<Plug>(coc-definition)"
+      else
+        exec 'vsplit'
+        exec "normal \<Plug>(coc-definition)"
+      endif
+    endfunction
     xmap <silent> <Leader>ca :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
     nmap <silent> <Leader>ca :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
     " Do default action for next item.
@@ -184,7 +193,7 @@ function! s:load_coc() abort
     " Fix autofix problem of current line
     nmap <Leader>cF  <Plug>(coc-fix-current)
     " Remap keys for gotos
-    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gd :<C-u>call <sid>definition_other_window()<CR>
     nmap <silent> gy <Plug>(coc-type-definition)
     nmap <silent> <Leader>ci <Plug>(coc-implementation)
     nmap <silent> gr <Plug>(coc-references)
