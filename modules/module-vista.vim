@@ -9,4 +9,5 @@ let g:vista_executive_for = {
   \ 'markdown': 'toc',
   \ 'yaml': 'coc',
   \ 'typescript': 'coc',
+  \ 'typescriptreact': 'coc',
   \ }
