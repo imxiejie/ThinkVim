@@ -34,8 +34,6 @@ function! s:load_buffet() abort
   if dein#tap('vim-buffet')
     nnoremap  ]b :<C-u>bp<CR>
     nnoremap  [b :<C-u>bn<CR>
-    "delete buffer
-    nmap <C-x>b :<C-u>bd<CR>
     nnoremap <silent> <Leader>bc :Bonly<CR>
     nnoremap <silent> <Leader>bx :Bw<CR>
     nmap <leader>1 <Plug>BuffetSwitch(1)
@@ -63,6 +61,20 @@ function! s:load_buffet() abort
       let g:which_key_map.9 = 'select window-9'
       let g:which_key_map.0 = 'select window-10'
     endif
+  endif
+endfunction
+
+function! s:load_bufkill() abort
+  nmap <C-x>b :BD<CR>
+  nmap <silent> <Leader>bn    <Plug>BufKillBack
+  nmap <silent> <Leader>bp    <Plug>BufKillForward
+  nmap <silent> <Leader>bd    <Plug>BufKillBd
+  nmap <silent> <Leader>bu    <Plug>BufKillUndo
+  if s:enable_whichkey
+    let g:which_key_map.b.n = 'Next Buffer'
+    let g:which_key_map.b.p = 'Prev Buffer'
+    let g:which_key_map.b.d = 'Kill Buffer'
+    let g:which_key_map.b.u = 'Undo Kill'
   endif
 endfunction
 
@@ -764,7 +776,7 @@ let s:plugins = {
   \ 'smartchr':'vim-smartchr','iron':'iron.nvim','sandwich':'vim-sandwich', 'startify':'vim-startify',
   \ 'fugitive': 'vim-fugitive', 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quietmap':'quiet','windowmap':'window','session':'session',
-  \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal'
+  \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal','bufkill':'bufkill',
   \ }
 
 function! s:load_plugins_keybinds(pmap) abort
