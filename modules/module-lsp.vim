@@ -74,12 +74,12 @@ if dein#tap('vim-lua')
 endif
 
 "javascript lsp config
-if dein#tap('vim-jsx-improve')
-    call coc#add_extension('coc-tsserver','coc-eslint','coc-prettier')
+if dein#tap('vim-js')
+  call coc#add_extension('coc-tsserver','coc-eslint','coc-prettier','coc-docthis')
 endif
 
 if dein#tap('yats.vim')
-    call coc#add_extension('coc-tsserver','coc-eslint', 'coc-prettier', 'coc-tslint-plugin')
+    call coc#add_extension('coc-tsserver','coc-eslint', 'coc-prettier', 'coc-tslint-plugin' ,'coc-docthis')
 endif
 
 "php lsp config
