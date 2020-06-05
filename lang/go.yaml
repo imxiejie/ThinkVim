@@ -1,5 +1,4 @@
 
-# Go Debug support
+# Go support
 # LanguageServerProtocol used by gopls
 - { repo : hardcoreplayers/go-nvim,on_ft: [ go ,gomod ]}
-- { repo: sebdah/vim-delve,on_ft: go }

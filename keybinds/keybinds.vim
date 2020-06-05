@@ -320,31 +320,6 @@ function! s:load_vim_go() abort
   endif
 endfunction
 
-function! s:load_vim_delve()abort
-  if dein#tap('vim-delve')
-    function! InitGoDebugKeyMap() abort
-      nnoremap <silent> <Leader>da :DlvToggleBreakpoint<CR>
-      nnoremap <silent> <Leader>db :DlvToggleTracepoint<CR>
-      nnoremap <silent> <Leader>dc :DlvClearAll<CR>
-      nnoremap <silent> <Leader>dd :DlvDebug<CR>
-      nnoremap <silent> <Leader>dt :DlvTest<CR>
-      nnoremap <silent> <Leader>dr :DlvRemoveBreakpoint<CR>
-      nnoremap <silent> <Leader>dR :DlvRemoveTracepoint<CR>
-      if s:enable_whichkey
-        let g:which_key_map.d = {'name': 'Debug'}
-        let g:which_key_map.d.a = 'Add or Remove BreakPoint'
-        let g:which_key_map.d.b = 'Add or Remove TracePoint'
-        let g:which_key_map.d.c = 'Clear All Point'
-        let g:which_key_map.d.d = 'Start Debug'
-        let g:which_key_map.d.t = 'Start Debug Test'
-        let g:which_key_map.d.r = 'Remove BreakPoint'
-        let g:which_key_map.d.R = 'Remove TracePoint'
-      endif
-    endfunction
-    autocmd FileType go call InitGoDebugKeyMap()
-  endif
-endfunction
-
 function! s:load_vimagit() abort
   if dein#tap('vimagit')
     nnoremap <silent> <Leader>gg :Magit<CR>
@@ -770,11 +745,12 @@ let s:plugins = {
   \ 'dein': 'dein.vim','buffet':'vim-buffet','markdown_preview':'markdown-preview.nvim',
   \ 'indentline':'indentLine', 'floaterm':'vim-floaterm',
   \ 'dadbod_ui':'vim-dadbod-ui','dash':'dash.vim','coc_clap':'coc-clap',
-  \ 'coc':'coc.nvim','clap':'vim-clap','vim_go':'vim-go','vim_delve':'vim-delve',
-  \ 'vimagit':'vimagit','choosewin':'vim-choosewin','caw':'caw.vim','smoothie':'vim-smoothie',
-  \ 'goyo':'goyo.vim','defx':'defx.nvim','quickrun':'vim-quickrun','easymotion':'vim-easymotion',
-  \ 'smartchr':'vim-smartchr','iron':'iron.nvim','sandwich':'vim-sandwich', 'startify':'vim-startify',
-  \ 'fugitive': 'vim-fugitive', 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
+  \ 'coc':'coc.nvim','clap':'vim-clap','vim_go':'vim-go', 'vimagit':'vimagit',
+  \ 'choosewin':'vim-choosewin','caw':'caw.vim','smoothie':'vim-smoothie',
+  \ 'goyo':'goyo.vim','defx':'defx.nvim','quickrun':'vim-quickrun',
+  \ 'easymotion':'vim-easymotion', 'smartchr':'vim-smartchr','iron':'iron.nvim',
+  \ 'sandwich':'vim-sandwich', 'startify':'vim-startify', 'fugitive': 'vim-fugitive',
+  \ 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quietmap':'quiet','windowmap':'window','session':'session',
   \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal','bufkill':'bufkill',
   \ }
