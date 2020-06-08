@@ -260,6 +260,7 @@ function! s:load_coc() abort
     omap if <Plug>(coc-funcobj-i)
     omap af <Plug>(coc-funcobj-a)
   endif
+  nmap gcj :execute 'CocCommand docthis.documentThis'<CR>
 endfunction
 
 function! s:load_clap() abort
