@@ -15,6 +15,7 @@
   on_event: [ BufReadPre, BufNew ]
 
 - repo: hardcoreplayers/dashboard-nvim
+  hook_add: source  $VIM_PATH/modules/module-dashboard.vim
 #}}}
 
 # Completion{{{
