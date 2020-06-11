@@ -1431,6 +1431,10 @@ function! s:apply_syntax_highlightings()
   "Shougo/defx.nvim
   "===============================================================
   exec 'hi DefxIconsDirectory' . s:fg_blue
+  "===============================================================
+  "hardcoreplayers/dashboard-nvim
+  "===============================================================
+  exec 'hi DashboardShutCut' . s:fg_red . s:bold
 
 endfunction
 

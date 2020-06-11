@@ -78,11 +78,11 @@ function! s:load_bufkill() abort
   endif
 endfunction
 
-function! s:load_startify() abort
-  if dein#tap('vim-startify')
-    nnoremap <silent> <Leader>os  :<C-u>Startify<CR>
+function! s:load_dashboard() abort
+  if dein#tap('dashboard-nvim')
+    nnoremap <silent> <Leader>os  :<C-u>Dashboard<CR>
     if s:enable_whichkey
-      let g:which_key_map.o.s = 'open stratify'
+      let g:which_key_map.o.s = 'open dashboard'
     endif
   endif
 endfunction
@@ -268,6 +268,7 @@ function! s:load_clap() abort
     nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
     nnoremap <silent> <Leader>bb :<C-u>Clap buffers<CR>
     nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
+    nnoremap <silent> <Leader>fb :<C-u>Clap marks<CR>
     "like emacs counsel-find-file
     nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
     nnoremap <silent> <Leader>ff :<C-u>Clap files ++finder=rg --ignore --hidden --files<cr>
@@ -283,6 +284,7 @@ function! s:load_clap() abort
       let g:which_key_map.t.c = 'Change Colorscheme'
       let g:which_key_map.b.b = 'Buffer List'
       let g:which_key_map.f.a = 'Find Word'
+      let g:which_key_map.f.b = 'Find Marks'
       let g:which_key_map.f.f = 'Find File'
       let g:which_key_map.f.g = 'Find files with git'
       let g:which_key_map.f.w = 'Find current word'
@@ -750,7 +752,7 @@ let s:plugins = {
   \ 'choosewin':'vim-choosewin','caw':'caw.vim','smoothie':'vim-smoothie',
   \ 'goyo':'goyo.vim','defx':'defx.nvim','quickrun':'vim-quickrun',
   \ 'easymotion':'vim-easymotion', 'smartchr':'vim-smartchr','iron':'iron.nvim',
-  \ 'sandwich':'vim-sandwich', 'startify':'vim-startify', 'fugitive': 'vim-fugitive',
+  \ 'sandwich':'vim-sandwich', 'dashboard':'dashboard-nvim', 'fugitive': 'vim-fugitive',
   \ 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quietmap':'quiet','windowmap':'window','session':'session',
   \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal','bufkill':'bufkill',

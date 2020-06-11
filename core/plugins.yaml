@@ -14,12 +14,7 @@
 - repo: hardcoreplayers/vim-buffet
   on_event: [ BufReadPre, BufNew ]
 
-- repo: mhinz/vim-startify
-  hook_add: source  $VIM_PATH/modules/module-startify.vim
-  hook_post_source: |
-      function! StartifyEntryFormat()
-        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-      endfunction
+- repo: hardcoreplayers/dashboard-nvim
 #}}}
 
 # Completion{{{
