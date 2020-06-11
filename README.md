@@ -1,21 +1,20 @@
 [![Build Status](https://travis-ci.com/hardcoreplayers/ThinkVim.svg?branch=master)](https://travis-ci.com/hardcoreplayers/ThinkVim)
 [![Go Report Card](https://goreportcard.com/badge/github.com/hardcoreplayers/ThinkVim)](https://goreportcard.com/report/github.com/hardcoreplayers/ThinkVim)
 
-## <div align="center"> [ThinkVim](https://github.com/taigacute/ThinkVim)</div>
-
-<div align="center">
-<img src="https://user-images.githubusercontent.com/41671631/81565109-688df780-93cb-11ea-9d9f-df270a52acdb.png" width="704" height="507">
-</div>
+## <div align="center"> ThinkVim</div>
 
 <p align="center">
   <b><a href="https://github.com/hardcoreplayers/ThinkVim/wiki/Screenshots">Screenshots</a></b>
-  |
+  •
   <b><a href="https://github.com/hardcoreplayers/ThinkVim/wiki/QuickStart">Get started</a></b>
-  |
+  •
   <b><a href="https://github.com/hardcoreplayers/ThinkVim/wiki/Shorcuts">Shortcuts</a></b>
-  |
+  •
   <b><a href="/docs">docs</a></b>
 </p>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/41671631/81565109-688df780-93cb-11ea-9d9f-df270a52acdb.png" width="704" height="507">
+</div>
 
 ## Features
 
