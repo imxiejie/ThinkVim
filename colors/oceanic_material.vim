@@ -1434,7 +1434,7 @@ function! s:apply_syntax_highlightings()
   "===============================================================
   "hardcoreplayers/dashboard-nvim
   "===============================================================
-  exec 'hi DashboardShutCut' . s:fg_red . s:bold
+  exec 'hi DashboardShortCut' . s:fg_red . s:bold
 
 endfunction
 
