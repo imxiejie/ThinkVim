@@ -13,7 +13,8 @@
   <b><a href="/docs">docs</a></b>
 </p>
 <div align="center">
-<img src="https://user-images.githubusercontent.com/41671631/81565109-688df780-93cb-11ea-9d9f-df270a52acdb.png" width="704" height="507">
+<img
+src="https://user-images.githubusercontent.com/41671631/84489554-71c4f980-acd4-11ea-929a-4dfc0f9ea1bf.png" width="704" height="507">
 </div>
 
 ## Features
@@ -28,9 +29,11 @@
 - Fast startup less than 80ms with 60+ plugins and a declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
 - Beautiful statusline
-  [spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim) and
+  [spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim)
   colorscheme
   [OceanicMaterial](https://github.com/hardcoreplayers/oceanic-material)
+  dashboard
+  [dashboard-nvim](https://github.com/hardcoreplayers/dashboard-nvim)
 - Interactive shell installation language support
 
 ## Installation
