@@ -158,6 +158,7 @@ then
   npm install coc-explorer --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-actions --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   npm install coc-db --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+  npm install coc-spell-checker --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
   ok "===>install all extensions success"
 else
   warn "pakcages.json file exist,skipped install coc-extensions"
