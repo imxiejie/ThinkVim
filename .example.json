@@ -75,6 +75,7 @@
   ],
   "prettier.statusItemText": "ⓟ ",
   "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": false,
   "prettier.stylelintIntegration": true,
   "prettier.disableSuccessMessage": true,
   //emmet
@@ -85,7 +86,7 @@
   },
   //imselect
   "imselect.enableStatusItem": false,
-  //multiple curssors
+  //multiple curssor
   "cursors.nextKey": "<C-n>",
   "cursors.previousKey": "<C-p>",
   "cursors.cancelKey": "<esc>",
@@ -108,5 +109,44 @@
     "typescriptreact"
   ],
   "eslint.autoFix": true,
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  // coc-actions
+  "coc-actions.hideCursor": false,
+  // Cspell
+  "cSpell.fixSpellingWithRenameProvider": true,
+  "cSpell.showStatus": false,
+  "cSpell.enabledLanguageIds": [
+    "asciidoc",
+    "c",
+    "cpp",
+    "csharp",
+    "css",
+    "git-commit",
+    "gitcommit",
+    "go",
+    "haskell",
+    "html",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "jsonc",
+    "latex",
+    "less",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "pug",
+    "restructuredtext",
+    "rust",
+    "scala",
+    "scss",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "yaml",
+    "yml",
+    "vim"
+  ]
 }

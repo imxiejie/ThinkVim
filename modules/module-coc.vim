@@ -24,6 +24,7 @@ let g:coc_global_extensions =[
     \ 'coc-explorer',
     \ 'coc-actions',
     \ 'coc-db',
+    \ 'coc-spell-checker',
     \]
 
 augroup MyAutoCmd
