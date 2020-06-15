@@ -37,7 +37,7 @@ if dein#tap('Dockerfile.vim')
     call coc#config('languageserver', {
       \ 'dockerfile': {
         \ "command": "docker-langserver",
-        \ "filetypes": ["go"],
+        \ "filetypes": ["dockerfile"],
         \ "args": ["--stdio"]
         \ }
         \})
