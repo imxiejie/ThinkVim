@@ -654,21 +654,21 @@ function! s:load_terminalmap() abort
   tnoremap <A-[> <C-\><C-n>
 endfunction
 
-function! s:load_quietmap() abort
-  function! s:QuiteVim() abort
+function! s:load_quitmap() abort
+  function! QuitVim() abort
     if empty(expand('%:t'))
       execute ":q"
     else
       execute ":wq!"
     endif
   endfunction
-  " Quiet
-  nnoremap <leader>qq :call <SID>QuiteVim()<CR>
+  " Quit
+  nnoremap <leader>qq :call QuitVim()<CR>
   nnoremap <leader>qw <esc>:q!<CR>
   if s:enable_whichkey
-    let g:which_key_map.q = { 'name': '+quiet'}
-    let g:which_key_map.q.q = 'Quiet with save'
-    let g:which_key_map.q.w = 'Quiet without save'
+    let g:which_key_map.q = { 'name': '+quit'}
+    let g:which_key_map.q.q = 'Quit with save'
+    let g:which_key_map.q.w = 'Quit without save'
   endif
 endfunction
 
@@ -754,7 +754,7 @@ let s:plugins = {
   \ 'easymotion':'vim-easymotion', 'smartchr':'vim-smartchr','iron':'iron.nvim',
   \ 'sandwich':'vim-sandwich', 'dashboard':'dashboard-nvim', 'fugitive': 'vim-fugitive',
   \ 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
-  \ 'commandmap':'command','quietmap':'quiet','windowmap':'window','session':'session',
+  \ 'commandmap':'command','quitmap':'quit','windowmap':'window','session':'session',
   \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal','bufkill':'bufkill',
   \ }
 
