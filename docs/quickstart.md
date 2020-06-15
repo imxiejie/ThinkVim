@@ -83,11 +83,11 @@ let g:which_key_map.F='test'
 
 check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
-## Startify
+## Dashboard
 
-- Custom Startify Header And Footer
+- Custom [dashboard-nvim](https://github.com/hardcoreplayers/dashboard-nvim) header and footer
 
-this is an example to config straify header and footer on your `custom.vim`.
+this is an example to config dashboard-nvim header and footer on your `custom.vim`.
 
 ```viml
 let s:header = [
@@ -103,8 +103,8 @@ let s:footer = [
       \ '',
       \ ]
 
-let g:startify_custom_header = Thinkvim_startify_center(s:header)
-let g:startify_custom_header = Thinkvim_startify_center(s:footer)
+let g:dashboard_custom_header = s:header
+let g:dashboard_custom_header = s:footer
 
 ```
 
@@ -127,7 +127,7 @@ vim-dadbod-ui dash.vim coc-clap
 coc.nvim vim-clap vim-go vim-delve
 vimagit vim-choosewin caw.vim vim-smoothie
 goyo.vim defx.nvim vim-quickrun vim-easymotion
-vim-smartchr iron.nvim vim-sandwich vim-startify
+vim-smartchr iron.nvim vim-sandwich dashboard-nvim
 vim-fugitive vim-mundo vista.vim
 
 general:

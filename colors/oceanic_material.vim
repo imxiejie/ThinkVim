@@ -1385,18 +1385,6 @@ function! s:apply_syntax_highlightings()
   let g:niji_dark_colours = g:rbpt_colorpairs
   let g:niji_light_colours = g:rbpt_colorpairs
   "===============================================================
-  " mhinz/vim-startify
-  "===============================================================
-  exec 'hi StartifyBracket' . s:fg_grey1
-  exec 'hi StartifyFile' . s:fg_fg0
-  exec 'hi StartifyNumber' . s:fg_red
-  exec 'hi StartifyPath' . s:fg_green
-  exec 'hi StartifySlash' . s:fg_green
-  exec 'hi StartifySection' . s:fg_blue
-  exec 'hi StartifyHeader' . s:fg_orange
-  exec 'hi StartifySpecial' . s:fg_grey1
-  exec 'hi StartifyFooter' . s:fg_grey1
-  "===============================================================
   " liuchengxu/vim-which-key
   "===============================================================
   exec 'hi WhichKey' . s:fg_red
