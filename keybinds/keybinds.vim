@@ -600,11 +600,6 @@ endif
 function! s:load_normalmap() abort
   " Write buffer (save)
   nnoremap <C-s> :<C-u>write<CR>
-  "smart move
-  nnoremap j gj
-  nnoremap k gk
-  vnoremap j gj
-  vnoremap k gk
   "yank to end
   nnoremap Y y$
   " Whitespace jump (see plugin/whitespace.vim)
