@@ -30,9 +30,9 @@ src="https://user-images.githubusercontent.com/41671631/84489554-71c4f980-acd4-1
   [dein](https://github.com/Shougo/dein.vim)
 - Beautiful statusline
   [spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim)
-  colorscheme
+- colorscheme
   [OceanicMaterial](https://github.com/hardcoreplayers/oceanic-material)
-  dashboard
+- dashboard
   [dashboard-nvim](https://github.com/hardcoreplayers/dashboard-nvim)
 - Interactive shell installation language support
 
