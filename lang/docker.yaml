@@ -1,0 +1,4 @@
+
+# Dockerfile support
+# LanguageServerProtocol used https://github.com/rcjsuen/dockerfile-language-server-nodejs
+- { repo: ekalinin/Dockerfile.vim,on_ft: [ Dockerfile, docker-compose ]}

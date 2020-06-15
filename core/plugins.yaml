@@ -1,0 +1,314 @@
+# PackageManage{{{
+- repo: Shougo/dein.vim
+  on_func: dein#
+# }}}
+
+# Editor UI{{{
+- repo: ryanoasis/vim-devicons
+
+- repo: hardcoreplayers/spaceline.vim
+  on_event: [ BufReadPre,BufNew ]
+  hook_add:
+    let g:spaceline_seperate_style= 'slant-cons'
+
+- repo: hardcoreplayers/vim-buffet
+  on_event: [ BufReadPre, BufNew ]
+
+- repo: hardcoreplayers/dashboard-nvim
+  hook_add: source  $VIM_PATH/modules/module-dashboard.vim
+#}}}
+
+# Completion{{{
+- repo: neoclide/coc.nvim
+  merged: 0
+  build: 'yarn install --frozen-lockfile'
+  hook_add: source  $VIM_PATH/modules/module-coc.vim
+  hook_source: source $VIM_PATH/modules/module-lsp.vim
+
+- repo: honza/vim-snippets
+  depends : coc.nvim
+
+# }}}
+
+# FileType{{{
+- repo: Shougo/context_filetype.vim
+
+- { repo: MTDL9/vim-log-highlighting, on_ft: log }
+- repo: plasticboy/vim-markdown
+  on_ft: markdown
+  hook_add: |
+    let g:vim_markdown_folding_level = 1
+    let g:vim_markdown_folding_style_pythonic = 1
+    let g:vim_markdown_frontmatter = 1
+    let g:vim_markdown_auto_insert_bullets = 1
+    let g:vim_markdown_new_list_item_indent = 0
+    let g:vim_markdown_conceal_code_blocks = 0
+    let g:vim_markdown_conceal = 0
+    let g:vim_markdown_strikethrough = 1
+    let g:vim_markdown_edit_url_in = 'vsplit'
+    let g:vim_markdown_fenced_languages = [
+      \ 'c++=cpp',
+      \ 'viml=vim',
+      \ 'bash=sh',
+      \ 'ini=dosini',
+      \ 'js=javascript',
+      \ 'json=javascript',
+      \ 'jsx=javascriptreact',
+      \ 'tsx=typescriptreact',
+      \ 'docker=Dockerfile',
+      \ 'makefile=make',
+      \ 'py=python'
+      \ ]
+
+- repo: rhysd/vim-gfm-syntax
+  depends: vim-markdown
+  on_ft: markdown
+  hook_add: |
+    let g:gfm_syntax_enable_always = 0
+    let g:gfm_syntax_highlight_emoji = 0
+    let g:gfm_syntax_enable_filetypes = ['markdown']
+
+- repo: iamcco/markdown-preview.nvim
+  on_ft: [markdown,pandoc.markdown,rmd]
+  build: 'sh -c "cd app & yarn install"'
+  hook_source: |
+      let g:mkdp_auto_start = 0
+# }}}
+
+# Code{{{
+- repo: editorconfig/editorconfig-vim
+
+- repo: rizzatti/dash.vim
+  if: "has('mac')"
+  on_map: { n: <Plug> }
+  hook_source: |
+      let g:dash_map = {
+        \ 'javascript': ['javascript', 'NodeJS'],
+        \ 'javascriptreact': ['react'],
+        \ 'html': ['html', 'svg'],
+        \ 'go' : 'Go',
+        \}
+# }}}
+
+# Find Everythins
+- repo: liuchengxu/vim-clap
+  merged: 0
+  build: 'bash install.sh'
+  on_map: { n: <Plug> }
+  hook_add: source $VIM_PATH/modules/module-clap.vim
+
+- repo: vn-ki/coc-clap
+  on_source: vim-clap
+
+# Interface{{{
+- { repo: rhysd/accelerated-jk, on_map: { n: <Plug> } }
+- { repo: haya14busa/vim-asterisk, on_map: { nv: <Plug> }}
+- repo: lambdalisue/suda.vim
+  on_event: BufRead
+  hook_add: let g:suda_smart_edit = 1
+
+- repo: ludovicchabant/vim-gutentags
+  if: executable('ctags')
+  on_event: [ BufReadPost, BufWritePost ]
+  hook_source: source  $VIM_PATH/modules/module-gutentags.vim
+
+- repo: t9md/vim-choosewin
+  on_map: { n: <Plug> }
+  hook_source: source  $VIM_PATH/modules/module-choosewin.vim
+
+- repo: psliwka/vim-smoothie
+  on_func: smoothie#
+  hook_add: |
+    let g:smoothie_no_default_mappings = v:true
+
+- repo: thinca/vim-quickrun
+  on_cmd: QuickRun
+  hook_source: |
+    let g:quickrun_config = {
+      \   "_" : {
+        \       "outputter" : "message",
+        \   },
+        \}
+    let g:quickrun_no_default_key_mappings = 1
+
+- repo: simnalamburt/vim-mundo
+  on_cmd: MundoToggle
+
+- repo: liuchengxu/vim-which-key
+  on_cmd: [ Whichkey, Whichkey! ]
+  hook_add: |
+    let g:which_key_map =  { 'name' : 'Leader'}
+    let g:which_key_localmap =  {'name' : 'LocalLeader'}
+  hook_post_source: |
+    function! s:register_whichkey()
+      let s:leader_key=substitute(get(g:,"mapleader","\\"), ' ', '<Space>', '')
+      let s:localleader_key= get(g:,'maplocalleader',';')
+      call which_key#register(s:leader_key, 'g:which_key_map')
+      call which_key#register(s:localleader_key, 'g:which_key_localmap')
+    endfunction
+    call s:register_whichkey()
+
+- repo: easymotion/vim-easymotion
+  on_map: { n: <Plug> }
+  hook_source: |
+        let g:EasyMotion_do_mapping = 0
+        let g:EasyMotion_prompt = 'Jump to → '
+        let g:EasyMotion_keys = 'fjdkswbeoavn'
+        let g:EasyMotion_smartcase = 1
+        let g:EasyMotion_use_smartsign_us = 1
+# }}}
+
+# File manager{{{
+- repo: Shougo/defx.nvim
+  on_cmd: Defx
+  hook_source: source  $VIM_PATH/modules/module-defx.vim
+
+- repo: kristijanhusak/defx-git
+  on_source: defx.nvim
+  hook_source: |
+    let g:defx_git#indicators = {
+      \ 'Modified'  : '•',
+      \ 'Staged'    : '✚',
+      \ 'Untracked' : 'ᵁ',
+      \ 'Renamed'   : '≫',
+      \ 'Unmerged'  : '≠',
+      \ 'Ignored'   : 'ⁱ',
+      \ 'Deleted'   : '✖',
+      \ 'Unknown'   : '⁇'
+      \ }
+
+- repo: kristijanhusak/defx-icons
+  on_source: defx.nvim
+  hook_add: |
+    let g:defx_icons_column_length = 1
+    let g:defx_icons_mark_icon = ''
+# }}}
+
+# Database{{{
+- repo: tpope/vim-dadbod
+
+- repo: kristijanhusak/vim-dadbod-ui
+  on_cmd: [ DBUIToggle,DBUIAddConnection,DBUI,DBUIFindBuffer,DBUIRenameBuffer ]
+  on_source: vim-dadbod
+  hook_source: source $VIM_PATH/modules/module-dadbod-ui.vim
+# }}}
+
+# Terminal {{{
+- repo: voldikss/vim-floaterm
+  on_cmd: [ FloatermNew,FloatermToggle,FloatermPrev,FloatermNext,FloatermSend ]
+  hook_source: source  $VIM_PATH/modules/module-floaterm.vim
+# }}}
+
+# Version control{{{
+- repo: jreybert/vimagit
+  on_cmd: Magit
+  hook_source: autocmd User VimagitEnterCommit startinsert
+
+- repo: rhysd/committia.vim
+  on_path: [ COMMIT_EDITMSG, MERGE_MSG ]
+  hook_source: let g:committia_min_window_width = 7
+
+- repo: tpope/vim-fugitive
+  on_cmd: [ G, Git, Gfetch, Gpush, Glog, Gclog, Gdiffsplit ]
+  hook_source:
+    augroup user_fugitive_plugin
+      autocmd!
+      autocmd FileType fugitiveblame normal A
+    augroup END
+# }}}
+
+# Neovim Lua feature{{{
+- repo: Vigemus/iron.nvim
+  if: has('nvim')
+  on_cmd: [ IronRepl, IronReplHere, IronFocus, IronSend, IronWatchCurrentFile ]
+  on_map: { nv: <Plug> }
+  on_func: IronUnwatchFile
+  hook_add: let g:iron_map_defaults = 0 | let g:iron_map_extended = 0
+  hook_source: luafile $VIM_PATH/modules/module-iron.lua
+
+- repo: norcalli/nvim-colorizer.lua
+  if: has('nvim-0.4')
+  on_ft: [ html,css,sass,scss,stylus,vim,javascript,javascriptreact,typescript,typescriptreact ]
+  hook_source: luafile $VIM_PATH/modules/module-colorizer.lua
+# }}}
+
+# Coding{{{
+- repo: tyru/caw.vim
+  depends: context_filetype.vim
+  on_map: { nx: <Plug> }
+
+- repo: Yggdroot/indentLine
+  on_event: BufReadPre
+  hook_source: source $VIM_PATH/modules/module-indentline.vim
+
+- repo: liuchengxu/vista.vim
+  on_cmd: [ Vista,Vista!,Vista!! ]
+  hook_source: source  $VIM_PATH/modules/module-vista.vim
+
+- repo: mattn/emmet-vim
+  on_event: InsertEnter
+  on_ft: [ html,css,javascript,javascriptreact,vue,typescript,typescriptreact ]
+  hook_source: |
+    let g:user_emmet_complete_tag = 0
+    let g:user_emmet_install_global = 0
+    let g:user_emmet_install_command = 0
+    let g:user_emmet_mode = 'i'
+
+- repo: luochen1990/rainbow
+  on_ft: [ html,css,javascript,javascriptreact,vue,go,python,c,cpp,lua,rust,vim,less,stylus,sass,scss,json,ruby,scala,toml,php,haskell]
+  hook_source: let g:rainbow_active = 1
+
+# }}}
+
+# Writing{{{
+- repo: junegunn/goyo.vim
+  on_cmd: Goyo
+  hook_source: source  $VIM_PATH/modules/module-goyo.vim
+
+- repo: junegunn/Limelight.vim
+  on_cmd: Limelight
+  hook_add: |
+    let g:limelight_conceal_ctermfg = 'gray'
+    let g:limelight_conceal_ctermfg = 240
+    let g:limelight_conceal_guifg = 'DarkGray'
+    let g:limelight_conceal_guifg = '#777777'
+#}}}
+
+# Operator
+- repo: kana/vim-operator-user
+
+- repo: kana/vim-operator-replace
+  on_map: { vnx: <Plug> }
+
+- repo: machakann/vim-sandwich
+  on_map: { vonx: <Plug>(operator-sandwich- }
+  hook_add: |
+    let g:sandwich_no_default_key_mappings = 1
+    let g:operator_sandwich_no_default_key_mappings = 1
+    let g:textobj_sandwich_no_default_key_mappings = 1
+
+# TextObjectOperator
+- repo: kana/vim-textobj-user
+
+- { repo: terryma/vim-expand-region, on_map: { x: <Plug> }}
+
+- { repo: AndrewRadev/splitjoin.vim, on_map: { n: <Plug>Splitjoin }}
+
+- repo: AndrewRadev/dsf.vim
+  on_map: { n: <Plug>Dsf }
+  hook_add: let g:dsf_no_mappings = 1
+
+- repo: kana/vim-smartchr
+  on_event: InsertCharPre
+
+- repo: kana/vim-niceblock
+  on_map: { x: <Plug> }
+  hook_add: let g:niceblock_no_default_key_mappings = 0
+
+- repo: osyo-manga/vim-textobj-multiblock
+  on_map: { ox: <Plug> }
+  hook_add:  let g:textobj_multiblock_no_default_key_mappings = 1
+
+- repo: kana/vim-textobj-function
+  on_map: { ox: <Plug> }
+  hook_add: let g:textobj_function_no_default_key_mappings = 1

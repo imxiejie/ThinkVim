@@ -1,0 +1,3 @@
+
+# Sass Scss Support
+- { repo: cakebaker/scss-syntax.vim, on_ft: [ scss, sass ]}
