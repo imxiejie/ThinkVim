@@ -11,15 +11,15 @@
 
 ### Editor UI
 
-| Name                                                                              | Description                   |
-| --------------------------------------------------------------------------------- | ----------------------------- |
-| [hardcoreplayers/vim-buffet](https://github.com/hardcoreplayers/vim-buffet)       | Buffer Tabline                |
-| [hardcoreplayers/spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim) | Beautiful statusline          |
-| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)               | Provide the Icons             |
-| [mhinz/vim-startify](https://github.com/mhinz/vim-startify)                       | Startify                      |
-| [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)     | The fastest Neovim colorizer. |
-| [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                     | Indent Line                   |
-| [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                     | Rainbow paren                 |
+| Name                                                                                | Description                   |
+| ----------------------------------------------------------------------------------- | ----------------------------- |
+| [hardcoreplayers/vim-buffet](https://github.com/hardcoreplayers/vim-buffet)         | Buffer Tabline                |
+| [hardcoreplayers/spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim)   | Beautiful statusline          |
+| [ryanoasis/vim-devicons](https://github.com/ryanoasis/vim-devicons)                 | Provide the Icons             |
+| [hardcoreplayers/dashboard-nvim](https://github.com/hardcoreplayers/dashboard-nvim) | Startup Dashboard             |
+| [norcalli/nvim-colorizer.lua](https://github.com/norcalli/nvim-colorizer.lua)       | The fastest Neovim colorizer. |
+| [Yggdroot/indentLine](https://github.com/Yggdroot/indentLine)                       | Indent Line                   |
+| [luochen1990/rainbow](https://github.com/luochen1990/rainbow)                       | Rainbow paren                 |
 
 ### Editor Enhance
 
