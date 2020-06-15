@@ -39,7 +39,7 @@
 | <kbd>Ctrl</kbd> + <kbd>a</kbd> | **I** | move to the first char   |
 | <kbd>Ctrl</kbd> + <kbd>e</kbd> | **I** | move to the end          |
 | <kbd>Ctrl</kbd> + <kbd>s</kbd> | **I** | Save buffer              |
-| <kbd>Ctrl</kbd> + <kbd>q</kbd> | **I** | Save buffer and quiet    |
+| <kbd>Ctrl</kbd> + <kbd>q</kbd> | **I** | Save buffer and quit     |
 | <kbd>Ctrl</kbd> + <kbd>o</kbd> | **I** | jump to new line         |
 
 ## Smooth scroll
@@ -258,12 +258,12 @@
 | <kbd>Leader</kbd> + <kbd>pu</kbd> | **N** | Clean up the runtime cache |
 | <kbd>Leader</kbd> + <kbd>pu</kbd> | **N** | Get the update log         |
 
-### Quiet
+### Quit
 
 | KeyMap                            | Mode  | Description        |
 | --------------------------------- | ----- | ------------------ |
-| <kbd>Leader</kbd> + <kbd>qq</kbd> | **N** | Save and quiet     |
-| <kbd>Leader</kbd> + <kbd>qw</kbd> | **N** | Quiet without save |
+| <kbd>Leader</kbd> + <kbd>qq</kbd> | **N** | Save and quit     |
+| <kbd>Leader</kbd> + <kbd>qw</kbd> | **N** | Quit without save |
 
 ### Repl
 
@@ -277,7 +277,7 @@
 | <kbd>Leader</kbd> + <kbd>r+CR</kbd>  | **N**       |                   |
 | <kbd>Leader</kbd> + <kbd>r+ESC</kbd> | **N**       |                   |
 
-### Quiet
+### Session
 
 | KeyMap                            | Mode  | Description  |
 | --------------------------------- | ----- | ------------ |

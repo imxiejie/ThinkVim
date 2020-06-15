@@ -131,7 +131,7 @@ vim-smartchr iron.nvim vim-sandwich vim-startify
 vim-fugitive vim-mundo vista.vim
 
 general:
-insert command quiet window session toggle normal
+insert command quit window session toggle normal
 ```
 
 eg:
