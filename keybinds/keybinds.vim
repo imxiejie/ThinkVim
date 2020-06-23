@@ -179,7 +179,7 @@ function! s:load_coc() abort
     endfunction
     " Jump definition in other window
     function! s:definition_other_window() abort
-      if winnr('$') >= 4
+      if winnr('$') >= 4 || winwidth(0) < 120
         exec "normal \<Plug>(coc-definition)"
       else
         exec 'vsplit'
