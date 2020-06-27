@@ -779,19 +779,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi coffeeObject' . s:fg_purple
   exec 'hi coffeeObjAssign' . s:fg_aqua
   "===============================================================
-  " PureScript:
-  " purescript-vim: https://github.com/purescript-contrib/purescript-vim
-  "===============================================================
-  exec 'hi purescriptModuleKeyword' . s:fg_purple  . s:italic
-  exec 'hi purescriptModule' . s:fg_aqua
-  exec 'hi purescriptModuleParams' . s:fg_blue
-  exec 'hi purescriptAsKeyword' . s:fg_orange  . s:italic
-  exec 'hi purescriptHidingKeyword' . s:fg_orange  . s:italic
-  exec 'hi purescriptWhere' . s:fg_orange  . s:italic
-  exec 'hi purescriptIdentifier' . s:fg_blue
-  exec 'hi purescriptFunction' . s:fg_yellow
-  exec 'hi purescriptType' . s:fg_aqua
-  "===============================================================
   " C/C++
   " vim-cpp-enhanced-highlight: https://github.com/octol/vim-cpp-enhanced-highlight
   "===============================================================
@@ -837,18 +824,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi objcDirective' . s:fg_red  . s:italic
   exec 'hi objcPropertyAttribute' . s:fg_orange
   exec 'hi objcHiddenArgument' . s:fg_aqua
-  "===============================================================
-  " C#:
-  " https://github.com/nickspoons/vim-cs
-  "===============================================================
-  exec 'hi csUnspecifiedStatement' . s:fg_purple  . s:italic
-  exec 'hi csStorage' . s:fg_red  . s:italic
-  exec 'hi csClass' . s:fg_red  . s:italic
-  exec 'hi csNewType' . s:fg_aqua
-  exec 'hi csContextualStatement' . s:fg_purple  . s:italic
-  exec 'hi csInterpolationDelimiter' . s:fg_yellow
-  exec 'hi csInterpolation' . s:fg_yellow
-  exec 'hi csEndColon' . s:fg_fg0
   "===============================================================
   " Python:
   "===============================================================
@@ -956,8 +931,9 @@ function! s:apply_syntax_highlightings()
   exec 'hi goImport' . s:fg_purple  . s:bold
   exec 'hi goVarArgs' . s:fg_blue
   exec 'hi goBuiltins' . s:fg_green  . s:bold
-  exec 'hi goPredefinedIdentifiers' . s:fg_aqua
+  exec 'hi goPredefinedIdentifiers' . s:fg_blue
   exec 'hi goVar' . s:fg_orange
+  exec 'hi goField' . s:fg_aqua
   "===============================================================
   " Rust:
   " builtin: https://github.com/rust-lang/rust.vim
@@ -1130,14 +1106,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi matlabRelationalOperator' . s:fg_orange
   exec 'hi matlabRelationalOperator' . s:fg_orange
   exec 'hi matlabLogicalOperator' . s:fg_orange
-  "===============================================================
-  " PowerShell:
-  " vim-ps1: https://github.com/PProvost/vim-ps1
-  "===============================================================
-  exec 'hi ps1FunctionInvocation' . s:fg_aqua  . s:bold
-  exec 'hi ps1FunctionDeclaration' . s:fg_aqua  . s:bold
-  exec 'hi ps1InterpolationDelimiter' . s:fg_yellow
-  exec 'hi ps1BuiltIn' . s:fg_yellow
   "===============================================================
   " VimL:
   "===============================================================
@@ -1326,11 +1294,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi NERDTreeLinkFile' . s:fg_grey1
   exec 'hi NERDTreeLinkTarget' . s:fg_green
   "===============================================================
-  " justinmk/vim-dirvish
-  "===============================================================
-  exec 'hi DirvishPathTail' . s:fg_aqua
-  exec 'hi DirvishArg' . s:fg_yellow
-  "===============================================================
   " andymass/vim-matchup
   "===============================================================
   exec 'hi MatchParenCur'. s:fg_none. s:bold
@@ -1348,20 +1311,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi Sneak' . s:fg_bg0. s:bg_bg_green
   exec 'hi SneakLabel' . s:fg_bg0. s:bg_bg_green
   exec 'hi SneakScope' . s:fg_bg0 . s:bg_fg0
-  "===============================================================
-  " terryma/vim-multiple-cursors
-  exec 'hi multiple_cursors_cursor'. s:fg_none  . s:reverse
-  exec 'hi multiple_cursors_visual'. s:fg_none. s:reverse
-  "===============================================================
-  " dominikduda/vim_current_word {{{
-  "===============================================================
-  exec 'hi CursorWord'. s:bg_fg3
-  exec 'hi CursorWordTwins'. s:bg_fg3
-  "===============================================================
-  " itchyny/vim-cursorword {{{
-  "===============================================================
-  exec 'hi CursorWord0'. s:bg_fg3
-  exec 'hi CursorWord1'. s:bg_fg3
   "===============================================================
   " luochen1990/rainbow {{{
   if !exists('g:rbpt_colorpairs')
@@ -1385,6 +1334,11 @@ function! s:apply_syntax_highlightings()
   let g:niji_dark_colours = g:rbpt_colorpairs
   let g:niji_light_colours = g:rbpt_colorpairs
   "===============================================================
+  " itchyny/vim-cursorword {{{
+  "===============================================================
+  exec 'hi CursorWord0'. s:bg_fg3
+  exec 'hi CursorWord1'. s:bg_fg3
+  "===============================================================
   " mhinz/vim-startify
   "===============================================================
   exec 'hi StartifyBracket' . s:fg_grey1
@@ -1403,22 +1357,6 @@ function! s:apply_syntax_highlightings()
   exec 'hi WhichKeySeperator' . s:fg_green
   exec 'hi WhichKeyGroup' . s:fg_yellow
   exec 'hi WhichKeyDesc' . s:fg_blue
-  "===============================================================
-  " cohama/agit.vim
-  "===============================================================
-  exec 'hi agitTree' . s:fg_grey1
-  exec 'hi agitDate' . s:fg_green
-  exec 'hi agitRemote' . s:fg_red
-  exec 'hi agitHead' . s:fg_orange
-  exec 'hi agitRef' . s:fg_aqua
-  exec 'hi agitTag' . s:fg_orange
-  exec 'hi agitStatFile' . s:fg_blue
-  exec 'hi agitStatRemoved' . s:fg_red
-  exec 'hi agitStatAdded' . s:fg_green
-  exec 'hi agitStatMessage' . s:fg_orange
-  exec 'hi agitDiffRemove' . s:fg_red
-  exec 'hi agitDiffAdd' . s:fg_green
-  exec 'hi agitDiffHeader' . s:fg_purple
   "===============================================================
   " machakann/vim-sandwich
   "===============================================================
