@@ -79,8 +79,8 @@ let s:colors = {
       \ 'orange':           ['#e78a4e',   '208'],
       \ 'yellow':           ['#d8a657',   '214'],
       \ 'green':            ['#a9b665',   '142'],
-      \ 'aqua':             ['#89b482',   '108'],
-      \ 'blue':             ['#7daea3',   '109'],
+      \ 'aqua':             ['#8abeb7',   '109'],
+      \ 'blue':             ['#81a2be',   '110'],
       \ 'purple':           ['#d3869b',   '175'],
       \ 'darkgreen':        ['#5faf5f',    '71'],
       \ 'black':            ['#000000',    '0'],
@@ -1384,6 +1384,18 @@ function! s:apply_syntax_highlightings()
 
   let g:niji_dark_colours = g:rbpt_colorpairs
   let g:niji_light_colours = g:rbpt_colorpairs
+  "===============================================================
+  " mhinz/vim-startify
+  "===============================================================
+  exec 'hi StartifyBracket' . s:fg_grey1
+  exec 'hi StartifyFile' . s:fg_fg0
+  exec 'hi StartifyNumber' . s:fg_red
+  exec 'hi StartifyPath' . s:fg_green
+  exec 'hi StartifySlash' . s:fg_green
+  exec 'hi StartifySection' . s:fg_blue
+  exec 'hi StartifyHeader' . s:fg_orange
+  exec 'hi StartifySpecial' . s:fg_grey1
+  exec 'hi StartifyFooter' . s:fg_grey1
   "===============================================================
   " liuchengxu/vim-which-key
   "===============================================================
