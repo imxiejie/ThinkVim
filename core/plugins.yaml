@@ -6,6 +6,8 @@
 # Editor UI{{{
 - repo: ryanoasis/vim-devicons
 
+- repo: hardcoreplayers/oceanic-material
+
 - repo: hardcoreplayers/spaceline.vim
   on_event: [ BufReadPre,BufNew ]
   hook_add:
