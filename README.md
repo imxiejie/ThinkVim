@@ -85,6 +85,9 @@ Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysourc
   <img src="https://github.com/xiaomabetter.png?size=64" width="64" height="64" alt="xiaomabetter">
 </a>
 
+<a href="https://github.com/byxjxj" target="_blank" title="byxjxj">
+  <img src="https://github.com/byxjxj.png?size=64" width="64" height="64" alt="byxjxj">
+</a>
 | Wechat                                                                                                          | AliPay                                                                                                       |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | ![wechat](https://user-images.githubusercontent.com/41671631/84404718-c8312a00-ac39-11ea-90d7-ee679fbb3705.png) | ![ali](https://user-images.githubusercontent.com/41671631/84403276-1a714b80-ac38-11ea-8607-8492df84e516.png) |
