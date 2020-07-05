@@ -102,7 +102,6 @@ if dein#tap('vim-sh')
       \ 'bash': {
         \ "command": "bash-language-server",
         \ "args" : ["start"],
-        \ "rootPatterns": ["go.mod"],
         \ "ignoredRootPaths": ["~"],
         \ "filetypes": ["sh"]
         \ }
