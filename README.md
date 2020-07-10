@@ -61,7 +61,7 @@ Check the [thinkvim wiki](https://github.com/hardcoreplayers/ThinkVim/wiki) page
 
 ## Backers
 
-Do you like ThinkVim? keep it alive by [donating funds](https://salt.bountysource.com/teams/thinkvim-taigacute)😘!
+Do you like ThinkVim? keep it alive by donating funds 😘!
 
 [![Support via PayPal](https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg)](https://www.paypal.me/bobbyhub)
 
