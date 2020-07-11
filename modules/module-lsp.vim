@@ -125,7 +125,7 @@ endif
 
 "Scala lsp config
 if dein#tap('vim-scala')
-    call coc#coc#add_extension('coc-metals')
+    call coc#add_extension('coc-metals')
 endif
 
 "vue lsp config
