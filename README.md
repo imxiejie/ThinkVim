@@ -18,7 +18,7 @@ src="https://user-images.githubusercontent.com/41671631/84489554-71c4f980-acd4-1
 </div>
 
 
-> For some users I write a clie to generate vim configuration called [Jarvim](https://github.com/glepnir/jarvim)
+> For some users I write a cli to generate vim configuration called [Jarvim](https://github.com/glepnir/jarvim)
 
 ## Features
 
