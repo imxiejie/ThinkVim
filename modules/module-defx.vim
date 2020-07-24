@@ -25,6 +25,9 @@ call defx#custom#column('git', {
 	\   }
 	\ })
 
+let g:defx_icons_column_length = 2
+let g:defx_icons_mark_icon = ''
+
 call defx#custom#column('mark', { 'readonly_icon': '', 'selected_icon': '' })
 
 " Events
