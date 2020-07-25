@@ -17,7 +17,7 @@ let g:dashboard_custom_header = [
       \ '    ⠀⠀⠀⠈⠻⢧⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣻⠿⠋⠀⠀⠀⠀⠀⠀  ',
       \ '    ⠀⠀⠀⠀⠀⠀⠉⠓⠶⣤⣄⣀⡀⠀⠀⠀⠀⠀⢀⣀⣠⡴⠖⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀  ',
       \ '                                       ',
-      \ ' [  thinvim version '.g:thinkvim_version.' @taigacute  ]',
+      \ ' [  thinvim version '.g:thinkvim_version.' @glepnir  ]',
       \ '',
       \ ]
 
