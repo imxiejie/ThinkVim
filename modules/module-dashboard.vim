@@ -34,3 +34,27 @@ let g:dashboard_custom_section = {
 function! OPEN_PERSONAL()
   Clap personalconf
 endfunction
+
+function! FIND_FILE() abort
+  Clap files ++finder=rg --ignore --hidden --files
+endfunction
+
+function! FIND_HISTORY() abort
+  Clap history
+endfunction
+
+function! CHANGE_COLORSCHEME() abort
+  Clap colors
+endfunction
+
+function! FIND_WORD() abort
+  Clap grep2
+endfunction
+
+function! BOOK_MARKS() abort
+  Clap marks
+endfunction
+
+function! LAST_SESSION()
+  SessionLoad
+endfunction
