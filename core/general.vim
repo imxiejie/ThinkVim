@@ -204,6 +204,11 @@ if exists('+completepopup')
 	set completepopup=height:4,width:60,highlight:InfoPopup
 endif
 
+" Use the new Neovim :h jumplist-stack
+if has('nvim-0.5')
+	set jumpoptions=stack
+endif
+
 if has('patch-8.1.0360') || has('nvim-0.4')
 	set diffopt+=internal,algorithm:patience
 	" set diffopt=indent-heuristic,algorithm:patience
