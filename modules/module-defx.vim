@@ -3,30 +3,32 @@
 " Problems? https://github.com/Shougo/defx.nvim/issues
 
 call defx#custom#option('_', {
-	\ 'resume': 1,
-	\ 'winwidth': 30,
-	\ 'split': 'vertical',
-	\ 'direction': 'topleft',
-	\ 'show_ignored_files': 0,
-	\ 'columns': 'indent:git:icons:filename',
-	\ 'root_marker': ' ',
-	\ })
+  \ 'resume': 1,
+  \ 'winwidth': 30,
+  \ 'split': 'vertical',
+  \ 'direction': 'topleft',
+  \ 'show_ignored_files': 0,
+  \ 'columns': 'mark:indent:git:icons:filename',
+  \ 'root_marker': '[in]: ',
+  \ })
 
 call defx#custom#column('git', {
-	\   'indicators': {
-	\     'Modified'  : '•',
-	\     'Staged'    : '✚',
-	\     'Untracked' : 'ᵁ',
-	\     'Renamed'   : '≫',
-	\     'Unmerged'  : '≠',
-	\     'Ignored'   : 'ⁱ',
-	\     'Deleted'   : '✖',
-	\     'Unknown'   : '⁇'
-	\   }
-	\ })
+  \   'indicators': {
+  \     'Modified'  : '•',
+  \     'Staged'    : '✚',
+  \     'Untracked' : 'ᵁ',
+  \     'Renamed'   : '≫',
+  \     'Unmerged'  : '≠',
+  \     'Ignored'   : 'ⁱ',
+  \     'Deleted'   : '✖',
+  \     'Unknown'   : '⁇'
+  \   }
+  \ })
 
+" defx-icons plugin
 let g:defx_icons_column_length = 2
 let g:defx_icons_mark_icon = ''
+let g:defx_icons_parent_icon = ""
 
 call defx#custom#column('mark', { 'readonly_icon': '', 'selected_icon': '' })
 
