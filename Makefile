@@ -14,7 +14,7 @@ update-thinkvim:
 	@git pull --ff --ff-only
 
 update-plugins:
-	$(vim) -V1 -es -i NONE -N --noplugin -u config/init.vim -c "try | call dein#clear_state() | call dein#update() | finally | qall! | endtry"
+	$(nvim) -V1 -es -i NONE -N --noplugin -u init.vim -c "try | call dein#clear_state() | call dein#update() | finally | qall! | endtry"
 
 update: update-thinkvim update-plugins
 
