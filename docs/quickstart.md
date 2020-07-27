@@ -87,26 +87,20 @@ check out the [spaceline config](https://github.com/taigacute/spaceline.vim)
 
 - Custom [dashboard-nvim](https://github.com/hardcoreplayers/dashboard-nvim) header and footer
 
-this is an example to config dashboard-nvim header and footer on your `custom.vim`.
+check the usage in
+[dashbaord-nvim](https://github.com/hardcoreplayers/dashboard-nvim))
 
-```viml
-let s:header = [
-      \ '       o',
-      \ '        o   ^__^',
-      \ '         o  (oo)\_______',
-      \ '            (__)\       )\/\',
-      \ '                ||----w |',
-      \ '                ||     ||',
-      \ ]
-let s:footer = [
-      \ ' [ test custom footer]',
-      \ '',
-      \ ]
+## Database
 
-let g:dashboard_custom_header = s:header
-let g:dashboard_custom_header = s:footer
+If you want to use the `.env` file to management your database connection.you
+can use `let g:thinkvim_load_env_db =1`. then touch .env file in your homepath
+Add your Database connection the prefix is `DB_CONNECTION_` like:
 
 ```
+DB_CONNECTION_CRAWLER=mysql://root@localhost/crawler
+```
+
+then `Leader o d` to open database buffer. type `o` to input password .
 
 ## Custom keymap
 
