@@ -12,6 +12,7 @@
   on_event: [ BufReadPre,BufNew ]
   hook_add:
     let g:spaceline_seperate_style= 'slant-cons'
+    let g:spaceline_git_branch_icon = ''
 
 - repo: hardcoreplayers/vim-buffet
   on_event: [ BufReadPre, BufNew ]
