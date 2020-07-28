@@ -1,4 +1,3 @@
 
-# C family support https://github.com/arakashic/chromatica.nvim
 # LanguageServerProtocol used by ccls
-- { repo: arakashic/chromatica.nvim,on_ft: [ c,cpp ]}
+- { repo: jackguo380/vim-lsp-cxx-highlight,on_ft: [ c,cpp ]}
