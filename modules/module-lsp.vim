@@ -11,7 +11,7 @@ if dein#tap('go-nvim')
 endif
 
 " ccls config
-if dein#tap('chromatica.nvim')
+if dein#tap('vim-lsp-cxx-highlight')
     call coc#config('languageserver', {
       \ 'ccls': {
         \ "command": "ccls",
