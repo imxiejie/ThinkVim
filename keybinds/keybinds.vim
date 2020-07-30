@@ -751,6 +751,7 @@ let s:plugins = {
   \ 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quitmap':'quit','windowmap':'window','session':'session',
   \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal','bufkill':'bufkill',
+  \ 'accelerated-jk':'accelerated-jk',
   \ }
 
 function! s:load_plugins_keybinds(pmap) abort
