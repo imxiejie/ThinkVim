@@ -372,10 +372,12 @@ function! s:load_choosewin() abort
   endif
 endfunction
 
-if dein#tap('accelerated-jk')
-  nmap <silent>j <Plug>(accelerated_jk_gj)
-  nmap <silent>k <Plug>(accelerated_jk_gk)
-endif
+function! s:load_accelerated_jk()
+  if dein#tap('accelerated-jk')
+    nmap <silent>j <Plug>(accelerated_jk_gj)
+    nmap <silent>k <Plug>(accelerated_jk_gk)
+  endif
+endfunction
 
 function! InitCaw() abort
   if ! &l:modifiable
@@ -751,7 +753,7 @@ let s:plugins = {
   \ 'mundo':'vim-mundo', 'vista':'vista.vim','insertmap': 'insert',
   \ 'commandmap':'command','quitmap':'quit','windowmap':'window','session':'session',
   \ 'toggle':'toggle','normalmap':'normal','terminalmap':'terminal','bufkill':'bufkill',
-  \ 'accelerated-jk':'accelerated-jk',
+  \ 'accelerated-jk':'accelerated_jk',
   \ }
 
 function! s:load_plugins_keybinds(pmap) abort
