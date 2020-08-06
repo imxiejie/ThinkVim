@@ -16,7 +16,6 @@ let g:coc_global_extensions =[
     \ 'coc-git',
     \ 'coc-emoji',
     \ 'coc-lists',
-    \ 'coc-stylelint',
     \ 'coc-yaml',
     \ 'coc-tabnine',
     \ 'coc-gitignore',
