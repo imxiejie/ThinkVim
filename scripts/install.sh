@@ -6,10 +6,16 @@ source ./scripts/pynvim.sh
 thinkvim_personal="$HOME/.thinkvim.d"
 cache_vim="$HOME/.cache/vim"
 generator="$HOME/.config/nvim/bin/generator"
+env_file="$HOME/.env"
 
 action "Create .thinkvim.d "
 
 function ensureThinkvimd(){
+  if [! -f "$env_file"]
+  then
+    touch $env_file
+  fi
+
   if [ ! -d "$thinkvim_personal" ]
   then
     mkdir -p $HOME/.thinkvim.d
