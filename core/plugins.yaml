@@ -30,6 +30,8 @@
 
 - repo: honza/vim-snippets
   depends : coc.nvim
+  if: has('python3')
+  merged: 0
 
 # }}}
 
