@@ -14,5 +14,5 @@ rm -rf thinkvim_personal
 running "Remove the plugins install folder"
 rm -rf cache_vim
 
-ok "Clean up Success"
+ok "===>  Clean up Success"
 
