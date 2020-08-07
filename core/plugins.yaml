@@ -24,7 +24,7 @@
 # Completion{{{
 - repo: neoclide/coc.nvim
   merged: 0
-  build: 'yarn install --frozen-lockfile'
+  rev: 'release'
   hook_add: source  $VIM_PATH/modules/module-coc.vim
   hook_source: source $VIM_PATH/modules/module-lsp.vim
 

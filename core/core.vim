@@ -1,10 +1,3 @@
-" version info of thinkvim
-let g:thinkvim_version = "2.6.5"
-" disable all keymaps of plugins
-let g:thinkvim_disable_mappings = 0
-" disable some plugins keymap
-let g:thinkvim_disable_pmaping = []
-
 if &compatible
 	" vint: -ProhibitSetNoCompatible
 	set nocompatible
@@ -65,6 +58,11 @@ call utils#source_file($VIM_PATH,'core/filetype.vim')
 
 " Load user init config
 call utils#check_source(s:user_init_config)
+
+" disable all keymaps of plugins
+let g:thinkvim_disable_mappings = 0
+" disable some plugins keymap
+let g:thinkvim_disable_pmaping = []
 
 " Load key map
 call utils#source_file($VIM_PATH,'keybinds/keybinds.vim')

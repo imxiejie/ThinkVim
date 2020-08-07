@@ -1,3 +1,6 @@
+" version info of thinkvim
+let g:thinkvim_version = "2.6.5"
+
 " Plugin Mangae
 
 " Set custom augroup
