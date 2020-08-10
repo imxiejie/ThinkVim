@@ -249,6 +249,11 @@
   on_ft: [ html,css,javascript,javascriptreact,vue,go,python,c,cpp,lua,rust,vim,less,stylus,sass,scss,json,ruby,scala,toml,php,haskell]
   hook_source: let g:rainbow_active = 1
 
+- repo: mattn/vim-sonictemplate
+  on_event: BufRead
+  hook_source: |
+    let g:sonictemplate_postfix_key = '<C-j>'
+    let g:sonictemplate_vim_template_dir = $VIM_PATH . '/template'
 # }}}
 
 # Writing{{{
