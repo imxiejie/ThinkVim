@@ -267,7 +267,7 @@ function! s:load_clap() abort
   if dein#tap('vim-clap')
     nnoremap <silent> <Leader>tc :<C-u>Clap colors<CR>
     nnoremap <silent> <Leader>bb :<C-u>Clap buffers<CR>
-    nnoremap <silent> <Leader>fa :<C-u>Clap grep2<CR>
+    nnoremap <silent> <Leader>fa :<C-u>Clap grep<CR>
     nnoremap <silent> <Leader>fb :<C-u>Clap marks<CR>
     "like emacs counsel-find-file
     nnoremap <silent> <C-x><C-f> :<C-u>Clap filer<CR>
