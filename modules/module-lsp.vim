@@ -1,29 +1,12 @@
 " Gopls config
 if dein#tap('go-nvim')
-    call coc#config('languageserver', {
-      \ 'golang': {
-        \ "command": "gopls",
-        \ "rootPatterns": ["go.mod"],
-        \ "disableWorkspaceFolders": "true",
-        \ "filetypes": ["go"]
-        \ }
-        \})
+  autocmd FileType go LSP 'go'
 endif
 
 " ccls config
 if dein#tap('vim-lsp-cxx-highlight')
-    call coc#config('languageserver', {
-      \ 'ccls': {
-        \ "command": "ccls",
-        \ "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-        \ "filetypes": ["c","cpp","objc","objcpp"],
-        \ "initializationOptions": {
-          \ "cache":{
-            \ "directory": "/tmp/ccls"
-        \ }
-        \ }
-        \ }
-        \})
+  autocmd FileType c LSP 'c/cpp'
+  autocmd FileType cpp LSP 'c/cpp'
 endif
 
 "python lsp config
@@ -34,32 +17,12 @@ endif
 
 "docker lsp config
 if dein#tap('Dockerfile.vim')
-    call coc#config('languageserver', {
-      \ 'dockerfile': {
-        \ "command": "docker-langserver",
-        \ "filetypes": ["dockerfile"],
-        \ "args": ["--stdio"]
-        \ }
-        \})
+  autocmd FileType Dockerfile LSP 'dockerfile'
 endif
 
 "haskell lsp config
 if dein#tap('haskell-vim')
-    call coc#config('languageserver', {
-      \ 'haskell': {
-        \ "command": "hie-wrapper",
-        \ "rootPatterns": [".stack.yaml","cabal.config","package.yaml"],
-        \ "filetypes": ["hs","lhs","haskell"],
-        \ "initializationOptions":{},
-        \ "settings":{
-          \ "languageServerHaskell":{
-            \ "hlintOn":"true",
-            \ "maxNumberOfProblems":10,
-            \ "completionSnippetsOn": "true"
-        \ }
-        \ }
-        \ }
-        \})
+  autocmd FileType haskell LSP 'haskell'
 endif
 
 "lua lsp config
@@ -84,33 +47,17 @@ endif
 
 "php lsp config
 if dein#tap('php.vim')
-    call coc#config('languageserver', {
-      \ 'intelephense': {
-        \ "command": "intelephense",
-        \ "args": ["--stdio"],
-        \ "filetypes": ["php"],
-        \ "initializationOptions": {
-             \ "storagePath": "/tmp/intelephense"
-        \ }
-        \ }
-        \})
+  autocmd FileType php LSP 'php'
 endif
 
 "shell lsp config
 if dein#tap('vim-sh')
-    call coc#config('languageserver', {
-      \ 'bash': {
-        \ "command": "bash-language-server",
-        \ "args" : ["start"],
-        \ "ignoredRootPaths": ["~"],
-        \ "filetypes": ["sh"]
-        \ }
-        \})
+  autocmd FileType sh,zsh LSP 'sh'
 endif
 
 "R lsp config
 if dein#tap('Nvim-R')
-    call coc#add_extension('coc-R')
+    call coc#add_extension('coc-Rls')
 endif
 
 "Ruby lsp config
