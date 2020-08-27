@@ -57,7 +57,7 @@ endif
 
 "R lsp config
 if dein#tap('Nvim-R')
-    call coc#add_extension('coc-Rls')
+    call coc#add_extension('coc-r-lsp')
 endif
 
 "Ruby lsp config
