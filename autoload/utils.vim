@@ -126,20 +126,10 @@ function! s:lsp_init(langs)
         \ }
         \ }
         \},
-    \'sh':{'bash': {
-        \ "command": "bash-language-server",
-        \ "args" : ["start"],
-        \ "ignoredRootPaths": ["~"],
-        \ "filetypes": ["sh"]
-        \ }
-        \},
     \}[a:langs]
   call coc#config('languageserver',l:lsp)
   exec 'autocmd BufWritePre *.'.a:langs. '    call s:silent_organizeImport()'
 endfunction
 
-function! s:lsp_command()
-  command! -nargs=+ -bar LSP          call s:lsp_init(<args>)
-endfunction
+command! -nargs=+ -bar LSP          call s:lsp_init(<args>)
 
-call s:lsp_command()

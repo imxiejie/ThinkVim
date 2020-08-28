@@ -11,7 +11,7 @@ env_file="$HOME/.env"
 action "Create .thinkvim.d "
 
 function ensureThinkvimd(){
-  if [! -f "$env_file"]
+  if [ ! -f "$env_file" ]
   then
     touch $env_file
   fi
