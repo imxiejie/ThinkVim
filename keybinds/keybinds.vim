@@ -24,7 +24,7 @@ function! s:load_dein() abort
     if s:enable_whichkey
       let g:which_key_map.p = { 'name': '+plugin'}
       let g:which_key_map.p.u = 'update all plugins'
-      let g:which_key_map.p.r = 'reache runtime path'
+      let g:which_key_map.p.r = 'reach runtime path'
       let g:which_key_map.p.l = 'plugins update log'
     endif
   endif
@@ -170,8 +170,8 @@ function! s:load_coc() abort
       let g:which_key_map.c.o = 'Lsp Organize Import'
       let g:which_key_map.g.i = 'Show chunk diff at point'
       let g:which_key_map.g.m = 'Show commit contains at point'
-      let g:which_key_map.j = 'open coc-exoplorer'
-      let g:which_key_map.f.z = 'find word on multipe files'
+      let g:which_key_map.j = 'open coc-explorer'
+      let g:which_key_map.f.z = 'find word on multiple files'
     endif
     " Remap for do codeAction of selected region
     function! s:cocActionsOpenFromSelected(type) abort
@@ -670,7 +670,7 @@ function! s:load_quitmap() abort
 endfunction
 
 function! s:load_windowmap() abort
-  "switch windw
+  "switch window
   nnoremap <C-h> <C-w>h
   nnoremap <C-l> <C-w>l
   nnoremap <C-j> <C-w>j
@@ -694,7 +694,7 @@ function! s:load_windowmap() abort
   if s:enable_whichkey
     let g:which_key_map.w = { 'name': '+window'}
     let g:which_key_map['<Tab>'] = 'switch to last buffer'
-    let g:which_key_map.w.s = 'horizontally split'
+    let g:which_key_map.w.s = 'horizontal split'
     let g:which_key_map.w.v = 'vertical split'
     let g:which_key_map.w.h = 'jump left window'
     let g:which_key_map.w.j = 'jump bottom window'
@@ -709,7 +709,7 @@ function! s:load_windowmap() abort
     let g:which_key_map.w.o = 'close other window'
     let g:which_key_map.w.R = 'spin window'
   endif
-  " settings for resize splitted window
+  " settings to resize split window
   nmap <C-w>[ :vertical resize -3<CR>
   nmap <C-w>] :vertical resize +3<CR>
 endfunction
