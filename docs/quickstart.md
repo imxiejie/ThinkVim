@@ -14,9 +14,9 @@ let g:maplocalleader
 
 ## Install plugins
 
-I suggest that most of plugins should lazyload by dein ,There has two ways to install plugins.
+I suggest that most of plugins should lazyload by dein. There has two ways to install plugins.
 
-- if you are a vim begginer or you want to follow master branch,you should use `plugins.yaml`. like you want use choosewin plugin,you can installed it in `plugins.yaml`(notice thinkvim has installed ,just for example)
+- if you are a vim beginner or you want to follow master branch, you should use `plugins.yaml`. like you want use choosewin plugin,you can installed it in `plugins.yaml`(notice thinkvim has installed, just for example)
 
 ```yaml
 - repo: t9md/vim-choosewin
@@ -28,12 +28,12 @@ I suggest that most of plugins should lazyload by dein ,There has two ways to in
 - on_map is a dein lazyload feature,that mean the plugin will loading when you trigger `on_map` key,
 - hook_source is executed before plugins are sourced
 
-Dein is hard to use for some vim begginers，you can check the `core/dein/plugins.yaml` for use.
-more useage about [Dein](https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt).
+Dein is hard to use for some vim beginners，you can check the `core/dein/plugins.yaml` for use.
+more usage about [Dein](https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt).
 
-- if you have vimscript skill and not a vim beginner, want change this config to your own config ,you can edit the `core/dein/plugins.yaml`.
+- if you have vimscript skill and not a vim beginner, want change this config to your own config, you can edit the `core/dein/plugins.yaml`.
 
-the keymap of plugins you should config it in `custom.vim`,th same as installed plugins,if you want follow master branch use `custom.vim`,if you want change to your own config you can edit the `core/plugins/allkey.vim`.
+the keymap of plugins you should config it in `custom.vim`, the same as installed plugins. if you follow the master branch use `custom.vim`. if you want change to your own config, edit the `core/plugins/allkey.vim`.
 
 example:
 
@@ -70,7 +70,7 @@ endif
 let g:which_key_map.F='test'
 ```
 
-- if you edit the plugins.yaml ,it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`
+- if you edit the plugins.yaml, it doesn't work. you can try to recache the cache. use this function `call dein#recache_runtimepath()`
 - you can check [my .thinkvim.d](https://github.com/taigacute/dotfiles/tree/master/thinkvim) for more usage.
 
 ## change colorscheme
@@ -155,7 +155,7 @@ Why add this support, Because vim is free, and key mapping everyone has everyone
 
 ## Add Language support
 
-It's easy to add new language supoort,just run this script,then choose the new languages that you write. it will write the languages plugins to your `.thinkvim.d/plugins.yaml`
+It's easy to add new language support, just run this script,then choose the new languages that you write. it will write the languages plugins to your `.thinkvim.d/plugins.yaml`
 
 ```console
 cd .config/nvim/bin
