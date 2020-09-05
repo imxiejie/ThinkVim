@@ -94,7 +94,7 @@
 | [kristijanhusak/defx-icons](https://github.com/kristijanhusak/defx-icons) | Filetype icons for Defx                   |
 | [kristijanhusak/defx-git](https://github.com/kristijanhusak/defx-git)     | Git status icons for Defx                 |
 
-### Find everthing
+### Find everything
 
 | Name                                                          | Description                 |
 | ------------------------------------------------------------- | --------------------------- |
