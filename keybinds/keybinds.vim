@@ -107,7 +107,8 @@ endfunction
 
 function! s:load_floaterm() abort
   if dein#tap('vim-floaterm')
-    nnoremap <silent> <Leader>ot :<C-u>FloatermToggle<CR>
+    nnoremap <silent> <Leader>ot :FloatermToggle<CR>
+    tnoremap <silent> <Leader>ot <C-\><C-n>:FloatermToggle<CR>
     nnoremap <silent> <Leader>gz :<C-u>FloatermNew height=0.7 width=0.8 lazygit<CR>
     if s:enable_whichkey
       let g:which_key_map.o.t = 'open terminal'
