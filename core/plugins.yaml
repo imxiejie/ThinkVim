@@ -6,9 +6,9 @@
 # Editor UI{{{
 - repo: ryanoasis/vim-devicons
 
-- repo: hardcoreplayers/oceanic-material
+- repo: glepnir/oceanic-material
 
-- repo: hardcoreplayers/spaceline.vim
+- repo: glepnir/spaceline.vim
   on_event: [ BufReadPre,BufNew ]
   hook_add: |
     let g:spaceline_seperate_style= 'slant-cons'
@@ -17,7 +17,7 @@
 - repo: hardcoreplayers/vim-buffet
   on_event: [ BufReadPre, BufNew ]
 
-- repo: hardcoreplayers/dashboard-nvim
+- repo: glepnir/dashboard-nvim
   hook_add: source  $VIM_PATH/modules/module-dashboard.vim
 #}}}
 
