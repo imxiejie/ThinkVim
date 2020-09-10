@@ -32,11 +32,11 @@ src="https://user-images.githubusercontent.com/41671631/84489554-71c4f980-acd4-1
 - Fast startup less than 80ms with 60+ plugins and a declarative plugin management powered by
   [dein](https://github.com/Shougo/dein.vim)
 - Beautiful statusline
-  [spaceline.vim](https://github.com/hardcoreplayers/spaceline.vim)
+  [spaceline.vim](https://github.com/glepnir/spaceline.vim)
 - colorscheme
-  [OceanicMaterial](https://github.com/hardcoreplayers/oceanic-material)
+  [OceanicMaterial](https://github.com/glepnir/oceanic-material)
 - dashboard
-  [dashboard-nvim](https://github.com/hardcoreplayers/dashboard-nvim)
+  [dashboard-nvim](https://github.com/glepnir/dashboard-nvim)
 - Interactive shell installation language support
 
 ## Installation
