@@ -9,9 +9,9 @@ _try_pyenv() {
 		for name in 'neovim' 'neovim3' 'nvim'; do
 			src="$(pyenv prefix "${name}" 2>/dev/null)"
 			if [ -d "${src}" ]; then
-				error "===> pyenv virtualenv found '${name}'"
+				ok "===> pyenv virtualenv found '${name}'"
 				# Symlink virtualenv for easy access
-				ln -fhs "${src}" "${__venv}"
+				ln -fs "${src}" "${__venv}"
 				return 0
 			fi
 		done
