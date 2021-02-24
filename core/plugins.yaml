@@ -93,7 +93,7 @@
         \}
 # }}}
 
-# Find Everythins
+# Find Everything{{{
 - repo: liuchengxu/vim-clap
   merged: 0
   build: 'bash install.sh'
@@ -102,6 +102,7 @@
 
 - repo: vn-ki/coc-clap
   on_source: vim-clap
+# }}}
 
 # Interface{{{
 - { repo: rhysd/accelerated-jk, on_map: { n: <Plug> } }
