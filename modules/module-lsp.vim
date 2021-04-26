@@ -1,5 +1,5 @@
 " Gopls config
-if dein#tap('go-nvim')
+if dein#tap('vim-go')
   autocmd FileType go LSP 'go'
 endif
 
