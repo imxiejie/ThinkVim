@@ -85,6 +85,6 @@ if dein#tap('dart-vim-plugin')
   call coc#add_extension('coc-flutter')
 endif
 
-if dein#tap('sql.vim')
+if dein#tap('vim-sql-syntax')
   call coc#add_extension('coc-sql')
 endif

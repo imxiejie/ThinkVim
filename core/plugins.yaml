@@ -13,7 +13,7 @@
     let g:spaceline_seperate_style= 'slant-cons'
     let g:spaceline_git_branch_icon= ''
 
-- repo: hardcoreplayers/vim-buffet
+- repo: bagrat/vim-buffet
 
 - repo: glepnir/dashboard-nvim
   hook_add: source  $VIM_PATH/modules/module-dashboard.vim

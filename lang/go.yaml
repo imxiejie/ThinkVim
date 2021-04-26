@@ -1,4 +1,4 @@
 
 # Go support
 # LanguageServerProtocol used by gopls
-- { repo: hardcoreplayers/go-nvim,on_ft: [ go, gomod ]}
+- { repo: fatih/vim-go,on_ft: [ go, gomod ]}
