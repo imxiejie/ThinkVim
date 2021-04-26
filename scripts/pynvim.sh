@@ -47,6 +47,7 @@ Install_Pynvim() {
 		warn "Delete '${__venv}' (or backup!) first, and then run ${0} again."
 	elif _try_pyenv || _try_python; then
 		# Install Python 3 requirements
+		"${__venv}/bin/pip" install -U wheel
 		"${__venv}/bin/pip" install -U pynvim PyYAML Send2Trash
 		ok '===> success'
 	else
